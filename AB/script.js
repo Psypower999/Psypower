@@ -8,7 +8,7 @@ console.log(audioCtx);
 
 const but1 = document.getElementById('but1');
 let audio1 = new Audio();
-audio1.src = './media/ting.mp3';
+audio1.src = '/media/ting.mp3';
 
 but1.addEventListener('click', function(){
     audio1.play();
