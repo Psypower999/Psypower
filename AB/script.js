@@ -8,7 +8,7 @@ console.log(audioCtx);
 
 const but1 = document.getElementById('but1');
 let audio1 = new Audio();
-audio1.src = '/media/ting.mp3';
+audio1.src = '/media/170bpm.mp3';
 
 but1.addEventListener('click', function(){
     audio1.play();
@@ -35,26 +35,27 @@ function playSound(){
 }
 
 const but3 = document.getElementById('but3');
-but2.addEventListener('click', playSound);
+but3.addEventListener('click', playSound);
 function playSound(){
-    const oscillator = audioCtx.createOscillator();
-    oscillator.connect(audioCtx.destination);
-    oscillator.type = 'saw';
-    oscillator.start();
+    const oscillator2 = audioCtx.createOscillator();
+    oscillator2.connect(audioCtx.destination);
+    oscillator2.type = 'sawtooth';
+    oscillator2.frequency.setValueAtTime(880, AudioContext.currentTime);
+    oscillator2.start();
     setTimeout(function(){
-        oscillator.stop();
+        oscillator2.stop();
     }, 1000);
 }
 
 const but4 = document.getElementById('but4');
-but2.addEventListener('click', playSound);
+but4.addEventListener('click', playSound);
 function playSound(){
-    const oscillator = audioCtx.createOscillator();
-    oscillator.connect(audioCtx.destination);
-    oscillator.type = 'triangle';
-    oscillator.start();
+    const oscillator3 = audioCtx.createOscillator();
+    oscillator3.connect(audioCtx.destination);
+    oscillator3.type = 'triangle';
+    oscillator3.start();
     setTimeout(function(){
-        oscillator.stop();
+        oscillator3.stop();
     }, 1000);
 }
 
