@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'Cuprum', sans-serif;
+}
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+img {
+    border: 2px solid rgb(0, 216, 11);
+    border-radius: 50%;
+    box-shadow: 2px 2px, 2px;
+    animation-name: colorChange;
+    animation-duration: 45s;
+
+    @keyframes colorChange{
+    12.5%{border:rgb(230, 0, 46) ;}
+    25%{border:rgb(230, 107, 0) ;}
+    37.5%{border:rgb(234, 234, 0) ;}
+    50%{border:rgb(37, 224, 0) ;}
+    62.5%{border:rgb(0, 0, 0) ;}
+    75%{border:rgb(4, 0, 227) ;}
+    87.5%{border:rgb(112, 0, 217) ;}
+    100%{border:rgb(228, 0, 0) ;}
+}
+}
+body {
+    background-color: rgba(0, 0, 0, 0.699);
+    margin: 0px;
+
+
+}
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#header{
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    animation-name: colorChange;
+    animation-duration: 45s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    display: flex;
+    justify-content: space-evenly;
+    text-shadow: 1px 1px 3px rgb(39, 75, 255);
+}
+@keyframes colorChange{
+    12.5%{background-color:rgb(72, 0, 14) ;}
+    25%{background-color:rgb(230, 0, 0) ;}
+    37.5%{background-color:rgb(234, 113, 0) ;}
+    50%{background-color:rgb(190, 224, 0) ;}
+    62.5%{background-color:rgb(45, 226, 0) ;}
+    75%{background-color:rgb(0, 19, 227) ;}
+    87.5%{background-color:rgb(148, 0, 217) ;}
+    100%{background-color:rgb(228, 0, 0) ;}
+}
+
+#hname {color: rgb(0, 47, 40);
+    text-align: center;
+    animation-name: colorChange;
+    animation-duration: 45s;
+    border-radius: 60%;
+}
+
+@keyframes colorChange{
+    12.5%{background-color:rgb(72, 0, 14) ;}
+    25%{background-color:rgb(230, 0, 0) ;}
+    37.5%{background-color:rgb(234, 113, 0) ;}
+    50%{background-color:rgb(190, 224, 0) ;}
+    62.5%{background-color:rgb(45, 226, 0) ;}
+    75%{background-color:rgb(0, 19, 227) ;}
+    87.5%{background-color:rgb(148, 0, 217) ;}
+    100%{background-color:rgb(228, 0, 0) ;}
+}
+
+#bio {
+    color: rgb(0, 42, 36);
+    text-align: center;
+    animation-name: colorChange;
+    animation-duration: 45s;
+    border-radius: 60%;
+
+@keyframes colorChange{
+    12.5%{background-color:rgb(230, 0, 46) ;}
+    25%{background-color:rgb(230, 107, 0) ;}
+    37.5%{background-color:rgb(234, 234, 0) ;}
+    50%{background-color:rgb(37, 224, 0) ;}
+    62.5%{background-color:rgb(0, 0, 0) ;}
+    75%{background-color:rgb(4, 0, 227) ;}
+    87.5%{background-color:rgb(112, 0, 217) ;}
+    100%{background-color:rgb(228, 0, 0) ;}
+}}
+
+#contact{
+    color: bisque;
+    box-shadow: darkorange;
+    text-align: center;
+
+}
+#contact div01{
+    text-align: center;
+
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: rgb(77, 0, 128);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+
+}
+
+.navbar a{
+    color: burlywood;
+    text-decoration: none;
+    padding: 18px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: rgb(161, 235, 0);
+    color: black;
+    animation-name: colorChange;
+    animation-duration: 45s;
+
+@keyframes colorChange{
+    12.5%{background-color:rgb(230, 0, 46) ;}
+    25%{background-color:rgb(230, 107, 0) ;}
+    37.5%{background-color:rgb(234, 234, 0) ;}
+    50%{background-color:rgb(37, 224, 0) ;}
+    62.5%{background-color:rgb(0, 0, 0) ;}
+    75%{background-color:rgb(4, 0, 227) ;}
+    87.5%{background-color:rgb(112, 0, 217) ;}
+    100%{background-color:rgb(228, 0, 0) ;}
+}}
+.verpos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+
+}
+#linke {
+    color: azure;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verpos button{
+    border-radius: 25%;
+    width: 100px;
+    height: 70px;
+    color: darkorchid;
+    background-color: rgb(139, 0, 0);
+}
+
+.verpos button:hover{
+    background-color: rgb(161, 235, 0);
+    color: black;
+    animation-name: colorChange;
+    animation-duration: 45s;
+
+@keyframes colorChange{
+    12.5%{background-color:rgb(230, 0, 46) ;}
+    25%{background-color:rgb(230, 107, 0) ;}
+    37.5%{background-color:rgb(234, 234, 0) ;}
+    50%{background-color:rgb(37, 224, 0) ;}
+    62.5%{background-color:rgb(0, 0, 0) ;}
+    75%{background-color:rgb(4, 0, 227) ;}
+    87.5%{background-color:rgb(112, 0, 217) ;}
+    100%{background-color:rgb(228, 0, 0) ;}
+}}
