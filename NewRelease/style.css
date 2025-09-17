@@ -14,3 +14,29 @@ canvas {
     top: 0;
     left: 0;
 }
+#latestrelease {
+    position: relative;
+    color: white;
+    align-items: center;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0);
+    font-family: 'Arial', sans-serif;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+img {
+    height: 500px;
+    width: 500px;
+    border-radius: 10px;
+    z-index: 2;
+}
