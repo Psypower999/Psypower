@@ -181,7 +181,7 @@ async function getSongs(albumName) {
     
     try {
         console.log('Fetching songs from server:', `${currFolder}/`);
-        let response = await fetch(`${currFolder}/`);
+        let response = await fetch(`${currFolder}/.mp3`);
         
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
