@@ -118,6 +118,7 @@ main {
     padding: 0px;
     margin: 0px;
     overflow: hidden;
+    border: 2px solid rgb(0, 97, 216);
 
 }
 
