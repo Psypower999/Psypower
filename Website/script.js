@@ -14,10 +14,6 @@ currentSong.addEventListener('play', () => console.log('Audio: play event'));
 currentSong.addEventListener('pause', () => console.log('Audio: pause event'));
 currentSong.addEventListener('error', (e) => console.error('Audio error:', e));
 
-// Test function removed - we'll use real songs now
-
-// No hardcoded database - we'll fetch real songs from the server
-
 // Function to clean song names by removing track numbers and file extensions
 function cleanSongName(filename) {
     // Remove .mp3 extension
@@ -351,7 +347,7 @@ async function main() {
             // Add selected class to clicked card
             card.classList.add('selected');
             
-            const albumName = card.getAttribute('data-folder');
+            let albumName = card.getAttribute('data-folder');
             console.log('Album name:', albumName);
             
             try {
