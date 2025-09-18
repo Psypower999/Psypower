@@ -163,6 +163,7 @@ body {
     background-color: rgb(105, 103, 103);
     cursor: pointer;
     --a: 1;
+    opacity: 1;
 }
 
 .card.selected{

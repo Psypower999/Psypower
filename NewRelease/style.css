@@ -34,9 +34,19 @@ canvas {
     width: 100vw;
     overflow: hidden;
 }
+
+#trackname {
+    z-index: 2;
+    color: darkgray;
+}
 img {
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
     border-radius: 10px;
     z-index: 2;
+    margin-bottom: 30px;
+}
+
+#audioid {
+    display: flex;
 }
