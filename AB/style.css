@@ -35,8 +35,8 @@ html, body {
     display: flex;
     flex-direction: column;
     width: 250px;
-    gap: 20px;
-    padding: 20px;
+    gap: 10px;
+    padding: 10px;
     background-color: #16213e; /* Dark blue instead of grey */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
@@ -48,6 +48,10 @@ html, body {
     flex-direction: column;
     gap: 10px;
 }
+tempo-label {
+    font-size: 10px;
+}
+    
 
 .tempo-slider {
     width: 100%;
@@ -145,7 +149,7 @@ html, body {
 }
 
 .loop-label {
-    font-size: 12px;
+    font-size: 8px;
     color: #e94560;
     text-align: center;
 }
@@ -501,4 +505,5 @@ Button 1: but1
 Button 2: but2
 ...
 Button 100: but100
+
 */
