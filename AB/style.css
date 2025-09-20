@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#backgroundCanvas {
+    position: fixed;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e; /* Dark blue instead of black */
+    color: #f0f0f0; /* Off-white instead of pure white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 20px;
+    z-index: 100;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 20px;
+    padding: 20px;
+    background-color: #16213e; /* Dark blue instead of grey */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.tempo-control {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tempo-slider {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: #0f3460; /* Dark blue instead of grey */
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.tempo-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e94560; /* Red accent instead of blue */
+    cursor: pointer;
+}
+
+.tempo-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e94560; /* Red accent instead of blue */
+    cursor: pointer;
+}
+
+.tempo-display {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e94560; /* Red accent instead of blue */
+}
+
+.play-button {
+    padding: 12px;
+    background-color: #e94560; /* Red accent instead of blue */
+    color: #000000; /* Off-white instead of white */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.play-button:hover {
+    background-color: #c13651; /* Darker red */
+}
+
+.play-button.playing {
+    background-color: #f39c12; /* Orange instead of orange */
+    color: #f0f0f0; /* Off-white */
+}
+
+.loop-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.loop-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.loop-button {
+    padding: 6px 10px;
+    background-color: #0f3460; /* Dark blue instead of grey */
+    color: #f0f0f0; /* Off-white instead of white */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s;
+}
+
+.loop-button:hover {
+    background-color: #1e5f8e; /* Lighter blue */
+}
+
+.loop-button.active {
+    background-color: #e94560; /* Red accent instead of blue */
+    color: #f0f0f0; /* Off-white */
+}
+
+.volume-controls {
+    margin-top: 10px;
+}
+
+.volume-controls h3 {
+    margin-bottom: 8px;
+    color: #e94560;
+    text-align: center;
+    font-size: 14px;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.volume-control label {
+    width: 60px;
+    font-size: 12px;
+}
+
+.volume-slider {
+    flex: 1;
+    height: 6px;
+    border-radius: 3px;
+    background: #0f3460;
+    outline: none;
+    -webkit-appearance: none;
+    margin: 0 8px;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #e94560;
+    cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #e94560;
+    cursor: pointer;
+}
+
+.volume-value {
+    width: 35px;
+    text-align: right;
+    font-size: 12px;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    width: 90vmin;
+    height: 90vmin;
+    gap: 1vmin;
+    max-width: 800px;
+    max-height: 800px;
+}
+
+.audio-button {
+    padding: 10px 5px;
+    color: #000000; /* Off-white instead of white */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: clamp(12px, 1.5vmin, 16px);
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    position: relative;
+}
+
+.audio-button:hover {
+    opacity: 0.8;
+}
+
+.loop-indicator {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #e94560; /* Red accent instead of blue */
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Hide the loop-indicator for active buttons */
+.audio-button.active .loop-indicator {
+    opacity: 0;
+}
+
+/* Colors for each group of 10 buttons */
+.group-0 { background-color: #e53935; } /* Red */
+.group-1 { background-color: #fb8c00; } /* Orange */
+.group-2 { background-color: #fdd835; } /* Yellow */
+.group-3 { background-color: #43a047; } /* Green */
+.group-4 { background-color: #00acc1; } /* Teal */
+.group-5 { background-color: #039be5; } /* Blue */
+.group-6 { background-color: #5e35b1; } /* Deep Purple */
+.group-7 { background-color: #8e24aa; } /* Purple */
+.group-8 { background-color: #d81b60; } /* Pink */
+.group-9 { background-color: #546e7a; } /* Blue Grey */
+
+/* Active state with colored shadow and darkened color */
+.group-0.active { 
+    background-color: #b71c1c; /* Darker red */
+    box-shadow: 0 0 15px rgba(229, 57, 53, 0.8), 0 0 30px rgba(229, 57, 53, 0.5);
+}
+.group-1.active { 
+    background-color: #e65100; /* Darker orange */
+    box-shadow: 0 0 15px rgba(251, 140, 0, 0.8), 0 0 30px rgba(251, 140, 0, 0.5);
+}
+.group-2.active { 
+    background-color: #f57f17; /* Darker yellow */
+    box-shadow: 0 0 15px rgba(253, 216, 53, 0.8), 0 0 30px rgba(253, 216, 53, 0.5);
+}
+.group-3.active { 
+    background-color: #1b5e20; /* Darker green */
+    box-shadow: 0 0 15px rgba(67, 160, 71, 0.8), 0 0 30px rgba(67, 160, 71, 0.5);
+}
+.group-4.active { 
+    background-color: #006064; /* Darker teal */
+    box-shadow: 0 0 15px rgba(0, 172, 193, 0.8), 0 0 30px rgba(0, 172, 193, 0.5);
+}
+.group-5.active { 
+    background-color: #01579b; /* Darker blue */
+    box-shadow: 0 0 15px rgba(3, 155, 229, 0.8), 0 0 30px rgba(3, 155, 229, 0.5);
+}
+.group-6.active { 
+    background-color: #311b92; /* Darker deep purple */
+    box-shadow: 0 0 15px rgba(94, 53, 177, 0.8), 0 0 30px rgba(94, 53, 177, 0.5);
+}
+.group-7.active { 
+    background-color: #4a148c; /* Darker purple */
+    box-shadow: 0 0 15px rgba(142, 36, 170, 0.8), 0 0 30px rgba(142, 36, 170, 0.5);
+}
+.group-8.active { 
+    background-color: #880e4f; /* Darker pink */
+    box-shadow: 0 0 15px rgba(216, 27, 96, 0.8), 0 0 30px rgba(216, 27, 96, 0.5);
+}
+.group-9.active { 
+    background-color: #263238; /* Darker blue grey */
+    box-shadow: 0 0 15px rgba(84, 110, 122, 0.8), 0 0 30px rgba(84, 110, 122, 0.5);
+}
+
+/* Color the labels to match the group colors */
+.group-0-label { color: #e53935; }
+.group-1-label { color: #fb8c00; }
+.group-2-label { color: #fdd835; }
+.group-3-label { color: #43a047; }
+.group-4-label { color: #00acc1; }
+.group-5-label { color: #039be5; }
+.group-6-label { color: #5e35b1; }
+.group-7-label { color: #8e24aa; }
+.group-8-label { color: #d81b60; }
+.group-9-label { color: #546e7a; }
+
+/* For very small screens */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        padding: 8px;
+        gap: 8px;
+    }
+    
+    .controls {
+        width: 100%;
+        flex-direction: column;
+        padding: 8px;
+        gap: 8px;
+        /* Set a fixed height for controls to ensure consistency */
+        height: 180px;
+        position: relative; /* Needed for absolute positioning of children */
+    }
+    
+    .tempo-control {
+        width: 48%;
+        order: 1;
+        margin-bottom: 0;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+    }
+    
+    .play-button {
+        width: 48%;
+        order: 2;
+        padding: 8px;
+        font-size: 14px;
+        margin-bottom: 0;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .loop-controls {
+        width: 48%;
+        order: 3;
+        position: absolute;
+        top: 70px;
+        left: 8px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    .volume-controls {
+        width: 48%;
+        order: 4;
+        position: absolute;
+        top: 70px;
+        right: 8px;
+        margin-top: 0;
+        /* Make volume controls scrollable if needed */
+        max-height: 100px;
+        overflow-y: auto;
+    }
+    
+    .volume-controls h3 {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+    
+    .volume-control {
+        margin-bottom: 3px;
+    }
+    
+    .volume-control label {
+        width: 25px; /* Reduced width since we're removing "Group " text */
+        font-size: 10px;
+    }
+    
+    .volume-slider {
+        height: 4px;
+        margin: 0 4px;
+    }
+    
+    .volume-slider::-webkit-slider-thumb {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .volume-slider::-moz-range-thumb {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .volume-value {
+        width: 30px;
+        font-size: 10px;
+    }
+    
+    .loop-options {
+        justify-content: space-around;
+    }
+    
+    .loop-button {
+        padding: 4px 6px;
+        font-size: 10px;
+    }
+    
+    .tempo-display {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    
+    .grid-container {
+        flex: 1;
+        width: 100%;
+        /* Give more space to the grid */
+        height: calc(100vh - 200px);
+    }
+    
+    .button-grid {
+        width: 95vmin;
+        height: 95vmin;
+        gap: 0.5vmin;
+    }
+    
+    .audio-button {
+        font-size: 10px;
+        padding: 5px 2px;
+    }
+}
+
+/*
+BUTTON NAMES (for future reference)
+Group 0 (Red): Buttons 1-10
+Group 1 (Orange): Buttons 11-20
+Group 2 (Yellow): Buttons 21-30
+Group 3 (Green): Buttons 31-40
+Group 4 (Teal): Buttons 41-50
+Group 5 (Blue): Buttons 51-60
+Group 6 (Deep Purple): Buttons 61-70
+Group 7 (Purple): Buttons 71-80
+Group 8 (Pink): Buttons 81-90
+Group 9 (Blue Grey): Buttons 91-100
+
+Individual button naming convention:
+Button 1: but1
+Button 2: but2
+...
+Button 100: but100
+*/
