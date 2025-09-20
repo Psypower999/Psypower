@@ -35,7 +35,6 @@ html, body {
     display: flex;
     flex-direction: column;
     width: 250px;
-    height: 200px;
     gap: 10px;
     padding: 10px;
     background-color: #16213e; /* Dark blue instead of grey */
@@ -508,4 +507,5 @@ Button 2: but2
 Button 100: but100
 
 */
+
 
