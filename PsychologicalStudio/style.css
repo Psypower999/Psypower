@@ -1,0 +1,1304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    gap: 10px;
+    z-index: 100;
+    box-sizing: border-box;
+    max-width: 1400px;
+    max-height: 900px;
+    margin: 0 auto;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 10px;
+    padding: 10px;
+    background-color: #16213e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    overflow-y: auto;
+    box-sizing: border-box;
+    flex-shrink: 0; /* Prevent controls from shrinking */
+}
+
+.tempo-control {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tempo-control label {
+    color: rgb(255, 225, 0);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.tempo-slider {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: #0f3460;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.tempo-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e94560;
+    cursor: pointer;
+}
+
+.tempo-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e94560;
+    cursor: pointer;
+}
+
+.tempo-display {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #009c7d;
+    margin-top: 5px;
+}
+
+/* High tempo control styles */
+.high-tempo-control {
+    margin-top: 5px;
+}
+
+.high-tempo-control label {
+    color: rgb(255, 100, 0); /* Slightly different color to distinguish */
+}
+
+.high-tempo-slider:disabled {
+    opacity: 0.5;
+}
+
+/* Long loop tempo control styles */
+.long-loop-tempo-control {
+    margin-top: 5px;
+}
+
+.long-loop-tempo-control label {
+    color: rgb(112, 223, 0); /* Same as loop controls */
+}
+
+.play-button {
+    padding: 12px;
+    background-color: #930018;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    box-shadow: 0px, 0px, 0px, 0px, 5px, rgba(0,0,0,0.3);
+    min-height: 44px; /* Ensure minimum height for better touch target */
+}
+
+.play-button:hover {
+    background-color: #6500bc;
+}
+
+.play-button.playing {
+    background-color: #a50034;
+    color: #f0f0f0;
+}
+
+.loop-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.loop-controls label {
+    color: rgb(112, 223, 0);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.loop-options {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.long-loop-controls {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.loop-button {
+    padding: 6px 8px;
+    background-color: #0f3460;
+    color: #a4b300;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    transition: background-color 0.2s;
+    flex: 1;
+    min-width: 30px;
+}
+
+.loop-button:hover {
+    background-color: #1e5f8e;
+}
+
+.loop-button.active {
+    background-color: #ba1900;
+    color: #f0f0f0;
+}
+
+.long-loop-button.active {
+    background-color: #f39c12;
+}
+
+.volume-controls {
+    margin-top: 5px;
+}
+
+.volume-controls h3 {
+    margin-bottom: 5px;
+    color: #00ae51;
+    text-align: center;
+    font-size: 12px;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.volume-control label {
+    width: 30px;
+    font-size: 11px;
+}
+
+.volume-slider {
+    flex: 1;
+    height: 4px;
+    border-radius: 3px;
+    background: #0f3460;
+    outline: none;
+    -webkit-appearance: none;
+    margin: 0 5px;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #00c35b;
+    cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #00c35b;
+    cursor: pointer;
+}
+
+.volume-value {
+    width: 30px;
+    text-align: right;
+    font-size: 11px;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    min-height: 0; /* Important for flexbox to shrink properly */
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    width: 100%;
+    height: 100%;
+    max-width: 700px;
+    max-height: 700px;
+    min-width: 150px;
+    min-height: 150px;
+    gap: 0.8vmin;
+    box-sizing: border-box;
+    aspect-ratio: 1/1;
+    margin: auto;
+}
+
+.audio-button {
+    padding: 5px 2px;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: clamp(10px, 1.2vmin, 14px);
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    position: relative;
+}
+
+.audio-button:hover {
+    opacity: 0.8;
+}
+
+.loop-indicator {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #a745e9;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.audio-button.active .loop-indicator {
+    opacity: 0;
+}
+
+.group-0 { background-color: #e53935; }
+.group-1 { background-color: #fb8c00; }
+.group-2 { background-color: #fdd835; }
+.group-3 { background-color: #43a047; }
+.group-4 { background-color: #00acc1; }
+.group-5 { background-color: #039be5; }
+.group-6 { background-color: #5e35b1; }
+.group-7 { background-color: #8e24aa; }
+.group-8 { background-color: #d81b60; }
+.group-9 { background-color: #546e7a; }
+
+.group-0.active { 
+    color: aliceblue;
+    background-color: #b71c1c;
+    box-shadow: 0 0 15px rgba(229, 57, 53, 0.8), 0 0 30px rgba(229, 57, 53, 0.5);
+}
+.group-1.active { 
+    color: aliceblue;
+    background-color: #e65100;
+    box-shadow: 0 0 15px rgba(251, 140, 0, 0.8), 0 0 30px rgba(251, 140, 0, 0.5);
+}
+.group-2.active { 
+    color: aliceblue;
+    background-color: #f57f17;
+    box-shadow: 0 0 15px rgba(253, 216, 53, 0.8), 0 0 30px rgba(253, 216, 53, 0.5);
+}
+.group-3.active { 
+    color: aliceblue;
+    background-color: #1b5e20;
+    box-shadow: 0 0 15px rgba(67, 160, 71, 0.8), 0 0 30px rgba(67, 160, 71, 0.5);
+}
+.group-4.active { 
+    color: aliceblue;
+    background-color: #006064;
+    box-shadow: 0 0 15px rgba(0, 172, 193, 0.8), 0 0 30px rgba(0, 172, 193, 0.5);
+}
+.group-5.active { 
+    color: aliceblue;
+    background-color: #01579b;
+    box-shadow: 0 0 15px rgba(3, 155, 229, 0.8), 0 0 30px rgba(3, 155, 229, 0.5);
+}
+.group-6.active { 
+    color: aliceblue;
+    background-color: #311b92;
+    box-shadow: 0 0 15px rgba(94, 53, 177, 0.8), 0 0 30px rgba(94, 53, 177, 0.5);
+}
+.group-7.active { 
+    color: aliceblue;
+    background-color: #4a148c;
+    box-shadow: 0 0 15px rgba(142, 36, 170, 0.8), 0 0 30px rgba(142, 36, 170, 0.5);
+}
+.group-8.active { 
+    color: aliceblue;
+    background-color: #880e4f;
+    box-shadow: 0 0 15px rgba(216, 27, 96, 0.8), 0 0 30px rgba(216, 27, 96, 0.5);
+}
+.group-9.active { 
+    color: aliceblue;
+    background-color: #263238;
+    box-shadow: 0 0 15px rgba(84, 110, 122, 0.8), 0 0 30px rgba(84, 110, 122, 0.5);
+}
+
+.group-0-label { color: #e53935; }
+.group-1-label { color: #fb8c00; }
+.group-2-label { color: #fdd835; }
+.group-3-label { color: #43a047; }
+.group-4-label { color: #00acc1; }
+.group-5-label { color: #039be5; }
+.group-6-label { color: #5e35b1; }
+.group-7-label { color: #8e24aa; }
+.group-8-label { color: #d81b60; }
+.group-9-label { color: #546e7a; }
+
+/* For medium screens like tablets */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+        max-height: 100%;
+        padding: 10px;
+    }
+    
+    .controls {
+        width: 220px;
+        padding: 8px;
+    }
+    
+    .button-grid {
+        max-width: 600px;
+        max-height: 600px;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    html, body {
+        min-height: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        padding: 5px;
+        gap: 5px;
+        overflow: hidden;
+        box-sizing: border-box;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .controls {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 5px;
+        gap: 5px;
+        height: 180px; /* Increased height to accommodate additional tempo controls */
+        overflow-y: auto;
+        box-sizing: border-box;
+        flex-shrink: 0; /* Prevent controls from shrinking */
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .left-controls {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        gap: 5px;
+    }
+    
+    .right-controls {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        gap: 5px;
+    }
+    
+    .tempo-control {
+        width: 100%;
+        margin-bottom: 0;
+        gap: 3px;
+    }
+    
+    .tempo-control label {
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
+    
+    .high-tempo-control {
+        width: 100%;
+        margin-bottom: 0;
+        gap: 3px;
+    }
+    
+    .long-loop-tempo-control {
+        width: 100%;
+        margin-bottom: 0;
+        gap: 3px;
+    }
+    
+    .play-button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        margin-bottom: 0;
+        min-height: 44px;
+    }
+    
+    .loop-controls {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        gap: 3px;
+    }
+    
+    .loop-controls label {
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
+    
+    .long-loop-controls {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        gap: 3px;
+    }
+    
+    .volume-controls {
+        width: 100%;
+        margin-top: 0;
+        max-height: 70px; /* Increased height to show more volume controls */
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        flex-grow: 0;
+    }
+    
+    .volume-controls::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .volume-controls h3 {
+        font-size: 10px;
+        margin-bottom: 1px; /* Reduced margin */
+    }
+    
+    .volume-control {
+        margin-bottom: 1px; /* Reduced margin */
+    }
+    
+    .volume-control label {
+        width: 20px; /* Reduced width */
+        font-size: 9px;
+    }
+    
+    .volume-slider {
+        height: 3px;
+        margin: 0 2px; /* Reduced margin */
+    }
+    
+    .volume-slider::-webkit-slider-thumb {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .volume-slider::-moz-range-thumb {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .volume-value {
+        width: 20px; /* Reduced width */
+        font-size: 9px;
+    }
+    
+    .loop-options {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 2px;
+    }
+    
+    .long-loop-controls {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        overflow: hidden; /* Hide overflow instead of scrolling */
+        padding-bottom: 2px;
+        gap: 2px; /* Reduce gap between buttons */
+    }
+    
+    .long-loop-controls .loop-button {
+        flex: 1; /* Make buttons equal width to fill available space */
+        min-width: unset; /* Remove min-width to allow shrinking */
+        padding: 2px 3px; /* Reduce padding */
+        font-size: 8px; /* Reduce font size */
+    }
+    
+    .loop-options .loop-button {
+        flex: 0 0 auto;
+        min-width: 25px;
+        padding: 3px 4px;
+        font-size: 9px;
+    }
+    
+    .tempo-display {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    
+    .grid-container {
+        flex: 1;
+        width: 100%;
+        height: calc(100% - 180px); /* Adjusted for increased controls height */
+        overflow: hidden;
+        box-sizing: border-box;
+        min-height: 0; /* Important for flexbox to shrink properly */
+    }
+    
+    .button-grid {
+        max-width: 500px;
+        max-height: 500px;
+        min-width: 150px;
+        min-height: 150px;
+        gap: 0.4vmin;
+    }
+    
+    .audio-button {
+        font-size: 9px;
+        padding: 3px 1px;
+    }
+}/* For mobile screens */
+@media (max-width: 768px) {
+    html, body {
+        min-height: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        padding: 5px;
+        gap: 5px;
+        overflow: hidden;
+        box-sizing: border-box;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .controls {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 5px;
+        gap: 5px;
+        height: 180px; /* Increased height to accommodate additional tempo controls */
+        overflow-y: auto;
+        box-sizing: border-box;
+        flex-shrink: 0; /* Prevent controls from shrinking */
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .left-controls {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        gap: 5px;
+    }
+    
+    .right-controls {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        gap: 5px;
+    }
+    
+    .tempo-control {
+        width: 100%;
+        margin-bottom: 0;
+        gap: 3px;
+    }
+    
+    .tempo-control label {
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
+    
+    .high-tempo-control {
+        width: 100%;
+        margin-bottom: 0;
+        gap: 3px;
+    }
+    
+    .long-loop-tempo-control {
+        width: 100%;
+        margin-bottom: 0;
+        gap: 3px;
+    }
+    
+    .play-button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        margin-bottom: 0;
+        min-height: 44px;
+    }
+    
+    .loop-controls {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        gap: 3px;
+    }
+    
+    .loop-controls label {
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
+    
+    .long-loop-controls {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        gap: 3px;
+    }
+    
+    .volume-controls {
+        width: 100%;
+        margin-top: 0;
+        max-height: 70px; /* Increased height to show more volume controls */
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        flex-grow: 0;
+    }
+    
+    .volume-controls::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .volume-controls h3 {
+        font-size: 10px;
+        margin-bottom: 1px; /* Reduced margin */
+    }
+    
+    .volume-control {
+        margin-bottom: 1px; /* Reduced margin */
+    }
+    
+    .volume-control label {
+        width: 20px; /* Reduced width */
+        font-size: 9px;
+    }
+    
+    .volume-slider {
+        height: 3px;
+        margin: 0 2px; /* Reduced margin */
+    }
+    
+    .volume-slider::-webkit-slider-thumb {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .volume-slider::-moz-range-thumb {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .volume-value {
+        width: 20px; /* Reduced width */
+        font-size: 9px;
+    }
+    
+    .loop-options {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 2px;
+    }
+    
+    .long-loop-controls {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        overflow: hidden; /* Hide overflow instead of scrolling */
+        padding-bottom: 2px;
+        gap: 2px; /* Reduce gap between buttons */
+    }
+    
+    .long-loop-controls .loop-button {
+        flex: 1; /* Make buttons equal width to fill available space */
+        min-width: unset; /* Remove min-width to allow shrinking */
+        padding: 2px 3px; /* Reduce padding */
+        font-size: 8px; /* Reduce font size */
+    }
+    
+    .loop-options .loop-button {
+        flex: 0 0 auto;
+        min-width: 25px;
+        padding: 3px 4px;
+        font-size: 9px;
+    }
+    
+    .tempo-display {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    
+    .grid-container {
+        flex: 1;
+        width: 100%;
+        height: calc(100% - 180px); /* Adjusted for increased controls height */
+        overflow: hidden;
+        box-sizing: border-box;
+        min-height: 0; /* Important for flexbox to shrink properly */
+    }
+    
+    .button-grid {
+        max-width: 500px;
+        max-height: 500px;
+        min-width: 150px;
+        min-height: 150px;
+        gap: 0.4vmin;
+    }
+    
+    .audio-button {
+        font-size: 9px;
+        padding: 3px 1px;
+    }
+}
+
+/* For very small screens like Apple Watch */
+@media (max-width: 400px) and (max-height: 500px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        padding: 2px;
+        gap: 2px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    
+    .controls {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 2px;
+        gap: 2px;
+        height: 140px; /* Increased height for smaller screens */
+        overflow-y: auto;
+        box-sizing: border-box;
+        flex-shrink: 0; /* Prevent controls from shrinking */
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .left-controls {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        gap: 2px;
+    }
+    
+    .right-controls {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        gap: 2px;
+    }
+    
+    .tempo-control {
+        width: 100%;
+        margin-bottom: 0;
+        gap: 2px;
+    }
+    
+    .tempo-control label {
+        font-size: 10px;
+        margin-bottom: 1px;
+    }
+    
+    .high-tempo-control {
+        width: 100%;
+        margin-bottom: 0;
+        gap: 2px;
+    }
+    
+    .long-loop-tempo-control {
+        width: 100%;
+        margin-bottom: 0;
+        gap: 2px;
+    }
+    
+    .play-button {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        margin-bottom: 0;
+        min-height: 40px;
+    }
+    
+    .loop-controls {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        gap: 2px;
+    }
+    
+    .loop-controls label {
+        font-size: 10px;
+        margin-bottom: 1px;
+    }
+    
+    .long-loop-controls {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        gap: 2px;
+    }
+    
+    .volume-controls {
+        width: 100%;
+        margin-top: 0;
+        max-height: 50px; /* Increased height for smaller screens */
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        flex-grow: 0;
+    }
+    
+    .volume-controls::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .volume-controls h3 {
+        font-size: 8px;
+        margin-bottom: 1px;
+    }
+    
+    .volume-control {
+        margin-bottom: 1px;
+    }
+    
+    .volume-control label {
+        width: 18px; /* Reduced width */
+        font-size: 8px;
+    }
+    
+    .volume-slider {
+        height: 2px;
+        margin: 0 1px; /* Reduced margin */
+    }
+    
+    .volume-slider::-webkit-slider-thumb {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .volume-slider::-moz-range-thumb {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .volume-value {
+        width: 18px; /* Reduced width */
+        font-size: 8px;
+    }
+    
+    .loop-options {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 1px;
+    }
+    
+    .long-loop-controls {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        overflow: hidden; /* Hide overflow instead of scrolling */
+        padding-bottom: 1px;
+        gap: 1px; /* Reduce gap between buttons */
+    }
+    
+    .long-loop-controls .loop-button {
+        flex: 1; /* Make buttons equal width to fill available space */
+        min-width: unset; /* Remove min-width to allow shrinking */
+        padding: 1px 2px; /* Reduce padding even more */
+        font-size: 7px; /* Reduce font size even more */
+    }
+    
+    .loop-options .loop-button {
+        flex: 0 0 auto;
+        min-width: 20px;
+        padding: 2px 3px;
+        font-size: 8px;
+    }
+    
+    .tempo-display {
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+    
+    .grid-container {
+        flex: 1;
+        width: 100%;
+        height: calc(100% - 140px); /* Adjusted for increased controls height */
+        overflow: hidden;
+        box-sizing: border-box;
+        min-height: 0; /* Important for flexbox to shrink properly */
+    }
+    
+    .button-grid {
+        max-width: 300px;
+        max-height: 300px;
+        min-width: 150px;
+        min-height: 150px;
+        gap: 0.2vmin;
+    }
+    
+    .audio-button {
+        font-size: 8px;
+        padding: 2px 1px;
+    }
+}
+
+/* For mobile landscape orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+    .container {
+        flex-direction: row;
+        height: 100vh;
+        padding: 5px;
+        gap: 5px;
+    }
+    
+    .controls {
+        width: 30%;
+        height: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 5px;
+        gap: 5px;
+        min-width: 150px;
+        flex-shrink: 0; /* Prevent controls from shrinking */
+    }
+    
+    .tempo-control, .high-tempo-control, .long-loop-tempo-control, .play-button, .loop-controls, .long-loop-controls, .volume-controls {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 5px;
+        padding: 3px;
+    }
+    
+    .tempo-control {
+        min-width: auto;
+    }
+    
+    .high-tempo-control {
+        min-width: auto;
+    }
+    
+    .long-loop-tempo-control {
+        min-width: auto;
+    }
+    
+    .play-button {
+        min-width: auto;
+        padding: 12px;
+        font-size: 16px;
+        min-height: 48px;
+    }
+    
+    .loop-controls, .long-loop-controls {
+        min-width: auto;
+    }
+    
+    .volume-controls {
+        min-width: auto;
+        max-height: 120px;
+        margin-bottom: 0;
+    }
+    
+    .grid-container {
+        width: 70%;
+        height: 100%;
+        padding: 5px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Ensure there's enough space for the grid */
+        min-height: 0;
+        flex: 1; /* Allow grid container to expand */
+    }
+    
+    .button-grid {
+        max-width: 500px;
+        max-height: 500px;
+        min-width: 150px;
+        min-height: 150px;
+        gap: 0.3vmin;
+        box-sizing: border-box;
+        /* Ensure the grid doesn't overflow its container */
+        width: auto;
+        height: auto;
+    }
+    
+    .audio-button {
+        font-size: 8px;
+        padding: 2px 1px;
+    }
+    
+    /* Adjust loop buttons for landscape mode */
+    .loop-options {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 2px;
+    }
+    
+    .long-loop-controls {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 2px;
+    }
+    
+    .long-loop-controls .loop-button {
+        flex: 0 0 auto;
+        min-width: 25px;
+        padding: 3px 4px;
+        font-size: 9px;
+    }
+    
+    .loop-options .loop-button {
+        flex: 0 0 auto;
+        min-width: 25px;
+        padding: 3px 4px;
+        font-size: 9px;
+    }
+}
+
+/* Effects popup styles */
+.effects-popup {
+    position: fixed;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #333;
+    border-bottom: 1px solid #444;
+    border-radius: 8px 8px 0 0;
+}
+
+.popup-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.popup-close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    padding: 15px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.effect-section {
+    margin-bottom: 15px;
+}
+
+.effect-section h4 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.slider-container {
+    margin-bottom: 10px;
+}
+
+.slider-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.slider-container input[type="range"] {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.slider-container span {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.popup-footer {
+    padding: 10px 15px;
+    background-color: #333;
+    border-top: 1px solid #444;
+    border-radius: 0 0 8px 8px;
+    text-align: right;
+}
+
+.popup-accept-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.popup-accept-btn:hover {
+    background-color: #45a049;
+}
+
+/* Visual EQ Styles */
+.visual-eq-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.eq-canvas {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+.eq-frequency-labels {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    font-size: 10px;
+    color: #aaa;
+    pointer-events: none;
+}
+
+.eq-gain-labels {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 10px;
+    color: #aaa;
+    pointer-events: none;
+}
+
+.eq-band-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.eq-band-control {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.eq-band-control label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.eq-band-control input {
+    width: 100%;
+}
+
+.eq-band-value {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    color: #aaa;
+    margin-top: 2px;
+}
