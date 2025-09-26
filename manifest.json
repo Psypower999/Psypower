@@ -2,7 +2,7 @@
     "name": "Psychological Studio",
     "short_name": "PsyStudio",
     "description": "A professional audio production studio",
-    "start_url": "./index.html",
+    "start_url": "./PsychologicalStudio.html",
     "display": "fullscreen",
     "background_color": "#1a1a2e",
     "theme_color": "#1a1a2e",
