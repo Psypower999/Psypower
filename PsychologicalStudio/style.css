@@ -151,6 +151,7 @@ html, body {
 .tempo-control label {
     color: rgb(255, 98, 0);
     font-size: 14px;
+    margin-top: 3px;
 }
 
 .tempo-slider {
@@ -189,6 +190,7 @@ html, body {
 
 .high-tempo-control label {
     color: rgb(255, 100, 0);
+    margin-top: 3px;
 }
 
 .high-tempo-slider:disabled {
