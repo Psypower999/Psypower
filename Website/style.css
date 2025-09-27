@@ -47,7 +47,7 @@ body {
     overflow-x: hidden;
     user-select: none;
     -webkit-user-select: none;
-    padding-bottom: 80px; /* Add padding to prevent content from being hidden behind playbar */
+    padding-bottom: 70px; /* Reduced padding to minimize gap */
 }
 
 #leftcontainer {
@@ -65,8 +65,8 @@ body {
     margin-top: 70px;
     margin-bottom: 70px;
     background-color: rgba(34, 34, 34, 0);
-    height: calc(100vh - 140px); /* Fixed height for scrolling */
-    overflow-y: auto; /* Enable vertical scrolling */
+    height: calc(100vh - 140px);
+    overflow-y: auto;
 }
 
 #lefthomecontainer {
@@ -180,8 +180,8 @@ body {
     flex-direction: column;
     align-items: center;
     opacity: 1;
-    flex-grow: 1; /* Allow this section to grow and fill available space */
-    overflow-y: auto; /* Enable scrolling for the content */
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 .RLC h1 {
@@ -191,7 +191,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Album Cards Container - Fixed for scrolling */
+/* Album Cards Container */
 .cardContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -309,7 +309,7 @@ body {
     background: rgba(226, 217, 217, 1);
     border-radius: 15px 15px 0 0;
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     height: 70px !important;
     z-index: 100;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
@@ -318,15 +318,7 @@ body {
 }
 
 /* Playbar sections */
-.playbar-section {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Abovebar - Controls section */
-.abovebar {
+.playbar-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -334,9 +326,18 @@ body {
     padding: 0 15px;
     height: 35px !important;
     box-sizing: border-box;
-    margin-bottom: 8px;
 }
 
+.playbar-bottom {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+    height: 25px !important;
+    box-sizing: border-box;
+}
+
+/* Song info */
 .songinfo {
     color: black;
     font-weight: 500;
@@ -348,52 +349,31 @@ body {
     flex: 1;
 }
 
+/* Play controls */
 .songbuttons {
     display: flex;
     justify-content: center;
     gap: 15px;
     align-items: center;
-    flex: 2;
+    flex: 1;
 }
 
+/* Volume controls - integrated with seekbar */
 .timevol {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 10px;
-    flex: 1;
+    gap: 15px;
+    flex: 2;
 }
 
-.volume {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-}
-
-/* Override inline width and height attributes for playbar icons */
-#previous, #play, #next {
-    width: 22px !important;
-    height: 22px !important;
-    max-width: 22px !important;
-    max-height: 22px !important;
-}
-
-.volume img {
-    width: 18px !important;
-    height: 18px !important;
-    max-width: 18px !important;
-    max-height: 18px !important;
-}
-
-/* Seekbar container with timestamps */
+/* Seekbar - moved inside playbar */
 .seekbar-container {
     display: flex;
     align-items: center;
     width: 100%;
     padding: 0 15px;
-    height: 20px;
+    height: 25px !important;
     box-sizing: border-box;
 }
 
@@ -409,7 +389,7 @@ body {
 /* Seekbar - professional sizing */
 .seekbar {
     height: 4px;
-    width: 70%;
+    width: 100%;
     background: black;
     border-radius: 10px;
     position: relative;
@@ -429,9 +409,33 @@ body {
 }
 
 /* Volume slider - professional sizing */
-.volume .range input {
-    width: 80px;
+.volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
     cursor: pointer;
+    width: 120px;
+}
+
+.volume .range input {
+    width: 100px;
+    cursor: pointer;
+}
+
+/* Override inline width and height attributes for playbar icons */
+#previous, #play, #next {
+    width: 22px !important;
+    height: 22px !important;
+    max-width: 22px !important;
+    max-height: 22px !important;
+}
+
+.volume img {
+    width: 18px !important;
+    height: 18px !important;
+    max-width: 18px !important;
+    max-height: 18px !important;
 }
 
 /* Song List - Fixed artwork size */
@@ -615,24 +619,33 @@ body {
 
 /* Mobile Responsiveness */
 @media (max-width: 1200px) {
+    /* Ensure left container is properly hidden */
     .left {
         position: fixed;
         left: -100%;
         top: 0;
         width: 340px;
         height: 100vh;
-        background-color: rgba(18, 18, 18, 0.9);
-        z-index: 1000;
+        background-color: rgba(18, 18, 18, 0.95);
+        z-index: 999;
         transition: left 0.3s ease;
         overflow-y: auto;
         margin: 0;
         padding: 20px;
-        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
         border-radius: 0;
     }
 
     .left.active {
         left: 0;
+        z-index: 1000;
+    }
+
+    /* Ensure right container has higher z-index */
+    .right, #rightcontainer, .RLC, .cardContainer {
+        z-index: 2;
+        position: relative;
+        background-color: rgba(34, 34, 34, 0.9);
     }
 
     .right {
@@ -644,7 +657,7 @@ body {
     #rightcontainer {
         margin: 0;
         padding: 10px;
-        height: calc(100vh - 140px); /* Fixed height for scrolling */
+        height: calc(100vh - 140px);
     }
 
     .close {
@@ -678,16 +691,33 @@ body {
     }
 
     body {
-        padding-bottom: 70px; /* Adjust for mobile playbar */
+        padding-bottom: 70px;
     }
 
     .playbar {
-        height: 60px !important;
-        padding: 8px;
+        height: 80px !important;
+        padding: 5px;
+    }
+    
+    .playbar-top {
+        height: 30px !important;
+    }
+    
+    .playbar-bottom {
+        height: 20px !important;
+    }
+    
+    .seekbar-container {
+        height: 20px !important;
     }
 
-    .abovebar {
-        height: 30px !important;
+    /* Volume slider adjustments for mobile */
+    .volume {
+        width: 100px;
+    }
+    
+    .volume .range input {
+        width: 80px;
     }
 
     #previous, #play, #next {
@@ -702,10 +732,6 @@ body {
         height: 16px !important;
         max-width: 16px !important;
         max-height: 16px !important;
-    }
-
-    .volume .range input {
-        width: 70px;
     }
 
     .songinfo {
@@ -730,26 +756,35 @@ body {
 }
 
 @media (max-width: 768px) {
+    /* Simplified mobile layout */
     .header {
         padding: 8px;
         flex-direction: column;
         align-items: center;
         height: auto;
-    }
-
-    .header > * {
-        padding: 8px;
-        height: auto;
+        width: 100%;
+        position: relative;
+        z-index: 3;
     }
 
     .searchbar {
         width: 100%;
         max-width: 400px;
         height: 30px;
+        margin-bottom: 10px;
     }
 
     .buttons {
         display: none;
+    }
+
+    /* Ensure content area has proper background */
+    #rightcontainer {
+        background-color: rgba(34, 34, 34, 0.9);
+        border-radius: 10px;
+        margin: 10px;
+        padding: 10px;
+        height: calc(100vh - 160px);
     }
 
     .cardContainer {
@@ -781,23 +816,19 @@ body {
     }
 
     body {
-        padding-bottom: 60px; /* Adjust for mobile playbar */
+        padding-bottom: 60px;
     }
 
     .playbar {
-        height: 80px !important; /* Increased height for portrait mode */
-        padding: 8px;
-    }
-
-    /* Restructured playbar for portrait mode */
-    .playbar-section:first-child {
-        margin-bottom: 5px;
+        height: 90px !important;
+        flex-direction: column;
+        padding: 5px;
     }
     
-    .abovebar {
+    .playbar-top {
         flex-direction: column;
         height: auto !important;
-        margin-bottom: 5px;
+        padding: 5px 0;
     }
     
     .songinfo {
@@ -813,6 +844,16 @@ body {
     .timevol {
         width: 100%;
         justify-content: center;
+        margin-top: 5px;
+    }
+
+    /* Volume adjustments */
+    .volume {
+        width: 120px;
+    }
+
+    .volume .range input {
+        width: 100px;
     }
 
     #previous, #play, #next {
@@ -822,20 +863,11 @@ body {
         max-height: 18px !important;
     }
 
-    .volume {
-        width: 100%;
-        justify-content: center;
-    }
-
     .volume img {
         width: 14px !important;
         height: 14px !important;
         max-width: 14px !important;
         max-height: 14px !important;
-    }
-
-    .volume .range input {
-        width: 100px; /* Increased width for better visibility */
     }
 
     .seekbar-container {
@@ -862,6 +894,13 @@ body {
 }
 
 @media (max-width: 480px) {
+    /* Further simplified mobile layout */
+    #rightcontainer {
+        height: calc(100vh - 150px);
+        margin: 5px;
+        padding: 5px;
+    }
+
     .cardContainer {
         gap: 12px;
         padding: 0 5px;
@@ -892,14 +931,14 @@ body {
     }
 
     body {
-        padding-bottom: 50px; /* Adjust for mobile playbar */
+        padding-bottom: 50px;
     }
 
     .playbar {
-        height: 90px !important; /* Further increased for smallest screens */
-        padding: 6px;
+        height: 100px !important;
+        padding: 3px;
     }
-
+    
     .songbuttons {
         gap: 12px;
     }
@@ -932,8 +971,12 @@ body {
         bottom: -2.5px;
     }
 
+    .volume {
+        width: 100px;
+    }
+
     .volume .range input {
-        width: 80px; /* Adjusted for smallest screens */
+        width: 80px;
     }
 
     .searchbar {
