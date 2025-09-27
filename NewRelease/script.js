@@ -83,7 +83,7 @@ window.addEventListener('resize', function(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     effect.resize(canvas.width, canvas.height);
-    gradient = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 100, canvas.width/2, canvas.height/2, 800);
+    gradient = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 60, canvas.width/2, canvas.height/2, 400);
     gradient.addColorStop(0, 'red');
     gradient.addColorStop(0.2, 'yellow');
     gradient.addColorStop(0.4, 'green');
