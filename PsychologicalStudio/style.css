@@ -18,7 +18,6 @@ html, body {
     position: relative;
     -webkit-user-select: none;
     user-select: none;
-    margin-right: 2px;
 }
 
 .app-container {
@@ -35,6 +34,7 @@ html, body {
     margin: 0 auto;
     -webkit-user-select: none;
     user-select: none;
+    margin-right: 3px;
 }
 
 .controls-panel {
@@ -50,6 +50,7 @@ html, body {
     box-sizing: border-box;
     -webkit-user-select: none;
     user-select: none;
+    margin-right: 3px;
 }
 
 #PsychologicalStudio {
@@ -663,6 +664,7 @@ html, body {
     }
     .app-container {
         padding: 10px;
+        margin-right: 3px;
     }
     
     .controls-panel {
@@ -694,7 +696,8 @@ html, body {
         gap: 5px;
         overflow: hidden;
         -webkit-user-select: none;
-        user-select: none;        
+        user-select: none;
+        margin-right: 3px;        
     }
     
     .controls-panel {
@@ -706,6 +709,7 @@ html, body {
         display: flex;
         flex-direction: column;
         gap: 5px;
+        margin-right: 3px;
     }
     
     .controls-section {
@@ -1089,6 +1093,7 @@ html, body {
         height: 100vh;
         padding: 5px;
         gap: 5px;
+        margin-right: 3px;
     }
     
     .controls-panel {
@@ -1099,6 +1104,7 @@ html, body {
         display: flex;
         flex-direction: column;
         gap: 5px;
+        margin-right: 3px;
     }
     
     .left-controls {
