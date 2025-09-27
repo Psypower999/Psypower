@@ -277,22 +277,9 @@ body {
     align-self: center;
 }
 
+/* Hide sign in and login buttons permanently */
 .signupbtn, .loginbtn {
-    background-color: rgb(34, 34, 34);
-    color: rgb(156, 148, 148);
-    font-weight: bold;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-}
-
-.signupbtn:hover, .loginbtn:hover {
-    font-size: 17px;
-    color: white;
+    display: none !important;
 }
 
 /* Playbar - Professional layout */
@@ -310,7 +297,7 @@ body {
     border-radius: 15px 15px 0 0;
     width: 100%;
     padding: 8px;
-    height: 70px !important;
+    height: 85px !important; /* Increased height to accommodate all controls */
     z-index: 100;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
     opacity: 1;
@@ -324,7 +311,17 @@ body {
     align-items: center;
     width: 100%;
     padding: 0 15px;
-    height: 35px !important;
+    height: 25px !important;
+    box-sizing: border-box;
+}
+
+.playbar-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+    height: 30px !important;
     box-sizing: border-box;
 }
 
@@ -355,16 +352,21 @@ body {
     justify-content: center;
     gap: 15px;
     align-items: center;
-    flex: 1;
 }
 
-/* Volume controls - integrated with seekbar */
-.timevol {
+/* Volume controls */
+.volume {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
-    flex: 2;
+    gap: 8px;
+    cursor: pointer;
+    width: 150px; /* Increased width for better visibility */
+}
+
+.volume .range input {
+    width: 120px; /* Increased width for better usability */
+    cursor: pointer;
 }
 
 /* Seekbar - moved inside playbar */
@@ -406,21 +408,6 @@ body {
     bottom: -4px;
     left: 0%;
     transition: left 0.5s;
-}
-
-/* Volume slider - professional sizing */
-.volume {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    width: 120px;
-}
-
-.volume .range input {
-    width: 100px;
-    cursor: pointer;
 }
 
 /* Override inline width and height attributes for playbar icons */
@@ -691,33 +678,33 @@ body {
     }
 
     body {
-        padding-bottom: 70px;
+        padding-bottom: 85px; /* Adjusted for new playbar height */
     }
 
     .playbar {
-        height: 80px !important;
+        height: 95px !important; /* Increased height for mobile */
         padding: 5px;
     }
     
     .playbar-top {
+        height: 25px !important;
+    }
+    
+    .playbar-middle {
         height: 30px !important;
     }
     
     .playbar-bottom {
         height: 20px !important;
     }
-    
-    .seekbar-container {
-        height: 20px !important;
-    }
 
     /* Volume slider adjustments for mobile */
     .volume {
-        width: 100px;
+        width: 120px;
     }
     
     .volume .range input {
-        width: 80px;
+        width: 100px;
     }
 
     #previous, #play, #next {
@@ -774,17 +761,13 @@ body {
         margin-bottom: 10px;
     }
 
-    .buttons {
-        display: none;
-    }
-
     /* Ensure content area has proper background */
     #rightcontainer {
         background-color: rgba(34, 34, 34, 0.9);
         border-radius: 10px;
         margin: 10px;
         padding: 10px;
-        height: calc(100vh - 160px);
+        height: calc(100vh - 175px); /* Adjusted for new playbar height */
     }
 
     .cardContainer {
@@ -816,11 +799,11 @@ body {
     }
 
     body {
-        padding-bottom: 60px;
+        padding-bottom: 95px; /* Adjusted for new playbar height */
     }
 
     .playbar {
-        height: 90px !important;
+        height: 110px !important; /* Increased height for portrait mode */
         flex-direction: column;
         padding: 5px;
     }
@@ -829,6 +812,15 @@ body {
         flex-direction: column;
         height: auto !important;
         padding: 5px 0;
+        min-height: 25px;
+    }
+    
+    .playbar-middle {
+        height: 35px !important;
+    }
+    
+    .playbar-bottom {
+        height: 25px !important;
     }
     
     .songinfo {
@@ -839,12 +831,6 @@ body {
     
     .songbuttons {
         margin-bottom: 5px;
-    }
-    
-    .timevol {
-        width: 100%;
-        justify-content: center;
-        margin-top: 5px;
     }
 
     /* Volume adjustments */
@@ -872,7 +858,7 @@ body {
 
     .seekbar-container {
         padding: 0 10px;
-        height: 15px;
+        height: 20px;
     }
 
     .seekbar {
@@ -896,7 +882,7 @@ body {
 @media (max-width: 480px) {
     /* Further simplified mobile layout */
     #rightcontainer {
-        height: calc(100vh - 150px);
+        height: calc(100vh - 165px); /* Adjusted for new playbar height */
         margin: 5px;
         padding: 5px;
     }
@@ -931,12 +917,24 @@ body {
     }
 
     body {
-        padding-bottom: 50px;
+        padding-bottom: 110px; /* Adjusted for new playbar height */
     }
 
     .playbar {
-        height: 100px !important;
+        height: 120px !important; /* Further increased for smallest screens */
         padding: 3px;
+    }
+    
+    .playbar-top {
+        min-height: 30px;
+    }
+    
+    .playbar-middle {
+        height: 40px !important;
+    }
+    
+    .playbar-bottom {
+        height: 25px !important;
     }
     
     .songbuttons {
