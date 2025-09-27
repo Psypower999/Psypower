@@ -5,8 +5,8 @@ self.addEventListener('install', e => {
         './',
         './index.html',
         './media/psypowerrr.JPEG',
-        './media/icon-192.png',
-        './media/icon-512.png'
+        './icon-192.png',
+        './icon-512.png'
       ]);
     })
   );
