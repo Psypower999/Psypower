@@ -47,7 +47,7 @@ body {
     overflow-x: hidden;
     user-select: none;
     -webkit-user-select: none;
-    padding-bottom: 70px; /* Reduced padding to minimize gap */
+    padding-bottom: 85px; /* Adjusted for playbar height */
 }
 
 #leftcontainer {
@@ -286,7 +286,7 @@ body {
 .playbar {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     bottom: 0;
@@ -296,8 +296,8 @@ body {
     background: rgba(226, 217, 217, 1);
     border-radius: 15px 15px 0 0;
     width: 100%;
-    padding: 8px;
-    height: 85px !important; /* Increased height to accommodate all controls */
+    padding: 8px 0;
+    height: 85px !important;
     z-index: 100;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
     opacity: 1;
@@ -311,7 +311,7 @@ body {
     align-items: center;
     width: 100%;
     padding: 0 15px;
-    height: 25px !important;
+    height: 30px !important;
     box-sizing: border-box;
 }
 
@@ -361,11 +361,11 @@ body {
     align-items: center;
     gap: 8px;
     cursor: pointer;
-    width: 150px; /* Increased width for better visibility */
+    width: 150px;
 }
 
 .volume .range input {
-    width: 120px; /* Increased width for better usability */
+    width: 120px;
     cursor: pointer;
 }
 
@@ -613,26 +613,27 @@ body {
         top: 0;
         width: 340px;
         height: 100vh;
-        background-color: rgba(18, 18, 18, 0.95);
-        z-index: 999;
+        background-color: rgba(18, 18, 18, 0.98);
+        z-index: 998;
         transition: left 0.3s ease;
         overflow-y: auto;
         margin: 0;
         padding: 20px;
-        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.8);
         border-radius: 0;
     }
 
     .left.active {
         left: 0;
-        z-index: 1000;
+        z-index: 999;
     }
 
-    /* Ensure right container has higher z-index */
+    /* Ensure right container has higher z-index and solid background */
     .right, #rightcontainer, .RLC, .cardContainer {
         z-index: 2;
         position: relative;
-        background-color: rgba(34, 34, 34, 0.9);
+        background-color: rgba(34, 34, 34, 0.98);
+        border-radius: 10px;
     }
 
     .right {
@@ -653,7 +654,7 @@ body {
         top: 15px;
         right: 15px;
         cursor: pointer;
-        z-index: 1001;
+        z-index: 1000;
         width: 30px;
         height: 30px;
         padding: 5px;
@@ -678,12 +679,12 @@ body {
     }
 
     body {
-        padding-bottom: 85px; /* Adjusted for new playbar height */
+        padding-bottom: 85px;
     }
 
     .playbar {
-        height: 95px !important; /* Increased height for mobile */
-        padding: 5px;
+        height: 95px !important;
+        padding: 5px 0;
     }
     
     .playbar-top {
@@ -691,7 +692,7 @@ body {
     }
     
     .playbar-middle {
-        height: 30px !important;
+        height: 35px !important;
     }
     
     .playbar-bottom {
@@ -763,11 +764,11 @@ body {
 
     /* Ensure content area has proper background */
     #rightcontainer {
-        background-color: rgba(34, 34, 34, 0.9);
+        background-color: rgba(34, 34, 34, 0.98);
         border-radius: 10px;
         margin: 10px;
         padding: 10px;
-        height: calc(100vh - 175px); /* Adjusted for new playbar height */
+        height: calc(100vh - 175px);
     }
 
     .cardContainer {
@@ -799,24 +800,24 @@ body {
     }
 
     body {
-        padding-bottom: 95px; /* Adjusted for new playbar height */
+        padding-bottom: 95px;
     }
 
     .playbar {
-        height: 110px !important; /* Increased height for portrait mode */
+        height: 110px !important;
         flex-direction: column;
-        padding: 5px;
+        padding: 5px 0;
     }
     
     .playbar-top {
         flex-direction: column;
         height: auto !important;
         padding: 5px 0;
-        min-height: 25px;
+        min-height: 30px;
     }
     
     .playbar-middle {
-        height: 35px !important;
+        height: 40px !important;
     }
     
     .playbar-bottom {
@@ -882,7 +883,7 @@ body {
 @media (max-width: 480px) {
     /* Further simplified mobile layout */
     #rightcontainer {
-        height: calc(100vh - 165px); /* Adjusted for new playbar height */
+        height: calc(100vh - 165px);
         margin: 5px;
         padding: 5px;
     }
@@ -917,12 +918,12 @@ body {
     }
 
     body {
-        padding-bottom: 110px; /* Adjusted for new playbar height */
+        padding-bottom: 110px;
     }
 
     .playbar {
-        height: 120px !important; /* Further increased for smallest screens */
-        padding: 3px;
+        height: 120px !important;
+        padding: 3px 0;
     }
     
     .playbar-top {
@@ -930,7 +931,7 @@ body {
     }
     
     .playbar-middle {
-        height: 40px !important;
+        height: 45px !important;
     }
     
     .playbar-bottom {
