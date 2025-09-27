@@ -126,3 +126,4 @@ window.addEventListener('resize', handleResize);
 window.addEventListener('orientationchange', () => {
     setTimeout(handleResize, 200);
 });
+
