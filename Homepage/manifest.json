@@ -2,7 +2,7 @@
   "name": "Psychological Power",
   "short_name": "Psypower",
   "description": "Sound Designer | Artist | Music Producer",
-  "start_url": "./",
+  "start_url": "./index.html",
   "display": "fullscreen",
   "background_color": "#696969",
   "theme_color": "#00008B",
