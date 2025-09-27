@@ -57,7 +57,7 @@ body {
     margin-top: 70px;
     margin-bottom: 70px;
     background-color: rgba(34, 34, 34, 0);
-    width: 600px;
+    width: 400px;
 }
 
 #rightcontainer {
@@ -614,7 +614,7 @@ body {
         width: 340px;
         height: 100vh;
         background-color: rgba(18, 18, 18, 0.98);
-        z-index: 998;
+        z-index: -10;
         transition: left 0.3s ease;
         overflow-y: auto;
         margin: 0;
@@ -625,7 +625,7 @@ body {
 
     .left.active {
         left: 0;
-        z-index: 999;
+        z-index: -10;
     }
 
     /* Ensure right container has higher z-index and solid background */
@@ -705,7 +705,7 @@ body {
     }
     
     .volume .range input {
-        width: 100px;
+        width: 40%;
     }
 
     #previous, #play, #next {
@@ -752,7 +752,7 @@ body {
         height: auto;
         width: 100%;
         position: relative;
-        z-index: 3;
+        z-index: -10;
     }
 
     .searchbar {
@@ -1016,3 +1016,4 @@ body {
         max-height: 20px !important;
     }
 }
+
