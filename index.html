@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="manifest" href="./manifest.json">
+        <meta name="theme-color" content="#00008B">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Psypower">
         <link rel="stylesheet" href="./NewRelease/style.css">
         <link rel="stylesheet" href="./Homepage/style.css">
         <link rel="icon" type="image/jpg" href="./media/psypowerrr.JPEG">
@@ -99,10 +104,18 @@
                     <td style="background-color:chartreuse">soon</td>
                 </tr>
             </table>-->
-        <script src="./NewRelease/script.js"></script>    
+        <script src="./NewRelease/script.js"></script>
+        <script>
+          if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+              .then(reg => console.log('Service Worker registered'))
+              .catch(err => console.error('SW registration failed'));
+          }
+        </script>
     </body>
 
 </html>
+
 
 
 
