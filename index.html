@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link rel="manifest" href="./manifest.json">
+        <link rel="manifest" href="./Homepage/manifest.json">
         <meta name="theme-color" content="#00008B">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -107,7 +107,7 @@
         <script src="./NewRelease/script.js"></script>
         <script>
           if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./sw.js')
+            navigator.serviceWorker.register('./Homepage/sw.js')
               .then(reg => console.log('Service Worker registered'))
               .catch(err => console.error('SW registration failed'));
           }
@@ -115,6 +115,7 @@
     </body>
 
 </html>
+
 
 
 
