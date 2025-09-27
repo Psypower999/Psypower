@@ -65,6 +65,8 @@ body {
     margin-top: 70px;
     margin-bottom: 70px;
     background-color: rgba(34, 34, 34, 0);
+    height: calc(100vh - 140px); /* Fixed height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 #lefthomecontainer {
@@ -178,15 +180,18 @@ body {
     flex-direction: column;
     align-items: center;
     opacity: 1;
+    flex-grow: 1; /* Allow this section to grow and fill available space */
+    overflow-y: auto; /* Enable scrolling for the content */
 }
 
 .RLC h1 {
     text-align: center;
     width: 100%;
     color: rgb(206, 206, 206);
+    margin-bottom: 20px;
 }
 
-/* Album Cards Container */
+/* Album Cards Container - Fixed for scrolling */
 .cardContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -197,6 +202,7 @@ body {
     padding: 0 20px;
     box-sizing: border-box;
     background-color: rgba(37, 37, 37, 0.2);
+    margin-bottom: 20px;
 }
 
 /* Album Cards */
@@ -289,7 +295,7 @@ body {
     color: white;
 }
 
-/* Playbar - Professional sizing */
+/* Playbar - Professional layout */
 .playbar {
     display: flex;
     flex-direction: column;
@@ -311,13 +317,82 @@ body {
     box-sizing: border-box;
 }
 
+/* Abovebar - Controls section */
+.abovebar {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+    height: 35px !important;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+.songinfo {
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    grid-column: 1;
+    justify-self: start;
+}
+
+.songbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    grid-column: 2;
+    justify-self: center;
+}
+
+.timevol {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    height: 100%;
+    grid-column: 3;
+    justify-self: end;
+}
+
+.volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    height: 100%;
+}
+
+/* Override inline width and height attributes for playbar icons */
+#previous, #play, #next {
+    width: 22px !important;
+    height: 22px !important;
+    max-width: 22px !important;
+    max-height: 22px !important;
+}
+
+.volume img {
+    width: 18px !important;
+    height: 18px !important;
+    max-width: 18px !important;
+    max-height: 18px !important;
+}
+
 /* Seekbar container with timestamps */
 .seekbar-container {
     display: flex;
     align-items: center;
     width: 100%;
     padding: 0 15px;
-    margin-bottom: 8px;
     height: 20px;
     box-sizing: border-box;
 }
@@ -357,69 +432,6 @@ body {
 .volume .range input {
     width: 80px;
     cursor: pointer;
-}
-
-/* Abovebar - professional layout */
-.abovebar {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-    width: 100%;
-    padding: 0 15px;
-    height: 35px !important;
-    box-sizing: border-box;
-}
-
-.songbuttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-}
-
-/* Override inline width and height attributes for playbar icons */
-#previous, #play, #next {
-    width: 22px !important;
-    height: 22px !important;
-    max-width: 22px !important;
-    max-height: 22px !important;
-}
-
-.volume img {
-    width: 18px !important;
-    height: 18px !important;
-    max-width: 18px !important;
-    max-height: 18px !important;
-}
-
-.songinfo {
-    color: black;
-    font-weight: 500;
-    font-size: 14px;
-    max-width: 150px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.timevol {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    gap: 10px;
-    height: 100%;
-}
-
-.volume {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    height: 100%;
 }
 
 .songList {
@@ -619,6 +631,7 @@ body {
     #rightcontainer {
         margin: 0;
         padding: 10px;
+        height: calc(100vh - 140px); /* Fixed height for scrolling */
     }
 
     .close {
@@ -768,6 +781,7 @@ body {
         gap: 5px;
         height: auto !important;
         padding: 0 10px;
+        margin-bottom: 3px;
     }
 
     .songinfo {
