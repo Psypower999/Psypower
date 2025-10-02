@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:dimgray">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="manifest" href="./manifest-2.json">
+        <meta name="theme-color" content="#171717">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Psypower">
+        <link rel="stylesheet" href="./NewRelease/style.css">
+        <link rel="stylesheet" href="./Homepage/style.css">
+        <link rel="icon" type="image/jpg" href="./media/psypowerrr.JPEG">
+        <title>Psychological Power</title>
+    </head>
+    <body>
+        <canvas id="backgroundCanvas"></canvas>
+        <div class="content-wrapper">
+            <div>
+                <h1 id="header"><strong>Psypower Records</strong></h1>
+            </div>
+            <hr color="darkblue">
+            <div class="toppage">
+                <br>
+                <br>
+                <img src="./media/Psypowerpic.jpg" alt="" width="250" height="250" class="center">
+                <br>
+                <br>
+                <h1 id="hname"><span><strong>Psypower</strong></span></h1>
+                <br>
+                <h2 id="bio"><span>Sound Designer | Artist | Music Producer</span></h2>
+                <br>
+                <br>
+            </div>
+            <hr color="crimson">
+            <div>
+                
+                <h1 id="linke">LINKS</h1>
+                
+            </div>
+            <hr color="crimson">
+            <div>
+                <nav class="navbar">
+                    <main>
+                    
+                    <ul>
+                        <li><a href="./PsypowerRecords.html">Psypower Records</a></li>
+                        <hr color="slateblue">
+                        <li><a href="./newRelease.html">Latest Release</a></li>
+                        <hr color="slateblue">
+                        <li><a href="./PsyStudio.html">Psychological Studio</a></li>
+                        <hr color="slateblue">
+                        <li><a href="./visulaizer.html">Visualizer</a></li>                
+                        <hr color="slateblue">
+                        <li><a href="./canveff.html">Trail Visualizer</a></li>
+                        <hr color="slateblue">
+                        <li><a href="./micViz.html">Mic Visualizer</a></li>
+                        <hr color="slateblue">
+                        <li><a href="./plugins/index.html">Plugins</a></li>
+                    </ul>
+                    </main>
+                </nav>
+            </div>
+            <hr color="crimson">
+            <div>
+            
+                <h3 id="contact">Contact</h3>
+            
+            </div>
+            <hr color="crimson">
+            <div class="contactbut">
+                <br>
+                <br>
+                <div class="verpos">
+                    <a href="mailto:psypower999@gmail.com" target="_blank"><button>Email</button></a>
+                    <a href="https://instagram.com/_psypower_"><button>Instagram</button></a>
+                    <a href="mailto:psypower999@gmail.com"><button>Facebook</button></a>
+                    <a href="mailto:psypower999@gmail.com"><button>Discord</button></a>
+                </div>
+                <br>
+                <br>
+            </div>
+
+            <hr color="darkblue">
+        </div>
+        <script src="./NewRelease/script.js"></script>
+        <script>
+
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('./Homepage/sw.js')
+                .then(reg => console.log('Service Worker registered'))
+                .catch(err => console.error('SW registration failed'));
+            }
+            document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+                function ctrlShiftKey(e, keyCode) {
+                return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+                }
+
+            document.onkeydown = (e) => {
+            // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+            if (
+                event.keyCode === 123 ||
+                ctrlShiftKey(e, 'I') ||
+                ctrlShiftKey(e, 'J') ||
+                ctrlShiftKey(e, 'C') ||
+                (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+            )
+                return false;
+            };
+        </script>
+    </body>
+
+</html>
+
+
+
+
+
+
