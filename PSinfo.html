@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychological Studio Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #f72585;
+            --dark-color: #2b2d42;
+            --light-color: #f8f9fa;
+            --success-color: #06ffa5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+            transform: translateY(-2px);
+        }
+        
+        .btn-cta {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-cta:hover {
+            background: #e6147a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(247, 37, 133, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 5rem 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,133.3C960,128,1056,96,1152,90.7C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+
+        a.button {
+            accent-color: crimson;
+            background-color: #dc3545 !important;
+            width: 100px !important;
+            padding: 1px 6px;
+            border: 1px outset buttonborder;
+            border-radius: 3px;
+            color: buttontext;
+            text-decoration: none;
+            align-items: center !important;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        
+        .btn-hero {
+            padding: 0.75rem 2rem;
+            font-size: 1.1rem;
+            margin-right: 1rem;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        
+        .screenshots {
+            padding: 5rem 0;
+            background-color: var(--light-color);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+        
+        .screenshot-container {
+            position: relative;
+            margin-bottom: 2rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .screenshot-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .screenshot-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 15px;
+        }
+        
+        .screenshot-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.7) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .screenshot-container:hover .screenshot-overlay {
+            opacity: 1;
+        }
+        
+        .screenshot-caption {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .screenshot-section {
+            margin-bottom: 4rem;
+        }
+        
+        .screenshot-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .screenshot-subtitle {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        /* Comparison Section */
+        .comparison {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .comparison-table {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .comparison-header {
+            display: flex;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+        }
+        
+        .comparison-header-cell {
+            flex: 1;
+            padding: 1.5rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        
+        .comparison-header-cell:first-child {
+            flex: 1.5;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .comparison-header-cell i {
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .comparison-row {
+            display: flex;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+        
+        .comparison-row:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .comparison-feature {
+            flex: 1.5;
+            padding: 1.2rem 1.5rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .comparison-cell {
+            flex: 1;
+            padding: 1.2rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .check-icon {
+            color: var(--success-color);
+            font-size: 1.5rem;
+        }
+        
+        .close-icon {
+            color: #dc3545;
+            font-size: 1.5rem;
+        }
+        
+        .limited-text {
+            color: #6c757d;
+            font-style: italic;
+        }
+        
+        .highlight-pro {
+            background-color: rgba(67, 97, 238, 0.1);
+            position: relative;
+        }
+        
+        .pro-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(247, 37, 133, 0.3);
+        }
+        
+        .cta-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-cta-large {
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            transition: all 0.3s ease;
+            margin: 0 0.5rem;
+        }
+        
+        .btn-cta-large:hover {
+            background: #e6147a;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(247, 37, 133, 0.3);
+        }
+        
+        .btn-outline-large {
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+            margin: 0 0.5rem;
+        }
+        
+        .btn-outline-large:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .footer-brand {
+            margin-bottom: 2rem;
+        }
+        
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links {
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .btn-hero {
+                display: block;
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            
+            .comparison-header, .comparison-row {
+                flex-direction: column;
+            }
+            
+            .comparison-header-cell, .comparison-feature, .comparison-cell {
+                width: 100%;
+                text-align: left;
+                padding: 1rem;
+            }
+            
+            .comparison-header-cell:first-child {
+                background: rgba(255, 255, 255, 0.1);
+            }
+            
+            .pro-badge {
+                position: static;
+                display: inline-block;
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-layers-fill me-2"></i>Psychological Studio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#screenshots">Screenshots</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comparison">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Psychological Studio</h1>
+                    <p>Ever wanted to get into music production but always find it complicated? It's now easier than ever with the Psychological Studio! User Friendly and can be used anywhere, on any device! </p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/PSSS/127.0.0.1_5500_PsychologicalStudio.html (1).png" alt="Psychological Studio" class="img-fluid rounded-3 shadow-lg">
+                </div>
+                
+            </div>
+            <div>
+                <a href="./PsyStudio.html" class="button">Trial</a>
+                <a href="./PsychologicalStudio.html" class="button">Pro</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <div class="section-title">
+                <h2>App Screenshots</h2>
+                <p>Take a closer look at the application's interface and features</p>
+            </div>
+            <div class="screenshot-section">
+                <h3 class="screenshot-subtitle"><i class="bi bi-laptop me-2"></i>Desktop View</h3>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="screenshot-container">
+                            <img src="./PSSS/127.0.0.1_5500_PsychologicalStudio.html (2).png" alt="Dashboard" class="screenshot-img">
+                            <div class="screenshot-overlay">
+                                <div class="screenshot-caption">Effects popup</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="screenshot-container">
+                            <img src="./PSSS/127.0.0.1_5500_PsychologicalStudio.html (3).png" alt="Analytics" class="screenshot-img">
+                            <div class="screenshot-overlay">
+                                <div class="screenshot-caption">Features</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="screenshot-container">
+                            <img src="./PSSS/127.0.0.1_5500_PsychologicalStudio.html (4).png" alt="Reports" class="screenshot-img">
+                            <div class="screenshot-overlay">
+                                <div class="screenshot-caption">Features</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="screenshot-container">
+                            <img src="./PSSS/127.0.0.1_5500_PsychologicalStudio.html (5).png" alt="Reports" class="screenshot-img">
+                            <div class="screenshot-overlay">
+                                <div class="screenshot-caption">Features</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="screenshot-section">
+                <h3 class="screenshot-subtitle"><i class="bi bi-phone me-2"></i>Mobile View</h3>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="screenshot-container">
+                            <img src="./PSSS/127.0.0.1_5500_PsychologicalStudio.html(Samsung Galaxy S8+).png" alt="Settings" class="screenshot-img">
+                            <div class="screenshot-overlay">
+                                <div class="screenshot-caption">Main Interface</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="screenshot-container">
+                            <img src="./PSSS/127.0.0.1_5500_PsychologicalStudio.html(Samsung Galaxy S8+) (2).png" alt="Integration" class="screenshot-img">
+                            <div class="screenshot-overlay">
+                                <div class="screenshot-caption">Effects Popup</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="screenshot-container">
+                            <img src="./PSSS/127.0.0.1_5500_PsychologicalStudio.html(Samsung Galaxy S8+) (3).png" alt="Mobile App" class="screenshot-img">
+                            <div class="screenshot-overlay">
+                                <div class="screenshot-caption">Features</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comparison" class="comparison">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trial vs Pro Version</h2>
+                <p>Compare features</p>
+            </div>
+            
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="comparison-header-cell">
+                        <i class="bi bi-list-check"></i> Features
+                    </div>
+                    <div class="comparison-header-cell">
+                        <i class="bi bi-star"></i> Trial Version
+                    </div>
+                    <div class="comparison-header-cell highlight-pro">
+                        <i class="bi bi-gem"></i> Pro Version
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Live Session</div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Record and Save Session</div>
+                    <div class="comparison-cell"><i class="bi bi-x-circle-fill close-icon"></i></div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Upload Samples</div>
+                    <div class="comparison-cell"><span class="limited-text">Limited to 5 Samples</span></div>
+                    <div class="comparison-cell"><i class="limited-text">Unlimited Sample Uploads</i></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Record directly into any selected Button</div>
+                    <div class="comparison-cell"><i class="bi bi-x-circle-fill close-icon"></i></div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-feature">Loop Controls</div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-feature">Tempo Controls</div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Visual Equalizer</div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Reverb & Delay</div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-feature">LFO</div>
+                    <div class="comparison-cell"><i class="bi bi-x-circle-fill close-icon"></i></div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Synth with dedicated Piano Roll</div>
+                    <div class="comparison-cell"><i class="bi bi-x-circle-fill close-icon"></i></div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Save & Load Project</div>
+                    <div class="comparison-cell"><i class="bi bi-x-circle-fill close-icon"></i></div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Lifetime Updates</div>
+                    <div class="comparison-cell"><i class="bi bi-x-circle-fill close-icon"></i></div>
+                    <div class="comparison-cell"><i class="bi bi-check-circle-fill check-icon"></i></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Price</div>
+                    <div class="comparison-cell"><strong>Free</strong></div>
+                    <div class="comparison-cell"><strong>$9.99/Lifetime</strong></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Psychological Studio</h3>
+                    <p>Developed by Psypower</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/_psypower_/" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Psychological Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        function ctrlShiftKey(e, keyCode) {
+        return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        }
+
+        document.onkeydown = (e) => {
+        if (
+            event.keyCode === 123 ||
+            ctrlShiftKey(e, 'I') ||
+            ctrlShiftKey(e, 'J') ||
+            ctrlShiftKey(e, 'C') ||
+            (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+        )
+            return false;
+        };
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.screenshot-container').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Add active state to navigation links based on scroll position
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
