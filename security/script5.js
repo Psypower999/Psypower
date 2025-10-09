@@ -1,1 +1,64 @@
-1\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22reverb-decay-value\x22>0</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22slider-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Pre-delay\x20(ms)</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-keys\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2040px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#222;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-right:\x201px\x20solid\x20#444;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-shrink:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-key\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-bottom:\x201px\x20solid\x20#444;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20_0x1bafe2[_0x57a26d(0x18b)]('input',function(){const _0x24099b=_0x57a26d;_0x3cf519['textContent']=this[_0x24099b(0x2e2)]+'dB',_0x1546f6();}),[_0x39fded(0x2cc)]/0x64;_0x28b563[_0x3cfeb2]=(Math['random']()*0x2-0x1)*_0xfac903*_0x621370;const _0x339898=0x1-_0xb67f58[_0x39fded(0x313)][_0x39fded(0x1d9)]/0x64*(_0x3cfeb2/_0x2c3015);_0x28b563[_0x3cfeb2]*=_0x339898;}}}_0x21cd21[_0x39fded(0x2c2)]=_0x16dfb9,_0x5705d8[_0x39fded(0x235)]&&_0x5705d8[_0x39fded(0x235)][_0x39fded(0x26b)](),_0x5705d8['reverbNode']=_0x21cd21,_0x5705d8[_0x39fded(0x190)]&&_0x5705d8[_0x39fded(0x352)]&&(_0x5705d8[_0x39fded(0x190)][_0x39fded(0x1d8)](_0x21cd21),_0x21cd21[_0x39fded(0x1d8)](_0x5705d8[_0x39fded(0x352)]),_0x5705d8[_0x39fded(0x352)][_0x39fded(0x1d8)](_0x5705d8[_0x39fded(0x297)]));}else _0x5705d8[_0x39fded(0x235)]&&(_0x5705d8[_0x39fded(0x235)][_0x39fded(0x26b)](),_0x5705d8[_0x39fded(0x235)]=null);if(_0x5705d8[_0x39fded(0x1a7)]){_0x5705d8['eqLowNode'][_0x39fded(0x2ed)][_0x39fded(0x2e2)]=0x0,_0x5705d8[_0x39fded(0x324)][_0x39fded(0x2ed)][_0x39fded(0x2e2)]=0x0,_0x5705d8['eqMidNode'][_0x39fded(0x2ed)]['value']=0x0,_0x5705d8[_0x39fded(0x26a)][_0x39fded(0x2ed)][_0x39fded(0x2e2)]=0x0,_0x5705d8[_0x39fded(0x1c1)][_0x39fded(0x2ed)][_0x39fded(0x2e2)]=0x0,_0x5705d8[_0x39fded(0x23c)][_0x39fded(0x2ed)][_0x39fded(0x2e2)]=0x0,_0x5705d8['eqVeryHighNode'][_0x39fded(0x2ed)][_0x39fded(0x2e2)]=0x0;if(_0xb67f58['eq']&&_0xb67f58['eq'][_0x39fded(0x1d4)]>0x0){const _0x3e5800=[..._0xb67f58['eq']]['sort']((_0x17f4ff,_0xa8040e)=>_0x17f4ff[_0x39fded(0x1f3)]-_0xa8040e[_0x39fded(0x1f3)]);_0x3e5800[0x0]&&_0x3e5800[0x0][_0x39fded(0x354)]===_0x39fded(0x2f6)&&(_0x5705d8[_0x39fded(0x1a7)][_0x39fded(0x1f3)][_0x39fded(0x2e2)]=_0x3e5800[0x0][_0x39fded(0x1f3)],_0x5705d8[_0x39fded(0x1a7)][_0x39fded(0x2ed)][_0x39fded(0x2e2)]=_0x3e5800[0x0][_0x39fded(0x2ed)]);_0x3e5800[_0x3e5800[_0x39fded(0x1d4)]-0x1]&&_0x3e5800[_0x3e5800[_0x39fded(0x1d4)]-0x1][_0x39fded(0x354)]===_0x39fded(0x33b)&&(_0x5705d8[_0x39fded(0x23c)]['frequency']['value']=_0x3e5800[_0x3e5800[_0x39fded(0x1d4)]-0x1][_0x39fded(0x1f3)],_0x5705d8[_0x39fded(0x23c)]['gain'][_0x39fded(0x2e2)]=_0x3e5800[_0x3e5800[_0x39fded(0x1d4)]-0x1][_0x39fded(0x2ed)]);let _0x1c03d0=0x0;for(let _0x1488b5=0x0;_0x1488b5<_0x3e5800[_0x39fded(0x1d4)];_0x1488b5++){if(_0x3e5800[_0x1488b5][_0x39fded(0x354)]===_0x39fded(0x35b)){let _0x18762c;switch(_0x1c03d0){case 0x0:_0x18762c=_0x5705d8['eqLowMidNode'];break;case 0x1:_0x187
+// Function to create the grid of buttons
+function createButtonGrid() {
+    const grid = document.getElementById('buttonGrid');
+    const totalButtons = 100;
+    
+    // Array to store custom URLs (leave blank as requested)
+    const buttonUrls = new Array(totalButtons).fill('');
+    
+    // You can set custom URLs here by uncommenting and modifying:
+    buttonUrls[98] = './PsychologicalStudio.html';
+    // buttonUrls[1] = 'https://example.com/page2';
+    // ... and so on
+    
+    for (let i = 0; i < totalButtons; i++) {
+        // Create link element
+        const link = document.createElement('a');
+        link.href = buttonUrls[i] || '#'; // Use # for empty URLs
+        link.className = 'button-link';
+        
+        // Create button element
+        const button = document.createElement('button');
+        button.className = 'grid-button';
+        button.textContent = i + 1; // Button numbers from 1 to 100
+        
+        // Determine color group (each group has 10 buttons)
+        const groupNumber = Math.floor(i / 10) + 1;
+        button.classList.add(`group-${groupNumber}`);
+        
+        // Add click event to prevent default if URL is empty
+        button.addEventListener('click', function(e) {
+            if (!buttonUrls[i]) {
+                e.preventDefault();
+                console.log('No URL set for button ' + (i + 1));
+            }
+        });
+        
+        // Add hover effects
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px) scale(1.05)';
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+        
+        // Append button to link, and link to grid
+        link.appendChild(button);
+        grid.appendChild(link);
+    }
+}
+
+// Initialize the grid when the page loads
+document.addEventListener('DOMContentLoaded', createButtonGrid);
+
+// Optional: Add keyboard navigation
+document.addEventListener('keydown', function(e) {
+    if (e.key >= '1' && e.key <= '9') {
+        const buttonNumber = parseInt(e.key);
+        if (buttonNumber <= 100) {
+            const buttons = document.querySelectorAll('.grid-button');
+            buttons[buttonNumber - 1].click();
+        }
+    }
+});

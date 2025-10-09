@@ -614,7 +614,7 @@ body {
         width: 340px;
         height: 100vh;
         background-color: rgba(18, 18, 18, 0.98);
-        z-index: -100 !important;
+        z-index: -10;
         transition: left 0.3s ease;
         overflow-y: auto;
         margin: 0;
@@ -625,7 +625,7 @@ body {
 
     .left.active {
         left: 0;
-        z-index: -100 !important;
+        z-index: -10;
     }
 
     /* Ensure right container has higher z-index and solid background */
@@ -752,7 +752,7 @@ body {
         height: auto;
         width: 100%;
         position: relative;
-        z-index: -100 !important;
+        z-index: -10;
     }
 
     .searchbar {

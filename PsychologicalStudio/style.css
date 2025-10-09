@@ -27,7 +27,7 @@ html, body {
     height: 100vh;
     padding: 10px;
     gap: 10px;
-    z-index: 100;
+    z-index: 1;
     box-sizing: border-box;
     max-width: 1400px;
     max-height: 900px;
@@ -1651,4 +1651,153 @@ input#file-upload-button {
 
 #record-status {
     color: #565656;
+}
+
+
+/* Offline Indicator */
+.offline-indicator {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #ff6b35;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    animation: pulse 2s infinite;
+}
+
+.offline-icon {
+    font-size: 14px;
+}
+
+.offline-text {
+    font-size: 11px;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Background Canvas Styles */
+#backgroundCanvas {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    /* Mobile-specific fixes */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+}
+
+/* Mobile-specific canvas adjustments */
+@media screen and (max-width: 768px) {
+    #backgroundCanvas {
+        width: 100vw;
+        height: 100vh;
+        min-height: 100vh;
+        min-width: 100vw;
+        /* Ensure canvas covers full mobile viewport */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* Mobile-specific optimizations */
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-perspective: 1000;
+        perspective: 1000;
+    }
+    
+    /* Ensure body and html take full height on mobile */
+    html, body {
+        height: 100%;
+        min-height: 100vh;
+        overflow: hidden;
+        /* Prevent mobile scrolling issues */
+        position: fixed;
+        width: 100%;
+    }
+    
+    /* Mobile app container adjustments */
+    .app-container {
+        position: relative;
+        z-index: 1;
+        height: 100vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Additional mobile fixes for canvas visibility */
+@media screen and (max-width: 480px) {
+    #backgroundCanvas {
+        /* Force hardware acceleration on mobile */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        /* Ensure canvas is always visible */
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Folder Selection Controls */
+.folder-controls {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    border: 1px solid #444;
+}
+
+.folder-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a4a4a;
+    color: #f0f0f0;
+    border: 1px solid #666;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-bottom: 8px;
+}
+
+.folder-button:hover {
+    background-color: #5a5a5a;
+}
+
+.folder-button:active {
+    background-color: #3a3a3a;
+}
+
+.current-folder {
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+    padding: 5px;
+    background-color: #333;
+    border-radius: 3px;
+    border: 1px solid #555;
 }

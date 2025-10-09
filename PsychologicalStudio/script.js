@@ -1,1 +1,8371 @@
-function _0x38fe(_0x1cc935,_0x303dc9){const _0x4ac9f1=_0x4ac9();return _0x38fe=function(_0x38fe8e,_0x3cb362){_0x38fe8e=_0x38fe8e-0x92;let _0x1de879=_0x4ac9f1[_0x38fe8e];return _0x1de879;},_0x38fe(_0x1cc935,_0x303dc9);}function _0x4ac9(){const _0x1639a1=['delay-feedback-value','piano','borderRadius','connect','rgba(255,\x2087,\x2034,\x200.8)','interrupted','createConvolver','className','replace','mix','inactive','2138562ZiYDRv','zoom-level','individualVolumeGain','isLongSample','top','reverb-mix','delayTime','\x20with\x20volume\x20','Stop\x20Recording','highshelf','80%','target','ondataavailable','Error\x20reading\x20file','notification','getTracks','pluck','Error:\x20Could\x20not\x20access\x20microphone','.grid-panel','flex','tempo','result','9999','delay-feedback','replaceChild','long-loop-button','piano-roll-highshelf','createGain','individualTempo','state','Error\x20resuming\x20audio\x20context:','240','error',',\x20position\x20','rgba(0,\x20191,\x20255,\x200.95)','textContent','No\x20notes\x20to\x20save','length','eq-canvas','rgba(0,\x200,\x200,\x200.8)','grid-size-decrease','kHz','longLoop','createElement','waveform','piano-roll-mid-value','\x0a\x20\x20\x20\x20\x20\x20\x20\x20.audio-button.active.no-sample\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#333333\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.audio-button.active.no-sample\x20.loop-indicator\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#555555\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Dark\x20grey\x20slider\x20styling\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20input[type=\x22range\x22]\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#444444\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x208px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20outline:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20input[type=\x22range\x22]::-webkit-slider-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20-webkit-appearance:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20appearance:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#af4c93ff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20input[type=\x22range\x22]::-moz-range-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#af4c4cff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Custom\x20indicator\x20styling\x20-\x20changed\x20to\x20almost\x20black\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.custom-indicator\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20right:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#111111\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x202;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x200\x203px\x20rgba(0,0,0,0.5);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Piano\x20roll\x20styling\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-container\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-direction:\x20column;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20order:\x2010;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20visible;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-scrollable\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex:\x201;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow-y:\x20auto;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow-x:\x20auto;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-keys\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2040px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#222;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-right:\x201px\x20solid\x20#444;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-shrink:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-key\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-bottom:\x201px\x20solid\x20#444;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#aaa;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-key.white\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#444;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#ddd;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-key.black\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#222;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#fff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2012px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x204px\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x202;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-key:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#555;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-key.active\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#4CAF50;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-grid-container\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-grow:\x201;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20visible;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-grid\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x20auto;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x20auto;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#333;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20grid;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20grid-auto-rows:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20auto;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x201680px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-cell\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-right:\x201px\x20solid\x20crimson;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-bottom:\x201px\x20solid\x20crimson;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20min-width:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-cell.bar-start\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-left:\x202px\x20solid\x20black;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-cell.bar-end\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-right:\x202px\x20solid\x20black;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-cell.active\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#111;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x20auto;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x20auto;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-cell.note-long\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#111;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-controls\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20space-between;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-sound-source\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-sound-source\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-right:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-sound-source\x20select\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#333;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#555;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-preview-controls\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-preview-controls\x20button\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#4CAF50;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x205px\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-preview-controls\x20button:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#45a049;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-clear-btn\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#f44336;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x205px\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-clear-btn:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#d32f2f;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Piano\x20roll\x20note\x20length\x20selector\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-note-length\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-note-length\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-note-length\x20select\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#333;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#555;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Piano\x20roll\x20grid\x20size\x20selector\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-grid-size\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-grid-size\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.grid-size-controls\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gap:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.grid-size-controls\x20button\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#444;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2024px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2024px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.grid-size-controls\x20button:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#555;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20#grid-size-display\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20min-width:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Piano\x20roll\x20zoom\x20controls\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-zoom-controls\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-zoom-controls\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.zoom-controls\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gap:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.zoom-controls\x20button\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#444;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2024px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2024px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.zoom-controls\x20button:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#555;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20#zoom-level-display\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20min-width:\x2050px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Piano\x20roll\x20visualizer\x20styling\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-visualizer-container\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#111;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#333;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x2010px\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-visualizer\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-popup\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20fixed;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translate(-50%,\x20-50%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(145deg,\x20#2a2a2a,\x20#1a1a1a);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#444;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2012px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2025px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x201001;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20600px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20max-width:\x2090vw;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20max-height:\x2085vh;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow-y:\x20auto;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x2010px\x2030px\x20rgba(0,\x200,\x200,\x200.5);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-popup\x20h3\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#fff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20500;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-popup\x20.popup-content\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-popup\x20.popup-footer\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20flex-end;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-popup\x20button\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x206px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20500;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20all\x200.2s\x20ease;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-popup\x20.popup-close-btn\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#555;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-popup\x20.popup-close-btn:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#444;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(-1px);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-popup\x20.popup-accept-btn\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#4CAF50;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-popup\x20.popup-accept-btn:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#45a049;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(-1px);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-waveform-container\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20180px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(145deg,\x20#1a1a1a,\x20#0a0a0a);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#444;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x208px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x2015px\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x20inset\x200\x202px\x205px\x20rgba(0,\x200,\x200,\x200.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-waveform\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20red;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20red;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20accent-color:\x20red;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-controls\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-direction:\x20column;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x2015px\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-range\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x2010px\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-range\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2060px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#ddd;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20500;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-range\x20input[type=\x22range\x22]\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-grow:\x201;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(90deg,\x20#333\x200%,\x20#444\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x206px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x203px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20outline:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-range\x20input[type=\x22range\x22]::-webkit-slider-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20-webkit-appearance:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20appearance:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2018px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2018px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#5e4cafff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x202px\x205px\x20rgba(0,\x200,\x200,\x200.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-range\x20input[type=\x22range\x22]::-moz-range-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2018px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2018px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#af4c4cff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x202px\x205px\x20rgba(0,\x200,\x200,\x200.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-values\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20space-between;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2014px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#aaa;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-info\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20space-between;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20rgba(255,\x20255,\x20255,\x200.05);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x206px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-info\x20span\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#ddd;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2014px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-preview-controls\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x2015px\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-preview-btn\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#c93600ff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x208px\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20500;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20all\x200.2s\x20ease;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-preview-btn:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#da310bff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(-1px);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-zoom-controls\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x2010px\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-zoom-btn\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#555;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20all\x200.2s\x20ease;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-zoom-btn:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#666;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20scale(1.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sample-selection-zoom-level\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#ddd;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2014px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20min-width:\x2050px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Piano\x20roll\x20filter\x20controls\x20styling\x20-\x20MODIFIED\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-filters\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding-top:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-top:\x201px\x20solid\x20#444;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-filters\x20h4\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#fff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.filter-control\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x208px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.filter-control\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#aaa;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.filter-control\x20input\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-grow:\x201;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-right:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.filter-control\x20span\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2050px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20right;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#aaa;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Enhanced\x20filter\x20controls\x20styling\x20-\x20MOBILE\x20FIX\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.enhanced-filter-controls\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20grid;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20grid-template-columns:\x201fr;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20@media\x20(min-width:\x20768px)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.enhanced-filter-controls\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20grid-template-columns:\x201fr\x201fr;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.filter-group\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#2a2a2a;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#444;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.filter-group\x20h5\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200\x200\x208px\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#331febff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2014px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.filter-group\x20.filter-control\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.filter-group\x20.filter-control:last-child\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Loading\x20indicator\x20for\x20piano\x20roll\x20rendering\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.loading-indicator\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translate(-50%,\x20-50%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20rgba(0,\x200,\x200,\x200.8);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2015px\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x208px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x201000;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x204px\x208px\x20rgba(0,\x200,\x200,\x200.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.loading-indicator\x20.spinner\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x203px\x20solid\x20rgba(255,\x20255,\x20255,\x200.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-top:\x203px\x20solid\x20#4CAF50;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20animation:\x20spin\x201s\x20linear\x20infinite;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200\x20auto\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20@keyframes\x20spin\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x200%\x20{\x20transform:\x20rotate(0deg);\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20100%\x20{\x20transform:\x20rotate(360deg);\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Toggle\x20switch\x20for\x20piano\x20roll\x20section\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-toggle-container\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20space-between;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-toggle-container\x20h4\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20The\x20switch\x20-\x20the\x20box\x20around\x20the\x20slider\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.switch\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20inline-block;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2050px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2024px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Hide\x20default\x20HTML\x20checkbox\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.switch\x20input\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20The\x20slider\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.slider\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20right:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20bottom:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#444;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20.4s;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2024px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.slider:before\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content:\x20\x22\x22;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20bottom:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20.4s;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2050%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20input:checked\x20+\x20.slider\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#4CAF50;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20input:checked\x20+\x20.slider:before\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateX(26px);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Piano\x20roll\x20content\x20-\x20hidden\x20by\x20default\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-content\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-content.visible\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20block;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Recording\x20button\x20styles\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.microphone-record-btn\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#d68100ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20black\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x203px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.microphone-save-btn\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#deae12ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20black\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x203px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.microphone-download-btn\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#4ca427ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20black\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x203px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.microphone-delete-btn\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#ff3f31ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20black\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x203px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20LFO\x20Controls\x20Styling\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-section\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding-top:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-top:\x201px\x20solid\x20#444;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-section\x20h4\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#fff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-control\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x208px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-control\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#aaa;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-control\x20select\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-grow:\x201;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-right:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#333;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#555;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-control\x20input\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-grow:\x201;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-right:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-control\x20span\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2050px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20right;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#aaa;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-visualizer\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2060px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#111;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#333;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x2010px\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-wave\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20EQ\x20Visualizer\x20Toggle\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.eq-visualizer-toggle\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20space-between;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.eq-visualizer-toggle\x20h4\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Effect\x20Section\x20Color\x20Coding\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x208px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(255,\x20255,\x20255,\x200.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Volume\x20Section\x20-\x20Blue\x20Theme\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(3)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20rgba(33,\x20150,\x20243,\x200.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20rgba(33,\x20150,\x20243,\x200.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(3)\x20h4\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#2196F3;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(3)\x20.slider-container\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#64B5F6;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(3)\x20input[type=\x22range\x22]\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(90deg,\x20#1565C0\x200%,\x20#2196F3\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(3)\x20input[type=\x22range\x22]::-webkit-slider-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#2196F3;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(3)\x20input[type=\x22range\x22]::-moz-range-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#2196F3;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(3)\x20span\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#90CAF9;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Speed\x20Section\x20-\x20Green\x20Theme\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(4)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20rgba(76,\x20175,\x2080,\x200.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20rgba(76,\x20175,\x2080,\x200.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(4)\x20h4\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#4CAF50;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(4)\x20.speed-selector\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#81C784;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(4)\x20select\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20rgba(46,\x20125,\x2050,\x200.5);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20rgba(76,\x20175,\x2080,\x200.5);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Individual\x20Tempo\x20Section\x20-\x20Purple\x20Theme\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.individual-tempo-section\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20rgba(156,\x2039,\x20176,\x200.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20rgba(156,\x2039,\x20176,\x200.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.individual-tempo-section\x20h4\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#9C27B0;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.individual-tempo-section\x20.slider-container\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#BA68C8;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.individual-tempo-section\x20input[type=\x22range\x22]\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(90deg,\x20#6A1B9A\x200%,\x20#9C27B0\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.individual-tempo-section\x20input[type=\x22range\x22]::-webkit-slider-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#9C27B0;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.individual-tempo-section\x20input[type=\x22range\x22]::-moz-range-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#9C27B0;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.individual-tempo-section\x20span\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#CE93D8;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Delay\x20Section\x20-\x20Orange\x20Theme\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(6)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20rgba(244,\x2089,\x2054,\x200.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20rgba(255,\x20152,\x200,\x200.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(6)\x20h4\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#F44336;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(6)\x20.slider-container\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#7986CB;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(6)\x20input[type=\x22range\x22]\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(90deg,\x20#9d3700ff\x200%,\x20#b06900ff\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(6)\x20input[type=\x22range\x22]::-webkit-slider-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#F44336;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(6)\x20input[type=\x22range\x22]::-moz-range-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#F44336;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(6)\x20span\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#F44336;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Reverb\x20Section\x20-\x20Teal\x20Theme\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(7)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20rgba(0,\x20150,\x20136,\x200.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20rgba(0,\x20150,\x20136,\x200.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(7)\x20h4\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#009688;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(7)\x20.slider-container\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#4DB6AC;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(7)\x20input[type=\x22range\x22]\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(90deg,\x20#00695C\x200%,\x20#009688\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(7)\x20input[type=\x22range\x22]::-webkit-slider-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#009688;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(7)\x20input[type=\x22range\x22]::-moz-range-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#009688;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(7)\x20span\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#80CBC4;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20EQ\x20Section\x20-\x20Red\x20Theme\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(8)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20rgba(244,\x2067,\x2054,\x200.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20rgba(244,\x2067,\x2054,\x200.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(8)\x20h4\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#F44336;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(8)\x20.eq-visualizer-toggle\x20h4\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#F44336;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(8)\x20.eq-frequency-labels\x20span\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#EF5350;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.effect-section:nth-of-type(8)\x20.eq-gain-labels\x20span\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#EF5350;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20LFO\x20Section\x20-\x20Indigo\x20Theme\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-section\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20rgba(63,\x2081,\x20181,\x200.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20rgba(63,\x2081,\x20181,\x200.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-section\x20h4\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#3F51B5;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-control\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#7986CB;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-control\x20select\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20rgba(28,\x2028,\x2028,\x200.5);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20rgba(178,\x2035,\x2035,\x200.5);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-control\x20input[type=\x22range\x22]\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(90deg,\x20#932828ff\x200%,\x20#b53f3fff\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-control\x20input[type=\x22range\x22]::-webkit-slider-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#3F51B5;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-control\x20input[type=\x22range\x22]::-moz-range-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#3F51B5;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.lfo-control\x20span\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#505a94ff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Piano\x20Roll\x20Section\x20-\x20Amber\x20Theme\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-section\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20rgba(7,\x20255,\x20168,\x200.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20rgba(255,\x20193,\x207,\x200.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-section\x20h4\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#FFC107;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-toggle-container\x20h4\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#FFC107;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-note-length\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#FFD54F;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-note-length\x20select\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20rgba(81,\x2081,\x2081,\x200.5);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20rgba(255,\x20193,\x207,\x200.5);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-grid-size\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#FFD54F;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-sound-source\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#FFD54F;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-sound-source\x20select\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20rgba(255,\x20160,\x200,\x200.5);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20rgba(255,\x20193,\x207,\x200.5);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20/*\x20Piano\x20Roll\x20Filters\x20-\x20Brown\x20Theme\x20*/\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-filters\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20rgba(121,\x2085,\x2072,\x200.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20rgba(121,\x2085,\x2072,\x200.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.piano-roll-filters\x20h4\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#795548;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.filter-group\x20h5\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#8D6E63;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.filter-control\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#2a2a2aff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.filter-control\x20input[type=\x22range\x22]\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(90deg,\x20#5D4037\x200%,\x20#795548\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.filter-control\x20input[type=\x22range\x22]::-webkit-slider-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#795548;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.filter-control\x20input[type=\x22range\x22]::-moz-range-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#795548;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.filter-control\x20span\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#BCAAA4;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20','Error\x20stopping\x20audio\x20source:','One\x20or\x20more\x20required\x20elements\x20are\x20missing','Stop','mid','slice','Sample\x20','.long-loop-tempo-display','contextmenu','clientY','lfoFilterOffsetNode','rgba(255,\x20193,\x207,\x200.8)','volumeValue','parentNode','piano-roll-lowmid-value','Error\x20applying\x20effects\x20settings:','stream','rgba(0,\x200,\x200,\x200.7)','microphone-delete-btn','piano-roll-delay-time-value','strings','rgba(255,\x200,\x20255,\x200.85)','sample-selection-end','Invalid\x20high\x20tempo\x20value\x20from\x20slider:','barGridAligned','HTTP\x20error!\x20status:\x20','11nmtSQZ','visible','piano-roll-lowshelf-value','time','height','preview-selection-btn','sample','sampleRate','dataset','lfoFilterBypass','cancelScheduledValues','min','22iAwkcp','piano-roll-highshelf-value','isActive','20433MOozEO','reverb-diffusion','.piano-roll-content','Preview\x20Full\x20Sample','font','cloneNode','resume','piano-roll-clear-btn','delay-time-value','linearRampToValueAtTime','findIndex','0.5','126LJZLwH','Error\x20initializing\x20audio\x20context:','getContext','div','1783390IOXYfF','eq-visualizer-toggle','bottom','zoom-reset-btn','createAnalyser','globalAlpha','reverb-decay-value','sample-upload','random','playbackRate','createMediaStreamDestination','lead','checked','decay','scheduledTimeout','reverb-highcut-value','Audio\x20context\x20initialized\x20successfully','loopStart','piano-roll-preview-btn','value','files','ceil','contains','Error\x20decoding\x20audio\x20data:','fillText','reverb-predelay-value','100','bar-end','Error\x20saving\x20piano\x20roll.\x20Please\x20try\x20again.','delayNode','bass','shift','rgba(76,\x20175,\x2080,\x200.5)','sampleRange','Stop\x20Preview','arrayBuffer','./mykicks/','piano-roll-highmid-value','getElementById','lfo-depth','px)','\x20and\x20individual\x20tempo\x20','.piano-roll-scrollable','audio/wav','createBufferSource','button','sixteenthDuration','innerWidth','lfoTarget','volume-control\x20group-','sin','decodeAudioData','outputNode','synth','bar-start','isCustomSample','translateX(-50%)','max','onload','\x20long\x20tempo\x20updated:\x20new\x20rate\x20','strokeStyle','log','individualVolume','suspended','bufferSampleNumber','delayFeedbackNode','source','note-length-select','click','lineWidth','lfoUpdateTimeout','individual-tempo-value','rate','auto','.long-loop-button[data-long-loop=\x221\x22]','lowMid','\x20with\x20individual\x20tempo\x20','getChannelData','grid-size-increase','beginPath','\x20individual\x20tempo\x20updated:\x20new\x20rate\x20','frequency','reverb-lowcut','tempoChangeTime','microphone-save-btn','40046WjWeKr','buttonGrid','revokeObjectURL','detune','disabled','rgba(170,\x200,\x20255,\x200.85)','fixed','gridHeight','\x20speed\x20updated:\x20new\x20rate\x20','upload-status','zoom-out-btn','highMid','Error\x20rendering\x20piano\x20roll:','#FFC107','240\x20BPM','lowcut','preventDefault','clientX','replaceWith','undefined','innerHTML','loopEnd','frequencyBinCount','highpass','input','lfoBaseRate','reverb-diffusion-value','.piano-roll-grid-container','--vh','offset','eqVeryHighNode','volume-slider','eqLowMidNode','touchend','#7a7a7aff','floor','lfoFilter','sample-selection-start-value','remove','psychological-studio-recording-sample-','gridWidth','rgba(0,\x20210,\x20154,\x200.9)','getBoundingClientRect','lfoGainNode','eqMidNode','Start\x20Recording','piano-roll-delay-feedback-value','reverb-predelay','col','rgba(0,\x20255,\x20170,\x200.8)','createDelay','volumeSlider','createBiquadFilter','shadowColor','Audio\x20context\x20state:','clientHeight','originalTempo','addColorStop','reverb-highcut','parse','Error\x20loading\x20audio\x20for\x20sample\x20','color','eqVisualizerEnabled','size','createConstantSource','getUserMedia','offsetHeight','left','Invalid\x20tempo\x20value\x20from\x20slider:','#0a0a0f','Piano\x20roll\x20saved\x20as\x20sample\x20for\x20','range','querySelector','saveButton','dryPathNode','Web\x20Audio\x20API\x20is\x20not\x20supported\x20in\x20this\x20browser','#FF9800','Audio\x20initialization\x20failed.\x20Please\x20try\x20a\x20different\x20browser.','highcut','5px','pianoRoll','indexOf','loop-indicator','notes','.custom-indicator','Audio\x20context\x20resumed\x20successfully','piano-roll-delay-time','eqLowNode','Play','querySelectorAll','splice','change','rgba(255,\x20152,\x200,\x200.2)','startRendering','\x20BPM','.popup-close-btn','onerror','\x22][data-col=\x22','.wav','Invalid\x20bar\x20duration:','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22popup-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3>Effects\x20for\x20Sample\x20<span\x20id=\x22popup-sample-number\x22>1</span></h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22popup-close-btn\x22>Close</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22popup-content\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22effect-section\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h4>Sample</h4>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sample-upload\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20for=\x22sample-upload\x22></label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22file\x22\x20id=\x22sample-upload\x22\x20accept=\x22audio/*,.wav,.mp3,.ogg,.aac,.flac,.m4a,.wma\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22upload-status\x22\x20id=\x22upload-status\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sample-record\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Record:</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22record-controls\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22microphone-record-btn\x22\x20class=\x22microphone-record-btn\x22>Start\x20Recording</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22microphone-save-btn\x22\x20class=\x22microphone-save-btn\x22\x20style=\x22display:\x20none;\x22>Save\x20Recording</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22microphone-download-btn\x22\x20class=\x22microphone-download-btn\x22\x20style=\x22display:\x20none;\x22>Download</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22microphone-delete-btn\x22\x20class=\x22microphone-delete-btn\x22\x20style=\x22display:\x20none;\x22>Delete</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22record-status\x22\x20id=\x22record-status\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22effect-section\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr\x20color=\x22purple\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h4>VOLUME</h4>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22slider-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Gain</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22sample-volume\x22\x20min=\x220\x22\x20max=\x22200\x22\x20value=\x22100\x22\x20step=\x221\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22sample-volume-value\x22>100%</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22effect-section\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr\x20color=\x22grey\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h4>SPEED</h4>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22speed-selector\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20for=\x22speed-select\x22>Speed:</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22speed-select\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x220.1\x22>0.1x</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x220.25\x22>0.25x</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x220.5\x22>0.5x</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x220.75\x22>0.75x</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x221\x22\x20selected>1x</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x221.5\x22>1.5x</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x222\x22>2x</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22effect-section\x20individual-tempo-section\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr\x20color=\x22grey\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h4>Individual\x20Tempo</h4>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22slider-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Tempo\x20Multiplier</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22individual-tempo\x22\x20min=\x220.1\x22\x20max=\x225.0\x22\x20value=\x221.0\x22\x20step=\x220.01\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22individual-tempo-value\x22>1.0</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22effect-section\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr\x20color=\x22grey\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h4>DELAY</h4>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22slider-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Time\x20(ms)</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22delay-time\x22\x20min=\x220\x22\x20max=\x221000\x22\x20value=\x220\x22\x20step=\x2210\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22delay-time-value\x22>0</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22slider-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Feedback\x20(%)</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22delay-feedback\x22\x20min=\x220\x22\x20max=\x22100\x22\x20value=\x220\x22\x20step=\x221\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22delay-feedback-value\x22>0</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22effect-section\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr\x20color=\x22grey\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h4>REVERB</h4>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22slider-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Decay\x20(s)</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22reverb-decay\x22\x20min=\x220.1\x22\x20max=\x225\x22\x20value=\x220\x22\x20step=\x220.1\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22reverb-decay-value\x22>0</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22slider-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Pre-delay\x20(ms)</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22reverb-predelay\x22\x20min=\x220\x22\x20max=\x22100\x22\x20value=\x220\x22\x20step=\x221\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22reverb-predelay-value\x22>0</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22slider-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Diffusion\x20(%)</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22reverb-diffusion\x22\x20min=\x220\x22\x20max=\x22100\x22\x20value=\x2250\x22\x20step=\x221\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22reverb-diffusion-value\x22>50</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22slider-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Low\x20Cut\x20(Hz)</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22reverb-lowcut\x22\x20min=\x2220\x22\x20max=\x221000\x22\x20value=\x2220\x22\x20step=\x2210\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22reverb-lowcut-value\x22>20</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22slider-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>High\x20Cut\x20(Hz)</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22reverb-highcut\x22\x20min=\x221000\x22\x20max=\x2220000\x22\x20value=\x2220000\x22\x20step=\x22100\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22reverb-highcut-value\x22>20000</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22slider-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Damping\x20(%)</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22reverb-damping\x22\x20min=\x220\x22\x20max=\x22100\x22\x20value=\x2250\x22\x20step=\x221\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22reverb-damping-value\x22>50</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22slider-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Wet/Dry\x20(%)</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22reverb-mix\x22\x20min=\x220\x22\x20max=\x22100\x22\x20value=\x220\x22\x20step=\x221\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22reverb-mix-value\x22>0</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22effect-section\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr\x20color=\x22grey\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eq-visualizer-toggle\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h4>EQUALIZER</h4>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22switch\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22eq-visualizer-toggle\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22slider\x20round\x22></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22professional-eq-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22visual-eq-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<canvas\x20class=\x22eq-canvas\x22\x20id=\x22eq-canvas\x22></canvas>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eq-frequency-labels\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>20Hz</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>100Hz</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>1kHz</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>10kHz</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>20kHz</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eq-gain-labels\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>+24dB</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>+12dB</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>0dB</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>-12dB</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>-24dB</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20LFO\x20Section\x20-\x20Moved\x20from\x20Piano\x20Roll\x20to\x20Main\x20Effects\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22effect-section\x20lfo-section\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr\x20color=\x22grey\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h4>LFO</h4>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22lfo-control\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Target:</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22lfo-target\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22pitch\x22>Pitch</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22filter\x22>Filter\x20Cutoff</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22volume\x22>Volume</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22lfo-control\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Waveform:</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22lfo-waveform\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22sine\x22>Sine</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22square\x22>Square</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22triangle\x22>Triangle</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22sawtooth\x22>Sawtooth</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22lfo-control\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Rate\x20(Hz):</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22lfo-rate\x22\x20min=\x220.1\x22\x20max=\x2220\x22\x20value=\x221\x22\x20step=\x220.1\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22lfo-rate-value\x22>1.0</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22lfo-control\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Depth\x20(%):</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22lfo-depth\x22\x20min=\x220\x22\x20max=\x22100\x22\x20value=\x220\x22\x20step=\x221\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22lfo-depth-value\x22>0%</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22lfo-visualizer\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<canvas\x20class=\x22lfo-wave\x22\x20id=\x22lfo-wave\x22></canvas>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22effect-section\x20piano-roll-section\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr\x20color=\x22brightgrey\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22piano-roll-toggle-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h4>SYNTH</h4>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22switch\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22piano-roll-toggle\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22slider\x20round\x22></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22piano-roll-content\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22piano-roll-note-length\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20for=\x22note-length-select\x22>Note\x20Length:</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22note-length-select\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x221\x22\x20selected>1/16</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x222\x22>1/8</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x224\x22>1/4</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x228\x22>1/2</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x2216\x22>1/1</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x2232\x22>2\x20bars</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x2264\x22>4\x20bars</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22piano-roll-grid-size\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Grid\x20Size:</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22grid-size-controls\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22grid-size-decrease\x22>-</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22grid-size-display\x22>16</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22grid-size-increase\x22>+</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22piano-roll-zoom-controls\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Zoom:</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22zoom-controls\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22zoom-decrease\x22>-</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22zoom-level-display\x22>100%</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22zoom-increase\x22>+</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22zoom-reset\x22>⟲</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22piano-roll-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22piano-roll-scrollable\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22piano-keys\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22piano-roll-grid-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22piano-roll-grid\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22piano-roll-visualizer-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<canvas\x20class=\x22piano-roll-visualizer\x22\x20id=\x22piano-roll-visualizer\x22></canvas>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22piano-roll-controls\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22piano-roll-sound-source\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20for=\x22piano-roll-sound-source\x22>Sound\x20Source:</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22piano-roll-sound-source\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22piano\x22>Grand\x20Piano</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22synth\x22>Synth</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22strings\x22>Strings</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22bass\x22>Bass</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22lead\x22>Lead</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22pad\x22>Pad</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22pluck\x22>Pluck</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22sample\x22>Use\x20Sample</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22piano-roll-preview-controls\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22piano-roll-preview-btn\x22>Preview</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22piano-roll-stop-btn\x22>Stop</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22piano-roll-clear-btn\x22\x20class=\x22piano-roll-clear-btn\x22>Clear</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22piano-roll-filters\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h4>Synth\x20Filters</h4>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22enhanced-filter-controls\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22filter-group\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h5>EQ\x20Controls</h5>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22filter-control\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Low\x20Shelf:</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22piano-roll-lowshelf\x22\x20min=\x22-24\x22\x20max=\x2224\x22\x20value=\x220\x22\x20step=\x220.5\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22piano-roll-lowshelf-value\x22>0dB</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22filter-control\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Low\x20Mid:</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22piano-roll-lowmid\x22\x20min=\x22-24\x22\x20max=\x2224\x22\x20value=\x220\x22\x20step=\x220.5\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22piano-roll-lowmid-value\x22>0dB</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22filter-control\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Mid:</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22piano-roll-mid\x22\x20min=\x22-24\x22\x20max=\x2224\x22\x20value=\x220\x22\x20step=\x220.5\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22piano-roll-mid-value\x22>0dB</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22filter-control\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>High\x20Mid:</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22piano-roll-highmid\x22\x20min=\x22-24\x22\x20max=\x2224\x22\x20value=\x220\x22\x20step=\x220.5\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22piano-roll-highmid-value\x22>0dB</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22filter-control\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>High\x20Shelf:</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22piano-roll-highshelf\x22\x20min=\x22-24\x22\x20max=\x2224\x22\x20value=\x220\x22\x20step=\x220.5\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22piano-roll-highshelf-value\x22>0dB</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22filter-group\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h5>DELAY</h5>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22filter-control\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Time\x20(ms):</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22piano-roll-delay-time\x22\x20min=\x220\x22\x20max=\x221000\x22\x20value=\x220\x22\x20step=\x2210\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22piano-roll-delay-time-value\x22>0ms</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22filter-control\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Feedback\x20(%):</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22piano-roll-delay-feedback\x22\x20min=\x220\x22\x20max=\x22100\x22\x20value=\x220\x22\x20step=\x221\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22piano-roll-delay-feedback-value\x22>0%</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22loading-indicator\x22\x20id=\x22piano-roll-loading\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22spinner\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>Rendering\x20piano\x20roll...</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22popup-footer\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22popup-reset-btn\x22>Reset\x20All\x20to\x200</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22popup-accept-btn\x22>Accept</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20','readAsArrayBuffer','sample-selection-start','70ZaIHNF','diffusion','20px','then','eqHighMidNode','microphone-download-btn','.piano-roll-cell[data-row=\x22','audio/','10px\x2020px','position','lfo','zoom-level-display','depth','startTime','Preview\x20Selection','piano-roll-cell','href','Invalid\x20values\x20for\x20long\x20sample:','recording','Record','piano-roll-mid','mediaDevices','black','disconnect','lfo-depth-value','sample-name','.individual-tempo-section','body','span','type','name','reverb-lowcut-value','reverb-damping','mousedown','buffer','loopDuration','Invalid\x20values\x20for\x20updating\x20long\x20sample:','start','rgba(255,\x20255,\x20255,\x200.1)','reverb-mix-value','rgba(76,\x20175,\x2080,\x200.8)','addEventListener','block','zoom-reset','#333','webkitAudioContext','reverbMixNode','eqHighMid2Node','lfo-rate','innerHeight','\x20with\x20speed\x20','none','now','pointerEvents','reverb','rgba(255,\x200,\x200,\x200.85)','filter','inline-block','delay-time','smoothingTimeConstant','piano-roll-lowshelf','delayFeedback','892704qZNDLY','group-','gainNode','numberOfChannels','psychological-studio-recording-','destination','square','note-long','fillRect','loopStartTime','Error\x20accessing\x20microphone:','piano-roll-stop-btn','bold\x2010px\x20Arial','src','appendChild','loading','grid-size-display','note','piano-roll-lowmid','status','lowShelf','Record\x20New','push','backgroundColor','pitch','touchstart','playing','orientationchange','currentTime','individual-tempo','piano-roll-toggle','recordButton','some','reverb-damping-value','touchmove','effects-popup','createLinearGradient','touches','scrollLeft','download','rgba(255,\x200,\x20132,\x200.85)','popup-sample-number','pow','Invalid\x20playback\x20rate\x20for\x20drum\x20sample:','effects','data','nextStartTime','2436918HfsRGD','#F44336','selection-duration','playButton','active','sort','Invalid\x20playback\x20rate\x20for\x20updating\x20drum\x20sample:','121992VHbBFz','sine','createBuffer','duration','mousemove','delay','opacity','12px\x20Arial','pad','volume','fill','Invalid\x20long\x20loop\x20tempo\x20value\x20from\x20slider:','feedback','mouseup','.piano-roll-grid','setValueAtTime','stop','\x20tempo\x20updated:\x20loop\x20progress\x20','speed-select','.high-tempo-display','fillStyle','closePath','createOscillator','lfoNode','forEach','sawtooth','lowshelf','octave','.piano-keys','stringify','stroke','mouseleave','sample-volume-value','rgba(96,\x2096,\x2096,\x201)','</strong></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>Duration:\x20<strong\x20id=\x22sample-duration\x22>0.00s</strong></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sample-waveform-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<canvas\x20class=\x22sample-waveform\x22\x20id=\x22sample-selection-waveform\x22></canvas>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sample-selection-zoom-controls\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22sample-selection-zoom-btn\x22\x20id=\x22zoom-out-btn\x22>−</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sample-selection-zoom-level\x22\x20id=\x22zoom-level\x22>100%</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22sample-selection-zoom-btn\x22\x20id=\x22zoom-in-btn\x22>+</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22sample-selection-zoom-btn\x22\x20id=\x22zoom-reset-btn\x22>⟲</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sample-selection-controls\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sample-selection-range\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Start:</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22sample-selection-start\x22\x20min=\x220\x22\x20max=\x22100\x22\x20value=\x220\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22sample-selection-start-value\x22>0.00s</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sample-selection-range\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>End:</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22range\x22\x20id=\x22sample-selection-end\x22\x20min=\x220\x22\x20max=\x22100\x22\x20value=\x22100\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22sample-selection-end-value\x22>0.00s</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sample-selection-values\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>Selection\x20Duration:\x20<strong\x20id=\x22selection-duration\x22>0.00s</strong></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sample-selection-preview-controls\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22sample-selection-preview-btn\x22\x20id=\x22preview-selection-btn\x22>Preview\x20Selection</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22sample-selection-preview-btn\x22\x20id=\x22preview-full-btn\x22>Preview\x20Full\x20Sample</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22popup-footer\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22popup-close-btn\x22>Close</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22popup-accept-btn\x22>Accept</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20','offsetWidth','reverb-decay','moveTo','Audio\x20context\x20not\x20available','wetPathNode','custom-indicator','fftSize','shadowBlur','label','clientWidth','parentElement','lfo-target','onstop','volume-value','createObjectURL','triangle','#fff','rgba(28,\x200,\x20212,\x200.9)','Error\x20setting\x20audio\x20source\x20for\x20sample\x20','log10','.long-loop-tempo-slider','soundSource','preview-full-btn','.loop-button','width','but','loop','groupVolume','arc','end','isEnabled','#4CAF50','record-status','speed','#111','lfo-wave','drum','#0a0a0a','lineTo','lowpass','center','rgba(255,\x20196,\x200,\x200.85)','toFixed','textAlign','setLineDash','highShelf','gain','damping','lfo-rate-value','warn','row','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22popup-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3>Select\x20Sample\x20Range</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22popup-close-btn\x22>Close</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22popup-content\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sample-selection-info\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>Sample:\x20<strong\x20id=\x22sample-name\x22>Sample\x20','eqHighNode','.popup-accept-btn','visibility','.loop-button[data-loop=\x221\x22]','No\x20sample\x20buffer\x20available\x20for\x20selection','style','sqrt','documentElement','lfo-waveform','Invalid\x20tempo\x20value:','padding','classList','display','Invalid\x20values\x20for\x20drum\x20sample:','no-sample','piano-roll-delay-feedback','isScheduled','filters','reverbNode','sample-duration','catch','\x20bars','sample-volume','sample-selection-popup','add','.popup-reset-btn','piano-roll-highmid','round','piano-roll-visualizer','Master\x20bar\x20grid\x20updated:\x20bar\x20progress\x20','predelay','piano-roll-loading','peaking','map','scheduledForNextBar'];_0x4ac9=function(){return _0x1639a1;};return _0x4ac9();}const _0x1e93a6=_0x38fe;(function(_0x321e17,_0x4d9f37){const _0x541cdf=_0x38fe,_0x22558a=_0x321e17();while(!![]){try{const _0x3120f0=parseInt(_0x541cdf(0x185))/0x1*(-parseInt(_0x541cdf(0x11d))/0x2)+parseInt(_0x541cdf(0x259))/0x3+-parseInt(_0x541cdf(0x260))/0x4*(parseInt(_0x541cdf(0x1ec))/0x5)+-parseInt(_0x541cdf(0x12c))/0x6*(parseInt(_0x541cdf(0x120))/0x7)+parseInt(_0x541cdf(0x22a))/0x8+parseInt(_0x541cdf(0xc9))/0x9+parseInt(_0x541cdf(0x130))/0xa*(parseInt(_0x541cdf(0x111))/0xb);if(_0x3120f0===_0x4d9f37)break;else _0x22558a['push'](_0x22558a['shift']());}catch(_0x22abef){_0x22558a['push'](_0x22558a['shift']());}}}(_0x4ac9,0x645c2),document[_0x1e93a6(0x215)]('DOMContentLoaded',function(){const _0x8683ed=_0x1e93a6;let _0x502895=null,_0x2fdaf4=null,_0x35dc79=![],_0x1ba004=null,_0x50e040=null;const _0x29d1be=0xc;let _0x490e73=![],_0x35be24=null,_0x4dfe37=![],_0x187b27=null,_0x5becc4=null,_0x2b0756=[];const _0xdce08f=0x64;let _0x3abae0=null,_0x15a9da=null,_0x5d687c=null;const _0x306bfc={},_0x5d0f62={},_0x74b5fa={},_0x5cecbf={};let _0x33e0cd={},_0x264a48=![],_0x2d80c4={},_0x1b952a=null,_0x16e8a8=null,_0x1f9720=0x1,_0x20c192={'lowShelf':null,'highShelf':null,'peaking1':null,'peaking2':null,'peaking3':null,'delay':null,'delayFeedback':null},_0x3eb048=null,_0xaba507=null,_0x468b3c=null,_0x2cdff9=null,_0x3847ea=[];const _0x51c490=0x64;let _0x41422d=null,_0x5df347=null,_0x1c0c6b=0x0,_0x39eafe=0x0,_0x24d723=0x1,_0x1da8f0=null,_0x37a0c4=null,_0x557798=null,_0x5a4e83=![],_0x74a956,_0x38ab75=![],_0x203f51=![],_0x36c9bc=0x78,_0x296ff3=0x0,_0x5a68ac=0x78,_0x3bc151=0x3c/_0x36c9bc,_0x36de79=_0x3bc151*0x4,_0x3e9bc6=0x0,_0x1b842e=0x19,_0x42eb07=0.1,_0x8792c7=null,_0x45778e,_0xbc94e0=[],_0x1ee735,_0x245674=0x0,_0x2f7b5f=null,_0xa662eb=null,_0x1103eb=null,_0x33b072=[],_0x34ca63=![],_0x23f2b4=0x0,_0x295a2d=0x0,_0x3f4e83=_0x36c9bc,_0x547080=0x0,_0xce0d5e=[],_0x2a7e80={'startTime':0x0,'duration':_0x36de79,'nextStartTime':_0x36de79},_0x2f2b7f=0x1,_0x36b54c=0x1;const _0x5c373d={},_0x3ab069=document[_0x8683ed(0xf4)]('div');_0x3ab069[_0x8683ed(0xc5)]=_0x8683ed(0x24d),_0x3ab069[_0x8683ed(0xa0)][_0x8683ed(0xa7)]=_0x8683ed(0x21f);const _0x4ff02d=document[_0x8683ed(0xf4)]('style');_0x4ff02d[_0x8683ed(0xec)]=_0x8683ed(0xf7),document['head'][_0x8683ed(0x238)](_0x4ff02d);function _0x4dd6c2(){const _0x57050f=_0x8683ed;let _0x47bca8=window[_0x57050f(0x21d)]*0.01;document[_0x57050f(0xa2)]['style']['setProperty'](_0x57050f(0x1a1),_0x47bca8+'px'),_0x1111f5();}function _0x1111f5(){const _0x4acf76=_0x8683ed,_0x2e02ee=document[_0x4acf76(0x156)]('buttonGrid'),_0x29cdf0=document[_0x4acf76(0x1cd)](_0x4acf76(0xdb));if(!_0x2e02ee||!_0x29cdf0)return;const _0x59eafe=_0x29cdf0[_0x4acf76(0x283)],_0x72beb1=_0x29cdf0[_0x4acf76(0x1c7)];let _0x1b71e3;if(window[_0x4acf76(0x15f)]<=0x190&&window[_0x4acf76(0x21d)]<=0x1f4)_0x1b71e3=Math[_0x4acf76(0x11c)](_0x59eafe,_0x72beb1),_0x1b71e3<0x96&&(_0x1b71e3=0x96);else window[_0x4acf76(0x15f)]<=0x300?(_0x1b71e3=Math['min'](_0x59eafe,_0x72beb1)*0.95,_0x1b71e3<0xc8&&(_0x1b71e3=0xc8)):(_0x1b71e3=Math[_0x4acf76(0x11c)](_0x59eafe,_0x72beb1),_0x1b71e3<0xc8&&(_0x1b71e3=0xc8),_0x1b71e3>0x2bc&&(_0x1b71e3=0x2bc));_0x2e02ee[_0x4acf76(0xa0)][_0x4acf76(0x29b)]=_0x1b71e3+'px',_0x2e02ee[_0x4acf76(0xa0)][_0x4acf76(0x115)]=_0x1b71e3+'px',_0x2e02ee['getBoundingClientRect'](),_0x3ab069&&(_0x3ab069['style'][_0x4acf76(0x29b)]=_0x1b71e3+'px',_0x3ab069[_0x4acf76(0xa0)][_0x4acf76(0x115)]=_0x1b71e3+'px');}_0x4dd6c2();let _0x37d2e3;window[_0x8683ed(0x215)]('resize',function(){clearTimeout(_0x37d2e3),_0x37d2e3=setTimeout(function(){_0x4dd6c2();},0x64);}),window[_0x8683ed(0x215)](_0x8683ed(0x245),function(){setTimeout(function(){_0x4dd6c2();},0x12c);});const _0x193611=document['getElementById'](_0x8683ed(0x186)),_0x3ca38=document[_0x8683ed(0x156)](_0x8683ed(0xdd)),_0x47c5b6=document[_0x8683ed(0x156)]('tempoDisplay'),_0x3aabe8=document[_0x8683ed(0x156)](_0x8683ed(0x25c)),_0x2e107e=document[_0x8683ed(0x156)](_0x8683ed(0x249)),_0x3d6f69=document[_0x8683ed(0x156)](_0x8683ed(0x1ce)),_0x5b5225=document[_0x8683ed(0x1cd)](_0x8683ed(0xdb));if(!_0x193611||!_0x3ca38||!_0x47c5b6||!_0x3aabe8||!_0x2e107e||!_0x3d6f69||!_0x5b5225){console[_0x8683ed(0xe9)](_0x8683ed(0xf9));return;}_0x5b5225[_0x8683ed(0xa0)][_0x8683ed(0xa7)]=_0x8683ed(0xdc),_0x5b5225['style'][_0x8683ed(0x9d)]=_0x8683ed(0x112),_0x41422d=document[_0x8683ed(0xf4)](_0x8683ed(0x12f)),_0x41422d[_0x8683ed(0xc5)]=_0x8683ed(0xb2),_0x41422d[_0x8683ed(0x199)]=_0x8683ed(0x9a)+(_0x502895||0x1)+_0x8683ed(0x282),document['body'][_0x8683ed(0x238)](_0x41422d),_0x199487();function _0x199487(){const _0x442997=_0x8683ed,_0x16aeae=_0x41422d[_0x442997(0x1de)](_0x442997(0x1e4));_0x16aeae[_0x442997(0x278)](_0x4e620e=>{const _0x198e4c=_0x442997;_0x4e620e[_0x198e4c(0x215)]('click',function(){const _0x1df4bb=_0x198e4c;_0x773782(),_0x41422d[_0x1df4bb(0xa0)]['display']='none';});});const _0x240b47=_0x41422d[_0x442997(0x1cd)]('.popup-accept-btn');_0x240b47['addEventListener'](_0x442997(0x174),function(){const _0x14575b=_0x442997;if(!_0x5df347)return;const _0x3ac694=_0x33e0cd[_0x5df347];_0x3ac694[_0x14575b(0x151)]={'start':_0x1c0c6b,'end':_0x39eafe},_0x773782(),_0x41422d[_0x14575b(0xa0)][_0x14575b(0xa7)]=_0x14575b(0x21f);});const _0x562037=document['getElementById'](_0x442997(0x1eb)),_0x51d018=document[_0x442997(0x156)](_0x442997(0x10d));_0x562037[_0x442997(0x215)](_0x442997(0x19d),function(){const _0x3a2aed=_0x442997;_0x1c0c6b=parseInt(this[_0x3a2aed(0x143)]),_0x1c0c6b>_0x39eafe&&(_0x1c0c6b=_0x39eafe,this[_0x3a2aed(0x143)]=_0x1c0c6b),_0x206714(),_0x400b5d(),_0x5a4e83&&_0x98fdf();}),_0x51d018[_0x442997(0x215)]('input',function(){const _0x268229=_0x442997;_0x39eafe=parseInt(this[_0x268229(0x143)]),_0x39eafe<_0x1c0c6b&&(_0x39eafe=_0x1c0c6b,this['value']=_0x39eafe),_0x206714(),_0x400b5d(),_0x5a4e83&&_0x98fdf();}),document['getElementById']('zoom-in-btn')[_0x442997(0x215)](_0x442997(0x174),function(){_0x24d723<0x4&&(_0x24d723*=0x2,_0x350a28(),_0x400b5d());}),document[_0x442997(0x156)](_0x442997(0x18f))[_0x442997(0x215)](_0x442997(0x174),function(){_0x24d723>0.25&&(_0x24d723/=0x2,_0x350a28(),_0x400b5d());}),document['getElementById'](_0x442997(0x133))['addEventListener'](_0x442997(0x174),function(){_0x24d723=0x1,_0x350a28(),_0x400b5d();}),document[_0x442997(0x156)]('preview-selection-btn')['addEventListener'](_0x442997(0x174),function(){_0x5a4e83?_0x773782():_0x98fdf();}),document[_0x442997(0x156)]('preview-full-btn')[_0x442997(0x215)](_0x442997(0x174),function(){_0x5a4e83?_0x773782():_0x32636f();});}function _0x350a28(){const _0x553bcf=_0x8683ed;document[_0x553bcf(0x156)](_0x553bcf(0xca))[_0x553bcf(0xec)]=Math[_0x553bcf(0xb6)](_0x24d723*0x64)+'%';}function _0x98fdf(){const _0x22f619=_0x8683ed;if(!_0x5df347||!_0x5c373d[_0x5df347][_0x22f619(0x20e)])return;_0x773782();const _0x5f01a9=_0x5c373d[_0x5df347],_0x4b46c1=_0x5f01a9[_0x22f619(0x20e)],_0x47060d=_0x4b46c1[_0x22f619(0x263)],_0x4751c3=_0x47060d*(_0x1c0c6b/0x64),_0x520e12=_0x47060d*(_0x39eafe/0x64),_0x37d06e=_0x520e12-_0x4751c3;_0x37a0c4=_0x74a956[_0x22f619(0x15c)](),_0x37a0c4[_0x22f619(0x20e)]=_0x4b46c1,_0x37a0c4['loop']=!![],_0x37a0c4[_0x22f619(0x141)]=_0x4751c3,_0x37a0c4[_0x22f619(0x19a)]=_0x520e12,_0x557798=_0x74a956[_0x22f619(0xe4)](),_0x557798['gain'][_0x22f619(0x143)]=0.7,_0x37a0c4['connect'](_0x557798),_0x557798['connect'](_0x74a956[_0x22f619(0x22f)]),_0x37a0c4['start'](0x0,_0x4751c3),_0x5a4e83=!![],document[_0x22f619(0x156)](_0x22f619(0x116))[_0x22f619(0xec)]=_0x22f619(0x152);}function _0x32636f(){const _0xa104c0=_0x8683ed;if(!_0x5df347||!_0x5c373d[_0x5df347][_0xa104c0(0x20e)])return;_0x773782();const _0x1ff630=_0x5c373d[_0x5df347],_0x128ad3=_0x1ff630[_0xa104c0(0x20e)];_0x37a0c4=_0x74a956['createBufferSource'](),_0x37a0c4['buffer']=_0x128ad3,_0x37a0c4['loop']=!![],_0x557798=_0x74a956['createGain'](),_0x557798[_0xa104c0(0x95)]['value']=0.7,_0x37a0c4[_0xa104c0(0xc1)](_0x557798),_0x557798[_0xa104c0(0xc1)](_0x74a956[_0xa104c0(0x22f)]),_0x37a0c4[_0xa104c0(0x211)](0x0),_0x5a4e83=!![],document[_0xa104c0(0x156)](_0xa104c0(0x299))[_0xa104c0(0xec)]='Stop\x20Preview';}function _0x773782(){const _0x14fd14=_0x8683ed;if(_0x37a0c4){try{_0x37a0c4[_0x14fd14(0x270)](),_0x37a0c4[_0x14fd14(0x203)]();}catch(_0x412760){}_0x37a0c4=null;}if(_0x557798){try{_0x557798[_0x14fd14(0x203)]();}catch(_0x424147){}_0x557798=null;}_0x5a4e83=![],document[_0x14fd14(0x156)](_0x14fd14(0x116))[_0x14fd14(0xec)]=_0x14fd14(0x1fa),document[_0x14fd14(0x156)](_0x14fd14(0x299))['textContent']=_0x14fd14(0x123);}function _0x206714(){const _0x57d0b3=_0x8683ed;if(!_0x5df347)return;const _0x329d2c=_0x5c373d[_0x5df347];if(!_0x329d2c[_0x57d0b3(0x20e)])return;const _0x3a1463=_0x329d2c[_0x57d0b3(0x20e)][_0x57d0b3(0x263)],_0x5d007c=_0x3a1463*(_0x1c0c6b/0x64),_0x41c373=_0x3a1463*(_0x39eafe/0x64),_0x5454c3=_0x41c373-_0x5d007c;document[_0x57d0b3(0x156)](_0x57d0b3(0x1aa))[_0x57d0b3(0xec)]=_0x5d007c[_0x57d0b3(0x2ad)](0x2)+'s',document[_0x57d0b3(0x156)]('sample-selection-end-value')[_0x57d0b3(0xec)]=_0x41c373[_0x57d0b3(0x2ad)](0x2)+'s',document[_0x57d0b3(0x156)](_0x57d0b3(0x25b))[_0x57d0b3(0xec)]=_0x5454c3['toFixed'](0x2)+'s';}function _0x400b5d(){const _0xd02a21=_0x8683ed;if(!_0x5df347)return;const _0x11c3e9=_0x5c373d[_0x5df347],_0x5aff55=document['getElementById']('sample-selection-waveform'),_0x20a68e=_0x5aff55[_0xd02a21(0x12e)]('2d');if(!_0x11c3e9[_0xd02a21(0x20e)])return;_0x5aff55[_0xd02a21(0x29b)]=_0x5aff55[_0xd02a21(0x283)],_0x5aff55[_0xd02a21(0x115)]=_0x5aff55['offsetHeight'];const _0x23f087=_0x20a68e[_0xd02a21(0x24e)](0x0,0x0,0x0,_0x5aff55[_0xd02a21(0x115)]);_0x23f087[_0xd02a21(0x1be)](0x0,'#1a1a1a'),_0x23f087[_0xd02a21(0x1be)](0x1,_0xd02a21(0x2a8)),_0x20a68e[_0xd02a21(0x274)]=_0x23f087,_0x20a68e[_0xd02a21(0x232)](0x0,0x0,_0x5aff55[_0xd02a21(0x29b)],_0x5aff55['height']);const _0x1f8117=_0x11c3e9[_0xd02a21(0x20e)],_0x108a5d=_0x1f8117[_0xd02a21(0x17d)](0x0),_0x39edfd=Math[_0xd02a21(0x1a8)](_0x108a5d['length']*(_0x1c0c6b/0x64)),_0x4e70e8=Math[_0xd02a21(0x145)](_0x108a5d[_0xd02a21(0xee)]*(_0x39eafe/0x64)),_0x79d6a7=_0x4e70e8-_0x39edfd,_0x260751=Math['floor'](_0x79d6a7/_0x24d723),_0x49ed6b=_0x39edfd+_0x79d6a7/0x2,_0x418e3a=Math['max'](0x0,Math[_0xd02a21(0x1a8)](_0x49ed6b-_0x260751/0x2)),_0x4ccde1=Math['min'](_0x108a5d[_0xd02a21(0xee)],Math['ceil'](_0x49ed6b+_0x260751/0x2));_0x20a68e[_0xd02a21(0x16c)]=_0xd02a21(0x212),_0x20a68e[_0xd02a21(0x175)]=0x1;for(let _0xf6c7bc=0x0;_0xf6c7bc<=0x4;_0xf6c7bc++){const _0x54408f=_0x5aff55[_0xd02a21(0x115)]/0x4*_0xf6c7bc;_0x20a68e[_0xd02a21(0x17f)](),_0x20a68e[_0xd02a21(0x285)](0x0,_0x54408f),_0x20a68e[_0xd02a21(0x2a9)](_0x5aff55[_0xd02a21(0x29b)],_0x54408f),_0x20a68e[_0xd02a21(0x27e)]();}for(let _0x2c2348=0x0;_0x2c2348<=0x8;_0x2c2348++){const _0x3b8193=_0x5aff55[_0xd02a21(0x29b)]/0x8*_0x2c2348;_0x20a68e[_0xd02a21(0x17f)](),_0x20a68e['moveTo'](_0x3b8193,0x0),_0x20a68e[_0xd02a21(0x2a9)](_0x3b8193,_0x5aff55['height']),_0x20a68e[_0xd02a21(0x27e)]();}const _0x26f3c0=_0x20a68e[_0xd02a21(0x24e)](0x0,0x0,0x0,_0x5aff55[_0xd02a21(0x115)]);_0x26f3c0[_0xd02a21(0x1be)](0x0,'rgba(76,\x20175,\x2080,\x200.8)'),_0x26f3c0[_0xd02a21(0x1be)](0.5,_0xd02a21(0x150)),_0x26f3c0['addColorStop'](0x1,_0xd02a21(0x214)),_0x20a68e[_0xd02a21(0x274)]=_0x26f3c0,_0x20a68e[_0xd02a21(0x17f)]();const _0x38e879=Math['ceil']((_0x4ccde1-_0x418e3a)/_0x5aff55['width']),_0x4a1999=_0x5aff55[_0xd02a21(0x115)]/0x2;for(let _0x283206=0x0;_0x283206<_0x5aff55[_0xd02a21(0x29b)];_0x283206++){let _0x240c11=0x1,_0x217ffe=-0x1;for(let _0x3d9aac=0x0;_0x3d9aac<_0x38e879;_0x3d9aac++){const _0x4782fb=_0x108a5d[_0x418e3a+_0x283206*_0x38e879+_0x3d9aac];if(_0x4782fb<_0x240c11)_0x240c11=_0x4782fb;if(_0x4782fb>_0x217ffe)_0x217ffe=_0x4782fb;}_0x20a68e[_0xd02a21(0x232)](_0x283206,(0x1+_0x240c11)*_0x4a1999,0x1,Math[_0xd02a21(0x169)](0x1,(_0x217ffe-_0x240c11)*_0x4a1999));}const _0x17bfe2=(_0x39edfd-_0x418e3a)/(_0x4ccde1-_0x418e3a)*_0x5aff55['width'],_0x51add1=(_0x4e70e8-_0x418e3a)/(_0x4ccde1-_0x418e3a)*_0x5aff55[_0xd02a21(0x29b)];_0x20a68e[_0xd02a21(0x274)]=_0xd02a21(0x1e1),_0x20a68e[_0xd02a21(0x232)](_0x17bfe2,0x0,_0x51add1-_0x17bfe2,_0x5aff55[_0xd02a21(0x115)]),_0x20a68e['fillStyle']=_0xd02a21(0x1d1),_0x20a68e['fillRect'](_0x17bfe2-0x2,0x0,0x4,_0x5aff55[_0xd02a21(0x115)]),_0x20a68e[_0xd02a21(0x232)](_0x51add1-0x2,0x0,0x4,_0x5aff55[_0xd02a21(0x115)]),_0x20a68e[_0xd02a21(0x17f)](),_0x20a68e[_0xd02a21(0x29f)](_0x17bfe2,_0x5aff55[_0xd02a21(0x115)]/0x2,0x8,0x0,Math['PI']*0x2),_0x20a68e[_0xd02a21(0x274)]=_0xd02a21(0x1d1),_0x20a68e[_0xd02a21(0x26a)](),_0x20a68e[_0xd02a21(0x16c)]=_0xd02a21(0x293),_0x20a68e[_0xd02a21(0x175)]=0x2,_0x20a68e[_0xd02a21(0x27e)](),_0x20a68e[_0xd02a21(0x17f)](),_0x20a68e[_0xd02a21(0x29f)](_0x51add1,_0x5aff55[_0xd02a21(0x115)]/0x2,0x8,0x0,Math['PI']*0x2),_0x20a68e[_0xd02a21(0x274)]='#FF9800',_0x20a68e[_0xd02a21(0x26a)](),_0x20a68e[_0xd02a21(0x16c)]=_0xd02a21(0x293),_0x20a68e[_0xd02a21(0x175)]=0x2,_0x20a68e['stroke'](),_0x20a68e['fillStyle']='#aaa',_0x20a68e[_0xd02a21(0x124)]=_0xd02a21(0x267),_0x20a68e[_0xd02a21(0x92)]=_0xd02a21(0x2ab);const _0x2e1704=_0x1f8117[_0xd02a21(0x263)]*(_0x1c0c6b/0x64),_0x313d5b=_0x1f8117[_0xd02a21(0x263)]*(_0x39eafe/0x64),_0x179681=_0x1f8117[_0xd02a21(0x263)]*(_0x418e3a/_0x108a5d[_0xd02a21(0xee)]),_0x376284=_0x1f8117[_0xd02a21(0x263)]*(_0x4ccde1/_0x108a5d[_0xd02a21(0xee)]);_0x20a68e['fillText'](_0x179681[_0xd02a21(0x2ad)](0x2)+'s',0x1e,_0x5aff55[_0xd02a21(0x115)]-0xa),_0x20a68e[_0xd02a21(0x148)](_0x376284[_0xd02a21(0x2ad)](0x2)+'s',_0x5aff55['width']-0x1e,_0x5aff55[_0xd02a21(0x115)]-0xa),_0x17bfe2>0x14&&_0x17bfe2<_0x5aff55[_0xd02a21(0x29b)]-0x14&&(_0x20a68e[_0xd02a21(0x274)]=_0xd02a21(0x1d1),_0x20a68e[_0xd02a21(0x148)](_0x2e1704['toFixed'](0x2)+'s',_0x17bfe2,_0x5aff55[_0xd02a21(0x115)]-0xa)),_0x51add1>0x14&&_0x51add1<_0x5aff55[_0xd02a21(0x29b)]-0x14&&(_0x20a68e[_0xd02a21(0x274)]=_0xd02a21(0x1d1),_0x20a68e[_0xd02a21(0x148)](_0x313d5b['toFixed'](0x2)+'s',_0x51add1,_0x5aff55['height']-0xa));}function _0x541a66(){const _0x5879f5=_0x8683ed;if(_0x74a956)return;try{const _0x12d06e=window['AudioContext']||window[_0x5879f5(0x219)];if(!_0x12d06e)throw new Error(_0x5879f5(0x1d0));_0x74a956=new _0x12d06e(),_0x74a956[_0x5879f5(0x215)]('statechange',()=>{const _0x275d7d=_0x5879f5;console[_0x275d7d(0x16d)](_0x275d7d(0x1bb),_0x74a956[_0x275d7d(0xe6)]),_0x74a956[_0x275d7d(0xe6)]===_0x275d7d(0xc3)&&_0x9f84d7('Audio\x20was\x20interrupted.\x20Please\x20tap\x20to\x20resume.');}),console[_0x5879f5(0x16d)](_0x5879f5(0x140));}catch(_0x57288c){console['error'](_0x5879f5(0x12d),_0x57288c),_0x9f84d7(_0x5879f5(0x1d2));}}function _0x9f84d7(_0x5d22b6){const _0x89ad46=_0x8683ed;let _0x4d4dfb=document[_0x89ad46(0x156)](_0x89ad46(0xd7));!_0x4d4dfb&&(_0x4d4dfb=document[_0x89ad46(0xf4)](_0x89ad46(0x12f)),_0x4d4dfb['id']='notification',_0x4d4dfb['style'][_0x89ad46(0x1f5)]=_0x89ad46(0x18b),_0x4d4dfb['style'][_0x89ad46(0x132)]=_0x89ad46(0x1ee),_0x4d4dfb[_0x89ad46(0xa0)][_0x89ad46(0x1c8)]='50%',_0x4d4dfb[_0x89ad46(0xa0)]['transform']=_0x89ad46(0x168),_0x4d4dfb['style'][_0x89ad46(0x241)]=_0x89ad46(0xf0),_0x4d4dfb[_0x89ad46(0xa0)][_0x89ad46(0x1c2)]=white,_0x4d4dfb[_0x89ad46(0xa0)][_0x89ad46(0xa5)]=_0x89ad46(0x1f4),_0x4d4dfb[_0x89ad46(0xa0)][_0x89ad46(0xc0)]=_0x89ad46(0x1d4),_0x4d4dfb[_0x89ad46(0xa0)]['zIndex']=_0x89ad46(0xdf),document[_0x89ad46(0x207)][_0x89ad46(0x238)](_0x4d4dfb)),_0x4d4dfb[_0x89ad46(0xec)]=_0x5d22b6,_0x4d4dfb[_0x89ad46(0xa0)][_0x89ad46(0xa7)]=_0x89ad46(0x216),setTimeout(()=>{const _0x4d067c=_0x89ad46;_0x4d4dfb[_0x4d067c(0xa0)]['display']=_0x4d067c(0x21f);},0x1388);}function _0x5b7482(){const _0x17ad3d=_0x8683ed;_0x74a956&&_0x74a956[_0x17ad3d(0xe6)]===_0x17ad3d(0x16f)&&_0x74a956[_0x17ad3d(0x126)]()['then'](()=>{const _0x2a3dbf=_0x17ad3d;console[_0x2a3dbf(0x16d)](_0x2a3dbf(0x1da));})[_0x17ad3d(0xaf)](_0x7127ba=>{const _0x43e25c=_0x17ad3d;console[_0x43e25c(0xe9)](_0x43e25c(0xe7),_0x7127ba);});}_0x541a66();let _0x199e77=_0x74a956[_0x8683ed(0xe4)]();_0x199e77[_0x8683ed(0xc1)](_0x74a956['destination']),_0x3ab069[_0x8683ed(0x199)]=_0x8683ed(0x1e9),document[_0x8683ed(0x207)][_0x8683ed(0x238)](_0x3ab069);function _0x53130f(_0x3c42f4,_0x25b46b){const _0x46dc67=_0x8683ed;if(_0x25b46b['length']===0x0)return 0x0;if(_0x25b46b['length']===0x1)return _0x25b46b[0x0]['gain'];const _0xd41d9d=_0x25b46b[_0x46dc67(0xbc)](_0x5d796e=>({'x':Math[_0x46dc67(0x296)](_0x5d796e[_0x46dc67(0x181)]),'y':_0x5d796e[_0x46dc67(0x95)]})),_0x1c0da5=Math[_0x46dc67(0x296)](_0x3c42f4);if(_0x1c0da5<=_0xd41d9d[0x0]['x'])return _0xd41d9d[0x0]['y'];if(_0x1c0da5>=_0xd41d9d[_0xd41d9d[_0x46dc67(0xee)]-0x1]['x'])return _0xd41d9d[_0xd41d9d[_0x46dc67(0xee)]-0x1]['y'];let _0x370cee=0x0;for(_0x370cee=0x0;_0x370cee<_0xd41d9d['length']-0x1;_0x370cee++){if(_0x1c0da5>=_0xd41d9d[_0x370cee]['x']&&_0x1c0da5<=_0xd41d9d[_0x370cee+0x1]['x'])break;}const _0x46cefb=_0xd41d9d[Math[_0x46dc67(0x169)](0x0,_0x370cee-0x1)],_0x1fafb4=_0xd41d9d[_0x370cee],_0x1593ba=_0xd41d9d[_0x370cee+0x1],_0x28271c=_0xd41d9d[Math['min'](_0xd41d9d[_0x46dc67(0xee)]-0x1,_0x370cee+0x2)],_0x57b285=(_0x1c0da5-_0x1fafb4['x'])/(_0x1593ba['x']-_0x1fafb4['x']),_0xfc2f5a=_0x57b285*_0x57b285,_0x24c8b0=_0xfc2f5a*_0x57b285;return 0.5*(0x2*_0x1fafb4['y']+(-_0x46cefb['y']+_0x1593ba['y'])*_0x57b285+(0x2*_0x46cefb['y']-0x5*_0x1fafb4['y']+0x4*_0x1593ba['y']-_0x28271c['y'])*_0xfc2f5a+(-_0x46cefb['y']+0x3*_0x1fafb4['y']-0x3*_0x1593ba['y']+_0x28271c['y'])*_0x24c8b0);}function _0x31cd36(_0x2b4cb7,_0x48ef50){const _0x1cadda=_0x8683ed;if(!_0x15a9da||!_0x15a9da['eq'])return;if(_0x15a9da['eq'][_0x1cadda(0xee)]>=_0x29d1be)return;if(_0x2b4cb7<=0x14||_0x2b4cb7>=0x4e20)return;let _0x2f5e2f=_0x1cadda(0xbb);if(_0x2b4cb7<0xc8)_0x2f5e2f=_0x1cadda(0x27a);else{if(_0x2b4cb7>0x1f40)_0x2f5e2f=_0x1cadda(0xd2);}const _0x48fa56={'frequency':_0x2b4cb7,'gain':_0x48ef50,'q':0x1,'type':_0x2f5e2f};return _0x15a9da['eq'][_0x1cadda(0x240)](_0x48fa56),_0x15a9da['eq'][_0x1cadda(0x25e)]((_0x3d62c7,_0x31da56)=>_0x3d62c7[_0x1cadda(0x181)]-_0x31da56[_0x1cadda(0x181)]),_0x18a997(),_0x1e3a5c(),_0x48fa56;}function _0x582c06(){const _0x4f244d=_0x8683ed;_0x1ba004=document['getElementById'](_0x4f244d(0xef)),_0x50e040=_0x1ba004['getContext']('2d');const _0x45e1a4=_0x1ba004[_0x4f244d(0x28d)];_0x1ba004[_0x4f244d(0x29b)]=_0x45e1a4[_0x4f244d(0x28c)],_0x1ba004['height']=_0x45e1a4['clientHeight'],_0x1e3a5c();const _0x11e893=document[_0x4f244d(0x156)](_0x4f244d(0x131));_0x11e893&&(_0x11e893[_0x4f244d(0x215)]('change',function(){const _0x53fd58=_0x4f244d;_0x5c373d[_0x502895]['eqVisualizerEnabled']=this[_0x53fd58(0x13c)],this[_0x53fd58(0x13c)]?_0x1ba004[_0x53fd58(0xa0)]['pointerEvents']=_0x53fd58(0x179):_0x1ba004[_0x53fd58(0xa0)][_0x53fd58(0x221)]=_0x53fd58(0x21f);}),_0x1ba004[_0x4f244d(0xa0)]['pointerEvents']=_0x11e893[_0x4f244d(0x13c)]?_0x4f244d(0x179):_0x4f244d(0x21f)),_0x1ba004[_0x4f244d(0x215)](_0x4f244d(0x20d),_0x43b144),_0x1ba004[_0x4f244d(0x215)](_0x4f244d(0x264),_0x360d3f),_0x1ba004[_0x4f244d(0x215)](_0x4f244d(0x26d),_0x166c7a),_0x1ba004[_0x4f244d(0x215)](_0x4f244d(0x27f),_0x166c7a),_0x1ba004[_0x4f244d(0x215)](_0x4f244d(0x243),_0x539a59),_0x1ba004['addEventListener']('touchmove',_0x28cf68),_0x1ba004[_0x4f244d(0x215)](_0x4f244d(0x1a6),_0x166c7a),_0x17b24c();}function _0x17b24c(){const _0x3cafaf=_0x8683ed;if(!_0x502895||!_0x5c373d[_0x502895][_0x3cafaf(0xab)])return;if(!_0x187b27){_0x187b27=_0x74a956['createAnalyser'](),_0x187b27[_0x3cafaf(0x289)]=0x1000,_0x187b27[_0x3cafaf(0x227)]=0.7;const _0x4eacc6=_0x5c373d[_0x502895];if(_0x4eacc6[_0x3cafaf(0x1a3)])_0x4eacc6[_0x3cafaf(0x1a3)][_0x3cafaf(0x203)](),_0x4eacc6[_0x3cafaf(0x1a3)][_0x3cafaf(0xc1)](_0x187b27),_0x187b27[_0x3cafaf(0xc1)](_0x199e77);else{if(_0x4eacc6[_0x3cafaf(0x164)])_0x4eacc6[_0x3cafaf(0x164)][_0x3cafaf(0x203)](),_0x4eacc6[_0x3cafaf(0x164)]['connect'](_0x187b27),_0x187b27[_0x3cafaf(0xc1)](_0x199e77);else _0x4eacc6['gainNode']&&(_0x4eacc6[_0x3cafaf(0x22c)][_0x3cafaf(0x203)](),_0x4eacc6[_0x3cafaf(0x22c)]['connect'](_0x187b27),_0x187b27[_0x3cafaf(0xc1)](_0x199e77));}}_0x2017c9();}function _0x2017c9(){const _0x4fdfce=_0x8683ed;_0x5becc4&&cancelAnimationFrame(_0x5becc4);const _0x51a1c5=_0x187b27[_0x4fdfce(0x19b)],_0x22c134=new Uint8Array(_0x51a1c5);function _0x5a9bec(){const _0x3f94c0=_0x4fdfce;_0x5becc4=requestAnimationFrame(_0x5a9bec),_0x187b27['getByteFrequencyData'](_0x22c134),_0x2b0756[_0x3f94c0(0x240)]([..._0x22c134]),_0x2b0756[_0x3f94c0(0xee)]>_0xdce08f&&_0x2b0756[_0x3f94c0(0x14f)](),_0x1e3a5c();}_0x5a9bec();}function _0x4136fd(){_0x5becc4&&(cancelAnimationFrame(_0x5becc4),_0x5becc4=null),_0x2b0756=[],_0x1e3a5c();}function _0x1e3a5c(){const _0x34ec65=_0x8683ed;if(!_0x1ba004||!_0x50e040)return;const _0x2db7c8=_0x1ba004[_0x34ec65(0x29b)],_0x4cae19=_0x1ba004[_0x34ec65(0x115)],_0x3444d1=0x14;_0x50e040[_0x34ec65(0x274)]=_0x34ec65(0x1ca),_0x50e040['fillRect'](0x0,0x0,_0x2db7c8,_0x4cae19),_0x50e040[_0x34ec65(0x16c)]='#1a1a2e',_0x50e040['lineWidth']=0x1;for(let _0xa5b01d=0x0;_0xa5b01d<=0x4;_0xa5b01d++){const _0x50e621=_0x3444d1+_0xa5b01d*(_0x4cae19-0x2*_0x3444d1)/0x4;_0x50e040[_0x34ec65(0x17f)](),_0x50e040[_0x34ec65(0x285)](_0x3444d1,_0x50e621),_0x50e040['lineTo'](_0x2db7c8-_0x3444d1,_0x50e621),_0x50e040[_0x34ec65(0x27e)]();}for(let _0x213fd2=0x0;_0x213fd2<=0x4;_0x213fd2++){const _0x484525=_0x3444d1+_0x213fd2*(_0x2db7c8-0x2*_0x3444d1)/0x4;_0x50e040[_0x34ec65(0x17f)](),_0x50e040[_0x34ec65(0x285)](_0x484525,_0x3444d1),_0x50e040['lineTo'](_0x484525,_0x4cae19-_0x3444d1),_0x50e040[_0x34ec65(0x27e)]();}_0x50e040['strokeStyle']='#333',_0x50e040[_0x34ec65(0x175)]=0x1,_0x50e040[_0x34ec65(0x93)]([0x5,0x3]);const _0x39fab9=_0x4cae19/0x2;_0x50e040['beginPath'](),_0x50e040[_0x34ec65(0x285)](_0x3444d1,_0x39fab9),_0x50e040[_0x34ec65(0x2a9)](_0x2db7c8-_0x3444d1,_0x39fab9),_0x50e040['stroke'](),_0x50e040[_0x34ec65(0x93)]([]);_0x2b0756[_0x34ec65(0xee)]>0x0&&_0x4413a4();_0x50e040['strokeStyle']=_0x34ec65(0x2a2),_0x50e040['lineWidth']=0x4,_0x50e040[_0x34ec65(0x1ba)]=_0x34ec65(0x214),_0x50e040[_0x34ec65(0x28a)]=0x8,_0x50e040[_0x34ec65(0x17f)]();const _0x24893e=_0x15a9da&&_0x15a9da['eq']?_0x15a9da['eq']:[],_0x172896=[..._0x24893e][_0x34ec65(0x25e)]((_0x2602e0,_0x45196e)=>_0x2602e0[_0x34ec65(0x181)]-_0x45196e[_0x34ec65(0x181)]),_0xa5174f=[],_0x1ee086=0xc8;for(let _0x40c9c9=0x0;_0x40c9c9<=_0x1ee086;_0x40c9c9++){const _0xd0d797=_0x3444d1+_0x40c9c9*(_0x2db7c8-0x2*_0x3444d1)/_0x1ee086,_0x2ceb47=0x14*Math[_0x34ec65(0x254)](0x4e20/0x14,(_0xd0d797-_0x3444d1)/(_0x2db7c8-0x2*_0x3444d1));let _0x6f6009=_0x53130f(_0x2ceb47,_0x172896);const _0x494044=_0x4cae19/0x2-_0x6f6009/0x18*(_0x4cae19/0x2-_0x3444d1);_0xa5174f[_0x34ec65(0x240)]({'x':_0xd0d797,'y':_0x494044}),_0x40c9c9===0x0?_0x50e040['moveTo'](_0xd0d797,_0x494044):_0x50e040['lineTo'](_0xd0d797,_0x494044);}_0x50e040[_0x34ec65(0x27e)](),_0x50e040['shadowBlur']=0x0;for(let _0x315e2a=0x0;_0x315e2a<_0x24893e[_0x34ec65(0xee)];_0x315e2a++){const _0x51838d=_0x24893e[_0x315e2a],_0x3ddce5=_0x3444d1+Math['log10'](_0x51838d['frequency']/0x14)/Math[_0x34ec65(0x296)](0x4e20/0x14)*(_0x1ba004[_0x34ec65(0x29b)]-0x2*_0x3444d1),_0x5db88b=_0x4cae19/0x2-_0x51838d[_0x34ec65(0x95)]/0x18*(_0x4cae19/0x2-_0x3444d1);_0x51838d[_0x34ec65(0x18b)]?(_0x50e040[_0x34ec65(0x274)]=_0x34ec65(0x192),_0x50e040[_0x34ec65(0x1ba)]=_0x34ec65(0x102)):(_0x50e040[_0x34ec65(0x274)]=_0x51838d===_0x35be24?'#FF5722':_0x34ec65(0x2a2),_0x50e040[_0x34ec65(0x1ba)]=_0x51838d===_0x35be24?_0x34ec65(0xc2):_0x34ec65(0x214));_0x50e040['shadowBlur']=0xf,_0x50e040['beginPath'](),_0x50e040[_0x34ec65(0x29f)](_0x3ddce5,_0x5db88b,0x9,0x0,Math['PI']*0x2),_0x50e040[_0x34ec65(0x26a)](),_0x50e040[_0x34ec65(0x274)]=_0x34ec65(0x293),_0x50e040[_0x34ec65(0x28a)]=0x0,_0x50e040['beginPath'](),_0x50e040[_0x34ec65(0x29f)](_0x3ddce5,_0x5db88b,0x6,0x0,Math['PI']*0x2),_0x50e040['fill'](),_0x50e040[_0x34ec65(0x274)]='rgba(0,\x200,\x200,\x200.7)',_0x50e040[_0x34ec65(0x232)](_0x3ddce5-0x19,_0x5db88b+0x14,0x32,0xf),_0x50e040['fillStyle']='#fff',_0x50e040[_0x34ec65(0x124)]=_0x34ec65(0x236),_0x50e040[_0x34ec65(0x92)]=_0x34ec65(0x2ab);let _0x36b608;if(_0x51838d[_0x34ec65(0x181)]<0x3e8)_0x36b608=Math[_0x34ec65(0xb6)](_0x51838d[_0x34ec65(0x181)])+'Hz';else{const _0x7ea579=_0x51838d[_0x34ec65(0x181)]/0x3e8;_0x7ea579===Math[_0x34ec65(0xb6)](_0x7ea579)?_0x36b608=Math[_0x34ec65(0xb6)](_0x7ea579)+'k':_0x36b608=_0x7ea579[_0x34ec65(0x2ad)](0x1)+'k';}_0x50e040[_0x34ec65(0x148)](_0x36b608,_0x3ddce5,_0x5db88b+0x1e),_0x50e040[_0x34ec65(0x274)]=_0x34ec65(0x108),_0x50e040[_0x34ec65(0x232)](_0x3ddce5-0x19,_0x5db88b-0x23,0x32,0xf),_0x50e040['fillStyle']='#fff',_0x50e040[_0x34ec65(0x148)](''+(_0x51838d[_0x34ec65(0x95)]>0x0?'+':'')+_0x51838d['gain'][_0x34ec65(0x2ad)](0x1)+'dB',_0x3ddce5,_0x5db88b-0x19);}}function _0x4413a4(){const _0x34dbad=_0x8683ed,_0x5064d6=_0x1ba004[_0x34dbad(0x29b)],_0x51d63b=_0x1ba004[_0x34dbad(0x115)],_0x729a92=0x14,_0x29b4c2=_0x50e040[_0x34dbad(0x24e)](0x0,_0x51d63b-_0x729a92,0x0,_0x729a92);_0x29b4c2['addColorStop'](0x0,'rgba(28,\x200,\x20212,\x200.9)'),_0x29b4c2[_0x34dbad(0x1be)](0.1,_0x34dbad(0xeb)),_0x29b4c2[_0x34dbad(0x1be)](0.3,_0x34dbad(0x1ae)),_0x29b4c2['addColorStop'](0.5,_0x34dbad(0x2ac)),_0x29b4c2[_0x34dbad(0x1be)](0.7,_0x34dbad(0x223)),_0x29b4c2['addColorStop'](0.9,'rgba(255,\x200,\x20157,\x200.85)'),_0x29b4c2[_0x34dbad(0x1be)](0x1,_0x34dbad(0x18a));const _0x3fb024=(_0x5064d6-0x2*_0x729a92)/_0xdce08f;for(let _0x52f791=0x0;_0x52f791<_0x2b0756['length'];_0x52f791++){const _0x2647bb=_0x2b0756[_0x52f791],_0x1e7381=_0x729a92+_0x52f791*_0x3fb024,_0x141094=0.4+_0x52f791/_0x2b0756[_0x34dbad(0xee)]*0.6;_0x50e040['beginPath'](),_0x50e040[_0x34dbad(0x285)](_0x1e7381,_0x51d63b-_0x729a92);const _0x323550=_0x74a956[_0x34dbad(0x118)]/0x2,_0x2d9a45=Math['log10'](0x14),_0x347743=Math[_0x34dbad(0x296)](_0x323550);for(let _0x452b17=0x0;_0x452b17<_0x2647bb[_0x34dbad(0xee)];_0x452b17++){const _0x472650=_0x452b17*_0x323550/_0x2647bb['length'],_0x57c182=Math['log10'](Math[_0x34dbad(0x169)](0x14,_0x472650)),_0x796b51=(_0x57c182-_0x2d9a45)/(_0x347743-_0x2d9a45),_0x225050=_0x729a92+_0x796b51*(_0x5064d6-0x2*_0x729a92);if(_0x225050>=_0x1e7381&&_0x225050<=_0x1e7381+_0x3fb024){const _0xcaf46c=_0x2647bb[_0x452b17]/0xff,_0x130e2c=Math['pow'](_0xcaf46c,0.4),_0x8b0464=_0x51d63b-_0x729a92-_0x130e2c*(_0x51d63b-0x2*_0x729a92);_0x50e040['lineTo'](_0x225050,_0x8b0464);}}_0x50e040[_0x34dbad(0x2a9)](_0x1e7381+_0x3fb024,_0x51d63b-_0x729a92),_0x50e040['closePath'](),_0x50e040[_0x34dbad(0x135)]=_0x141094,_0x50e040[_0x34dbad(0x274)]=_0x29b4c2,_0x50e040[_0x34dbad(0x26a)](),_0x52f791>_0x2b0756[_0x34dbad(0xee)]*0.7&&(_0x50e040[_0x34dbad(0x1ba)]=_0x34dbad(0x1b6),_0x50e040[_0x34dbad(0x28a)]=0xa,_0x50e040[_0x34dbad(0x26a)](),_0x50e040[_0x34dbad(0x28a)]=0x0);}_0x50e040[_0x34dbad(0x135)]=0x1;if(_0x2b0756[_0x34dbad(0xee)]>0x0){const _0x2f41da=_0x2b0756[_0x2b0756[_0x34dbad(0xee)]-0x1];_0x50e040['strokeStyle']='rgba(96,\x2096,\x2096,\x201)',_0x50e040[_0x34dbad(0x175)]=0x2,_0x50e040[_0x34dbad(0x17f)]();const _0x51a60e=_0x74a956[_0x34dbad(0x118)]/0x2,_0x3eaca6=Math[_0x34dbad(0x296)](0x14),_0xd331ac=Math[_0x34dbad(0x296)](_0x51a60e);for(let _0x3fc648=0x0;_0x3fc648<_0x2f41da[_0x34dbad(0xee)];_0x3fc648++){const _0x27ddcb=_0x3fc648*_0x51a60e/_0x2f41da['length'],_0x2a2e48=Math['log10'](Math[_0x34dbad(0x169)](0x14,_0x27ddcb)),_0x4198f2=(_0x2a2e48-_0x3eaca6)/(_0xd331ac-_0x3eaca6),_0x346a6e=_0x729a92+_0x4198f2*(_0x5064d6-0x2*_0x729a92),_0x52e464=_0x2f41da[_0x3fc648]/0xff,_0x59eecb=Math['pow'](_0x52e464,0.4),_0x41e9a3=_0x51d63b-_0x729a92-_0x59eecb*(_0x51d63b-0x2*_0x729a92);_0x3fc648===0x0?_0x50e040['moveTo'](_0x346a6e,_0x41e9a3):_0x50e040['lineTo'](_0x346a6e,_0x41e9a3);}_0x50e040[_0x34dbad(0x27e)]();}}function _0x43b144(_0x5b168a){const _0x27bfbc=_0x8683ed,_0x12b848=document[_0x27bfbc(0x156)](_0x27bfbc(0x131));if(_0x12b848&&!_0x12b848[_0x27bfbc(0x13c)])return;if(!_0x15a9da||!_0x15a9da['eq'])return;const _0x421f58=_0x1ba004[_0x27bfbc(0x1af)](),_0x20902a=_0x5b168a[_0x27bfbc(0x196)]-_0x421f58[_0x27bfbc(0x1c8)],_0x3ea282=_0x5b168a['clientY']-_0x421f58[_0x27bfbc(0xcd)],_0x325da3=0x14,_0x10fedf=_0x1ba004[_0x27bfbc(0x115)];for(let _0x4c4344=0x0;_0x4c4344<_0x15a9da['eq']['length'];_0x4c4344++){const _0x100d5f=_0x15a9da['eq'][_0x4c4344];if(_0x100d5f[_0x27bfbc(0x18b)])continue;const _0x587ece=_0x325da3+Math[_0x27bfbc(0x296)](_0x100d5f[_0x27bfbc(0x181)]/0x14)/Math[_0x27bfbc(0x296)](0x4e20/0x14)*(_0x1ba004[_0x27bfbc(0x29b)]-0x2*_0x325da3),_0x53a7b1=_0x10fedf/0x2-_0x100d5f[_0x27bfbc(0x95)]/0x18*(_0x10fedf/0x2-_0x325da3),_0x48dd98=Math['sqrt'](Math['pow'](_0x20902a-_0x587ece,0x2)+Math['pow'](_0x3ea282-_0x53a7b1,0x2));if(_0x48dd98<=0x9){_0x490e73=!![],_0x35be24=_0x100d5f,_0x4dfe37=![];return;}}if(_0x15a9da['eq']['length']<_0x29d1be){const _0x50f885=0x14*Math[_0x27bfbc(0x254)](0x4e20/0x14,(_0x20902a-_0x325da3)/(_0x1ba004[_0x27bfbc(0x29b)]-0x2*_0x325da3));if(_0x50f885<=0x14||_0x50f885>=0x4e20)return;const _0x34d769=-(_0x3ea282-_0x1ba004[_0x27bfbc(0x115)]/0x2)/(_0x1ba004['height']/0x2-_0x325da3)*0x18,_0x58d5ac=_0x31cd36(_0x50f885,_0x34d769);_0x490e73=!![],_0x35be24=_0x58d5ac,_0x4dfe37=!![];}}function _0x539a59(_0x220401){const _0x87ec52=_0x8683ed,_0x52891b=document[_0x87ec52(0x156)](_0x87ec52(0x131));if(_0x52891b&&!_0x52891b[_0x87ec52(0x13c)])return;_0x220401[_0x87ec52(0x195)]();if(!_0x15a9da||!_0x15a9da['eq'])return;const _0xab1305=_0x220401[_0x87ec52(0x24f)][0x0],_0x4d4eb4=_0x1ba004['getBoundingClientRect'](),_0x4e9e1c=_0xab1305[_0x87ec52(0x196)]-_0x4d4eb4['left'],_0x307d3a=_0xab1305[_0x87ec52(0x100)]-_0x4d4eb4['top'],_0x789c51=0x14,_0x4b848f=_0x1ba004['height'];for(let _0x4c7669=0x0;_0x4c7669<_0x15a9da['eq'][_0x87ec52(0xee)];_0x4c7669++){const _0x579650=_0x15a9da['eq'][_0x4c7669];if(_0x579650['fixed'])continue;const _0x209f11=_0x789c51+Math[_0x87ec52(0x296)](_0x579650[_0x87ec52(0x181)]/0x14)/Math[_0x87ec52(0x296)](0x4e20/0x14)*(_0x1ba004[_0x87ec52(0x29b)]-0x2*_0x789c51),_0x4d3ac3=_0x4b848f/0x2-_0x579650[_0x87ec52(0x95)]/0x18*(_0x4b848f/0x2-_0x789c51),_0x448128=Math[_0x87ec52(0xa1)](Math[_0x87ec52(0x254)](_0x4e9e1c-_0x209f11,0x2)+Math[_0x87ec52(0x254)](_0x307d3a-_0x4d3ac3,0x2));if(_0x448128<=0x9){_0x490e73=!![],_0x35be24=_0x579650,_0x4dfe37=![];return;}}if(_0x15a9da['eq']['length']<_0x29d1be){const _0x36969a=0x14*Math[_0x87ec52(0x254)](0x4e20/0x14,(_0x4e9e1c-_0x789c51)/(_0x1ba004[_0x87ec52(0x29b)]-0x2*_0x789c51));if(_0x36969a<=0x14||_0x36969a>=0x4e20)return;const _0x194044=-(_0x307d3a-_0x4b848f/0x2)/(_0x4b848f/0x2-_0x789c51)*0x18,_0x8df5ac=_0x31cd36(_0x36969a,_0x194044);_0x490e73=!![],_0x35be24=_0x8df5ac,_0x4dfe37=!![];}}function _0x28cf68(_0x47b3c3){const _0x572086=_0x8683ed,_0x1f2f0a=document[_0x572086(0x156)](_0x572086(0x131));if(_0x1f2f0a&&!_0x1f2f0a['checked'])return;_0x47b3c3[_0x572086(0x195)]();if(!_0x490e73||!_0x35be24||!_0x15a9da||!_0x15a9da['eq'])return;const _0x170dd4=_0x47b3c3['touches'][0x0],_0x55de3d=_0x1ba004[_0x572086(0x1af)](),_0x5734f9=_0x170dd4['clientX']-_0x55de3d['left'],_0x5ceefa=_0x170dd4[_0x572086(0x100)]-_0x55de3d['top'],_0x12b41d=0x14,_0x73552e=_0x1ba004[_0x572086(0x115)],_0x2451cf=-(_0x5ceefa-_0x73552e/0x2)/(_0x73552e/0x2-_0x12b41d)*0x18,_0x2367f5=Math['max'](-0x18,Math[_0x572086(0x11c)](0x18,_0x2451cf)),_0x4228c7=0x14*Math[_0x572086(0x254)](0x4e20/0x14,(_0x5734f9-_0x12b41d)/(_0x1ba004[_0x572086(0x29b)]-0x2*_0x12b41d)),_0x29bf6e=Math[_0x572086(0x169)](0x14,Math[_0x572086(0x11c)](0x4e20,_0x4228c7));_0x35be24[_0x572086(0x95)]=_0x2367f5,_0x35be24['frequency']=_0x29bf6e,_0x18a997(),_0x1e3a5c();}function _0x360d3f(_0x5196ff){const _0x45f33a=_0x8683ed,_0x19dda5=document['getElementById'](_0x45f33a(0x131));if(_0x19dda5&&!_0x19dda5[_0x45f33a(0x13c)])return;if(!_0x490e73||!_0x35be24||!_0x15a9da||!_0x15a9da['eq'])return;const _0x3df4de=_0x1ba004['getBoundingClientRect'](),_0x240ace=_0x5196ff['clientX']-_0x3df4de['left'],_0x1b748d=_0x5196ff[_0x45f33a(0x100)]-_0x3df4de['top'],_0x5bb033=0x14,_0x5c8db0=_0x1ba004[_0x45f33a(0x115)],_0x235d42=-(_0x1b748d-_0x5c8db0/0x2)/(_0x5c8db0/0x2-_0x5bb033)*0x18,_0x2f4821=Math['max'](-0x18,Math[_0x45f33a(0x11c)](0x18,_0x235d42)),_0x42e430=0x14*Math[_0x45f33a(0x254)](0x4e20/0x14,(_0x240ace-_0x5bb033)/(_0x1ba004[_0x45f33a(0x29b)]-0x2*_0x5bb033)),_0x18fb44=Math['max'](0x14,Math[_0x45f33a(0x11c)](0x4e20,_0x42e430));_0x35be24[_0x45f33a(0x95)]=_0x2f4821,_0x35be24['frequency']=_0x18fb44,_0x18a997(),_0x1e3a5c();}function _0x166c7a(){_0x490e73=![],_0x35be24=null,_0x4dfe37=![],_0x1e3a5c();}function _0x18a997(){const _0x2d7b0a=_0x8683ed;if(!_0x502895||!_0x15a9da||!_0x15a9da['eq'])return;const _0x58949a=_0x5c373d[_0x502895];if(_0x58949a[_0x2d7b0a(0x1dc)])_0x58949a[_0x2d7b0a(0x1dc)][_0x2d7b0a(0x95)][_0x2d7b0a(0x143)]=0x0;if(_0x58949a[_0x2d7b0a(0x1a5)])_0x58949a[_0x2d7b0a(0x1a5)]['gain']['value']=0x0;if(_0x58949a[_0x2d7b0a(0x1b1)])_0x58949a['eqMidNode']['gain'][_0x2d7b0a(0x143)]=0x0;if(_0x58949a[_0x2d7b0a(0x1f0)])_0x58949a[_0x2d7b0a(0x1f0)][_0x2d7b0a(0x95)]['value']=0x0;if(_0x58949a[_0x2d7b0a(0x21b)])_0x58949a['eqHighMid2Node'][_0x2d7b0a(0x95)][_0x2d7b0a(0x143)]=0x0;if(_0x58949a['eqHighNode'])_0x58949a[_0x2d7b0a(0x9b)][_0x2d7b0a(0x95)][_0x2d7b0a(0x143)]=0x0;if(_0x58949a[_0x2d7b0a(0x1a3)])_0x58949a['eqVeryHighNode']['gain'][_0x2d7b0a(0x143)]=0x0;const _0x1ae47c=[..._0x15a9da['eq']][_0x2d7b0a(0x25e)]((_0x296f69,_0x31f1d3)=>_0x296f69['frequency']-_0x31f1d3[_0x2d7b0a(0x181)]);_0x1ae47c[0x0]&&_0x1ae47c[0x0][_0x2d7b0a(0x209)]==='lowshelf'&&(_0x58949a[_0x2d7b0a(0x1dc)]&&(_0x58949a[_0x2d7b0a(0x1dc)][_0x2d7b0a(0x181)][_0x2d7b0a(0x143)]=_0x1ae47c[0x0][_0x2d7b0a(0x181)],_0x58949a['eqLowNode'][_0x2d7b0a(0x95)][_0x2d7b0a(0x143)]=_0x1ae47c[0x0][_0x2d7b0a(0x95)]));_0x1ae47c[_0x1ae47c[_0x2d7b0a(0xee)]-0x1]&&_0x1ae47c[_0x1ae47c[_0x2d7b0a(0xee)]-0x1][_0x2d7b0a(0x209)]==='highshelf'&&(_0x58949a[_0x2d7b0a(0x9b)]&&(_0x58949a[_0x2d7b0a(0x9b)][_0x2d7b0a(0x181)]['value']=_0x1ae47c[_0x1ae47c['length']-0x1][_0x2d7b0a(0x181)],_0x58949a[_0x2d7b0a(0x9b)][_0x2d7b0a(0x95)][_0x2d7b0a(0x143)]=_0x1ae47c[_0x1ae47c[_0x2d7b0a(0xee)]-0x1]['gain']));let _0x6acfcf=0x0;for(let _0x52072e=0x0;_0x52072e<_0x1ae47c[_0x2d7b0a(0xee)];_0x52072e++){if(_0x1ae47c[_0x52072e][_0x2d7b0a(0x209)]===_0x2d7b0a(0xbb)){let _0xe1b745;switch(_0x6acfcf){case 0x0:_0xe1b745=_0x58949a['eqLowMidNode'];break;case 0x1:_0xe1b745=_0x58949a['eqMidNode'];break;case 0x2:_0xe1b745=_0x58949a[_0x2d7b0a(0x1f0)];break;case 0x3:_0xe1b745=_0x58949a[_0x2d7b0a(0x21b)];break;default:break;}_0xe1b745&&(_0xe1b745[_0x2d7b0a(0x181)][_0x2d7b0a(0x143)]=_0x1ae47c[_0x52072e][_0x2d7b0a(0x181)],_0xe1b745[_0x2d7b0a(0x95)][_0x2d7b0a(0x143)]=_0x1ae47c[_0x52072e][_0x2d7b0a(0x95)],_0xe1b745['Q'][_0x2d7b0a(0x143)]=_0x1ae47c[_0x52072e]['q']||0x1,_0x6acfcf++);}}}function _0x26555d(){const _0x14fded=_0x8683ed;if(!_0x502895)return;const _0x582b46=_0x5c373d[_0x502895],_0x1158b0=parseInt(document[_0x14fded(0x156)](_0x14fded(0x226))['value']),_0x34ab56=parseInt(document[_0x14fded(0x156)](_0x14fded(0xce))['value']);let _0x38458f=0x0;_0x1158b0>0x0&&(_0x38458f+=0.5),_0x34ab56>0x0&&(_0x38458f+=_0x34ab56/0x64),_0x38458f=Math[_0x14fded(0x11c)](_0x38458f,0.8),_0x582b46['wetPathNode']&&(_0x582b46[_0x14fded(0x287)]['gain'][_0x14fded(0x143)]=_0x38458f),_0x582b46[_0x14fded(0x1cf)]&&(_0x582b46[_0x14fded(0x1cf)][_0x14fded(0x95)][_0x14fded(0x143)]=0x1-_0x38458f);}function _0xc0e183(){const _0x51484d=_0x8683ed;if(!_0x502895)return;const _0x447a03=_0x5c373d[_0x502895],_0x3b3c96=parseInt(document[_0x51484d(0x156)](_0x51484d(0x226))[_0x51484d(0x143)]),_0x5ef89b=parseInt(document[_0x51484d(0x156)]('delay-feedback')[_0x51484d(0x143)]);_0x447a03[_0x51484d(0x14d)]&&(_0x447a03[_0x51484d(0x14d)]['delayTime'][_0x51484d(0x143)]=_0x3b3c96/0x3e8,_0x447a03[_0x51484d(0x171)]&&(_0x447a03['delayFeedbackNode']['gain']['value']=_0x5ef89b/0x64)),_0x26555d();}function _0x12c658(){const _0x25ec6e=_0x8683ed;if(!_0x502895)return;const _0x97bdf8=_0x5c373d[_0x502895],_0x444071=parseFloat(document[_0x25ec6e(0x156)](_0x25ec6e(0x284))[_0x25ec6e(0x143)]),_0x12394f=parseFloat(document['getElementById'](_0x25ec6e(0x1b4))[_0x25ec6e(0x143)]),_0xa5570b=parseFloat(document[_0x25ec6e(0x156)](_0x25ec6e(0x121))[_0x25ec6e(0x143)]),_0x171d37=parseFloat(document[_0x25ec6e(0x156)](_0x25ec6e(0x182))[_0x25ec6e(0x143)]),_0x45472d=parseFloat(document[_0x25ec6e(0x156)](_0x25ec6e(0x1bf))[_0x25ec6e(0x143)]),_0xdbdb79=parseFloat(document['getElementById']('reverb-damping')['value']),_0x3dabb2=parseInt(document[_0x25ec6e(0x156)](_0x25ec6e(0xce))[_0x25ec6e(0x143)]);_0x97bdf8[_0x25ec6e(0x21a)]&&(_0x97bdf8[_0x25ec6e(0x21a)][_0x25ec6e(0x95)][_0x25ec6e(0x143)]=_0x3dabb2/0x64);if(_0x444071>0x0){const _0x5f3a31=_0x74a956['createConvolver'](),_0x501cc9=_0x74a956[_0x25ec6e(0x118)]*_0x444071,_0x3a3d9c=_0x74a956['createBuffer'](0x2,_0x501cc9,_0x74a956[_0x25ec6e(0x118)]),_0x96244b=_0x74a956[_0x25ec6e(0x118)]*(_0x12394f/0x3e8);for(let _0x144166=0x0;_0x144166<0x2;_0x144166++){const _0x112e00=_0x3a3d9c[_0x25ec6e(0x17d)](_0x144166);for(let _0x1f3e4b=0x0;_0x1f3e4b<_0x501cc9;_0x1f3e4b++){if(_0x1f3e4b<_0x96244b)_0x112e00[_0x1f3e4b]=0x0;else{const _0xb9cf59=Math[_0x25ec6e(0x254)](0x1-(_0x1f3e4b-_0x96244b)/(_0x501cc9-_0x96244b),0x2),_0x15dfa8=_0xa5570b/0x64;_0x112e00[_0x1f3e4b]=(Math[_0x25ec6e(0x138)]()*0x2-0x1)*_0xb9cf59*_0x15dfa8;const _0x5730b7=0x1-_0xdbdb79/0x64*(_0x1f3e4b/_0x501cc9);_0x112e00[_0x1f3e4b]*=_0x5730b7;}}}_0x5f3a31['buffer']=_0x3a3d9c,_0x97bdf8[_0x25ec6e(0xad)]&&_0x97bdf8[_0x25ec6e(0xad)][_0x25ec6e(0x203)](),_0x97bdf8[_0x25ec6e(0xad)]=_0x5f3a31,_0x97bdf8[_0x25ec6e(0x287)]&&_0x97bdf8['reverbMixNode']&&(_0x97bdf8[_0x25ec6e(0x287)][_0x25ec6e(0xc1)](_0x5f3a31),_0x5f3a31[_0x25ec6e(0xc1)](_0x97bdf8[_0x25ec6e(0x21a)]),_0x97bdf8['reverbMixNode'][_0x25ec6e(0xc1)](_0x97bdf8['outputNode']));}else _0x97bdf8[_0x25ec6e(0xad)]&&(_0x97bdf8[_0x25ec6e(0xad)][_0x25ec6e(0x203)](),_0x97bdf8['reverbNode']=null);_0x26555d();}function _0x1bbfdb(_0x9de907){const _0x2d6643=_0x8683ed;if(!_0x5c373d[_0x9de907]||!_0x5c373d[_0x9de907]['gainNode'])return;const _0x51585a=_0x5c373d[_0x9de907],_0xe3729e=_0x51585a[_0x2d6643(0x29e)]!==undefined?_0x51585a[_0x2d6643(0x29e)]:0.8,_0x146518=_0x51585a[_0x2d6643(0x16e)]!==undefined?_0x51585a[_0x2d6643(0x16e)]:0x1,_0x112fa4=_0xe3729e*_0x146518;_0x51585a[_0x2d6643(0x22c)][_0x2d6643(0x95)][_0x2d6643(0x143)]=_0x112fa4,_0x51585a[_0x2d6643(0x269)]=_0x112fa4;}function _0x16a64c(_0x190c30){const _0x41b1df=_0x8683ed,_0x562778=Math[_0x41b1df(0x1a8)]((_0x190c30-0x1)/0xa),_0x7dde06=document[_0x41b1df(0x156)](_0x41b1df(0x1b8)+_0x562778);return _0x7dde06?parseFloat(_0x7dde06['value'])/0x64:0.8;}function _0x11fde8(){const _0x149d0f=_0x8683ed;if(!_0x502895)return;const _0x20706c=_0x5c373d[_0x502895],_0x3fa267=parseInt(document[_0x149d0f(0x156)](_0x149d0f(0xb1))['value']);document['getElementById'](_0x149d0f(0x280))[_0x149d0f(0xec)]=_0x3fa267+'%';const _0x4e845f=_0x3fa267/0x64;_0x20706c[_0x149d0f(0x16e)]=_0x4e845f,_0x1bbfdb(_0x502895);}function _0x456f16(){const _0x1a9d12=_0x8683ed;if(!_0x502895)return;const _0x1bf0d4=_0x5c373d[_0x502895],_0x37148b=parseFloat(document[_0x1a9d12(0x156)]('speed-select')['value']);if(_0x1bf0d4[_0x1a9d12(0x172)]&&_0x1bf0d4[_0x1a9d12(0xab)]){let _0x309566;if(_0x1bf0d4[_0x1a9d12(0xcc)]){const _0x3ca4b7=0x3c/_0x5a68ac,_0x2584ca=_0x3ca4b7*0x4,_0xb30966=_0x2584ca*_0x36b54c;_0x309566=_0x1bf0d4[_0x1a9d12(0x20f)]/_0xb30966;}else{const _0xa4a7e5=_0x36c9bc+_0x296ff3,_0xb66d35=0x3c/_0xa4a7e5,_0x45a5b8=_0xb66d35*0x4,_0x34abb9=_0x45a5b8*_0x2f2b7f;_0x309566=_0x1bf0d4[_0x1a9d12(0x20f)]/_0x34abb9;}let _0x591bb9=0x1;_0x1bf0d4[_0x1a9d12(0xcc)]&&_0x1bf0d4['effects']&&_0x1bf0d4[_0x1a9d12(0x256)][_0x1a9d12(0xe5)]&&(_0x591bb9=_0x1bf0d4[_0x1a9d12(0x256)][_0x1a9d12(0xe5)]);const _0x425445=_0x309566*_0x591bb9*_0x37148b,_0x2f02fe=_0x1bf0d4[_0x1a9d12(0x172)][_0x1a9d12(0x139)][_0x1a9d12(0x143)],_0x5b01c0=_0x74a956['currentTime'],_0x24b165=_0x5b01c0-_0x1bf0d4['loopStartTime'],_0x29f9b8=_0x24b165*_0x2f02fe%_0x1bf0d4[_0x1a9d12(0x20f)];_0x1bf0d4['source']['playbackRate'][_0x1a9d12(0x143)]=_0x425445,_0x1bf0d4['loopStartTime']=_0x5b01c0-_0x29f9b8/_0x425445,_0x1bf0d4[_0x1a9d12(0x160)]==='pitch'&&(_0x1bf0d4[_0x1a9d12(0x19e)]=_0x425445),console[_0x1a9d12(0x16d)]('Sample\x20'+_0x502895+_0x1a9d12(0x18d)+_0x425445+_0x1a9d12(0xea)+_0x29f9b8);}}function _0xb860c8(){const _0x58d416=_0x8683ed;if(!_0x502895)return;const _0x248185=_0x5c373d[_0x502895],_0x54912d=parseFloat(document[_0x58d416(0x156)](_0x58d416(0x247))[_0x58d416(0x143)]);if(_0x248185[_0x58d416(0x172)]&&_0x248185[_0x58d416(0xab)]&&_0x248185[_0x58d416(0xcc)]){const _0x90c66e=0x3c/_0x5a68ac,_0x4cbf54=_0x90c66e*0x4,_0x25f2ec=_0x4cbf54*_0x36b54c,_0x1ddc6f=_0x248185['loopDuration']/_0x25f2ec,_0x3ab176=_0x248185['effects']?_0x248185['effects'][_0x58d416(0x2a4)]||0x1:0x1,_0x57137f=_0x1ddc6f*_0x54912d*_0x3ab176,_0x288e89=_0x248185['source'][_0x58d416(0x139)][_0x58d416(0x143)],_0x38bb5e=_0x74a956[_0x58d416(0x246)],_0x300955=_0x38bb5e-_0x248185[_0x58d416(0x233)],_0x37b515=_0x300955*_0x288e89%_0x248185[_0x58d416(0x20f)];_0x248185[_0x58d416(0x172)]['playbackRate'][_0x58d416(0x143)]=_0x57137f,_0x248185[_0x58d416(0x233)]=_0x38bb5e-_0x37b515/_0x57137f,_0x248185[_0x58d416(0x160)]==='pitch'&&(_0x248185['lfoBaseRate']=_0x57137f),console[_0x58d416(0x16d)](_0x58d416(0xfd)+_0x502895+_0x58d416(0x180)+_0x57137f+_0x58d416(0xea)+_0x37b515);}}function _0x4b1313(){const _0x3c061b=_0x8683ed,_0x4f7faf=document[_0x3c061b(0x156)]('speed-select'),_0xe59edb=document[_0x3c061b(0x156)](_0x3c061b(0x247)),_0xa18344=document['getElementById'](_0x3c061b(0x177)),_0x6f8952=document['getElementById'](_0x3c061b(0xb1));_0x4f7faf['addEventListener'](_0x3c061b(0x1e0),function(){const _0x3f106c=_0x3c061b;_0x456f16(),_0x15a9da&&(_0x15a9da[_0x3f106c(0x2a4)]=parseFloat(this[_0x3f106c(0x143)]));}),_0xe59edb[_0x3c061b(0x215)](_0x3c061b(0x19d),function(){const _0x5bcc7b=_0x3c061b;_0xa18344['textContent']=this[_0x5bcc7b(0x143)],_0xb860c8(),_0x15a9da&&(_0x15a9da[_0x5bcc7b(0xe5)]=parseFloat(this['value']));}),_0x6f8952[_0x3c061b(0x215)](_0x3c061b(0x19d),function(){const _0x2355bf=_0x3c061b;_0x11fde8(),_0x15a9da&&(_0x15a9da[_0x2355bf(0x269)]=parseInt(this[_0x2355bf(0x143)]));});}function _0x3d5db8(_0x3927e9){const _0x15bc65=_0x8683ed;if(!_0x5c373d[_0x3927e9]['isScheduled']||!_0x5c373d[_0x3927e9][_0x15bc65(0x172)])return;const _0xed78b0=_0x5c373d[_0x3927e9];if(_0xed78b0[_0x15bc65(0x164)]){_0x3078e4(_0x3927e9);return;}const _0x186090=_0xed78b0[_0x15bc65(0x22c)],_0x5c9a46=_0x74a956['createGain']();_0x5c9a46['gain'][_0x15bc65(0x143)]=0x1;const _0x33b0f6=_0x74a956[_0x15bc65(0xe4)]();_0x33b0f6['gain'][_0x15bc65(0x143)]=0x1;const _0x4e6b75=_0x74a956['createGain']();_0x4e6b75[_0x15bc65(0x95)][_0x15bc65(0x143)]=0x0,_0xed78b0['wetPathNode']=_0x4e6b75,_0xed78b0[_0x15bc65(0x1cf)]=_0x33b0f6,_0xed78b0['outputNode']=_0x5c9a46,_0x186090[_0x15bc65(0xc1)](_0x33b0f6),_0x186090[_0x15bc65(0xc1)](_0x4e6b75),_0x33b0f6[_0x15bc65(0xc1)](_0x5c9a46),_0x4e6b75['connect'](_0x5c9a46);let _0x23a71f=_0x4e6b75;const _0x2174f0=_0x74a956[_0x15bc65(0x1b7)](0x1);_0x2174f0[_0x15bc65(0xcf)][_0x15bc65(0x143)]=0x0;const _0x58c4a4=_0x74a956['createGain']();_0x58c4a4[_0x15bc65(0x95)][_0x15bc65(0x143)]=0x0,_0x23a71f[_0x15bc65(0xc1)](_0x2174f0),_0x2174f0[_0x15bc65(0xc1)](_0x58c4a4),_0x58c4a4['connect'](_0x2174f0),_0x2174f0[_0x15bc65(0xc1)](_0x5c9a46),_0x23a71f=_0x2174f0,_0xed78b0[_0x15bc65(0x14d)]=_0x2174f0,_0xed78b0[_0x15bc65(0x171)]=_0x58c4a4;const _0xdb46f3=_0x74a956[_0x15bc65(0xc4)](),_0x18dbf3=_0x74a956[_0x15bc65(0x118)]*0.1,_0x8aeeea=_0x74a956['createBuffer'](0x2,_0x18dbf3,_0x74a956['sampleRate']);for(let _0xf46942=0x0;_0xf46942<0x2;_0xf46942++){const _0x950375=_0x8aeeea['getChannelData'](_0xf46942);for(let _0x29af39=0x0;_0x29af39<_0x18dbf3;_0x29af39++){_0x950375[_0x29af39]=(Math['random']()*0x2-0x1)*Math[_0x15bc65(0x254)](0x1-_0x29af39/_0x18dbf3,0x2);}}_0xdb46f3[_0x15bc65(0x20e)]=_0x8aeeea;const _0x492a9f=_0x74a956[_0x15bc65(0xe4)](),_0x2df073=_0xed78b0[_0x15bc65(0x256)]||{};_0x492a9f[_0x15bc65(0x95)][_0x15bc65(0x143)]=_0x2df073[_0x15bc65(0x222)]&&_0x2df073['reverb'][_0x15bc65(0xc7)]?_0x2df073['reverb'][_0x15bc65(0xc7)]/0x64:0x0,_0x23a71f[_0x15bc65(0xc1)](_0xdb46f3),_0xdb46f3['connect'](_0x492a9f),_0x492a9f[_0x15bc65(0xc1)](_0x5c9a46),_0xed78b0[_0x15bc65(0xad)]=_0xdb46f3,_0xed78b0[_0x15bc65(0x21a)]=_0x492a9f;const _0x37c1b3=_0x74a956[_0x15bc65(0x276)]();_0x37c1b3[_0x15bc65(0x209)]='sine',_0x37c1b3[_0x15bc65(0x181)][_0x15bc65(0x143)]=0x1;const _0xf25a40=_0x74a956['createGain']();_0xf25a40[_0x15bc65(0x95)][_0x15bc65(0x143)]=0x0,_0x37c1b3[_0x15bc65(0xc1)](_0xf25a40),_0xed78b0[_0x15bc65(0x277)]=_0x37c1b3,_0xed78b0[_0x15bc65(0x1b0)]=_0xf25a40,_0xed78b0[_0x15bc65(0x19e)]=0x1,_0x37c1b3[_0x15bc65(0x211)]();const _0x153707=_0x74a956['createGain']();_0x153707[_0x15bc65(0x95)]['value']=_0xed78b0[_0x15bc65(0x16e)]||0x1,_0xed78b0[_0x15bc65(0xcb)]=_0x153707,_0x186090[_0x15bc65(0x203)](),_0x186090[_0x15bc65(0xc1)](_0x153707),_0x153707[_0x15bc65(0xc1)](_0x33b0f6),_0x153707[_0x15bc65(0xc1)](_0x4e6b75);const _0x4718c7=_0xed78b0['effects']||{'delay':{'time':0x0,'feedback':0x0},'reverb':{'decay':0x0,'mix':0x0,'predelay':0x0,'diffusion':0x32,'lowcut':0x14,'highcut':0x4e20,'damping':0x32},'eq':[{'frequency':0x14,'gain':0x0,'q':0x1,'type':'lowshelf','fixed':!![]},{'frequency':0x4e20,'gain':0x0,'q':0x1,'type':_0x15bc65(0xd2),'fixed':!![]}],'volume':0x64,'speed':0x1,'individualTempo':0x1,'lfo':{'target':_0x15bc65(0x242),'waveform':_0x15bc65(0x261),'rate':0x1,'depth':0x0},'pianoRoll':{'notes':[],'soundSource':_0x15bc65(0xbf),'gridWidth':_0xed78b0[_0x15bc65(0xcc)]?0x20:0x10,'gridHeight':0x54,'scrollX':0x0,'scrollY':0x0,'sampleRange':{'start':0x0,'end':0x64},'filters':{'lowShelf':0x0,'highShelf':0x0,'lowMid':0x0,'mid':0x0,'highMid':0x0,'delay':{'time':0x0,'feedback':0x0}},'isEnabled':![]}};_0x4718c7[_0x15bc65(0x1d5)]&&!_0x33e0cd[_0x3927e9]&&(_0x33e0cd[_0x3927e9]=JSON['parse'](JSON[_0x15bc65(0x27d)](_0x4718c7[_0x15bc65(0x1d5)])));const _0xd058a9=_0x74a956[_0x15bc65(0x1b9)]();_0xd058a9['type']=_0x15bc65(0x27a),_0xd058a9[_0x15bc65(0x181)][_0x15bc65(0x143)]=0x3c,_0xd058a9[_0x15bc65(0x95)][_0x15bc65(0x143)]=0x0;const _0x1ee0e9=_0x74a956[_0x15bc65(0x1b9)]();_0x1ee0e9[_0x15bc65(0x209)]=_0x15bc65(0xbb),_0x1ee0e9[_0x15bc65(0x181)][_0x15bc65(0x143)]=0xe6,_0x1ee0e9['Q'][_0x15bc65(0x143)]=0x1,_0x1ee0e9[_0x15bc65(0x95)][_0x15bc65(0x143)]=0x0;const _0x3bf281=_0x74a956[_0x15bc65(0x1b9)]();_0x3bf281['type']='peaking',_0x3bf281['frequency'][_0x15bc65(0x143)]=0x38e,_0x3bf281['Q'][_0x15bc65(0x143)]=0x1,_0x3bf281['gain'][_0x15bc65(0x143)]=0x0;const _0x2fae44=_0x74a956[_0x15bc65(0x1b9)]();_0x2fae44[_0x15bc65(0x209)]=_0x15bc65(0xbb),_0x2fae44[_0x15bc65(0x181)][_0x15bc65(0x143)]=0xbb8,_0x2fae44['Q'][_0x15bc65(0x143)]=0x1,_0x2fae44['gain'][_0x15bc65(0x143)]=0x0;const _0x4ab3b1=_0x74a956['createBiquadFilter']();_0x4ab3b1[_0x15bc65(0x209)]='peaking',_0x4ab3b1[_0x15bc65(0x181)][_0x15bc65(0x143)]=0x1770,_0x4ab3b1['Q']['value']=0x1,_0x4ab3b1[_0x15bc65(0x95)][_0x15bc65(0x143)]=0x0;const _0x5dfe68=_0x74a956[_0x15bc65(0x1b9)]();_0x5dfe68[_0x15bc65(0x209)]=_0x15bc65(0xd2),_0x5dfe68[_0x15bc65(0x181)][_0x15bc65(0x143)]=0x2710,_0x5dfe68[_0x15bc65(0x95)]['value']=0x0;const _0x50f04c=_0x74a956[_0x15bc65(0x1b9)]();_0x50f04c[_0x15bc65(0x209)]=_0x15bc65(0xd2),_0x50f04c[_0x15bc65(0x181)][_0x15bc65(0x143)]=0x36b0,_0x50f04c[_0x15bc65(0x95)][_0x15bc65(0x143)]=0x0;const _0x4282ad=_0x74a956[_0x15bc65(0x1b9)]();_0x4282ad[_0x15bc65(0x209)]='lowpass',_0x4282ad['frequency'][_0x15bc65(0x143)]=0x7d0,_0x4282ad['Q'][_0x15bc65(0x143)]=0x1,_0x4282ad['gain'][_0x15bc65(0x143)]=0x0,_0xed78b0[_0x15bc65(0x1a9)]=_0x4282ad,_0x5c9a46[_0x15bc65(0xc1)](_0xd058a9),_0xd058a9[_0x15bc65(0xc1)](_0x1ee0e9),_0x1ee0e9[_0x15bc65(0xc1)](_0x3bf281),_0x3bf281['connect'](_0x2fae44),_0x2fae44[_0x15bc65(0xc1)](_0x4ab3b1),_0x4ab3b1[_0x15bc65(0xc1)](_0x5dfe68);const _0x202675=_0x74a956[_0x15bc65(0xe4)]();_0x202675['gain'][_0x15bc65(0x143)]=0x1,_0x5dfe68[_0x15bc65(0xc1)](_0x4282ad),_0x5dfe68[_0x15bc65(0xc1)](_0x202675),_0x202675[_0x15bc65(0xc1)](_0x50f04c),_0xed78b0['lfoFilterBypass']=_0x202675,_0x50f04c[_0x15bc65(0xc1)](_0x199e77),_0xed78b0[_0x15bc65(0x1dc)]=_0xd058a9,_0xed78b0['eqLowMidNode']=_0x1ee0e9,_0xed78b0[_0x15bc65(0x1b1)]=_0x3bf281,_0xed78b0[_0x15bc65(0x1f0)]=_0x2fae44,_0xed78b0[_0x15bc65(0x21b)]=_0x4ab3b1,_0xed78b0[_0x15bc65(0x9b)]=_0x5dfe68,_0xed78b0[_0x15bc65(0x1a3)]=_0x50f04c,_0xed78b0['effects']&&_0x3078e4(_0x3927e9);}function _0x49235b(_0x2088e1,_0x2f5aa3){const _0x3ad99c=_0x8683ed;_0x502895=_0x2088e1,document[_0x3ad99c(0x156)](_0x3ad99c(0x253))['textContent']=_0x2088e1;const _0x5b142f=document[_0x3ad99c(0x156)](_0x3ad99c(0x131));_0x5b142f&&(_0x5b142f['checked']=_0x5c373d[_0x2088e1][_0x3ad99c(0x1c3)]||![]);const _0x539e14=document['getElementById'](_0x3ad99c(0xba));_0x539e14&&(_0x539e14[_0x3ad99c(0xa0)][_0x3ad99c(0xa7)]=_0x3ad99c(0x21f));const _0x4f196d=_0x5c373d[_0x2088e1][_0x3ad99c(0x256)]||{'delay':{'time':0x0,'feedback':0x0},'reverb':{'decay':0x0,'mix':0x0,'predelay':0x0,'diffusion':0x32,'lowcut':0x14,'highcut':0x4e20,'damping':0x32},'eq':[{'frequency':0x14,'gain':0x0,'q':0x1,'type':_0x3ad99c(0x27a),'fixed':!![]},{'frequency':0x4e20,'gain':0x0,'q':0x1,'type':_0x3ad99c(0xd2),'fixed':!![]}],'volume':0x64,'speed':0x1,'individualTempo':0x1,'lfo':{'target':'pitch','waveform':_0x3ad99c(0x261),'rate':0x1,'depth':0x0},'pianoRoll':{'notes':[],'soundSource':'piano','gridWidth':_0x2088e1>0x3c?0x20:0x10,'gridHeight':0x54,'scrollX':0x0,'scrollY':0x0,'sampleRange':{'start':0x0,'end':0x64},'filters':{'lowShelf':0x0,'highShelf':0x0,'lowMid':0x0,'mid':0x0,'highMid':0x0,'delay':{'time':0x0,'feedback':0x0}},'isEnabled':![]}};_0x3abae0=JSON[_0x3ad99c(0x1c0)](JSON['stringify'](_0x4f196d)),_0x15a9da=JSON['parse'](JSON[_0x3ad99c(0x27d)](_0x4f196d));if(_0x4f196d['pianoRoll'])_0x33e0cd[_0x2088e1]=JSON[_0x3ad99c(0x1c0)](JSON['stringify'](_0x4f196d[_0x3ad99c(0x1d5)])),_0x33e0cd[_0x2088e1][_0x3ad99c(0x2a1)]===undefined&&(_0x33e0cd[_0x2088e1][_0x3ad99c(0x2a1)]=![]);else!_0x33e0cd[_0x2088e1]&&(_0x33e0cd[_0x2088e1]={'notes':[],'soundSource':'piano','gridWidth':_0x2088e1>0x3c?0x20:0x10,'gridHeight':0x54,'scrollX':0x0,'scrollY':0x0,'sampleRange':{'start':0x0,'end':0x64},'filters':{'lowShelf':0x0,'highShelf':0x0,'lowMid':0x0,'mid':0x0,'highMid':0x0,'delay':{'time':0x0,'feedback':0x0}},'isEnabled':![]});document[_0x3ad99c(0x156)]('sample-volume')['value']=_0x15a9da[_0x3ad99c(0x269)]||0x64,document[_0x3ad99c(0x156)](_0x3ad99c(0x280))['textContent']=(_0x15a9da[_0x3ad99c(0x269)]||0x64)+'%',document[_0x3ad99c(0x156)](_0x3ad99c(0x226))[_0x3ad99c(0x143)]=_0x15a9da[_0x3ad99c(0x265)][_0x3ad99c(0x114)],document[_0x3ad99c(0x156)](_0x3ad99c(0x128))['textContent']=_0x15a9da[_0x3ad99c(0x265)][_0x3ad99c(0x114)],document[_0x3ad99c(0x156)](_0x3ad99c(0xe0))[_0x3ad99c(0x143)]=_0x15a9da[_0x3ad99c(0x265)][_0x3ad99c(0x26c)],document[_0x3ad99c(0x156)]('delay-feedback-value')[_0x3ad99c(0xec)]=_0x15a9da['delay'][_0x3ad99c(0x26c)],document[_0x3ad99c(0x156)](_0x3ad99c(0x284))['value']=_0x15a9da[_0x3ad99c(0x222)][_0x3ad99c(0x13d)],document['getElementById']('reverb-decay-value')[_0x3ad99c(0xec)]=_0x15a9da['reverb'][_0x3ad99c(0x13d)],document[_0x3ad99c(0x156)](_0x3ad99c(0x1b4))[_0x3ad99c(0x143)]=_0x15a9da['reverb'][_0x3ad99c(0xb9)],document[_0x3ad99c(0x156)](_0x3ad99c(0x149))[_0x3ad99c(0xec)]=_0x15a9da[_0x3ad99c(0x222)][_0x3ad99c(0xb9)],document[_0x3ad99c(0x156)](_0x3ad99c(0x121))[_0x3ad99c(0x143)]=_0x15a9da['reverb'][_0x3ad99c(0x1ed)],document[_0x3ad99c(0x156)](_0x3ad99c(0x19f))['textContent']=_0x15a9da[_0x3ad99c(0x222)][_0x3ad99c(0x1ed)],document[_0x3ad99c(0x156)](_0x3ad99c(0x182))[_0x3ad99c(0x143)]=_0x15a9da[_0x3ad99c(0x222)][_0x3ad99c(0x194)],document[_0x3ad99c(0x156)](_0x3ad99c(0x20b))[_0x3ad99c(0xec)]=_0x15a9da[_0x3ad99c(0x222)][_0x3ad99c(0x194)],document[_0x3ad99c(0x156)](_0x3ad99c(0x1bf))['value']=_0x15a9da[_0x3ad99c(0x222)]['highcut'],document[_0x3ad99c(0x156)](_0x3ad99c(0x13f))[_0x3ad99c(0xec)]=_0x15a9da['reverb'][_0x3ad99c(0x1d3)],document[_0x3ad99c(0x156)](_0x3ad99c(0x20c))[_0x3ad99c(0x143)]=_0x15a9da[_0x3ad99c(0x222)][_0x3ad99c(0x96)],document[_0x3ad99c(0x156)](_0x3ad99c(0x24b))[_0x3ad99c(0xec)]=_0x15a9da[_0x3ad99c(0x222)]['damping'],document[_0x3ad99c(0x156)](_0x3ad99c(0xce))[_0x3ad99c(0x143)]=_0x15a9da[_0x3ad99c(0x222)][_0x3ad99c(0xc7)],document[_0x3ad99c(0x156)](_0x3ad99c(0x213))[_0x3ad99c(0xec)]=_0x15a9da[_0x3ad99c(0x222)][_0x3ad99c(0xc7)],document[_0x3ad99c(0x156)](_0x3ad99c(0x272))[_0x3ad99c(0x143)]=_0x15a9da['speed']||0x1;_0x2088e1>0x3c&&(document[_0x3ad99c(0x156)](_0x3ad99c(0x247))[_0x3ad99c(0x143)]=_0x15a9da[_0x3ad99c(0xe5)]||0x1,document[_0x3ad99c(0x156)](_0x3ad99c(0x177))[_0x3ad99c(0xec)]=_0x15a9da['individualTempo']||0x1);const _0x219533=_0x15a9da[_0x3ad99c(0x1f6)]?_0x15a9da[_0x3ad99c(0x1f6)][_0x3ad99c(0xd4)]:'pitch',_0x5a654d=_0x15a9da[_0x3ad99c(0x1f6)]?_0x15a9da[_0x3ad99c(0x1f6)][_0x3ad99c(0xf5)]:'sine',_0x379552=_0x15a9da['lfo']?_0x15a9da[_0x3ad99c(0x1f6)]['rate']:0x1,_0x38b29a=_0x15a9da['lfo']?_0x15a9da[_0x3ad99c(0x1f6)][_0x3ad99c(0x1f8)]:0x0,_0x54e104={'target':_0x219533,'waveform':_0x5a654d,'rate':_0x379552,'depth':_0x38b29a};_0x15a9da[_0x3ad99c(0x1d5)]&&_0x15a9da[_0x3ad99c(0x1d5)][_0x3ad99c(0xac)]&&(document[_0x3ad99c(0x156)](_0x3ad99c(0x228))[_0x3ad99c(0x143)]=_0x15a9da[_0x3ad99c(0x1d5)][_0x3ad99c(0xac)][_0x3ad99c(0x23e)]||0x0,document[_0x3ad99c(0x156)](_0x3ad99c(0x113))[_0x3ad99c(0xec)]=(_0x15a9da['pianoRoll'][_0x3ad99c(0xac)][_0x3ad99c(0x23e)]||0x0)+'dB',document[_0x3ad99c(0x156)]('piano-roll-lowmid')[_0x3ad99c(0x143)]=_0x15a9da[_0x3ad99c(0x1d5)][_0x3ad99c(0xac)][_0x3ad99c(0x17b)]||0x0,document['getElementById'](_0x3ad99c(0x105))[_0x3ad99c(0xec)]=(_0x15a9da[_0x3ad99c(0x1d5)][_0x3ad99c(0xac)]['lowMid']||0x0)+'dB',document['getElementById'](_0x3ad99c(0x200))['value']=_0x15a9da[_0x3ad99c(0x1d5)]['filters']['mid']||0x0,document[_0x3ad99c(0x156)](_0x3ad99c(0xf6))[_0x3ad99c(0xec)]=(_0x15a9da[_0x3ad99c(0x1d5)]['filters'][_0x3ad99c(0xfb)]||0x0)+'dB',document[_0x3ad99c(0x156)](_0x3ad99c(0xb5))[_0x3ad99c(0x143)]=_0x15a9da['pianoRoll'][_0x3ad99c(0xac)]['highMid']||0x0,document[_0x3ad99c(0x156)](_0x3ad99c(0x155))[_0x3ad99c(0xec)]=(_0x15a9da[_0x3ad99c(0x1d5)][_0x3ad99c(0xac)][_0x3ad99c(0x190)]||0x0)+'dB',document[_0x3ad99c(0x156)](_0x3ad99c(0xe3))[_0x3ad99c(0x143)]=_0x15a9da['pianoRoll']['filters'][_0x3ad99c(0x94)]||0x0,document['getElementById'](_0x3ad99c(0x11e))[_0x3ad99c(0xec)]=(_0x15a9da[_0x3ad99c(0x1d5)]['filters'][_0x3ad99c(0x94)]||0x0)+'dB',document['getElementById'](_0x3ad99c(0x1db))[_0x3ad99c(0x143)]=_0x15a9da['pianoRoll'][_0x3ad99c(0xac)][_0x3ad99c(0x265)][_0x3ad99c(0x114)]||0x0,document[_0x3ad99c(0x156)](_0x3ad99c(0x10a))[_0x3ad99c(0xec)]=(_0x15a9da[_0x3ad99c(0x1d5)][_0x3ad99c(0xac)][_0x3ad99c(0x265)][_0x3ad99c(0x114)]||0x0)+'ms',document[_0x3ad99c(0x156)](_0x3ad99c(0xaa))[_0x3ad99c(0x143)]=_0x15a9da[_0x3ad99c(0x1d5)][_0x3ad99c(0xac)][_0x3ad99c(0x265)][_0x3ad99c(0x26c)]||0x0,document[_0x3ad99c(0x156)]('piano-roll-delay-feedback-value')[_0x3ad99c(0xec)]=(_0x15a9da[_0x3ad99c(0x1d5)][_0x3ad99c(0xac)][_0x3ad99c(0x265)]['feedback']||0x0)+'%');const _0x584cef=_0x5b5225[_0x3ad99c(0x1af)](),_0x233e3d=_0x584cef['width'],_0x5c59e8=_0x584cef[_0x3ad99c(0x115)];_0x3ab069[_0x3ad99c(0xa0)][_0x3ad99c(0x1c8)]=(window[_0x3ad99c(0x15f)]-_0x233e3d)/0x2+'px',_0x3ab069[_0x3ad99c(0xa0)][_0x3ad99c(0xcd)]=(window[_0x3ad99c(0x21d)]-_0x5c59e8)/0x2+'px',_0x3ab069['style'][_0x3ad99c(0x29b)]=_0x233e3d+'px',_0x3ab069[_0x3ad99c(0xa0)][_0x3ad99c(0x115)]=_0x5c59e8+'px',_0x3ab069[_0x3ad99c(0xa0)][_0x3ad99c(0xa7)]=_0x3ad99c(0xdc);const _0x3d0ede=document[_0x3ad99c(0x1cd)](_0x3ad99c(0x206));_0x3d0ede&&(_0x2088e1<=0x3c?_0x3d0ede[_0x3ad99c(0xa0)][_0x3ad99c(0xa7)]=_0x3ad99c(0x21f):_0x3d0ede[_0x3ad99c(0xa0)]['display']=_0x3ad99c(0x216)),setTimeout(()=>{const _0x4b0e87=_0x3ad99c;_0x582c06(),_0x4b1313(),_0xc55826(_0x2088e1),document[_0x4b0e87(0x156)](_0x4b0e87(0x28e))[_0x4b0e87(0x143)]=_0x54e104[_0x4b0e87(0xd4)],document[_0x4b0e87(0x156)](_0x4b0e87(0xa3))[_0x4b0e87(0x143)]=_0x54e104[_0x4b0e87(0xf5)],document[_0x4b0e87(0x156)](_0x4b0e87(0x21c))['value']=_0x54e104[_0x4b0e87(0x178)],document[_0x4b0e87(0x156)]('lfo-rate-value')[_0x4b0e87(0xec)]=_0x54e104[_0x4b0e87(0x178)]['toFixed'](0x1),document[_0x4b0e87(0x156)](_0x4b0e87(0x157))[_0x4b0e87(0x143)]=_0x54e104['depth'],document[_0x4b0e87(0x156)](_0x4b0e87(0x204))[_0x4b0e87(0xec)]=_0x54e104[_0x4b0e87(0x1f8)]+'%',_0x17b38f(),_0x18bbf4(_0x2088e1);const _0x27cded=document[_0x4b0e87(0x156)](_0x4b0e87(0x248)),_0x15a415=document[_0x4b0e87(0x1cd)](_0x4b0e87(0x122));_0x27cded[_0x4b0e87(0x197)](_0x27cded['cloneNode'](!![]));const _0xb99ce8=document[_0x4b0e87(0x156)](_0x4b0e87(0x248));_0xb99ce8[_0x4b0e87(0x13c)]=_0x33e0cd[_0x2088e1][_0x4b0e87(0x2a1)];_0x33e0cd[_0x2088e1]['isEnabled']?_0x15a415[_0x4b0e87(0xa6)][_0x4b0e87(0xb3)](_0x4b0e87(0x112)):_0x15a415[_0x4b0e87(0xa6)][_0x4b0e87(0x1ab)](_0x4b0e87(0x112));_0xb99ce8[_0x4b0e87(0x215)](_0x4b0e87(0x1e0),function(){const _0xf14fc0=_0x4b0e87;this['checked']?(_0x15a415[_0xf14fc0(0xa6)][_0xf14fc0(0xb3)]('visible'),_0x33e0cd[_0x2088e1]['isEnabled']=!![],_0xb611ee(),_0x1675f4()):(_0x15a415[_0xf14fc0(0xa6)][_0xf14fc0(0x1ab)](_0xf14fc0(0x112)),_0x33e0cd[_0x2088e1][_0xf14fc0(0x2a1)]=![],_0x264a48&&_0x46527c());});const _0x5517be=document['getElementById'](_0x4b0e87(0x18e)),_0x5f0825=document[_0x4b0e87(0x156)](_0x4b0e87(0x2a3));_0x5517be[_0x4b0e87(0xec)]=_0x5d0f62[_0x2088e1]||'',_0x5f0825[_0x4b0e87(0xec)]=_0x74b5fa[_0x2088e1]||'';const _0x45b013=document[_0x4b0e87(0x156)]('microphone-record-btn');if(_0x45b013){_0x45b013[_0x4b0e87(0x197)](_0x45b013[_0x4b0e87(0x125)](!![]));const _0x25dd34=document[_0x4b0e87(0x156)]('microphone-record-btn');_0x25dd34[_0x4b0e87(0x215)](_0x4b0e87(0x174),function(){_0x3bde0a(_0x2088e1);}),_0x306bfc[_0x2088e1]?_0x25dd34['textContent']=_0x4b0e87(0x23f):_0x25dd34[_0x4b0e87(0xec)]='Start\x20Recording';}const _0x3a1585=document[_0x4b0e87(0x156)](_0x4b0e87(0x184));if(_0x3a1585){_0x3a1585[_0x4b0e87(0x197)](_0x3a1585['cloneNode'](!![]));const _0x5b93b5=document[_0x4b0e87(0x156)](_0x4b0e87(0x184));_0x5b93b5[_0x4b0e87(0x215)](_0x4b0e87(0x174),function(){_0x523c35(_0x2088e1);}),_0x306bfc[_0x2088e1]?_0x5b93b5['style'][_0x4b0e87(0xa7)]=_0x4b0e87(0x225):_0x5b93b5[_0x4b0e87(0xa0)][_0x4b0e87(0xa7)]=_0x4b0e87(0x21f);}const _0x44420f=document['getElementById'](_0x4b0e87(0x1f1));if(_0x44420f){_0x44420f['replaceWith'](_0x44420f[_0x4b0e87(0x125)](!![]));const _0x1b22cf=document['getElementById'](_0x4b0e87(0x1f1));_0x1b22cf[_0x4b0e87(0x215)](_0x4b0e87(0x174),function(){_0x18825a(_0x2088e1);}),_0x306bfc[_0x2088e1]?_0x1b22cf[_0x4b0e87(0xa0)][_0x4b0e87(0xa7)]=_0x4b0e87(0x225):_0x1b22cf[_0x4b0e87(0xa0)][_0x4b0e87(0xa7)]=_0x4b0e87(0x21f);}const _0x3f2762=document[_0x4b0e87(0x156)](_0x4b0e87(0x109));if(_0x3f2762){_0x3f2762['replaceWith'](_0x3f2762[_0x4b0e87(0x125)](!![]));const _0x9cce98=document['getElementById'](_0x4b0e87(0x109));_0x9cce98[_0x4b0e87(0x215)]('click',function(){_0x54c276(_0x2088e1);}),_0x306bfc[_0x2088e1]?_0x9cce98[_0x4b0e87(0xa0)][_0x4b0e87(0xa7)]=_0x4b0e87(0x225):_0x9cce98[_0x4b0e87(0xa0)][_0x4b0e87(0xa7)]=_0x4b0e87(0x21f);}_0x5c373d[_0x2088e1]&&_0x5c373d[_0x2088e1][_0x4b0e87(0xab)]&&_0x17b24c();},0x64);}function _0xc55826(_0x29dc06){const _0x56d1a4=_0x8683ed,_0x1ff298=document['getElementById'](_0x56d1a4(0x28e)),_0x521151=document[_0x56d1a4(0x156)](_0x56d1a4(0xa3)),_0x5f5b98=document['getElementById'](_0x56d1a4(0x21c)),_0x383c74=document[_0x56d1a4(0x156)]('lfo-depth'),_0x5a66e1=_0x1ff298[_0x56d1a4(0x125)](!![]),_0x4fee02=_0x521151['cloneNode'](!![]),_0x3124c5=_0x5f5b98[_0x56d1a4(0x125)](!![]),_0x307164=_0x383c74[_0x56d1a4(0x125)](!![]);_0x1ff298[_0x56d1a4(0x104)][_0x56d1a4(0xe1)](_0x5a66e1,_0x1ff298),_0x521151[_0x56d1a4(0x104)][_0x56d1a4(0xe1)](_0x4fee02,_0x521151),_0x5f5b98[_0x56d1a4(0x104)]['replaceChild'](_0x3124c5,_0x5f5b98),_0x383c74[_0x56d1a4(0x104)]['replaceChild'](_0x307164,_0x383c74),_0x5a66e1[_0x56d1a4(0x215)](_0x56d1a4(0x1e0),function(){_0x462540(_0x29dc06);}),_0x4fee02[_0x56d1a4(0x215)](_0x56d1a4(0x1e0),function(){_0x462540(_0x29dc06);}),_0x3124c5['addEventListener'](_0x56d1a4(0x19d),function(){_0x462540(_0x29dc06);}),_0x307164[_0x56d1a4(0x215)](_0x56d1a4(0x19d),function(){_0x462540(_0x29dc06);});}function _0x18bbf4(_0x56da83){const _0x18af54=_0x8683ed;if(!_0x5c373d[_0x56da83]||!_0x5c373d[_0x56da83][_0x18af54(0x277)])return;const _0x54c72c=_0x5c373d[_0x56da83],_0x2ce7c7=_0x54c72c[_0x18af54(0x256)]&&_0x54c72c['effects'][_0x18af54(0x1f6)]?_0x54c72c[_0x18af54(0x256)][_0x18af54(0x1f6)][_0x18af54(0xd4)]:_0x18af54(0x242);try{_0x54c72c[_0x18af54(0x1b0)][_0x18af54(0x203)]();}catch(_0x2e4c7e){}if(_0x54c72c['lfoFilterOffsetNode'])try{_0x54c72c[_0x18af54(0x101)][_0x18af54(0x203)](),_0x54c72c[_0x18af54(0x101)][_0x18af54(0x270)](),_0x54c72c[_0x18af54(0x101)]=null;}catch(_0x4befdc){}_0x54c72c[_0x18af54(0x176)]&&(clearTimeout(_0x54c72c[_0x18af54(0x176)]),_0x54c72c['lfoUpdateTimeout']=null);if(_0x54c72c[_0x18af54(0x11a)]&&_0x54c72c[_0x18af54(0x1a9)]){if(_0x2ce7c7===_0x18af54(0x224))_0x54c72c[_0x18af54(0x11a)][_0x18af54(0x95)][_0x18af54(0x143)]=0x0,_0x54c72c[_0x18af54(0x1a9)][_0x18af54(0xc1)](_0x54c72c[_0x18af54(0x1a3)]);else{_0x54c72c['lfoFilterBypass']['gain'][_0x18af54(0x143)]=0x1;try{_0x54c72c[_0x18af54(0x1a9)][_0x18af54(0x203)]();}catch(_0x2c8359){}}}if(_0x2ce7c7===_0x18af54(0x242)){const _0x4f5ac9=typeof _0x54c72c[_0x18af54(0x172)][_0x18af54(0x188)]!==_0x18af54(0x198);if(_0x4f5ac9){_0x54c72c[_0x18af54(0x160)]=_0x18af54(0x242);const _0xf1aee8=()=>{const _0xd44a68=_0x18af54;if(!_0x54c72c[_0xd44a68(0x172)]||_0x54c72c[_0xd44a68(0x160)]!==_0xd44a68(0x242))return;const _0x51caf2=_0x74a956['currentTime'],_0x391433=_0x54c72c[_0xd44a68(0x256)]&&_0x54c72c[_0xd44a68(0x256)][_0xd44a68(0x1f6)]?_0x54c72c[_0xd44a68(0x256)][_0xd44a68(0x1f6)][_0xd44a68(0x178)]:0x1,_0xad7700=_0x54c72c[_0xd44a68(0x256)]&&_0x54c72c['effects'][_0xd44a68(0x1f6)]?_0x54c72c['effects']['lfo'][_0xd44a68(0x1f8)]/0x64:0x0,_0x504970=_0x54c72c[_0xd44a68(0x256)]&&_0x54c72c[_0xd44a68(0x256)][_0xd44a68(0x1f6)]?_0x54c72c['effects'][_0xd44a68(0x1f6)]['waveform']:_0xd44a68(0x261),_0x4ca385=0x1/_0x391433,_0x5e1680=_0x51caf2%_0x4ca385/_0x4ca385*Math['PI']*0x2;let _0x386285=0x0;switch(_0x504970){case _0xd44a68(0x261):_0x386285=Math[_0xd44a68(0x162)](_0x5e1680);break;case'square':_0x386285=Math[_0xd44a68(0x162)](_0x5e1680)>0x0?0x1:-0x1;break;case _0xd44a68(0x292):const _0x35c5e0=_0x5e1680/Math['PI']%0x2;_0x386285=_0x35c5e0<0x1?0x2*_0x35c5e0-0x1:0x3-0x2*_0x35c5e0;break;case _0xd44a68(0x279):_0x386285=0x2*(_0x5e1680/Math['PI']%0x1)-0x1;break;}const _0x52a9e3=0x4b0,_0x5ebb9d=_0x52a9e3*_0xad7700*_0x386285;_0x54c72c[_0xd44a68(0x172)][_0xd44a68(0x188)][_0xd44a68(0x26f)](_0x5ebb9d,_0x51caf2),_0x54c72c[_0xd44a68(0x176)]=setTimeout(_0xf1aee8,0x32);};_0xf1aee8();}else{_0x54c72c[_0x18af54(0x160)]='pitch';_0x54c72c['source']&&(_0x54c72c['lfoBaseRate']=_0x54c72c['source'][_0x18af54(0x139)]['value']);const _0x108afd=()=>{const _0xe977b5=_0x18af54;if(!_0x54c72c[_0xe977b5(0x172)]||_0x54c72c[_0xe977b5(0x160)]!==_0xe977b5(0x242))return;const _0x2dee6a=_0x74a956[_0xe977b5(0x246)],_0x4c0d3a=_0x54c72c['effects']&&_0x54c72c[_0xe977b5(0x256)][_0xe977b5(0x1f6)]?_0x54c72c[_0xe977b5(0x256)][_0xe977b5(0x1f6)]['rate']:0x1,_0x111aef=_0x54c72c[_0xe977b5(0x256)]&&_0x54c72c['effects']['lfo']?_0x54c72c['effects']['lfo'][_0xe977b5(0x1f8)]/0x64:0x0,_0x44680a=_0x54c72c[_0xe977b5(0x256)]&&_0x54c72c['effects'][_0xe977b5(0x1f6)]?_0x54c72c['effects'][_0xe977b5(0x1f6)][_0xe977b5(0xf5)]:_0xe977b5(0x261),_0x1adc44=0x1/_0x4c0d3a,_0x5c25e8=_0x2dee6a%_0x1adc44/_0x1adc44*Math['PI']*0x2;let _0x1131ed=0x0;switch(_0x44680a){case _0xe977b5(0x261):_0x1131ed=Math[_0xe977b5(0x162)](_0x5c25e8);break;case'square':_0x1131ed=Math[_0xe977b5(0x162)](_0x5c25e8)>0x0?0x1:-0x1;break;case _0xe977b5(0x292):const _0x307272=_0x5c25e8/Math['PI']%0x2;_0x1131ed=_0x307272<0x1?0x2*_0x307272-0x1:0x3-0x2*_0x307272;break;case _0xe977b5(0x279):_0x1131ed=0x2*(_0x5c25e8/Math['PI']%0x1)-0x1;break;}const _0x2d9143=_0x54c72c['lfoBaseRate']||0x1,_0x509c11=_0x2d9143*0.5,_0x3fe3c1=_0x509c11*_0x111aef*_0x1131ed,_0x3d88ea=Math[_0xe977b5(0x169)](0.1,_0x2d9143+_0x3fe3c1);_0x54c72c['source']['playbackRate'][_0xe977b5(0x26f)](_0x3d88ea,_0x2dee6a),_0x54c72c[_0xe977b5(0x176)]=setTimeout(_0x108afd,0x32);};_0x108afd();}}else{if(_0x2ce7c7===_0x18af54(0x224)){const _0x4670b0=_0x54c72c['lfoFilter']?_0x54c72c['lfoFilter'][_0x18af54(0x181)][_0x18af54(0x143)]:0x7d0,_0x21e696=_0x54c72c[_0x18af54(0x256)]&&_0x54c72c['effects'][_0x18af54(0x1f6)]?_0x54c72c[_0x18af54(0x256)][_0x18af54(0x1f6)]['depth']/0x64:0x0,_0x122b37=0x2,_0x8eeec1=_0x122b37*_0x21e696,_0x48fcbf=_0x4670b0/Math[_0x18af54(0x254)](0x2,_0x8eeec1),_0x51fade=_0x4670b0*Math[_0x18af54(0x254)](0x2,_0x8eeec1),_0x32c57d=(_0x51fade-_0x48fcbf)/0x2,_0x40c609=(_0x51fade+_0x48fcbf)/0x2;_0x54c72c[_0x18af54(0x1b0)][_0x18af54(0x95)][_0x18af54(0x143)]=_0x32c57d,_0x54c72c[_0x18af54(0x1b0)]['connect'](_0x54c72c[_0x18af54(0x1a9)]['frequency']),_0x54c72c[_0x18af54(0x1a9)]['frequency'][_0x18af54(0x143)]=_0x4670b0;const _0x75349a=_0x74a956[_0x18af54(0x1c5)]();_0x75349a[_0x18af54(0x1a2)][_0x18af54(0x143)]=_0x40c609,_0x75349a[_0x18af54(0xc1)](_0x54c72c['lfoFilter'][_0x18af54(0x181)]),_0x75349a['start'](),_0x54c72c[_0x18af54(0x101)]=_0x75349a,_0x54c72c[_0x18af54(0x160)]=_0x18af54(0x224);}else{if(_0x2ce7c7==='volume'){if(_0x54c72c[_0x18af54(0xcb)]){const _0xbeb231=_0x54c72c[_0x18af54(0xcb)][_0x18af54(0x95)][_0x18af54(0x143)],_0x41a027=_0x54c72c[_0x18af54(0x256)]&&_0x54c72c[_0x18af54(0x256)]['lfo']?_0x54c72c['effects'][_0x18af54(0x1f6)]['depth']/0x64:0x0,_0x1d7be9=_0xbeb231*0.5,_0x15d55d=_0x1d7be9*_0x41a027;_0x54c72c[_0x18af54(0x1b0)][_0x18af54(0x95)][_0x18af54(0x143)]=_0x15d55d,_0x54c72c['lfoGainNode'][_0x18af54(0xc1)](_0x54c72c[_0x18af54(0xcb)][_0x18af54(0x95)]),_0x54c72c[_0x18af54(0x160)]='volume';}}}}}function _0xf27d97(_0x47773b){const _0xb56368=_0x8683ed;if(_0x47773b>=0x3e8)return(_0x47773b/0x3e8)['toFixed'](0x1)+_0xb56368(0xf2);return _0x47773b+'Hz';}function _0x1675f4(){const _0x2b96bd=_0x8683ed;if(!_0x502895)return;const _0x5796f6=document[_0x2b96bd(0x156)](_0x2b96bd(0x228)),_0x4eefd9=document['getElementById']('piano-roll-lowmid'),_0x323402=document[_0x2b96bd(0x156)]('piano-roll-mid'),_0x4dc796=document[_0x2b96bd(0x156)](_0x2b96bd(0xb5)),_0x7d079a=document['getElementById'](_0x2b96bd(0xe3)),_0x550b6f=document[_0x2b96bd(0x156)](_0x2b96bd(0x1db)),_0x6bd51c=document[_0x2b96bd(0x156)]('piano-roll-delay-feedback'),_0x176d93=document[_0x2b96bd(0x156)]('piano-roll-lowshelf-value'),_0xdf9170=document[_0x2b96bd(0x156)](_0x2b96bd(0x105)),_0x17e2dc=document['getElementById']('piano-roll-mid-value'),_0x220a08=document[_0x2b96bd(0x156)](_0x2b96bd(0x155)),_0x167e56=document['getElementById'](_0x2b96bd(0x11e)),_0x4ed100=document[_0x2b96bd(0x156)]('piano-roll-delay-time-value'),_0x1ead57=document[_0x2b96bd(0x156)](_0x2b96bd(0x1b3));_0x5796f6[_0x2b96bd(0x215)](_0x2b96bd(0x19d),function(){const _0x39bd66=_0x2b96bd;_0x176d93[_0x39bd66(0xec)]=this[_0x39bd66(0x143)]+'dB',_0x21cd85();}),_0x4eefd9[_0x2b96bd(0x215)]('input',function(){const _0xa4dbcd=_0x2b96bd;_0xdf9170[_0xa4dbcd(0xec)]=this[_0xa4dbcd(0x143)]+'dB',_0x21cd85();}),_0x323402[_0x2b96bd(0x215)](_0x2b96bd(0x19d),function(){const _0x43c239=_0x2b96bd;_0x17e2dc[_0x43c239(0xec)]=this[_0x43c239(0x143)]+'dB',_0x21cd85();}),_0x4dc796['addEventListener'](_0x2b96bd(0x19d),function(){const _0x591734=_0x2b96bd;_0x220a08[_0x591734(0xec)]=this[_0x591734(0x143)]+'dB',_0x21cd85();}),_0x7d079a[_0x2b96bd(0x215)](_0x2b96bd(0x19d),function(){const _0x4d72a5=_0x2b96bd;_0x167e56[_0x4d72a5(0xec)]=this[_0x4d72a5(0x143)]+'dB',_0x21cd85();}),_0x550b6f[_0x2b96bd(0x215)](_0x2b96bd(0x19d),function(){const _0x2186bb=_0x2b96bd;_0x4ed100[_0x2186bb(0xec)]=this[_0x2186bb(0x143)]+'ms',_0x21cd85();}),_0x6bd51c[_0x2b96bd(0x215)](_0x2b96bd(0x19d),function(){const _0x370969=_0x2b96bd;_0x1ead57[_0x370969(0xec)]=this[_0x370969(0x143)]+'%',_0x21cd85();});}function _0x21cd85(){const _0x582b74=_0x8683ed;if(!_0x502895||!_0x20c192[_0x582b74(0x23e)])return;const _0x3cafe1=parseFloat(document[_0x582b74(0x156)](_0x582b74(0x228))[_0x582b74(0x143)]),_0x24f0e8=parseFloat(document['getElementById'](_0x582b74(0x23c))[_0x582b74(0x143)]),_0x25935a=parseFloat(document[_0x582b74(0x156)](_0x582b74(0x200))[_0x582b74(0x143)]),_0x325639=parseFloat(document[_0x582b74(0x156)](_0x582b74(0xb5))[_0x582b74(0x143)]),_0x121cc2=parseFloat(document[_0x582b74(0x156)](_0x582b74(0xe3))[_0x582b74(0x143)]),_0x36fc9e=parseInt(document[_0x582b74(0x156)](_0x582b74(0x1db))['value']),_0x54a41e=parseInt(document[_0x582b74(0x156)](_0x582b74(0xaa))['value']);_0x20c192[_0x582b74(0x23e)]&&(_0x20c192['lowShelf'][_0x582b74(0x95)][_0x582b74(0x143)]=_0x3cafe1),_0x20c192[_0x582b74(0x17b)]&&(_0x20c192[_0x582b74(0x17b)][_0x582b74(0x95)]['value']=_0x24f0e8),_0x20c192[_0x582b74(0xfb)]&&(_0x20c192[_0x582b74(0xfb)][_0x582b74(0x95)][_0x582b74(0x143)]=_0x25935a),_0x20c192[_0x582b74(0x190)]&&(_0x20c192[_0x582b74(0x190)]['gain'][_0x582b74(0x143)]=_0x325639),_0x20c192['highShelf']&&(_0x20c192['highShelf']['gain'][_0x582b74(0x143)]=_0x121cc2),_0x20c192['delay']&&(_0x20c192[_0x582b74(0x265)]['delayTime']['value']=_0x36fc9e/0x3e8),_0x20c192[_0x582b74(0x229)]&&(_0x20c192[_0x582b74(0x229)][_0x582b74(0x95)][_0x582b74(0x143)]=_0x54a41e/0x64),_0x33e0cd[_0x502895]&&(!_0x33e0cd[_0x502895][_0x582b74(0xac)]&&(_0x33e0cd[_0x502895][_0x582b74(0xac)]={}),_0x33e0cd[_0x502895][_0x582b74(0xac)][_0x582b74(0x23e)]=_0x3cafe1,_0x33e0cd[_0x502895][_0x582b74(0xac)][_0x582b74(0x17b)]=_0x24f0e8,_0x33e0cd[_0x502895][_0x582b74(0xac)][_0x582b74(0xfb)]=_0x25935a,_0x33e0cd[_0x502895][_0x582b74(0xac)]['highMid']=_0x325639,_0x33e0cd[_0x502895]['filters'][_0x582b74(0x94)]=_0x121cc2,_0x33e0cd[_0x502895][_0x582b74(0xac)][_0x582b74(0x265)]={'time':_0x36fc9e,'feedback':_0x54a41e});}function _0x462540(_0x17f752){const _0x1447fc=_0x8683ed;if(!_0x17f752)_0x17f752=_0x502895;if(!_0x17f752||!_0x5c373d[_0x17f752])return;const _0x1d0b69=_0x5c373d[_0x17f752],_0x459034=document[_0x1447fc(0x156)]('lfo-target')[_0x1447fc(0x143)],_0x375177=document[_0x1447fc(0x156)](_0x1447fc(0xa3))['value'],_0x296dc9=parseFloat(document[_0x1447fc(0x156)](_0x1447fc(0x21c))[_0x1447fc(0x143)]),_0x506e23=parseInt(document[_0x1447fc(0x156)](_0x1447fc(0x157))[_0x1447fc(0x143)]);document[_0x1447fc(0x156)](_0x1447fc(0x97))['textContent']=_0x296dc9['toFixed'](0x1),document['getElementById'](_0x1447fc(0x204))[_0x1447fc(0xec)]=_0x506e23+'%';if(_0x15a9da&&_0x17f752===_0x502895){if(!_0x15a9da[_0x1447fc(0x1f6)])_0x15a9da[_0x1447fc(0x1f6)]={};_0x15a9da[_0x1447fc(0x1f6)]['target']=_0x459034,_0x15a9da[_0x1447fc(0x1f6)][_0x1447fc(0xf5)]=_0x375177,_0x15a9da[_0x1447fc(0x1f6)]['rate']=_0x296dc9,_0x15a9da[_0x1447fc(0x1f6)][_0x1447fc(0x1f8)]=_0x506e23;}if(!_0x1d0b69['effects'])_0x1d0b69[_0x1447fc(0x256)]={};if(!_0x1d0b69['effects'][_0x1447fc(0x1f6)])_0x1d0b69[_0x1447fc(0x256)][_0x1447fc(0x1f6)]={};_0x1d0b69[_0x1447fc(0x256)][_0x1447fc(0x1f6)]['target']=_0x459034,_0x1d0b69[_0x1447fc(0x256)][_0x1447fc(0x1f6)][_0x1447fc(0xf5)]=_0x375177,_0x1d0b69[_0x1447fc(0x256)][_0x1447fc(0x1f6)][_0x1447fc(0x178)]=_0x296dc9,_0x1d0b69[_0x1447fc(0x256)][_0x1447fc(0x1f6)][_0x1447fc(0x1f8)]=_0x506e23;if(_0x1d0b69[_0x1447fc(0x277)]){_0x1d0b69['lfoNode'][_0x1447fc(0x209)]=_0x375177,_0x1d0b69[_0x1447fc(0x277)][_0x1447fc(0x181)][_0x1447fc(0x26f)](_0x296dc9,_0x74a956['currentTime']),_0x1d0b69['lfoGainNode'][_0x1447fc(0x95)][_0x1447fc(0x26f)](_0x506e23/0x64,_0x74a956['currentTime']);_0x1d0b69[_0x1447fc(0x176)]&&(clearTimeout(_0x1d0b69[_0x1447fc(0x176)]),_0x1d0b69[_0x1447fc(0x176)]=null);try{_0x1d0b69[_0x1447fc(0x1b0)][_0x1447fc(0x203)]();}catch(_0x3dda0c){}if(_0x1d0b69[_0x1447fc(0x101)])try{_0x1d0b69[_0x1447fc(0x101)]['disconnect'](),_0x1d0b69['lfoFilterOffsetNode']['stop'](),_0x1d0b69[_0x1447fc(0x101)]=null;}catch(_0x596541){}if(_0x1d0b69[_0x1447fc(0x11a)]&&_0x1d0b69[_0x1447fc(0x1a9)]){if(_0x459034==='filter')_0x1d0b69[_0x1447fc(0x11a)][_0x1447fc(0x95)][_0x1447fc(0x143)]=0x0,_0x1d0b69['lfoFilter'][_0x1447fc(0xc1)](_0x1d0b69[_0x1447fc(0x1a3)]);else{_0x1d0b69['lfoFilterBypass']['gain'][_0x1447fc(0x143)]=0x1;try{_0x1d0b69[_0x1447fc(0x1a9)]['disconnect']();}catch(_0x1e22c1){}}}_0x18bbf4(_0x17f752);}_0x47ffbd();}function _0x17b38f(){const _0x3d9b5d=_0x8683ed,_0xaf9880=document[_0x3d9b5d(0x156)](_0x3d9b5d(0x2a6));if(!_0xaf9880)return;const _0x4f75f9=_0xaf9880[_0x3d9b5d(0x12e)]('2d'),_0x437ccf=_0xaf9880[_0x3d9b5d(0x28d)];_0xaf9880[_0x3d9b5d(0x29b)]=_0x437ccf['clientWidth'],_0xaf9880[_0x3d9b5d(0x115)]=_0x437ccf['clientHeight'],_0x47ffbd();}function _0x47ffbd(){const _0x406127=_0x8683ed,_0x160f25=document['getElementById'](_0x406127(0x2a6));if(!_0x160f25)return;const _0x130d38=_0x160f25[_0x406127(0x12e)]('2d'),_0x1dd180=_0x160f25[_0x406127(0x29b)],_0x4dd415=_0x160f25[_0x406127(0x115)];_0x130d38[_0x406127(0x274)]='#111',_0x130d38[_0x406127(0x232)](0x0,0x0,_0x1dd180,_0x4dd415);const _0xac7fd8=document['getElementById'](_0x406127(0xa3))['value'],_0x14c46e=parseFloat(document['getElementById'](_0x406127(0x21c))[_0x406127(0x143)]),_0x451988=parseInt(document['getElementById']('lfo-depth')[_0x406127(0x143)]);_0x130d38[_0x406127(0x16c)]=_0x406127(0x218),_0x130d38['lineWidth']=0x1,_0x130d38['beginPath'](),_0x130d38['moveTo'](0x0,_0x4dd415/0x2),_0x130d38['lineTo'](_0x1dd180,_0x4dd415/0x2),_0x130d38[_0x406127(0x27e)](),_0x130d38[_0x406127(0x16c)]=_0x406127(0x2a2),_0x130d38['lineWidth']=0x2,_0x130d38[_0x406127(0x17f)]();const _0x3c8c18=_0x1dd180,_0x3d0a59=_0x3c8c18/(_0x14c46e*0xa),_0x1bb39c=_0x4dd415/0x2*(_0x451988/0x64);for(let _0x20ec35=0x0;_0x20ec35<_0x3c8c18;_0x20ec35++){let _0x2e4df9;const _0x37c8c2=_0x20ec35%_0x3d0a59/_0x3d0a59*Math['PI']*0x2;switch(_0xac7fd8){case'sine':_0x2e4df9=_0x4dd415/0x2-Math[_0x406127(0x162)](_0x37c8c2)*_0x1bb39c;break;case _0x406127(0x230):_0x2e4df9=_0x4dd415/0x2-(Math[_0x406127(0x162)](_0x37c8c2)>0x0?0x1:-0x1)*_0x1bb39c;break;case _0x406127(0x292):const _0x41c6d7=_0x37c8c2/Math['PI']%0x2;_0x2e4df9=_0x4dd415/0x2-(_0x41c6d7<0x1?0x2*_0x41c6d7-0x1:0x3-0x2*_0x41c6d7)*_0x1bb39c;break;case _0x406127(0x279):_0x2e4df9=_0x4dd415/0x2-(0x2*(_0x37c8c2/Math['PI']%0x1)-0x1)*_0x1bb39c;break;default:_0x2e4df9=_0x4dd415/0x2;}_0x20ec35===0x0?_0x130d38[_0x406127(0x285)](_0x20ec35,_0x2e4df9):_0x130d38['lineTo'](_0x20ec35,_0x2e4df9);}_0x130d38[_0x406127(0x27e)]();}function _0x3bde0a(_0x59f68c){const _0x21e5c7=_0x8683ed,_0x46063e=document['getElementById']('microphone-record-btn'),_0x398a87=document[_0x21e5c7(0x156)](_0x21e5c7(0x184)),_0x558a1c=document[_0x21e5c7(0x156)](_0x21e5c7(0x1f1)),_0xf25a98=document['getElementById'](_0x21e5c7(0x109)),_0x2cd7c4=document['getElementById'](_0x21e5c7(0x2a3));!_0x34ca63?navigator[_0x21e5c7(0x201)][_0x21e5c7(0x1c6)]({'audio':!![]})[_0x21e5c7(0x1ef)](_0x52ffbf=>{const _0x3234bc=_0x21e5c7;_0x1103eb=_0x52ffbf,_0xa662eb=new MediaRecorder(_0x52ffbf),_0x33b072=[],_0xa662eb[_0x3234bc(0xd5)]=function(_0x37aa21){const _0x4d38a4=_0x3234bc;_0x37aa21['data'][_0x4d38a4(0x1c4)]>0x0&&_0x33b072[_0x4d38a4(0x240)](_0x37aa21['data']);},_0xa662eb[_0x3234bc(0x28f)]=function(){const _0x4ba2e1=_0x3234bc,_0x11cb52=new Blob(_0x33b072,{'type':_0x4ba2e1(0x15b)});_0x306bfc[_0x59f68c]=_0x11cb52,_0x398a87[_0x4ba2e1(0xa0)][_0x4ba2e1(0xa7)]=_0x4ba2e1(0x225),_0x558a1c[_0x4ba2e1(0xa0)][_0x4ba2e1(0xa7)]=_0x4ba2e1(0x225),_0xf25a98[_0x4ba2e1(0xa0)][_0x4ba2e1(0xa7)]='inline-block',_0x74b5fa[_0x59f68c]='Recording\x20complete!',_0x2cd7c4[_0x4ba2e1(0xec)]=_0x74b5fa[_0x59f68c],_0x2cd7c4[_0x4ba2e1(0xa0)][_0x4ba2e1(0x1c2)]=_0x4ba2e1(0x1a7);},_0xa662eb['start'](),_0x34ca63=!![],_0x46063e[_0x3234bc(0xec)]=_0x3234bc(0xd1),_0x46063e[_0x3234bc(0xa6)][_0x3234bc(0xb3)](_0x3234bc(0x1fe)),_0x74b5fa[_0x59f68c]='Recording...',_0x2cd7c4[_0x3234bc(0xec)]=_0x74b5fa[_0x59f68c],_0x2cd7c4['style'][_0x3234bc(0x1c2)]=_0x3234bc(0x1d1);})[_0x21e5c7(0xaf)](_0x438d86=>{const _0x528e4c=_0x21e5c7;console[_0x528e4c(0xe9)](_0x528e4c(0x234),_0x438d86),_0x74b5fa[_0x59f68c]=_0x528e4c(0xda),_0x2cd7c4['textContent']=_0x74b5fa[_0x59f68c],_0x2cd7c4[_0x528e4c(0xa0)]['color']=_0x528e4c(0x25a);}):(_0xa662eb&&_0xa662eb[_0x21e5c7(0xe6)]!==_0x21e5c7(0xc8)&&_0xa662eb[_0x21e5c7(0x270)](),_0x1103eb&&(_0x1103eb[_0x21e5c7(0xd8)]()[_0x21e5c7(0x278)](_0x4f009c=>_0x4f009c[_0x21e5c7(0x270)]()),_0x1103eb=null),_0x34ca63=![],_0x46063e['textContent']=_0x21e5c7(0x23f),_0x46063e[_0x21e5c7(0xa6)][_0x21e5c7(0x1ab)]('recording'));}function _0x523c35(_0xa22c84){const _0x170633=_0x8683ed,_0xebcc8a=_0x306bfc[_0xa22c84];if(!_0xebcc8a)return;const _0x4fbbe2=document['getElementById'](_0x170633(0x2a3)),_0x240717=document[_0x170633(0x156)](_0x170633(0x184)),_0x43ca01=new FileReader();_0x43ca01['onload']=function(){const _0x45b08b=_0x170633;_0x74a956[_0x45b08b(0x163)](_0x43ca01[_0x45b08b(0xde)])['then'](_0x111f9f=>{const _0x340549=_0x45b08b;_0x5c373d[_0xa22c84]['buffer']=_0x111f9f,_0x5c373d[_0xa22c84][_0x340549(0x20f)]=_0x111f9f[_0x340549(0x263)],_0x5c373d[_0xa22c84][_0x340549(0x170)]=_0xa22c84,_0x5c373d[_0xa22c84][_0x340549(0x167)]=!![];const _0x2e0939=_0x5c373d[_0xa22c84][_0x340549(0x15d)];_0x2e0939&&(_0x1fd264(_0x2e0939),_0x2e0939['classList'][_0x340549(0x1ab)]('no-sample')),_0x5c373d[_0xa22c84]['isScheduled']&&_0x5c373d[_0xa22c84][_0x340549(0x11f)]&&(_0x20ca83(_0xa22c84),_0x5c373d[_0xa22c84][_0x340549(0xbd)]=!![],_0x2cf7dd(_0xa22c84)),_0x74b5fa[_0xa22c84]='Recording\x20saved\x20successfully!',_0x4fbbe2[_0x340549(0xec)]=_0x74b5fa[_0xa22c84],_0x4fbbe2['style'][_0x340549(0x1c2)]=_0x340549(0x2a2);})['catch'](_0x10f5a2=>{const _0x9008c9=_0x45b08b;console['error'](_0x9008c9(0x147),_0x10f5a2),_0x74b5fa[_0xa22c84]='Error:\x20Invalid\x20audio\x20data',_0x4fbbe2['textContent']=_0x74b5fa[_0xa22c84],_0x4fbbe2[_0x9008c9(0xa0)][_0x9008c9(0x1c2)]=_0x9008c9(0x25a);});},_0x43ca01[_0x170633(0x1ea)](_0xebcc8a);}function _0x1fd264(_0x5db107){const _0x51a016=_0x8683ed;let _0x30ce67=_0x5db107[_0x51a016(0x1cd)](_0x51a016(0x1d9));!_0x30ce67&&(_0x30ce67=document[_0x51a016(0xf4)](_0x51a016(0x12f)),_0x30ce67[_0x51a016(0xc5)]=_0x51a016(0x288),_0x5db107['appendChild'](_0x30ce67)),_0x30ce67[_0x51a016(0xa0)][_0x51a016(0xa7)]=_0x51a016(0x216);}function _0x18825a(_0x562acc){const _0x4bef30=_0x8683ed,_0x21c0dd=_0x306bfc[_0x562acc];if(!_0x21c0dd)return;const _0x314670=URL[_0x4bef30(0x291)](_0x21c0dd),_0x509bf5=document[_0x4bef30(0xf4)]('a');_0x509bf5['href']=_0x314670,_0x509bf5[_0x4bef30(0x251)]=_0x4bef30(0x1ac)+_0x562acc+'-'+new Date()['toISOString']()[_0x4bef30(0xfc)](0x0,0x13)[_0x4bef30(0xc6)](/:/g,'-')+_0x4bef30(0x1e7),_0x509bf5[_0x4bef30(0x174)](),URL[_0x4bef30(0x187)](_0x314670);}function _0x54c276(_0x35f6d5){const _0x2c40b1=_0x8683ed;delete _0x306bfc[_0x35f6d5];if(_0x5c373d[_0x35f6d5]&&_0x5c373d[_0x35f6d5]['isCustomSample']){_0x5c373d[_0x35f6d5][_0x2c40b1(0x167)]=![],_0x5c373d[_0x35f6d5][_0x2c40b1(0x20e)]=null,_0x5c373d[_0x35f6d5][_0x2c40b1(0x170)]=null;const _0x1c4a9c=_0x5c373d[_0x35f6d5][_0x2c40b1(0x15d)];if(_0x1c4a9c){const _0x234b2f=_0x1c4a9c[_0x2c40b1(0x1cd)](_0x2c40b1(0x1d9));_0x234b2f&&(_0x234b2f[_0x2c40b1(0xa0)][_0x2c40b1(0xa7)]=_0x2c40b1(0x21f)),_0x1c4a9c['classList'][_0x2c40b1(0x146)](_0x2c40b1(0x25d))&&_0x1c4a9c[_0x2c40b1(0xa6)][_0x2c40b1(0xb3)]('no-sample');}_0x5c373d[_0x35f6d5][_0x2c40b1(0xab)]&&_0x20ca83(_0x35f6d5);}const _0x4f931a=document[_0x2c40b1(0x156)]('microphone-record-btn'),_0x4620ce=document[_0x2c40b1(0x156)](_0x2c40b1(0x184)),_0x20ee8a=document[_0x2c40b1(0x156)](_0x2c40b1(0x1f1)),_0x152ac0=document[_0x2c40b1(0x156)](_0x2c40b1(0x109)),_0x1cc708=document[_0x2c40b1(0x156)]('record-status');_0x4620ce[_0x2c40b1(0xa0)][_0x2c40b1(0xa7)]=_0x2c40b1(0x21f),_0x20ee8a['style'][_0x2c40b1(0xa7)]=_0x2c40b1(0x21f),_0x152ac0[_0x2c40b1(0xa0)][_0x2c40b1(0xa7)]='none',_0x4f931a['textContent']=_0x2c40b1(0x1b2),_0x74b5fa[_0x35f6d5]='',_0x1cc708[_0x2c40b1(0xec)]='';}function _0x125349(){const _0x513ed4=_0x8683ed;_0x264a48&&_0x46527c();_0x4136fd();if(_0x187b27&&_0x502895){const _0x3e490b=_0x5c373d[_0x502895];if(_0x3e490b[_0x513ed4(0x1a3)])_0x3e490b[_0x513ed4(0x1a3)]['disconnect'](),_0x3e490b['eqVeryHighNode']['connect'](_0x199e77);else{if(_0x3e490b[_0x513ed4(0x164)])_0x3e490b['outputNode'][_0x513ed4(0x203)](),_0x3e490b[_0x513ed4(0x164)][_0x513ed4(0xc1)](_0x199e77);else _0x3e490b[_0x513ed4(0x22c)]&&(_0x3e490b[_0x513ed4(0x22c)]['disconnect'](),_0x3e490b[_0x513ed4(0x22c)]['connect'](_0x199e77));}_0x187b27=null;}_0x34ca63&&(_0xa662eb&&_0xa662eb[_0x513ed4(0xe6)]!==_0x513ed4(0xc8)&&_0xa662eb['stop'](),_0x1103eb&&(_0x1103eb['getTracks']()[_0x513ed4(0x278)](_0x5df58d=>_0x5df58d[_0x513ed4(0x270)]()),_0x1103eb=null),_0x34ca63=![]),_0x3ab069[_0x513ed4(0xa0)][_0x513ed4(0xa7)]=_0x513ed4(0x21f),_0x502895=null,_0x3abae0=null,_0x15a9da=null;}function _0x48d325(){const _0x161c6c=_0x8683ed;if(!_0x502895)return;_0x15a9da={'delay':{'time':0x0,'feedback':0x0},'reverb':{'decay':0x0,'mix':0x0,'predelay':0x0,'diffusion':0x32,'lowcut':0x14,'highcut':0x4e20,'damping':0x32},'eq':[{'frequency':0x14,'gain':0x0,'q':0x1,'type':'lowshelf','fixed':!![]},{'frequency':0x4e20,'gain':0x0,'q':0x1,'type':'highshelf','fixed':!![]}],'volume':0x64,'speed':0x1,'individualTempo':0x1,'lfo':{'target':_0x161c6c(0x242),'waveform':_0x161c6c(0x261),'rate':0x1,'depth':0x0},'pianoRoll':{'notes':[],'soundSource':_0x161c6c(0xbf),'gridWidth':_0x502895>0x3c?0x20:0x10,'gridHeight':0x54,'scrollX':0x0,'scrollY':0x0,'sampleRange':{'start':0x0,'end':0x64},'filters':{'lowShelf':0x0,'highShelf':0x0,'lowMid':0x0,'mid':0x0,'highMid':0x0,'delay':{'time':0x0,'feedback':0x0}},'isEnabled':![]}},document[_0x161c6c(0x156)]('sample-volume')[_0x161c6c(0x143)]=_0x15a9da[_0x161c6c(0x269)],document['getElementById'](_0x161c6c(0x280))[_0x161c6c(0xec)]=_0x15a9da[_0x161c6c(0x269)]+'%',document[_0x161c6c(0x156)](_0x161c6c(0x226))[_0x161c6c(0x143)]=_0x15a9da[_0x161c6c(0x265)][_0x161c6c(0x114)],document[_0x161c6c(0x156)](_0x161c6c(0x128))[_0x161c6c(0xec)]=_0x15a9da[_0x161c6c(0x265)][_0x161c6c(0x114)],document[_0x161c6c(0x156)]('delay-feedback')[_0x161c6c(0x143)]=_0x15a9da[_0x161c6c(0x265)][_0x161c6c(0x26c)],document[_0x161c6c(0x156)](_0x161c6c(0xbe))['textContent']=_0x15a9da[_0x161c6c(0x265)][_0x161c6c(0x26c)],document[_0x161c6c(0x156)](_0x161c6c(0x284))['value']=_0x15a9da[_0x161c6c(0x222)]['decay'],document[_0x161c6c(0x156)](_0x161c6c(0x136))['textContent']=_0x15a9da[_0x161c6c(0x222)][_0x161c6c(0x13d)],document[_0x161c6c(0x156)](_0x161c6c(0x1b4))[_0x161c6c(0x143)]=_0x15a9da[_0x161c6c(0x222)]['predelay'],document['getElementById'](_0x161c6c(0x149))[_0x161c6c(0xec)]=_0x15a9da[_0x161c6c(0x222)]['predelay'],document[_0x161c6c(0x156)]('reverb-diffusion')[_0x161c6c(0x143)]=_0x15a9da[_0x161c6c(0x222)][_0x161c6c(0x1ed)],document[_0x161c6c(0x156)](_0x161c6c(0x19f))[_0x161c6c(0xec)]=_0x15a9da[_0x161c6c(0x222)][_0x161c6c(0x1ed)],document['getElementById'](_0x161c6c(0x182))['value']=_0x15a9da[_0x161c6c(0x222)]['lowcut'],document[_0x161c6c(0x156)]('reverb-lowcut-value')[_0x161c6c(0xec)]=_0x15a9da[_0x161c6c(0x222)]['lowcut'],document[_0x161c6c(0x156)](_0x161c6c(0x1bf))[_0x161c6c(0x143)]=_0x15a9da[_0x161c6c(0x222)][_0x161c6c(0x1d3)],document[_0x161c6c(0x156)](_0x161c6c(0x13f))[_0x161c6c(0xec)]=_0x15a9da['reverb'][_0x161c6c(0x1d3)],document[_0x161c6c(0x156)](_0x161c6c(0x20c))[_0x161c6c(0x143)]=_0x15a9da['reverb'][_0x161c6c(0x96)],document[_0x161c6c(0x156)](_0x161c6c(0x24b))[_0x161c6c(0xec)]=_0x15a9da['reverb']['damping'],document[_0x161c6c(0x156)]('reverb-mix')['value']=_0x15a9da[_0x161c6c(0x222)]['mix'],document['getElementById'](_0x161c6c(0x213))[_0x161c6c(0xec)]=_0x15a9da[_0x161c6c(0x222)]['mix'],document[_0x161c6c(0x156)](_0x161c6c(0x272))['value']=_0x15a9da[_0x161c6c(0x2a4)];const _0x3401a0=document[_0x161c6c(0x1cd)]('.individual-tempo-section');_0x3401a0&&_0x3401a0[_0x161c6c(0xa0)][_0x161c6c(0xa7)]!==_0x161c6c(0x21f)&&(document[_0x161c6c(0x156)](_0x161c6c(0x247))['value']=_0x15a9da[_0x161c6c(0xe5)],document[_0x161c6c(0x156)](_0x161c6c(0x177))[_0x161c6c(0xec)]=_0x15a9da[_0x161c6c(0xe5)]);document[_0x161c6c(0x156)](_0x161c6c(0x28e))['value']=_0x15a9da[_0x161c6c(0x1f6)]['target'],document[_0x161c6c(0x156)](_0x161c6c(0xa3))[_0x161c6c(0x143)]=_0x15a9da[_0x161c6c(0x1f6)][_0x161c6c(0xf5)],document[_0x161c6c(0x156)](_0x161c6c(0x21c))[_0x161c6c(0x143)]=_0x15a9da[_0x161c6c(0x1f6)][_0x161c6c(0x178)],document[_0x161c6c(0x156)]('lfo-rate-value')['textContent']=_0x15a9da[_0x161c6c(0x1f6)]['rate'][_0x161c6c(0x2ad)](0x1),document[_0x161c6c(0x156)]('lfo-depth')[_0x161c6c(0x143)]=_0x15a9da[_0x161c6c(0x1f6)]['depth'],document[_0x161c6c(0x156)](_0x161c6c(0x204))['textContent']=_0x15a9da[_0x161c6c(0x1f6)][_0x161c6c(0x1f8)]+'%';const _0x544708=document[_0x161c6c(0x156)](_0x161c6c(0x248)),_0x3c53c4=document['querySelector'](_0x161c6c(0x122));_0x544708&&(_0x544708['checked']=![]);_0x3c53c4&&_0x3c53c4['classList']['remove']('visible');document['getElementById'](_0x161c6c(0x228))[_0x161c6c(0x143)]=_0x15a9da[_0x161c6c(0x1d5)]['filters'][_0x161c6c(0x23e)],document[_0x161c6c(0x156)](_0x161c6c(0x113))[_0x161c6c(0xec)]=_0x15a9da[_0x161c6c(0x1d5)][_0x161c6c(0xac)][_0x161c6c(0x23e)]+'dB',document[_0x161c6c(0x156)]('piano-roll-lowmid')[_0x161c6c(0x143)]=_0x15a9da[_0x161c6c(0x1d5)][_0x161c6c(0xac)][_0x161c6c(0x17b)],document[_0x161c6c(0x156)]('piano-roll-lowmid-value')[_0x161c6c(0xec)]=_0x15a9da[_0x161c6c(0x1d5)][_0x161c6c(0xac)][_0x161c6c(0x17b)]+'dB',document[_0x161c6c(0x156)](_0x161c6c(0x200))['value']=_0x15a9da['pianoRoll'][_0x161c6c(0xac)][_0x161c6c(0xfb)],document['getElementById'](_0x161c6c(0xf6))['textContent']=_0x15a9da[_0x161c6c(0x1d5)][_0x161c6c(0xac)][_0x161c6c(0xfb)]+'dB',document[_0x161c6c(0x156)](_0x161c6c(0xb5))[_0x161c6c(0x143)]=_0x15a9da[_0x161c6c(0x1d5)][_0x161c6c(0xac)][_0x161c6c(0x190)],document[_0x161c6c(0x156)](_0x161c6c(0x155))[_0x161c6c(0xec)]=_0x15a9da[_0x161c6c(0x1d5)][_0x161c6c(0xac)]['highMid']+'dB',document[_0x161c6c(0x156)](_0x161c6c(0xe3))[_0x161c6c(0x143)]=_0x15a9da[_0x161c6c(0x1d5)]['filters'][_0x161c6c(0x94)],document[_0x161c6c(0x156)](_0x161c6c(0x11e))[_0x161c6c(0xec)]=_0x15a9da[_0x161c6c(0x1d5)]['filters']['highShelf']+'dB',document[_0x161c6c(0x156)](_0x161c6c(0x1db))[_0x161c6c(0x143)]=_0x15a9da[_0x161c6c(0x1d5)][_0x161c6c(0xac)][_0x161c6c(0x265)][_0x161c6c(0x114)],document['getElementById'](_0x161c6c(0x10a))[_0x161c6c(0xec)]=_0x15a9da[_0x161c6c(0x1d5)][_0x161c6c(0xac)][_0x161c6c(0x265)][_0x161c6c(0x114)]+'ms',document[_0x161c6c(0x156)](_0x161c6c(0xaa))[_0x161c6c(0x143)]=_0x15a9da['pianoRoll']['filters']['delay']['feedback'],document[_0x161c6c(0x156)](_0x161c6c(0x1b3))['textContent']=_0x15a9da[_0x161c6c(0x1d5)][_0x161c6c(0xac)][_0x161c6c(0x265)][_0x161c6c(0x26c)]+'%';if(_0x502895){const _0x3f5328=_0x5c373d[_0x502895];if(_0x3f5328['eqLowNode'])_0x3f5328[_0x161c6c(0x1dc)][_0x161c6c(0x95)]['value']=0x0;if(_0x3f5328[_0x161c6c(0x1a5)])_0x3f5328['eqLowMidNode'][_0x161c6c(0x95)][_0x161c6c(0x143)]=0x0;if(_0x3f5328['eqMidNode'])_0x3f5328['eqMidNode']['gain']['value']=0x0;if(_0x3f5328[_0x161c6c(0x1f0)])_0x3f5328[_0x161c6c(0x1f0)]['gain'][_0x161c6c(0x143)]=0x0;if(_0x3f5328[_0x161c6c(0x21b)])_0x3f5328['eqHighMid2Node'][_0x161c6c(0x95)][_0x161c6c(0x143)]=0x0;if(_0x3f5328[_0x161c6c(0x9b)])_0x3f5328[_0x161c6c(0x9b)]['gain'][_0x161c6c(0x143)]=0x0;if(_0x3f5328[_0x161c6c(0x1a3)])_0x3f5328[_0x161c6c(0x1a3)][_0x161c6c(0x95)][_0x161c6c(0x143)]=0x0;}_0x11fde8(),_0xc0e183(),_0x12c658(),_0x456f16(),_0xb860c8(),_0x462540(_0x502895),_0x1e3a5c(),_0xb611ee();}async function _0x38cff7(){const _0x4dc187=_0x8683ed;if(!_0x502895)return;const _0x118fd2=document[_0x4dc187(0x156)]('piano-roll-loading');_0x118fd2&&(_0x118fd2['style'][_0x4dc187(0xa7)]=_0x4dc187(0x216));const _0x3f2879=document[_0x4dc187(0x156)](_0x4dc187(0x131));_0x3f2879&&(_0x5c373d[_0x502895][_0x4dc187(0x1c3)]=_0x3f2879[_0x4dc187(0x13c)]);try{_0x3cb914(),_0x33e0cd[_0x502895]&&_0x33e0cd[_0x502895]['notes']&&_0x33e0cd[_0x502895][_0x4dc187(0x1d8)]['length']>0x0&&await _0x57ea19(),_0x5c373d[_0x502895][_0x4dc187(0x256)]=JSON[_0x4dc187(0x1c0)](JSON[_0x4dc187(0x27d)](_0x15a9da)),_0x125349();}catch(_0x3cd8ac){console[_0x4dc187(0xe9)](_0x4dc187(0x106),_0x3cd8ac);_0x118fd2&&(_0x118fd2[_0x4dc187(0xa0)][_0x4dc187(0xa7)]='none');const _0x498a9e=document[_0x4dc187(0x156)]('upload-status');_0x498a9e&&(_0x498a9e[_0x4dc187(0xec)]=_0x4dc187(0x14c),_0x498a9e[_0x4dc187(0xa0)][_0x4dc187(0x1c2)]=_0x4dc187(0x25a));}}function _0x563c6d(_0x4cadeb){const _0x23937b=_0x8683ed;if(!_0x502895)return;const _0xb8ffe2=_0x4cadeb[_0x23937b(0xd4)][_0x23937b(0x144)][0x0];if(!_0xb8ffe2)return;if(!_0xb8ffe2[_0x23937b(0x209)]['startsWith'](_0x23937b(0x1f3))){_0x5d0f62[_0x502895]='Error:\x20Please\x20select\x20an\x20audio\x20file';const _0x38f2fe=document['getElementById'](_0x23937b(0x18e));_0x38f2fe[_0x23937b(0xec)]=_0x5d0f62[_0x502895],_0x38f2fe[_0x23937b(0xa0)]['color']=_0x23937b(0x25a);return;}const _0x18a191=document[_0x23937b(0x156)](_0x23937b(0x18e));_0x5d0f62[_0x502895]='Uploading...',_0x18a191[_0x23937b(0xec)]=_0x5d0f62[_0x502895],_0x18a191[_0x23937b(0xa0)][_0x23937b(0x1c2)]='';const _0x17afb9=new FileReader();_0x17afb9[_0x23937b(0x16a)]=function(_0x428d97){const _0x10194b=_0x23937b;_0x74a956[_0x10194b(0x163)](_0x428d97[_0x10194b(0xd4)][_0x10194b(0xde)])[_0x10194b(0x1ef)](_0x5eece3=>{const _0x588e67=_0x10194b;_0x5c373d[_0x502895]['buffer']=_0x5eece3,_0x5c373d[_0x502895][_0x588e67(0x20f)]=_0x5eece3['duration'],_0x5c373d[_0x502895]['bufferSampleNumber']=_0x502895,_0x5c373d[_0x502895]['isCustomSample']=!![],_0x5cecbf[_0x502895]=_0xb8ffe2[_0x588e67(0x20a)];const _0x2de4a2=_0x5c373d[_0x502895][_0x588e67(0x15d)];_0x2de4a2&&(_0x1fd264(_0x2de4a2),_0x2de4a2[_0x588e67(0xa6)]['remove'](_0x588e67(0xa9))),_0x5c373d[_0x502895][_0x588e67(0xab)]&&_0x5c373d[_0x502895]['isActive']&&(_0x20ca83(_0x502895),_0x5c373d[_0x502895][_0x588e67(0xbd)]=!![],_0x2cf7dd(_0x502895)),_0x5d0f62[_0x502895]='Upload\x20successful:\x20'+_0xb8ffe2[_0x588e67(0x20a)],_0x18a191[_0x588e67(0xec)]=_0x5d0f62[_0x502895],_0x18a191['style'][_0x588e67(0x1c2)]=_0x588e67(0x2a2);})[_0x10194b(0xaf)](_0x2895f6=>{const _0x3443e0=_0x10194b;console['error'](_0x3443e0(0x147),_0x2895f6),_0x5d0f62[_0x502895]='Error:\x20Invalid\x20audio\x20file',_0x18a191[_0x3443e0(0xec)]=_0x5d0f62[_0x502895],_0x18a191['style'][_0x3443e0(0x1c2)]=_0x3443e0(0x25a);});},_0x17afb9[_0x23937b(0x1e5)]=function(){const _0x1d6b60=_0x23937b;_0x5d0f62[_0x502895]=_0x1d6b60(0xd6),_0x18a191[_0x1d6b60(0xec)]=_0x5d0f62[_0x502895],_0x18a191[_0x1d6b60(0xa0)][_0x1d6b60(0x1c2)]=_0x1d6b60(0x25a);},_0x17afb9[_0x23937b(0x1ea)](_0xb8ffe2);}function _0x3078e4(_0xfb6a6c){const _0x17b3aa=_0x8683ed;if(!_0x5c373d[_0xfb6a6c]['isScheduled']||!_0x5c373d[_0xfb6a6c]['source'])return;const _0xc6466a=_0x5c373d[_0xfb6a6c][_0x17b3aa(0x256)],_0x2b8ccf=_0x5c373d[_0xfb6a6c];if(!_0x2b8ccf['outputNode']){_0x3d5db8(_0xfb6a6c);return;}if(_0x2b8ccf['gainNode']&&_0xc6466a[_0x17b3aa(0x269)]!==undefined){const _0x235b33=_0xc6466a[_0x17b3aa(0x269)]/0x64;_0x2b8ccf[_0x17b3aa(0x16e)]=_0x235b33,_0x1bbfdb(_0xfb6a6c);}_0x2b8ccf['delayNode']&&(_0x2b8ccf['delayNode'][_0x17b3aa(0xcf)][_0x17b3aa(0x143)]=_0xc6466a[_0x17b3aa(0x265)][_0x17b3aa(0x114)]/0x3e8,_0x2b8ccf['delayFeedbackNode']&&(_0x2b8ccf[_0x17b3aa(0x171)][_0x17b3aa(0x95)][_0x17b3aa(0x143)]=_0xc6466a['delay'][_0x17b3aa(0x26c)]/0x64));_0x2b8ccf[_0x17b3aa(0x21a)]&&(_0x2b8ccf['reverbMixNode'][_0x17b3aa(0x95)][_0x17b3aa(0x143)]=_0xc6466a[_0x17b3aa(0x222)]['mix']/0x64);if(_0xc6466a[_0x17b3aa(0x222)][_0x17b3aa(0x13d)]>0x0){const _0x2c4fc0=_0x74a956[_0x17b3aa(0xc4)](),_0x2047d7=_0x74a956['sampleRate']*_0xc6466a[_0x17b3aa(0x222)][_0x17b3aa(0x13d)],_0x1102ca=_0x74a956[_0x17b3aa(0x262)](0x2,_0x2047d7,_0x74a956[_0x17b3aa(0x118)]),_0x1290d5=_0x74a956[_0x17b3aa(0x118)]*(_0xc6466a['reverb'][_0x17b3aa(0xb9)]/0x3e8);for(let _0x223649=0x0;_0x223649<0x2;_0x223649++){const _0x335049=_0x1102ca[_0x17b3aa(0x17d)](_0x223649);for(let _0x319fea=0x0;_0x319fea<_0x2047d7;_0x319fea++){if(_0x319fea<_0x1290d5)_0x335049[_0x319fea]=0x0;else{const _0x282bdf=Math['pow'](0x1-(_0x319fea-_0x1290d5)/(_0x2047d7-_0x1290d5),0x2),_0x333eaa=_0xc6466a[_0x17b3aa(0x222)][_0x17b3aa(0x1ed)]/0x64;_0x335049[_0x319fea]=(Math[_0x17b3aa(0x138)]()*0x2-0x1)*_0x282bdf*_0x333eaa;const _0x4537ff=0x1-_0xc6466a['reverb'][_0x17b3aa(0x96)]/0x64*(_0x319fea/_0x2047d7);_0x335049[_0x319fea]*=_0x4537ff;}}}_0x2c4fc0[_0x17b3aa(0x20e)]=_0x1102ca,_0x2b8ccf['reverbNode']&&_0x2b8ccf[_0x17b3aa(0xad)][_0x17b3aa(0x203)](),_0x2b8ccf[_0x17b3aa(0xad)]=_0x2c4fc0,_0x2b8ccf[_0x17b3aa(0x287)]&&_0x2b8ccf['reverbMixNode']&&(_0x2b8ccf['wetPathNode'][_0x17b3aa(0xc1)](_0x2c4fc0),_0x2c4fc0[_0x17b3aa(0xc1)](_0x2b8ccf[_0x17b3aa(0x21a)]),_0x2b8ccf[_0x17b3aa(0x21a)][_0x17b3aa(0xc1)](_0x2b8ccf[_0x17b3aa(0x164)]));}else _0x2b8ccf[_0x17b3aa(0xad)]&&(_0x2b8ccf[_0x17b3aa(0xad)][_0x17b3aa(0x203)](),_0x2b8ccf[_0x17b3aa(0xad)]=null);if(_0x2b8ccf[_0x17b3aa(0x1dc)]){_0x2b8ccf[_0x17b3aa(0x1dc)][_0x17b3aa(0x95)][_0x17b3aa(0x143)]=0x0,_0x2b8ccf[_0x17b3aa(0x1a5)][_0x17b3aa(0x95)][_0x17b3aa(0x143)]=0x0,_0x2b8ccf['eqMidNode'][_0x17b3aa(0x95)][_0x17b3aa(0x143)]=0x0,_0x2b8ccf[_0x17b3aa(0x1f0)][_0x17b3aa(0x95)][_0x17b3aa(0x143)]=0x0,_0x2b8ccf[_0x17b3aa(0x21b)][_0x17b3aa(0x95)][_0x17b3aa(0x143)]=0x0,_0x2b8ccf[_0x17b3aa(0x9b)][_0x17b3aa(0x95)][_0x17b3aa(0x143)]=0x0,_0x2b8ccf[_0x17b3aa(0x1a3)]['gain'][_0x17b3aa(0x143)]=0x0;if(_0xc6466a['eq']&&_0xc6466a['eq'][_0x17b3aa(0xee)]>0x0){const _0x4feb8c=[..._0xc6466a['eq']][_0x17b3aa(0x25e)]((_0x7e96dc,_0x219829)=>_0x7e96dc[_0x17b3aa(0x181)]-_0x219829['frequency']);_0x4feb8c[0x0]&&_0x4feb8c[0x0]['type']==='lowshelf'&&(_0x2b8ccf[_0x17b3aa(0x1dc)][_0x17b3aa(0x181)][_0x17b3aa(0x143)]=_0x4feb8c[0x0][_0x17b3aa(0x181)],_0x2b8ccf['eqLowNode'][_0x17b3aa(0x95)][_0x17b3aa(0x143)]=_0x4feb8c[0x0][_0x17b3aa(0x95)]);_0x4feb8c[_0x4feb8c[_0x17b3aa(0xee)]-0x1]&&_0x4feb8c[_0x4feb8c['length']-0x1][_0x17b3aa(0x209)]===_0x17b3aa(0xd2)&&(_0x2b8ccf[_0x17b3aa(0x9b)][_0x17b3aa(0x181)]['value']=_0x4feb8c[_0x4feb8c['length']-0x1][_0x17b3aa(0x181)],_0x2b8ccf[_0x17b3aa(0x9b)][_0x17b3aa(0x95)][_0x17b3aa(0x143)]=_0x4feb8c[_0x4feb8c[_0x17b3aa(0xee)]-0x1][_0x17b3aa(0x95)]);let _0x48ea7c=0x0;for(let _0x2d7370=0x0;_0x2d7370<_0x4feb8c[_0x17b3aa(0xee)];_0x2d7370++){if(_0x4feb8c[_0x2d7370][_0x17b3aa(0x209)]==='peaking'){let _0x372d79;switch(_0x48ea7c){case 0x0:_0x372d79=_0x2b8ccf[_0x17b3aa(0x1a5)];break;case 0x1:_0x372d79=_0x2b8ccf[_0x17b3aa(0x1b1)];break;case 0x2:_0x372d79=_0x2b8ccf[_0x17b3aa(0x1f0)];break;case 0x3:_0x372d79=_0x2b8ccf[_0x17b3aa(0x21b)];break;default:break;}_0x372d79&&(_0x372d79[_0x17b3aa(0x181)][_0x17b3aa(0x143)]=_0x4feb8c[_0x2d7370][_0x17b3aa(0x181)],_0x372d79[_0x17b3aa(0x95)][_0x17b3aa(0x143)]=_0x4feb8c[_0x2d7370][_0x17b3aa(0x95)],_0x372d79['Q'][_0x17b3aa(0x143)]=_0x4feb8c[_0x2d7370]['q']||0x1,_0x48ea7c++);}}}}let _0x499fd1=0x0;_0xc6466a['delay'][_0x17b3aa(0x114)]>0x0&&(_0x499fd1+=0.5);_0xc6466a[_0x17b3aa(0x222)]['mix']>0x0&&(_0x499fd1+=_0xc6466a[_0x17b3aa(0x222)]['mix']/0x64);_0x499fd1=Math[_0x17b3aa(0x11c)](_0x499fd1,0.8);_0x2b8ccf[_0x17b3aa(0x287)]&&(_0x2b8ccf['wetPathNode'][_0x17b3aa(0x95)][_0x17b3aa(0x143)]=_0x499fd1);_0x2b8ccf['dryPathNode']&&(_0x2b8ccf[_0x17b3aa(0x1cf)][_0x17b3aa(0x95)]['value']=0x1-_0x499fd1);if(_0x2b8ccf[_0x17b3aa(0x172)]&&_0xc6466a[_0x17b3aa(0x2a4)]){let _0x258fb7;if(_0x2b8ccf[_0x17b3aa(0xcc)]){const _0x413eb0=0x3c/_0x5a68ac,_0x4cec9c=_0x413eb0*0x4,_0x422123=_0x4cec9c*_0x36b54c;_0x258fb7=_0x2b8ccf[_0x17b3aa(0x20f)]/_0x422123;}else{const _0x29119c=_0x36c9bc+_0x296ff3,_0x110a43=0x3c/_0x29119c,_0x50e763=_0x110a43*0x4,_0x466d35=_0x50e763*_0x2f2b7f;_0x258fb7=_0x2b8ccf[_0x17b3aa(0x20f)]/_0x466d35;}let _0x2efe59=0x1;_0x2b8ccf[_0x17b3aa(0xcc)]&&_0xc6466a[_0x17b3aa(0xe5)]&&(_0x2efe59=_0xc6466a[_0x17b3aa(0xe5)]);const _0x34bb54=_0x258fb7*_0x2efe59*_0xc6466a['speed'],_0x341aa9=_0x2b8ccf[_0x17b3aa(0x172)][_0x17b3aa(0x139)]['value'],_0x1f802d=_0x74a956[_0x17b3aa(0x246)],_0x139cda=_0x1f802d-_0x2b8ccf[_0x17b3aa(0x233)],_0x235390=_0x139cda*_0x341aa9%_0x2b8ccf[_0x17b3aa(0x20f)];_0x2b8ccf[_0x17b3aa(0x172)][_0x17b3aa(0x139)][_0x17b3aa(0x143)]=_0x34bb54,_0x2b8ccf[_0x17b3aa(0x233)]=_0x1f802d-_0x235390/_0x34bb54,_0x2b8ccf[_0x17b3aa(0x160)]==='pitch'&&(_0x2b8ccf[_0x17b3aa(0x19e)]=_0x34bb54);}if(_0xc6466a[_0x17b3aa(0x1f6)]&&_0xc6466a[_0x17b3aa(0x1f6)][_0x17b3aa(0x1f8)]>0x0){_0x2b8ccf[_0x17b3aa(0x277)][_0x17b3aa(0x209)]=_0xc6466a['lfo'][_0x17b3aa(0xf5)],_0x2b8ccf[_0x17b3aa(0x277)][_0x17b3aa(0x181)][_0x17b3aa(0x143)]=_0xc6466a['lfo'][_0x17b3aa(0x178)],_0x2b8ccf[_0x17b3aa(0x1b0)][_0x17b3aa(0x95)][_0x17b3aa(0x143)]=_0xc6466a[_0x17b3aa(0x1f6)][_0x17b3aa(0x1f8)]/0x64;_0x2b8ccf[_0x17b3aa(0x176)]&&(clearTimeout(_0x2b8ccf['lfoUpdateTimeout']),_0x2b8ccf[_0x17b3aa(0x176)]=null);if(_0x2b8ccf[_0x17b3aa(0x1b0)])try{_0x2b8ccf[_0x17b3aa(0x1b0)][_0x17b3aa(0x203)]();}catch(_0x15a233){}if(_0x2b8ccf['lfoFilterOffsetNode'])try{_0x2b8ccf[_0x17b3aa(0x101)][_0x17b3aa(0x203)](),_0x2b8ccf['lfoFilterOffsetNode'][_0x17b3aa(0x270)](),_0x2b8ccf[_0x17b3aa(0x101)]=null;}catch(_0x17df6d){}if(_0x2b8ccf['lfoFilterBypass']&&_0x2b8ccf[_0x17b3aa(0x1a9)]){if(_0xc6466a[_0x17b3aa(0x1f6)][_0x17b3aa(0xd4)]==='filter')_0x2b8ccf[_0x17b3aa(0x11a)][_0x17b3aa(0x95)][_0x17b3aa(0x143)]=0x0,_0x2b8ccf[_0x17b3aa(0x1a9)][_0x17b3aa(0xc1)](_0x2b8ccf[_0x17b3aa(0x1a3)]);else{_0x2b8ccf[_0x17b3aa(0x11a)][_0x17b3aa(0x95)]['value']=0x1;try{_0x2b8ccf[_0x17b3aa(0x1a9)][_0x17b3aa(0x203)]();}catch(_0xa3a2fc){}}}const _0x50295d=_0xc6466a['lfo'][_0x17b3aa(0xd4)];if(_0x50295d===_0x17b3aa(0x242)){const _0x515191=typeof _0x2b8ccf['source'][_0x17b3aa(0x188)]!=='undefined';if(_0x515191){_0x2b8ccf['lfoTarget']=_0x17b3aa(0x242);const _0x16680a=()=>{const _0x4c7de0=_0x17b3aa;if(!_0x2b8ccf[_0x4c7de0(0x172)]||_0x2b8ccf[_0x4c7de0(0x160)]!=='pitch')return;const _0x24c5c2=_0x74a956[_0x4c7de0(0x246)],_0x27f514=_0xc6466a['lfo']['rate'],_0x5e5962=_0xc6466a[_0x4c7de0(0x1f6)][_0x4c7de0(0x1f8)]/0x64,_0xedaed5=_0xc6466a[_0x4c7de0(0x1f6)]['waveform'],_0x1ea59c=0x1/_0x27f514,_0x1f8a59=_0x24c5c2%_0x1ea59c/_0x1ea59c*Math['PI']*0x2;let _0x4cb630=0x0;switch(_0xedaed5){case _0x4c7de0(0x261):_0x4cb630=Math[_0x4c7de0(0x162)](_0x1f8a59);break;case _0x4c7de0(0x230):_0x4cb630=Math[_0x4c7de0(0x162)](_0x1f8a59)>0x0?0x1:-0x1;break;case'triangle':const _0x51e187=_0x1f8a59/Math['PI']%0x2;_0x4cb630=_0x51e187<0x1?0x2*_0x51e187-0x1:0x3-0x2*_0x51e187;break;case'sawtooth':_0x4cb630=0x2*(_0x1f8a59/Math['PI']%0x1)-0x1;break;}const _0x329dd4=0x4b0,_0x1e597f=_0x329dd4*_0x5e5962*_0x4cb630;_0x2b8ccf[_0x4c7de0(0x172)][_0x4c7de0(0x188)][_0x4c7de0(0x26f)](_0x1e597f,_0x24c5c2),_0x2b8ccf[_0x4c7de0(0x176)]=setTimeout(_0x16680a,0x32);};_0x16680a();}else{_0x2b8ccf[_0x17b3aa(0x160)]=_0x17b3aa(0x242);_0x2b8ccf['source']&&(_0x2b8ccf['lfoBaseRate']=_0x2b8ccf[_0x17b3aa(0x172)][_0x17b3aa(0x139)][_0x17b3aa(0x143)]);const _0x270d7f=()=>{const _0x4be850=_0x17b3aa;if(!_0x2b8ccf[_0x4be850(0x172)]||_0x2b8ccf['lfoTarget']!==_0x4be850(0x242))return;const _0x387d28=_0x74a956[_0x4be850(0x246)],_0x3ba018=_0xc6466a[_0x4be850(0x1f6)]['rate'],_0x517149=_0xc6466a['lfo']['depth']/0x64,_0x2f6a9a=_0xc6466a[_0x4be850(0x1f6)][_0x4be850(0xf5)],_0x42d234=0x1/_0x3ba018,_0x35806a=_0x387d28%_0x42d234/_0x42d234*Math['PI']*0x2;let _0x213c84=0x0;switch(_0x2f6a9a){case _0x4be850(0x261):_0x213c84=Math[_0x4be850(0x162)](_0x35806a);break;case _0x4be850(0x230):_0x213c84=Math[_0x4be850(0x162)](_0x35806a)>0x0?0x1:-0x1;break;case _0x4be850(0x292):const _0x25314a=_0x35806a/Math['PI']%0x2;_0x213c84=_0x25314a<0x1?0x2*_0x25314a-0x1:0x3-0x2*_0x25314a;break;case _0x4be850(0x279):_0x213c84=0x2*(_0x35806a/Math['PI']%0x1)-0x1;break;}const _0x482447=_0x2b8ccf['lfoBaseRate']||0x1,_0x544a64=_0x482447*0.5,_0x12f54f=_0x544a64*_0x517149*_0x213c84,_0x1c4872=Math[_0x4be850(0x169)](0.1,_0x482447+_0x12f54f);_0x2b8ccf[_0x4be850(0x172)]['playbackRate'][_0x4be850(0x26f)](_0x1c4872,_0x387d28),_0x2b8ccf[_0x4be850(0x176)]=setTimeout(_0x270d7f,0x32);};_0x270d7f();}}else{if(_0x50295d===_0x17b3aa(0x224)){const _0x5d375a=_0x2b8ccf[_0x17b3aa(0x1a9)]?_0x2b8ccf['lfoFilter']['frequency']['value']:0x7d0,_0xe92e9f=_0xc6466a[_0x17b3aa(0x1f6)][_0x17b3aa(0x1f8)]/0x64,_0xaa63b4=0x2,_0x110f04=_0xaa63b4*_0xe92e9f,_0x3e8977=_0x5d375a/Math[_0x17b3aa(0x254)](0x2,_0x110f04),_0x957938=_0x5d375a*Math[_0x17b3aa(0x254)](0x2,_0x110f04),_0x18eb21=(_0x957938-_0x3e8977)/0x2,_0x47335a=(_0x957938+_0x3e8977)/0x2;_0x2b8ccf[_0x17b3aa(0x1b0)][_0x17b3aa(0x95)][_0x17b3aa(0x143)]=_0x18eb21,_0x2b8ccf[_0x17b3aa(0x1b0)][_0x17b3aa(0xc1)](_0x2b8ccf['lfoFilter'][_0x17b3aa(0x181)]),_0x2b8ccf[_0x17b3aa(0x1a9)][_0x17b3aa(0x181)][_0x17b3aa(0x143)]=_0x5d375a;const _0x1e84bc=_0x74a956['createConstantSource']();_0x1e84bc[_0x17b3aa(0x1a2)][_0x17b3aa(0x143)]=_0x47335a,_0x1e84bc[_0x17b3aa(0xc1)](_0x2b8ccf['lfoFilter']['frequency']),_0x1e84bc[_0x17b3aa(0x211)](),_0x2b8ccf[_0x17b3aa(0x101)]=_0x1e84bc,_0x2b8ccf[_0x17b3aa(0x160)]=_0x17b3aa(0x224);}else{if(_0x50295d==='volume'){if(_0x2b8ccf[_0x17b3aa(0xcb)]){const _0x399924=_0x2b8ccf['individualVolumeGain'][_0x17b3aa(0x95)][_0x17b3aa(0x143)],_0x2b19bd=_0xc6466a[_0x17b3aa(0x1f6)][_0x17b3aa(0x1f8)]/0x64,_0x519025=_0x399924*0.5,_0x4ea108=_0x519025*_0x2b19bd;_0x2b8ccf[_0x17b3aa(0x1b0)][_0x17b3aa(0x95)][_0x17b3aa(0x143)]=_0x4ea108,_0x2b8ccf[_0x17b3aa(0x1b0)][_0x17b3aa(0xc1)](_0x2b8ccf[_0x17b3aa(0xcb)][_0x17b3aa(0x95)]),_0x2b8ccf[_0x17b3aa(0x160)]=_0x17b3aa(0x269);}}}}}_0xc6466a['pianoRoll']&&_0xc6466a[_0x17b3aa(0x1d5)]['notes'][_0x17b3aa(0xee)]>0x0&&(_0x33e0cd[_0xfb6a6c]=JSON[_0x17b3aa(0x1c0)](JSON[_0x17b3aa(0x27d)](_0xc6466a[_0x17b3aa(0x1d5)])));if(_0x502895===_0xfb6a6c&&_0x187b27){const _0x5754fc=_0x5c373d[_0xfb6a6c];if(_0x5754fc[_0x17b3aa(0x1a3)])_0x5754fc['eqVeryHighNode'][_0x17b3aa(0x203)](),_0x5754fc[_0x17b3aa(0x1a3)][_0x17b3aa(0xc1)](_0x187b27),_0x187b27[_0x17b3aa(0xc1)](_0x199e77);else{if(_0x5754fc['outputNode'])_0x5754fc[_0x17b3aa(0x164)][_0x17b3aa(0x203)](),_0x5754fc[_0x17b3aa(0x164)]['connect'](_0x187b27),_0x187b27['connect'](_0x199e77);else _0x5754fc['gainNode']&&(_0x5754fc['gainNode'][_0x17b3aa(0x203)](),_0x5754fc[_0x17b3aa(0x22c)]['connect'](_0x187b27),_0x187b27[_0x17b3aa(0xc1)](_0x199e77));}}}function _0x30def4(_0x22b614){const _0x22f679=_0x8683ed,_0x5d4700=_0x22b614[_0x22f679(0x1cd)]('.popup-close-btn'),_0x4b647f=_0x22b614[_0x22f679(0x1cd)](_0x22f679(0x9c)),_0x4c1353=_0x22b614[_0x22f679(0x1cd)](_0x22f679(0xb4));_0x5d4700&&_0x5d4700[_0x22f679(0x215)](_0x22f679(0x174),function(){const _0x42fd9d=_0x22f679;_0x502895&&(_0x5c373d[_0x502895]['effects']=JSON[_0x42fd9d(0x1c0)](JSON['stringify'](_0x3abae0)),_0x5c373d[_0x502895][_0x42fd9d(0xab)]&&_0x5c373d[_0x502895][_0x42fd9d(0x11f)]&&_0x3078e4(_0x502895)),_0x125349();}),_0x4b647f&&_0x4b647f[_0x22f679(0x215)]('click',async function(){await _0x38cff7();}),_0x4c1353&&_0x4c1353[_0x22f679(0x215)](_0x22f679(0x174),_0x48d325);}_0x30def4(_0x3ab069),document[_0x8683ed(0x156)](_0x8683ed(0x137))[_0x8683ed(0x215)]('change',_0x563c6d),document[_0x8683ed(0x156)](_0x8683ed(0x226))[_0x8683ed(0x215)](_0x8683ed(0x19d),function(){const _0x490730=_0x8683ed;document[_0x490730(0x156)](_0x490730(0x128))['textContent']=this[_0x490730(0x143)],_0xc0e183(),_0x15a9da&&(_0x15a9da['delay'][_0x490730(0x114)]=parseInt(this['value']));}),document['getElementById'](_0x8683ed(0xe0))['addEventListener'](_0x8683ed(0x19d),function(){const _0x2c7fbf=_0x8683ed;document[_0x2c7fbf(0x156)](_0x2c7fbf(0xbe))[_0x2c7fbf(0xec)]=this[_0x2c7fbf(0x143)],_0xc0e183(),_0x15a9da&&(_0x15a9da[_0x2c7fbf(0x265)]['feedback']=parseInt(this[_0x2c7fbf(0x143)]));}),document[_0x8683ed(0x156)]('reverb-decay')[_0x8683ed(0x215)](_0x8683ed(0x19d),function(){const _0x2f364d=_0x8683ed;document[_0x2f364d(0x156)](_0x2f364d(0x136))[_0x2f364d(0xec)]=this[_0x2f364d(0x143)],_0x12c658(),_0x15a9da&&(_0x15a9da[_0x2f364d(0x222)][_0x2f364d(0x13d)]=parseFloat(this[_0x2f364d(0x143)]));}),document[_0x8683ed(0x156)]('reverb-predelay')[_0x8683ed(0x215)]('input',function(){const _0x10cd6e=_0x8683ed;document[_0x10cd6e(0x156)](_0x10cd6e(0x149))[_0x10cd6e(0xec)]=this[_0x10cd6e(0x143)],_0x12c658(),_0x15a9da&&(_0x15a9da[_0x10cd6e(0x222)][_0x10cd6e(0xb9)]=parseFloat(this[_0x10cd6e(0x143)]));}),document['getElementById'](_0x8683ed(0x121))[_0x8683ed(0x215)]('input',function(){const _0x4b516f=_0x8683ed;document[_0x4b516f(0x156)]('reverb-diffusion-value')[_0x4b516f(0xec)]=this[_0x4b516f(0x143)],_0x12c658(),_0x15a9da&&(_0x15a9da[_0x4b516f(0x222)][_0x4b516f(0x1ed)]=parseFloat(this[_0x4b516f(0x143)]));}),document[_0x8683ed(0x156)](_0x8683ed(0x182))[_0x8683ed(0x215)](_0x8683ed(0x19d),function(){const _0x9a54ac=_0x8683ed;document[_0x9a54ac(0x156)](_0x9a54ac(0x20b))['textContent']=this[_0x9a54ac(0x143)],_0x12c658(),_0x15a9da&&(_0x15a9da[_0x9a54ac(0x222)]['lowcut']=parseFloat(this[_0x9a54ac(0x143)]));}),document[_0x8683ed(0x156)]('reverb-highcut')[_0x8683ed(0x215)](_0x8683ed(0x19d),function(){const _0x2a0e30=_0x8683ed;document['getElementById']('reverb-highcut-value')[_0x2a0e30(0xec)]=this['value'],_0x12c658(),_0x15a9da&&(_0x15a9da[_0x2a0e30(0x222)]['highcut']=parseFloat(this[_0x2a0e30(0x143)]));}),document[_0x8683ed(0x156)](_0x8683ed(0x20c))[_0x8683ed(0x215)](_0x8683ed(0x19d),function(){const _0xfe1361=_0x8683ed;document[_0xfe1361(0x156)](_0xfe1361(0x24b))[_0xfe1361(0xec)]=this[_0xfe1361(0x143)],_0x12c658(),_0x15a9da&&(_0x15a9da['reverb'][_0xfe1361(0x96)]=parseFloat(this[_0xfe1361(0x143)]));}),document[_0x8683ed(0x156)](_0x8683ed(0xce))[_0x8683ed(0x215)](_0x8683ed(0x19d),function(){const _0x3970fe=_0x8683ed;document[_0x3970fe(0x156)](_0x3970fe(0x213))[_0x3970fe(0xec)]=this[_0x3970fe(0x143)],_0x12c658(),_0x15a9da&&(_0x15a9da[_0x3970fe(0x222)][_0x3970fe(0xc7)]=parseInt(this[_0x3970fe(0x143)]));});const _0x43be40=document[_0x8683ed(0x1cd)]('.high-tempo-slider'),_0x3d524d=document[_0x8683ed(0x1cd)](_0x8683ed(0x273)),_0x16268a=document[_0x8683ed(0x1cd)](_0x8683ed(0x297)),_0x1a3d2d=document['querySelector'](_0x8683ed(0xfe)),_0x9b4c0f=document['querySelector']('.volume-controls');for(let _0x4fa553=0x0;_0x4fa553<0xa;_0x4fa553++){const _0x118371=document[_0x8683ed(0xf4)](_0x8683ed(0x12f));_0x118371[_0x8683ed(0xc5)]=_0x8683ed(0x161)+_0x4fa553;const _0x5940db=document[_0x8683ed(0xf4)](_0x8683ed(0x28b));_0x5940db[_0x8683ed(0xec)]=_0x4fa553+':\x20';const _0x5bd4fc=document[_0x8683ed(0xf4)](_0x8683ed(0x19d));_0x5bd4fc[_0x8683ed(0x209)]=_0x8683ed(0x1cc),_0x5bd4fc[_0x8683ed(0x11c)]='0',_0x5bd4fc[_0x8683ed(0x169)]=_0x8683ed(0x14a),_0x5bd4fc[_0x8683ed(0x143)]='80',_0x5bd4fc['step']='1',_0x5bd4fc[_0x8683ed(0xc5)]=_0x8683ed(0x1a4),_0x5bd4fc['id']='volumeSlider'+_0x4fa553;const _0x47e4f2=document[_0x8683ed(0xf4)](_0x8683ed(0x208));_0x47e4f2[_0x8683ed(0xc5)]=_0x8683ed(0x290),_0x47e4f2[_0x8683ed(0xec)]=_0x8683ed(0xd3),_0x47e4f2['id']=_0x8683ed(0x103)+_0x4fa553,_0x118371['appendChild'](_0x5940db),_0x118371[_0x8683ed(0x238)](_0x5bd4fc),_0x118371[_0x8683ed(0x238)](_0x47e4f2),_0x9b4c0f[_0x8683ed(0x238)](_0x118371),_0x5bd4fc['addEventListener'](_0x8683ed(0x19d),function(){const _0x190535=_0x8683ed,_0x4f5a3b=this['value'];_0x47e4f2['textContent']=_0x4f5a3b+'%';for(let _0xa06aa5=0x1;_0xa06aa5<=0x64;_0xa06aa5++){_0x5c373d[_0xa06aa5]&&_0x5c373d[_0xa06aa5]['gainNode']&&Math[_0x190535(0x1a8)]((_0xa06aa5-0x1)/0xa)===_0x4fa553&&(_0x5c373d[_0xa06aa5]['groupVolume']=_0x4f5a3b/0x64,_0x1bbfdb(_0xa06aa5));}});}for(let _0x20a525=0x1;_0x20a525<=0x64;_0x20a525++){const _0x127ba3=document['createElement'](_0x8683ed(0x15d));_0x127ba3[_0x8683ed(0xc5)]='audio-button',_0x127ba3[_0x8683ed(0xec)]=_0x20a525,_0x127ba3['id']=_0x8683ed(0x29c)+_0x20a525,_0x127ba3[_0x8683ed(0xa0)][_0x8683ed(0x1f5)]='relative';const _0x5853ff=document[_0x8683ed(0xf4)]('div');_0x5853ff[_0x8683ed(0xc5)]=_0x8683ed(0x1d7),_0x127ba3[_0x8683ed(0x238)](_0x5853ff);const _0x55e21e=document[_0x8683ed(0xf4)](_0x8683ed(0x12f));_0x55e21e[_0x8683ed(0xc5)]=_0x8683ed(0x288),_0x55e21e[_0x8683ed(0xa0)][_0x8683ed(0xa7)]=_0x8683ed(0x21f),_0x127ba3[_0x8683ed(0x238)](_0x55e21e);const _0x1832b6=Math[_0x8683ed(0x1a8)]((_0x20a525-0x1)/0xa);_0x127ba3[_0x8683ed(0xa6)]['add'](_0x8683ed(0x22b)+_0x1832b6),!_0x5c373d[_0x20a525]&&(_0x5c373d[_0x20a525]={'button':null,'buffer':null,'source':null,'gainNode':null,'loopDuration':null,'sampleNumber':null,'isScheduled':![],'startTime':0x0,'scheduledForNextBar':![],'isLongSample':_0x20a525>0x3c,'nextLoopTime':0x0,'scheduledTimeout':null,'loopStartTime':0x0,'originalTempo':_0x36c9bc,'volume':0.8,'bufferSampleNumber':null,'isActive':![],'tempoChangeTime':0x0,'positionAtTempoChange':0x0,'masterStartBar':0x0,'masterStartOffset':0x0,'barGridAligned':![],'isCustomSample':![],'groupVolume':0.8,'individualVolume':0x1,'effects':{'delay':{'time':0x0,'feedback':0x0},'reverb':{'decay':0x0,'mix':0x0,'predelay':0x0,'diffusion':0x32,'lowcut':0x14,'highcut':0x4e20,'damping':0x32},'eq':[{'frequency':0x14,'gain':0x0,'q':0x1,'type':'lowshelf','fixed':!![]},{'frequency':0x4e20,'gain':0x0,'q':0x1,'type':_0x8683ed(0xd2),'fixed':!![]}],'volume':0x64,'speed':0x1,'individualTempo':0x1,'lfo':{'target':_0x8683ed(0x242),'waveform':_0x8683ed(0x261),'rate':0x1,'depth':0x0},'pianoRoll':{'notes':[],'soundSource':_0x8683ed(0xbf),'gridWidth':_0x20a525>0x3c?0x20:0x10,'gridHeight':0x54,'scrollX':0x0,'scrollY':0x0,'sampleRange':{'start':0x0,'end':0x64},'filters':{'lowShelf':0x0,'highShelf':0x0,'lowMid':0x0,'mid':0x0,'highMid':0x0,'delay':{'time':0x0,'feedback':0x0}},'isEnabled':![]}},'delayNode':null,'delayFeedbackNode':null,'reverbNode':null,'reverbMixNode':null,'wetPathNode':null,'dryPathNode':null,'outputNode':null,'eqLowNode':null,'eqLowMidNode':null,'eqMidNode':null,'eqHighMidNode':null,'eqHighMid2Node':null,'eqHighNode':null,'eqVeryHighNode':null,'lfoNode':null,'lfoGainNode':null,'lfoTarget':null,'lfoBaseRate':0x1,'lfoUpdateTimeout':null,'individualVolumeGain':null,'lfoFilterOffsetNode':null,'lfoFilter':null,'lfoFilterBypass':null,'eqVisualizerEnabled':![]}),_0x127ba3[_0x8683ed(0x215)]('click',function(){const _0x8dc320=_0x8683ed,_0x3e27aa=Math[_0x8dc320(0x1a8)]((_0x20a525-0x1)/0xa);if(_0x5c373d[_0x20a525][_0x8dc320(0x15d)]===_0x127ba3){if(_0x127ba3['classList'][_0x8dc320(0x146)]('no-sample'))_0x127ba3[_0x8dc320(0xa6)][_0x8dc320(0x1ab)](_0x8dc320(0x25d),_0x8dc320(0xa9)),_0x5c373d[_0x20a525][_0x8dc320(0x11f)]=![],_0x5c373d[_0x20a525][_0x8dc320(0xbd)]=![],_0x5c373d[_0x20a525][_0x8dc320(0x15d)]=null;else _0x5c373d[_0x20a525][_0x8dc320(0xab)]?(_0x20ca83(_0x20a525),_0x127ba3['classList'][_0x8dc320(0x1ab)](_0x8dc320(0x25d),_0x8dc320(0xa9)),_0x5c373d[_0x20a525][_0x8dc320(0x11f)]=![],_0x127ba3[_0x8dc320(0xa6)]['remove'](_0x8dc320(0x239))):(_0x127ba3[_0x8dc320(0xa6)][_0x8dc320(0xb3)](_0x8dc320(0x25d)),_0x5c373d[_0x20a525][_0x8dc320(0x11f)]=!![],_0x5c373d[_0x20a525][_0x8dc320(0xbd)]=!![],_0xc9ce2d(_0x127ba3,_0x20a525),_0x5c373d[_0x20a525][_0x8dc320(0x20e)]&&_0x38ab75?(_0x127ba3[_0x8dc320(0xa6)][_0x8dc320(0x1ab)](_0x8dc320(0xa9)),_0x2cf7dd(_0x20a525)):_0x127ba3[_0x8dc320(0xa6)][_0x8dc320(0xb3)](_0x8dc320(0xa9)));}else{for(let _0x219876=0x1;_0x219876<=0x64;_0x219876++){Math[_0x8dc320(0x1a8)]((_0x219876-0x1)/0xa)===_0x3e27aa&&_0x5c373d[_0x219876][_0x8dc320(0x15d)]&&(_0x5c373d[_0x219876]['button'][_0x8dc320(0xa6)]['remove'](_0x8dc320(0x25d),_0x8dc320(0xa9),_0x8dc320(0x239),_0x8dc320(0xe9)),_0x20ca83(_0x219876),_0x5c373d[_0x219876][_0x8dc320(0x11f)]=![],_0x5c373d[_0x219876][_0x8dc320(0xbd)]=![],_0x5c373d[_0x219876][_0x8dc320(0x15d)]=null);}_0x5c373d[_0x20a525][_0x8dc320(0x15d)]=_0x127ba3,_0x5c373d[_0x20a525]['sampleNumber']=_0x20a525,_0x5c373d[_0x20a525][_0x8dc320(0xcc)]=_0x20a525>0x3c,_0x5c373d[_0x20a525][_0x8dc320(0x1bd)]=_0x36c9bc,_0x127ba3[_0x8dc320(0xa6)][_0x8dc320(0xb3)]('active'),_0x5c373d[_0x20a525]['isActive']=!![],_0x5c373d[_0x20a525][_0x8dc320(0xbd)]=!![],_0x5c373d[_0x20a525][_0x8dc320(0x10f)]=![],_0xc9ce2d(_0x127ba3,_0x20a525),_0x5c373d[_0x20a525][_0x8dc320(0x20e)]?(_0x127ba3['classList']['remove']('no-sample'),_0x38ab75&&_0x2cf7dd(_0x20a525)):(_0x127ba3['classList'][_0x8dc320(0xb3)](_0x8dc320(0xa9)),_0x3d4e00(_0x20a525,_0x20a525));}}),_0x127ba3[_0x8683ed(0x215)](_0x8683ed(0xff),function(_0x40338c){_0x40338c['preventDefault'](),_0x49235b(_0x20a525,_0x127ba3);}),_0x127ba3['addEventListener'](_0x8683ed(0x243),function(_0x64df4e){_0x35dc79=![],_0x2fdaf4=setTimeout(function(){_0x35dc79=!![],_0x49235b(_0x20a525,_0x127ba3);},0x1f4);}),_0x127ba3[_0x8683ed(0x215)]('touchend',function(_0x125f01){const _0x4328d0=_0x8683ed;_0x2fdaf4&&(clearTimeout(_0x2fdaf4),_0x2fdaf4=null),_0x35dc79&&(_0x125f01[_0x4328d0(0x195)](),_0x35dc79=![]);}),_0x127ba3[_0x8683ed(0x215)](_0x8683ed(0x24c),function(_0x2c912b){_0x2fdaf4&&(clearTimeout(_0x2fdaf4),_0x2fdaf4=null);}),_0x193611[_0x8683ed(0x238)](_0x127ba3);}function _0xc9ce2d(_0x512a71,_0x490039){_0x5c373d[_0x490039]&&_0x5c373d[_0x490039]['isCustomSample']&&_0x1fd264(_0x512a71);}function _0xf9c15c(_0x402147,_0x5ac170){const _0x487d14=_0x8683ed;let _0x525689=_0x402147[_0x487d14(0x1cd)](_0x487d14(0x1d9));_0x525689&&(_0x525689['style']['display']=_0x5ac170?_0x487d14(0x216):_0x487d14(0x21f));}const _0x31dadb=document[_0x8683ed(0x1de)](_0x8683ed(0x29a));_0x31dadb[_0x8683ed(0x278)](_0xd14c09=>{const _0x6693e6=_0x8683ed;_0xd14c09[_0x6693e6(0x215)](_0x6693e6(0x174),function(){const _0x303800=_0x6693e6,_0x388919=_0xd14c09[_0x303800(0xa6)][_0x303800(0x146)](_0x303800(0xe2)),_0xfa61e=_0x388919?document[_0x303800(0x1de)]('.long-loop-button'):document[_0x303800(0x1de)]('.loop-button:not(.long-loop-button)');_0xfa61e[_0x303800(0x278)](_0x1bfa10=>_0x1bfa10['classList'][_0x303800(0x1ab)]('active')),this['classList'][_0x303800(0xb3)](_0x303800(0x25d));const _0x68114b=parseInt(this['dataset'][_0x303800(0x29d)]||this['dataset'][_0x303800(0xf3)]);if(isNaN(_0x68114b)||_0x68114b<=0x0){console[_0x303800(0xe9)]('Invalid\x20loop\x20length\x20value:',this['dataset']['loop']||this[_0x303800(0x119)][_0x303800(0xf3)]);return;}if(_0x388919){const _0x4c3afb=_0x68114b*0x4;_0x36b54c=_0x4c3afb;if(_0x38ab75)for(let _0x1277d3=0x1;_0x1277d3<=0x64;_0x1277d3++){_0x5c373d[_0x1277d3][_0x303800(0x15d)]&&_0x5c373d[_0x1277d3][_0x303800(0x20e)]&&_0x5c373d[_0x1277d3][_0x303800(0xbd)]&&_0x5c373d[_0x1277d3][_0x303800(0x11f)]&&_0x5c373d[_0x1277d3]['isScheduled']&&_0x5c373d[_0x1277d3][_0x303800(0xcc)]&&_0x54d608(_0x1277d3);}console['log']('Long\x20sample\x20loop\x20length\x20set\x20to\x20'+_0x36b54c+'\x20bars\x20(double\x20of\x20'+_0x68114b+')');}else{_0x2f2b7f=_0x68114b;if(_0x38ab75)for(let _0x388efa=0x1;_0x388efa<=0x64;_0x388efa++){_0x5c373d[_0x388efa][_0x303800(0x15d)]&&_0x5c373d[_0x388efa][_0x303800(0x20e)]&&_0x5c373d[_0x388efa][_0x303800(0xbd)]&&_0x5c373d[_0x388efa][_0x303800(0x11f)]&&_0x5c373d[_0x388efa][_0x303800(0xab)]&&!_0x5c373d[_0x388efa][_0x303800(0xcc)]&&_0x5e711b(_0x388efa);}console[_0x303800(0x16d)]('Loop\x20length\x20set\x20to\x20'+_0x2f2b7f+_0x303800(0xb0));}});});const _0x10184a=document[_0x8683ed(0x1cd)](_0x8683ed(0x9e));_0x10184a&&_0x10184a['classList'][_0x8683ed(0xb3)]('active');const _0x24499b=document[_0x8683ed(0x1cd)](_0x8683ed(0x17a));_0x24499b&&_0x24499b[_0x8683ed(0xa6)][_0x8683ed(0xb3)](_0x8683ed(0x25d));function _0x3d4e00(_0x8c9eb,_0x26b258){const _0x515aad=_0x8683ed;if(!_0x74a956){console[_0x515aad(0xe9)]('Audio\x20context\x20not\x20initialized');return;}_0x5c373d[_0x26b258][_0x515aad(0x15d)]&&_0x5c373d[_0x26b258]['button'][_0x515aad(0xa6)][_0x515aad(0xb3)](_0x515aad(0x239));const _0x4a1793=new Audio();_0x4a1793[_0x515aad(0x215)]('error',function(_0x211e7c){const _0x584619=_0x515aad;console['error'](_0x584619(0x1c1)+_0x8c9eb+':',_0x211e7c),_0x5c373d[_0x26b258][_0x584619(0x15d)]&&(_0x5c373d[_0x26b258][_0x584619(0x15d)][_0x584619(0xa6)][_0x584619(0x1ab)]('loading'),_0x5c373d[_0x26b258]['button']['classList'][_0x584619(0xb3)](_0x584619(0xe9)),_0x5c373d[_0x26b258][_0x584619(0x15d)][_0x584619(0xa6)]['contains'](_0x584619(0x25d))&&_0x5c373d[_0x26b258]['button'][_0x584619(0xa6)]['add'](_0x584619(0xa9))),_0x4efca0(_0x26b258);});try{_0x4a1793[_0x515aad(0x237)]=_0x515aad(0x154)+_0x8c9eb+'.wav';}catch(_0x36817c){console[_0x515aad(0xe9)](_0x515aad(0x295)+_0x8c9eb+':',_0x36817c),_0x4efca0(_0x26b258);return;}_0x4a1793['addEventListener']('canplaythrough',function(){const _0x222c57=_0x515aad;fetch(_0x4a1793[_0x222c57(0x237)])['then'](_0xa5889d=>{const _0x621119=_0x222c57;if(!_0xa5889d['ok'])throw new Error(_0x621119(0x110)+_0xa5889d[_0x621119(0x23d)]);return _0xa5889d[_0x621119(0x153)]();})[_0x222c57(0x1ef)](_0x3577c6=>{const _0x184ff9=_0x222c57;if(!_0x74a956)throw new Error(_0x184ff9(0x286));return _0x74a956[_0x184ff9(0x163)](_0x3577c6);})[_0x222c57(0x1ef)](_0x5b2c86=>{const _0x2b543b=_0x222c57;_0x5c373d[_0x26b258][_0x2b543b(0x20e)]=_0x5b2c86,_0x5c373d[_0x26b258]['loopDuration']=_0x5b2c86[_0x2b543b(0x263)],_0x5c373d[_0x26b258][_0x2b543b(0x170)]=_0x8c9eb,_0x5c373d[_0x26b258][_0x2b543b(0x15d)]&&_0x5c373d[_0x26b258][_0x2b543b(0x15d)][_0x2b543b(0xa6)][_0x2b543b(0x1ab)](_0x2b543b(0x239),'no-sample'),_0x38ab75&&_0x5c373d[_0x26b258]['scheduledForNextBar']&&_0x5c373d[_0x26b258]['isActive']&&(_0x5c373d[_0x26b258][_0x2b543b(0x13e)]&&(clearTimeout(_0x5c373d[_0x26b258][_0x2b543b(0x13e)]),_0x5c373d[_0x26b258]['scheduledTimeout']=null),_0x2cf7dd(_0x26b258));})['catch'](_0x53936a=>{const _0x296271=_0x222c57;console[_0x296271(0xe9)](_0x296271(0x147),_0x53936a),_0x5c373d[_0x26b258][_0x296271(0x15d)]&&(_0x5c373d[_0x26b258][_0x296271(0x15d)]['classList']['remove'](_0x296271(0x239)),_0x5c373d[_0x26b258][_0x296271(0x15d)][_0x296271(0xa6)][_0x296271(0xb3)]('error'),_0x5c373d[_0x26b258][_0x296271(0x15d)]['classList'][_0x296271(0x146)](_0x296271(0x25d))&&_0x5c373d[_0x26b258][_0x296271(0x15d)][_0x296271(0xa6)][_0x296271(0xb3)](_0x296271(0xa9))),_0x4efca0(_0x26b258);});}),_0x4a1793['load']();}function _0x4efca0(_0xefcce6){const _0x1eb017=_0x8683ed;if(!_0x74a956)return;const _0x24abf2=_0x74a956['sampleRate'],_0x530648=0.5,_0x55499e=_0x74a956['createBuffer'](0x1,_0x24abf2*_0x530648,_0x24abf2),_0x28ac49=_0x55499e[_0x1eb017(0x17d)](0x0);for(let _0x5fc860=0x0;_0x5fc860<_0x28ac49[_0x1eb017(0xee)];_0x5fc860++){_0x28ac49[_0x5fc860]=Math['sin'](0x2*Math['PI']*0x1b8*_0x5fc860/_0x24abf2)*0.3;}_0x5c373d[_0xefcce6][_0x1eb017(0x20e)]=_0x55499e,_0x5c373d[_0xefcce6][_0x1eb017(0x20f)]=_0x530648,_0x5c373d[_0xefcce6]['bufferSampleNumber']=_0xefcce6,_0x5c373d[_0xefcce6]['button']&&(_0x5c373d[_0xefcce6][_0x1eb017(0x15d)][_0x1eb017(0xa6)]['remove'](_0x1eb017(0x239),_0x1eb017(0xe9)),_0x5c373d[_0xefcce6][_0x1eb017(0x15d)]['classList'][_0x1eb017(0xb3)](_0x1eb017(0xa9))),_0x38ab75&&_0x5c373d[_0xefcce6][_0x1eb017(0xbd)]&&_0x5c373d[_0xefcce6][_0x1eb017(0x11f)]&&(_0x5c373d[_0xefcce6]['scheduledTimeout']&&(clearTimeout(_0x5c373d[_0xefcce6][_0x1eb017(0x13e)]),_0x5c373d[_0xefcce6]['scheduledTimeout']=null),_0x2cf7dd(_0xefcce6));}function _0x49dbac(){const _0x11bad9=_0x8683ed;if(!_0x74a956)return;const _0x1d84cc=_0x74a956[_0x11bad9(0x246)],_0x28c164=(_0x1d84cc-_0x2a7e80['startTime'])/_0x2a7e80[_0x11bad9(0x263)],_0x464b8d=_0x36c9bc+_0x296ff3,_0x5dd109=0x3c/_0x464b8d*0x4;if(!isFinite(_0x5dd109)||_0x5dd109<=0x0){console[_0x11bad9(0xe9)](_0x11bad9(0x1e8),_0x5dd109);return;}_0x2a7e80['startTime']=_0x1d84cc-_0x28c164*_0x5dd109,_0x2a7e80[_0x11bad9(0x263)]=_0x5dd109,_0x2a7e80[_0x11bad9(0x258)]=_0x2a7e80[_0x11bad9(0x1f9)]+_0x2a7e80['duration'],console['log'](_0x11bad9(0xb8)+_0x28c164+',\x20new\x20duration\x20'+_0x5dd109);}function _0x9a3f28(_0x268672){const _0x5c5f28=_0x8683ed;if(!_0x5c373d[_0x268672][_0x5c5f28(0x172)]||_0x5c373d[_0x268672][_0x5c5f28(0xcc)])return;const _0x287e9a=_0x5c373d[_0x268672],_0x8d33c2=_0x74a956[_0x5c5f28(0x246)],_0x493dcf=_0x36c9bc+_0x296ff3,_0x1cdde2=0x3c/_0x493dcf,_0x2df825=_0x1cdde2*0x4,_0x1cf9e1=_0x2df825*_0x2f2b7f;if(!isFinite(_0x1cf9e1)||_0x1cf9e1<=0x0||!isFinite(_0x5c373d[_0x268672][_0x5c5f28(0x20f)])||_0x5c373d[_0x268672][_0x5c5f28(0x20f)]<=0x0){console[_0x5c5f28(0xe9)](_0x5c5f28(0xa8),{'desiredLoopDuration':_0x1cf9e1,'loopDuration':_0x5c373d[_0x268672]['loopDuration']});return;}const _0x2eefa6=_0x287e9a['loopDuration']/_0x1cf9e1,_0x19d94e=_0x287e9a[_0x5c5f28(0x256)]||{},_0x5d6b62=_0x19d94e['speed']||0x1,_0x714d2e=_0x2eefa6*_0x5d6b62,_0x5e247b=_0x287e9a[_0x5c5f28(0x172)][_0x5c5f28(0x139)][_0x5c5f28(0x143)],_0x1f1fe7=_0x8d33c2-_0x287e9a[_0x5c5f28(0x233)],_0x2d116e=_0x1f1fe7*_0x5e247b%_0x287e9a[_0x5c5f28(0x20f)];_0x287e9a[_0x5c5f28(0x172)][_0x5c5f28(0x139)][_0x5c5f28(0x143)]=_0x714d2e,_0x287e9a[_0x5c5f28(0x233)]=_0x8d33c2-_0x2d116e/_0x714d2e,_0x287e9a[_0x5c5f28(0x160)]==='pitch'&&(_0x287e9a['lfoBaseRate']=_0x714d2e),console[_0x5c5f28(0x16d)](_0x5c5f28(0xfd)+_0x268672+'\x20tempo\x20updated:\x20new\x20rate\x20'+_0x714d2e+_0x5c5f28(0xea)+_0x2d116e);}function _0x4d15e3(_0x4b6d2c){const _0x101ea4=_0x8683ed;if(!_0x5c373d[_0x4b6d2c][_0x101ea4(0x172)]||!_0x5c373d[_0x4b6d2c][_0x101ea4(0xcc)])return;const _0x5b3ac0=_0x5c373d[_0x4b6d2c],_0xcbdab0=_0x74a956[_0x101ea4(0x246)],_0x5b4a6f=0x3c/_0x5a68ac,_0x590f8c=_0x5b4a6f*0x4,_0x7ccc12=_0x590f8c*_0x36b54c;if(!isFinite(_0x7ccc12)||_0x7ccc12<=0x0||!isFinite(_0x5c373d[_0x4b6d2c]['loopDuration'])||_0x5c373d[_0x4b6d2c][_0x101ea4(0x20f)]<=0x0){console[_0x101ea4(0xe9)](_0x101ea4(0x1fd),{'desiredLoopDuration':_0x7ccc12,'loopDuration':_0x5c373d[_0x4b6d2c][_0x101ea4(0x20f)]});return;}const _0x1b1581=_0x5b3ac0[_0x101ea4(0x20f)]/_0x7ccc12,_0x17d176=_0x5b3ac0[_0x101ea4(0x256)]||{},_0x560ee1=_0x17d176[_0x101ea4(0xe5)]||0x1,_0x1f4425=_0x17d176[_0x101ea4(0x2a4)]||0x1,_0x4cfc88=_0x1b1581*_0x560ee1*_0x1f4425,_0x3a76e5=_0x5b3ac0['source'][_0x101ea4(0x139)]['value'],_0x2a5448=_0xcbdab0-_0x5b3ac0[_0x101ea4(0x233)],_0x1df984=_0x2a5448*_0x3a76e5%_0x5b3ac0['loopDuration'];_0x5b3ac0[_0x101ea4(0x172)][_0x101ea4(0x139)][_0x101ea4(0x143)]=_0x4cfc88,_0x5b3ac0['loopStartTime']=_0xcbdab0-_0x1df984/_0x4cfc88,_0x5b3ac0[_0x101ea4(0x160)]===_0x101ea4(0x242)&&(_0x5b3ac0['lfoBaseRate']=_0x4cfc88),console[_0x101ea4(0x16d)](_0x101ea4(0xfd)+_0x4b6d2c+_0x101ea4(0x16b)+_0x4cfc88+_0x101ea4(0xea)+_0x1df984);}function _0x2cf7dd(_0xb04107){const _0x276c9e=_0x8683ed;if(!_0x5c373d[_0xb04107][_0x276c9e(0x20e)]||!_0x5c373d[_0xb04107][_0x276c9e(0xbd)])return;const _0x51ae66=_0x2a7e80['nextStartTime'],_0xb0be26=_0x74a956['currentTime'],_0x2d714c=(_0x51ae66-_0xb0be26)*0x3e8;_0x5c373d[_0xb04107][_0x276c9e(0x13e)]&&clearTimeout(_0x5c373d[_0xb04107][_0x276c9e(0x13e)]),_0x5c373d[_0xb04107]['scheduledTimeout']=setTimeout(()=>{const _0xf703a5=_0x276c9e;_0x5c373d[_0xb04107][_0xf703a5(0xbd)]&&_0x5c373d[_0xb04107][_0xf703a5(0x11f)]&&(_0x42186d(_0xb04107,_0x74a956['currentTime']),_0x5c373d[_0xb04107][_0xf703a5(0x10f)]=!![]),_0x5c373d[_0xb04107][_0xf703a5(0x13e)]=null;},Math[_0x276c9e(0x169)](0x0,_0x2d714c));}function _0x42186d(_0x1d9206,_0x113694){const _0x25b257=_0x8683ed;if(!_0x5c373d[_0x1d9206][_0x25b257(0x20e)]||!_0x5c373d[_0x1d9206][_0x25b257(0xbd)])return;if(_0x5c373d[_0x1d9206][_0x25b257(0x172)])try{_0x5c373d[_0x1d9206][_0x25b257(0xab)]&&_0x5c373d[_0x1d9206]['source'][_0x25b257(0x270)]();_0x5c373d[_0x1d9206][_0x25b257(0x172)][_0x25b257(0x203)](),_0x5c373d[_0x1d9206]['source']=null,_0x5c373d[_0x1d9206][_0x25b257(0x22c)]=null;_0x5c373d[_0x1d9206][_0x25b257(0x14d)]&&(_0x5c373d[_0x1d9206]['delayNode'][_0x25b257(0x203)](),_0x5c373d[_0x1d9206][_0x25b257(0x14d)]=null);_0x5c373d[_0x1d9206][_0x25b257(0x171)]&&(_0x5c373d[_0x1d9206]['delayFeedbackNode']['disconnect'](),_0x5c373d[_0x1d9206][_0x25b257(0x171)]=null);_0x5c373d[_0x1d9206][_0x25b257(0xad)]&&(_0x5c373d[_0x1d9206][_0x25b257(0xad)][_0x25b257(0x203)](),_0x5c373d[_0x1d9206]['reverbNode']=null);_0x5c373d[_0x1d9206]['reverbMixNode']&&(_0x5c373d[_0x1d9206][_0x25b257(0x21a)][_0x25b257(0x203)](),_0x5c373d[_0x1d9206][_0x25b257(0x21a)]=null);_0x5c373d[_0x1d9206][_0x25b257(0x287)]&&(_0x5c373d[_0x1d9206][_0x25b257(0x287)][_0x25b257(0x203)](),_0x5c373d[_0x1d9206][_0x25b257(0x287)]=null);_0x5c373d[_0x1d9206][_0x25b257(0x1cf)]&&(_0x5c373d[_0x1d9206][_0x25b257(0x1cf)]['disconnect'](),_0x5c373d[_0x1d9206][_0x25b257(0x1cf)]=null);_0x5c373d[_0x1d9206]['outputNode']&&(_0x5c373d[_0x1d9206]['outputNode'][_0x25b257(0x203)](),_0x5c373d[_0x1d9206][_0x25b257(0x164)]=null);_0x5c373d[_0x1d9206][_0x25b257(0x1dc)]&&(_0x5c373d[_0x1d9206][_0x25b257(0x1dc)][_0x25b257(0x203)](),_0x5c373d[_0x1d9206][_0x25b257(0x1dc)]=null);_0x5c373d[_0x1d9206][_0x25b257(0x1a5)]&&(_0x5c373d[_0x1d9206][_0x25b257(0x1a5)][_0x25b257(0x203)](),_0x5c373d[_0x1d9206]['eqLowMidNode']=null);_0x5c373d[_0x1d9206][_0x25b257(0x1b1)]&&(_0x5c373d[_0x1d9206][_0x25b257(0x1b1)][_0x25b257(0x203)](),_0x5c373d[_0x1d9206][_0x25b257(0x1b1)]=null);_0x5c373d[_0x1d9206][_0x25b257(0x1f0)]&&(_0x5c373d[_0x1d9206][_0x25b257(0x1f0)][_0x25b257(0x203)](),_0x5c373d[_0x1d9206][_0x25b257(0x1f0)]=null);_0x5c373d[_0x1d9206]['eqHighMid2Node']&&(_0x5c373d[_0x1d9206]['eqHighMid2Node'][_0x25b257(0x203)](),_0x5c373d[_0x1d9206][_0x25b257(0x21b)]=null);_0x5c373d[_0x1d9206][_0x25b257(0x9b)]&&(_0x5c373d[_0x1d9206][_0x25b257(0x9b)][_0x25b257(0x203)](),_0x5c373d[_0x1d9206][_0x25b257(0x9b)]=null);_0x5c373d[_0x1d9206][_0x25b257(0x1a3)]&&(_0x5c373d[_0x1d9206][_0x25b257(0x1a3)][_0x25b257(0x203)](),_0x5c373d[_0x1d9206]['eqVeryHighNode']=null);_0x5c373d[_0x1d9206][_0x25b257(0x277)]&&(_0x5c373d[_0x1d9206]['lfoNode'][_0x25b257(0x203)](),_0x5c373d[_0x1d9206][_0x25b257(0x277)]=null);_0x5c373d[_0x1d9206][_0x25b257(0x1b0)]&&(_0x5c373d[_0x1d9206][_0x25b257(0x1b0)]['disconnect'](),_0x5c373d[_0x1d9206][_0x25b257(0x1b0)]=null);_0x5c373d[_0x1d9206][_0x25b257(0x176)]&&(clearTimeout(_0x5c373d[_0x1d9206]['lfoUpdateTimeout']),_0x5c373d[_0x1d9206][_0x25b257(0x176)]=null);if(_0x5c373d[_0x1d9206][_0x25b257(0x101)])try{_0x5c373d[_0x1d9206][_0x25b257(0x101)][_0x25b257(0x203)](),_0x5c373d[_0x1d9206][_0x25b257(0x101)][_0x25b257(0x270)](),_0x5c373d[_0x1d9206][_0x25b257(0x101)]=null;}catch(_0x509b4e){}_0x5c373d[_0x1d9206][_0x25b257(0xcb)]&&(_0x5c373d[_0x1d9206][_0x25b257(0xcb)][_0x25b257(0x203)](),_0x5c373d[_0x1d9206][_0x25b257(0xcb)]=null),_0x5c373d[_0x1d9206][_0x25b257(0x1a9)]&&(_0x5c373d[_0x1d9206][_0x25b257(0x1a9)][_0x25b257(0x203)](),_0x5c373d[_0x1d9206][_0x25b257(0x1a9)]=null),_0x5c373d[_0x1d9206][_0x25b257(0x11a)]&&(_0x5c373d[_0x1d9206][_0x25b257(0x11a)][_0x25b257(0x203)](),_0x5c373d[_0x1d9206][_0x25b257(0x11a)]=null);}catch(_0x2b9721){console[_0x25b257(0x98)](_0x25b257(0xf8),_0x2b9721),_0x5c373d[_0x1d9206][_0x25b257(0x172)]=null,_0x5c373d[_0x1d9206][_0x25b257(0x22c)]=null;}const _0x3ef5ac=_0x74a956[_0x25b257(0x15c)]();_0x3ef5ac[_0x25b257(0x20e)]=_0x5c373d[_0x1d9206][_0x25b257(0x20e)];const _0x4b8590=_0x74a956['createGain'](),_0x52ed94=_0x5c373d[_0x1d9206]['effects']||{},_0x487256=_0x52ed94[_0x25b257(0x269)]||0x64,_0x153a4b=_0x487256/0x64;_0x5c373d[_0x1d9206]['individualVolume']=_0x153a4b;const _0x4467f2=_0x16a64c(_0x1d9206);_0x5c373d[_0x1d9206][_0x25b257(0x29e)]=_0x4467f2;const _0x22e0dd=_0x74a956['createGain']();_0x22e0dd[_0x25b257(0x95)][_0x25b257(0x143)]=_0x153a4b,_0x5c373d[_0x1d9206][_0x25b257(0xcb)]=_0x22e0dd;const _0x53eda3=_0x4467f2*_0x153a4b;_0x4b8590[_0x25b257(0x95)]['value']=_0x53eda3,_0x5c373d[_0x1d9206][_0x25b257(0x269)]=_0x53eda3,_0x3ef5ac[_0x25b257(0xc1)](_0x4b8590),_0x4b8590[_0x25b257(0xc1)](_0x22e0dd),_0x5c373d[_0x1d9206]['source']=_0x3ef5ac,_0x5c373d[_0x1d9206][_0x25b257(0x22c)]=_0x4b8590,_0x5c373d[_0x1d9206]['startTime']=_0x113694,_0x5c373d[_0x1d9206][_0x25b257(0xab)]=!![],_0x5c373d[_0x1d9206][_0x25b257(0x233)]=_0x113694,_0x5c373d[_0x1d9206][_0x25b257(0x183)]=_0x113694;if(_0x52ed94['pianoRoll']&&_0x52ed94['pianoRoll'][_0x25b257(0x1d8)][_0x25b257(0xee)]>0x0){const _0x715929=_0x52ed94[_0x25b257(0x1d5)],_0x41fd98=_0x5c373d[_0x1d9206][_0x25b257(0xcc)];let _0x100f59,_0x435936;if(_0x41fd98)_0x100f59=0x3c/_0x5a68ac,_0x435936=_0x100f59*0x4;else{const _0x17f212=_0x36c9bc+_0x296ff3;_0x100f59=0x3c/_0x17f212,_0x435936=_0x100f59*0x4;}const _0x2e49ac=_0x435936/0x10,_0x4b5f58=[..._0x715929[_0x25b257(0x1d8)]][_0x25b257(0x25e)]((_0xdac876,_0x4c21c1)=>_0xdac876[_0x25b257(0x1b5)]-_0x4c21c1[_0x25b257(0x1b5)]);_0x4b5f58[_0x25b257(0x278)](_0x249c2a=>{const _0x5caa9c=_0x25b257,_0x2d33a5=_0x113694+_0x249c2a[_0x5caa9c(0x1b5)]*_0x2e49ac,_0xd08640=(_0x249c2a[_0x5caa9c(0xee)]||0x1)*_0x2e49ac;if(_0x715929[_0x5caa9c(0x298)]===_0x5caa9c(0xbf))_0x2b4526(_0x249c2a['row'],_0x2d33a5,_0xd08640,_0x22e0dd,_0x1d9206);else{if(_0x715929['soundSource']==='synth')_0x5274da(_0x249c2a[_0x5caa9c(0x99)],_0x2d33a5,_0xd08640,_0x22e0dd,_0x1d9206);else{if(_0x715929[_0x5caa9c(0x298)]===_0x5caa9c(0x10b))_0x128dc3(_0x249c2a[_0x5caa9c(0x99)],_0x2d33a5,_0xd08640,_0x22e0dd,_0x1d9206);else{if(_0x715929[_0x5caa9c(0x298)]===_0x5caa9c(0x14e))_0x599ff2(_0x249c2a['row'],_0x2d33a5,_0xd08640,_0x22e0dd,_0x1d9206);else{if(_0x715929[_0x5caa9c(0x298)]===_0x5caa9c(0x13b))_0x4d2e77(_0x249c2a[_0x5caa9c(0x99)],_0x2d33a5,_0xd08640,_0x22e0dd,_0x1d9206);else{if(_0x715929['soundSource']===_0x5caa9c(0x268))_0x1d70e2(_0x249c2a[_0x5caa9c(0x99)],_0x2d33a5,_0xd08640,_0x22e0dd,_0x1d9206);else _0x715929[_0x5caa9c(0x298)]===_0x5caa9c(0xd9)?_0x1054f6(_0x249c2a['row'],_0x2d33a5,_0xd08640,_0x22e0dd,_0x1d9206):_0x2084d1(_0x249c2a[_0x5caa9c(0x99)],_0x2d33a5,_0xd08640,_0x22e0dd,_0x1d9206,_0x715929[_0x5caa9c(0x151)]);}}}}}});}else{if(_0x5c373d[_0x1d9206][_0x25b257(0xcc)]){const _0x2d43f5=0x3c/_0x5a68ac,_0x4503ac=_0x2d43f5*0x4,_0x159c31=_0x4503ac*_0x36b54c;if(!isFinite(_0x159c31)||_0x159c31<=0x0||!isFinite(_0x5c373d[_0x1d9206]['loopDuration'])||_0x5c373d[_0x1d9206][_0x25b257(0x20f)]<=0x0){console[_0x25b257(0xe9)]('Invalid\x20values\x20for\x20long\x20sample:',{'desiredLoopDuration':_0x159c31,'loopDuration':_0x5c373d[_0x1d9206][_0x25b257(0x20f)]});return;}const _0x1d21fc=_0x5c373d[_0x1d9206]['loopDuration']/_0x159c31;let _0x51c1c3=0x1;_0x52ed94[_0x25b257(0xe5)]&&(_0x51c1c3=_0x52ed94[_0x25b257(0xe5)]);const _0x2282a7=_0x52ed94[_0x25b257(0x2a4)]||0x1,_0x3f2194=_0x1d21fc*_0x51c1c3*_0x2282a7;if(!isFinite(_0x3f2194)||_0x3f2194<=0x0){console[_0x25b257(0xe9)]('Invalid\x20playback\x20rate\x20for\x20long\x20sample:',_0x3f2194);return;}_0x3ef5ac[_0x25b257(0x29d)]=!![],_0x3ef5ac[_0x25b257(0x141)]=0x0,_0x3ef5ac[_0x25b257(0x19a)]=_0x5c373d[_0x1d9206][_0x25b257(0x20f)],_0x3ef5ac['playbackRate'][_0x25b257(0x143)]=_0x3f2194,_0x5c373d[_0x1d9206][_0x25b257(0x19e)]=_0x3f2194,_0x3ef5ac[_0x25b257(0x211)](_0x113694);}else{const _0x51d78e=_0x36c9bc+_0x296ff3,_0x447ba1=0x3c/_0x51d78e,_0x4adcc3=_0x447ba1*0x4,_0x17119b=_0x4adcc3*_0x2f2b7f;if(!isFinite(_0x17119b)||_0x17119b<=0x0||!isFinite(_0x5c373d[_0x1d9206][_0x25b257(0x20f)])||_0x5c373d[_0x1d9206][_0x25b257(0x20f)]<=0x0){console[_0x25b257(0xe9)](_0x25b257(0xa8),{'desiredLoopDuration':_0x17119b,'loopDuration':_0x5c373d[_0x1d9206]['loopDuration'],'effectiveBarDuration':_0x4adcc3,'loopLength':_0x2f2b7f});return;}const _0x248333=_0x5c373d[_0x1d9206]['loopDuration']/_0x17119b,_0x1ffafa=_0x52ed94[_0x25b257(0x2a4)]||0x1,_0xbf7366=_0x248333*_0x1ffafa;if(!isFinite(_0xbf7366)||_0xbf7366<=0x0){console[_0x25b257(0xe9)](_0x25b257(0x255),_0xbf7366);return;}_0x3ef5ac[_0x25b257(0x29d)]=!![],_0x3ef5ac[_0x25b257(0x141)]=0x0,_0x3ef5ac['loopEnd']=_0x5c373d[_0x1d9206][_0x25b257(0x20f)],_0x3ef5ac['playbackRate'][_0x25b257(0x143)]=_0xbf7366,_0x5c373d[_0x1d9206][_0x25b257(0x19e)]=_0xbf7366,_0x3ef5ac[_0x25b257(0x211)](_0x113694);}}_0x3d5db8(_0x1d9206);if(_0x52ed94[_0x25b257(0x1f6)]&&_0x52ed94['lfo'][_0x25b257(0x1f8)]>0x0){const _0x3830c9=_0x52ed94[_0x25b257(0x1f6)][_0x25b257(0xd4)];if(_0x5c373d[_0x1d9206][_0x25b257(0x1b0)])try{_0x5c373d[_0x1d9206][_0x25b257(0x1b0)]['disconnect']();}catch(_0x14f302){}if(_0x5c373d[_0x1d9206][_0x25b257(0x101)])try{_0x5c373d[_0x1d9206][_0x25b257(0x101)][_0x25b257(0x203)](),_0x5c373d[_0x1d9206][_0x25b257(0x101)]['stop'](),_0x5c373d[_0x1d9206][_0x25b257(0x101)]=null;}catch(_0x7916c){}if(_0x5c373d[_0x1d9206][_0x25b257(0x11a)]&&_0x5c373d[_0x1d9206]['lfoFilter']){if(_0x3830c9==='filter')_0x5c373d[_0x1d9206][_0x25b257(0x11a)]['gain'][_0x25b257(0x143)]=0x0,_0x5c373d[_0x1d9206][_0x25b257(0x1a9)][_0x25b257(0xc1)](_0x5c373d[_0x1d9206][_0x25b257(0x1a3)]);else{_0x5c373d[_0x1d9206][_0x25b257(0x11a)][_0x25b257(0x95)][_0x25b257(0x143)]=0x1;try{_0x5c373d[_0x1d9206][_0x25b257(0x1a9)]['disconnect']();}catch(_0x2fc78a){}}}if(_0x3830c9==='pitch'){const _0x29abd7=typeof _0x3ef5ac['detune']!==_0x25b257(0x198);if(_0x29abd7){_0x5c373d[_0x1d9206][_0x25b257(0x160)]=_0x25b257(0x242);const _0x34511e=()=>{const _0x403570=_0x25b257;if(!_0x5c373d[_0x1d9206][_0x403570(0x172)]||_0x5c373d[_0x1d9206]['lfoTarget']!=='pitch')return;const _0x300eed=_0x74a956[_0x403570(0x246)],_0x5c73c1=_0x52ed94[_0x403570(0x1f6)][_0x403570(0x178)],_0x5b9fcc=_0x52ed94[_0x403570(0x1f6)]['depth']/0x64,_0x4d21e6=_0x52ed94['lfo'][_0x403570(0xf5)],_0x1ea731=0x1/_0x5c73c1,_0x4a0696=_0x300eed%_0x1ea731/_0x1ea731*Math['PI']*0x2;let _0x4ee890=0x0;switch(_0x4d21e6){case _0x403570(0x261):_0x4ee890=Math[_0x403570(0x162)](_0x4a0696);break;case _0x403570(0x230):_0x4ee890=Math[_0x403570(0x162)](_0x4a0696)>0x0?0x1:-0x1;break;case _0x403570(0x292):const _0x491a4b=_0x4a0696/Math['PI']%0x2;_0x4ee890=_0x491a4b<0x1?0x2*_0x491a4b-0x1:0x3-0x2*_0x491a4b;break;case _0x403570(0x279):_0x4ee890=0x2*(_0x4a0696/Math['PI']%0x1)-0x1;break;}const _0x2027b5=0x4b0,_0x40f5b4=_0x2027b5*_0x5b9fcc*_0x4ee890;_0x5c373d[_0x1d9206][_0x403570(0x172)][_0x403570(0x188)][_0x403570(0x26f)](_0x40f5b4,_0x300eed),_0x5c373d[_0x1d9206][_0x403570(0x176)]=setTimeout(_0x34511e,0x32);};_0x34511e();}else{_0x5c373d[_0x1d9206]['lfoTarget']=_0x25b257(0x242);_0x3ef5ac&&(_0x5c373d[_0x1d9206][_0x25b257(0x19e)]=_0x3ef5ac[_0x25b257(0x139)]['value']);const _0x37a3ef=()=>{const _0x47ec1a=_0x25b257;if(!_0x5c373d[_0x1d9206][_0x47ec1a(0x172)]||_0x5c373d[_0x1d9206][_0x47ec1a(0x160)]!==_0x47ec1a(0x242))return;const _0x1156bb=_0x74a956[_0x47ec1a(0x246)],_0x57bb7c=_0x52ed94[_0x47ec1a(0x1f6)][_0x47ec1a(0x178)],_0x2d70b4=_0x52ed94[_0x47ec1a(0x1f6)]['depth']/0x64,_0x4f0672=_0x52ed94[_0x47ec1a(0x1f6)][_0x47ec1a(0xf5)],_0x4389be=0x1/_0x57bb7c,_0x3ca7d4=_0x1156bb%_0x4389be/_0x4389be*Math['PI']*0x2;let _0x4f3424=0x0;switch(_0x4f0672){case _0x47ec1a(0x261):_0x4f3424=Math[_0x47ec1a(0x162)](_0x3ca7d4);break;case _0x47ec1a(0x230):_0x4f3424=Math['sin'](_0x3ca7d4)>0x0?0x1:-0x1;break;case'triangle':const _0x5591b4=_0x3ca7d4/Math['PI']%0x2;_0x4f3424=_0x5591b4<0x1?0x2*_0x5591b4-0x1:0x3-0x2*_0x5591b4;break;case'sawtooth':_0x4f3424=0x2*(_0x3ca7d4/Math['PI']%0x1)-0x1;break;}const _0x228290=_0x5c373d[_0x1d9206][_0x47ec1a(0x19e)]||0x1,_0x238062=_0x228290*0.5,_0xbc3efe=_0x238062*_0x2d70b4*_0x4f3424,_0x5a1443=Math[_0x47ec1a(0x169)](0.1,_0x228290+_0xbc3efe);_0x5c373d[_0x1d9206]['source'][_0x47ec1a(0x139)][_0x47ec1a(0x26f)](_0x5a1443,_0x1156bb),_0x5c373d[_0x1d9206][_0x47ec1a(0x176)]=setTimeout(_0x37a3ef,0x32);};_0x37a3ef();}}else{if(_0x3830c9===_0x25b257(0x224)){const _0x2edc89=_0x5c373d[_0x1d9206]['lfoFilter']?_0x5c373d[_0x1d9206]['lfoFilter'][_0x25b257(0x181)][_0x25b257(0x143)]:0x7d0,_0x328a6b=_0x52ed94['lfo'][_0x25b257(0x1f8)]/0x64,_0x4bde6b=0x2,_0x26e4a1=_0x4bde6b*_0x328a6b,_0x4813e3=_0x2edc89/Math['pow'](0x2,_0x26e4a1),_0x1fc30f=_0x2edc89*Math['pow'](0x2,_0x26e4a1),_0x235d6a=(_0x1fc30f-_0x4813e3)/0x2,_0x3f28fd=(_0x1fc30f+_0x4813e3)/0x2;_0x5c373d[_0x1d9206][_0x25b257(0x1b0)][_0x25b257(0x95)]['value']=_0x235d6a,_0x5c373d[_0x1d9206]['lfoGainNode'][_0x25b257(0xc1)](_0x5c373d[_0x1d9206][_0x25b257(0x1a9)][_0x25b257(0x181)]),_0x5c373d[_0x1d9206][_0x25b257(0x1a9)]['frequency'][_0x25b257(0x143)]=_0x2edc89;const _0x33516a=_0x74a956['createConstantSource']();_0x33516a['offset'][_0x25b257(0x143)]=_0x3f28fd,_0x33516a['connect'](_0x5c373d[_0x1d9206][_0x25b257(0x1a9)][_0x25b257(0x181)]),_0x33516a['start'](),_0x5c373d[_0x1d9206][_0x25b257(0x101)]=_0x33516a,_0x5c373d[_0x1d9206][_0x25b257(0x160)]='filter';}else{if(_0x3830c9===_0x25b257(0x269)){if(_0x5c373d[_0x1d9206]['individualVolumeGain']){const _0x322580=_0x5c373d[_0x1d9206][_0x25b257(0xcb)][_0x25b257(0x95)][_0x25b257(0x143)],_0x5d58e0=_0x52ed94[_0x25b257(0x1f6)][_0x25b257(0x1f8)]/0x64,_0xf63a9b=_0x322580*0.5,_0x19924c=_0xf63a9b*_0x5d58e0;_0x5c373d[_0x1d9206][_0x25b257(0x1b0)][_0x25b257(0x95)][_0x25b257(0x143)]=_0x19924c,_0x5c373d[_0x1d9206][_0x25b257(0x1b0)]['connect'](_0x5c373d[_0x1d9206][_0x25b257(0xcb)][_0x25b257(0x95)]),_0x5c373d[_0x1d9206]['lfoTarget']=_0x25b257(0x269);}}}}}setTimeout(()=>{_0x5c373d[_0x1d9206]['isScheduled']&&_0x3078e4(_0x1d9206);},0x32),console[_0x25b257(0x16d)](_0x25b257(0xfd)+_0x1d9206+'\x20('+(_0x5c373d[_0x1d9206][_0x25b257(0xcc)]?'long':_0x25b257(0x2a7))+')\x20started\x20at\x20'+_0x113694+_0x25b257(0xd0)+_0x487256+'%,\x20speed\x20'+(_0x52ed94[_0x25b257(0x2a4)]||0x1)+_0x25b257(0x159)+(_0x52ed94[_0x25b257(0xe5)]||0x1));}function _0x5e711b(_0x44505f){const _0x56c97c=_0x8683ed;if(!_0x5c373d[_0x44505f][_0x56c97c(0x172)]||_0x5c373d[_0x44505f]['isLongSample'])return;const _0x133023=_0x36c9bc+_0x296ff3,_0x29eb30=0x3c/_0x133023,_0xf2c534=_0x29eb30*0x4,_0x5dd445=_0xf2c534*_0x2f2b7f;if(!isFinite(_0x5dd445)||_0x5dd445<=0x0||!isFinite(_0x5c373d[_0x44505f][_0x56c97c(0x20f)])||_0x5c373d[_0x44505f][_0x56c97c(0x20f)]<=0x0){console[_0x56c97c(0xe9)]('Invalid\x20values\x20for\x20updating\x20drum\x20sample:',{'desiredLoopDuration':_0x5dd445,'loopDuration':_0x5c373d[_0x44505f][_0x56c97c(0x20f)],'effectiveBarDuration':_0xf2c534,'loopLength':_0x2f2b7f});return;}const _0x159ee4=_0x5c373d[_0x44505f][_0x56c97c(0x20f)]/_0x5dd445,_0x2499fb=_0x5c373d[_0x44505f][_0x56c97c(0x256)]||{},_0x5776a0=_0x2499fb[_0x56c97c(0x2a4)]||0x1,_0x1077bf=_0x159ee4*_0x5776a0;if(!isFinite(_0x1077bf)||_0x1077bf<=0x0){console[_0x56c97c(0xe9)](_0x56c97c(0x25f),_0x1077bf);return;}const _0xfde1a8=_0x74a956['currentTime'],_0x4645fb=_0xfde1a8-_0x5c373d[_0x44505f][_0x56c97c(0x233)],_0xa493ca=_0x4645fb*_0x5c373d[_0x44505f][_0x56c97c(0x172)][_0x56c97c(0x139)]['value']%_0x5c373d[_0x44505f][_0x56c97c(0x20f)];_0x5c373d[_0x44505f][_0x56c97c(0x172)][_0x56c97c(0x139)][_0x56c97c(0x143)]=_0x1077bf,_0x5c373d[_0x44505f][_0x56c97c(0x233)]=_0xfde1a8-_0xa493ca/_0x1077bf,_0x5c373d[_0x44505f]['lfoTarget']===_0x56c97c(0x242)&&(_0x5c373d[_0x44505f][_0x56c97c(0x19e)]=_0x1077bf),console[_0x56c97c(0x16d)]('Sample\x20'+_0x44505f+_0x56c97c(0x271)+_0xa493ca/_0x5c373d[_0x44505f][_0x56c97c(0x20f)]+_0x56c97c(0x21e)+_0x5776a0);}function _0x54d608(_0x28e753){const _0x386308=_0x8683ed;if(!_0x5c373d[_0x28e753][_0x386308(0x172)]||!_0x5c373d[_0x28e753][_0x386308(0xcc)])return;const _0x3ebcdb=0x3c/_0x5a68ac,_0x14bb61=_0x3ebcdb*0x4,_0x528f86=_0x14bb61*_0x36b54c;if(!isFinite(_0x528f86)||_0x528f86<=0x0||!isFinite(_0x5c373d[_0x28e753][_0x386308(0x20f)])||_0x5c373d[_0x28e753][_0x386308(0x20f)]<=0x0){console['error'](_0x386308(0x210),{'desiredLoopDuration':_0x528f86,'loopDuration':_0x5c373d[_0x28e753][_0x386308(0x20f)],'longLoopBarDuration':_0x14bb61,'longLoopLength':_0x36b54c});return;}const _0x5c8298=_0x5c373d[_0x28e753][_0x386308(0x20f)]/_0x528f86,_0x2e2a35=_0x5c373d[_0x28e753][_0x386308(0x256)]||{},_0x11640f=_0x2e2a35[_0x386308(0xe5)]||0x1,_0x2c7213=_0x2e2a35['speed']||0x1,_0x46f705=_0x5c8298*_0x11640f*_0x2c7213;if(!isFinite(_0x46f705)||_0x46f705<=0x0){console[_0x386308(0xe9)]('Invalid\x20playback\x20rate\x20for\x20updating\x20long\x20sample:',_0x46f705);return;}const _0xab43fc=_0x74a956['currentTime'],_0x1323a8=_0xab43fc-_0x5c373d[_0x28e753][_0x386308(0x233)],_0x50c301=_0x1323a8*_0x5c373d[_0x28e753][_0x386308(0x172)][_0x386308(0x139)][_0x386308(0x143)]%_0x5c373d[_0x28e753][_0x386308(0x20f)];_0x5c373d[_0x28e753][_0x386308(0x172)]['playbackRate'][_0x386308(0x143)]=_0x46f705,_0x5c373d[_0x28e753]['loopStartTime']=_0xab43fc-_0x50c301/_0x46f705,_0x5c373d[_0x28e753][_0x386308(0x160)]===_0x386308(0x242)&&(_0x5c373d[_0x28e753][_0x386308(0x19e)]=_0x46f705),console[_0x386308(0x16d)](_0x386308(0xfd)+_0x28e753+'\x20long\x20tempo\x20updated:\x20loop\x20progress\x20'+_0x50c301/_0x5c373d[_0x28e753][_0x386308(0x20f)]+_0x386308(0x17c)+_0x11640f+'\x20and\x20speed\x20'+_0x2c7213);}function _0x20ca83(_0x242aee){const _0x189e57=_0x8683ed;_0x5c373d[_0x242aee][_0x189e57(0x13e)]&&(clearTimeout(_0x5c373d[_0x242aee][_0x189e57(0x13e)]),_0x5c373d[_0x242aee][_0x189e57(0x13e)]=null);if(_0x5c373d[_0x242aee][_0x189e57(0x172)])try{_0x5c373d[_0x242aee][_0x189e57(0xab)]&&_0x5c373d[_0x242aee][_0x189e57(0x172)][_0x189e57(0x270)]();_0x5c373d[_0x242aee][_0x189e57(0x172)][_0x189e57(0x203)](),_0x5c373d[_0x242aee][_0x189e57(0x172)]=null,_0x5c373d[_0x242aee][_0x189e57(0x22c)]=null;_0x5c373d[_0x242aee][_0x189e57(0x14d)]&&(_0x5c373d[_0x242aee][_0x189e57(0x14d)][_0x189e57(0x203)](),_0x5c373d[_0x242aee][_0x189e57(0x14d)]=null);_0x5c373d[_0x242aee][_0x189e57(0x171)]&&(_0x5c373d[_0x242aee][_0x189e57(0x171)][_0x189e57(0x203)](),_0x5c373d[_0x242aee][_0x189e57(0x171)]=null);_0x5c373d[_0x242aee]['reverbNode']&&(_0x5c373d[_0x242aee][_0x189e57(0xad)][_0x189e57(0x203)](),_0x5c373d[_0x242aee][_0x189e57(0xad)]=null);_0x5c373d[_0x242aee][_0x189e57(0x21a)]&&(_0x5c373d[_0x242aee][_0x189e57(0x21a)][_0x189e57(0x203)](),_0x5c373d[_0x242aee]['reverbMixNode']=null);_0x5c373d[_0x242aee][_0x189e57(0x287)]&&(_0x5c373d[_0x242aee][_0x189e57(0x287)][_0x189e57(0x203)](),_0x5c373d[_0x242aee]['wetPathNode']=null);_0x5c373d[_0x242aee][_0x189e57(0x1cf)]&&(_0x5c373d[_0x242aee]['dryPathNode'][_0x189e57(0x203)](),_0x5c373d[_0x242aee]['dryPathNode']=null);_0x5c373d[_0x242aee][_0x189e57(0x164)]&&(_0x5c373d[_0x242aee][_0x189e57(0x164)][_0x189e57(0x203)](),_0x5c373d[_0x242aee][_0x189e57(0x164)]=null);_0x5c373d[_0x242aee]['eqLowNode']&&(_0x5c373d[_0x242aee][_0x189e57(0x1dc)]['disconnect'](),_0x5c373d[_0x242aee][_0x189e57(0x1dc)]=null);_0x5c373d[_0x242aee][_0x189e57(0x1a5)]&&(_0x5c373d[_0x242aee][_0x189e57(0x1a5)][_0x189e57(0x203)](),_0x5c373d[_0x242aee][_0x189e57(0x1a5)]=null);_0x5c373d[_0x242aee][_0x189e57(0x1b1)]&&(_0x5c373d[_0x242aee][_0x189e57(0x1b1)]['disconnect'](),_0x5c373d[_0x242aee]['eqMidNode']=null);_0x5c373d[_0x242aee]['eqHighMidNode']&&(_0x5c373d[_0x242aee][_0x189e57(0x1f0)][_0x189e57(0x203)](),_0x5c373d[_0x242aee][_0x189e57(0x1f0)]=null);_0x5c373d[_0x242aee][_0x189e57(0x21b)]&&(_0x5c373d[_0x242aee][_0x189e57(0x21b)][_0x189e57(0x203)](),_0x5c373d[_0x242aee][_0x189e57(0x21b)]=null);_0x5c373d[_0x242aee][_0x189e57(0x9b)]&&(_0x5c373d[_0x242aee][_0x189e57(0x9b)][_0x189e57(0x203)](),_0x5c373d[_0x242aee][_0x189e57(0x9b)]=null);_0x5c373d[_0x242aee][_0x189e57(0x1a3)]&&(_0x5c373d[_0x242aee][_0x189e57(0x1a3)][_0x189e57(0x203)](),_0x5c373d[_0x242aee][_0x189e57(0x1a3)]=null);_0x5c373d[_0x242aee]['lfoNode']&&(_0x5c373d[_0x242aee]['lfoNode'][_0x189e57(0x203)](),_0x5c373d[_0x242aee][_0x189e57(0x277)]=null);_0x5c373d[_0x242aee][_0x189e57(0x1b0)]&&(_0x5c373d[_0x242aee][_0x189e57(0x1b0)]['disconnect'](),_0x5c373d[_0x242aee][_0x189e57(0x1b0)]=null);_0x5c373d[_0x242aee][_0x189e57(0x176)]&&(clearTimeout(_0x5c373d[_0x242aee][_0x189e57(0x176)]),_0x5c373d[_0x242aee][_0x189e57(0x176)]=null);if(_0x5c373d[_0x242aee][_0x189e57(0x101)])try{_0x5c373d[_0x242aee][_0x189e57(0x101)][_0x189e57(0x203)](),_0x5c373d[_0x242aee][_0x189e57(0x101)][_0x189e57(0x270)](),_0x5c373d[_0x242aee][_0x189e57(0x101)]=null;}catch(_0x4bb311){}_0x5c373d[_0x242aee][_0x189e57(0xcb)]&&(_0x5c373d[_0x242aee][_0x189e57(0xcb)][_0x189e57(0x203)](),_0x5c373d[_0x242aee][_0x189e57(0xcb)]=null),_0x5c373d[_0x242aee][_0x189e57(0x1a9)]&&(_0x5c373d[_0x242aee][_0x189e57(0x1a9)][_0x189e57(0x203)](),_0x5c373d[_0x242aee]['lfoFilter']=null),_0x5c373d[_0x242aee][_0x189e57(0x11a)]&&(_0x5c373d[_0x242aee][_0x189e57(0x11a)][_0x189e57(0x203)](),_0x5c373d[_0x242aee][_0x189e57(0x11a)]=null);}catch(_0x183a92){console['warn'](_0x189e57(0xf8),_0x183a92),_0x5c373d[_0x242aee]['source']=null,_0x5c373d[_0x242aee]['gainNode']=null;}_0x5c373d[_0x242aee][_0x189e57(0xab)]=![],_0x5c373d[_0x242aee][_0x189e57(0x10f)]=![];}function _0x4f10f2(){const _0x566ce1=_0x8683ed;if(!isFinite(_0x36c9bc)||_0x36c9bc<=0x0){console[_0x566ce1(0xe9)](_0x566ce1(0xa4),_0x36c9bc);return;}const _0x302d54=_0x36c9bc+_0x296ff3;_0x3bc151=0x3c/_0x302d54,_0x36de79=_0x3bc151*0x4;}function _0x3b4b4b(){const _0x14b4e3=_0x8683ed,_0x14d70f=_0x74a956['currentTime'];_0x14d70f>=_0x2a7e80['nextStartTime']&&(_0x2a7e80['startTime']=_0x2a7e80[_0x14b4e3(0x258)],_0x2a7e80[_0x14b4e3(0x258)]=_0x2a7e80[_0x14b4e3(0x1f9)]+_0x2a7e80[_0x14b4e3(0x263)]),_0x38ab75&&(_0x8792c7=setTimeout(_0x3b4b4b,_0x1b842e));}function _0x432fba(){const _0x4c8689=_0x8683ed;if(_0x203f51)return;_0x2f7b5f=_0x74a956[_0x4c8689(0x13a)](),_0x199e77[_0x4c8689(0xc1)](_0x2f7b5f),_0x45778e=new MediaRecorder(_0x2f7b5f[_0x4c8689(0x107)]),_0xbc94e0=[],_0x45778e['ondataavailable']=function(_0x3d3b85){const _0x51d23b=_0x4c8689;_0x3d3b85[_0x51d23b(0x257)]['size']>0x0&&_0xbc94e0[_0x51d23b(0x240)](_0x3d3b85[_0x51d23b(0x257)]);},_0x45778e['onstop']=function(){const _0x235a42=_0x4c8689;_0x5d687c=new Blob(_0xbc94e0,{'type':'audio/wav'}),_0x3d6f69[_0x235a42(0xa0)][_0x235a42(0xa7)]=_0x235a42(0x216);},_0x45778e[_0x4c8689(0x211)](),_0x203f51=!![],_0x1ee735=Date[_0x4c8689(0x220)](),_0x2e107e[_0x4c8689(0xec)]=_0x4c8689(0xd1),_0x2e107e[_0x4c8689(0xa6)][_0x4c8689(0xb3)](_0x4c8689(0x1fe)),_0x3d6f69[_0x4c8689(0xa0)][_0x4c8689(0xa7)]=_0x4c8689(0x216);}function _0x2baae8(){const _0x5d5f5b=_0x8683ed;if(!_0x203f51)return;_0x45778e['stop'](),_0x203f51=![],_0x245674=(Date['now']()-_0x1ee735)/0x3e8,_0x2e107e[_0x5d5f5b(0xec)]=_0x5d5f5b(0x1ff),_0x2e107e[_0x5d5f5b(0xa6)][_0x5d5f5b(0x1ab)]('recording'),_0x2f7b5f&&(_0x199e77['disconnect'](_0x2f7b5f),_0x2f7b5f=null);}_0x3ca38[_0x8683ed(0x215)](_0x8683ed(0x19d),function(){const _0x17bc20=_0x8683ed;_0x36c9bc=parseInt(this[_0x17bc20(0x143)]);if(!isFinite(_0x36c9bc)||_0x36c9bc<=0x0){console['error'](_0x17bc20(0x1c9),_0x36c9bc);return;}_0x47c5b6['textContent']=_0x36c9bc+_0x17bc20(0x1e3);_0x36c9bc>=0xf0?(_0x43be40[_0x17bc20(0x189)]=![],_0x43be40['style'][_0x17bc20(0x266)]='1'):(_0x43be40[_0x17bc20(0x189)]=!![],_0x43be40[_0x17bc20(0xa0)][_0x17bc20(0x266)]=_0x17bc20(0x12b),_0x296ff3=0x0,_0x43be40['value']=_0x17bc20(0xe8),_0x3d524d[_0x17bc20(0xec)]=_0x17bc20(0x193));_0x4f10f2(),_0x49dbac();for(let _0x4d4517=0x1;_0x4d4517<=0x64;_0x4d4517++){_0x5c373d[_0x4d4517][_0x17bc20(0x15d)]&&_0x5c373d[_0x4d4517]['buffer']&&_0x5c373d[_0x4d4517]['scheduledForNextBar']&&_0x5c373d[_0x4d4517]['isActive']&&_0x5c373d[_0x4d4517][_0x17bc20(0xab)]&&!_0x5c373d[_0x4d4517][_0x17bc20(0xcc)]&&_0x9a3f28(_0x4d4517);}}),_0x43be40[_0x8683ed(0x215)](_0x8683ed(0x19d),function(){const _0x378837=_0x8683ed;_0x296ff3=parseInt(this[_0x378837(0x143)])-0xf0;if(!isFinite(_0x296ff3)||_0x296ff3<0x0){console['error'](_0x378837(0x10e),_0x296ff3);return;}_0x3d524d[_0x378837(0xec)]=parseInt(this['value'])+_0x378837(0x1e3),_0x4f10f2(),_0x49dbac();for(let _0x12a359=0x1;_0x12a359<=0x64;_0x12a359++){_0x5c373d[_0x12a359][_0x378837(0x15d)]&&_0x5c373d[_0x12a359][_0x378837(0x20e)]&&_0x5c373d[_0x12a359][_0x378837(0xbd)]&&_0x5c373d[_0x12a359][_0x378837(0x11f)]&&_0x5c373d[_0x12a359][_0x378837(0xab)]&&!_0x5c373d[_0x12a359]['isLongSample']&&_0x9a3f28(_0x12a359);}}),_0x16268a[_0x8683ed(0x215)]('input',function(){const _0x3f5b7e=_0x8683ed;_0x5a68ac=parseInt(this[_0x3f5b7e(0x143)]);if(!isFinite(_0x5a68ac)||_0x5a68ac<=0x0){console[_0x3f5b7e(0xe9)](_0x3f5b7e(0x26b),_0x5a68ac);return;}_0x1a3d2d['textContent']=_0x5a68ac+_0x3f5b7e(0x1e3);for(let _0x33cf2e=0x1;_0x33cf2e<=0x64;_0x33cf2e++){_0x5c373d[_0x33cf2e]['button']&&_0x5c373d[_0x33cf2e]['buffer']&&_0x5c373d[_0x33cf2e]['scheduledForNextBar']&&_0x5c373d[_0x33cf2e][_0x3f5b7e(0x11f)]&&_0x5c373d[_0x33cf2e][_0x3f5b7e(0xab)]&&_0x5c373d[_0x33cf2e][_0x3f5b7e(0xcc)]&&_0x4d15e3(_0x33cf2e);}}),_0x3aabe8['addEventListener'](_0x8683ed(0x174),function(){const _0x54cbb7=_0x8683ed;_0x5b7482();if(!_0x38ab75){_0x38ab75=!![],_0x3aabe8[_0x54cbb7(0xec)]=_0x54cbb7(0xfa),_0x3aabe8[_0x54cbb7(0xa6)][_0x54cbb7(0xb3)](_0x54cbb7(0x244));_0x74a956[_0x54cbb7(0xe6)]===_0x54cbb7(0x16f)&&_0x74a956[_0x54cbb7(0x126)]()[_0x54cbb7(0xaf)](_0x24e3bf=>console[_0x54cbb7(0xe9)](_0x54cbb7(0xe7),_0x24e3bf));const _0x23ad84=_0x74a956[_0x54cbb7(0x246)];_0x2a7e80[_0x54cbb7(0x1f9)]=_0x23ad84,_0x2a7e80[_0x54cbb7(0x263)]=_0x36de79,_0x2a7e80[_0x54cbb7(0x258)]=_0x2a7e80[_0x54cbb7(0x1f9)]+_0x2a7e80[_0x54cbb7(0x263)];for(let _0xb051dd=0x1;_0xb051dd<=0x64;_0xb051dd++){_0x5c373d[_0xb051dd][_0x54cbb7(0x15d)]&&_0x5c373d[_0xb051dd][_0x54cbb7(0x20e)]&&_0x5c373d[_0xb051dd][_0x54cbb7(0xbd)]&&_0x5c373d[_0xb051dd][_0x54cbb7(0x11f)]&&(_0x5c373d[_0xb051dd][_0x54cbb7(0x13e)]&&(clearTimeout(_0x5c373d[_0xb051dd][_0x54cbb7(0x13e)]),_0x5c373d[_0xb051dd][_0x54cbb7(0x13e)]=null),_0x2cf7dd(_0xb051dd));}_0x3b4b4b();}else{_0x38ab75=![],_0x3aabe8[_0x54cbb7(0xec)]=_0x54cbb7(0x1dd),_0x3aabe8[_0x54cbb7(0xa6)][_0x54cbb7(0x1ab)](_0x54cbb7(0x244)),clearTimeout(_0x8792c7);for(let _0x1fe737=0x1;_0x1fe737<=0x64;_0x1fe737++){_0x20ca83(_0x1fe737);}}}),_0x2e107e[_0x8683ed(0x215)](_0x8683ed(0x174),function(){_0x203f51?_0x2baae8():_0x432fba();}),_0x3d6f69[_0x8683ed(0x215)](_0x8683ed(0x174),function(){const _0x158bba=_0x8683ed;if(_0x5d687c){const _0x94d3a6=URL[_0x158bba(0x291)](_0x5d687c),_0x4290fe=document[_0x158bba(0xf4)]('a');_0x4290fe[_0x158bba(0x1fc)]=_0x94d3a6,_0x4290fe['download']=_0x158bba(0x22e)+new Date()['toISOString']()[_0x158bba(0xfc)](0x0,0x13)['replace'](/:/g,'-')+_0x158bba(0x1e7),_0x4290fe[_0x158bba(0x174)](),URL[_0x158bba(0x187)](_0x94d3a6);}});let _0x280167=0x1,_0x599493=0x0;function _0x3af9aa(){const _0x3a801e=_0x8683ed;document[_0x3a801e(0x156)](_0x3a801e(0x1f7))['textContent']=Math[_0x3a801e(0xb6)](_0x280167*0x64)+'%';}function _0x47e734(){const _0x5d500f=_0x8683ed,_0x3b65c0=document[_0x5d500f(0x1cd)]('.piano-roll-grid');if(!_0x3b65c0)return;const _0x4dfa1f=0x14,_0x4697ba=_0x4dfa1f*_0x280167,_0x5847d0=document['getElementById'](_0x5d500f(0x23a))[_0x5d500f(0xec)];_0x3b65c0['style']['gridTemplateColumns']='repeat('+_0x5847d0+',\x20'+_0x4697ba+_0x5d500f(0x158);const _0x2f7313=document['querySelector'](_0x5d500f(0x1a0));_0x2f7313&&(_0x2f7313[_0x5d500f(0xa0)]['width']=_0x5847d0*_0x4697ba+'px');}function _0x2be34a(){const _0x56c845=_0x8683ed,_0x39c1ec=document['getElementById']('zoom-decrease'),_0x5c6bda=document['getElementById']('zoom-increase'),_0x415d6d=document['getElementById'](_0x56c845(0x217));_0x39c1ec&&_0x39c1ec[_0x56c845(0x215)](_0x56c845(0x174),function(){_0x280167>0.5&&(_0x280167-=0.25,_0x3af9aa(),_0x47e734());}),_0x5c6bda&&_0x5c6bda[_0x56c845(0x215)]('click',function(){_0x280167<0x4&&(_0x280167+=0.25,_0x3af9aa(),_0x47e734());}),_0x415d6d&&_0x415d6d[_0x56c845(0x215)](_0x56c845(0x174),function(){const _0x3c43a9=_0x56c845;_0x280167=0x1,_0x3af9aa(),_0x47e734();const _0x5d1bdd=document[_0x3c43a9(0x1cd)](_0x3c43a9(0x15a));_0x5d1bdd&&(_0x5d1bdd[_0x3c43a9(0x250)]=0x0);});}function _0xb611ee(){const _0x1ab31f=_0x8683ed;if(!_0x502895)return;const _0x292c64=_0x502895>0x3c;!_0x33e0cd[_0x502895]&&(_0x33e0cd[_0x502895]={'notes':[],'soundSource':_0x1ab31f(0xbf),'gridWidth':_0x292c64?0x20:0x10,'gridHeight':0x54,'scrollX':0x0,'scrollY':0x0,'sampleRange':{'start':0x0,'end':0x64},'filters':{'lowShelf':0x0,'highShelf':0x0,'lowMid':0x0,'mid':0x0,'highMid':0x0,'delay':{'time':0x0,'feedback':0x0}},'isEnabled':![]});_0x2be34a(),_0x280167=0x1,_0x3af9aa();const _0x46b65c=document[_0x1ab31f(0x1cd)](_0x1ab31f(0x27c)),_0x549028=document[_0x1ab31f(0x1cd)](_0x1ab31f(0x26e)),_0x31a591=document[_0x1ab31f(0x156)]('piano-roll-sound-source'),_0x3941ed=document[_0x1ab31f(0x156)](_0x1ab31f(0x173)),_0x49d6eb=document[_0x1ab31f(0x156)](_0x1ab31f(0xf1)),_0x4ed1c7=document[_0x1ab31f(0x156)](_0x1ab31f(0x17e)),_0x5e0d86=document['getElementById'](_0x1ab31f(0x23a));_0x46b65c[_0x1ab31f(0x199)]='',_0x549028[_0x1ab31f(0x199)]='';const _0x3157e7=_0x33e0cd[_0x502895];_0x5e0d86[_0x1ab31f(0xec)]=_0x3157e7[_0x1ab31f(0x1ad)],_0x47e734();const _0x2a1ae6=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x25fcf8=0x7;for(let _0x335714=_0x25fcf8-0x1;_0x335714>=0x0;_0x335714--){for(let _0x1dbc72=0x0;_0x1dbc72<0xc;_0x1dbc72++){const _0x3e7997=document[_0x1ab31f(0xf4)](_0x1ab31f(0x12f));_0x3e7997[_0x1ab31f(0xc5)]='piano-key\x20'+(_0x2a1ae6[_0x1dbc72]['includes']('#')?_0x1ab31f(0x202):'white'),_0x3e7997[_0x1ab31f(0xec)]=_0x2a1ae6[_0x1dbc72]+_0x335714,_0x3e7997['dataset'][_0x1ab31f(0x23b)]=_0x2a1ae6[_0x1dbc72],_0x3e7997[_0x1ab31f(0x119)][_0x1ab31f(0x27b)]=_0x335714,_0x3e7997[_0x1ab31f(0x215)](_0x1ab31f(0x174),function(){_0x373f13(_0x2a1ae6[_0x1dbc72],_0x335714);}),_0x46b65c[_0x1ab31f(0x238)](_0x3e7997);}}for(let _0x1764af=_0x3157e7[_0x1ab31f(0x18c)]-0x1;_0x1764af>=0x0;_0x1764af--){for(let _0x29bb24=0x0;_0x29bb24<_0x3157e7[_0x1ab31f(0x1ad)];_0x29bb24++){const _0x1fad10=document[_0x1ab31f(0xf4)]('div');_0x1fad10[_0x1ab31f(0xc5)]=_0x1ab31f(0x1fb);_0x29bb24%0x4===0x0&&_0x1fad10[_0x1ab31f(0xa6)][_0x1ab31f(0xb3)]('bar-start');(_0x29bb24+0x1)%0x4===0x0&&_0x1fad10[_0x1ab31f(0xa6)][_0x1ab31f(0xb3)](_0x1ab31f(0x14b));_0x1fad10[_0x1ab31f(0x119)]['row']=_0x1764af,_0x1fad10['dataset'][_0x1ab31f(0x1b5)]=_0x29bb24;const _0x424dca=_0x3157e7[_0x1ab31f(0x1d8)][_0x1ab31f(0x24a)](_0x3caa3c=>_0x3caa3c[_0x1ab31f(0x99)]===_0x1764af&&_0x3caa3c[_0x1ab31f(0x1b5)]<=_0x29bb24&&_0x29bb24<_0x3caa3c[_0x1ab31f(0x1b5)]+(_0x3caa3c[_0x1ab31f(0xee)]||0x1)),_0x575aeb=_0x3157e7['notes'][_0x1ab31f(0x24a)](_0x133303=>_0x133303[_0x1ab31f(0x99)]===_0x1764af&&_0x133303[_0x1ab31f(0x1b5)]===_0x29bb24);_0x424dca&&(_0x1fad10[_0x1ab31f(0xa6)]['add'](_0x1ab31f(0x25d)),!_0x575aeb&&_0x1fad10[_0x1ab31f(0xa6)][_0x1ab31f(0xb3)](_0x1ab31f(0x231))),_0x1fad10[_0x1ab31f(0x215)](_0x1ab31f(0x174),function(){_0xfff4f4(_0x1764af,_0x29bb24);}),_0x549028['appendChild'](_0x1fad10);}}_0x31a591[_0x1ab31f(0x143)]=_0x3157e7[_0x1ab31f(0x298)],_0x3941ed['value']=_0x1f9720,_0x31a591[_0x1ab31f(0x215)]('change',function(){const _0x24bfca=_0x1ab31f;_0x3157e7['soundSource']=this[_0x24bfca(0x143)],this[_0x24bfca(0x143)]===_0x24bfca(0x117)&&_0x428737();}),_0x3941ed[_0x1ab31f(0x215)](_0x1ab31f(0x1e0),function(){_0x1f9720=parseFloat(this['value']);}),_0x49d6eb['addEventListener'](_0x1ab31f(0x174),function(){const _0x2e911b=_0x1ab31f;if(_0x3157e7['gridWidth']>0x4){_0x3157e7['gridWidth']/=0x2,_0x5e0d86['textContent']=_0x3157e7[_0x2e911b(0x1ad)],_0x47e734(),_0x549028[_0x2e911b(0x199)]='';for(let _0x3fd5e2=_0x3157e7[_0x2e911b(0x18c)]-0x1;_0x3fd5e2>=0x0;_0x3fd5e2--){for(let _0x122bfe=0x0;_0x122bfe<_0x3157e7['gridWidth'];_0x122bfe++){const _0x4cff27=document[_0x2e911b(0xf4)](_0x2e911b(0x12f));_0x4cff27['className']=_0x2e911b(0x1fb);_0x122bfe%0x4===0x0&&_0x4cff27[_0x2e911b(0xa6)][_0x2e911b(0xb3)](_0x2e911b(0x166));(_0x122bfe+0x1)%0x4===0x0&&_0x4cff27[_0x2e911b(0xa6)][_0x2e911b(0xb3)](_0x2e911b(0x14b));_0x4cff27['dataset'][_0x2e911b(0x99)]=_0x3fd5e2,_0x4cff27[_0x2e911b(0x119)][_0x2e911b(0x1b5)]=_0x122bfe;const _0x5d9ee4=_0x3157e7[_0x2e911b(0x1d8)]['some'](_0x44ea8e=>_0x44ea8e[_0x2e911b(0x99)]===_0x3fd5e2&&_0x44ea8e[_0x2e911b(0x1b5)]<=_0x122bfe&&_0x122bfe<_0x44ea8e[_0x2e911b(0x1b5)]+(_0x44ea8e['length']||0x1)),_0x417653=_0x3157e7['notes'][_0x2e911b(0x24a)](_0x254d02=>_0x254d02[_0x2e911b(0x99)]===_0x3fd5e2&&_0x254d02['col']===_0x122bfe);_0x5d9ee4&&(_0x4cff27[_0x2e911b(0xa6)][_0x2e911b(0xb3)](_0x2e911b(0x25d)),!_0x417653&&_0x4cff27[_0x2e911b(0xa6)][_0x2e911b(0xb3)](_0x2e911b(0x231))),_0x4cff27[_0x2e911b(0x215)](_0x2e911b(0x174),function(){_0xfff4f4(_0x3fd5e2,_0x122bfe);}),_0x549028[_0x2e911b(0x238)](_0x4cff27);}}}}),_0x4ed1c7[_0x1ab31f(0x215)]('click',function(){const _0x400c2c=_0x1ab31f;if(_0x3157e7[_0x400c2c(0x1ad)]<0x80){_0x3157e7['gridWidth']*=0x2,_0x5e0d86['textContent']=_0x3157e7['gridWidth'],_0x47e734(),_0x549028[_0x400c2c(0x199)]='';for(let _0x4bf111=_0x3157e7[_0x400c2c(0x18c)]-0x1;_0x4bf111>=0x0;_0x4bf111--){for(let _0x16ee03=0x0;_0x16ee03<_0x3157e7[_0x400c2c(0x1ad)];_0x16ee03++){const _0x5e75d0=document['createElement'](_0x400c2c(0x12f));_0x5e75d0['className']=_0x400c2c(0x1fb);_0x16ee03%0x4===0x0&&_0x5e75d0[_0x400c2c(0xa6)]['add'](_0x400c2c(0x166));(_0x16ee03+0x1)%0x4===0x0&&_0x5e75d0[_0x400c2c(0xa6)]['add']('bar-end');_0x5e75d0[_0x400c2c(0x119)][_0x400c2c(0x99)]=_0x4bf111,_0x5e75d0['dataset'][_0x400c2c(0x1b5)]=_0x16ee03;const _0x10ac84=_0x3157e7[_0x400c2c(0x1d8)][_0x400c2c(0x24a)](_0x15abd5=>_0x15abd5[_0x400c2c(0x99)]===_0x4bf111&&_0x15abd5[_0x400c2c(0x1b5)]<=_0x16ee03&&_0x16ee03<_0x15abd5[_0x400c2c(0x1b5)]+(_0x15abd5[_0x400c2c(0xee)]||0x1)),_0x1b97f7=_0x3157e7[_0x400c2c(0x1d8)][_0x400c2c(0x24a)](_0x23025f=>_0x23025f[_0x400c2c(0x99)]===_0x4bf111&&_0x23025f['col']===_0x16ee03);_0x10ac84&&(_0x5e75d0[_0x400c2c(0xa6)][_0x400c2c(0xb3)]('active'),!_0x1b97f7&&_0x5e75d0['classList']['add'](_0x400c2c(0x231))),_0x5e75d0[_0x400c2c(0x215)](_0x400c2c(0x174),function(){_0xfff4f4(_0x4bf111,_0x16ee03);}),_0x549028[_0x400c2c(0x238)](_0x5e75d0);}}}});const _0x485765=document[_0x1ab31f(0x156)](_0x1ab31f(0x142)),_0x397e44=document[_0x1ab31f(0x156)]('piano-roll-stop-btn'),_0x5ae529=document[_0x1ab31f(0x156)](_0x1ab31f(0x127));_0x485765['replaceWith'](_0x485765[_0x1ab31f(0x125)](!![])),_0x397e44[_0x1ab31f(0x197)](_0x397e44[_0x1ab31f(0x125)](!![])),_0x5ae529[_0x1ab31f(0x197)](_0x5ae529[_0x1ab31f(0x125)](!![]));const _0x1150fb=document[_0x1ab31f(0x156)]('piano-roll-preview-btn'),_0x11a3d3=document['getElementById'](_0x1ab31f(0x235)),_0x50753f=document['getElementById'](_0x1ab31f(0x127));_0x1150fb[_0x1ab31f(0x215)](_0x1ab31f(0x174),_0x53fb4c),_0x11a3d3['addEventListener'](_0x1ab31f(0x174),_0x46527c),_0x50753f['addEventListener'](_0x1ab31f(0x174),function(){_0x320eb4(),_0x46527c();}),_0x28d869();}function _0x28d869(){const _0x25914e=_0x8683ed;if(!_0x502895)return;_0x3eb048=document[_0x25914e(0x156)](_0x25914e(0xb7)),_0xaba507=_0x3eb048['getContext']('2d');const _0x41e41f=_0x3eb048[_0x25914e(0x28d)];_0x3eb048[_0x25914e(0x29b)]=_0x41e41f['clientWidth'],_0x3eb048[_0x25914e(0x115)]=_0x41e41f[_0x25914e(0x1bc)],_0x2cdff9&&(cancelAnimationFrame(_0x2cdff9),_0x2cdff9=null),_0x3847ea=[],_0x5cff01();}function _0x5cff01(){const _0x210515=_0x8683ed;if(!_0x3eb048||!_0xaba507)return;const _0x31a5ef=_0x3eb048['width'],_0x1de3d7=_0x3eb048[_0x210515(0x115)];_0xaba507[_0x210515(0x274)]=_0x210515(0x2a5),_0xaba507[_0x210515(0x232)](0x0,0x0,_0x31a5ef,_0x1de3d7);if(_0x3847ea[_0x210515(0xee)]>0x0){const _0x1a8d77=_0xaba507[_0x210515(0x24e)](0x0,_0x1de3d7,0x0,0x0);_0x1a8d77[_0x210515(0x1be)](0x0,_0x210515(0x294)),_0x1a8d77['addColorStop'](0.1,'rgba(0,\x20191,\x20255,\x200.95)'),_0x1a8d77[_0x210515(0x1be)](0.3,_0x210515(0x1ae)),_0x1a8d77['addColorStop'](0.5,_0x210515(0x2ac)),_0x1a8d77['addColorStop'](0.7,_0x210515(0x252)),_0x1a8d77[_0x210515(0x1be)](0.9,_0x210515(0x10c)),_0x1a8d77['addColorStop'](0x1,_0x210515(0x18a));const _0x2d48d5=_0x31a5ef/_0x51c490;for(let _0x4abf1c=0x0;_0x4abf1c<_0x3847ea[_0x210515(0xee)];_0x4abf1c++){const _0x32a2fb=_0x3847ea[_0x4abf1c],_0x24148a=_0x4abf1c*_0x2d48d5,_0x153c1a=0.4+_0x4abf1c/_0x3847ea[_0x210515(0xee)]*0.6;_0xaba507['beginPath'](),_0xaba507[_0x210515(0x285)](_0x24148a,_0x1de3d7);const _0x2353cf=_0x74a956[_0x210515(0x118)]/0x2,_0x41c291=Math['log10'](0x14),_0x2bf4f1=Math[_0x210515(0x296)](_0x2353cf);for(let _0xb1da5c=0x0;_0xb1da5c<_0x32a2fb[_0x210515(0xee)];_0xb1da5c++){const _0x4b6deb=_0xb1da5c*_0x2353cf/_0x32a2fb['length'],_0x3fd923=Math[_0x210515(0x296)](Math[_0x210515(0x169)](0x14,_0x4b6deb)),_0xdcfa53=(_0x3fd923-_0x41c291)/(_0x2bf4f1-_0x41c291),_0x2e5eff=_0x1de3d7-_0xdcfa53*_0x1de3d7,_0xd3c524=_0x32a2fb[_0xb1da5c]/0xff,_0x113417=Math['pow'](_0xd3c524,0.4),_0x45ec36=_0x113417*_0x1de3d7*0.8;_0xaba507[_0x210515(0x2a9)](_0x24148a,_0x2e5eff-_0x45ec36);}_0xaba507[_0x210515(0x2a9)](_0x24148a+_0x2d48d5,_0x1de3d7),_0xaba507[_0x210515(0x275)](),_0xaba507[_0x210515(0x135)]=_0x153c1a,_0xaba507[_0x210515(0x274)]=_0x1a8d77,_0xaba507[_0x210515(0x26a)]();}_0xaba507[_0x210515(0x135)]=0x1;if(_0x3847ea[_0x210515(0xee)]>0x0){const _0x308944=_0x3847ea[_0x3847ea[_0x210515(0xee)]-0x1];_0xaba507['strokeStyle']=_0x210515(0x281),_0xaba507[_0x210515(0x175)]=0x2,_0xaba507[_0x210515(0x17f)]();const _0x1a5eb7=_0x74a956[_0x210515(0x118)]/0x2,_0x28394c=Math['log10'](0x14),_0x393f89=Math[_0x210515(0x296)](_0x1a5eb7);for(let _0x28ddfe=0x0;_0x28ddfe<_0x308944[_0x210515(0xee)];_0x28ddfe++){const _0x48f54d=_0x28ddfe*_0x1a5eb7/_0x308944[_0x210515(0xee)],_0x2337e2=Math[_0x210515(0x296)](Math[_0x210515(0x169)](0x14,_0x48f54d)),_0x457516=(_0x2337e2-_0x28394c)/(_0x393f89-_0x28394c),_0x1e4915=_0x457516*_0x31a5ef,_0x2027f4=_0x308944[_0x28ddfe]/0xff,_0x4cf837=Math[_0x210515(0x254)](_0x2027f4,0.4),_0x575d14=_0x1de3d7-_0x4cf837*_0x1de3d7*0.8;_0x28ddfe===0x0?_0xaba507['moveTo'](_0x1e4915,_0x575d14):_0xaba507[_0x210515(0x2a9)](_0x1e4915,_0x575d14);}_0xaba507[_0x210515(0x27e)]();}}}function _0x5ea3d1(){const _0xf4bf93=_0x8683ed;if(!_0x468b3c)return;const _0x2498ea=_0x468b3c[_0xf4bf93(0x19b)],_0x223204=new Uint8Array(_0x2498ea);function _0x597290(){const _0xa2e847=_0xf4bf93;_0x2cdff9=requestAnimationFrame(_0x597290),_0x468b3c['getByteFrequencyData'](_0x223204),_0x3847ea[_0xa2e847(0x240)]([..._0x223204]),_0x3847ea['length']>_0x51c490&&_0x3847ea[_0xa2e847(0x14f)](),_0x5cff01();}_0x597290();}function _0x5e5982(){_0x2cdff9&&(cancelAnimationFrame(_0x2cdff9),_0x2cdff9=null),_0x3847ea=[],_0x5cff01();}function _0x373f13(_0x20abb3,_0x349518){const _0x34b5e1=_0x8683ed,_0x136f18=_0x49984e(_0x20abb3,_0x349518),_0x193239=_0x74a956[_0x34b5e1(0x276)]();_0x193239[_0x34b5e1(0x209)]=_0x34b5e1(0x261);const _0x2058ce=_0x74a956[_0x34b5e1(0xe4)]();_0x193239[_0x34b5e1(0xc1)](_0x2058ce),_0x2058ce[_0x34b5e1(0xc1)](_0x199e77),_0x193239[_0x34b5e1(0x181)][_0x34b5e1(0x143)]=_0x136f18;const _0x4ce6bf=_0x74a956['currentTime'],_0x394c9d=0.01,_0x4743db=0.1,_0x3094f4=0.7;_0x2058ce[_0x34b5e1(0x95)][_0x34b5e1(0x26f)](0x0,_0x4ce6bf),_0x2058ce[_0x34b5e1(0x95)]['linearRampToValueAtTime'](0x1,_0x4ce6bf+_0x394c9d),_0x2058ce[_0x34b5e1(0x95)][_0x34b5e1(0x129)](_0x3094f4,_0x4ce6bf+_0x394c9d+_0x4743db),_0x2058ce[_0x34b5e1(0x95)][_0x34b5e1(0x129)](0x0,_0x4ce6bf+_0x394c9d+_0x4743db+releaseTime),_0x193239[_0x34b5e1(0x211)](_0x4ce6bf),_0x193239[_0x34b5e1(0x270)](_0x4ce6bf+_0x394c9d+_0x4743db+releaseTime);}function _0xfff4f4(_0x1e024f,_0x5f25af){const _0xd889a3=_0x8683ed;if(!_0x502895)return;const _0x47e4d0=_0x33e0cd[_0x502895],_0x3bc9ec=_0x47e4d0[_0xd889a3(0x1d8)][_0xd889a3(0x12a)](_0xa6341b=>_0xa6341b[_0xd889a3(0x99)]===_0x1e024f&&_0xa6341b[_0xd889a3(0x1b5)]===_0x5f25af);if(_0x3bc9ec!==-0x1){const _0x31cb9f=_0x47e4d0[_0xd889a3(0x1d8)][_0x3bc9ec];for(let _0x5d1c54=_0x5f25af;_0x5d1c54<_0x5f25af+(_0x31cb9f[_0xd889a3(0xee)]||0x1);_0x5d1c54++){const _0x7bcf5b=document[_0xd889a3(0x1cd)](_0xd889a3(0x1f2)+_0x1e024f+_0xd889a3(0x1e6)+_0x5d1c54+'\x22]');_0x7bcf5b&&_0x7bcf5b[_0xd889a3(0xa6)][_0xd889a3(0x1ab)]('active',_0xd889a3(0x231));}_0x47e4d0[_0xd889a3(0x1d8)][_0xd889a3(0x1df)](_0x3bc9ec,0x1);}else{const _0x7fc7d7=_0x1f9720,_0x237a78={'row':_0x1e024f,'col':_0x5f25af,'length':_0x7fc7d7};_0x47e4d0[_0xd889a3(0x1d8)][_0xd889a3(0x240)](_0x237a78);for(let _0x5ac96=_0x5f25af;_0x5ac96<_0x5f25af+_0x7fc7d7;_0x5ac96++){const _0x58cffa=document[_0xd889a3(0x1cd)]('.piano-roll-cell[data-row=\x22'+_0x1e024f+_0xd889a3(0x1e6)+_0x5ac96+'\x22]');_0x58cffa&&(_0x58cffa['classList'][_0xd889a3(0xb3)](_0xd889a3(0x25d)),_0x5ac96>_0x5f25af&&_0x58cffa[_0xd889a3(0xa6)][_0xd889a3(0xb3)]('note-long'));}}}function _0x320eb4(){const _0x3b4441=_0x8683ed;if(!_0x502895)return;const _0x4293ac=_0x33e0cd[_0x502895];_0x4293ac[_0x3b4441(0x1d8)]=[];const _0x259b57=document[_0x3b4441(0x1de)]('.piano-roll-cell.active');_0x259b57[_0x3b4441(0x278)](_0x11cc41=>{const _0x346619=_0x3b4441;_0x11cc41[_0x346619(0xa6)][_0x346619(0x1ab)]('active',_0x346619(0x231));});}function _0x53fb4c(){const _0x31365f=_0x8683ed;if(!_0x502895||_0x264a48)return;_0x264a48=!![],_0x1b952a=_0x502895;const _0xf0335d=_0x33e0cd[_0x502895],_0x4f358e=[..._0xf0335d[_0x31365f(0x1d8)]][_0x31365f(0x25e)]((_0x406e3d,_0x278a11)=>_0x406e3d[_0x31365f(0x1b5)]-_0x278a11['col']);if(_0x4f358e[_0x31365f(0xee)]===0x0)return;_0x74a956[_0x31365f(0xe6)]===_0x31365f(0x16f)&&_0x74a956[_0x31365f(0x126)]()['catch'](_0x521921=>console[_0x31365f(0xe9)]('Error\x20resuming\x20audio\x20context:',_0x521921));const _0x2142fe=_0xf0335d[_0x31365f(0x298)],_0xebd17e=_0x502895>0x3c;let _0x4d384c,_0xdf4547;if(_0xebd17e)_0x4d384c=0x3c/_0x5a68ac,_0xdf4547=_0x4d384c*0x4;else{const _0x2b6140=_0x36c9bc+_0x296ff3;_0x4d384c=0x3c/_0x2b6140,_0xdf4547=_0x4d384c*0x4;}const _0x21316b=_0xdf4547/0x10,_0x20b995=_0x74a956[_0x31365f(0xe4)](),_0x2a1de5=_0x74a956[_0x31365f(0x1b9)]();_0x2a1de5[_0x31365f(0x209)]=_0x31365f(0x27a),_0x2a1de5[_0x31365f(0x181)][_0x31365f(0x143)]=0xc8,_0x2a1de5[_0x31365f(0x95)][_0x31365f(0x143)]=_0xf0335d[_0x31365f(0xac)]['lowShelf']||0x0;const _0x317bbf=_0x74a956[_0x31365f(0x1b9)]();_0x317bbf['type']=_0x31365f(0xbb),_0x317bbf[_0x31365f(0x181)][_0x31365f(0x143)]=0x1f4,_0x317bbf['Q'][_0x31365f(0x143)]=0x1,_0x317bbf['gain'][_0x31365f(0x143)]=_0xf0335d[_0x31365f(0xac)][_0x31365f(0x17b)]||0x0;const _0x54ec37=_0x74a956[_0x31365f(0x1b9)]();_0x54ec37[_0x31365f(0x209)]=_0x31365f(0xbb),_0x54ec37[_0x31365f(0x181)][_0x31365f(0x143)]=0x5dc,_0x54ec37['Q'][_0x31365f(0x143)]=0x1,_0x54ec37[_0x31365f(0x95)][_0x31365f(0x143)]=_0xf0335d[_0x31365f(0xac)]['mid']||0x0;const _0x44af1d=_0x74a956[_0x31365f(0x1b9)]();_0x44af1d['type']=_0x31365f(0xbb),_0x44af1d[_0x31365f(0x181)][_0x31365f(0x143)]=0xfa0,_0x44af1d['Q'][_0x31365f(0x143)]=0x1,_0x44af1d[_0x31365f(0x95)][_0x31365f(0x143)]=_0xf0335d['filters'][_0x31365f(0x190)]||0x0;const _0xeb0411=_0x74a956['createBiquadFilter']();_0xeb0411[_0x31365f(0x209)]=_0x31365f(0xd2),_0xeb0411[_0x31365f(0x181)]['value']=0x1f40,_0xeb0411[_0x31365f(0x95)][_0x31365f(0x143)]=_0xf0335d[_0x31365f(0xac)]['highShelf']||0x0;const _0x563914=_0x74a956[_0x31365f(0x1b7)](0x1);_0x563914[_0x31365f(0xcf)][_0x31365f(0x143)]=(_0xf0335d[_0x31365f(0xac)][_0x31365f(0x265)][_0x31365f(0x114)]||0x0)/0x3e8;const _0x45495e=_0x74a956['createGain']();_0x45495e[_0x31365f(0x95)][_0x31365f(0x143)]=(_0xf0335d[_0x31365f(0xac)][_0x31365f(0x265)][_0x31365f(0x26c)]||0x0)/0x64,_0x20b995[_0x31365f(0xc1)](_0x2a1de5),_0x2a1de5['connect'](_0x317bbf),_0x317bbf[_0x31365f(0xc1)](_0x54ec37),_0x54ec37[_0x31365f(0xc1)](_0x44af1d),_0x44af1d[_0x31365f(0xc1)](_0xeb0411),_0xeb0411[_0x31365f(0xc1)](_0x563914),_0x563914[_0x31365f(0xc1)](_0x45495e),_0x45495e[_0x31365f(0xc1)](_0x563914),_0x563914[_0x31365f(0xc1)](_0x74a956[_0x31365f(0x22f)]),_0x468b3c=_0x74a956[_0x31365f(0x134)](),_0x468b3c[_0x31365f(0x289)]=0x1000,_0x468b3c['smoothingTimeConstant']=0.7,_0x563914[_0x31365f(0xc1)](_0x468b3c),_0x20c192={'lowShelf':_0x2a1de5,'lowMid':_0x317bbf,'mid':_0x54ec37,'highMid':_0x44af1d,'highShelf':_0xeb0411,'delay':_0x563914,'delayFeedback':_0x45495e};const _0x565ffd=_0xf0335d['gridWidth']*_0x21316b;_0x2d80c4[_0x502895]={'gain':_0x20b995,'loopDuration':_0x565ffd,'sixteenthDuration':_0x21316b,'soundSource':_0x2142fe,'sampleRange':_0xf0335d['sampleRange'],'filters':_0xf0335d[_0x31365f(0xac)]},_0x5ea3d1(),_0x408935();}function _0x408935(){const _0x125842=_0x8683ed;if(!_0x264a48||!_0x1b952a||!_0x2d80c4[_0x1b952a])return;const _0x4c59a3=_0x2d80c4[_0x1b952a],_0x1040d0=_0x74a956[_0x125842(0x246)],_0x3d80e1=_0x33e0cd[_0x1b952a][_0x125842(0x1d8)],_0xf08e84=[..._0x3d80e1][_0x125842(0x25e)]((_0x1287e2,_0x1fe54f)=>_0x1287e2[_0x125842(0x1b5)]-_0x1fe54f[_0x125842(0x1b5)]);_0xf08e84[_0x125842(0x278)](_0x43446a=>{const _0x44b489=_0x125842,_0x7a1ef2=_0x1040d0+_0x43446a[_0x44b489(0x1b5)]*_0x4c59a3[_0x44b489(0x15e)],_0x4b7eec=(_0x43446a['length']||0x1)*_0x4c59a3['sixteenthDuration'];if(_0x4c59a3[_0x44b489(0x298)]===_0x44b489(0xbf))_0xbc4123(_0x43446a[_0x44b489(0x99)],_0x7a1ef2,_0x4b7eec,_0x4c59a3[_0x44b489(0x95)]);else{if(_0x4c59a3[_0x44b489(0x298)]==='synth')_0x46a859(_0x43446a['row'],_0x7a1ef2,_0x4b7eec,_0x4c59a3[_0x44b489(0x95)]);else{if(_0x4c59a3[_0x44b489(0x298)]===_0x44b489(0x10b))_0x59f481(_0x43446a[_0x44b489(0x99)],_0x7a1ef2,_0x4b7eec,_0x4c59a3[_0x44b489(0x95)]);else{if(_0x4c59a3['soundSource']===_0x44b489(0x14e))_0x4b22c6(_0x43446a[_0x44b489(0x99)],_0x7a1ef2,_0x4b7eec,_0x4c59a3['gain']);else{if(_0x4c59a3[_0x44b489(0x298)]===_0x44b489(0x13b))_0x3a5f55(_0x43446a[_0x44b489(0x99)],_0x7a1ef2,_0x4b7eec,_0x4c59a3[_0x44b489(0x95)]);else{if(_0x4c59a3[_0x44b489(0x298)]===_0x44b489(0x268))_0x16a2b2(_0x43446a[_0x44b489(0x99)],_0x7a1ef2,_0x4b7eec,_0x4c59a3['gain']);else _0x4c59a3['soundSource']===_0x44b489(0xd9)?_0x56f3c5(_0x43446a['row'],_0x7a1ef2,_0x4b7eec,_0x4c59a3[_0x44b489(0x95)]):_0x4de1c4(_0x43446a[_0x44b489(0x99)],_0x7a1ef2,_0x4b7eec,_0x4c59a3[_0x44b489(0x95)],_0x1b952a,_0x4c59a3[_0x44b489(0x151)]);}}}}}}),_0x16e8a8=setTimeout(()=>{_0x264a48&&_0x1b952a&&_0x408935();},_0x4c59a3[_0x125842(0x20f)]*0x3e8);}function _0xbc4123(_0x51560c,_0x42b0e6,_0x42c2f1,_0x389edb){const _0x4061cc=_0x8683ed,_0x5dd7ce=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x43418f=_0x51560c%0xc,_0x55464b=Math['floor'](_0x51560c/0xc),_0x32e6b7=_0x5dd7ce[_0x43418f],_0x40c829=_0x49984e(_0x32e6b7,_0x55464b),_0x494fa5=_0x74a956['createOscillator']();_0x494fa5[_0x4061cc(0x209)]=_0x4061cc(0x261);const _0x4aa414=_0x74a956[_0x4061cc(0xe4)]();_0x494fa5[_0x4061cc(0xc1)](_0x4aa414),_0x4aa414[_0x4061cc(0xc1)](_0x389edb),_0x494fa5[_0x4061cc(0x181)][_0x4061cc(0x143)]=_0x40c829;const _0x1fbbd8=_0x42b0e6,_0x1b2d5e=0.01,_0x40f6b4=0.1,_0x12e6b4=0.7;_0x4aa414[_0x4061cc(0x95)][_0x4061cc(0x26f)](0x0,_0x1fbbd8),_0x4aa414[_0x4061cc(0x95)][_0x4061cc(0x129)](0x1,_0x1fbbd8+_0x1b2d5e),_0x4aa414[_0x4061cc(0x95)][_0x4061cc(0x129)](_0x12e6b4,_0x1fbbd8+_0x1b2d5e+_0x40f6b4),_0x4aa414[_0x4061cc(0x95)][_0x4061cc(0x129)](0x0,_0x1fbbd8+_0x42c2f1),_0x494fa5[_0x4061cc(0x211)](_0x1fbbd8),_0x494fa5[_0x4061cc(0x270)](_0x1fbbd8+_0x42c2f1);}function _0x46a859(_0x51e55c,_0x58ae3f,_0x26f257,_0x525b3c){const _0x5588db=_0x8683ed,_0x39eaf8=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x230701=_0x51e55c%0xc,_0x177997=Math['floor'](_0x51e55c/0xc),_0x6e8f58=_0x39eaf8[_0x230701],_0x2f8734=_0x49984e(_0x6e8f58,_0x177997),_0x3aa116=_0x74a956['createOscillator']();_0x3aa116[_0x5588db(0x209)]='sawtooth';const _0x7ba5c6=_0x74a956[_0x5588db(0x276)]();_0x7ba5c6['type']=_0x5588db(0x230);const _0x166253=_0x74a956[_0x5588db(0xe4)](),_0x423b07=_0x74a956[_0x5588db(0x1b9)]();_0x423b07[_0x5588db(0x209)]=_0x5588db(0x2aa),_0x423b07[_0x5588db(0x181)][_0x5588db(0x143)]=_0x2f8734*0x4,_0x423b07['Q']['value']=0xa,_0x3aa116['connect'](_0x423b07),_0x7ba5c6[_0x5588db(0xc1)](_0x423b07),_0x423b07['connect'](_0x166253),_0x166253[_0x5588db(0xc1)](_0x525b3c),_0x3aa116[_0x5588db(0x181)][_0x5588db(0x143)]=_0x2f8734,_0x7ba5c6[_0x5588db(0x181)][_0x5588db(0x143)]=_0x2f8734*0.5;const _0x155168=_0x58ae3f,_0x29c6e4=0.05,_0x42464b=0.2,_0x595cb5=0.6;_0x166253[_0x5588db(0x95)][_0x5588db(0x26f)](0x0,_0x155168),_0x166253[_0x5588db(0x95)][_0x5588db(0x129)](0x1,_0x155168+_0x29c6e4),_0x166253[_0x5588db(0x95)][_0x5588db(0x129)](_0x595cb5,_0x155168+_0x29c6e4+_0x42464b),_0x166253['gain'][_0x5588db(0x129)](0x0,_0x155168+_0x26f257),_0x3aa116[_0x5588db(0x211)](_0x155168),_0x7ba5c6[_0x5588db(0x211)](_0x155168),_0x3aa116[_0x5588db(0x270)](_0x155168+_0x26f257),_0x7ba5c6[_0x5588db(0x270)](_0x155168+_0x26f257);}function _0x59f481(_0x5d0437,_0x3853bb,_0x1e9187,_0x56f25a){const _0x3aedd7=_0x8683ed,_0x3b9289=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x2f10ac=_0x5d0437%0xc,_0x2890c0=Math[_0x3aedd7(0x1a8)](_0x5d0437/0xc),_0x5ae0cd=_0x3b9289[_0x2f10ac],_0x1b5348=_0x49984e(_0x5ae0cd,_0x2890c0),_0x3455c1=_0x74a956['createOscillator']();_0x3455c1['type']='triangle';const _0x260bb0=_0x74a956[_0x3aedd7(0xe4)](),_0x3d55c7=_0x74a956[_0x3aedd7(0x1b9)]();_0x3d55c7[_0x3aedd7(0x209)]=_0x3aedd7(0x2aa),_0x3d55c7['frequency']['value']=_0x1b5348*0x2,_0x3d55c7['Q']['value']=0x5,_0x3455c1[_0x3aedd7(0xc1)](_0x3d55c7),_0x3d55c7[_0x3aedd7(0xc1)](_0x260bb0),_0x260bb0[_0x3aedd7(0xc1)](_0x56f25a),_0x3455c1[_0x3aedd7(0x181)]['value']=_0x1b5348;const _0x24123a=_0x3853bb,_0x5e4e4b=0.1,_0x17a75b=0.3,_0x365f44=0.7;_0x260bb0[_0x3aedd7(0x95)][_0x3aedd7(0x26f)](0x0,_0x24123a),_0x260bb0[_0x3aedd7(0x95)][_0x3aedd7(0x129)](0x1,_0x24123a+_0x5e4e4b),_0x260bb0[_0x3aedd7(0x95)][_0x3aedd7(0x129)](_0x365f44,_0x24123a+_0x5e4e4b+_0x17a75b),_0x260bb0['gain'][_0x3aedd7(0x129)](0x0,_0x24123a+_0x1e9187),_0x3455c1['start'](_0x24123a),_0x3455c1[_0x3aedd7(0x270)](_0x24123a+_0x1e9187);}function _0x4b22c6(_0x157387,_0x439c99,_0x4f29c8,_0x3ef3b3){const _0x419a13=_0x8683ed,_0x216419=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x140e38=_0x157387%0xc,_0x2b10ba=Math[_0x419a13(0x1a8)](_0x157387/0xc),_0x57ad9a=_0x216419[_0x140e38],_0x3ef198=_0x49984e(_0x57ad9a,_0x2b10ba),_0x3a3668=_0x74a956[_0x419a13(0x276)]();_0x3a3668[_0x419a13(0x209)]=_0x419a13(0x279);const _0x2ebd3d=_0x74a956[_0x419a13(0xe4)](),_0x14e1fb=_0x74a956[_0x419a13(0x1b9)]();_0x14e1fb[_0x419a13(0x209)]=_0x419a13(0x2aa),_0x14e1fb[_0x419a13(0x181)][_0x419a13(0x143)]=_0x3ef198*1.5,_0x14e1fb['Q'][_0x419a13(0x143)]=0x5,_0x3a3668[_0x419a13(0xc1)](_0x14e1fb),_0x14e1fb[_0x419a13(0xc1)](_0x2ebd3d),_0x2ebd3d[_0x419a13(0xc1)](_0x3ef3b3),_0x3a3668['frequency'][_0x419a13(0x143)]=_0x3ef198*0.5;const _0x219bbe=_0x439c99,_0x1c68c4=0.05,_0x511ae7=0.2,_0x355eae=0.8;_0x2ebd3d[_0x419a13(0x95)][_0x419a13(0x26f)](0x0,_0x219bbe),_0x2ebd3d[_0x419a13(0x95)][_0x419a13(0x129)](0x1,_0x219bbe+_0x1c68c4),_0x2ebd3d['gain'][_0x419a13(0x129)](_0x355eae,_0x219bbe+_0x1c68c4+_0x511ae7),_0x2ebd3d[_0x419a13(0x95)][_0x419a13(0x129)](0x0,_0x219bbe+_0x4f29c8),_0x3a3668[_0x419a13(0x211)](_0x219bbe),_0x3a3668[_0x419a13(0x270)](_0x219bbe+_0x4f29c8);}function _0x3a5f55(_0xd418c5,_0x50cce5,_0x24d67b,_0xf3b43d){const _0xb1f03f=_0x8683ed,_0x4382e6=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0xd67b77=_0xd418c5%0xc,_0xc3ce71=Math[_0xb1f03f(0x1a8)](_0xd418c5/0xc),_0x3ec297=_0x4382e6[_0xd67b77],_0x13dbf7=_0x49984e(_0x3ec297,_0xc3ce71),_0x5a1d60=_0x74a956[_0xb1f03f(0x276)]();_0x5a1d60[_0xb1f03f(0x209)]=_0xb1f03f(0x279);const _0x3f7144=_0x74a956[_0xb1f03f(0xe4)](),_0x3bd8e9=_0x74a956[_0xb1f03f(0x1b9)]();_0x3bd8e9[_0xb1f03f(0x209)]=_0xb1f03f(0x2aa),_0x3bd8e9[_0xb1f03f(0x181)]['value']=_0x13dbf7*0x3,_0x3bd8e9['Q']['value']=0x2,_0x5a1d60[_0xb1f03f(0xc1)](_0x3bd8e9),_0x3bd8e9[_0xb1f03f(0xc1)](_0x3f7144),_0x3f7144[_0xb1f03f(0xc1)](_0xf3b43d),_0x5a1d60[_0xb1f03f(0x181)][_0xb1f03f(0x143)]=_0x13dbf7;const _0xbdf7b4=_0x50cce5,_0x6971d5=0.02,_0x593586=0.1,_0x4e4f5d=0.7;_0x3f7144['gain']['setValueAtTime'](0x0,_0xbdf7b4),_0x3f7144[_0xb1f03f(0x95)][_0xb1f03f(0x129)](0x1,_0xbdf7b4+_0x6971d5),_0x3f7144[_0xb1f03f(0x95)][_0xb1f03f(0x129)](_0x4e4f5d,_0xbdf7b4+_0x6971d5+_0x593586),_0x3f7144[_0xb1f03f(0x95)]['linearRampToValueAtTime'](0x0,_0xbdf7b4+_0x24d67b),_0x5a1d60['start'](_0xbdf7b4),_0x5a1d60['stop'](_0xbdf7b4+_0x24d67b);}function _0x16a2b2(_0x4fb186,_0x761ced,_0x3ef8c5,_0x55b5b8){const _0x69046=_0x8683ed,_0x244d60=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x1bc698=_0x4fb186%0xc,_0x4d1a5f=Math['floor'](_0x4fb186/0xc),_0x177933=_0x244d60[_0x1bc698],_0x42f79f=_0x49984e(_0x177933,_0x4d1a5f),_0x507352=_0x74a956[_0x69046(0x276)]();_0x507352[_0x69046(0x209)]=_0x69046(0x261);const _0x48ddc8=_0x74a956['createGain'](),_0x1a418e=_0x74a956[_0x69046(0x1b9)]();_0x1a418e[_0x69046(0x209)]=_0x69046(0x2aa),_0x1a418e['frequency'][_0x69046(0x143)]=_0x42f79f*1.2,_0x1a418e['Q']['value']=0x3,_0x507352[_0x69046(0xc1)](_0x1a418e),_0x1a418e[_0x69046(0xc1)](_0x48ddc8),_0x48ddc8[_0x69046(0xc1)](_0x55b5b8),_0x507352[_0x69046(0x181)][_0x69046(0x143)]=_0x42f79f;const _0x38c394=_0x761ced,_0x102ba5=0.3,_0x5b4324=0.5,_0x255c3a=0.8;_0x48ddc8[_0x69046(0x95)]['setValueAtTime'](0x0,_0x38c394),_0x48ddc8[_0x69046(0x95)][_0x69046(0x129)](0x1,_0x38c394+_0x102ba5),_0x48ddc8[_0x69046(0x95)][_0x69046(0x129)](_0x255c3a,_0x38c394+_0x102ba5+_0x5b4324),_0x48ddc8[_0x69046(0x95)][_0x69046(0x129)](0x0,_0x38c394+_0x3ef8c5),_0x507352['start'](_0x38c394),_0x507352[_0x69046(0x270)](_0x38c394+_0x3ef8c5);}function _0x56f3c5(_0x38b9f0,_0x294714,_0xbea752,_0x27698e){const _0x211c7f=_0x8683ed,_0x4cc479=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x5ebaa0=_0x38b9f0%0xc,_0x3785ae=Math[_0x211c7f(0x1a8)](_0x38b9f0/0xc),_0x18618b=_0x4cc479[_0x5ebaa0],_0x17f49b=_0x49984e(_0x18618b,_0x3785ae),_0x12bac3=_0x74a956['createOscillator']();_0x12bac3['type']=_0x211c7f(0x230);const _0x201f82=_0x74a956[_0x211c7f(0xe4)](),_0x3e9650=_0x74a956[_0x211c7f(0x1b9)]();_0x3e9650[_0x211c7f(0x209)]='highpass',_0x3e9650['frequency'][_0x211c7f(0x143)]=_0x17f49b*0.8,_0x3e9650['Q']=0x5,_0x12bac3[_0x211c7f(0xc1)](_0x3e9650),_0x3e9650['connect'](_0x201f82),_0x201f82['connect'](_0x27698e),_0x12bac3[_0x211c7f(0x181)]['value']=_0x17f49b;const _0x2be40b=_0x294714,_0x586aa2=0.01,_0x57df7a=0.1,_0x4f4291=0.5;_0x201f82[_0x211c7f(0x95)][_0x211c7f(0x26f)](0x0,_0x2be40b),_0x201f82['gain'][_0x211c7f(0x129)](0x1,_0x2be40b+_0x586aa2),_0x201f82[_0x211c7f(0x95)][_0x211c7f(0x129)](_0x4f4291,_0x2be40b+_0x586aa2+_0x57df7a),_0x201f82[_0x211c7f(0x95)][_0x211c7f(0x129)](0x0,_0x2be40b+_0xbea752),_0x12bac3[_0x211c7f(0x211)](_0x2be40b),_0x12bac3[_0x211c7f(0x270)](_0x2be40b+_0xbea752);}function _0x4de1c4(_0x2c2c0e,_0x29aa13,_0x20c6c2,_0x420842,_0x100353,_0x1e633f){const _0x25e951=_0x8683ed;if(!_0x5c373d[_0x100353]||!_0x5c373d[_0x100353][_0x25e951(0x20e)])return;const _0x8e887=_0x74a956[_0x25e951(0x15c)]();_0x8e887[_0x25e951(0x20e)]=_0x5c373d[_0x100353][_0x25e951(0x20e)];const _0xdc67a1=_0x74a956['createGain']();_0x8e887[_0x25e951(0xc1)](_0xdc67a1),_0xdc67a1[_0x25e951(0xc1)](_0x420842);const _0xfaf49c=Math[_0x25e951(0x254)](0x2,0x1/0xc),_0x361074=0x2a,_0x5a0b86=Math[_0x25e951(0x254)](_0xfaf49c,_0x2c2c0e-_0x361074);_0x8e887[_0x25e951(0x139)][_0x25e951(0x143)]=_0x5a0b86;const _0x163981=_0x29aa13,_0x3f3845=0.01,_0x43119b=0.1,_0x6dae5e=0.7;_0xdc67a1[_0x25e951(0x95)][_0x25e951(0x26f)](0x0,_0x163981),_0xdc67a1[_0x25e951(0x95)]['linearRampToValueAtTime'](0x1,_0x163981+_0x3f3845),_0xdc67a1[_0x25e951(0x95)][_0x25e951(0x129)](_0x6dae5e,_0x163981+_0x3f3845+_0x43119b),_0xdc67a1[_0x25e951(0x95)]['linearRampToValueAtTime'](0x0,_0x163981+_0x20c6c2);const _0x27d248=_0x5c373d[_0x100353][_0x25e951(0x20e)][_0x25e951(0x263)],_0x134286=_0x27d248*(_0x1e633f[_0x25e951(0x211)]/0x64),_0x274138=_0x27d248*(_0x1e633f['end']/0x64);_0x8e887[_0x25e951(0x211)](_0x163981,_0x134286),_0x8e887[_0x25e951(0x270)](_0x163981+_0x20c6c2,_0x274138);}function _0x46527c(){const _0x46df54=_0x8683ed;if(!_0x264a48||!_0x1b952a)return;_0x264a48=![];_0x16e8a8&&(clearTimeout(_0x16e8a8),_0x16e8a8=null);if(_0x2d80c4[_0x1b952a]){const {gain:_0x3ff6da}=_0x2d80c4[_0x1b952a];_0x3ff6da[_0x46df54(0x95)][_0x46df54(0x11b)](_0x74a956[_0x46df54(0x246)]),_0x3ff6da[_0x46df54(0x95)][_0x46df54(0x26f)](_0x3ff6da[_0x46df54(0x95)][_0x46df54(0x143)],_0x74a956[_0x46df54(0x246)]),_0x3ff6da[_0x46df54(0x95)][_0x46df54(0x129)](0x0,_0x74a956[_0x46df54(0x246)]+0.1),setTimeout(()=>{const _0x886d07=_0x46df54;_0x3ff6da[_0x886d07(0x203)]();},0xc8),delete _0x2d80c4[_0x1b952a];}_0x20c192[_0x46df54(0x23e)]&&(_0x20c192['lowShelf'][_0x46df54(0x203)](),_0x20c192[_0x46df54(0x23e)]=null),_0x20c192[_0x46df54(0x17b)]&&(_0x20c192[_0x46df54(0x17b)]['disconnect'](),_0x20c192['lowMid']=null),_0x20c192[_0x46df54(0xfb)]&&(_0x20c192[_0x46df54(0xfb)]['disconnect'](),_0x20c192['mid']=null),_0x20c192[_0x46df54(0x190)]&&(_0x20c192[_0x46df54(0x190)][_0x46df54(0x203)](),_0x20c192[_0x46df54(0x190)]=null),_0x20c192[_0x46df54(0x94)]&&(_0x20c192['highShelf']['disconnect'](),_0x20c192['highShelf']=null),_0x20c192[_0x46df54(0x265)]&&(_0x20c192[_0x46df54(0x265)]['disconnect'](),_0x20c192[_0x46df54(0x265)]=null),_0x20c192[_0x46df54(0x229)]&&(_0x20c192[_0x46df54(0x229)]['disconnect'](),_0x20c192['delayFeedback']=null),_0x468b3c&&(_0x468b3c[_0x46df54(0x203)](),_0x468b3c=null),_0x5e5982(),_0x1b952a=null;}async function _0x57ea19(){const _0x1a602c=_0x8683ed;if(!_0x502895)return;const _0x542d25=_0x33e0cd[_0x502895];if(_0x542d25[_0x1a602c(0x1d8)][_0x1a602c(0xee)]===0x0){console['log'](_0x1a602c(0xed));return;}const _0x371b6b=[..._0x542d25[_0x1a602c(0x1d8)]][_0x1a602c(0x25e)]((_0x36ae7e,_0x3a5a07)=>_0x36ae7e['col']-_0x3a5a07[_0x1a602c(0x1b5)]),_0xb77423=_0x542d25[_0x1a602c(0x298)],_0xa34e4b=_0x502895>0x3c;let _0x278aff,_0x5d8e35;if(_0xa34e4b)_0x278aff=0x3c/_0x5a68ac,_0x5d8e35=_0x278aff*0x4;else{const _0xed0b09=_0x36c9bc+_0x296ff3;_0x278aff=0x3c/_0xed0b09,_0x5d8e35=_0x278aff*0x4;}const _0x16fa80=_0x5d8e35/0x10,_0x3d51b0=_0x542d25[_0x1a602c(0x1ad)]*_0x16fa80,_0x5833ed=(_0x542d25[_0x1a602c(0xac)]['delay'][_0x1a602c(0x114)]||0x0)/0x3e8,_0x4ccfb2=(_0x542d25[_0x1a602c(0xac)][_0x1a602c(0x265)][_0x1a602c(0x26c)]||0x0)/0x64,_0x4304d2=0.001;let _0x1ff65b=0x0;if(_0x5833ed>0x0&&_0x4ccfb2>0x0){const _0x550561=Math[_0x1a602c(0x145)](Math[_0x1a602c(0x16d)](_0x4304d2)/Math['log'](_0x4ccfb2));_0x1ff65b=_0x5833ed*_0x550561,_0x1ff65b+=0.1;}const _0x4ad2e3=_0x3d51b0+_0x1ff65b,_0x2d3016=new OfflineAudioContext(0x2,_0x74a956['sampleRate']*_0x4ad2e3,_0x74a956['sampleRate']),_0x186ab5=_0x2d3016[_0x1a602c(0xe4)](),_0x4a4a66=_0x2d3016[_0x1a602c(0x1b9)]();_0x4a4a66[_0x1a602c(0x209)]='lowshelf',_0x4a4a66[_0x1a602c(0x181)][_0x1a602c(0x143)]=0xc8,_0x4a4a66[_0x1a602c(0x95)][_0x1a602c(0x143)]=_0x542d25[_0x1a602c(0xac)][_0x1a602c(0x23e)]||0x0;const _0x4b1e82=_0x2d3016['createBiquadFilter']();_0x4b1e82[_0x1a602c(0x209)]=_0x1a602c(0xbb),_0x4b1e82[_0x1a602c(0x181)][_0x1a602c(0x143)]=0x1f4,_0x4b1e82['Q'][_0x1a602c(0x143)]=0x1,_0x4b1e82[_0x1a602c(0x95)][_0x1a602c(0x143)]=_0x542d25[_0x1a602c(0xac)][_0x1a602c(0x17b)]||0x0;const _0x56cf00=_0x2d3016[_0x1a602c(0x1b9)]();_0x56cf00[_0x1a602c(0x209)]='peaking',_0x56cf00[_0x1a602c(0x181)]['value']=0x5dc,_0x56cf00['Q'][_0x1a602c(0x143)]=0x1,_0x56cf00[_0x1a602c(0x95)][_0x1a602c(0x143)]=_0x542d25[_0x1a602c(0xac)]['mid']||0x0;const _0x8720ad=_0x2d3016[_0x1a602c(0x1b9)]();_0x8720ad['type']=_0x1a602c(0xbb),_0x8720ad[_0x1a602c(0x181)][_0x1a602c(0x143)]=0xfa0,_0x8720ad['Q'][_0x1a602c(0x143)]=0x1,_0x8720ad['gain'][_0x1a602c(0x143)]=_0x542d25[_0x1a602c(0xac)]['highMid']||0x0;const _0x2c4f7a=_0x2d3016[_0x1a602c(0x1b9)]();_0x2c4f7a[_0x1a602c(0x209)]=_0x1a602c(0xd2),_0x2c4f7a[_0x1a602c(0x181)]['value']=0x1f40,_0x2c4f7a[_0x1a602c(0x95)][_0x1a602c(0x143)]=_0x542d25[_0x1a602c(0xac)][_0x1a602c(0x94)]||0x0;const _0x2d9c11=_0x2d3016[_0x1a602c(0x1b7)](0x1);_0x2d9c11['delayTime'][_0x1a602c(0x143)]=_0x5833ed;const _0x3b2532=_0x2d3016[_0x1a602c(0xe4)]();_0x3b2532[_0x1a602c(0x95)][_0x1a602c(0x143)]=_0x4ccfb2,_0x186ab5[_0x1a602c(0xc1)](_0x4a4a66),_0x4a4a66['connect'](_0x4b1e82),_0x4b1e82[_0x1a602c(0xc1)](_0x56cf00),_0x56cf00[_0x1a602c(0xc1)](_0x8720ad),_0x8720ad[_0x1a602c(0xc1)](_0x2c4f7a),_0x2c4f7a[_0x1a602c(0xc1)](_0x2d9c11),_0x2d9c11['connect'](_0x3b2532),_0x3b2532[_0x1a602c(0xc1)](_0x2d9c11),_0x2d9c11[_0x1a602c(0xc1)](_0x2d3016[_0x1a602c(0x22f)]),_0x371b6b[_0x1a602c(0x278)](_0x3f4499=>{const _0x2c144f=_0x1a602c,_0x3bf3d7=_0x3f4499[_0x2c144f(0x1b5)]*_0x16fa80,_0xa03e9e=(_0x3f4499[_0x2c144f(0xee)]||0x1)*_0x16fa80;if(_0xb77423===_0x2c144f(0xbf))_0x983dd7(_0x2d3016,_0x3f4499[_0x2c144f(0x99)],_0x3bf3d7,_0xa03e9e,_0x186ab5);else{if(_0xb77423===_0x2c144f(0x165))_0x297cbd(_0x2d3016,_0x3f4499['row'],_0x3bf3d7,_0xa03e9e,_0x186ab5);else{if(_0xb77423===_0x2c144f(0x10b))_0x4d1f1e(_0x2d3016,_0x3f4499[_0x2c144f(0x99)],_0x3bf3d7,_0xa03e9e,_0x186ab5);else{if(_0xb77423===_0x2c144f(0x14e))_0x1df9a3(_0x2d3016,_0x3f4499['row'],_0x3bf3d7,_0xa03e9e,_0x186ab5);else{if(_0xb77423===_0x2c144f(0x13b))_0x504e2e(_0x2d3016,_0x3f4499[_0x2c144f(0x99)],_0x3bf3d7,_0xa03e9e,_0x186ab5);else{if(_0xb77423===_0x2c144f(0x268))_0x457ef2(_0x2d3016,_0x3f4499['row'],_0x3bf3d7,_0xa03e9e,_0x186ab5);else _0xb77423===_0x2c144f(0xd9)?_0xe7e78e(_0x2d3016,_0x3f4499[_0x2c144f(0x99)],_0x3bf3d7,_0xa03e9e,_0x186ab5):_0x6e5599(_0x2d3016,_0x3f4499[_0x2c144f(0x99)],_0x3bf3d7,_0xa03e9e,_0x186ab5,_0x502895,_0x542d25[_0x2c144f(0x151)]);}}}}}});try{const _0x51b4ce=await _0x2d3016[_0x1a602c(0x1e2)]();if(!_0x51b4ce||_0x51b4ce[_0x1a602c(0xee)]===0x0){console[_0x1a602c(0xe9)]('Error:\x20Rendered\x20buffer\x20is\x20empty\x20or\x20invalid');return;}if(_0x1ff65b>0x0){const _0x2f55a3=_0x74a956[_0x1a602c(0x262)](_0x51b4ce[_0x1a602c(0x22d)],Math[_0x1a602c(0x1a8)](_0x74a956[_0x1a602c(0x118)]*_0x3d51b0),_0x74a956['sampleRate']);for(let _0x3bf563=0x0;_0x3bf563<_0x51b4ce[_0x1a602c(0x22d)];_0x3bf563++){const _0x5b0fc2=_0x51b4ce[_0x1a602c(0x17d)](_0x3bf563),_0xea6f78=_0x2f55a3['getChannelData'](_0x3bf563);for(let _0x4a1a75=0x0;_0x4a1a75<_0xea6f78[_0x1a602c(0xee)];_0x4a1a75++){_0xea6f78[_0x4a1a75]=_0x5b0fc2[_0x4a1a75];}const _0x138e4f=Math[_0x1a602c(0x1a8)](_0x74a956[_0x1a602c(0x118)]*_0x1ff65b);for(let _0xe7547a=0x0;_0xe7547a<Math['min'](_0x138e4f,_0xea6f78['length']);_0xe7547a++){_0xea6f78[_0xe7547a]+=_0x5b0fc2[_0xea6f78[_0x1a602c(0xee)]+_0xe7547a];}}_0x5c373d[_0x502895][_0x1a602c(0x20e)]=_0x2f55a3,_0x5c373d[_0x502895][_0x1a602c(0x20f)]=_0x3d51b0;}else _0x5c373d[_0x502895][_0x1a602c(0x20e)]=_0x51b4ce,_0x5c373d[_0x502895][_0x1a602c(0x20f)]=_0x51b4ce[_0x1a602c(0x263)];_0x5c373d[_0x502895][_0x1a602c(0x170)]=_0x502895,_0x5c373d[_0x502895]['isCustomSample']=!![];const _0x59d2d4=_0x5c373d[_0x502895]['button'];_0x59d2d4&&(_0x1fd264(_0x59d2d4),_0x59d2d4[_0x1a602c(0xa6)][_0x1a602c(0x1ab)](_0x1a602c(0xa9))),_0x5c373d[_0x502895][_0x1a602c(0xab)]&&_0x5c373d[_0x502895]['isActive']&&(_0x20ca83(_0x502895),_0x5c373d[_0x502895][_0x1a602c(0xbd)]=!![],_0x2cf7dd(_0x502895)),console[_0x1a602c(0x16d)](_0x1a602c(0x1cb)+_0x502895);}catch(_0x467e81){console[_0x1a602c(0xe9)](_0x1a602c(0x191),_0x467e81);throw _0x467e81;}}function _0x983dd7(_0x11852c,_0x1d494f,_0x3be6be,_0x3104c5,_0x41e799){const _0x2172d6=_0x8683ed,_0x529ab6=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x51249a=_0x1d494f%0xc,_0x42d74c=Math[_0x2172d6(0x1a8)](_0x1d494f/0xc),_0x279065=_0x529ab6[_0x51249a],_0x2cbfca=_0x49984e(_0x279065,_0x42d74c),_0x24a576=_0x11852c[_0x2172d6(0x276)]();_0x24a576['type']=_0x2172d6(0x261);const _0x4b8849=_0x11852c[_0x2172d6(0xe4)]();_0x24a576[_0x2172d6(0xc1)](_0x4b8849),_0x4b8849[_0x2172d6(0xc1)](_0x41e799),_0x24a576[_0x2172d6(0x181)][_0x2172d6(0x143)]=_0x2cbfca;const _0x3810d4=0.01,_0x11b1f0=0.1,_0x2fc5c2=0.7;_0x4b8849[_0x2172d6(0x95)][_0x2172d6(0x26f)](0x0,_0x3be6be),_0x4b8849[_0x2172d6(0x95)]['linearRampToValueAtTime'](0x1,_0x3be6be+_0x3810d4),_0x4b8849[_0x2172d6(0x95)][_0x2172d6(0x129)](_0x2fc5c2,_0x3be6be+_0x3810d4+_0x11b1f0),_0x4b8849[_0x2172d6(0x95)][_0x2172d6(0x129)](0x0,_0x3be6be+_0x3104c5),_0x24a576[_0x2172d6(0x211)](_0x3be6be),_0x24a576[_0x2172d6(0x270)](_0x3be6be+_0x3104c5);}function _0x297cbd(_0x3d0a90,_0x41db4e,_0x54c115,_0x56d440,_0x1e2102){const _0x49d44a=_0x8683ed,_0x4af21e=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x1cc4db=_0x41db4e%0xc,_0x2b01d2=Math['floor'](_0x41db4e/0xc),_0x5ed0c0=_0x4af21e[_0x1cc4db],_0xcbbe4d=_0x49984e(_0x5ed0c0,_0x2b01d2),_0x15125b=_0x3d0a90[_0x49d44a(0x276)]();_0x15125b['type']=_0x49d44a(0x279);const _0x28abce=_0x3d0a90['createOscillator']();_0x28abce['type']='square';const _0x4b36d5=_0x3d0a90[_0x49d44a(0xe4)](),_0x3a1d5f=_0x3d0a90['createBiquadFilter']();_0x3a1d5f[_0x49d44a(0x209)]=_0x49d44a(0x2aa),_0x3a1d5f['frequency'][_0x49d44a(0x143)]=_0xcbbe4d*0x4,_0x3a1d5f['Q']['value']=0xa,_0x15125b[_0x49d44a(0xc1)](_0x3a1d5f),_0x28abce[_0x49d44a(0xc1)](_0x3a1d5f),_0x3a1d5f[_0x49d44a(0xc1)](_0x4b36d5),_0x4b36d5[_0x49d44a(0xc1)](_0x1e2102),_0x15125b[_0x49d44a(0x181)][_0x49d44a(0x143)]=_0xcbbe4d,_0x28abce[_0x49d44a(0x181)][_0x49d44a(0x143)]=_0xcbbe4d*0.5;const _0x57c0de=0.05,_0x54ef1c=0.2,_0x1a6f57=0.6;_0x4b36d5[_0x49d44a(0x95)][_0x49d44a(0x26f)](0x0,_0x54c115),_0x4b36d5[_0x49d44a(0x95)]['linearRampToValueAtTime'](0x1,_0x54c115+_0x57c0de),_0x4b36d5[_0x49d44a(0x95)][_0x49d44a(0x129)](_0x1a6f57,_0x54c115+_0x57c0de+_0x54ef1c),_0x4b36d5[_0x49d44a(0x95)][_0x49d44a(0x129)](0x0,_0x54c115+_0x56d440),_0x15125b[_0x49d44a(0x211)](_0x54c115),_0x28abce['start'](_0x54c115),_0x15125b[_0x49d44a(0x270)](_0x54c115+_0x56d440),_0x28abce[_0x49d44a(0x270)](_0x54c115+_0x56d440);}function _0x4d1f1e(_0x1dcaa8,_0x5d0f12,_0x151d70,_0x2e25b5,_0x1ddb42){const _0x38ede4=_0x8683ed,_0x263373=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x38196f=_0x5d0f12%0xc,_0x5362f7=Math[_0x38ede4(0x1a8)](_0x5d0f12/0xc),_0x6b0c2c=_0x263373[_0x38196f],_0x539ba6=_0x49984e(_0x6b0c2c,_0x5362f7),_0x3368be=_0x1dcaa8[_0x38ede4(0x276)]();_0x3368be[_0x38ede4(0x209)]=_0x38ede4(0x292);const _0x11a7b6=_0x1dcaa8[_0x38ede4(0xe4)](),_0x3615fb=_0x1dcaa8[_0x38ede4(0x1b9)]();_0x3615fb[_0x38ede4(0x209)]=_0x38ede4(0x2aa),_0x3615fb[_0x38ede4(0x181)][_0x38ede4(0x143)]=_0x539ba6*0x2,_0x3615fb['Q'][_0x38ede4(0x143)]=0x5,_0x3368be[_0x38ede4(0xc1)](_0x3615fb),_0x3615fb[_0x38ede4(0xc1)](_0x11a7b6),_0x11a7b6[_0x38ede4(0xc1)](_0x1ddb42),_0x3368be[_0x38ede4(0x181)][_0x38ede4(0x143)]=_0x539ba6;const _0x15db28=0.1,_0x2b4dfe=0.3,_0x1ea339=0.7;_0x11a7b6[_0x38ede4(0x95)]['setValueAtTime'](0x0,_0x151d70),_0x11a7b6[_0x38ede4(0x95)][_0x38ede4(0x129)](0x1,_0x151d70+_0x15db28),_0x11a7b6[_0x38ede4(0x95)][_0x38ede4(0x129)](_0x1ea339,_0x151d70+_0x15db28+_0x2b4dfe),_0x11a7b6[_0x38ede4(0x95)][_0x38ede4(0x129)](0x0,_0x151d70+_0x2e25b5),_0x3368be[_0x38ede4(0x211)](_0x151d70),_0x3368be[_0x38ede4(0x270)](_0x151d70+_0x2e25b5);}function _0x1df9a3(_0x5eb295,_0x466679,_0x26cfc4,_0x3cc85c,_0x7ac8e9){const _0x4e1552=_0x8683ed,_0x3d4090=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x5c4bcb=_0x466679%0xc,_0x4bde89=Math[_0x4e1552(0x1a8)](_0x466679/0xc),_0x5aa0f7=_0x3d4090[_0x5c4bcb],_0x210b10=_0x49984e(_0x5aa0f7,_0x4bde89),_0x1e4768=_0x5eb295[_0x4e1552(0x276)]();_0x1e4768[_0x4e1552(0x209)]=_0x4e1552(0x279);const _0x232a4a=_0x5eb295[_0x4e1552(0xe4)](),_0x29105a=_0x5eb295[_0x4e1552(0x1b9)]();_0x29105a[_0x4e1552(0x209)]='lowpass',_0x29105a['frequency'][_0x4e1552(0x143)]=_0x210b10*1.5,_0x29105a['Q'][_0x4e1552(0x143)]=0x5,_0x1e4768['connect'](_0x29105a),_0x29105a[_0x4e1552(0xc1)](_0x232a4a),_0x232a4a['connect'](_0x7ac8e9),_0x1e4768['frequency'][_0x4e1552(0x143)]=_0x210b10*0.5;const _0x365ac4=0.05,_0x279cd6=0.2,_0x366068=0.8;_0x232a4a[_0x4e1552(0x95)]['setValueAtTime'](0x0,_0x26cfc4),_0x232a4a[_0x4e1552(0x95)][_0x4e1552(0x129)](0x1,_0x26cfc4+_0x365ac4),_0x232a4a[_0x4e1552(0x95)]['linearRampToValueAtTime'](_0x366068,_0x26cfc4+_0x365ac4+_0x279cd6),_0x232a4a[_0x4e1552(0x95)][_0x4e1552(0x129)](0x0,_0x26cfc4+_0x3cc85c),_0x1e4768[_0x4e1552(0x211)](_0x26cfc4),_0x1e4768[_0x4e1552(0x270)](_0x26cfc4+_0x3cc85c);}function _0x504e2e(_0xdaa4b8,_0x2696b7,_0x133b2b,_0x16ae66,_0x1611d5){const _0x3c818b=_0x8683ed,_0x43ccf4=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x45baff=_0x2696b7%0xc,_0x51d8db=Math[_0x3c818b(0x1a8)](_0x2696b7/0xc),_0x39890b=_0x43ccf4[_0x45baff],_0x1ea5e5=_0x49984e(_0x39890b,_0x51d8db),_0x335bd7=_0xdaa4b8['createOscillator']();_0x335bd7['type']='sawtooth';const _0x585b2a=_0xdaa4b8['createGain'](),_0x36e71a=_0xdaa4b8[_0x3c818b(0x1b9)]();_0x36e71a['type']=_0x3c818b(0x2aa),_0x36e71a['frequency'][_0x3c818b(0x143)]=_0x1ea5e5*0x3,_0x36e71a['Q'][_0x3c818b(0x143)]=0x2,_0x335bd7[_0x3c818b(0xc1)](_0x36e71a),_0x36e71a[_0x3c818b(0xc1)](_0x585b2a),_0x585b2a[_0x3c818b(0xc1)](_0x1611d5),_0x335bd7['frequency'][_0x3c818b(0x143)]=_0x1ea5e5;const _0x6877d6=0.02,_0x3ccfbf=0.1,_0x5ea404=0.7;_0x585b2a[_0x3c818b(0x95)][_0x3c818b(0x26f)](0x0,_0x133b2b),_0x585b2a[_0x3c818b(0x95)][_0x3c818b(0x129)](0x1,_0x133b2b+_0x6877d6),_0x585b2a['gain'][_0x3c818b(0x129)](_0x5ea404,_0x133b2b+_0x6877d6+_0x3ccfbf),_0x585b2a[_0x3c818b(0x95)][_0x3c818b(0x129)](0x0,_0x133b2b+_0x16ae66),_0x335bd7['start'](_0x133b2b),_0x335bd7[_0x3c818b(0x270)](_0x133b2b+_0x16ae66);}function _0x457ef2(_0x42e9ba,_0x228fb0,_0x46b702,_0x3b282a,_0xeb580d){const _0x1c7a5e=_0x8683ed,_0x504875=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0xb648ef=_0x228fb0%0xc,_0x5892e4=Math[_0x1c7a5e(0x1a8)](_0x228fb0/0xc),_0x36fb68=_0x504875[_0xb648ef],_0x35792b=_0x49984e(_0x36fb68,_0x5892e4),_0x1196f6=_0x42e9ba['createOscillator']();_0x1196f6['type']='sine';const _0x2b02d6=_0x42e9ba[_0x1c7a5e(0xe4)](),_0x508503=_0x42e9ba['createBiquadFilter']();_0x508503[_0x1c7a5e(0x209)]=_0x1c7a5e(0x2aa),_0x508503['frequency'][_0x1c7a5e(0x143)]=_0x35792b*1.2,_0x508503['Q'][_0x1c7a5e(0x143)]=0x3,_0x1196f6[_0x1c7a5e(0xc1)](_0x508503),_0x508503[_0x1c7a5e(0xc1)](_0x2b02d6),_0x2b02d6[_0x1c7a5e(0xc1)](_0xeb580d),_0x1196f6[_0x1c7a5e(0x181)][_0x1c7a5e(0x143)]=_0x35792b;const _0x3c4c3c=0.3,_0x11d8c6=0.5,_0x2a2a55=0.8;_0x2b02d6[_0x1c7a5e(0x95)][_0x1c7a5e(0x26f)](0x0,_0x46b702),_0x2b02d6[_0x1c7a5e(0x95)][_0x1c7a5e(0x129)](0x1,_0x46b702+_0x3c4c3c),_0x2b02d6[_0x1c7a5e(0x95)][_0x1c7a5e(0x129)](_0x2a2a55,_0x46b702+_0x3c4c3c+_0x11d8c6),_0x2b02d6[_0x1c7a5e(0x95)][_0x1c7a5e(0x129)](0x0,_0x46b702+_0x3b282a),_0x1196f6[_0x1c7a5e(0x211)](_0x46b702),_0x1196f6[_0x1c7a5e(0x270)](_0x46b702+_0x3b282a);}function _0xe7e78e(_0x25d20a,_0x44f2cf,_0x326a6e,_0x3b891a,_0xb08fcf){const _0x49d56e=_0x8683ed,_0xa986f5=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x4d6bac=_0x44f2cf%0xc,_0x1f8ce6=Math[_0x49d56e(0x1a8)](_0x44f2cf/0xc),_0x508e43=_0xa986f5[_0x4d6bac],_0x560f6a=_0x49984e(_0x508e43,_0x1f8ce6),_0x4bc42b=_0x25d20a[_0x49d56e(0x276)]();_0x4bc42b['type']=_0x49d56e(0x230);const _0x4135e0=_0x25d20a[_0x49d56e(0xe4)](),_0x38699c=_0x25d20a[_0x49d56e(0x1b9)]();_0x38699c['type']=_0x49d56e(0x19c),_0x38699c[_0x49d56e(0x181)][_0x49d56e(0x143)]=_0x560f6a*0.8,_0x38699c['Q']=0x5,_0x4bc42b['connect'](_0x38699c),_0x38699c[_0x49d56e(0xc1)](_0x4135e0),_0x4135e0[_0x49d56e(0xc1)](_0xb08fcf),_0x4bc42b[_0x49d56e(0x181)][_0x49d56e(0x143)]=_0x560f6a;const _0x16232c=0.01,_0xad880b=0.1,_0x3dde45=0.5;_0x4135e0['gain'][_0x49d56e(0x26f)](0x0,_0x326a6e),_0x4135e0['gain']['linearRampToValueAtTime'](0x1,_0x326a6e+_0x16232c),_0x4135e0[_0x49d56e(0x95)][_0x49d56e(0x129)](_0x3dde45,_0x326a6e+_0x16232c+_0xad880b),_0x4135e0['gain']['linearRampToValueAtTime'](0x0,_0x326a6e+_0x3b891a),_0x4bc42b[_0x49d56e(0x211)](_0x326a6e),_0x4bc42b['stop'](_0x326a6e+_0x3b891a);}function _0x6e5599(_0x97ee32,_0x43079e,_0x51aecc,_0x45419d,_0x38cf8f,_0x5f4b31,_0x53ccaa){const _0xa39410=_0x8683ed;if(!_0x5c373d[_0x5f4b31]||!_0x5c373d[_0x5f4b31]['buffer'])return;const _0x595880=_0x97ee32[_0xa39410(0x15c)]();_0x595880[_0xa39410(0x20e)]=_0x5c373d[_0x5f4b31][_0xa39410(0x20e)];const _0x1282b5=_0x97ee32[_0xa39410(0xe4)]();_0x595880[_0xa39410(0xc1)](_0x1282b5),_0x1282b5[_0xa39410(0xc1)](_0x38cf8f);const _0x26a395=Math[_0xa39410(0x254)](0x2,0x1/0xc),_0xe5af13=0x2a,_0x7c1c64=Math['pow'](_0x26a395,_0x43079e-_0xe5af13);_0x595880[_0xa39410(0x139)][_0xa39410(0x143)]=_0x7c1c64;const _0x2fb983=_0x51aecc,_0x50d6e5=0.01,_0xa2e3ff=0.1,_0x42ac7a=0.7;_0x1282b5[_0xa39410(0x95)]['setValueAtTime'](0x0,_0x2fb983),_0x1282b5[_0xa39410(0x95)][_0xa39410(0x129)](0x1,_0x2fb983+_0x50d6e5),_0x1282b5[_0xa39410(0x95)][_0xa39410(0x129)](_0x42ac7a,_0x2fb983+_0x50d6e5+_0xa2e3ff),_0x1282b5['gain'][_0xa39410(0x129)](0x0,_0x2fb983+_0x45419d);const _0x437519=_0x5c373d[_0x5f4b31][_0xa39410(0x20e)][_0xa39410(0x263)],_0x1bddfe=_0x437519*(_0x53ccaa[_0xa39410(0x211)]/0x64),_0x146ffc=_0x437519*(_0x53ccaa[_0xa39410(0x2a0)]/0x64);_0x595880[_0xa39410(0x211)](_0x2fb983,_0x1bddfe),_0x595880['stop'](_0x2fb983+_0x45419d,_0x146ffc);}function _0x2b4526(_0x35e1ed,_0x2634d8,_0x5f1113,_0xa027db,_0x833381){const _0x3115fd=_0x8683ed,_0x1bfa9c=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x5a0f03=_0x35e1ed%0xc,_0x11428c=Math[_0x3115fd(0x1a8)](_0x35e1ed/0xc),_0x4ed83b=_0x1bfa9c[_0x5a0f03],_0xe12efe=_0x49984e(_0x4ed83b,_0x11428c),_0x508bfc=_0x74a956['createOscillator']();_0x508bfc[_0x3115fd(0x209)]='sine';const _0x2a0c12=_0x74a956[_0x3115fd(0xe4)]();_0x508bfc[_0x3115fd(0xc1)](_0x2a0c12),_0x2a0c12[_0x3115fd(0xc1)](_0xa027db),_0x508bfc[_0x3115fd(0x181)][_0x3115fd(0x143)]=_0xe12efe;const _0x9dfb54=_0x2634d8,_0x60ce8a=0.01,_0x3fbb82=0.1,_0x4d66d2=0.7;_0x2a0c12[_0x3115fd(0x95)][_0x3115fd(0x26f)](0x0,_0x9dfb54),_0x2a0c12[_0x3115fd(0x95)]['linearRampToValueAtTime'](0x1,_0x9dfb54+_0x60ce8a),_0x2a0c12[_0x3115fd(0x95)]['linearRampToValueAtTime'](_0x4d66d2,_0x9dfb54+_0x60ce8a+_0x3fbb82),_0x2a0c12['gain']['linearRampToValueAtTime'](0x0,_0x9dfb54+_0x5f1113),_0x508bfc[_0x3115fd(0x211)](_0x9dfb54),_0x508bfc[_0x3115fd(0x270)](_0x9dfb54+_0x5f1113);}function _0x5274da(_0x48e4ff,_0x4a07f6,_0x447538,_0x11b53f,_0x206923){const _0x39a30f=_0x8683ed,_0x410b48=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x494147=_0x48e4ff%0xc,_0x2ba959=Math['floor'](_0x48e4ff/0xc),_0x32862d=_0x410b48[_0x494147],_0x32b7d0=_0x49984e(_0x32862d,_0x2ba959),_0x20b4ca=_0x74a956[_0x39a30f(0x276)]();_0x20b4ca[_0x39a30f(0x209)]='sawtooth';const _0x2e3168=_0x74a956[_0x39a30f(0x276)]();_0x2e3168[_0x39a30f(0x209)]=_0x39a30f(0x230);const _0x269148=_0x74a956[_0x39a30f(0xe4)](),_0x30a00b=_0x74a956[_0x39a30f(0x1b9)]();_0x30a00b[_0x39a30f(0x209)]=_0x39a30f(0x2aa),_0x30a00b['frequency']['value']=_0x32b7d0*0x4,_0x30a00b['Q'][_0x39a30f(0x143)]=0xa,_0x20b4ca[_0x39a30f(0xc1)](_0x30a00b),_0x2e3168[_0x39a30f(0xc1)](_0x30a00b),_0x30a00b[_0x39a30f(0xc1)](_0x269148),_0x269148[_0x39a30f(0xc1)](_0x11b53f),_0x20b4ca['frequency']['value']=_0x32b7d0,_0x2e3168[_0x39a30f(0x181)][_0x39a30f(0x143)]=_0x32b7d0*0.5;const _0x411f7b=_0x4a07f6,_0x38aa6c=0.05,_0x1c1fce=0.2,_0x520ab8=0.6;_0x269148['gain'][_0x39a30f(0x26f)](0x0,_0x411f7b),_0x269148['gain']['linearRampToValueAtTime'](0x1,_0x411f7b+_0x38aa6c),_0x269148[_0x39a30f(0x95)][_0x39a30f(0x129)](_0x520ab8,_0x411f7b+_0x38aa6c+_0x1c1fce),_0x269148[_0x39a30f(0x95)][_0x39a30f(0x129)](0x0,_0x411f7b+_0x447538),_0x20b4ca[_0x39a30f(0x211)](_0x411f7b),_0x2e3168[_0x39a30f(0x211)](_0x411f7b),_0x20b4ca[_0x39a30f(0x270)](_0x411f7b+_0x447538),_0x2e3168[_0x39a30f(0x270)](_0x411f7b+_0x447538);}function _0x128dc3(_0x51a2ec,_0x29090f,_0x27cec6,_0x233a9c,_0x4a651b){const _0x18d7a4=_0x8683ed,_0x447f0d=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x20bb26=_0x51a2ec%0xc,_0x59e0d2=Math[_0x18d7a4(0x1a8)](_0x51a2ec/0xc),_0x5583a9=_0x447f0d[_0x20bb26],_0x3bdb3b=_0x49984e(_0x5583a9,_0x59e0d2),_0x7380df=_0x74a956[_0x18d7a4(0x276)]();_0x7380df[_0x18d7a4(0x209)]=_0x18d7a4(0x292);const _0x5bd506=_0x74a956[_0x18d7a4(0xe4)](),_0x299ddf=_0x74a956[_0x18d7a4(0x1b9)]();_0x299ddf['type']=_0x18d7a4(0x2aa),_0x299ddf[_0x18d7a4(0x181)][_0x18d7a4(0x143)]=_0x3bdb3b*0x2,_0x299ddf['Q'][_0x18d7a4(0x143)]=0x5,_0x7380df['connect'](_0x299ddf),_0x299ddf[_0x18d7a4(0xc1)](_0x5bd506),_0x5bd506[_0x18d7a4(0xc1)](_0x233a9c),_0x7380df[_0x18d7a4(0x181)][_0x18d7a4(0x143)]=_0x3bdb3b;const _0x46c5fc=_0x29090f,_0x5f06a4=0.1,_0x22f2c5=0.3,_0x57ce5b=0.7;_0x5bd506[_0x18d7a4(0x95)][_0x18d7a4(0x26f)](0x0,_0x46c5fc),_0x5bd506[_0x18d7a4(0x95)][_0x18d7a4(0x129)](0x1,_0x46c5fc+_0x5f06a4),_0x5bd506[_0x18d7a4(0x95)]['linearRampToValueAtTime'](_0x57ce5b,_0x46c5fc+_0x5f06a4+_0x22f2c5),_0x5bd506[_0x18d7a4(0x95)][_0x18d7a4(0x129)](0x0,_0x46c5fc+_0x27cec6),_0x7380df['start'](_0x46c5fc),_0x7380df[_0x18d7a4(0x270)](_0x46c5fc+_0x27cec6);}function _0x599ff2(_0x56cbb2,_0xaa5504,_0xc56c42,_0x29ef34,_0x4a71ba){const _0x194c0d=_0x8683ed,_0x19af4a=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x10e0cb=_0x56cbb2%0xc,_0x4910cd=Math[_0x194c0d(0x1a8)](_0x56cbb2/0xc),_0x3bfb65=_0x19af4a[_0x10e0cb],_0x313860=_0x49984e(_0x3bfb65,_0x4910cd),_0x5b8820=_0x74a956['createOscillator']();_0x5b8820[_0x194c0d(0x209)]=_0x194c0d(0x279);const _0x30bfe4=_0x74a956['createGain'](),_0x100af3=_0x74a956[_0x194c0d(0x1b9)]();_0x100af3[_0x194c0d(0x209)]=_0x194c0d(0x2aa),_0x100af3[_0x194c0d(0x181)][_0x194c0d(0x143)]=_0x313860*1.5,_0x100af3['Q'][_0x194c0d(0x143)]=0x5,_0x5b8820[_0x194c0d(0xc1)](_0x100af3),_0x100af3[_0x194c0d(0xc1)](_0x30bfe4),_0x30bfe4[_0x194c0d(0xc1)](_0x29ef34),_0x5b8820[_0x194c0d(0x181)][_0x194c0d(0x143)]=_0x313860*0.5;const _0x1afc1c=_0xaa5504,_0x1a0c07=0.05,_0x305219=0.2,_0x36f96b=0.8;_0x30bfe4['gain'][_0x194c0d(0x26f)](0x0,_0x1afc1c),_0x30bfe4[_0x194c0d(0x95)][_0x194c0d(0x129)](0x1,_0x1afc1c+_0x1a0c07),_0x30bfe4['gain'][_0x194c0d(0x129)](_0x36f96b,_0x1afc1c+_0x1a0c07+_0x305219),_0x30bfe4[_0x194c0d(0x95)][_0x194c0d(0x129)](0x0,_0x1afc1c+_0xc56c42),_0x5b8820[_0x194c0d(0x211)](_0x1afc1c),_0x5b8820['stop'](_0x1afc1c+_0xc56c42);}function _0x4d2e77(_0x3587ca,_0x3bf9e8,_0x1e4c07,_0x4aa15a,_0x41807a){const _0x3d8f35=_0x8683ed,_0x271e8a=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x201a77=_0x3587ca%0xc,_0x49d314=Math[_0x3d8f35(0x1a8)](_0x3587ca/0xc),_0x4d1c19=_0x271e8a[_0x201a77],_0x41e6dc=_0x49984e(_0x4d1c19,_0x49d314),_0x766adc=_0x74a956[_0x3d8f35(0x276)]();_0x766adc[_0x3d8f35(0x209)]=_0x3d8f35(0x279);const _0x2ae164=_0x74a956['createGain'](),_0x54196f=_0x74a956[_0x3d8f35(0x1b9)]();_0x54196f[_0x3d8f35(0x209)]=_0x3d8f35(0x2aa),_0x54196f['frequency'][_0x3d8f35(0x143)]=_0x41e6dc*0x3,_0x54196f['Q']['value']=0x2,_0x766adc[_0x3d8f35(0xc1)](_0x54196f),_0x54196f[_0x3d8f35(0xc1)](_0x2ae164),_0x2ae164[_0x3d8f35(0xc1)](_0x4aa15a),_0x766adc[_0x3d8f35(0x181)][_0x3d8f35(0x143)]=_0x41e6dc;const _0x3a5918=_0x3bf9e8,_0x1bf1b4=0.02,_0x44d009=0.1,_0x28a39e=0.7;_0x2ae164[_0x3d8f35(0x95)][_0x3d8f35(0x26f)](0x0,_0x3a5918),_0x2ae164['gain'][_0x3d8f35(0x129)](0x1,_0x3a5918+_0x1bf1b4),_0x2ae164[_0x3d8f35(0x95)][_0x3d8f35(0x129)](_0x28a39e,_0x3a5918+_0x1bf1b4+_0x44d009),_0x2ae164[_0x3d8f35(0x95)][_0x3d8f35(0x129)](0x0,_0x3a5918+_0x1e4c07),_0x766adc[_0x3d8f35(0x211)](_0x3a5918),_0x766adc[_0x3d8f35(0x270)](_0x3a5918+_0x1e4c07);}function _0x1d70e2(_0x2da527,_0x3dfc42,_0x555498,_0x2f1919,_0x588ceb){const _0x377d7c=_0x8683ed,_0x290ee1=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x5e5f13=_0x2da527%0xc,_0x1574c7=Math[_0x377d7c(0x1a8)](_0x2da527/0xc),_0xf0976=_0x290ee1[_0x5e5f13],_0x205cc9=_0x49984e(_0xf0976,_0x1574c7),_0x412805=_0x74a956[_0x377d7c(0x276)]();_0x412805[_0x377d7c(0x209)]=_0x377d7c(0x261);const _0x457614=_0x74a956[_0x377d7c(0xe4)](),_0x28b727=_0x74a956[_0x377d7c(0x1b9)]();_0x28b727[_0x377d7c(0x209)]=_0x377d7c(0x2aa),_0x28b727[_0x377d7c(0x181)][_0x377d7c(0x143)]=_0x205cc9*1.2,_0x28b727['Q'][_0x377d7c(0x143)]=0x3,_0x412805[_0x377d7c(0xc1)](_0x28b727),_0x28b727['connect'](_0x457614),_0x457614[_0x377d7c(0xc1)](_0x2f1919),_0x412805[_0x377d7c(0x181)][_0x377d7c(0x143)]=_0x205cc9;const _0x57a1e4=_0x3dfc42,_0x39d3ea=0.3,_0x51989c=0.5,_0x47fc2c=0.8;_0x457614[_0x377d7c(0x95)][_0x377d7c(0x26f)](0x0,_0x57a1e4),_0x457614[_0x377d7c(0x95)]['linearRampToValueAtTime'](0x1,_0x57a1e4+_0x39d3ea),_0x457614[_0x377d7c(0x95)][_0x377d7c(0x129)](_0x47fc2c,_0x57a1e4+_0x39d3ea+_0x51989c),_0x457614[_0x377d7c(0x95)]['linearRampToValueAtTime'](0x0,_0x57a1e4+_0x555498),_0x412805[_0x377d7c(0x211)](_0x57a1e4),_0x412805['stop'](_0x57a1e4+_0x555498);}function _0x1054f6(_0x2ffc1d,_0x309415,_0x9aba9a,_0x29cb2e,_0x520279){const _0x4371aa=_0x8683ed,_0x350da0=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],_0x248b82=_0x2ffc1d%0xc,_0x59762b=Math[_0x4371aa(0x1a8)](_0x2ffc1d/0xc),_0x18cd81=_0x350da0[_0x248b82],_0x124876=_0x49984e(_0x18cd81,_0x59762b),_0x17d708=_0x74a956[_0x4371aa(0x276)]();_0x17d708[_0x4371aa(0x209)]=_0x4371aa(0x230);const _0x554059=_0x74a956[_0x4371aa(0xe4)](),_0x36c2a1=_0x74a956['createBiquadFilter']();_0x36c2a1[_0x4371aa(0x209)]=_0x4371aa(0x19c),_0x36c2a1[_0x4371aa(0x181)]['value']=_0x124876*0.8,_0x36c2a1['Q']=0x5,_0x17d708[_0x4371aa(0xc1)](_0x36c2a1),_0x36c2a1[_0x4371aa(0xc1)](_0x554059),_0x554059['connect'](_0x29cb2e),_0x17d708[_0x4371aa(0x181)][_0x4371aa(0x143)]=_0x124876;const _0x3549db=_0x309415,_0x26453e=0.01,_0x52245a=0.1,_0x34c480=0.5;_0x554059[_0x4371aa(0x95)][_0x4371aa(0x26f)](0x0,_0x3549db),_0x554059['gain']['linearRampToValueAtTime'](0x1,_0x3549db+_0x26453e),_0x554059[_0x4371aa(0x95)][_0x4371aa(0x129)](_0x34c480,_0x3549db+_0x26453e+_0x52245a),_0x554059[_0x4371aa(0x95)][_0x4371aa(0x129)](0x0,_0x3549db+_0x9aba9a),_0x17d708['start'](_0x3549db),_0x17d708['stop'](_0x3549db+_0x9aba9a);}function _0x2084d1(_0x5a1ccf,_0x122de5,_0x3cf55d,_0x2e041f,_0x536fcb,_0x4c2992){const _0x29edae=_0x8683ed;if(!_0x5c373d[_0x536fcb]||!_0x5c373d[_0x536fcb][_0x29edae(0x20e)])return;const _0x190f29=_0x74a956['createBufferSource']();_0x190f29['buffer']=_0x5c373d[_0x536fcb][_0x29edae(0x20e)];const _0x409ce8=_0x74a956['createGain']();_0x190f29[_0x29edae(0xc1)](_0x409ce8),_0x409ce8['connect'](_0x2e041f);const _0x321984=Math['pow'](0x2,0x1/0xc),_0x586818=0x2a,_0x29d817=Math[_0x29edae(0x254)](_0x321984,_0x5a1ccf-_0x586818);_0x190f29[_0x29edae(0x139)][_0x29edae(0x143)]=_0x29d817;const _0x2d875b=_0x122de5,_0x4a5b3b=0.01,_0x353d2f=0.1,_0x2bc981=0.7;_0x409ce8[_0x29edae(0x95)][_0x29edae(0x26f)](0x0,_0x2d875b),_0x409ce8['gain'][_0x29edae(0x129)](0x1,_0x2d875b+_0x4a5b3b),_0x409ce8[_0x29edae(0x95)][_0x29edae(0x129)](_0x2bc981,_0x2d875b+_0x4a5b3b+_0x353d2f),_0x409ce8[_0x29edae(0x95)][_0x29edae(0x129)](0x0,_0x2d875b+_0x3cf55d);const _0x3e8799=_0x5c373d[_0x536fcb][_0x29edae(0x20e)]['duration'],_0x2959bf=_0x3e8799*(_0x4c2992[_0x29edae(0x211)]/0x64),_0x3288bb=_0x3e8799*(_0x4c2992[_0x29edae(0x2a0)]/0x64);_0x190f29[_0x29edae(0x211)](_0x2d875b,_0x2959bf),_0x190f29[_0x29edae(0x270)](_0x2d875b+_0x3cf55d,_0x3288bb);}function _0x49984e(_0xf4a250,_0x243d89){const _0x3a6a19=_0x8683ed,_0x2e5a65=0x1b8,_0x1661d9=['C','C#','D','D#','E','F','F#','G','G','G#','A','A#','B'],_0x133623=_0x1661d9[_0x3a6a19(0x1d6)](_0xf4a250),_0x12693f=(_0x243d89-0x4)*0xc+(_0x133623-0x9);return _0x2e5a65*Math[_0x3a6a19(0x254)](0x2,_0x12693f/0xc);}function _0x3cb914(){const _0xcd9158=_0x8683ed;if(!_0x502895)return;!_0x5c373d[_0x502895][_0xcd9158(0x256)]&&(_0x5c373d[_0x502895][_0xcd9158(0x256)]={}),_0x5c373d[_0x502895][_0xcd9158(0x256)][_0xcd9158(0x1d5)]=JSON[_0xcd9158(0x1c0)](JSON[_0xcd9158(0x27d)](_0x33e0cd[_0x502895]));}function _0x428737(){const _0x5ee15c=_0x8683ed;if(!_0x502895)return;_0x5df347=_0x502895;const _0xf48505=_0x5c373d[_0x502895];if(!_0xf48505[_0x5ee15c(0x20e)]){console['error'](_0x5ee15c(0x9f));return;}const _0x1be5bb=_0x33e0cd[_0x502895];_0x1c0c6b=_0x1be5bb['sampleRange'][_0x5ee15c(0x211)],_0x39eafe=_0x1be5bb[_0x5ee15c(0x151)][_0x5ee15c(0x2a0)],_0x24d723=0x1,document[_0x5ee15c(0x156)](_0x5ee15c(0x1eb))['value']=_0x1c0c6b,document['getElementById']('sample-selection-end')[_0x5ee15c(0x143)]=_0x39eafe,_0x206714(),document[_0x5ee15c(0x156)](_0x5ee15c(0x205))[_0x5ee15c(0xec)]=_0x5ee15c(0xfd)+_0x502895,document['getElementById'](_0x5ee15c(0xae))['textContent']=_0xf48505['buffer'][_0x5ee15c(0x263)][_0x5ee15c(0x2ad)](0x2)+'s',_0x400b5d(),_0x41422d[_0x5ee15c(0xa0)][_0x5ee15c(0xa7)]=_0x5ee15c(0x216);}}));
+document.addEventListener("DOMContentLoaded", function () {
+    // Offline Storage Manager for Psychological Studio
+    class OfflineStorageManager {
+        constructor() {
+            this.storageKey = 'psychological-studio-data';
+            this.projectKey = 'psychological-studio-projects';
+            this.settingsKey = 'psychological-studio-settings';
+            this.audioKey = 'psychological-studio-audio';
+        }
+
+        // Save project data
+        saveProject(projectName, projectData) {
+            try {
+                const projects = this.getProjects();
+                projects[projectName] = {
+                    ...projectData,
+                    timestamp: Date.now(),
+                    version: '2.0'
+                };
+                localStorage.setItem(this.projectKey, JSON.stringify(projects));
+                console.log(`Project "${projectName}" saved offline`);
+                return true;
+            } catch (error) {
+                console.error('Failed to save project:', error);
+                return false;
+            }
+        }
+
+        // Load project
+        loadProject(projectName) {
+            try {
+                const projects = this.getProjects();
+                return projects[projectName] || null;
+            } catch (error) {
+                console.error('Failed to load project:', error);
+                return null;
+            }
+        }
+
+        // Get all projects
+        getProjects() {
+            try {
+                const projects = localStorage.getItem(this.projectKey);
+                return projects ? JSON.parse(projects) : {};
+            } catch (error) {
+                console.error('Failed to get projects:', error);
+                return {};
+            }
+        }
+
+        // Delete project
+        deleteProject(projectName) {
+            try {
+                const projects = this.getProjects();
+                delete projects[projectName];
+                localStorage.setItem(this.projectKey, JSON.stringify(projects));
+                console.log(`Project "${projectName}" deleted`);
+                return true;
+            } catch (error) {
+                console.error('Failed to delete project:', error);
+                return false;
+            }
+        }
+
+        // Save app settings
+        saveSettings(settings) {
+            try {
+                localStorage.setItem(this.settingsKey, JSON.stringify({
+                    ...settings,
+                    timestamp: Date.now()
+                }));
+                return true;
+            } catch (error) {
+                console.error('Failed to save settings:', error);
+                return false;
+            }
+        }
+
+        // Load app settings
+        loadSettings() {
+            try {
+                const settings = localStorage.getItem(this.settingsKey);
+                return settings ? JSON.parse(settings) : {};
+            } catch (error) {
+                console.error('Failed to load settings:', error);
+                return {};
+            }
+        }
+
+        // Save audio data as base64
+        saveAudioData(audioName, audioBlob) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => {
+                    try {
+                        const audioData = {
+                            name: audioName,
+                            data: reader.result,
+                            timestamp: Date.now(),
+                            size: audioBlob.size,
+                            type: audioBlob.type
+                        };
+                        
+                        const existingAudio = this.getAudioData();
+                        existingAudio[audioName] = audioData;
+                        localStorage.setItem(this.audioKey, JSON.stringify(existingAudio));
+                        console.log(`Audio "${audioName}" saved offline`);
+                        resolve(true);
+                    } catch (error) {
+                        console.error('Failed to save audio:', error);
+                        reject(error);
+                    }
+                };
+                reader.onerror = reject;
+                reader.readAsDataURL(audioBlob);
+            });
+        }
+
+        // Get audio data
+        getAudioData(audioName = null) {
+            try {
+                const audioData = localStorage.getItem(this.audioKey);
+                const data = audioData ? JSON.parse(audioData) : {};
+                return audioName ? data[audioName] : data;
+            } catch (error) {
+                console.error('Failed to get audio data:', error);
+                return audioName ? null : {};
+            }
+        }
+
+        // Convert base64 audio back to blob
+        audioDataToBlob(audioData) {
+            try {
+                const byteCharacters = atob(audioData.data.split(',')[1]);
+                const byteNumbers = new Array(byteCharacters.length);
+                for (let i = 0; i < byteCharacters.length; i++) {
+                    byteNumbers[i] = byteCharacters.charCodeAt(i);
+                }
+                const byteArray = new Uint8Array(byteNumbers);
+                return new Blob([byteArray], { type: audioData.type });
+            } catch (error) {
+                console.error('Failed to convert audio data to blob:', error);
+                return null;
+            }
+        }
+
+        // Get storage usage info
+        getStorageInfo() {
+            try {
+                const projects = this.getProjects();
+                const audio = this.getAudioData();
+                const settings = this.loadSettings();
+                
+                let totalSize = 0;
+                Object.values(audio).forEach(audioData => {
+                    totalSize += audioData.size || 0;
+                });
+                
+                return {
+                    projects: Object.keys(projects).length,
+                    audioFiles: Object.keys(audio).length,
+                    totalAudioSize: totalSize,
+                    settings: Object.keys(settings).length
+                };
+            } catch (error) {
+                console.error('Failed to get storage info:', error);
+                return { projects: 0, audioFiles: 0, totalAudioSize: 0, settings: 0 };
+            }
+        }
+
+        // Clear all data
+        clearAllData() {
+            try {
+                localStorage.removeItem(this.projectKey);
+                localStorage.removeItem(this.settingsKey);
+                localStorage.removeItem(this.audioKey);
+                console.log('All offline data cleared');
+                return true;
+            } catch (error) {
+                console.error('Failed to clear data:', error);
+                return false;
+            }
+        }
+
+        // Export all data for backup
+        exportAllData() {
+            try {
+                const data = {
+                    projects: this.getProjects(),
+                    settings: this.loadSettings(),
+                    audio: this.getAudioData(),
+                    exportDate: new Date().toISOString(),
+                    version: '2.0'
+                };
+                return JSON.stringify(data, null, 2);
+            } catch (error) {
+                console.error('Failed to export data:', error);
+                return null;
+            }
+        }
+
+        // Import data from backup
+        importData(jsonData) {
+            try {
+                const data = JSON.parse(jsonData);
+                if (data.projects) localStorage.setItem(this.projectKey, JSON.stringify(data.projects));
+                if (data.settings) localStorage.setItem(this.settingsKey, JSON.stringify(data.settings));
+                if (data.audio) localStorage.setItem(this.audioKey, JSON.stringify(data.audio));
+                console.log('Data imported successfully');
+                return true;
+            } catch (error) {
+                console.error('Failed to import data:', error);
+                return false;
+            }
+        }
+    }
+
+    // Initialize offline storage manager
+    const offlineStorage = new OfflineStorageManager();
+
+    let currentSampleForPopup = null;
+    let longPressTimer = null;
+    let isLongPress = false;
+    let eqCanvas = null;
+    let eqCtx = null;
+    const MAX_EQ_POINTS = 12;
+    let isDraggingEqBand = false;
+    let draggedPoint = null;
+    let isCreatingNewPoint = false;
+    let waveformAnalyzer = null;
+    let waveformAnimationId = null;
+    let waveformHistory = [];
+    const waveformHistorySize = 100;
+    let originalEffects = null;
+    let temporaryEffects = null;
+    let recordedBlob = null;
+    const recordedBlobs = {};
+    const uploadStatusPerSample = {};
+    const recordStatusPerSample = {};
+    const uploadedFileNames = {};
+    let pianoRollData = {};
+    let isPreviewingPianoRoll = false;
+    let pianoRollPreviewNodes = {};
+    let currentPianoRollSample = null;
+    let pianoRollLoopInterval = null;
+    let pianoRollNoteLength = 1;
+    let pianoRollFilterNodes = {
+        lowShelf: null,
+        highShelf: null,
+        peaking1: null,
+        peaking2: null,
+        peaking3: null,
+        delay: null,
+        delayFeedback: null
+    };
+    let pianoRollVisualizer = null;
+    let pianoRollVisualizerCtx = null;
+    let pianoRollVisualizerAnalyzer = null;
+    let pianoRollVisualizerAnimationId = null;
+    let pianoRollVisualizerHistory = [];
+    const pianoRollVisualizerHistorySize = 100;
+    let sampleSelectionPopup = null;
+    let currentSampleForSelection = null;
+    let sampleSelectionStart = 0;
+    let sampleSelectionEnd = 0;
+    let sampleSelectionZoomLevel = 1;
+    let sampleSelectionWaveformBuffer = null;
+    let sampleSelectionPreviewSource = null;
+    let sampleSelectionPreviewGain = null;
+    let isPreviewingSelection = false;
+    let audioContext;
+    let isPlaying = false;
+    let isRecording = false;
+    let tempo = 120;
+    let highTempo = 0;
+    let longLoopTempo = 120;
+    let beatDuration = 60 / tempo;
+    let barDuration = beatDuration * 4;
+    let nextBarTime = 0;
+    let lookahead = 25;
+    let scheduleAheadTime = .1;
+    let timerId = null;
+    let mediaRecorder;
+    let recordedChunks = [];
+    let recordingStartTime;
+    let recordingDuration = 0;
+    let recordingDestination = null;
+    let microphoneMediaRecorder = null;
+    let microphoneMediaStream = null;
+    let microphoneRecordedChunks = [];
+    let isMicrophoneRecording = false;
+    let masterStartTime = 0;
+    let masterCurrentBar = 0;
+    let masterTempo = tempo;
+    let tempoChangeTime = 0;
+    let tempoHistory = [];
+    let masterBarGrid = {
+        startTime: 0,
+        duration: barDuration,
+        nextStartTime: barDuration
+    };
+    let loopLength = 1;
+    let longLoopLength = 1;
+    const currentPlaying = {};
+    const effectsPopup = document.createElement("div");
+    effectsPopup.className = "effects-popup";
+    effectsPopup.style.display = "none";
+    const style = document.createElement("style");
+    style.textContent = `
+        .audio-button.active.no-sample {
+            background-color: #333333 !important;
+            color: white !important;
+        }
+        .audio-button.active.no-sample .loop-indicator {
+            background-color: #555555 !important;
+        }
+        
+        /* Dark grey slider styling */
+        input[type="range"] {
+            background-color: #444444 !important;
+            height: 8px;
+            border-radius: 4px;
+            outline: none;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #af4c93ff;
+            cursor: pointer;
+        }
+        
+        input[type="range"]::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #af4c4cff;
+            cursor: pointer;
+        }
+        
+        /* Custom indicator styling - changed to almost black */
+        .custom-indicator {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            width: 10px;
+            height: 10px;
+            background-color: #111111 !important;
+            border-radius: 50%;
+            z-index: 2;
+            box-shadow: 0 0 3px rgba(0,0,0,0.5);
+        }
+        
+        /* Piano roll styling */
+        .piano-roll-container {
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            margin-top: 10px;
+            position: relative;
+            order: 10;
+            overflow: visible;
+        }
+        
+        .piano-roll-scrollable {
+            display: flex;
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: auto;
+            position: relative;
+        }
+        
+        .piano-keys {
+            width: 40px;
+            background-color: #222;
+            border-right: 1px solid #444;
+            flex-shrink: 0;
+            position: sticky;
+            left: 0;
+            z-index: 10;
+        }
+        
+        .piano-key {
+            height: 20px;
+            border-bottom: 1px solid #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #aaa;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .piano-key.white {
+            background-color: #444;
+            color: #ddd;
+        }
+        
+        .piano-key.black {
+            background-color: #222;
+            color: #fff;
+            height: 12px;
+            margin: 4px 0;
+            z-index: 2;
+        }
+        
+        .piano-key:hover {
+            background-color: #555;
+        }
+        
+        .piano-key.active {
+            background-color: #4CAF50;
+        }
+        
+        .piano-roll-grid-container {
+            flex-grow: 1;
+            position: relative;
+            overflow: visible;
+            min-height: 100%;
+        }
+        
+        .piano-roll-grid {
+            position: relative;
+            top: auto;
+            left: auto;
+            background-color: #333;
+            display: grid;
+            grid-auto-rows: 20px;
+            width: 100%;
+            height: auto;
+            min-height: 1680px;
+        }
+        
+        .piano-roll-cell {
+            border-right: 1px solid crimson;
+            border-bottom: 1px solid crimson;
+            cursor: pointer;
+            position: relative;
+            min-width: 20px;
+        }
+        
+        .piano-roll-cell.bar-start {
+            border-left: 2px solid black;
+        }
+        
+        .piano-roll-cell.bar-end {
+            border-right: 2px solid black;
+        }
+        
+        .piano-roll-cell.active {
+            background-color: #111;
+            height: 20px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        
+        .piano-roll-cell.note-long {
+            background-color: #111;
+        }
+        
+        .piano-roll-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            color: white;
+        }
+        
+        .piano-roll-sound-source {
+            display: flex;
+            align-items: center;
+        }
+        
+        .piano-roll-sound-source label {
+            margin-right: 10px;
+            color: white;
+        }
+        
+        .piano-roll-sound-source select {
+            color: white;
+            background-color: #333;
+            border: 1px solid #555;
+            padding: 5px;
+        }
+        
+        .piano-roll-preview-controls {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .piano-roll-preview-controls button {
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .piano-roll-preview-controls button:hover {
+            background-color: #45a049;
+        }
+        
+        .piano-roll-clear-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .piano-roll-clear-btn:hover {
+            background-color: #d32f2f;
+        }
+        
+        /* Piano roll note length selector */
+        .piano-roll-note-length {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .piano-roll-note-length label {
+            color: white;
+        }
+        
+        .piano-roll-note-length select {
+            color: white;
+            background-color: #333;
+            border: 1px solid #555;
+            padding: 5px;
+        }
+        
+        /* Piano roll grid size selector */
+        .piano-roll-grid-size {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .piano-roll-grid-size label {
+            color: white;
+        }
+        
+        .grid-size-controls {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .grid-size-controls button {
+            background-color: #444;
+            color: white;
+            border: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .grid-size-controls button:hover {
+            background-color: #555;
+        }
+        
+        #grid-size-display {
+            color: white;
+            min-width: 30px;
+            text-align: center;
+        }
+        
+        /* Piano roll zoom controls */
+        .piano-roll-zoom-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .piano-roll-zoom-controls label {
+            color: white;
+        }
+        
+        .zoom-controls {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .zoom-controls button {
+            background-color: #444;
+            color: white;
+            border: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .zoom-controls button:hover {
+            background-color: #555;
+        }
+        
+        #zoom-level-display {
+            color: white;
+            min-width: 50px;
+            text-align: center;
+        }
+        
+        /* Piano roll visualizer styling */
+        .piano-roll-visualizer-container {
+            height: 100px;
+            background-color: #111;
+            border: 1px solid #333;
+            border-radius: 4px;
+            margin: 10px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .piano-roll-visualizer {
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Piano roll bar numbers */
+        .piano-roll-bar-numbers {
+            display: flex;
+            height: 20px;
+            background-color: #2a2a2a;
+            border-bottom: 1px solid #444;
+            position: sticky;
+            top: 0;
+            z-index: 5;
+        }
+        
+        .piano-roll-bar-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 10px;
+            border-right: 1px solid #444;
+            min-width: 80px; /* 4 cells * 20px each */
+        }
+        
+        .piano-roll-bar-number.bar-start {
+            border-left: 2px solid black;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .sample-selection-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            border: 1px solid #444;
+            border-radius: 12px;
+            padding: 25px;
+            z-index: 1001;
+            width: 600px;
+            max-width: 90vw;
+            max-height: 85vh;
+            overflow-y: auto;
+            display: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .sample-selection-popup h3 {
+            margin-top: 0;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .sample-selection-popup .popup-content {
+            margin-bottom: 20px;
+        }
+        
+        .sample-selection-popup .popup-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .sample-selection-popup button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .sample-selection-popup .popup-close-btn {
+            background-color: #555;
+            color: white;
+        }
+        
+        .sample-selection-popup .popup-close-btn:hover {
+            background-color: #444;
+            transform: translateY(-1px);
+        }
+        
+        .sample-selection-popup .popup-accept-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .sample-selection-popup .popup-accept-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-1px);
+        }
+        
+        .sample-waveform-container {
+            height: 180px;
+            background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+            border: 1px solid #444;
+            border-radius: 8px;
+            position: relative;
+            margin: 15px 0;
+            overflow: hidden;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .sample-waveform {
+            width: 100%;
+            height: 100%;
+            color: red;
+            background-color: red;
+            accent-color: red;
+        }
+        
+        .sample-selection-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .sample-selection-range {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        
+        .sample-selection-range label {
+            width: 60px;
+            color: #ddd;
+            font-weight: 500;
+        }
+        
+        .sample-selection-range input[type="range"] {
+            flex-grow: 1;
+            margin: 0 15px;
+            background: linear-gradient(90deg, #333 0%, #444 100%);
+            height: 6px;
+            border-radius: 3px;
+            outline: none;
+        }
+        
+        .sample-selection-range input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #5e4cafff;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .sample-selection-range input[type="range"]::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #af4c4cff;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .sample-selection-values {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #aaa;
+            margin-top: 5px;
+        }
+        
+        .sample-selection-info {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        
+        .sample-selection-info span {
+            color: #ddd;
+            font-size: 14px;
+        }
+        
+        .sample-selection-preview-controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .sample-selection-preview-btn {
+            background-color: #c93600ff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .sample-selection-preview-btn:hover {
+            background-color: #da310bff;
+            transform: translateY(-1px);
+        }
+        
+        .sample-selection-zoom-controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        
+        .sample-selection-zoom-btn {
+            background-color: #555;
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+        
+        .sample-selection-zoom-btn:hover {
+            background-color: #666;
+            transform: scale(1.1);
+        }
+        
+        .sample-selection-zoom-level {
+            display: flex;
+            align-items: center;
+            color: #ddd;
+            font-size: 14px;
+            min-width: 50px;
+            justify-content: center;
+        }
+        
+        /* Piano roll filter controls styling - MODIFIED */
+        .piano-roll-filters {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #444;
+        }
+        
+        .piano-roll-filters h4 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .filter-control {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .filter-control label {
+            width: 100px;
+            font-size: 12px;
+            color: #aaa;
+        }
+        
+        .filter-control input {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        
+        .filter-control span {
+            width: 50px;
+            text-align: right;
+            font-size: 12px;
+            color: #aaa;
+        }
+        
+        /* Enhanced filter controls styling - MOBILE FIX */
+        .enhanced-filter-controls {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        @media (min-width: 768px) {
+            .enhanced-filter-controls {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .filter-group {
+            background-color: #2a2a2a;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #444;
+        }
+        
+        .filter-group h5 {
+            margin: 0 0 8px 0;
+            color: #331febff;
+            font-size: 14px;
+        }
+        
+        .filter-group .filter-control {
+            margin-bottom: 5px;
+        }
+        
+        .filter-group .filter-control:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Loading indicator for piano roll rendering */
+        .loading-indicator {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            z-index: 1000;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .loading-indicator .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 3px solid #4CAF50;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Toggle switch for piano roll section */
+        .piano-roll-toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .piano-roll-toggle-container h4 {
+            margin: 0;
+        }
+        
+        /* The switch - the box around the slider */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #444;
+            transition: .4s;
+            border-radius: 24px;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .slider {
+            background-color: #4CAF50;
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        
+        /* Piano roll content - hidden by default */
+        .piano-roll-content {
+            display: none;
+        }
+        
+        .piano-roll-content.visible {
+            display: block;
+        }
+        
+        /* Recording button styles */
+        .microphone-record-btn {
+            background-color: #d68100ff !important;
+            color: black !important;
+            padding: 3px;
+        }
+        
+        .microphone-save-btn {
+            background-color: #deae12ff !important;
+            color: black !important;
+            padding: 3px;
+        }
+        
+        .microphone-download-btn {
+            background-color: #4ca427ff !important;
+            color: black !important;
+            padding: 3px;
+        }
+        
+        .microphone-delete-btn {
+            background-color: #ff3f31ff !important;
+            color: black !important;
+            padding: 3px;
+        }
+        
+        /* LFO Controls Styling */
+        .lfo-section {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #444;
+        }
+        
+        .lfo-section h4 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .lfo-control {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .lfo-control label {
+            width: 100px;
+            font-size: 12px;
+            color: #aaa;
+        }
+        
+        .lfo-control select {
+            flex-grow: 1;
+            margin-right: 10px;
+            color: white;
+            background-color: #333;
+            border: 1px solid #555;
+            padding: 5px;
+        }
+        
+        .lfo-control input {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        
+        .lfo-control span {
+            width: 50px;
+            text-align: right;
+            font-size: 12px;
+            color: #aaa;
+        }
+        
+        .lfo-visualizer {
+            height: 60px;
+            background-color: #111;
+            border: 1px solid #333;
+            border-radius: 4px;
+            margin: 10px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .lfo-wave {
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* EQ Visualizer Toggle */
+        .eq-visualizer-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .eq-visualizer-toggle h4 {
+            margin: 0;
+        }
+        
+        /* Effect Section Color Coding */
+        .effect-section {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Volume Section - Blue Theme */
+        .effect-section:nth-of-type(3) {
+            background-color: rgba(33, 150, 243, 0.1);
+            border-color: rgba(33, 150, 243, 0.3);
+        }
+        
+        .effect-section:nth-of-type(3) h4 {
+            color: #2196F3;
+        }
+        
+        .effect-section:nth-of-type(3) .slider-container label {
+            color: #64B5F6;
+        }
+        
+        .effect-section:nth-of-type(3) input[type="range"] {
+            background: linear-gradient(90deg, #1565C0 0%, #2196F3 100%);
+        }
+        
+        .effect-section:nth-of-type(3) input[type="range"]::-webkit-slider-thumb {
+            background: #2196F3;
+        }
+        
+        .effect-section:nth-of-type(3) input[type="range"]::-moz-range-thumb {
+            background: #2196F3;
+        }
+        
+        .effect-section:nth-of-type(3) span {
+            color: #90CAF9;
+        }
+        
+        /* Speed Section - Green Theme */
+        .effect-section:nth-of-type(4) {
+            background-color: rgba(76, 175, 80, 0.1);
+            border-color: rgba(76, 175, 80, 0.3);
+        }
+        
+        .effect-section:nth-of-type(4) h4 {
+            color: #4CAF50;
+        }
+        
+        .effect-section:nth-of-type(4) .speed-selector label {
+            color: #81C784;
+        }
+        
+        .effect-section:nth-of-type(4) select {
+            background-color: rgba(46, 125, 50, 0.5);
+            border-color: rgba(76, 175, 80, 0.5);
+        }
+        
+        /* Individual Tempo Section - Purple Theme */
+        .individual-tempo-section {
+            background-color: rgba(156, 39, 176, 0.1);
+            border-color: rgba(156, 39, 176, 0.3);
+        }
+        
+        .individual-tempo-section h4 {
+            color: #9C27B0;
+        }
+        
+        .individual-tempo-section .slider-container label {
+            color: #BA68C8;
+        }
+        
+        .individual-tempo-section input[type="range"] {
+            background: linear-gradient(90deg, #6A1B9A 0%, #9C27B0 100%);
+        }
+        
+        .individual-tempo-section input[type="range"]::-webkit-slider-thumb {
+            background: #9C27B0;
+        }
+        
+        .individual-tempo-section input[type="range"]::-moz-range-thumb {
+            background: #9C27B0;
+        }
+        
+        .individual-tempo-section span {
+            color: #CE93D8;
+        }
+        
+        /* Delay Section - Orange Theme */
+        .effect-section:nth-of-type(6) {
+            background-color: rgba(244, 89, 54, 0.1);
+            border-color: rgba(255, 152, 0, 0.3);
+        }
+        
+        .effect-section:nth-of-type(6) h4 {
+            color: #F44336;
+        }
+        
+        .effect-section:nth-of-type(6) .slider-container label {
+            color: #7986CB;
+        }
+        
+        .effect-section:nth-of-type(6) input[type="range"] {
+            background: linear-gradient(90deg, #9d3700ff 0%, #b06900ff 100%);
+        }
+        
+        .effect-section:nth-of-type(6) input[type="range"]::-webkit-slider-thumb {
+            background: #F44336;
+        }
+        
+        .effect-section:nth-of-type(6) input[type="range"]::-moz-range-thumb {
+            background: #F44336;
+        }
+        
+        .effect-section:nth-of-type(6) span {
+            color: #F44336;
+        }
+        
+        /* Reverb Section - Teal Theme */
+        .effect-section:nth-of-type(7) {
+            background-color: rgba(0, 150, 136, 0.1);
+            border-color: rgba(0, 150, 136, 0.3);
+        }
+        
+        .effect-section:nth-of-type(7) h4 {
+            color: #009688;
+        }
+        
+        .effect-section:nth-of-type(7) .slider-container label {
+            color: #4DB6AC;
+        }
+        
+        .effect-section:nth-of-type(7) input[type="range"] {
+            background: linear-gradient(90deg, #00695C 0%, #009688 100%);
+        }
+        
+        .effect-section:nth-of-type(7) input[type="range"]::-webkit-slider-thumb {
+            background: #009688;
+        }
+        
+        .effect-section:nth-of-type(7) input[type="range"]::-moz-range-thumb {
+            background: #009688;
+        }
+        
+        .effect-section:nth-of-type(7) span {
+            color: #80CBC4;
+        }
+        
+        /* EQ Section - Red Theme */
+        .effect-section:nth-of-type(8) {
+            background-color: rgba(244, 67, 54, 0.1);
+            border-color: rgba(244, 67, 54, 0.3);
+        }
+        
+        .effect-section:nth-of-type(8) h4 {
+            color: #F44336;
+        }
+        
+        .effect-section:nth-of-type(8) .eq-visualizer-toggle h4 {
+            color: #F44336;
+        }
+        
+        .effect-section:nth-of-type(8) .eq-frequency-labels span {
+            color: #EF5350;
+        }
+        
+        .effect-section:nth-of-type(8) .eq-gain-labels span {
+            color: #EF5350;
+        }
+        
+        /* LFO Section - Indigo Theme */
+        .lfo-section {
+            background-color: rgba(63, 81, 181, 0.1);
+            border-color: rgba(63, 81, 181, 0.3);
+        }
+        
+        .lfo-section h4 {
+            color: #3F51B5;
+        }
+        
+        .lfo-control label {
+            color: #7986CB;
+        }
+        
+        .lfo-control select {
+            background-color: rgba(28, 28, 28, 0.5);
+            border-color: rgba(178, 35, 35, 0.5);
+        }
+        
+        .lfo-control input[type="range"] {
+            background: linear-gradient(90deg, #932828ff 0%, #b53f3fff 100%);
+        }
+        
+        .lfo-control input[type="range"]::-webkit-slider-thumb {
+            background: #3F51B5;
+        }
+        
+        .lfo-control input[type="range"]::-moz-range-thumb {
+            background: #3F51B5;
+        }
+        
+        .lfo-control span {
+            color: #505a94ff;
+        }
+        
+        /* Piano Roll Section - Amber Theme */
+        .piano-roll-section {
+            background-color: rgba(7, 255, 168, 0.1);
+            border-color: rgba(255, 193, 7, 0.3);
+        }
+        
+        .piano-roll-section h4 {
+            color: #FFC107;
+        }
+        
+        .piano-roll-toggle-container h4 {
+            color: #FFC107;
+        }
+        
+        .piano-roll-note-length label {
+            color: #FFD54F;
+        }
+        
+        .piano-roll-note-length select {
+            background-color: rgba(81, 81, 81, 0.5);
+            border-color: rgba(255, 193, 7, 0.5);
+            color: white;
+        }
+        
+        .piano-roll-grid-size label {
+            color: #FFD54F;
+        }
+        
+        .piano-roll-sound-source label {
+            color: #FFD54F;
+        }
+        
+        .piano-roll-sound-source select {
+            background-color: rgba(255, 160, 0, 0.5);
+            border-color: rgba(255, 193, 7, 0.5);
+        }
+        
+        /* Piano Roll Filters - Brown Theme */
+        .piano-roll-filters {
+            background-color: rgba(121, 85, 72, 0.1);
+            border-color: rgba(121, 85, 72, 0.3);
+        }
+        
+        .piano-roll-filters h4 {
+            color: #795548;
+        }
+        
+        .filter-group h5 {
+            color: #8D6E63;
+        }
+        
+        .filter-control label {
+            color: #2a2a2aff;
+        }
+        
+        .filter-control input[type="range"] {
+            background: linear-gradient(90deg, #5D4037 0%, #795548 100%);
+        }
+        
+        .filter-control input[type="range"]::-webkit-slider-thumb {
+            background: #795548;
+        }
+        
+        .filter-control input[type="range"]::-moz-range-thumb {
+            background: #795548;
+        }
+        
+        .filter-control span {
+            color: #BCAAA4;
+        }
+        
+        /* Save/Load Set Button Styles */
+        .set-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+        
+        .set-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .set-btn:hover {
+            background-color: #45a049;
+        }
+        
+        .load-btn {
+            background-color: #2196F3;
+        }
+        
+        .load-btn:hover {
+            background-color: #0b7dda;
+        }
+        
+        /* Notification styling */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .notification.show {
+            opacity: 1;
+        }
+    `;
+    document.head.appendChild(style);
+
+    function updateViewportHeight() {
+        let vh = window.innerHeight * .01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+        updateGridSize();
+    }
+
+    function updateGridSize() {
+        const buttonGrid = document.getElementById("buttonGrid");
+        const gridPanel = document.querySelector(".grid-panel");
+        if (!buttonGrid || !gridPanel) return;
+        const containerWidth = gridPanel.offsetWidth;
+        const containerHeight = gridPanel.offsetHeight;
+        let maxSize;
+        if (window.innerWidth <= 400 && window.innerHeight <= 500) {
+            maxSize = Math.min(containerWidth, containerHeight);
+            if (maxSize < 150) {
+                maxSize = 150;
+            }
+        } else if (window.innerWidth <= 768) {
+            maxSize = Math.min(containerWidth, containerHeight) * .95;
+            if (maxSize < 200) {
+                maxSize = 200;
+            }
+        } else {
+            maxSize = Math.min(containerWidth, containerHeight);
+            if (maxSize < 200) {
+                maxSize = 200;
+            }
+            if (maxSize > 700) {
+                maxSize = 700;
+            }
+        }
+        buttonGrid.style.width = `${maxSize}px`;
+        buttonGrid.style.height = `${maxSize}px`;
+        buttonGrid.getBoundingClientRect();
+        if (effectsPopup) {
+            effectsPopup.style.width = `${maxSize}px`;
+            effectsPopup.style.height = `${maxSize}px`;
+        }
+    }
+    updateViewportHeight();
+    let resizeTimeout;
+    window.addEventListener("resize", function () {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function () {
+            updateViewportHeight();
+        }, 100);
+    });
+    window.addEventListener("orientationchange", function () {
+        setTimeout(function () {
+            updateViewportHeight();
+        }, 300);
+    });
+    const buttonGrid = document.getElementById("buttonGrid");
+    const tempoSlider = document.getElementById("tempo");
+    const tempoDisplay = document.getElementById("tempoDisplay");
+    const playButton = document.getElementById("playButton");
+    const recordButton = document.getElementById("recordButton");
+    const saveButton = document.getElementById("saveButton");
+    const gridPanel = document.querySelector(".grid-panel");
+    if (!buttonGrid || !tempoSlider || !tempoDisplay || !playButton || !recordButton || !saveButton || !gridPanel) {
+        console.error("One or more required elements are missing");
+        return;
+    }
+    gridPanel.style.display = "flex";
+    gridPanel.style.visibility = "visible";
+    
+    // Create notification element
+    const notification = document.createElement("div");
+    notification.className = "notification";
+    document.body.appendChild(notification);
+    
+    // Function to show notification
+    function showNotification(message, duration = 3000) {
+        notification.textContent = message;
+        notification.classList.add("show");
+        setTimeout(() => {
+            notification.classList.remove("show");
+        }, duration);
+    }
+    
+    sampleSelectionPopup = document.createElement("div");
+    sampleSelectionPopup.className = "sample-selection-popup";
+    sampleSelectionPopup.innerHTML = `
+        <div class="popup-header">
+            <h3>Select Sample Range</h3>
+            <button class="popup-close-btn">Close</button>
+        </div>
+        <div class="popup-content">
+            <div class="sample-selection-info">
+                <span>Sample: <strong id="sample-name">Sample ${currentSampleForPopup||1}</strong></span>
+                <span>Duration: <strong id="sample-duration">0.00s</strong></span>
+            </div>
+            <div class="sample-waveform-container">
+                <canvas class="sample-waveform" id="sample-selection-waveform"></canvas>
+            </div>
+            <div class="sample-selection-zoom-controls">
+                <button class="sample-selection-zoom-btn" id="zoom-out-btn">−</button>
+                <div class="sample-selection-zoom-level" id="zoom-level">100%</div>
+                <button class="sample-selection-zoom-btn" id="zoom-in-btn">+</button>
+                <button class="sample-selection-zoom-btn" id="zoom-reset-btn">⟲</button>
+            </div>
+            <div class="sample-selection-controls">
+                <div class="sample-selection-range">
+                    <label>Start:</label>
+                    <input type="range" id="sample-selection-start" min="0" max="100" value="0">
+                    <span id="sample-selection-start-value">0.00s</span>
+                </div>
+                <div class="sample-selection-range">
+                    <label>End:</label>
+                    <input type="range" id="sample-selection-end" min="0" max="100" value="100">
+                    <span id="sample-selection-end-value">0.00s</span>
+                </div>
+            </div>
+            <div class="sample-selection-values">
+                <span>Selection Duration: <strong id="selection-duration">0.00s</strong></span>
+            </div>
+            <div class="sample-selection-preview-controls">
+                <button class="sample-selection-preview-btn" id="preview-selection-btn">Preview Selection</button>
+                <button class="sample-selection-preview-btn" id="preview-full-btn">Preview Full Sample</button>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <button class="popup-close-btn">Close</button>
+            <button class="popup-accept-btn">Accept</button>
+        </div>
+    `;
+    document.body.appendChild(sampleSelectionPopup);
+    setupSampleSelectionPopupEventListeners();
+
+    function setupSampleSelectionPopupEventListeners() {
+        const closeButtons = sampleSelectionPopup.querySelectorAll(".popup-close-btn");
+        closeButtons.forEach(btn => {
+            btn.addEventListener("click", function () {
+                stopSampleSelectionPreview();
+                sampleSelectionPopup.style.display = "none";
+            });
+        });
+        const acceptButton = sampleSelectionPopup.querySelector(".popup-accept-btn");
+        acceptButton.addEventListener("click", function () {
+            if (!currentSampleForSelection) return;
+            const data = pianoRollData[currentSampleForSelection];
+            data.sampleRange = {
+                start: sampleSelectionStart,
+                end: sampleSelectionEnd
+            };
+            stopSampleSelectionPreview();
+            sampleSelectionPopup.style.display = "none";
+        });
+        const startSlider = document.getElementById("sample-selection-start");
+        const endSlider = document.getElementById("sample-selection-end");
+        startSlider.addEventListener("input", function () {
+            sampleSelectionStart = parseInt(this.value);
+            if (sampleSelectionStart > sampleSelectionEnd) {
+                sampleSelectionStart = sampleSelectionEnd;
+                this.value = sampleSelectionStart;
+            }
+            updateSampleSelectionDisplay();
+            drawSampleWaveform();
+            if (isPreviewingSelection) {
+                previewSampleSelection();
+            }
+        });
+        endSlider.addEventListener("input", function () {
+            sampleSelectionEnd = parseInt(this.value);
+            if (sampleSelectionEnd < sampleSelectionStart) {
+                sampleSelectionEnd = sampleSelectionStart;
+                this.value = sampleSelectionEnd;
+            }
+            updateSampleSelectionDisplay();
+            drawSampleWaveform();
+            if (isPreviewingSelection) {
+                previewSampleSelection();
+            }
+        });
+        document.getElementById("zoom-in-btn").addEventListener("click", function () {
+            if (sampleSelectionZoomLevel < 4) {
+                sampleSelectionZoomLevel *= 2;
+                updateZoomLevel();
+                drawSampleWaveform();
+            }
+        });
+        document.getElementById("zoom-out-btn").addEventListener("click", function () {
+            if (sampleSelectionZoomLevel > .25) {
+                sampleSelectionZoomLevel /= 2;
+                updateZoomLevel();
+                drawSampleWaveform();
+            }
+        });
+        document.getElementById("zoom-reset-btn").addEventListener("click", function () {
+            sampleSelectionZoomLevel = 1;
+            updateZoomLevel();
+            drawSampleWaveform();
+        });
+        document.getElementById("preview-selection-btn").addEventListener("click", function () {
+            if (isPreviewingSelection) {
+                stopSampleSelectionPreview();
+            } else {
+                previewSampleSelection();
+            }
+        });
+        document.getElementById("preview-full-btn").addEventListener("click", function () {
+            if (isPreviewingSelection) {
+                stopSampleSelectionPreview();
+            } else {
+                previewFullSample();
+            }
+        });
+    }
+
+    function updateZoomLevel() {
+        document.getElementById("zoom-level").textContent = `${Math.round(sampleSelectionZoomLevel*100)}%`;
+    }
+
+    function previewSampleSelection() {
+        if (!currentSampleForSelection || !currentPlaying[currentSampleForSelection].buffer) return;
+        stopSampleSelectionPreview();
+        const sample = currentPlaying[currentSampleForSelection];
+        const buffer = sample.buffer;
+        const bufferDuration = buffer.duration;
+        const startTime = bufferDuration * (sampleSelectionStart / 100);
+        const endTime = bufferDuration * (sampleSelectionEnd / 100);
+        const selectionDuration = endTime - startTime;
+        sampleSelectionPreviewSource = audioContext.createBufferSource();
+        sampleSelectionPreviewSource.buffer = buffer;
+        sampleSelectionPreviewSource.loop = true;
+        sampleSelectionPreviewSource.loopStart = startTime;
+        sampleSelectionPreviewSource.loopEnd = endTime;
+        sampleSelectionPreviewGain = audioContext.createGain();
+        sampleSelectionPreviewGain.gain.value = .7;
+        sampleSelectionPreviewSource.connect(sampleSelectionPreviewGain);
+        sampleSelectionPreviewGain.connect(audioContext.destination);
+        sampleSelectionPreviewSource.start(0, startTime);
+        isPreviewingSelection = true;
+        document.getElementById("preview-selection-btn").textContent = "Stop Preview";
+    }
+
+    function previewFullSample() {
+        if (!currentSampleForSelection || !currentPlaying[currentSampleForSelection].buffer) return;
+        stopSampleSelectionPreview();
+        const sample = currentPlaying[currentSampleForSelection];
+        const buffer = sample.buffer;
+        sampleSelectionPreviewSource = audioContext.createBufferSource();
+        sampleSelectionPreviewSource.buffer = buffer;
+        sampleSelectionPreviewSource.loop = true;
+        sampleSelectionPreviewGain = audioContext.createGain();
+        sampleSelectionPreviewGain.gain.value = .7;
+        sampleSelectionPreviewSource.connect(sampleSelectionPreviewGain);
+        sampleSelectionPreviewGain.connect(audioContext.destination);
+        sampleSelectionPreviewSource.start(0);
+        isPreviewingSelection = true;
+        document.getElementById("preview-full-btn").textContent = "Stop Preview";
+    }
+
+    function stopSampleSelectionPreview() {
+        if (sampleSelectionPreviewSource) {
+            try {
+                sampleSelectionPreviewSource.stop();
+                sampleSelectionPreviewSource.disconnect();
+            } catch (e) {}
+            sampleSelectionPreviewSource = null;
+        }
+        if (sampleSelectionPreviewGain) {
+            try {
+                sampleSelectionPreviewGain.disconnect();
+            } catch (e) {}
+            sampleSelectionPreviewGain = null;
+        }
+        isPreviewingSelection = false;
+        document.getElementById("preview-selection-btn").textContent = "Preview Selection";
+        document.getElementById("preview-full-btn").textContent = "Preview Full Sample";
+    }
+
+    function updateSampleSelectionDisplay() {
+        if (!currentSampleForSelection) return;
+        const sample = currentPlaying[currentSampleForSelection];
+        if (!sample.buffer) return;
+        const bufferDuration = sample.buffer.duration;
+        const startTime = bufferDuration * (sampleSelectionStart / 100);
+        const endTime = bufferDuration * (sampleSelectionEnd / 100);
+        const selectionDuration = endTime - startTime;
+        document.getElementById("sample-selection-start-value").textContent = startTime.toFixed(2) + "s";
+        document.getElementById("sample-selection-end-value").textContent = endTime.toFixed(2) + "s";
+        document.getElementById("selection-duration").textContent = selectionDuration.toFixed(2) + "s";
+    }
+
+    function drawSampleWaveform() {
+        if (!currentSampleForSelection) return;
+        const sample = currentPlaying[currentSampleForSelection];
+        const canvas = document.getElementById("sample-selection-waveform");
+        const ctx = canvas.getContext("2d");
+        if (!sample.buffer) return;
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+        const bgGradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+        bgGradient.addColorStop(0, "#1a1a1a");
+        bgGradient.addColorStop(1, "#0a0a0a");
+        ctx.fillStyle = bgGradient;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        const buffer = sample.buffer;
+        const data = buffer.getChannelData(0);
+        const startSample = Math.floor(data.length * (sampleSelectionStart / 100));
+        const endSample = Math.ceil(data.length * (sampleSelectionEnd / 100));
+        const visibleRange = endSample - startSample;
+        const zoomedRange = Math.floor(visibleRange / sampleSelectionZoomLevel);
+        const centerPoint = startSample + visibleRange / 2;
+        const zoomedStart = Math.max(0, Math.floor(centerPoint - zoomedRange / 2));
+        const zoomedEnd = Math.min(data.length, Math.ceil(centerPoint + zoomedRange / 2));
+        ctx.strokeStyle = "rgba(255, 255, 255, 0.1)";
+        ctx.lineWidth = 1;
+        for (let i = 0; i <= 4; i++) {
+            const y = canvas.height / 4 * i;
+            ctx.beginPath();
+            ctx.moveTo(0, y);
+            ctx.lineTo(canvas.width, y);
+            ctx.stroke();
+        }
+        for (let i = 0; i <= 8; i++) {
+            const x = canvas.width / 8 * i;
+            ctx.beginPath();
+            ctx.moveTo(x, 0);
+            ctx.lineTo(x, canvas.height);
+            ctx.stroke();
+        }
+        const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+        gradient.addColorStop(0, "rgba(76, 175, 80, 0.8)");
+        gradient.addColorStop(.5, "rgba(76, 175, 80, 0.5)");
+        gradient.addColorStop(1, "rgba(76, 175, 80, 0.8)");
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        const step = Math.ceil((zoomedEnd - zoomedStart) / canvas.width);
+        const amp = canvas.height / 2;
+        for (let i = 0; i < canvas.width; i++) {
+            let min = 1;
+            let max = -1;
+            for (let j = 0; j < step; j++) {
+                const datum = data[zoomedStart + i * step + j];
+                if (datum < min) min = datum;
+                if (datum > max) max = datum;
+            }
+            ctx.fillRect(i, (1 + min) * amp, 1, Math.max(1, (max - min) * amp));
+        }
+        const selectionStartPixel = (startSample - zoomedStart) / (zoomedEnd - zoomedStart) * canvas.width;
+        const selectionEndPixel = (endSample - zoomedStart) / (zoomedEnd - zoomedStart) * canvas.width;
+        ctx.fillStyle = "rgba(255, 152, 0, 0.2)";
+        ctx.fillRect(selectionStartPixel, 0, selectionEndPixel - selectionStartPixel, canvas.height);
+        ctx.fillStyle = "#FF9800";
+        ctx.fillRect(selectionStartPixel - 2, 0, 4, canvas.height);
+        ctx.fillRect(selectionEndPixel - 2, 0, 4, canvas.height);
+        ctx.beginPath();
+        ctx.arc(selectionStartPixel, canvas.height / 2, 8, 0, Math.PI * 2);
+        ctx.fillStyle = "#FF9800";
+        ctx.fill();
+        ctx.strokeStyle = "#fff";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(selectionEndPixel, canvas.height / 2, 8, 0, Math.PI * 2);
+        ctx.fillStyle = "#FF9800";
+        ctx.fill();
+        ctx.strokeStyle = "#fff";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.fillStyle = "#aaa";
+        ctx.font = "12px Arial";
+        ctx.textAlign = "center";
+        const startTime = buffer.duration * (sampleSelectionStart / 100);
+        const endTime = buffer.duration * (sampleSelectionEnd / 100);
+        const zoomedStartTime = buffer.duration * (zoomedStart / data.length);
+        const zoomedEndTime = buffer.duration * (zoomedEnd / data.length);
+        ctx.fillText(`${zoomedStartTime.toFixed(2)}s`, 30, canvas.height - 10);
+        ctx.fillText(`${zoomedEndTime.toFixed(2)}s`, canvas.width - 30, canvas.height - 10);
+        if (selectionStartPixel > 20 && selectionStartPixel < canvas.width - 20) {
+            ctx.fillStyle = "#FF9800";
+            ctx.fillText(`${startTime.toFixed(2)}s`, selectionStartPixel, canvas.height - 10);
+        }
+        if (selectionEndPixel > 20 && selectionEndPixel < canvas.width - 20) {
+            ctx.fillStyle = "#FF9800";
+            ctx.fillText(`${endTime.toFixed(2)}s`, selectionEndPixel, canvas.height - 10);
+        }
+    }
+
+    function initializeAudioContext() {
+        if (audioContext) return;
+        try {
+            const AudioContext = window.AudioContext || window.webkitAudioContext;
+            if (!AudioContext) {
+                throw new Error("Web Audio API is not supported in this browser");
+            }
+            audioContext = new AudioContext;
+            audioContext.addEventListener("statechange", () => {
+                console.log("Audio context state:", audioContext.state);
+                if (audioContext.state === "interrupted") {
+                    showNotification("Audio was interrupted. Please tap to resume.");
+                }
+            });
+            console.log("Audio context initialized successfully");
+        } catch (e) {
+            console.error("Error initializing audio context:", e);
+            showNotification("Audio initialization failed. Please try a different browser.");
+        }
+    }
+
+    function resumeAudioContext() {
+        if (audioContext && audioContext.state === "suspended") {
+            audioContext.resume().then(() => {
+                console.log("Audio context resumed successfully");
+            })["catch"](e => {
+                console.error("Error resuming audio context:", e);
+            });
+        }
+    }
+    initializeAudioContext();
+    let masterOutputNode = audioContext.createGain();
+    masterOutputNode.connect(audioContext.destination);
+    effectsPopup.innerHTML = `
+        <div class="popup-header">
+            <h3>Effects for Sample <span id="popup-sample-number">1</span></h3>
+            <button class="popup-close-btn">Close</button>
+        </div>
+        <div class="popup-content">
+            <div class="effect-section">
+                <h4>Sample</h4>
+                <div class="sample-upload">
+                    <label for="sample-upload"></label>
+                    <input type="file" id="sample-upload" accept="audio/*,.wav,.mp3,.ogg,.aac,.flac,.m4a,.wma">
+                    <div class="upload-status" id="upload-status"></div>
+                </div>
+                <div class="sample-record">
+                    <label>Record:</label>
+                    <div class="record-controls">
+                        <button id="microphone-record-btn" class="microphone-record-btn">Start Recording</button>
+                        <button id="microphone-save-btn" class="microphone-save-btn" style="display: none;">Save Recording</button>
+                        <button id="microphone-download-btn" class="microphone-download-btn" style="display: none;">Download</button>
+                        <button id="microphone-delete-btn" class="microphone-delete-btn" style="display: none;">Delete</button>
+                    </div>
+                    <div class="record-status" id="record-status"></div>
+                </div>
+            </div>
+            <div class="effect-section">
+            <hr color="purple">
+            <br>
+                <h4>VOLUME</h4>
+                <div class="slider-container">
+                    <label>Gain</label>
+                    <input type="range" id="sample-volume" min="0" max="200" value="100" step="1">
+                    <span id="sample-volume-value">100%</span>
+                </div>
+            </div>
+            <div class="effect-section">
+            <hr color="grey">
+            <br>
+                <h4>SPEED</h4>
+                <div class="speed-selector">
+                    <label for="speed-select">Speed:</label>
+                    <select id="speed-select">
+                        <option value="0.1">0.1x</option>
+                        <option value="0.25">0.25x</option>
+                        <option value="0.5">0.5x</option>
+                        <option value="0.75">0.75x</option>
+                        <option value="1" selected>1x</option>
+                        <option value="1.5">1.5x</option>
+                        <option value="2">2x</option>
+                    </select>
+                </div>
+            </div>
+            <div class="effect-section individual-tempo-section">
+            <hr color="grey">
+            <br>
+                <h4>Individual Tempo</h4>
+                <div class="slider-container">
+                    <label>Tempo Multiplier</label>
+                    <input type="range" id="individual-tempo" min="0.1" max="5.0" value="1.0" step="0.01">
+                    <span id="individual-tempo-value">1.0</span>
+                </div>
+            </div>
+            <div class="effect-section">
+            <hr color="grey">
+            <br>
+                <h4>DELAY</h4>
+                <div class="slider-container">
+                    <label>Time (ms)</label>
+                    <input type="range" id="delay-time" min="0" max="1000" value="0" step="10">
+                    <span id="delay-time-value">0</span>
+                </div>
+                <div class="slider-container">
+                    <label>Feedback (%)</label>
+                    <input type="range" id="delay-feedback" min="0" max="100" value="0" step="1">
+                    <span id="delay-feedback-value">0</span>
+                </div>
+            </div>
+            <div class="effect-section">
+            <hr color="grey">
+            <br>
+                <h4>REVERB</h4>
+                <div class="slider-container">
+                    <label>Decay (s)</label>
+                    <input type="range" id="reverb-decay" min="0.1" max="5" value="0" step="0.1">
+                    <span id="reverb-decay-value">0</span>
+                </div>
+                <div class="slider-container">
+                    <label>Pre-delay (ms)</label>
+                    <input type="range" id="reverb-predelay" min="0" max="100" value="0" step="1">
+                    <span id="reverb-predelay-value">0</span>
+                </div>
+                <div class="slider-container">
+                    <label>Diffusion (%)</label>
+                    <input type="range" id="reverb-diffusion" min="0" max="100" value="50" step="1">
+                    <span id="reverb-diffusion-value">50</span>
+                </div>
+                <div class="slider-container">
+                    <label>Low Cut (Hz)</label>
+                    <input type="range" id="reverb-lowcut" min="20" max="1000" value="20" step="10">
+                    <span id="reverb-lowcut-value">20</span>
+                </div>
+                <div class="slider-container">
+                    <label>High Cut (Hz)</label>
+                    <input type="range" id="reverb-highcut" min="1000" max="20000" value="20000" step="100">
+                    <span id="reverb-highcut-value">20000</span>
+                </div>
+                <div class="slider-container">
+                    <label>Damping (%)</label>
+                    <input type="range" id="reverb-damping" min="0" max="100" value="50" step="1">
+                    <span id="reverb-damping-value">50</span>
+                </div>
+                <div class="slider-container">
+                    <label>Wet/Dry (%)</label>
+                    <input type="range" id="reverb-mix" min="0" max="100" value="0" step="1">
+                    <span id="reverb-mix-value">0</span>
+                </div>
+            </div>
+            <div class="effect-section">
+            <hr color="grey">
+            <br>
+                <div class="eq-visualizer-toggle">
+                    <h4>EQUALIZER</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="eq-visualizer-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="professional-eq-container">
+                    <div class="visual-eq-container">
+                        <canvas class="eq-canvas" id="eq-canvas"></canvas>
+                        <div class="eq-frequency-labels">
+                            <span>20Hz</span>
+                            <span>100Hz</span>
+                            <span>1kHz</span>
+                            <span>10kHz</span>
+                            <span>20kHz</span>
+                        </div>
+                        <div class="eq-gain-labels">
+                            <span>+24dB</span>
+                            <span>+12dB</span>
+                            <span>0dB</span>
+                            <span>-12dB</span>
+                            <span>-24dB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- LFO Section - Moved from Piano Roll to Main Effects -->
+            <div class="effect-section lfo-section">
+            <hr color="grey">
+            <br>
+                <h4>LFO</h4>
+                <div class="lfo-control">
+                    <label>Target:</label>
+                    <select id="lfo-target">
+                        <option value="pitch">Pitch</option>
+                        <option value="filter">Filter Cutoff</option>
+                        <option value="volume">Volume</option>
+                    </select>
+                </div>
+                <div class="lfo-control">
+                    <label>Waveform:</label>
+                    <select id="lfo-waveform">
+                        <option value="sine">Sine</option>
+                        <option value="square">Square</option>
+                        <option value="triangle">Triangle</option>
+                        <option value="sawtooth">Sawtooth</option>
+                    </select>
+                </div>
+                <div class="lfo-control">
+                    <label>Rate (Hz):</label>
+                    <input type="range" id="lfo-rate" min="0.1" max="20" value="1" step="0.1">
+                    <span id="lfo-rate-value">1.0</span>
+                </div>
+                <div class="lfo-control">
+                    <label>Depth (%):</label>
+                    <input type="range" id="lfo-depth" min="0" max="100" value="0" step="1">
+                    <span id="lfo-depth-value">0%</span>
+                </div>
+                <div class="lfo-visualizer">
+                    <canvas class="lfo-wave" id="lfo-wave"></canvas>
+                </div>
+            </div>
+            
+            <div class="effect-section piano-roll-section">
+            <hr color="brightgrey">
+            <br>
+                <div class="piano-roll-toggle-container">
+                    <h4>SYNTH</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="piano-roll-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="piano-roll-content">
+                    <div class="piano-roll-note-length">
+                        <label for="note-length-select">Note Length:</label>
+                        <select id="note-length-select">
+                            <option value="1" selected>1/16</option>
+                            <option value="2">1/8</option>
+                            <option value="4">1/4</option>
+                            <option value="8">1/2</option>
+                            <option value="16">1/1</option>
+                            <option value="32">2 bars</option>
+                            <option value="64">4 bars</option>
+                        </select>
+                    </div>
+                    <div class="piano-roll-grid-size">
+                        <label>Grid Size:</label>
+                        <div class="grid-size-controls">
+                            <button id="grid-size-decrease">-</button>
+                            <span id="grid-size-display">16</span>
+                            <button id="grid-size-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="piano-roll-zoom-controls">
+                        <label>Zoom:</label>
+                        <div class="zoom-controls">
+                            <button id="zoom-decrease">-</button>
+                            <span id="zoom-level-display">100%</span>
+                            <button id="zoom-increase">+</button>
+                            <button id="zoom-reset">⟲</button>
+                        </div>
+                    </div>
+                    <div class="piano-roll-container">
+                        <div class="piano-roll-scrollable">
+                            <div class="piano-keys">
+                            </div>
+                            <div class="piano-roll-grid-container">
+                                <div class="piano-roll-bar-numbers"></div>
+                                <div class="piano-roll-grid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="piano-roll-visualizer-container">
+                        <canvas class="piano-roll-visualizer" id="piano-roll-visualizer"></canvas>
+                    </div>
+                    <div class="piano-roll-controls">
+                        <div class="piano-roll-sound-source">
+                            <label for="piano-roll-sound-source">Sound Source:</label>
+                            <select id="piano-roll-sound-source">
+                                <option value="piano">Grand Piano</option>
+                                <option value="synth">Synth</option>
+                                <option value="strings">Strings</option>
+                                <option value="bass">Bass</option>
+                                <option value="lead">Lead</option>
+                                <option value="pad">Pad</option>
+                                <option value="pluck">Pluck</option>
+                                <option value="sample">Use Sample</option>
+                            </select>
+                        </div>
+                        <div class="piano-roll-preview-controls">
+                            <button id="piano-roll-preview-btn">Preview</button>
+                            <button id="piano-roll-stop-btn">Stop</button>
+                            <button id="piano-roll-clear-btn" class="piano-roll-clear-btn">Clear</button>
+                        </div>
+                    </div>
+                    
+                    <div class="piano-roll-filters">
+                        <h4>Synth Filters</h4>
+                        
+                        <div class="enhanced-filter-controls">
+                            <div class="filter-group">
+                                <h5>EQ Controls</h5>
+                                <div class="filter-control">
+                                    <label>Low Shelf:</label>
+                                    <input type="range" id="piano-roll-lowshelf" min="-24" max="24" value="0" step="0.5">
+                                    <span id="piano-roll-lowshelf-value">0dB</span>
+                                </div>
+                                <div class="filter-control">
+                                    <label>Low Mid:</label>
+                                    <input type="range" id="piano-roll-lowmid" min="-24" max="24" value="0" step="0.5">
+                                    <span id="piano-roll-lowmid-value">0dB</span>
+                                </div>
+                                <div class="filter-control">
+                                    <label>Mid:</label>
+                                    <input type="range" id="piano-roll-mid" min="-24" max="24" value="0" step="0.5">
+                                    <span id="piano-roll-mid-value">0dB</span>
+                                </div>
+                                <div class="filter-control">
+                                    <label>High Mid:</label>
+                                    <input type="range" id="piano-roll-highmid" min="-24" max="24" value="0" step="0.5">
+                                    <span id="piano-roll-highmid-value">0dB</span>
+                                </div>
+                                <div class="filter-control">
+                                    <label>High Shelf:</label>
+                                    <input type="range" id="piano-roll-highshelf" min="-24" max="24" value="0" step="0.5">
+                                    <span id="piano-roll-highshelf-value">0dB</span>
+                                </div>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <h5>DELAY</h5>
+                                <div class="filter-control">
+                                    <label>Time (ms):</label>
+                                    <input type="range" id="piano-roll-delay-time" min="0" max="1000" value="0" step="10">
+                                    <span id="piano-roll-delay-time-value">0ms</span>
+                                </div>
+                                <div class="filter-control">
+                                    <label>Feedback (%):</label>
+                                    <input type="range" id="piano-roll-delay-feedback" min="0" max="100" value="0" step="1">
+                                    <span id="piano-roll-delay-feedback-value">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="loading-indicator" id="piano-roll-loading">
+                <div class="spinner"></div>
+                <div>Rendering piano roll...</div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <button class="popup-reset-btn">Reset All to 0</button>
+            <button class="popup-accept-btn">Accept</button>
+        </div>
+    `;
+    document.body.appendChild(effectsPopup);
+
+    function interpolateGainSpline(frequency, sortedPoints) {
+        if (sortedPoints.length === 0) return 0;
+        if (sortedPoints.length === 1) return sortedPoints[0].gain;
+        const logPoints = sortedPoints.map(p => ({
+            x: Math.log10(p.frequency),
+            y: p.gain
+        }));
+        const x = Math.log10(frequency);
+        if (x <= logPoints[0].x) return logPoints[0].y;
+        if (x >= logPoints[logPoints.length - 1].x) return logPoints[logPoints.length - 1].y;
+        let i = 0;
+        for (i = 0; i < logPoints.length - 1; i++) {
+            if (x >= logPoints[i].x && x <= logPoints[i + 1].x) {
+                break;
+            }
+        }
+        const p0 = logPoints[Math.max(0, i - 1)];
+        const p1 = logPoints[i];
+        const p2 = logPoints[i + 1];
+        const p3 = logPoints[Math.min(logPoints.length - 1, i + 2)];
+        const t = (x - p1.x) / (p2.x - p1.x);
+        const t2 = t * t;
+        const t3 = t2 * t;
+        return .5 * (2 * p1.y + (-p0.y + p2.y) * t + (2 * p0.y - 5 * p1.y + 4 * p2.y - p3.y) * t2 + (-p0.y + 3 * p1.y - 3 * p2.y + p3.y) * t3);
+    }
+
+    function addEQPoint(frequency, gain) {
+        if (!temporaryEffects || !temporaryEffects.eq) return;
+        if (temporaryEffects.eq.length >= MAX_EQ_POINTS) return;
+        if (frequency <= 20 || frequency >= 2e4) return;
+        let type = "peaking";
+        if (frequency < 200) type = "lowshelf";
+        else if (frequency > 8e3) type = "highshelf";
+        const newPoint = {
+            frequency: frequency,
+            gain: gain,
+            q: 1,
+            type: type
+        };
+        temporaryEffects.eq.push(newPoint);
+        temporaryEffects.eq.sort((a, b) => a.frequency - b.frequency);
+        updateEQFiltersInRealTime();
+        drawEQVisual();
+        return newPoint;
+    }
+
+    function initVisualEQ() {
+        eqCanvas = document.getElementById("eq-canvas");
+        eqCtx = eqCanvas.getContext("2d");
+        const container = eqCanvas.parentElement;
+        eqCanvas.width = container.clientWidth;
+        eqCanvas.height = container.clientHeight;
+        drawEQVisual();
+        
+        // Add event listener for the EQ visualizer toggle
+        const eqVisualizerToggle = document.getElementById("eq-visualizer-toggle");
+        if (eqVisualizerToggle) {
+            eqVisualizerToggle.addEventListener("change", function() {
+                // Store the state for the current sample
+                currentPlaying[currentSampleForPopup].eqVisualizerEnabled = this.checked;
+                
+                // Enable/disable EQ interaction based on toggle state
+                if (this.checked) {
+                    // Enable interaction
+                    eqCanvas.style.pointerEvents = "auto";
+                } else {
+                    // Disable interaction
+                    eqCanvas.style.pointerEvents = "none";
+                }
+            });
+            
+            // Set initial state based on the sample's stored state
+            eqCanvas.style.pointerEvents = eqVisualizerToggle.checked ? "auto" : "none";
+        }
+        
+        eqCanvas.addEventListener("mousedown", startDraggingEQBand);
+        eqCanvas.addEventListener("mousemove", dragEQBand);
+        eqCanvas.addEventListener("mouseup", stopDraggingEQBand);
+        eqCanvas.addEventListener("mouseleave", stopDraggingEQBand);
+        eqCanvas.addEventListener("touchstart", handleEQTouchStart);
+        eqCanvas.addEventListener("touchmove", handleEQTouchMove);
+        eqCanvas.addEventListener("touchend", stopDraggingEQBand);
+        initWaveformVisualization();
+    }
+
+    function initWaveformVisualization() {
+        if (!currentSampleForPopup || !currentPlaying[currentSampleForPopup].isScheduled) {
+            return;
+        }
+        if (!waveformAnalyzer) {
+            waveformAnalyzer = audioContext.createAnalyser();
+            waveformAnalyzer.fftSize = 4096;
+            waveformAnalyzer.smoothingTimeConstant = .7;
+            const sample = currentPlaying[currentSampleForPopup];
+            if (sample.eqVeryHighNode) {
+                sample.eqVeryHighNode.disconnect();
+                sample.eqVeryHighNode.connect(waveformAnalyzer);
+                waveformAnalyzer.connect(masterOutputNode);
+            } else if (sample.outputNode) {
+                sample.outputNode.disconnect();
+                sample.outputNode.connect(waveformAnalyzer);
+                waveformAnalyzer.connect(masterOutputNode);
+            } else if (sample.gainNode) {
+                sample.gainNode.disconnect();
+                sample.gainNode.connect(waveformAnalyzer);
+                waveformAnalyzer.connect(masterOutputNode);
+            }
+        }
+        startWaveformAnimation();
+    }
+
+    function startWaveformAnimation() {
+        if (waveformAnimationId) {
+            cancelAnimationFrame(waveformAnimationId);
+        }
+        const bufferLength = waveformAnalyzer.frequencyBinCount;
+        const dataArray = new Uint8Array(bufferLength);
+
+        function animate() {
+            waveformAnimationId = requestAnimationFrame(animate);
+            waveformAnalyzer.getByteFrequencyData(dataArray);
+            waveformHistory.push([...dataArray]);
+            if (waveformHistory.length > waveformHistorySize) {
+                waveformHistory.shift();
+            }
+            drawEQVisual();
+        }
+        animate();
+    }
+
+    function stopWaveformAnimation() {
+        if (waveformAnimationId) {
+            cancelAnimationFrame(waveformAnimationId);
+            waveformAnimationId = null;
+        }
+        waveformHistory = [];
+        drawEQVisual();
+    }
+
+    function drawEQVisual() {
+        if (!eqCanvas || !eqCtx) return;
+        const width = eqCanvas.width;
+        const height = eqCanvas.height;
+        const padding = 20;
+        eqCtx.fillStyle = "#0a0a0f";
+        eqCtx.fillRect(0, 0, width, height);
+        eqCtx.strokeStyle = "#1a1a2e";
+        eqCtx.lineWidth = 1;
+        for (let i = 0; i <= 4; i++) {
+            const y = padding + i * (height - 2 * padding) / 4;
+            eqCtx.beginPath();
+            eqCtx.moveTo(padding, y);
+            eqCtx.lineTo(width - padding, y);
+            eqCtx.stroke();
+        }
+        for (let i = 0; i <= 4; i++) {
+            const x = padding + i * (width - 2 * padding) / 4;
+            eqCtx.beginPath();
+            eqCtx.moveTo(x, padding);
+            eqCtx.lineTo(x, height - padding);
+            eqCtx.stroke();
+        }
+        eqCtx.strokeStyle = "#333";
+        eqCtx.lineWidth = 1;
+        eqCtx.setLineDash([5, 3]);
+        const zeroDbY = height / 2;
+        eqCtx.beginPath();
+        eqCtx.moveTo(padding, zeroDbY);
+        eqCtx.lineTo(width - padding, zeroDbY);
+        eqCtx.stroke();
+        eqCtx.setLineDash([]);
+        if (waveformHistory.length > 0) {
+            drawWaveform();
+        }
+        eqCtx.strokeStyle = "#4CAF50";
+        eqCtx.lineWidth = 4;
+        eqCtx.shadowColor = "rgba(76, 175, 80, 0.8)";
+        eqCtx.shadowBlur = 8;
+        eqCtx.beginPath();
+        const eqPoints = temporaryEffects && temporaryEffects.eq ? temporaryEffects.eq : [];
+        const sortedPoints = [...eqPoints].sort((a, b) => a.frequency - b.frequency);
+        const points = [];
+        const numPoints = 200;
+        for (let i = 0; i <= numPoints; i++) {
+            const x = padding + i * (width - 2 * padding) / numPoints;
+            const freq = 20 * Math.pow(2e4 / 20, (x - padding) / (width - 2 * padding));
+            let gain = interpolateGainSpline(freq, sortedPoints);
+            const y = height / 2 - gain / 24 * (height / 2 - padding);
+            points.push({
+                x: x,
+                y: y
+            });
+            if (i === 0) {
+                eqCtx.moveTo(x, y);
+            } else {
+                eqCtx.lineTo(x, y);
+            }
+        }
+        eqCtx.stroke();
+        eqCtx.shadowBlur = 0;
+        for (let i = 0; i < eqPoints.length; i++) {
+            const point = eqPoints[i];
+            const x = padding + Math.log10(point.frequency / 20) / Math.log10(2e4 / 20) * (eqCanvas.width - 2 * padding);
+            const y = height / 2 - point.gain / 24 * (height / 2 - padding);
+            if (point.fixed) {
+                eqCtx.fillStyle = "#FFC107";
+                eqCtx.shadowColor = "rgba(255, 193, 7, 0.8)";
+            } else {
+                eqCtx.fillStyle = point === draggedPoint ? "#FF5722" : "#4CAF50";
+                eqCtx.shadowColor = point === draggedPoint ? "rgba(255, 87, 34, 0.8)" : "rgba(76, 175, 80, 0.8)";
+            }
+            eqCtx.shadowBlur = 15;
+            eqCtx.beginPath();
+            eqCtx.arc(x, y, 9, 0, Math.PI * 2);
+            eqCtx.fill();
+            eqCtx.fillStyle = "#fff";
+            eqCtx.shadowBlur = 0;
+            eqCtx.beginPath();
+            eqCtx.arc(x, y, 6, 0, Math.PI * 2);
+            eqCtx.fill();
+            eqCtx.fillStyle = "rgba(0, 0, 0, 0.7)";
+            eqCtx.fillRect(x - 25, y + 20, 50, 15);
+            eqCtx.fillStyle = "#fff";
+            eqCtx.font = "bold 10px Arial";
+            eqCtx.textAlign = "center";
+            let freqLabel;
+            if (point.frequency < 1e3) {
+                freqLabel = `${Math.round(point.frequency)}Hz`;
+            } else {
+                const kHzValue = point.frequency / 1e3;
+                if (kHzValue === Math.round(kHzValue)) {
+                    freqLabel = `${Math.round(kHzValue)}k`;
+                } else {
+                    freqLabel = `${kHzValue.toFixed(1)}k`;
+                }
+            }
+            eqCtx.fillText(freqLabel, x, y + 30);
+            eqCtx.fillStyle = "rgba(0, 0, 0, 0.7)";
+            eqCtx.fillRect(x - 25, y - 35, 50, 15);
+            eqCtx.fillStyle = "#fff";
+            eqCtx.fillText(`${point.gain>0?"+":""}${point.gain.toFixed(1)}dB`, x, y - 25);
+        }
+    }
+
+    function drawWaveform() {
+        const width = eqCanvas.width;
+        const height = eqCanvas.height;
+        const padding = 20;
+        const gradient = eqCtx.createLinearGradient(0, height - padding, 0, padding);
+        gradient.addColorStop(0, "rgba(28, 0, 212, 0.9)");
+        gradient.addColorStop(.1, "rgba(0, 191, 255, 0.95)");
+        gradient.addColorStop(.3, "rgba(0, 210, 154, 0.9)");
+        gradient.addColorStop(.5, "rgba(255, 196, 0, 0.85)");
+        gradient.addColorStop(.7, "rgba(255, 0, 0, 0.85)");
+        gradient.addColorStop(.9, "rgba(255, 0, 157, 0.85)");
+        gradient.addColorStop(1, "rgba(170, 0, 255, 0.85)");
+        const sliceWidth = (width - 2 * padding) / waveformHistorySize;
+        for (let h = 0; h < waveformHistory.length; h++) {
+            const dataArray = waveformHistory[h];
+            const x = padding + h * sliceWidth;
+            const alpha = .4 + h / waveformHistory.length * .6;
+            eqCtx.beginPath();
+            eqCtx.moveTo(x, height - padding);
+            const maxFreq = audioContext.sampleRate / 2;
+            const minLogFreq = Math.log10(20);
+            const maxLogFreq = Math.log10(maxFreq);
+            for (let i = 0; i < dataArray.length; i++) {
+                const freq = i * maxFreq / dataArray.length;
+                const logFreq = Math.log10(Math.max(20, freq));
+                const normalizedLogFreq = (logFreq - minLogFreq) / (maxLogFreq - minLogFreq);
+                const freqX = padding + normalizedLogFreq * (width - 2 * padding);
+                if (freqX >= x && freqX <= x + sliceWidth) {
+                    const amplitude = dataArray[i] / 255;
+                    const enhancedAmplitude = Math.pow(amplitude, .4);
+                    const ampY = height - padding - enhancedAmplitude * (height - 2 * padding);
+                    eqCtx.lineTo(freqX, ampY);
+                }
+            }
+            eqCtx.lineTo(x + sliceWidth, height - padding);
+            eqCtx.closePath();
+            eqCtx.globalAlpha = alpha;
+            eqCtx.fillStyle = gradient;
+            eqCtx.fill();
+            if (h > waveformHistory.length * .7) {
+                eqCtx.shadowColor = "rgba(0, 255, 170, 0.8)";
+                eqCtx.shadowBlur = 10;
+                eqCtx.fill();
+                eqCtx.shadowBlur = 0;
+            }
+        }
+        eqCtx.globalAlpha = 1;
+        if (waveformHistory.length > 0) {
+            const latestData = waveformHistory[waveformHistory.length - 1];
+            eqCtx.strokeStyle = "rgba(96, 96, 96, 1)";
+            eqCtx.lineWidth = 2;
+            eqCtx.beginPath();
+            const maxFreq = audioContext.sampleRate / 2;
+            const minLogFreq = Math.log10(20);
+            const maxLogFreq = Math.log10(maxFreq);
+            for (let i = 0; i < latestData.length; i++) {
+                const freq = i * maxFreq / latestData.length;
+                const logFreq = Math.log10(Math.max(20, freq));
+                const normalizedLogFreq = (logFreq - minLogFreq) / (maxLogFreq - minLogFreq);
+                const x = padding + normalizedLogFreq * (width - 2 * padding);
+                const amplitude = latestData[i] / 255;
+                const enhancedAmplitude = Math.pow(amplitude, .4);
+                const y = height - padding - enhancedAmplitude * (height - 2 * padding);
+                if (i === 0) {
+                    eqCtx.moveTo(x, y);
+                } else {
+                    eqCtx.lineTo(x, y);
+                }
+            }
+            eqCtx.stroke();
+        }
+    }
+
+    function startDraggingEQBand(e) {
+        // Check if EQ interaction is disabled
+        const eqVisualizerToggle = document.getElementById("eq-visualizer-toggle");
+        if (eqVisualizerToggle && !eqVisualizerToggle.checked) {
+            return; // Don't allow interaction if toggle is off
+        }
+        
+        if (!temporaryEffects || !temporaryEffects.eq) return;
+        const rect = eqCanvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const padding = 20;
+        const height = eqCanvas.height;
+        for (let i = 0; i < temporaryEffects.eq.length; i++) {
+            const point = temporaryEffects.eq[i];
+            if (point.fixed) continue;
+            const pointX = padding + Math.log10(point.frequency / 20) / Math.log10(2e4 / 20) * (eqCanvas.width - 2 * padding);
+            const pointY = height / 2 - point.gain / 24 * (height / 2 - padding);
+            const distance = Math.sqrt(Math.pow(x - pointX, 2) + Math.pow(y - pointY, 2));
+            if (distance <= 9) {
+                isDraggingEqBand = true;
+                draggedPoint = point;
+                isCreatingNewPoint = false;
+                return;
+            }
+        }
+        if (temporaryEffects.eq.length < MAX_EQ_POINTS) {
+            const frequency = 20 * Math.pow(2e4 / 20, (x - padding) / (eqCanvas.width - 2 * padding));
+            if (frequency <= 20 || frequency >= 2e4) return;
+            const gain = -(y - eqCanvas.height / 2) / (eqCanvas.height / 2 - padding) * 24;
+            const newPoint = addEQPoint(frequency, gain);
+            isDraggingEqBand = true;
+            draggedPoint = newPoint;
+            isCreatingNewPoint = true;
+        }
+    }
+
+    function handleEQTouchStart(e) {
+        // Check if EQ interaction is disabled
+        const eqVisualizerToggle = document.getElementById("eq-visualizer-toggle");
+        if (eqVisualizerToggle && !eqVisualizerToggle.checked) {
+            return; // Don't allow interaction if toggle is off
+        }
+        
+        e.preventDefault();
+        if (!temporaryEffects || !temporaryEffects.eq) return;
+        const touch = e.touches[0];
+        const rect = eqCanvas.getBoundingClientRect();
+        const x = touch.clientX - rect.left;
+        const y = touch.clientY - rect.top;
+        const padding = 20;
+        const height = eqCanvas.height;
+        for (let i = 0; i < temporaryEffects.eq.length; i++) {
+            const point = temporaryEffects.eq[i];
+            if (point.fixed) continue;
+            const pointX = padding + Math.log10(point.frequency / 20) / Math.log10(2e4 / 20) * (eqCanvas.width - 2 * padding);
+            const pointY = height / 2 - point.gain / 24 * (height / 2 - padding);
+            const distance = Math.sqrt(Math.pow(x - pointX, 2) + Math.pow(y - pointY, 2));
+            if (distance <= 9) {
+                isDraggingEqBand = true;
+                draggedPoint = point;
+                isCreatingNewPoint = false;
+                return;
+            }
+        }
+        if (temporaryEffects.eq.length < MAX_EQ_POINTS) {
+            const frequency = 20 * Math.pow(2e4 / 20, (x - padding) / (eqCanvas.width - 2 * padding));
+            if (frequency <= 20 || frequency >= 2e4) return;
+            const gain = -(y - height / 2) / (height / 2 - padding) * 24;
+            const newPoint = addEQPoint(frequency, gain);
+            isDraggingEqBand = true;
+            draggedPoint = newPoint;
+            isCreatingNewPoint = true;
+        }
+    }
+
+    function handleEQTouchMove(e) {
+        // Check if EQ interaction is disabled
+        const eqVisualizerToggle = document.getElementById("eq-visualizer-toggle");
+        if (eqVisualizerToggle && !eqVisualizerToggle.checked) {
+            return; // Don't allow interaction if toggle is off
+        }
+        
+        e.preventDefault();
+        if (!isDraggingEqBand || !draggedPoint || !temporaryEffects || !temporaryEffects.eq) return;
+        const touch = e.touches[0];
+        const rect = eqCanvas.getBoundingClientRect();
+        const x = touch.clientX - rect.left;
+        const y = touch.clientY - rect.top;
+        const padding = 20;
+        const height = eqCanvas.height;
+        const gain = -(y - height / 2) / (height / 2 - padding) * 24;
+        const clampedGain = Math.max(-24, Math.min(24, gain));
+        const freq = 20 * Math.pow(2e4 / 20, (x - padding) / (eqCanvas.width - 2 * padding));
+        const clampedFreq = Math.max(20, Math.min(2e4, freq));
+        draggedPoint.gain = clampedGain;
+        draggedPoint.frequency = clampedFreq;
+        updateEQFiltersInRealTime();
+        drawEQVisual();
+    }
+
+    function dragEQBand(e) {
+        // Check if EQ interaction is disabled
+        const eqVisualizerToggle = document.getElementById("eq-visualizer-toggle");
+        if (eqVisualizerToggle && !eqVisualizerToggle.checked) {
+            return; // Don't allow interaction if toggle is off
+        }
+        
+        if (!isDraggingEqBand || !draggedPoint || !temporaryEffects || !temporaryEffects.eq) return;
+        const rect = eqCanvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const padding = 20;
+        const height = eqCanvas.height;
+        const gain = -(y - height / 2) / (height / 2 - padding) * 24;
+        const clampedGain = Math.max(-24, Math.min(24, gain));
+        const freq = 20 * Math.pow(2e4 / 20, (x - padding) / (eqCanvas.width - 2 * padding));
+        const clampedFreq = Math.max(20, Math.min(2e4, freq));
+        draggedPoint.gain = clampedGain;
+        draggedPoint.frequency = clampedFreq;
+        updateEQFiltersInRealTime();
+        drawEQVisual();
+    }
+
+    function stopDraggingEQBand() {
+        isDraggingEqBand = false;
+        draggedPoint = null;
+        isCreatingNewPoint = false;
+        drawEQVisual();
+    }
+
+    function updateEQFiltersInRealTime() {
+        if (!currentSampleForPopup || !temporaryEffects || !temporaryEffects.eq) return;
+        const sample = currentPlaying[currentSampleForPopup];
+        if (sample.eqLowNode) sample.eqLowNode.gain.value = 0;
+        if (sample.eqLowMidNode) sample.eqLowMidNode.gain.value = 0;
+        if (sample.eqMidNode) sample.eqMidNode.gain.value = 0;
+        if (sample.eqHighMidNode) sample.eqHighMidNode.gain.value = 0;
+        if (sample.eqHighMid2Node) sample.eqHighMid2Node.gain.value = 0;
+        if (sample.eqHighNode) sample.eqHighNode.gain.value = 0;
+        if (sample.eqVeryHighNode) sample.eqVeryHighNode.gain.value = 0;
+        const sortedEqPoints = [...temporaryEffects.eq].sort((a, b) => a.frequency - b.frequency);
+        if (sortedEqPoints[0] && sortedEqPoints[0].type === "lowshelf") {
+            if (sample.eqLowNode) {
+                sample.eqLowNode.frequency.value = sortedEqPoints[0].frequency;
+                sample.eqLowNode.gain.value = sortedEqPoints[0].gain;
+            }
+        }
+        if (sortedEqPoints[sortedEqPoints.length - 1] && sortedEqPoints[sortedEqPoints.length - 1].type === "highshelf") {
+            if (sample.eqHighNode) {
+                sample.eqHighNode.frequency.value = sortedEqPoints[sortedEqPoints.length - 1].frequency;
+                sample.eqHighNode.gain.value = sortedEqPoints[sortedEqPoints.length - 1].gain;
+            }
+        }
+        let peakingIndex = 0;
+        for (let i = 0; i < sortedEqPoints.length; i++) {
+            if (sortedEqPoints[i].type === "peaking") {
+                let filterNode;
+                switch (peakingIndex) {
+                case 0:
+                    filterNode = sample.eqLowMidNode;
+                    break;
+                case 1:
+                    filterNode = sample.eqMidNode;
+                    break;
+                case 2:
+                    filterNode = sample.eqHighMidNode;
+                    break;
+                case 3:
+                    filterNode = sample.eqHighMid2Node;
+                    break;
+                default:
+                    break;
+                }
+                if (filterNode) {
+                    filterNode.frequency.value = sortedEqPoints[i].frequency;
+                    filterNode.gain.value = sortedEqPoints[i].gain;
+                    filterNode.Q.value = sortedEqPoints[i].q || 1;
+                    peakingIndex++;
+                }
+            }
+        }
+    }
+
+    function updateWetDryMix() {
+        if (!currentSampleForPopup) return;
+        const sample = currentPlaying[currentSampleForPopup];
+        const delayTime = parseInt(document.getElementById("delay-time").value);
+        const reverbMix = parseInt(document.getElementById("reverb-mix").value);
+        let wetLevel = 0;
+        if (delayTime > 0) {
+            wetLevel += .5;
+        }
+        if (reverbMix > 0) {
+            wetLevel += reverbMix / 100;
+        }
+        wetLevel = Math.min(wetLevel, .8);
+        if (sample.wetPathNode) {
+            sample.wetPathNode.gain.value = wetLevel;
+        }
+        if (sample.dryPathNode) {
+            sample.dryPathNode.gain.value = 1 - wetLevel;
+        }
+    }
+
+    function updateDelayInRealTime() {
+        if (!currentSampleForPopup) return;
+        const sample = currentPlaying[currentSampleForPopup];
+        const delayTime = parseInt(document.getElementById("delay-time").value);
+        const feedback = parseInt(document.getElementById("delay-feedback").value);
+        if (sample.delayNode) {
+            sample.delayNode.delayTime.value = delayTime / 1e3;
+            if (sample.delayFeedbackNode) {
+                sample.delayFeedbackNode.gain.value = feedback / 100;
+            }
+        }
+        updateWetDryMix();
+    }
+
+    function updateReverbInRealTime() {
+        if (!currentSampleForPopup) return;
+        const sample = currentPlaying[currentSampleForPopup];
+        const reverbDecay = parseFloat(document.getElementById("reverb-decay").value);
+        const reverbPredelay = parseFloat(document.getElementById("reverb-predelay").value);
+        const reverbDiffusion = parseFloat(document.getElementById("reverb-diffusion").value);
+        const reverbLowcut = parseFloat(document.getElementById("reverb-lowcut").value);
+        const reverbHighcut = parseFloat(document.getElementById("reverb-highcut").value);
+        const reverbDamping = parseFloat(document.getElementById("reverb-damping").value);
+        const reverbMix = parseInt(document.getElementById("reverb-mix").value);
+        if (sample.reverbMixNode) {
+            sample.reverbMixNode.gain.value = reverbMix / 100;
+        }
+        if (reverbDecay > 0) {
+            const convolver = audioContext.createConvolver();
+            const length = audioContext.sampleRate * reverbDecay;
+            const impulse = audioContext.createBuffer(2, length, audioContext.sampleRate);
+            const predelaySamples = audioContext.sampleRate * (reverbPredelay / 1e3);
+            for (let channel = 0; channel < 2; channel++) {
+                const channelData = impulse.getChannelData(channel);
+                for (let i = 0; i < length; i++) {
+                    if (i < predelaySamples) {
+                        channelData[i] = 0;
+                    } else {
+                        const decayFactor = Math.pow(1 - (i - predelaySamples) / (length - predelaySamples), 2);
+                        const diffusionFactor = reverbDiffusion / 100;
+                        channelData[i] = (Math.random() * 2 - 1) * decayFactor * diffusionFactor;
+                        const dampingFactor = 1 - reverbDamping / 100 * (i / length);
+                        channelData[i] *= dampingFactor;
+                    }
+                }
+            }
+            convolver.buffer = impulse;
+            if (sample.reverbNode) {
+                sample.reverbNode.disconnect();
+            }
+            sample.reverbNode = convolver;
+            if (sample.wetPathNode && sample.reverbMixNode) {
+                sample.wetPathNode.connect(convolver);
+                convolver.connect(sample.reverbMixNode);
+                sample.reverbMixNode.connect(sample.outputNode);
+            }
+        } else {
+            if (sample.reverbNode) {
+                sample.reverbNode.disconnect();
+                sample.reverbNode = null;
+            }
+        }
+        updateWetDryMix();
+    }
+
+    // Function to update the actual gain based on both group and individual volumes
+    function updateActualGain(sampleNumber) {
+        if (!currentPlaying[sampleNumber] || !currentPlaying[sampleNumber].gainNode) return;
+        
+        const sample = currentPlaying[sampleNumber];
+        const groupVolume = sample.groupVolume !== undefined ? sample.groupVolume : 0.8;
+        const individualVolume = sample.individualVolume !== undefined ? sample.individualVolume : 1.0;
+        
+        // Calculate the combined gain by multiplying group and individual volumes
+        const combinedGain = groupVolume * individualVolume;
+        sample.gainNode.gain.value = combinedGain;
+        sample.volume = combinedGain;
+    }
+
+    // Function to get the current group volume for a sample
+    function getGroupVolumeForSample(sampleNumber) {
+        const group = Math.floor((sampleNumber - 1) / 10);
+        const groupSlider = document.getElementById(`volumeSlider${group}`);
+        return groupSlider ? parseFloat(groupSlider.value) / 100 : 0.8;
+    }
+
+    function updateSampleVolumeInRealTime() {
+        if (!currentSampleForPopup) return;
+        const sample = currentPlaying[currentSampleForPopup];
+        const volume = parseInt(document.getElementById("sample-volume").value);
+        document.getElementById("sample-volume-value").textContent = `${volume}%`;
+        
+        // Store the individual volume as a decimal (0-2)
+        const individualVolume = volume / 100;
+        sample.individualVolume = individualVolume;
+        
+        // Update the actual gain by combining with group volume
+        updateActualGain(currentSampleForPopup);
+    }
+
+    function updateSpeedInRealTime() {
+        if (!currentSampleForPopup) return;
+        const sample = currentPlaying[currentSampleForPopup];
+        const speed = parseFloat(document.getElementById("speed-select").value);
+        if (sample.source && sample.isScheduled) {
+            let basePlaybackRate;
+            if (sample.isLongSample) {
+                const longLoopBeatDuration = 60 / longLoopTempo;
+                const longLoopBarDuration = longLoopBeatDuration * 4;
+                const desiredLoopDuration = longLoopBarDuration * longLoopLength;
+                basePlaybackRate = sample.loopDuration / desiredLoopDuration;
+            } else {
+                const effectiveTempo = tempo + highTempo;
+                const effectiveBeatDuration = 60 / effectiveTempo;
+                const effectiveBarDuration = effectiveBeatDuration * 4;
+                const desiredLoopDuration = effectiveBarDuration * loopLength;
+                basePlaybackRate = sample.loopDuration / desiredLoopDuration;
+            }
+            let individualTempo = 1;
+            if (sample.isLongSample && sample.effects && sample.effects.individualTempo) {
+                individualTempo = sample.effects.individualTempo;
+            }
+            const newPlaybackRate = basePlaybackRate * individualTempo * speed;
+            const currentPlaybackRate = sample.source.playbackRate.value;
+            const currentTime = audioContext.currentTime;
+            const elapsedTime = currentTime - sample.loopStartTime;
+            const currentPosition = elapsedTime * currentPlaybackRate % sample.loopDuration;
+            sample.source.playbackRate.value = newPlaybackRate;
+            sample.loopStartTime = currentTime - currentPosition / newPlaybackRate;
+            
+            // Update LFO base rate if pitch modulation is active
+            if (sample.lfoTarget === "pitch") {
+                sample.lfoBaseRate = newPlaybackRate;
+            }
+            
+            console.log(`Sample ${currentSampleForPopup} speed updated: new rate ${newPlaybackRate}, position ${currentPosition}`);
+        }
+    }
+
+    function updateIndividualTempoInRealTime() {
+        if (!currentSampleForPopup) return;
+        const sample = currentPlaying[currentSampleForPopup];
+        const individualTempo = parseFloat(document.getElementById("individual-tempo").value);
+        if (sample.source && sample.isScheduled && sample.isLongSample) {
+            const longLoopBeatDuration = 60 / longLoopTempo;
+            const longLoopBarDuration = longLoopBeatDuration * 4;
+            const desiredLoopDuration = longLoopBarDuration * longLoopLength;
+            const basePlaybackRate = sample.loopDuration / desiredLoopDuration;
+            const speed = sample.effects ? sample.effects.speed || 1 : 1;
+            const newPlaybackRate = basePlaybackRate * individualTempo * speed;
+            const currentPlaybackRate = sample.source.playbackRate.value;
+            const currentTime = audioContext.currentTime;
+            const elapsedTime = currentTime - sample.loopStartTime;
+            const currentPosition = elapsedTime * currentPlaybackRate % sample.loopDuration;
+            sample.source.playbackRate.value = newPlaybackRate;
+            sample.loopStartTime = currentTime - currentPosition / newPlaybackRate;
+            
+            // Update LFO base rate if pitch modulation is active
+            if (sample.lfoTarget === "pitch") {
+                sample.lfoBaseRate = newPlaybackRate;
+            }
+            
+            console.log(`Sample ${currentSampleForPopup} individual tempo updated: new rate ${newPlaybackRate}, position ${currentPosition}`);
+        }
+    }
+
+    function initializeSpeedAndTempoControls() {
+        const speedSelect = document.getElementById("speed-select");
+        const individualTempoSlider = document.getElementById("individual-tempo");
+        const individualTempoValue = document.getElementById("individual-tempo-value");
+        const sampleVolumeSlider = document.getElementById("sample-volume");
+        speedSelect.addEventListener("change", function () {
+            updateSpeedInRealTime();
+            if (temporaryEffects) {
+                temporaryEffects.speed = parseFloat(this.value);
+            }
+        });
+        individualTempoSlider.addEventListener("input", function () {
+            individualTempoValue.textContent = this.value;
+            updateIndividualTempoInRealTime();
+            if (temporaryEffects) {
+                temporaryEffects.individualTempo = parseFloat(this.value);
+            }
+        });
+        sampleVolumeSlider.addEventListener("input", function () {
+            updateSampleVolumeInRealTime();
+            if (temporaryEffects) {
+                temporaryEffects.volume = parseInt(this.value);
+            }
+        });
+    }
+
+    function initializeEffectsForSample(sampleNumber) {
+        if (!currentPlaying[sampleNumber].isScheduled || !currentPlaying[sampleNumber].source) return;
+        const sample = currentPlaying[sampleNumber];
+        if (sample.outputNode) {
+            updateSampleEffects(sampleNumber);
+            return;
+        }
+        const sourceNode = sample.gainNode;
+        const outputNode = audioContext.createGain();
+        outputNode.gain.value = 1;
+        const dryPath = audioContext.createGain();
+        dryPath.gain.value = 1;
+        const wetPath = audioContext.createGain();
+        wetPath.gain.value = 0;
+        sample.wetPathNode = wetPath;
+        sample.dryPathNode = dryPath;
+        sample.outputNode = outputNode;
+        sourceNode.connect(dryPath);
+        sourceNode.connect(wetPath);
+        dryPath.connect(outputNode);
+        wetPath.connect(outputNode);
+        let lastEffectNode = wetPath;
+        const delayNode = audioContext.createDelay(1);
+        delayNode.delayTime.value = 0;
+        const feedbackGain = audioContext.createGain();
+        feedbackGain.gain.value = 0;
+        lastEffectNode.connect(delayNode);
+        delayNode.connect(feedbackGain);
+        feedbackGain.connect(delayNode);
+        delayNode.connect(outputNode);
+        lastEffectNode = delayNode;
+        sample.delayNode = delayNode;
+        sample.delayFeedbackNode = feedbackGain;
+        const convolver = audioContext.createConvolver();
+        const length = audioContext.sampleRate * .1;
+        const impulse = audioContext.createBuffer(2, length, audioContext.sampleRate);
+        for (let channel = 0; channel < 2; channel++) {
+            const channelData = impulse.getChannelData(channel);
+            for (let i = 0; i < length; i++) {
+                channelData[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / length, 2);
+            }
+        }
+        convolver.buffer = impulse;
+        const reverbMix = audioContext.createGain();
+        const effects = sample.effects || {};
+        reverbMix.gain.value = effects.reverb && effects.reverb.mix ? effects.reverb.mix / 100 : 0;
+        lastEffectNode.connect(convolver);
+        convolver.connect(reverbMix);
+        reverbMix.connect(outputNode);
+        sample.reverbNode = convolver;
+        sample.reverbMixNode = reverbMix;
+        
+        // Initialize LFO for main sample - ensure it's unique to this sample
+        const lfo = audioContext.createOscillator();
+        lfo.type = 'sine';
+        lfo.frequency.value = 1.0;
+        const lfoGain = audioContext.createGain();
+        lfoGain.gain.value = 0;
+        lfo.connect(lfoGain);
+        sample.lfoNode = lfo;
+        sample.lfoGainNode = lfoGain;
+        sample.lfoBaseRate = 1.0; // Store the base rate for tempo changes
+        lfo.start();
+        
+        // Create a separate gain node for individual volume modulation
+        const individualVolumeGain = audioContext.createGain();
+        individualVolumeGain.gain.value = sample.individualVolume || 1.0;
+        sample.individualVolumeGain = individualVolumeGain;
+        
+        // Reconnect the audio chain to include the individual volume gain node
+        sourceNode.disconnect();
+        sourceNode.connect(individualVolumeGain);
+        individualVolumeGain.connect(dryPath);
+        individualVolumeGain.connect(wetPath);
+        
+        const storedEffects = sample.effects || {
+            delay: {
+                time: 0,
+                feedback: 0
+            },
+            reverb: {
+                decay: 0,
+                mix: 0,
+                predelay: 0,
+                diffusion: 50,
+                lowcut: 20,
+                highcut: 2e4,
+                damping: 50
+            },
+            eq: [{
+                frequency: 20,
+                gain: 0,
+                q: 1,
+                type: "lowshelf",
+                fixed: true
+            }, {
+                frequency: 2e4,
+                gain: 0,
+                q: 1,
+                type: "highshelf",
+                fixed: true
+            }],
+            volume: 100,
+            speed: 1,
+            individualTempo: 1,
+            lfo: {
+                target: "pitch",
+                waveform: "sine",
+                rate: 1.0,
+                depth: 0
+            },
+            pianoRoll: {
+                notes: [],
+                soundSource: "piano",
+                gridWidth: sample.isLongSample ? 32 : 16,
+                gridHeight: 84,
+                scrollX: 0,
+                scrollY: 0,
+                sampleRange: {
+                    start: 0,
+                    end: 100
+                },
+                filters: {
+                    lowShelf: 0,
+                    highShelf: 0,
+                    lowMid: 0,
+                    mid: 0,
+                    highMid: 0,
+                    delay: {
+                        time: 0,
+                        feedback: 0
+                    }
+                },
+                isEnabled: false
+            }
+        };
+        if (storedEffects.pianoRoll && !pianoRollData[sampleNumber]) {
+            pianoRollData[sampleNumber] = JSON.parse(JSON.stringify(storedEffects.pianoRoll));
+        }
+        const lowFilter = audioContext.createBiquadFilter();
+        lowFilter.type = "lowshelf";
+        lowFilter.frequency.value = 60;
+        lowFilter.gain.value = 0;
+        const lowMidFilter = audioContext.createBiquadFilter();
+        lowMidFilter.type = "peaking";
+        lowMidFilter.frequency.value = 230;
+        lowMidFilter.Q.value = 1;
+        lowMidFilter.gain.value = 0;
+        const midFilter = audioContext.createBiquadFilter();
+        midFilter.type = "peaking";
+        midFilter.frequency.value = 910;
+        midFilter.Q.value = 1;
+        midFilter.gain.value = 0;
+        const highMidFilter = audioContext.createBiquadFilter();
+        highMidFilter.type = "peaking";
+        highMidFilter.frequency.value = 3e3;
+        highMidFilter.Q.value = 1;
+        highMidFilter.gain.value = 0;
+        const highMid2Filter = audioContext.createBiquadFilter();
+        highMid2Filter.type = "peaking";
+        highMid2Filter.frequency.value = 6e3;
+        highMid2Filter.Q.value = 1;
+        highMid2Filter.gain.value = 0;
+        const highFilter = audioContext.createBiquadFilter();
+        highFilter.type = "highshelf";
+        highFilter.frequency.value = 1e4;
+        highFilter.gain.value = 0;
+        const veryHighFilter = audioContext.createBiquadFilter();
+        veryHighFilter.type = "highshelf";
+        veryHighFilter.frequency.value = 14e3;
+        veryHighFilter.gain.value = 0;
+        
+        // Create a dedicated filter for LFO modulation - ensure it's unique to this sample
+        const lfoFilter = audioContext.createBiquadFilter();
+        lfoFilter.type = "lowpass";
+        lfoFilter.frequency.value = 2000;
+        lfoFilter.Q.value = 1;
+        lfoFilter.gain.value = 0;
+        sample.lfoFilter = lfoFilter;
+        
+        outputNode.connect(lowFilter);
+        lowFilter.connect(lowMidFilter);
+        lowMidFilter.connect(midFilter);
+        midFilter.connect(highMidFilter);
+        highMidFilter.connect(highMid2Filter);
+        highMid2Filter.connect(highFilter);
+        
+        // FIX: Only include LFO filter in the chain if LFO target is "filter"
+        // Create a bypass node that connects directly to veryHighFilter when LFO target is not "filter"
+        const lfoFilterBypass = audioContext.createGain();
+        lfoFilterBypass.gain.value = 1.0;
+        
+        // Connect both paths
+        highFilter.connect(lfoFilter);
+        highFilter.connect(lfoFilterBypass);
+        
+        // Initially bypass the LFO filter
+        lfoFilterBypass.connect(veryHighFilter);
+        
+        // Store the bypass node for later use
+        sample.lfoFilterBypass = lfoFilterBypass;
+        
+        veryHighFilter.connect(masterOutputNode);
+        sample.eqLowNode = lowFilter;
+        sample.eqLowMidNode = lowMidFilter;
+        sample.eqMidNode = midFilter;
+        sample.eqHighMidNode = highMidFilter;
+        sample.eqHighMid2Node = highMid2Filter;
+        sample.eqHighNode = highFilter;
+        sample.eqVeryHighNode = veryHighFilter;
+        if (sample.effects) {
+            updateSampleEffects(sampleNumber);
+        }
+    }
+
+    function showEffectsPopup(sampleNumber, button) {
+        currentSampleForPopup = sampleNumber;
+        document.getElementById("popup-sample-number").textContent = sampleNumber;
+        
+        // Set the EQ visualizer toggle state based on the sample's stored state
+        const eqVisualizerToggle = document.getElementById("eq-visualizer-toggle");
+        if (eqVisualizerToggle) {
+            eqVisualizerToggle.checked = currentPlaying[sampleNumber].eqVisualizerEnabled || false;
+        }
+        
+        const loadingIndicator = document.getElementById("piano-roll-loading");
+        if (loadingIndicator) {
+            loadingIndicator.style.display = "none";
+        }
+        const effects = currentPlaying[sampleNumber].effects || {
+            delay: {
+                time: 0,
+                feedback: 0
+            },
+            reverb: {
+                decay: 0,
+                mix: 0,
+                predelay: 0,
+                diffusion: 50,
+                lowcut: 20,
+                highcut: 2e4,
+                damping: 50
+            },
+            eq: [{
+                frequency: 20,
+                gain: 0,
+                q: 1,
+                type: "lowshelf",
+                fixed: true
+            }, {
+                frequency: 2e4,
+                gain: 0,
+                q: 1,
+                type: "highshelf",
+                fixed: true
+            }],
+            volume: 100,
+            speed: 1,
+            individualTempo: 1,
+            lfo: {
+                target: "pitch",
+                waveform: "sine",
+                rate: 1.0,
+                depth: 0
+            },
+            pianoRoll: {
+                notes: [],
+                soundSource: "piano",
+                gridWidth: sampleNumber > 60 ? 32 : 16,
+                gridHeight: 84,
+                scrollX: 0,
+                scrollY: 0,
+                sampleRange: {
+                    start: 0,
+                    end: 100
+                },
+                filters: {
+                    lowShelf: 0,
+                    highShelf: 0,
+                    lowMid: 0,
+                    mid: 0,
+                    highMid: 0,
+                    delay: {
+                        time: 0,
+                        feedback: 0
+                    }
+                },
+                isEnabled: false
+            }
+        };
+        originalEffects = JSON.parse(JSON.stringify(effects));
+        temporaryEffects = JSON.parse(JSON.stringify(effects));
+        if (effects.pianoRoll) {
+            pianoRollData[sampleNumber] = JSON.parse(JSON.stringify(effects.pianoRoll));
+            if (pianoRollData[sampleNumber].isEnabled === undefined) {
+                pianoRollData[sampleNumber].isEnabled = false;
+            }
+        } else if (!pianoRollData[sampleNumber]) {
+            pianoRollData[sampleNumber] = {
+                notes: [],
+                soundSource: "piano",
+                gridWidth: sampleNumber > 60 ? 32 : 16,
+                gridHeight: 84,
+                scrollX: 0,
+                scrollY: 0,
+                sampleRange: {
+                    start: 0,
+                    end: 100
+                },
+                filters: {
+                    lowShelf: 0,
+                    highShelf: 0,
+                    lowMid: 0,
+                    mid: 0,
+                    highMid: 0,
+                    delay: {
+                        time: 0,
+                        feedback: 0
+                    }
+                },
+                isEnabled: false
+            };
+        }
+        document.getElementById("sample-volume").value = temporaryEffects.volume || 100;
+        document.getElementById("sample-volume-value").textContent = `${temporaryEffects.volume||100}%`;
+        document.getElementById("delay-time").value = temporaryEffects.delay.time;
+        document.getElementById("delay-time-value").textContent = temporaryEffects.delay.time;
+        document.getElementById("delay-feedback").value = temporaryEffects.delay.feedback;
+        document.getElementById("delay-feedback-value").textContent = temporaryEffects.delay.feedback;
+        document.getElementById("reverb-decay").value = temporaryEffects.reverb.decay;
+        document.getElementById("reverb-decay-value").textContent = temporaryEffects.reverb.decay;
+        document.getElementById("reverb-predelay").value = temporaryEffects.reverb.predelay;
+        document.getElementById("reverb-predelay-value").textContent = temporaryEffects.reverb.predelay;
+        document.getElementById("reverb-diffusion").value = temporaryEffects.reverb.diffusion;
+        document.getElementById("reverb-diffusion-value").textContent = temporaryEffects.reverb.diffusion;
+        document.getElementById("reverb-lowcut").value = temporaryEffects.reverb.lowcut;
+        document.getElementById("reverb-lowcut-value").textContent = temporaryEffects.reverb.lowcut;
+        document.getElementById("reverb-highcut").value = temporaryEffects.reverb.highcut;
+        document.getElementById("reverb-highcut-value").textContent = temporaryEffects.reverb.highcut;
+        document.getElementById("reverb-damping").value = temporaryEffects.reverb.damping;
+        document.getElementById("reverb-damping-value").textContent = temporaryEffects.reverb.damping;
+        document.getElementById("reverb-mix").value = temporaryEffects.reverb.mix;
+        document.getElementById("reverb-mix-value").textContent = temporaryEffects.reverb.mix;
+        document.getElementById("speed-select").value = temporaryEffects.speed || 1;
+        if (sampleNumber > 60) {
+            document.getElementById("individual-tempo").value = temporaryEffects.individualTempo || 1;
+            document.getElementById("individual-tempo-value").textContent = temporaryEffects.individualTempo || 1;
+        }
+        
+        // Set LFO values - FIX: Use the saved LFO values from the effects
+        const lfoTarget = temporaryEffects.lfo ? temporaryEffects.lfo.target : "pitch";
+        const lfoWaveform = temporaryEffects.lfo ? temporaryEffects.lfo.waveform : "sine";
+        const lfoRate = temporaryEffects.lfo ? temporaryEffects.lfo.rate : 1.0;
+        const lfoDepth = temporaryEffects.lfo ? temporaryEffects.lfo.depth : 0;
+        
+        // Store LFO values to set after event listeners are set up
+        const lfoValues = {
+            target: lfoTarget,
+            waveform: lfoWaveform,
+            rate: lfoRate,
+            depth: lfoDepth
+        };
+        
+        if (temporaryEffects.pianoRoll && temporaryEffects.pianoRoll.filters) {
+            document.getElementById("piano-roll-lowshelf").value = temporaryEffects.pianoRoll.filters.lowShelf || 0;
+            document.getElementById("piano-roll-lowshelf-value").textContent = `${temporaryEffects.pianoRoll.filters.lowShelf||0}dB`;
+            document.getElementById("piano-roll-lowmid").value = temporaryEffects.pianoRoll.filters.lowMid || 0;
+            document.getElementById("piano-roll-lowmid-value").textContent = `${temporaryEffects.pianoRoll.filters.lowMid||0}dB`;
+            document.getElementById("piano-roll-mid").value = temporaryEffects.pianoRoll.filters.mid || 0;
+            document.getElementById("piano-roll-mid-value").textContent = `${temporaryEffects.pianoRoll.filters.mid||0}dB`;
+            document.getElementById("piano-roll-highmid").value = temporaryEffects.pianoRoll.filters.highMid || 0;
+            document.getElementById("piano-roll-highmid-value").textContent = `${temporaryEffects.pianoRoll.filters.highMid||0}dB`;
+            document.getElementById("piano-roll-highshelf").value = temporaryEffects.pianoRoll.filters.highShelf || 0;
+            document.getElementById("piano-roll-highshelf-value").textContent = `${temporaryEffects.pianoRoll.filters.highShelf||0}dB`;
+            document.getElementById("piano-roll-delay-time").value = temporaryEffects.pianoRoll.filters.delay.time || 0;
+            document.getElementById("piano-roll-delay-time-value").textContent = `${temporaryEffects.pianoRoll.filters.delay.time||0}ms`;
+            document.getElementById("piano-roll-delay-feedback").value = temporaryEffects.pianoRoll.filters.delay.feedback || 0;
+            document.getElementById("piano-roll-delay-feedback-value").textContent = `${temporaryEffects.pianoRoll.filters.delay.feedback||0}%`;
+        }
+        const gridRect = gridPanel.getBoundingClientRect();
+        const popupWidth = gridRect.width;
+        const popupHeight = gridRect.height;
+        effectsPopup.style.left = `${(window.innerWidth-popupWidth)/2}px`;
+        effectsPopup.style.top = `${(window.innerHeight-popupHeight)/2}px`;
+        effectsPopup.style.width = `${popupWidth}px`;
+        effectsPopup.style.height = `${popupHeight}px`;
+        effectsPopup.style.display = "flex";
+        const individualTempoSection = document.querySelector(".individual-tempo-section");
+        if (individualTempoSection) {
+            if (sampleNumber <= 60) {
+                individualTempoSection.style.display = "none";
+            } else {
+                individualTempoSection.style.display = "block";
+            }
+        }
+        setTimeout(() => {
+            initVisualEQ();
+            initializeSpeedAndTempoControls();
+            
+            // Setup LFO event listeners with proper scoping to ensure they only affect the current sample
+            setupLFOEventListeners(sampleNumber);
+            
+            // FIX: Set LFO values after event listeners are set up to prevent them from being reset
+            document.getElementById("lfo-target").value = lfoValues.target;
+            document.getElementById("lfo-waveform").value = lfoValues.waveform;
+            document.getElementById("lfo-rate").value = lfoValues.rate;
+            document.getElementById("lfo-rate-value").textContent = lfoValues.rate.toFixed(1);
+            document.getElementById("lfo-depth").value = lfoValues.depth;
+            document.getElementById("lfo-depth-value").textContent = `${lfoValues.depth}%`;
+            
+            // Initialize LFO visualizer
+            initLFOVisualizer();
+            
+            // Initialize LFO connection for real-time preview
+            initializeLFOConnection(sampleNumber);
+            
+            const pianoRollToggle = document.getElementById("piano-roll-toggle");
+            const pianoRollContent = document.querySelector(".piano-roll-content");
+            pianoRollToggle.replaceWith(pianoRollToggle.cloneNode(true));
+            const newPianoRollToggle = document.getElementById("piano-roll-toggle");
+            newPianoRollToggle.checked = pianoRollData[sampleNumber].isEnabled;
+            if (pianoRollData[sampleNumber].isEnabled) {
+                pianoRollContent.classList.add("visible");
+            } else {
+                pianoRollContent.classList.remove("visible");
+            }
+            newPianoRollToggle.addEventListener("change", function () {
+                if (this.checked) {
+                    pianoRollContent.classList.add("visible");
+                    pianoRollData[sampleNumber].isEnabled = true;
+                    initPianoRoll();
+                    initPianoRollFilters();
+                } else {
+                    pianoRollContent.classList.remove("visible");
+                    pianoRollData[sampleNumber].isEnabled = false;
+                    if (isPreviewingPianoRoll) {
+                        stopPianoRollPreview();
+                    }
+                }
+            });
+            const uploadStatus = document.getElementById("upload-status");
+            const recordStatus = document.getElementById("record-status");
+            uploadStatus.textContent = uploadStatusPerSample[sampleNumber] || "";
+            recordStatus.textContent = recordStatusPerSample[sampleNumber] || "";
+            const microphoneRecordBtn = document.getElementById("microphone-record-btn");
+            if (microphoneRecordBtn) {
+                microphoneRecordBtn.replaceWith(microphoneRecordBtn.cloneNode(true));
+                const newMicrophoneRecordBtn = document.getElementById("microphone-record-btn");
+                newMicrophoneRecordBtn.addEventListener("click", function () {
+                    handleMicrophoneRecording(sampleNumber);
+                });
+                if (recordedBlobs[sampleNumber]) {
+                    newMicrophoneRecordBtn.textContent = "Record New";
+                } else {
+                    newMicrophoneRecordBtn.textContent = "Start Recording";
+                }
+            }
+            const microphoneSaveBtn = document.getElementById("microphone-save-btn");
+            if (microphoneSaveBtn) {
+                microphoneSaveBtn.replaceWith(microphoneSaveBtn.cloneNode(true));
+                const newMicrophoneSaveBtn = document.getElementById("microphone-save-btn");
+                newMicrophoneSaveBtn.addEventListener("click", function () {
+                    saveMicrophoneRecording(sampleNumber);
+                });
+                if (recordedBlobs[sampleNumber]) {
+                    newMicrophoneSaveBtn.style.display = "inline-block";
+                } else {
+                    newMicrophoneSaveBtn.style.display = "none";
+                }
+            }
+            const microphoneDownloadBtn = document.getElementById("microphone-download-btn");
+            if (microphoneDownloadBtn) {
+                microphoneDownloadBtn.replaceWith(microphoneDownloadBtn.cloneNode(true));
+                const newMicrophoneDownloadBtn = document.getElementById("microphone-download-btn");
+                newMicrophoneDownloadBtn.addEventListener("click", function () {
+                    downloadMicrophoneRecording(sampleNumber);
+                });
+                if (recordedBlobs[sampleNumber]) {
+                    newMicrophoneDownloadBtn.style.display = "inline-block";
+                } else {
+                    newMicrophoneDownloadBtn.style.display = "none";
+                }
+            }
+            const microphoneDeleteBtn = document.getElementById("microphone-delete-btn");
+            if (microphoneDeleteBtn) {
+                microphoneDeleteBtn.replaceWith(microphoneDeleteBtn.cloneNode(true));
+                const newMicrophoneDeleteBtn = document.getElementById("microphone-delete-btn");
+                newMicrophoneDeleteBtn.addEventListener("click", function () {
+                    deleteMicrophoneRecording(sampleNumber);
+                });
+                if (recordedBlobs[sampleNumber]) {
+                    newMicrophoneDeleteBtn.style.display = "inline-block";
+                } else {
+                    newMicrophoneDeleteBtn.style.display = "none";
+                }
+            }
+            if (currentPlaying[sampleNumber] && currentPlaying[sampleNumber].isScheduled) {
+                initWaveformVisualization();
+            }
+        }, 100);
+    }
+
+    // New function to setup LFO event listeners with proper scoping
+    function setupLFOEventListeners(sampleNumber) {
+        // Remove any existing event listeners to prevent duplicates
+        const lfoTarget = document.getElementById("lfo-target");
+        const lfoWaveform = document.getElementById("lfo-waveform");
+        const lfoRate = document.getElementById("lfo-rate");
+        const lfoDepth = document.getElementById("lfo-depth");
+        
+        // Create new event listeners with the sample number in scope
+        const newLfoTarget = lfoTarget.cloneNode(true);
+        const newLfoWaveform = lfoWaveform.cloneNode(true);
+        const newLfoRate = lfoRate.cloneNode(true);
+        const newLfoDepth = lfoDepth.cloneNode(true);
+        
+        lfoTarget.parentNode.replaceChild(newLfoTarget, lfoTarget);
+        lfoWaveform.parentNode.replaceChild(newLfoWaveform, lfoWaveform);
+        lfoRate.parentNode.replaceChild(newLfoRate, lfoRate);
+        lfoDepth.parentNode.replaceChild(newLfoDepth, lfoDepth);
+        
+        newLfoTarget.addEventListener("change", function() {
+            updateLFOInRealTime(sampleNumber);
+        });
+        
+        newLfoWaveform.addEventListener("change", function() {
+            updateLFOInRealTime(sampleNumber);
+        });
+        
+        newLfoRate.addEventListener("input", function() {
+            updateLFOInRealTime(sampleNumber);
+        });
+        
+        newLfoDepth.addEventListener("input", function() {
+            updateLFOInRealTime(sampleNumber);
+        });
+    }
+
+    function initializeLFOConnection(sampleNumber) {
+        if (!currentPlaying[sampleNumber] || !currentPlaying[sampleNumber].lfoNode) return;
+        
+        const sample = currentPlaying[sampleNumber];
+        // FIX: Use the saved LFO target from the sample's effects, not the DOM value
+        const target = sample.effects && sample.effects.lfo ? sample.effects.lfo.target : "pitch";
+        
+        // Disconnect all previous connections to ensure isolation
+        try {
+            sample.lfoGainNode.disconnect();
+        } catch (e) {}
+        
+        // Disconnect filter offset node if it exists
+        if (sample.lfoFilterOffsetNode) {
+            try {
+                sample.lfoFilterOffsetNode.disconnect();
+                sample.lfoFilterOffsetNode.stop();
+                sample.lfoFilterOffsetNode = null;
+            } catch (e) {}
+        }
+        
+        // Clear any existing update timeout
+        if (sample.lfoUpdateTimeout) {
+            clearTimeout(sample.lfoUpdateTimeout);
+            sample.lfoUpdateTimeout = null;
+        }
+        
+        // FIX: Handle LFO filter bypass based on target
+        if (sample.lfoFilterBypass && sample.lfoFilter) {
+            if (target === "filter") {
+                // Use the LFO filter path
+                sample.lfoFilterBypass.gain.value = 0.0;
+                sample.lfoFilter.connect(sample.eqVeryHighNode);
+            } else {
+                // Use the bypass path
+                sample.lfoFilterBypass.gain.value = 1.0;
+                try {
+                    sample.lfoFilter.disconnect();
+                } catch (e) {}
+            }
+        }
+        
+        // Connect to the appropriate target
+        if (target === "pitch") {
+            // Check if detune is supported
+            const supportsDetune = typeof sample.source.detune !== 'undefined';
+            
+            if (supportsDetune) {
+                // For pitch modulation, we'll use the detune property
+                // which changes pitch without affecting playback rate
+                sample.lfoTarget = "pitch";
+                
+                // Create a loop to continuously update the detune
+                const updateDetune = () => {
+                    if (!sample.source || sample.lfoTarget !== "pitch") return;
+                    
+                    const time = audioContext.currentTime;
+                    const lfoRate = sample.effects && sample.effects.lfo ? sample.effects.lfo.rate : 1.0;
+                    const lfoDepth = sample.effects && sample.effects.lfo ? sample.effects.lfo.depth / 100 : 0;
+                    const waveform = sample.effects && sample.effects.lfo ? sample.effects.lfo.waveform : "sine";
+                    
+                    const lfoDuration = 1 / lfoRate;
+                    const phase = (time % lfoDuration) / lfoDuration * Math.PI * 2;
+                    
+                    let modulationValue = 0;
+                    switch (waveform) {
+                        case "sine":
+                            modulationValue = Math.sin(phase);
+                            break;
+                        case "square":
+                            modulationValue = Math.sin(phase) > 0 ? 1 : -1;
+                            break;
+                        case "triangle":
+                            const t = (phase / Math.PI) % 2;
+                            modulationValue = t < 1 ? 2 * t - 1 : 3 - 2 * t;
+                            break;
+                        case "sawtooth":
+                            modulationValue = 2 * ((phase / Math.PI) % 1) - 1;
+                            break;
+                    }
+                    
+                    // Calculate the detune value in cents
+                    // Maximum detune is 1200 cents (one octave) in either direction
+                    const maxDetune = 1200;
+                    const detuneValue = maxDetune * lfoDepth * modulationValue;
+                    
+                    // Apply the detune to the source
+                    sample.source.detune.setValueAtTime(detuneValue, time);
+                    
+                    // Schedule the next update
+                    sample.lfoUpdateTimeout = setTimeout(updateDetune, 50); // Update every 50ms for smooth modulation
+                };
+                
+                // Start the update loop
+                updateDetune();
+            } else {
+                // Fall back to the current implementation using playbackRate
+                // For pitch modulation, we'll use a more direct approach
+                // by updating the playback rate in a scheduled manner
+                sample.lfoTarget = "pitch";
+                
+                // Store the current base playback rate
+                if (sample.source) {
+                    sample.lfoBaseRate = sample.source.playbackRate.value;
+                }
+                
+                // Create a loop to continuously update the playback rate
+                const updatePlaybackRate = () => {
+                    if (!sample.source || sample.lfoTarget !== "pitch") return;
+                    
+                    const time = audioContext.currentTime;
+                    const lfoRate = sample.effects && sample.effects.lfo ? sample.effects.lfo.rate : 1.0;
+                    const lfoDepth = sample.effects && sample.effects.lfo ? sample.effects.lfo.depth / 100 : 0;
+                    const waveform = sample.effects && sample.effects.lfo ? sample.effects.lfo.waveform : "sine";
+                    
+                    const lfoDuration = 1 / lfoRate;
+                    const phase = (time % lfoDuration) / lfoDuration * Math.PI * 2;
+                    
+                    let modulationValue = 0;
+                    switch (waveform) {
+                        case "sine":
+                            modulationValue = Math.sin(phase);
+                            break;
+                        case "square":
+                            modulationValue = Math.sin(phase) > 0 ? 1 : -1;
+                            break;
+                        case "triangle":
+                            const t = (phase / Math.PI) % 2;
+                            modulationValue = t < 1 ? 2 * t - 1 : 3 - 2 * t;
+                            break;
+                        case "sawtooth":
+                            modulationValue = 2 * ((phase / Math.PI) % 1) - 1;
+                            break;
+                    }
+                    
+                    // Use the stored base rate which should be updated when tempo changes
+                    const baseRate = sample.lfoBaseRate || 1.0;
+                    
+                    // Limit the modulation depth to prevent extreme values
+                    // Maximum modulation is 50% of the base rate in either direction
+                    const maxModulation = baseRate * 0.5;
+                    const modulationAmount = maxModulation * lfoDepth * modulationValue;
+                    
+                    // Ensure the playback rate never goes below 0.1 to prevent audio stopping
+                    const newPlaybackRate = Math.max(0.1, baseRate + modulationAmount);
+                    
+                    sample.source.playbackRate.setValueAtTime(newPlaybackRate, time);
+                    
+                    // Schedule the next update
+                    sample.lfoUpdateTimeout = setTimeout(updatePlaybackRate, 50); // Update every 50ms for smooth modulation
+                };
+                
+                // Start the update loop
+                updatePlaybackRate();
+            }
+        } else if (target === "filter") {
+            // Connect to the dedicated LFO filter cutoff frequency
+            const baseFrequency = sample.lfoFilter ? sample.lfoFilter.frequency.value : 2000;
+            const lfoDepth = sample.effects && sample.effects.lfo ? sample.effects.lfo.depth / 100 : 0;
+            
+            // Calculate the modulation range in octaves
+            // Maximum modulation is 2 octaves in either direction
+            const maxOctaves = 2;
+            const modulationOctaves = maxOctaves * lfoDepth;
+            
+            // Calculate the frequency range
+            const minFrequency = baseFrequency / Math.pow(2, modulationOctaves);
+            const maxFrequency = baseFrequency * Math.pow(2, modulationOctaves);
+            
+            // Create a scale factor to map the LFO output to the frequency range
+            const scaleFactor = (maxFrequency - minFrequency) / 2;
+            const offset = (maxFrequency + minFrequency) / 2;
+            
+            // Connect the LFO to the filter frequency
+            sample.lfoGainNode.gain.value = scaleFactor;
+            sample.lfoGainNode.connect(sample.lfoFilter.frequency);
+            
+            // Set the base frequency
+            sample.lfoFilter.frequency.value = baseFrequency;
+            
+            // Create a constant source node to add the offset
+            const offsetNode = audioContext.createConstantSource();
+            offsetNode.offset.value = offset;
+            offsetNode.connect(sample.lfoFilter.frequency);
+            offsetNode.start();
+            
+            // Store the offset node for cleanup
+            sample.lfoFilterOffsetNode = offsetNode;
+            
+            sample.lfoTarget = "filter";
+        } else if (target === "volume") {
+            // Connect to the individual volume gain node
+            if (sample.individualVolumeGain) {
+                const baseGain = sample.individualVolumeGain.gain.value;
+                const lfoDepth = sample.effects && sample.effects.lfo ? sample.effects.lfo.depth / 100 : 0;
+                
+                // Calculate the modulation range
+                // Maximum modulation is 50% of the base gain in either direction
+                const maxModulation = baseGain * 0.5;
+                const modulationAmount = maxModulation * lfoDepth;
+                
+                // Connect the LFO to the individual volume gain
+                sample.lfoGainNode.gain.value = modulationAmount;
+                sample.lfoGainNode.connect(sample.individualVolumeGain.gain);
+                sample.lfoTarget = "volume";
+            }
+        }
+    }
+
+    function formatFrequency(freq) {
+        if (freq >= 1e3) {
+            return `${(freq/1e3).toFixed(1)}kHz`;
+        }
+        return `${freq}Hz`;
+    }
+
+    function initPianoRollFilters() {
+        if (!currentSampleForPopup) return;
+        const lowShelfSlider = document.getElementById("piano-roll-lowshelf");
+        const lowMidSlider = document.getElementById("piano-roll-lowmid");
+        const midSlider = document.getElementById("piano-roll-mid");
+        const highMidSlider = document.getElementById("piano-roll-highmid");
+        const highShelfSlider = document.getElementById("piano-roll-highshelf");
+        const delayTimeSlider = document.getElementById("piano-roll-delay-time");
+        const delayFeedbackSlider = document.getElementById("piano-roll-delay-feedback");
+        const lowShelfValue = document.getElementById("piano-roll-lowshelf-value");
+        const lowMidValue = document.getElementById("piano-roll-lowmid-value");
+        const midValue = document.getElementById("piano-roll-mid-value");
+        const highMidValue = document.getElementById("piano-roll-highmid-value");
+        const highShelfValue = document.getElementById("piano-roll-highshelf-value");
+        const delayTimeValue = document.getElementById("piano-roll-delay-time-value");
+        const delayFeedbackValue = document.getElementById("piano-roll-delay-feedback-value");
+        lowShelfSlider.addEventListener("input", function () {
+            lowShelfValue.textContent = `${this.value}dB`;
+            updatePianoRollFilters();
+        });
+        lowMidSlider.addEventListener("input", function () {
+            lowMidValue.textContent = `${this.value}dB`;
+            updatePianoRollFilters();
+        });
+        midSlider.addEventListener("input", function () {
+            midValue.textContent = `${this.value}dB`;
+            updatePianoRollFilters();
+        });
+        highMidSlider.addEventListener("input", function () {
+            highMidValue.textContent = `${this.value}dB`;
+            updatePianoRollFilters();
+        });
+        highShelfSlider.addEventListener("input", function () {
+            highShelfValue.textContent = `${this.value}dB`;
+            updatePianoRollFilters();
+        });
+        delayTimeSlider.addEventListener("input", function () {
+            delayTimeValue.textContent = `${this.value}ms`;
+            updatePianoRollFilters();
+        });
+        delayFeedbackSlider.addEventListener("input", function () {
+            delayFeedbackValue.textContent = `${this.value}%`;
+            updatePianoRollFilters();
+        });
+    }
+
+    function updatePianoRollFilters() {
+        if (!currentSampleForPopup || !pianoRollFilterNodes.lowShelf) return;
+        const lowShelf = parseFloat(document.getElementById("piano-roll-lowshelf").value);
+        const lowMid = parseFloat(document.getElementById("piano-roll-lowmid").value);
+        const mid = parseFloat(document.getElementById("piano-roll-mid").value);
+        const highMid = parseFloat(document.getElementById("piano-roll-highmid").value);
+        const highShelf = parseFloat(document.getElementById("piano-roll-highshelf").value);
+        const delayTime = parseInt(document.getElementById("piano-roll-delay-time").value);
+        const delayFeedback = parseInt(document.getElementById("piano-roll-delay-feedback").value);
+        if (pianoRollFilterNodes.lowShelf) {
+            pianoRollFilterNodes.lowShelf.gain.value = lowShelf;
+        }
+        if (pianoRollFilterNodes.lowMid) {
+            pianoRollFilterNodes.lowMid.gain.value = lowMid;
+        }
+        if (pianoRollFilterNodes.mid) {
+            pianoRollFilterNodes.mid.gain.value = mid;
+        }
+        if (pianoRollFilterNodes.highMid) {
+            pianoRollFilterNodes.highMid.gain.value = highMid;
+        }
+        if (pianoRollFilterNodes.highShelf) {
+            pianoRollFilterNodes.highShelf.gain.value = highShelf;
+        }
+        if (pianoRollFilterNodes.delay) {
+            pianoRollFilterNodes.delay.delayTime.value = delayTime / 1e3;
+        }
+        if (pianoRollFilterNodes.delayFeedback) {
+            pianoRollFilterNodes.delayFeedback.gain.value = delayFeedback / 100;
+        }
+        if (pianoRollData[currentSampleForPopup]) {
+            if (!pianoRollData[currentSampleForPopup].filters) {
+                pianoRollData[currentSampleForPopup].filters = {};
+            }
+            pianoRollData[currentSampleForPopup].filters.lowShelf = lowShelf;
+            pianoRollData[currentSampleForPopup].filters.lowMid = lowMid;
+            pianoRollData[currentSampleForPopup].filters.mid = mid;
+            pianoRollData[currentSampleForPopup].filters.highMid = highMid;
+            pianoRollData[currentSampleForPopup].filters.highShelf = highShelf;
+            pianoRollData[currentSampleForPopup].filters.delay = {
+                time: delayTime,
+                feedback: delayFeedback
+            };
+        }
+    }
+
+    // Modified updateLFOInRealTime to accept a sampleNumber parameter
+    function updateLFOInRealTime(sampleNumber) {
+        if (!sampleNumber) sampleNumber = currentSampleForPopup;
+        if (!sampleNumber || !currentPlaying[sampleNumber]) return;
+        
+        const sample = currentPlaying[sampleNumber];
+        const target = document.getElementById("lfo-target").value;
+        const waveform = document.getElementById("lfo-waveform").value;
+        const rate = parseFloat(document.getElementById("lfo-rate").value);
+        const depth = parseInt(document.getElementById("lfo-depth").value);
+        
+        document.getElementById("lfo-rate-value").textContent = rate.toFixed(1);
+        document.getElementById("lfo-depth-value").textContent = `${depth}%`;
+        
+        if (temporaryEffects && sampleNumber === currentSampleForPopup) {
+            if (!temporaryEffects.lfo) temporaryEffects.lfo = {};
+            temporaryEffects.lfo.target = target;
+            temporaryEffects.lfo.waveform = waveform;
+            temporaryEffects.lfo.rate = rate;
+            temporaryEffects.lfo.depth = depth;
+        }
+        
+        // Update the sample's effects directly
+        if (!sample.effects) sample.effects = {};
+        if (!sample.effects.lfo) sample.effects.lfo = {};
+        sample.effects.lfo.target = target;
+        sample.effects.lfo.waveform = waveform;
+        sample.effects.lfo.rate = rate;
+        sample.effects.lfo.depth = depth;
+        
+        // Update the LFO if it's already connected
+        if (sample.lfoNode) {
+            // Update LFO parameters directly without recreating the node
+            sample.lfoNode.type = waveform;
+            sample.lfoNode.frequency.setValueAtTime(rate, audioContext.currentTime);
+            sample.lfoGainNode.gain.setValueAtTime(depth / 100, audioContext.currentTime);
+            
+            // Clear any existing update timeout
+            if (sample.lfoUpdateTimeout) {
+                clearTimeout(sample.lfoUpdateTimeout);
+                sample.lfoUpdateTimeout = null;
+            }
+            
+            // Disconnect all previous connections
+            try {
+                sample.lfoGainNode.disconnect();
+            } catch (e) {}
+            
+            // Disconnect filter offset node if it exists
+            if (sample.lfoFilterOffsetNode) {
+                try {
+                    sample.lfoFilterOffsetNode.disconnect();
+                    sample.lfoFilterOffsetNode.stop();
+                    sample.lfoFilterOffsetNode = null;
+                } catch (e) {}
+            }
+            
+            // FIX: Handle LFO filter bypass based on target
+            if (sample.lfoFilterBypass && sample.lfoFilter) {
+                if (target === "filter") {
+                    // Use the LFO filter path
+                    sample.lfoFilterBypass.gain.value = 0.0;
+                    sample.lfoFilter.connect(sample.eqVeryHighNode);
+                } else {
+                    // Use the bypass path
+                    sample.lfoFilterBypass.gain.value = 1.0;
+                    try {
+                        sample.lfoFilter.disconnect();
+                    } catch (e) {}
+                }
+            }
+            
+            // Reconnect to the appropriate target
+            initializeLFOConnection(sampleNumber);
+        }
+        
+        // Update LFO visualizer
+        drawLFOWaveform();
+    }
+    function initLFOVisualizer() {
+        const lfoCanvas = document.getElementById("lfo-wave");
+        if (!lfoCanvas) return;
+        
+        const ctx = lfoCanvas.getContext("2d");
+        const container = lfoCanvas.parentElement;
+        lfoCanvas.width = container.clientWidth;
+        lfoCanvas.height = container.clientHeight;
+        
+        drawLFOWaveform();
+    }
+
+    function drawLFOWaveform() {
+        const lfoCanvas = document.getElementById("lfo-wave");
+        if (!lfoCanvas) return;
+        
+        const ctx = lfoCanvas.getContext("2d");
+        const width = lfoCanvas.width;
+        const height = lfoCanvas.height;
+        
+        // Clear canvas
+        ctx.fillStyle = "#111";
+        ctx.fillRect(0, 0, width, height);
+        
+        // Get current LFO settings
+        const waveform = document.getElementById("lfo-waveform").value;
+        const rate = parseFloat(document.getElementById("lfo-rate").value);
+        const depth = parseInt(document.getElementById("lfo-depth").value);
+        
+        // Draw grid
+        ctx.strokeStyle = "#333";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(0, height / 2);
+        ctx.lineTo(width, height / 2);
+        ctx.stroke();
+        
+        // Draw waveform
+        ctx.strokeStyle = "#4CAF50";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        
+        const samples = width;
+        const period = samples / (rate * 10); // Scale for visualization
+        const amplitude = (height / 2) * (depth / 100);
+        
+        for (let x = 0; x < samples; x++) {
+            let y;
+            const phase = (x % period) / period * Math.PI * 2;
+            
+            switch (waveform) {
+                case "sine":
+                    y = height / 2 - Math.sin(phase) * amplitude;
+                    break;
+                case "square":
+                    y = height / 2 - (Math.sin(phase) > 0 ? 1 : -1) * amplitude;
+                    break;
+                case "triangle":
+                    const t = (phase / Math.PI) % 2;
+                    y = height / 2 - (t < 1 ? 2 * t - 1 : 3 - 2 * t) * amplitude;
+                    break;
+                case "sawtooth":
+                    y = height / 2 - (2 * ((phase / Math.PI) % 1) - 1) * amplitude;
+                    break;
+                default:
+                    y = height / 2;
+            }
+            
+            if (x === 0) {
+                ctx.moveTo(x, y);
+            } else {
+                ctx.lineTo(x, y);
+            }
+        }
+        
+        ctx.stroke();
+    }
+
+    function handleMicrophoneRecording(sampleNumber) {
+        const microphoneRecordBtn = document.getElementById("microphone-record-btn");
+        const microphoneSaveBtn = document.getElementById("microphone-save-btn");
+        const microphoneDownloadBtn = document.getElementById("microphone-download-btn");
+        const microphoneDeleteBtn = document.getElementById("microphone-delete-btn");
+        const recordStatus = document.getElementById("record-status");
+        if (!isMicrophoneRecording) {
+            navigator.mediaDevices.getUserMedia({
+                audio: true
+            }).then(stream => {
+                microphoneMediaStream = stream;
+                microphoneMediaRecorder = new MediaRecorder(stream);
+                microphoneRecordedChunks = [];
+                microphoneMediaRecorder.ondataavailable = function (event) {
+                    if (event.data.size > 0) {
+                        microphoneRecordedChunks.push(event.data);
+                    }
+                };
+                microphoneMediaRecorder.onstop = function () {
+                    const blob = new Blob(microphoneRecordedChunks, {
+                        type: "audio/wav"
+                    });
+                    recordedBlobs[sampleNumber] = blob;
+                    microphoneSaveBtn.style.display = "inline-block";
+                    microphoneDownloadBtn.style.display = "inline-block";
+                    microphoneDeleteBtn.style.display = "inline-block";
+                    recordStatusPerSample[sampleNumber] = "Recording complete!";
+                    recordStatus.textContent = recordStatusPerSample[sampleNumber];
+                    recordStatus.style.color = "#7a7a7aff";
+                };
+                microphoneMediaRecorder.start();
+                isMicrophoneRecording = true;
+                microphoneRecordBtn.textContent = "Stop Recording";
+                microphoneRecordBtn.classList.add("recording");
+                recordStatusPerSample[sampleNumber] = "Recording...";
+                recordStatus.textContent = recordStatusPerSample[sampleNumber];
+                recordStatus.style.color = "#FF9800";
+            })["catch"](error => {
+                console.error("Error accessing microphone:", error);
+                recordStatusPerSample[sampleNumber] = "Error: Could not access microphone";
+                recordStatus.textContent = recordStatusPerSample[sampleNumber];
+                recordStatus.style.color = "#F44336";
+            });
+        } else {
+            if (microphoneMediaRecorder && microphoneMediaRecorder.state !== "inactive") {
+                microphoneMediaRecorder.stop();
+            }
+            if (microphoneMediaStream) {
+                microphoneMediaStream.getTracks().forEach(track => track.stop());
+                microphoneMediaStream = null;
+            }
+            isMicrophoneRecording = false;
+            microphoneRecordBtn.textContent = "Record New";
+            microphoneRecordBtn.classList.remove("recording");
+        }
+    }
+
+    function saveMicrophoneRecording(sampleNumber) {
+        const blob = recordedBlobs[sampleNumber];
+        if (!blob) return;
+        const recordStatus = document.getElementById("record-status");
+        const microphoneSaveBtn = document.getElementById("microphone-save-btn");
+        const fileReader = new FileReader;
+        fileReader.onload = function () {
+            audioContext.decodeAudioData(fileReader.result).then(buffer => {
+                currentPlaying[sampleNumber].buffer = buffer;
+                currentPlaying[sampleNumber].loopDuration = buffer.duration;
+                currentPlaying[sampleNumber].bufferSampleNumber = sampleNumber;
+                currentPlaying[sampleNumber].isCustomSample = true;
+                const button = currentPlaying[sampleNumber].button;
+                if (button) {
+                    addCustomIndicator(button);
+                    button.classList.remove("no-sample");
+                }
+                if (currentPlaying[sampleNumber].isScheduled && currentPlaying[sampleNumber].isActive) {
+                    stopSample(sampleNumber);
+                    currentPlaying[sampleNumber].scheduledForNextBar = true;
+                    scheduleSampleForNextBar(sampleNumber);
+                }
+                recordStatusPerSample[sampleNumber] = "Recording saved successfully!";
+                recordStatus.textContent = recordStatusPerSample[sampleNumber];
+                recordStatus.style.color = "#4CAF50";
+            })["catch"](error => {
+                console.error("Error decoding audio data:", error);
+                recordStatusPerSample[sampleNumber] = "Error: Invalid audio data";
+                recordStatus.textContent = recordStatusPerSample[sampleNumber];
+                recordStatus.style.color = "#F44336";
+            });
+        };
+        fileReader.readAsArrayBuffer(blob);
+    }
+
+    function addCustomIndicator(button) {
+        let customIndicator = button.querySelector(".custom-indicator");
+        if (!customIndicator) {
+            customIndicator = document.createElement("div");
+            customIndicator.className = "custom-indicator";
+            button.appendChild(customIndicator);
+        }
+        customIndicator.style.display = "block";
+    }
+
+    function downloadMicrophoneRecording(sampleNumber) {
+        const blob = recordedBlobs[sampleNumber];
+        if (!blob) return;
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `psychological-studio-recording-sample-${sampleNumber}-${(new Date).toISOString().slice(0,19).replace(/:/g,"-")}.wav`;
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+
+    function deleteMicrophoneRecording(sampleNumber) {
+        delete recordedBlobs[sampleNumber];
+        if (currentPlaying[sampleNumber] && currentPlaying[sampleNumber].isCustomSample) {
+            currentPlaying[sampleNumber].isCustomSample = false;
+            currentPlaying[sampleNumber].buffer = null;
+            currentPlaying[sampleNumber].bufferSampleNumber = null;
+            const button = currentPlaying[sampleNumber].button;
+            if (button) {
+                const customIndicator = button.querySelector(".custom-indicator");
+                if (customIndicator) {
+                    customIndicator.style.display = "none";
+                }
+                if (button.classList.contains("active")) {
+                    button.classList.add("no-sample");
+                }
+            }
+            if (currentPlaying[sampleNumber].isScheduled) {
+                stopSample(sampleNumber);
+            }
+        }
+        const microphoneRecordBtn = document.getElementById("microphone-record-btn");
+        const microphoneSaveBtn = document.getElementById("microphone-save-btn");
+        const microphoneDownloadBtn = document.getElementById("microphone-download-btn");
+        const microphoneDeleteBtn = document.getElementById("microphone-delete-btn");
+        const recordStatus = document.getElementById("record-status");
+        microphoneSaveBtn.style.display = "none";
+        microphoneDownloadBtn.style.display = "none";
+        microphoneDeleteBtn.style.display = "none";
+        microphoneRecordBtn.textContent = "Start Recording";
+        recordStatusPerSample[sampleNumber] = "";
+        recordStatus.textContent = "";
+    }
+
+    function hideEffectsPopup() {
+        if (isPreviewingPianoRoll) {
+            stopPianoRollPreview();
+        }
+        stopWaveformAnimation();
+        if (waveformAnalyzer && currentSampleForPopup) {
+            const sample = currentPlaying[currentSampleForPopup];
+            if (sample.eqVeryHighNode) {
+                sample.eqVeryHighNode.disconnect();
+                sample.eqVeryHighNode.connect(masterOutputNode);
+            } else if (sample.outputNode) {
+                sample.outputNode.disconnect();
+                sample.outputNode.connect(masterOutputNode);
+            } else if (sample.gainNode) {
+                sample.gainNode.disconnect();
+                sample.gainNode.connect(masterOutputNode);
+            }
+            waveformAnalyzer = null;
+        }
+        if (isMicrophoneRecording) {
+            if (microphoneMediaRecorder && microphoneMediaRecorder.state !== "inactive") {
+                microphoneMediaRecorder.stop();
+            }
+            if (microphoneMediaStream) {
+                microphoneMediaStream.getTracks().forEach(track => track.stop());
+                microphoneMediaStream = null;
+            }
+            isMicrophoneRecording = false;
+        }
+        effectsPopup.style.display = "none";
+        currentSampleForPopup = null;
+        originalEffects = null;
+        temporaryEffects = null;
+    }
+
+    function resetEffectsSettings() {
+        if (!currentSampleForPopup) return;
+        temporaryEffects = {
+            delay: {
+                time: 0,
+                feedback: 0
+            },
+            reverb: {
+                decay: 0,
+                mix: 0,
+                predelay: 0,
+                diffusion: 50,
+                lowcut: 20,
+                highcut: 2e4,
+                damping: 50
+            },
+            eq: [{
+                frequency: 20,
+                gain: 0,
+                q: 1,
+                type: "lowshelf",
+                fixed: true
+            }, {
+                frequency: 2e4,
+                gain: 0,
+                q: 1,
+                type: "highshelf",
+                fixed: true
+            }],
+            volume: 100,
+            speed: 1,
+            individualTempo: 1,
+            lfo: {
+                target: "pitch",
+                waveform: "sine",
+                rate: 1.0,
+                depth: 0
+            },
+            pianoRoll: {
+                notes: [],
+                soundSource: "piano",
+                gridWidth: currentSampleForPopup > 60 ? 32 : 16,
+                gridHeight: 84,
+                scrollX: 0,
+                scrollY: 0,
+                sampleRange: {
+                    start: 0,
+                    end: 100
+                },
+                filters: {
+                    lowShelf: 0,
+                    highShelf: 0,
+                    lowMid: 0,
+                    mid: 0,
+                    highMid: 0,
+                    delay: {
+                        time: 0,
+                        feedback: 0
+                    }
+                },
+                isEnabled: false
+            }
+        };
+        document.getElementById("sample-volume").value = temporaryEffects.volume;
+        document.getElementById("sample-volume-value").textContent = `${temporaryEffects.volume}%`;
+        document.getElementById("delay-time").value = temporaryEffects.delay.time;
+        document.getElementById("delay-time-value").textContent = temporaryEffects.delay.time;
+        document.getElementById("delay-feedback").value = temporaryEffects.delay.feedback;
+        document.getElementById("delay-feedback-value").textContent = temporaryEffects.delay.feedback;
+        document.getElementById("reverb-decay").value = temporaryEffects.reverb.decay;
+        document.getElementById("reverb-decay-value").textContent = temporaryEffects.reverb.decay;
+        document.getElementById("reverb-predelay").value = temporaryEffects.reverb.predelay;
+        document.getElementById("reverb-predelay-value").textContent = temporaryEffects.reverb.predelay;
+        document.getElementById("reverb-diffusion").value = temporaryEffects.reverb.diffusion;
+        document.getElementById("reverb-diffusion-value").textContent = temporaryEffects.reverb.diffusion;
+        document.getElementById("reverb-lowcut").value = temporaryEffects.reverb.lowcut;
+        document.getElementById("reverb-lowcut-value").textContent = temporaryEffects.reverb.lowcut;
+        document.getElementById("reverb-highcut").value = temporaryEffects.reverb.highcut;
+        document.getElementById("reverb-highcut-value").textContent = temporaryEffects.reverb.highcut;
+        document.getElementById("reverb-damping").value = temporaryEffects.reverb.damping;
+        document.getElementById("reverb-damping-value").textContent = temporaryEffects.reverb.damping;
+        document.getElementById("reverb-mix").value = temporaryEffects.reverb.mix;
+        document.getElementById("reverb-mix-value").textContent = temporaryEffects.reverb.mix;
+        document.getElementById("speed-select").value = temporaryEffects.speed;
+        const individualTempoSection = document.querySelector(".individual-tempo-section");
+        if (individualTempoSection && individualTempoSection.style.display !== "none") {
+            document.getElementById("individual-tempo").value = temporaryEffects.individualTempo;
+            document.getElementById("individual-tempo-value").textContent = temporaryEffects.individualTempo;
+        }
+        
+        // Reset LFO values
+        document.getElementById("lfo-target").value = temporaryEffects.lfo.target;
+        document.getElementById("lfo-waveform").value = temporaryEffects.lfo.waveform;
+        document.getElementById("lfo-rate").value = temporaryEffects.lfo.rate;
+        document.getElementById("lfo-rate-value").textContent = temporaryEffects.lfo.rate.toFixed(1);
+        document.getElementById("lfo-depth").value = temporaryEffects.lfo.depth;
+        document.getElementById("lfo-depth-value").textContent = `${temporaryEffects.lfo.depth}%`;
+        
+        const pianoRollToggle = document.getElementById("piano-roll-toggle");
+        const pianoRollContent = document.querySelector(".piano-roll-content");
+        if (pianoRollToggle) {
+            pianoRollToggle.checked = false;
+        }
+        if (pianoRollContent) {
+            pianoRollContent.classList.remove("visible");
+        }
+        document.getElementById("piano-roll-lowshelf").value = temporaryEffects.pianoRoll.filters.lowShelf;
+        document.getElementById("piano-roll-lowshelf-value").textContent = `${temporaryEffects.pianoRoll.filters.lowShelf}dB`;
+        document.getElementById("piano-roll-lowmid").value = temporaryEffects.pianoRoll.filters.lowMid;
+        document.getElementById("piano-roll-lowmid-value").textContent = `${temporaryEffects.pianoRoll.filters.lowMid}dB`;
+        document.getElementById("piano-roll-mid").value = temporaryEffects.pianoRoll.filters.mid;
+        document.getElementById("piano-roll-mid-value").textContent = `${temporaryEffects.pianoRoll.filters.mid}dB`;
+        document.getElementById("piano-roll-highmid").value = temporaryEffects.pianoRoll.filters.highMid;
+        document.getElementById("piano-roll-highmid-value").textContent = `${temporaryEffects.pianoRoll.filters.highMid}dB`;
+        document.getElementById("piano-roll-highshelf").value = temporaryEffects.pianoRoll.filters.highShelf;
+        document.getElementById("piano-roll-highshelf-value").textContent = `${temporaryEffects.pianoRoll.filters.highShelf}dB`;
+        document.getElementById("piano-roll-delay-time").value = temporaryEffects.pianoRoll.filters.delay.time;
+        document.getElementById("piano-roll-delay-time-value").textContent = `${temporaryEffects.pianoRoll.filters.delay.time}ms`;
+        document.getElementById("piano-roll-delay-feedback").value = temporaryEffects.pianoRoll.filters.delay.feedback;
+        document.getElementById("piano-roll-delay-feedback-value").textContent = `${temporaryEffects.pianoRoll.filters.delay.feedback}%`;
+        if (currentSampleForPopup) {
+            const sample = currentPlaying[currentSampleForPopup];
+            if (sample.eqLowNode) sample.eqLowNode.gain.value = 0;
+            if (sample.eqLowMidNode) sample.eqLowMidNode.gain.value = 0;
+            if (sample.eqMidNode) sample.eqMidNode.gain.value = 0;
+            if (sample.eqHighMidNode) sample.eqHighMidNode.gain.value = 0;
+            if (sample.eqHighMid2Node) sample.eqHighMid2Node.gain.value = 0;
+            if (sample.eqHighNode) sample.eqHighNode.gain.value = 0;
+            if (sample.eqVeryHighNode) sample.eqVeryHighNode.gain.value = 0;
+        }
+        updateSampleVolumeInRealTime();
+        updateDelayInRealTime();
+        updateReverbInRealTime();
+        updateSpeedInRealTime();
+        updateIndividualTempoInRealTime();
+        updateLFOInRealTime(currentSampleForPopup);
+        drawEQVisual();
+        initPianoRoll();
+    }
+    async function applyEffectsSettings() {
+        if (!currentSampleForPopup) return;
+        const loadingIndicator = document.getElementById("piano-roll-loading");
+        if (loadingIndicator) {
+            loadingIndicator.style.display = "block";
+        }
+        
+        // Save the EQ visualizer state
+        const eqVisualizerToggle = document.getElementById("eq-visualizer-toggle");
+        if (eqVisualizerToggle) {
+            currentPlaying[currentSampleForPopup].eqVisualizerEnabled = eqVisualizerToggle.checked;
+        }
+        
+        try {
+            applyPianoRollSettings();
+            if (pianoRollData[currentSampleForPopup] && pianoRollData[currentSampleForPopup].notes && pianoRollData[currentSampleForPopup].notes.length > 0) {
+                await savePianoRollAsSampleForCurrentButton();
+            }
+            currentPlaying[currentSampleForPopup].effects = JSON.parse(JSON.stringify(temporaryEffects));
+            hideEffectsPopup();
+        } catch (error) {
+            console.error("Error applying effects settings:", error);
+            if (loadingIndicator) {
+                loadingIndicator.style.display = "none";
+            }
+            const uploadStatus = document.getElementById("upload-status");
+            if (uploadStatus) {
+                uploadStatus.textContent = "Error saving piano roll. Please try again.";
+                uploadStatus.style.color = "#F44336";
+            }
+        }
+    }
+
+    function handleSampleUpload(event) {
+        if (!currentSampleForPopup) return;
+        const file = event.target.files[0];
+        if (!file) return;
+        if (!file.type.startsWith("audio/")) {
+            uploadStatusPerSample[currentSampleForPopup] = "Error: Please select an audio file";
+            const uploadStatus = document.getElementById("upload-status");
+            uploadStatus.textContent = uploadStatusPerSample[currentSampleForPopup];
+            uploadStatus.style.color = "#F44336";
+            return;
+        }
+        const uploadStatus = document.getElementById("upload-status");
+        uploadStatusPerSample[currentSampleForPopup] = "Uploading...";
+        uploadStatus.textContent = uploadStatusPerSample[currentSampleForPopup];
+        uploadStatus.style.color = "";
+        const reader = new FileReader;
+        reader.onload = function (e) {
+            audioContext.decodeAudioData(e.target.result).then(buffer => {
+                currentPlaying[currentSampleForPopup].buffer = buffer;
+                currentPlaying[currentSampleForPopup].loopDuration = buffer.duration;
+                currentPlaying[currentSampleForPopup].bufferSampleNumber = currentSampleForPopup;
+                currentPlaying[currentSampleForPopup].isCustomSample = true;
+                uploadedFileNames[currentSampleForPopup] = file.name;
+                const button = currentPlaying[currentSampleForPopup].button;
+                if (button) {
+                    addCustomIndicator(button);
+                    button.classList.remove("no-sample");
+                }
+                if (currentPlaying[currentSampleForPopup].isScheduled && currentPlaying[currentSampleForPopup].isActive) {
+                    stopSample(currentSampleForPopup);
+                    currentPlaying[currentSampleForPopup].scheduledForNextBar = true;
+                    scheduleSampleForNextBar(currentSampleForPopup);
+                }
+                uploadStatusPerSample[currentSampleForPopup] = `Upload successful: ${file.name}`;
+                uploadStatus.textContent = uploadStatusPerSample[currentSampleForPopup];
+                uploadStatus.style.color = "#4CAF50";
+            })["catch"](error => {
+                console.error("Error decoding audio data:", error);
+                uploadStatusPerSample[currentSampleForPopup] = "Error: Invalid audio file";
+                uploadStatus.textContent = uploadStatusPerSample[currentSampleForPopup];
+                uploadStatus.style.color = "#F44336";
+            });
+        };
+        reader.onerror = function () {
+            uploadStatusPerSample[currentSampleForPopup] = "Error reading file";
+            uploadStatus.textContent = uploadStatusPerSample[currentSampleForPopup];
+            uploadStatus.style.color = "#F44336";
+        };
+        reader.readAsArrayBuffer(file);
+    }
+
+    function updateSampleEffects(sampleNumber) {
+        if (!currentPlaying[sampleNumber].isScheduled || !currentPlaying[sampleNumber].source) return;
+        const effects = currentPlaying[sampleNumber].effects;
+        const sample = currentPlaying[sampleNumber];
+        if (!sample.outputNode) {
+            initializeEffectsForSample(sampleNumber);
+            return;
+        }
+        if (sample.gainNode && effects.volume !== undefined) {
+            // Store the individual volume as a decimal (0-2)
+            const individualVolume = effects.volume / 100;
+            sample.individualVolume = individualVolume;
+            
+            // Update the actual gain by combining with group volume
+            updateActualGain(sampleNumber);
+        }
+        if (sample.delayNode) {
+            sample.delayNode.delayTime.value = effects.delay.time / 1e3;
+            if (sample.delayFeedbackNode) {
+                sample.delayFeedbackNode.gain.value = effects.delay.feedback / 100;
+            }
+        }
+        if (sample.reverbMixNode) {
+            sample.reverbMixNode.gain.value = effects.reverb.mix / 100;
+        }
+        if (effects.reverb.decay > 0) {
+            const convolver = audioContext.createConvolver();
+            const length = audioContext.sampleRate * effects.reverb.decay;
+            const impulse = audioContext.createBuffer(2, length, audioContext.sampleRate);
+            const predelaySamples = audioContext.sampleRate * (effects.reverb.predelay / 1e3);
+            for (let channel = 0; channel < 2; channel++) {
+                const channelData = impulse.getChannelData(channel);
+                for (let i = 0; i < length; i++) {
+                    if (i < predelaySamples) {
+                        channelData[i] = 0;
+                    } else {
+                        const decayFactor = Math.pow(1 - (i - predelaySamples) / (length - predelaySamples), 2);
+                        const diffusionFactor = effects.reverb.diffusion / 100;
+                        channelData[i] = (Math.random() * 2 - 1) * decayFactor * diffusionFactor;
+                        const dampingFactor = 1 - effects.reverb.damping / 100 * (i / length);
+                        channelData[i] *= dampingFactor;
+                    }
+                }
+            }
+            convolver.buffer = impulse;
+            if (sample.reverbNode) {
+                sample.reverbNode.disconnect();
+            }
+            sample.reverbNode = convolver;
+            if (sample.wetPathNode && sample.reverbMixNode) {
+                sample.wetPathNode.connect(convolver);
+                convolver.connect(sample.reverbMixNode);
+                sample.reverbMixNode.connect(sample.outputNode);
+            }
+        } else {
+            if (sample.reverbNode) {
+                sample.reverbNode.disconnect();
+                sample.reverbNode = null;
+            }
+        }
+        if (sample.eqLowNode) {
+            sample.eqLowNode.gain.value = 0;
+            sample.eqLowMidNode.gain.value = 0;
+            sample.eqMidNode.gain.value = 0;
+            sample.eqHighMidNode.gain.value = 0;
+            sample.eqHighMid2Node.gain.value = 0;
+            sample.eqHighNode.gain.value = 0;
+            sample.eqVeryHighNode.gain.value = 0;
+            if (effects.eq && effects.eq.length > 0) {
+                const sortedEqPoints = [...effects.eq].sort((a, b) => a.frequency - b.frequency);
+                if (sortedEqPoints[0] && sortedEqPoints[0].type === "lowshelf") {
+                    sample.eqLowNode.frequency.value = sortedEqPoints[0].frequency;
+                    sample.eqLowNode.gain.value = sortedEqPoints[0].gain;
+                }
+                if (sortedEqPoints[sortedEqPoints.length - 1] && sortedEqPoints[sortedEqPoints.length - 1].type === "highshelf") {
+                    sample.eqHighNode.frequency.value = sortedEqPoints[sortedEqPoints.length - 1].frequency;
+                    sample.eqHighNode.gain.value = sortedEqPoints[sortedEqPoints.length - 1].gain;
+                }
+                let peakingIndex = 0;
+                for (let i = 0; i < sortedEqPoints.length; i++) {
+                    if (sortedEqPoints[i].type === "peaking") {
+                        let filterNode;
+                        switch (peakingIndex) {
+                        case 0:
+                            filterNode = sample.eqLowMidNode;
+                            break;
+                        case 1:
+                            filterNode = sample.eqMidNode;
+                            break;
+                        case 2:
+                            filterNode = sample.eqHighMidNode;
+                            break;
+                        case 3:
+                            filterNode = sample.eqHighMid2Node;
+                            break;
+                        default:
+                            break;
+                        }
+                        if (filterNode) {
+                            filterNode.frequency.value = sortedEqPoints[i].frequency;
+                            filterNode.gain.value = sortedEqPoints[i].gain;
+                            filterNode.Q.value = sortedEqPoints[i].q || 1;
+                            peakingIndex++;
+                        }
+                    }
+                }
+            }
+        }
+        let wetLevel = 0;
+        if (effects.delay.time > 0) {
+            wetLevel += .5;
+        }
+        if (effects.reverb.mix > 0) {
+            wetLevel += effects.reverb.mix / 100;
+        }
+        wetLevel = Math.min(wetLevel, .8);
+        if (sample.wetPathNode) {
+            sample.wetPathNode.gain.value = wetLevel;
+        }
+        if (sample.dryPathNode) {
+            sample.dryPathNode.gain.value = 1 - wetLevel;
+        }
+        if (sample.source && effects.speed) {
+            let basePlaybackRate;
+            if (sample.isLongSample) {
+                const longLoopBeatDuration = 60 / longLoopTempo;
+                const longLoopBarDuration = longLoopBeatDuration * 4;
+                const desiredLoopDuration = longLoopBarDuration * longLoopLength;
+                basePlaybackRate = sample.loopDuration / desiredLoopDuration;
+            } else {
+                const effectiveTempo = tempo + highTempo;
+                const effectiveBeatDuration = 60 / effectiveTempo;
+                const effectiveBarDuration = effectiveBeatDuration * 4;
+                const desiredLoopDuration = effectiveBarDuration * loopLength;
+                basePlaybackRate = sample.loopDuration / desiredLoopDuration;
+            }
+            let individualTempo = 1;
+            if (sample.isLongSample && effects.individualTempo) {
+                individualTempo = effects.individualTempo;
+            }
+            const newPlaybackRate = basePlaybackRate * individualTempo * effects.speed;
+            const currentPlaybackRate = sample.source.playbackRate.value;
+            const currentTime = audioContext.currentTime;
+            const elapsedTime = currentTime - sample.loopStartTime;
+            const currentPosition = elapsedTime * currentPlaybackRate % sample.loopDuration;
+            sample.source.playbackRate.value = newPlaybackRate;
+            sample.loopStartTime = currentTime - currentPosition / newPlaybackRate;
+            
+            // Update LFO base rate if pitch modulation is active
+            if (sample.lfoTarget === "pitch") {
+                sample.lfoBaseRate = newPlaybackRate;
+            }
+        }
+        
+        // Update LFO - ensure it only affects this specific sample
+        if (effects.lfo && effects.lfo.depth > 0) {
+            // Update LFO parameters directly without recreating the node
+            sample.lfoNode.type = effects.lfo.waveform;
+            sample.lfoNode.frequency.value = effects.lfo.rate;
+            sample.lfoGainNode.gain.value = effects.lfo.depth / 100;
+            
+            // Clear any existing update timeout
+            if (sample.lfoUpdateTimeout) {
+                clearTimeout(sample.lfoUpdateTimeout);
+                sample.lfoUpdateTimeout = null;
+            }
+            
+            // Disconnect all previous connections
+            if (sample.lfoGainNode) {
+                try {
+                    sample.lfoGainNode.disconnect();
+                } catch (e) {}
+            }
+            
+            // Disconnect filter offset node if it exists
+            if (sample.lfoFilterOffsetNode) {
+                try {
+                    sample.lfoFilterOffsetNode.disconnect();
+                    sample.lfoFilterOffsetNode.stop();
+                    sample.lfoFilterOffsetNode = null;
+                } catch (e) {}
+            }
+            
+            // FIX: Handle LFO filter bypass based on target
+            if (sample.lfoFilterBypass && sample.lfoFilter) {
+                if (effects.lfo.target === "filter") {
+                    // Use the LFO filter path
+                    sample.lfoFilterBypass.gain.value = 0.0;
+                    sample.lfoFilter.connect(sample.eqVeryHighNode);
+                } else {
+                    // Use the bypass path
+                    sample.lfoFilterBypass.gain.value = 1.0;
+                    try {
+                        sample.lfoFilter.disconnect();
+                    } catch (e) {}
+                }
+            }
+            
+            // Connect to the appropriate target
+            const target = effects.lfo.target;
+            
+            if (target === "pitch") {
+                // Check if detune is supported
+                const supportsDetune = typeof sample.source.detune !== 'undefined';
+                
+                if (supportsDetune) {
+                    // For pitch modulation, we'll use the detune property
+                    // which changes pitch without affecting playback rate
+                    sample.lfoTarget = "pitch";
+                    
+                    // Create a loop to continuously update the detune
+                    const updateDetune = () => {
+                        if (!sample.source || sample.lfoTarget !== "pitch") return;
+                        
+                        const time = audioContext.currentTime;
+                        const lfoRate = effects.lfo.rate;
+                        const lfoDepth = effects.lfo.depth / 100;
+                        const waveform = effects.lfo.waveform;
+                        
+                        const lfoDuration = 1 / lfoRate;
+                        const phase = (time % lfoDuration) / lfoDuration * Math.PI * 2;
+                        
+                        let modulationValue = 0;
+                        switch (waveform) {
+                            case "sine":
+                                modulationValue = Math.sin(phase);
+                                break;
+                            case "square":
+                                modulationValue = Math.sin(phase) > 0 ? 1 : -1;
+                                break;
+                            case "triangle":
+                                const t = (phase / Math.PI) % 2;
+                                modulationValue = t < 1 ? 2 * t - 1 : 3 - 2 * t;
+                                break;
+                            case "sawtooth":
+                                modulationValue = 2 * ((phase / Math.PI) % 1) - 1;
+                                break;
+                        }
+                        
+                        // Calculate the detune value in cents
+                        // Maximum detune is 1200 cents (one octave) in either direction
+                        const maxDetune = 1200;
+                        const detuneValue = maxDetune * lfoDepth * modulationValue;
+                        
+                        // Apply the detune to the source
+                        sample.source.detune.setValueAtTime(detuneValue, time);
+                        
+                        // Schedule the next update
+                        sample.lfoUpdateTimeout = setTimeout(updateDetune, 50); // Update every 50ms for smooth modulation
+                    };
+                    
+                    // Start the update loop
+                    updateDetune();
+                } else {
+                    // Fall back to the current implementation using playbackRate
+                    // For pitch modulation, we'll use a more direct approach
+                    // by updating the playback rate in a scheduled manner
+                    sample.lfoTarget = "pitch";
+                    
+                    // Store the current base playback rate
+                    if (sample.source) {
+                        sample.lfoBaseRate = sample.source.playbackRate.value;
+                    }
+                    
+                    // Create a loop to continuously update the playback rate
+                    const updatePlaybackRate = () => {
+                        if (!sample.source || sample.lfoTarget !== "pitch") return;
+                        
+                        const time = audioContext.currentTime;
+                        const lfoRate = effects.lfo.rate;
+                        const lfoDepth = effects.lfo.depth / 100;
+                        const waveform = effects.lfo.waveform;
+                        
+                        const lfoDuration = 1 / lfoRate;
+                        const phase = (time % lfoDuration) / lfoDuration * Math.PI * 2;
+                        
+                        let modulationValue = 0;
+                        switch (waveform) {
+                            case "sine":
+                                modulationValue = Math.sin(phase);
+                                break;
+                            case "square":
+                                modulationValue = Math.sin(phase) > 0 ? 1 : -1;
+                                break;
+                            case "triangle":
+                                const t = (phase / Math.PI) % 2;
+                                modulationValue = t < 1 ? 2 * t - 1 : 3 - 2 * t;
+                                break;
+                            case "sawtooth":
+                                modulationValue = 2 * ((phase / Math.PI) % 1) - 1;
+                                break;
+                        }
+                        
+                        // Use the stored base rate which should be updated when tempo changes
+                        const baseRate = sample.lfoBaseRate || 1.0;
+                        
+                        // Limit the modulation depth to prevent extreme values
+                        // Maximum modulation is 50% of the base rate in either direction
+                        const maxModulation = baseRate * 0.5;
+                        const modulationAmount = maxModulation * lfoDepth * modulationValue;
+                        
+                        // Ensure the playback rate never goes below 0.1 to prevent audio stopping
+                        const newPlaybackRate = Math.max(0.1, baseRate + modulationAmount);
+                        
+                        sample.source.playbackRate.setValueAtTime(newPlaybackRate, time);
+                        
+                        // Schedule the next update
+                        sample.lfoUpdateTimeout = setTimeout(updatePlaybackRate, 50); // Update every 50ms for smooth modulation
+                    };
+                    
+                    // Start the update loop
+                    updatePlaybackRate();
+                }
+            } else if (target === "filter") {
+                // Connect to the dedicated LFO filter cutoff frequency
+                const baseFrequency = sample.lfoFilter ? sample.lfoFilter.frequency.value : 2000;
+                const lfoDepth = effects.lfo.depth / 100;
+                
+                // Calculate the modulation range in octaves
+                // Maximum modulation is 2 octaves in either direction
+                const maxOctaves = 2;
+                const modulationOctaves = maxOctaves * lfoDepth;
+                
+                // Calculate the frequency range
+                const minFrequency = baseFrequency / Math.pow(2, modulationOctaves);
+                const maxFrequency = baseFrequency * Math.pow(2, modulationOctaves);
+                
+                // Create a scale factor to map the LFO output to the frequency range
+                const scaleFactor = (maxFrequency - minFrequency) / 2;
+                const offset = (maxFrequency + minFrequency) / 2;
+                
+                // Connect the LFO to the filter frequency
+                sample.lfoGainNode.gain.value = scaleFactor;
+                sample.lfoGainNode.connect(sample.lfoFilter.frequency);
+                
+                // Set the base frequency
+                sample.lfoFilter.frequency.value = baseFrequency;
+                
+                // Create a constant source node to add the offset
+                const offsetNode = audioContext.createConstantSource();
+                offsetNode.offset.value = offset;
+                offsetNode.connect(sample.lfoFilter.frequency);
+                offsetNode.start();
+                
+                // Store the offset node for cleanup
+                sample.lfoFilterOffsetNode = offsetNode;
+                
+                sample.lfoTarget = "filter";
+            } else if (target === "volume") {
+                // Connect to the individual volume gain node
+                if (sample.individualVolumeGain) {
+                    const baseGain = sample.individualVolumeGain.gain.value;
+                    const lfoDepth = effects.lfo.depth / 100;
+                    
+                    // Calculate the modulation range
+                    // Maximum modulation is 50% of the base gain in either direction
+                    const maxModulation = baseGain * 0.5;
+                    const modulationAmount = maxModulation * lfoDepth;
+                    
+                    // Connect the LFO to the individual volume gain
+                    sample.lfoGainNode.gain.value = modulationAmount;
+                    sample.lfoGainNode.connect(sample.individualVolumeGain.gain);
+                    sample.lfoTarget = "volume";
+                }
+            }
+        }
+        
+        if (effects.pianoRoll && effects.pianoRoll.notes.length > 0) {
+            pianoRollData[sampleNumber] = JSON.parse(JSON.stringify(effects.pianoRoll));
+        }
+        if (currentSampleForPopup === sampleNumber && waveformAnalyzer) {
+            const sample = currentPlaying[sampleNumber];
+            if (sample.eqVeryHighNode) {
+                sample.eqVeryHighNode.disconnect();
+                sample.eqVeryHighNode.connect(waveformAnalyzer);
+                waveformAnalyzer.connect(masterOutputNode);
+            } else if (sample.outputNode) {
+                sample.outputNode.disconnect();
+                sample.outputNode.connect(waveformAnalyzer);
+                waveformAnalyzer.connect(masterOutputNode);
+            } else if (sample.gainNode) {
+                sample.gainNode.disconnect();
+                sample.gainNode.connect(waveformAnalyzer);
+                waveformAnalyzer.connect(masterOutputNode);
+            }
+        }
+    }
+
+    function setupPopupEventListeners(popup) {
+        const closeBtn = popup.querySelector(".popup-close-btn");
+        const acceptBtn = popup.querySelector(".popup-accept-btn");
+        const resetBtn = popup.querySelector(".popup-reset-btn");
+        if (closeBtn) {
+            closeBtn.addEventListener("click", function () {
+                if (currentSampleForPopup) {
+                    currentPlaying[currentSampleForPopup].effects = JSON.parse(JSON.stringify(originalEffects));
+                    if (currentPlaying[currentSampleForPopup].isScheduled && currentPlaying[currentSampleForPopup].isActive) {
+                        updateSampleEffects(currentSampleForPopup);
+                    }
+                }
+                hideEffectsPopup();
+            });
+        }
+        if (acceptBtn) {
+            acceptBtn.addEventListener("click", async function () {
+                await applyEffectsSettings();
+            });
+        }
+        if (resetBtn) {
+            resetBtn.addEventListener("click", resetEffectsSettings);
+        }
+    }
+    setupPopupEventListeners(effectsPopup);
+    document.getElementById("sample-upload").addEventListener("change", handleSampleUpload);
+    document.getElementById("delay-time").addEventListener("input", function () {
+        document.getElementById("delay-time-value").textContent = this.value;
+        updateDelayInRealTime();
+        if (temporaryEffects) {
+            temporaryEffects.delay.time = parseInt(this.value);
+        }
+    });
+    document.getElementById("delay-feedback").addEventListener("input", function () {
+        document.getElementById("delay-feedback-value").textContent = this.value;
+        updateDelayInRealTime();
+        if (temporaryEffects) {
+            temporaryEffects.delay.feedback = parseInt(this.value);
+        }
+    });
+    document.getElementById("reverb-decay").addEventListener("input", function () {
+        document.getElementById("reverb-decay-value").textContent = this.value;
+        updateReverbInRealTime();
+        if (temporaryEffects) {
+            temporaryEffects.reverb.decay = parseFloat(this.value);
+        }
+    });
+    document.getElementById("reverb-predelay").addEventListener("input", function () {
+        document.getElementById("reverb-predelay-value").textContent = this.value;
+        updateReverbInRealTime();
+        if (temporaryEffects) {
+            temporaryEffects.reverb.predelay = parseFloat(this.value);
+        }
+    });
+    document.getElementById("reverb-diffusion").addEventListener("input", function () {
+        document.getElementById("reverb-diffusion-value").textContent = this.value;
+        updateReverbInRealTime();
+        if (temporaryEffects) {
+            temporaryEffects.reverb.diffusion = parseFloat(this.value);
+        }
+    });
+    document.getElementById("reverb-lowcut").addEventListener("input", function () {
+        document.getElementById("reverb-lowcut-value").textContent = this.value;
+        updateReverbInRealTime();
+        if (temporaryEffects) {
+            temporaryEffects.reverb.lowcut = parseFloat(this.value);
+        }
+    });
+    document.getElementById("reverb-highcut").addEventListener("input", function () {
+        document.getElementById("reverb-highcut-value").textContent = this.value;
+        updateReverbInRealTime();
+        if (temporaryEffects) {
+            temporaryEffects.reverb.highcut = parseFloat(this.value);
+        }
+    });
+    document.getElementById("reverb-damping").addEventListener("input", function () {
+        document.getElementById("reverb-damping-value").textContent = this.value;
+        updateReverbInRealTime();
+        if (temporaryEffects) {
+            temporaryEffects.reverb.damping = parseFloat(this.value);
+        }
+    });
+    document.getElementById("reverb-mix").addEventListener("input", function () {
+        document.getElementById("reverb-mix-value").textContent = this.value;
+        updateReverbInRealTime();
+        if (temporaryEffects) {
+            temporaryEffects.reverb.mix = parseInt(this.value);
+        }
+    });
+    const highTempoSlider = document.querySelector(".high-tempo-slider");
+    const highTempoDisplay = document.querySelector(".high-tempo-display");
+    const longLoopTempoSlider = document.querySelector(".long-loop-tempo-slider");
+    const longLoopTempoDisplay = document.querySelector(".long-loop-tempo-display");
+    const volumeControlsContainer = document.querySelector(".volume-controls");
+    
+    // Add Save/Load Set controls
+    const setControls = document.createElement("div");
+    setControls.className = "set-controls";
+    
+    const saveSetBtn = document.createElement("button");
+    saveSetBtn.className = "set-btn";
+    saveSetBtn.textContent = "Save Set";
+    
+    const loadSetBtn = document.createElement("button");
+    loadSetBtn.className = "set-btn load-btn";
+    loadSetBtn.textContent = "Load Set";
+    
+    setControls.appendChild(saveSetBtn);
+    setControls.appendChild(loadSetBtn);
+    volumeControlsContainer.parentNode.insertBefore(setControls, volumeControlsContainer.nextSibling);
+    
+    // Save Set functionality
+    saveSetBtn.addEventListener("click", async function() {
+        await saveCurrentSet();
+    });
+    
+    // Load Set functionality
+    loadSetBtn.addEventListener("click", function() {
+        loadSet();
+    });
+    
+    // Function to save the current set
+    async function saveCurrentSet() {
+        try {
+            showNotification("Saving set... This may take a moment for large files.");
+            
+            // Create a set object to store all the data
+            const set = {
+                tempo: tempo,
+                highTempo: highTempo,
+                longLoopTempo: longLoopTempo,
+                loopLength: loopLength,
+                longLoopLength: longLoopLength,
+                samples: {},
+                pianoRollData: {},
+                groupVolumes: {},
+                timestamp: new Date().toISOString()
+            };
+            
+            // Save group volumes
+            for (let group = 0; group < 10; group++) {
+                const groupSlider = document.getElementById(`volumeSlider${group}`);
+                if (groupSlider) {
+                    set.groupVolumes[group] = parseFloat(groupSlider.value);
+                }
+            }
+            
+            // Save sample data with progress tracking
+            let processedSamples = 0;
+            let totalSamples = 0;
+            
+            // Count total samples first
+            for (let i = 1; i <= 100; i++) {
+                if (currentPlaying[i] && (currentPlaying[i].button || currentPlaying[i].buffer || currentPlaying[i].effects)) {
+                    totalSamples++;
+                }
+            }
+            
+            // Process samples in batches to prevent memory issues
+            for (let i = 1; i <= 100; i++) {
+                if (currentPlaying[i]) {
+                    const sample = currentPlaying[i];
+                    
+                    // Only save samples that have been used
+                    if (sample.button || sample.buffer || sample.effects) {
+                        set.samples[i] = {
+                            isActive: sample.isActive,
+                            isScheduled: sample.isScheduled,
+                            isLongSample: sample.isLongSample,
+                            isCustomSample: sample.isCustomSample,
+                            individualVolume: sample.individualVolume,
+                            effects: sample.effects,
+                            eqVisualizerEnabled: sample.eqVisualizerEnabled
+                        };
+                        
+                        // Save audio buffer as base64 if it exists (skip for very large buffers)
+                        if (sample.buffer && sample.buffer.length < 44100 * 10) { // Skip if longer than 10 seconds
+                            try {
+                                set.samples[i].buffer = audioBufferToBase64(sample.buffer);
+                                set.samples[i].bufferSampleNumber = sample.bufferSampleNumber;
+                                set.samples[i].loopDuration = sample.loopDuration;
+                            } catch (error) {
+                                console.warn(`Skipping large audio buffer for sample ${i}:`, error);
+                            }
+                        }
+                        
+                        // Save recorded blob if it exists (skip very large blobs)
+                        if (recordedBlobs[i] && recordedBlobs[i] instanceof Blob) {
+                            if (recordedBlobs[i].size < 50 * 1024 * 1024) { // Skip if larger than 50MB
+                                try {
+                                    set.samples[i].recordedBlob = await blobToBase64(recordedBlobs[i]);
+                                } catch (error) {
+                                    console.warn(`Skipping large recorded blob for sample ${i}:`, error);
+                                }
+                            } else {
+                                console.warn(`Skipping very large recorded blob for sample ${i} (${(recordedBlobs[i].size / 1024 / 1024).toFixed(1)}MB)`);
+                            }
+                        }
+                        
+                        // Save upload status and file name
+                        if (uploadStatusPerSample[i]) {
+                            set.samples[i].uploadStatus = uploadStatusPerSample[i];
+                        }
+                        if (uploadedFileNames[i]) {
+                            set.samples[i].fileName = uploadedFileNames[i];
+                        }
+                        
+                        processedSamples++;
+                        
+                        // Update progress every 10 samples
+                        if (processedSamples % 10 === 0) {
+                            showNotification(`Processing samples... ${processedSamples}/${totalSamples}`);
+                            // Allow UI to update
+                            await new Promise(resolve => setTimeout(resolve, 10));
+                        }
+                    }
+                }
+            }
+            
+            // Save piano roll data
+            for (let i in pianoRollData) {
+                if (pianoRollData.hasOwnProperty(i)) {
+                    set.pianoRollData[i] = JSON.parse(JSON.stringify(pianoRollData[i]));
+                }
+            }
+            
+            showNotification("Creating save file...");
+            
+            // Create downloadable file (don't save to localStorage for large files)
+            const setJSON = JSON.stringify(set);
+            const blob = new Blob([setJSON], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `psychological-studio-set-${new Date().toISOString().slice(0,10)}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            // Only save to localStorage if the file is small enough
+            if (setJSON.length < 5 * 1024 * 1024) { // 5MB limit for localStorage
+                localStorage.setItem("psychologicalStudioSet", setJSON);
+                showNotification("Set saved successfully! (Also saved to browser storage)");
+            } else {
+                showNotification("Set saved successfully! (File too large for browser storage - download only)");
+            }
+            
+        } catch (error) {
+            console.error("Error saving set:", error);
+            showNotification("Error saving set. File may be too large. Try reducing sample sizes.");
+        }
+    }
+    
+    // Function to load a set
+    function loadSet() {
+        try {
+            // Always prompt for file selection
+            const input = document.createElement("input");
+            input.type = "file";
+            input.accept = ".json";
+            input.onchange = function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        try {
+                            processLoadedSet(event.target.result);
+                        } catch (error) {
+                            console.error("Error processing loaded set:", error);
+                            showNotification("Error loading set. Invalid file format.");
+                        }
+                    };
+                    reader.readAsText(file);
+                }
+            };
+            input.click();
+        } catch (error) {
+            console.error("Error loading set:", error);
+            showNotification("Error loading set. Please try again.");
+        }
+    }
+    
+    // Function to process the loaded set data
+    function processLoadedSet(setJSON) {
+        const set = JSON.parse(setJSON);
+        
+        // Stop playback if playing
+        if (isPlaying) {
+            playButton.click();
+        }
+        
+        // Set loading flag to prevent automatic scheduling
+        window.isLoadingSet = true;
+        
+        // Reset all samples
+        for (let i = 1; i <= 100; i++) {
+            if (currentPlaying[i].isScheduled) {
+                stopSample(i);
+            }
+            currentPlaying[i].isActive = false;
+            currentPlaying[i].scheduledForNextBar = false;
+            if (currentPlaying[i].button) {
+                currentPlaying[i].button.classList.remove("active", "no-sample");
+                currentPlaying[i].button = null;
+            }
+        }
+        
+        // Load tempo settings
+        tempo = set.tempo || 120;
+        highTempo = set.highTempo || 0;
+        longLoopTempo = set.longLoopTempo || 120;
+        loopLength = set.loopLength || 1;
+        longLoopLength = set.longLoopLength || 1;
+        
+        // Update UI
+        tempoSlider.value = tempo;
+        tempoDisplay.textContent = `${tempo} BPM`;
+        highTempoSlider.value = 240 + highTempo;
+        highTempoDisplay.textContent = `${240 + highTempo} BPM`;
+        longLoopTempoSlider.value = longLoopTempo;
+        longLoopTempoDisplay.textContent = `${longLoopTempo} BPM`;
+        
+        // Update loop buttons
+        document.querySelectorAll(".loop-button").forEach(btn => {
+            btn.classList.remove("active");
+            if (btn.dataset.loop == loopLength) {
+                btn.classList.add("active");
+            }
+        });
+        
+        document.querySelectorAll(".long-loop-button").forEach(btn => {
+            btn.classList.remove("active");
+            if (btn.dataset.longLoop == longLoopLength / 4) {
+                btn.classList.add("active");
+            }
+        });
+        
+        // Load group volumes
+        for (let group = 0; group < 10; group++) {
+            if (set.groupVolumes && set.groupVolumes[group] !== undefined) {
+                const groupSlider = document.getElementById(`volumeSlider${group}`);
+                const groupValue = document.getElementById(`volumeValue${group}`);
+                if (groupSlider && groupValue) {
+                    groupSlider.value = set.groupVolumes[group];
+                    groupValue.textContent = `${set.groupVolumes[group]}%`;
+                }
+            }
+        }
+        
+        // Load samples
+        for (let i in set.samples) {
+            if (set.samples.hasOwnProperty(i)) {
+                const sampleData = set.samples[i];
+                const sampleNumber = parseInt(i);
+                
+                // Find the button
+                const button = document.getElementById(`but${sampleNumber}`);
+                if (button) {
+                    // DON'T activate any buttons during loading - just load the sample data
+                    // User will manually click buttons to activate them
+                    currentPlaying[sampleNumber].button = null;
+                    
+                    // Set visual state to show sample is available
+                    if (sampleData.buffer) {
+                        button.classList.remove("no-sample");
+                        if (sampleData.isCustomSample) {
+                            addCustomIndicator(button);
+                        }
+                    } else {
+                        button.classList.add("no-sample");
+                    }
+                    
+                    // Load buffer if available
+                    if (sampleData.buffer) {
+                        base64ToAudioBuffer(sampleData.buffer).then(buffer => {
+                            currentPlaying[sampleNumber].buffer = buffer;
+                            currentPlaying[sampleNumber].bufferSampleNumber = sampleData.bufferSampleNumber || sampleNumber;
+                            currentPlaying[sampleNumber].loopDuration = sampleData.loopDuration || buffer.duration;
+                            currentPlaying[sampleNumber].isCustomSample = sampleData.isCustomSample || false;
+                        }).catch(error => {
+                            console.error(`Error loading buffer for sample ${sampleNumber}:`, error);
+                        });
+                    }
+                    
+                    // Load recorded blob if available
+                    if (sampleData.recordedBlob) {
+                        base64ToBlob(sampleData.recordedBlob).then(blob => {
+                            recordedBlobs[sampleNumber] = blob;
+                        }).catch(error => {
+                            console.error(`Error loading recorded blob for sample ${sampleNumber}:`, error);
+                        });
+                    }
+                    
+                    // Load effects
+                    if (sampleData.effects) {
+                        currentPlaying[sampleNumber].effects = sampleData.effects;
+                    }
+                    
+                    // Load other properties
+                    currentPlaying[sampleNumber].eqVisualizerEnabled = sampleData.eqVisualizerEnabled || false;
+                    currentPlaying[sampleNumber].individualVolume = sampleData.individualVolume || 1.0;
+                    
+                    // IMPORTANT: Always set scheduled state to false when loading
+                    // This prevents all buttons from being automatically scheduled
+                    currentPlaying[sampleNumber].isScheduled = false;
+                    currentPlaying[sampleNumber].scheduledForNextBar = false;
+                    currentPlaying[sampleNumber].isActive = false;
+                    
+                    // Load upload status
+                    if (sampleData.uploadStatus) {
+                        uploadStatusPerSample[sampleNumber] = sampleData.uploadStatus;
+                    }
+                    
+                    // Load file name
+                    if (sampleData.fileName) {
+                        uploadedFileNames[sampleNumber] = sampleData.fileName;
+                    }
+                }
+            }
+        }
+        
+        // Load piano roll data
+        if (set.pianoRollData) {
+            pianoRollData = JSON.parse(JSON.stringify(set.pianoRollData));
+        }
+        
+        // Clear loading flag
+        window.isLoadingSet = false;
+        
+        showNotification("Set loaded successfully!");
+    }
+    
+    // Helper function to convert audio buffer to base64
+    function audioBufferToBase64(buffer) {
+        const length = buffer.length * buffer.numberOfChannels * 2 + 44;
+        const arrayBuffer = new ArrayBuffer(length);
+        const view = new DataView(arrayBuffer);
+        const channels = [];
+        let offset = 0;
+        let pos = 0;
+        
+        // Write WAV header
+        const setUint16 = (data) => {
+            view.setUint16(pos, data, true);
+            pos += 2;
+        };
+        
+        const setUint32 = (data) => {
+            view.setUint32(pos, data, true);
+            pos += 4;
+        };
+        
+        // RIFF identifier
+        setUint32(0x46464952);
+        // file length
+        setUint32(length - 8);
+        // WAVE identifier
+        setUint32(0x45564157);
+        // fmt chunk identifier
+        setUint32(0x20746d66);
+        // chunk length
+        setUint32(16);
+        // sample format (PCM)
+        setUint16(1);
+        // channel count
+        setUint16(buffer.numberOfChannels);
+        // sample rate
+        setUint32(buffer.sampleRate);
+        // byte rate
+        setUint32(buffer.sampleRate * 2 * buffer.numberOfChannels);
+        // block align
+        setUint16(buffer.numberOfChannels * 2);
+        // bits per sample
+        setUint16(16);
+        // data chunk identifier
+        setUint32(0x61746164);
+        // data chunk length
+        setUint32(length - pos - 4);
+        
+        // Write interleaved data
+        for (let i = 0; i < buffer.numberOfChannels; i++) {
+            channels.push(buffer.getChannelData(i));
+        }
+        
+        while (pos < length) {
+            for (let i = 0; i < buffer.numberOfChannels; i++) {
+                let sample = Math.max(-1, Math.min(1, channels[i][offset]));
+                sample = sample < 0 ? sample * 0x8000 : sample * 0x7FFF;
+                view.setInt16(pos, sample, true);
+                pos += 2;
+            }
+            offset++;
+        }
+        
+        // Convert to base64
+        const bytes = new Uint8Array(arrayBuffer);
+        let binary = '';
+        for (let i = 0; i < bytes.byteLength; i++) {
+            binary += String.fromCharCode(bytes[i]);
+        }
+        return btoa(binary);
+    }
+    
+    // Helper function to convert base64 to audio buffer
+    function base64ToAudioBuffer(base64) {
+        return new Promise((resolve, reject) => {
+            try {
+                const binaryString = atob(base64);
+                const bytes = new Uint8Array(binaryString.length);
+                for (let i = 0; i < binaryString.length; i++) {
+                    bytes[i] = binaryString.charCodeAt(i);
+                }
+                
+                audioContext.decodeAudioData(bytes.buffer).then(buffer => {
+                    resolve(buffer);
+                }).catch(error => {
+                    reject(error);
+                });
+            } catch (error) {
+                reject(error);
+            }
+        });
+    }
+    
+    // Helper function to convert blob to base64
+    function blobToBase64(blob) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            const timeout = setTimeout(() => {
+                reject(new Error('Blob conversion timeout'));
+            }, 10000); // 10 second timeout
+            
+            reader.onload = () => {
+                clearTimeout(timeout);
+                const dataUrl = reader.result;
+                const base64 = dataUrl.split(',')[1];
+                resolve(base64);
+            };
+            reader.onerror = (error) => {
+                clearTimeout(timeout);
+                reject(error);
+            };
+            reader.readAsDataURL(blob);
+        });
+    }
+    
+    // Helper function to convert base64 to blob
+    function base64ToBlob(base64, mimeType = 'audio/wav') {
+        return new Promise((resolve, reject) => {
+            try {
+                const binaryString = atob(base64);
+                const bytes = new Uint8Array(binaryString.length);
+                for (let i = 0; i < binaryString.length; i++) {
+                    bytes[i] = binaryString.charCodeAt(i);
+                }
+                
+                const blob = new Blob([bytes], { type: mimeType });
+                resolve(blob);
+            } catch (error) {
+                reject(error);
+            }
+        });
+    }
+    
+    for (let group = 0; group < 10; group++) {
+        const volumeControl = document.createElement("div");
+        volumeControl.className = `volume-control group-${group}`;
+        const volumeLabel = document.createElement("label");
+        volumeLabel.textContent = `${group}: `;
+        const volumeSlider = document.createElement("input");
+        volumeSlider.type = "range";
+        volumeSlider.min = "0";
+        volumeSlider.max = "100";
+        volumeSlider.value = "80";
+        volumeSlider.step = "1";
+        volumeSlider.className = `volume-slider`;
+        volumeSlider.id = `volumeSlider${group}`;
+        const volumeValue = document.createElement("span");
+        volumeValue.className = "volume-value";
+        volumeValue.textContent = "80%";
+        volumeValue.id = `volumeValue${group}`;
+        volumeControl.appendChild(volumeLabel);
+        volumeControl.appendChild(volumeSlider);
+        volumeControl.appendChild(volumeValue);
+        volumeControlsContainer.appendChild(volumeControl);
+        volumeSlider.addEventListener("input", function () {
+            const volume = this.value;
+            volumeValue.textContent = `${volume}%`;
+            for (let i = 1; i <= 100; i++) {
+                if (currentPlaying[i] && currentPlaying[i].gainNode && Math.floor((i - 1) / 10) === group) {
+                    // Store the group volume as a decimal (0-1)
+                    currentPlaying[i].groupVolume = volume / 100;
+                    
+                    // Update the actual gain by combining with individual volume
+                    updateActualGain(i);
+                }
+            }
+        });
+    }
+    for (let i = 1; i <= 100; i++) {
+        const button = document.createElement("button");
+        button.className = "audio-button";
+        button.textContent = i;
+        button.id = `but${i}`;
+        button.style.position = "relative";
+        const loopIndicator = document.createElement("div");
+        loopIndicator.className = "loop-indicator";
+        button.appendChild(loopIndicator);
+        const customIndicator = document.createElement("div");
+        customIndicator.className = "custom-indicator";
+        customIndicator.style.display = "none";
+        button.appendChild(customIndicator);
+        const group = Math.floor((i - 1) / 10);
+        button.classList.add(`group-${group}`);
+        if (!currentPlaying[i]) {
+            currentPlaying[i] = {
+                button: null,
+                buffer: null,
+                source: null,
+                gainNode: null,
+                loopDuration: null,
+                sampleNumber: null,
+                isScheduled: false,
+                startTime: 0,
+                scheduledForNextBar: false,
+                isLongSample: i > 60,
+                nextLoopTime: 0,
+                scheduledTimeout: null,
+                loopStartTime: 0,
+                originalTempo: tempo,
+                volume: .8,
+                bufferSampleNumber: null,
+                isActive: false,
+                tempoChangeTime: 0,
+                positionAtTempoChange: 0,
+                masterStartBar: 0,
+                masterStartOffset: 0,
+                barGridAligned: false,
+                isCustomSample: false,
+                // Initialize group and individual volume properties
+                groupVolume: 0.8,
+                individualVolume: 1.0,
+                effects: {
+                    delay: {
+                        time: 0,
+                        feedback: 0
+                    },
+                    reverb: {
+                        decay: 0,
+                        mix: 0,
+                        predelay: 0,
+                        diffusion: 50,
+                        lowcut: 20,
+                        highcut: 2e4,
+                        damping: 50
+                    },
+                    eq: [{
+                        frequency: 20,
+                        gain: 0,
+                        q: 1,
+                        type: "lowshelf",
+                        fixed: true
+                    }, {
+                        frequency: 2e4,
+                        gain: 0,
+                        q: 1,
+                        type: "highshelf",
+                        fixed: true
+                    }],
+                    volume: 100,
+                    speed: 1,
+                    individualTempo: 1,
+                    lfo: {
+                        target: "pitch",
+                        waveform: "sine",
+                        rate: 1.0,
+                        depth: 0
+                    },
+                    pianoRoll: {
+                        notes: [],
+                        soundSource: "piano",
+                        gridWidth: i > 60 ? 32 : 16,
+                        gridHeight: 84,
+                        scrollX: 0,
+                        scrollY: 0,
+                        sampleRange: {
+                            start: 0,
+                            end: 100
+                        },
+                        filters: {
+                            lowShelf: 0,
+                            highShelf: 0,
+                            lowMid: 0,
+                            mid: 0,
+                            highMid: 0,
+                            delay: {
+                                time: 0,
+                                feedback: 0
+                            }
+                        },
+                        isEnabled: false
+                    }
+                },
+                delayNode: null,
+                delayFeedbackNode: null,
+                reverbNode: null,
+                reverbMixNode: null,
+                wetPathNode: null,
+                dryPathNode: null,
+                outputNode: null,
+                eqLowNode: null,
+                eqLowMidNode: null,
+                eqMidNode: null,
+                eqHighMidNode: null,
+                eqHighMid2Node: null,
+                eqHighNode: null,
+                eqVeryHighNode: null,
+                lfoNode: null,
+                lfoGainNode: null,
+                lfoTarget: null,
+                lfoBaseRate: 1.0,
+                lfoUpdateTimeout: null,
+                individualVolumeGain: null,
+                lfoFilterOffsetNode: null,
+                lfoFilter: null,
+                lfoFilterBypass: null,
+                eqVisualizerEnabled: false
+            };
+        }
+        button.addEventListener("click", function () {
+            const group = Math.floor((i - 1) / 10);
+            if (currentPlaying[i].button === button) {
+                if (button.classList.contains("no-sample")) {
+                    button.classList.remove("active", "no-sample");
+                    currentPlaying[i].isActive = false;
+                    currentPlaying[i].scheduledForNextBar = false;
+                    currentPlaying[i].button = null;
+                } else if (currentPlaying[i].isScheduled) {
+                    stopSample(i);
+                    button.classList.remove("active", "no-sample");
+                    currentPlaying[i].isActive = false;
+                    button.classList.remove("loading");
+                } else {
+                    button.classList.add("active");
+                    currentPlaying[i].isActive = true;
+                    
+                    // Don't schedule during loading - only when user manually clicks
+                    if (!window.isLoadingSet) {
+                        currentPlaying[i].scheduledForNextBar = true;
+                        addIndicatorsForActiveSample(button, i);
+                        if (currentPlaying[i].buffer && isPlaying) {
+                            button.classList.remove("no-sample");
+                            scheduleSampleForNextBar(i);
+                        } else {
+                            button.classList.add("no-sample");
+                        }
+                    } else {
+                        // During loading, just mark as active but not scheduled
+                        button.classList.add("no-sample");
+                    }
+                }
+            } else {
+                for (let j = 1; j <= 100; j++) {
+                    if (Math.floor((j - 1) / 10) === group && currentPlaying[j].button) {
+                        currentPlaying[j].button.classList.remove("active", "no-sample", "loading", "error");
+                        stopSample(j);
+                        currentPlaying[j].isActive = false;
+                        currentPlaying[j].scheduledForNextBar = false;
+                        currentPlaying[j].button = null;
+                    }
+                }
+                currentPlaying[i].button = button;
+                currentPlaying[i].sampleNumber = i;
+                currentPlaying[i].isLongSample = i > 60;
+                currentPlaying[i].originalTempo = tempo;
+                button.classList.add("active");
+                currentPlaying[i].isActive = true;
+                currentPlaying[i].scheduledForNextBar = true;
+                currentPlaying[i].barGridAligned = false;
+                addIndicatorsForActiveSample(button, i);
+                if (currentPlaying[i].buffer) {
+                    button.classList.remove("no-sample");
+                    if (isPlaying) {
+                        scheduleSampleForNextBar(i);
+                    }
+                } else {
+                    button.classList.add("no-sample");
+                    loadAudio(i, i);
+                }
+            }
+        });
+        button.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+            showEffectsPopup(i, button);
+        });
+        button.addEventListener("touchstart", function (e) {
+            isLongPress = false;
+            longPressTimer = setTimeout(function () {
+                isLongPress = true;
+                showEffectsPopup(i, button);
+            }, 500);
+        });
+        button.addEventListener("touchend", function (e) {
+            if (longPressTimer) {
+                clearTimeout(longPressTimer);
+                longPressTimer = null;
+            }
+            if (isLongPress) {
+                e.preventDefault();
+                isLongPress = false;
+            }
+        });
+        button.addEventListener("touchmove", function (e) {
+            if (longPressTimer) {
+                clearTimeout(longPressTimer);
+                longPressTimer = null;
+            }
+        });
+        buttonGrid.appendChild(button);
+    }
+
+    function addIndicatorsForActiveSample(button, sampleNumber) {
+        if (currentPlaying[sampleNumber] && currentPlaying[sampleNumber].isCustomSample) {
+            addCustomIndicator(button);
+        }
+    }
+
+    function setCustomIndicatorVisibility(button, visible) {
+        let customIndicator = button.querySelector(".custom-indicator");
+        if (customIndicator) {
+            customIndicator.style.display = visible ? "block" : "none";
+        }
+    }
+    const loopButtons = document.querySelectorAll(".loop-button");
+    loopButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const isLongLoopButton = button.classList.contains("long-loop-button");
+            const buttonsToClear = isLongLoopButton ? document.querySelectorAll(".long-loop-button") : document.querySelectorAll(".loop-button:not(.long-loop-button)");
+            buttonsToClear.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+            const newLoopLength = parseInt(this.dataset.loop || this.dataset.longLoop);
+            if (isNaN(newLoopLength) || newLoopLength <= 0) {
+                console.error("Invalid loop length value:", this.dataset.loop || this.dataset.longLoop);
+                return;
+            }
+            if (isLongLoopButton) {
+                const newLongLoopLength = newLoopLength * 4;
+                longLoopLength = newLongLoopLength;
+                if (isPlaying) {
+                    for (let i = 1; i <= 100; i++) {
+                        if (currentPlaying[i].button && currentPlaying[i].buffer && currentPlaying[i].scheduledForNextBar && currentPlaying[i].isActive && currentPlaying[i].isScheduled && currentPlaying[i].isLongSample) {
+                            updateLongSampleLoop(i);
+                        }
+                    }
+                }
+                console.log(`Long sample loop length set to ${longLoopLength} bars (double of ${newLoopLength})`);
+            } else {
+                loopLength = newLoopLength;
+                if (isPlaying) {
+                    for (let i = 1; i <= 100; i++) {
+                        if (currentPlaying[i].button && currentPlaying[i].buffer && currentPlaying[i].scheduledForNextBar && currentPlaying[i].isActive && currentPlaying[i].isScheduled && !currentPlaying[i].isLongSample) {
+                            updateDrumSampleLoop(i);
+                        }
+                    }
+                }
+                console.log(`Loop length set to ${loopLength} bars`);
+            }
+        });
+    });
+    const defaultLoopButton = document.querySelector('.loop-button[data-loop="1"]');
+    if (defaultLoopButton) {
+        defaultLoopButton.classList.add("active");
+    }
+    const defaultLongLoopButton = document.querySelector('.long-loop-button[data-long-loop="1"]');
+    if (defaultLongLoopButton) {
+        defaultLongLoopButton.classList.add("active");
+    }
+
+    function loadAudio(sampleNumber, index) {
+        if (!audioContext) {
+            console.error("Audio context not initialized");
+            return;
+        }
+        if (currentPlaying[index].button) {
+            currentPlaying[index].button.classList.add("loading");
+        }
+        const audio = new Audio;
+        audio.addEventListener("error", function (e) {
+            console.error(`Error loading audio for sample ${sampleNumber}:`, e);
+            if (currentPlaying[index].button) {
+                currentPlaying[index].button.classList.remove("loading");
+                currentPlaying[index].button.classList.add("error");
+                if (currentPlaying[index].button.classList.contains("active")) {
+                    currentPlaying[index].button.classList.add("no-sample");
+                }
+            }
+            loadFallbackAudio(index);
+        });
+        try {
+            audio.src = `./${currentSampleFolder}/${sampleNumber}.wav`;
+        } catch (e) {
+            console.error(`Error setting audio source for sample ${sampleNumber}:`, e);
+            loadFallbackAudio(index);
+            return;
+        }
+        audio.addEventListener("canplaythrough", function () {
+            fetch(audio.src).then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.arrayBuffer();
+            }).then(arrayBuffer => {
+                if (!audioContext) {
+                    throw new Error("Audio context not available");
+                }
+                return audioContext.decodeAudioData(arrayBuffer);
+            }).then(audioBuffer => {
+                currentPlaying[index].buffer = audioBuffer;
+                currentPlaying[index].loopDuration = audioBuffer.duration;
+                currentPlaying[index].bufferSampleNumber = sampleNumber;
+                if (currentPlaying[index].button) {
+                    currentPlaying[index].button.classList.remove("loading", "no-sample");
+                }
+                if (isPlaying && currentPlaying[index].scheduledForNextBar && currentPlaying[index].isActive) {
+                    if (currentPlaying[index].scheduledTimeout) {
+                        clearTimeout(currentPlaying[index].scheduledTimeout);
+                        currentPlaying[index].scheduledTimeout = null;
+                    }
+                    scheduleSampleForNextBar(index);
+                }
+            })["catch"](e => {
+                console.error("Error decoding audio data:", e);
+                if (currentPlaying[index].button) {
+                    currentPlaying[index].button.classList.remove("loading");
+                    currentPlaying[index].button.classList.add("error");
+                    if (currentPlaying[index].button.classList.contains("active")) {
+                        currentPlaying[index].button.classList.add("no-sample");
+                    }
+                }
+                loadFallbackAudio(index);
+            });
+        });
+        audio.load();
+    }
+
+    function loadFallbackAudio(index) {
+        if (!audioContext) return;
+        const sampleRate = audioContext.sampleRate;
+        const duration = .5;
+        const buffer = audioContext.createBuffer(1, sampleRate * duration, sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < data.length; i++) {
+            data[i] = Math.sin(2 * Math.PI * 440 * i / sampleRate) * .3;
+        }
+        currentPlaying[index].buffer = buffer;
+        currentPlaying[index].loopDuration = duration;
+        currentPlaying[index].bufferSampleNumber = index;
+        if (currentPlaying[index].button) {
+            currentPlaying[index].button.classList.remove("loading", "error");
+            currentPlaying[index].button.classList.add("no-sample");
+        }
+        if (isPlaying && currentPlaying[index].scheduledForNextBar && currentPlaying[index].isActive) {
+            if (currentPlaying[index].scheduledTimeout) {
+                clearTimeout(currentPlaying[index].scheduledTimeout);
+                currentPlaying[index].scheduledTimeout = null;
+            }
+            scheduleSampleForNextBar(index);
+        }
+    }
+
+    function updateMasterBarGrid() {
+        if (!audioContext) return;
+        const currentTime = audioContext.currentTime;
+        const currentBarProgress = (currentTime - masterBarGrid.startTime) / masterBarGrid.duration;
+        const effectiveTempo = tempo + highTempo;
+        const newBarDuration = 60 / effectiveTempo * 4;
+        if (!isFinite(newBarDuration) || newBarDuration <= 0) {
+            console.error("Invalid bar duration:", newBarDuration);
+            return;
+        }
+        masterBarGrid.startTime = currentTime - currentBarProgress * newBarDuration;
+        masterBarGrid.duration = newBarDuration;
+        masterBarGrid.nextStartTime = masterBarGrid.startTime + masterBarGrid.duration;
+        console.log(`Master bar grid updated: bar progress ${currentBarProgress}, new duration ${newBarDuration}`);
+    }
+
+    function updateDrumSampleTempo(sampleNumber) {
+        if (!currentPlaying[sampleNumber].source || currentPlaying[sampleNumber].isLongSample) return;
+        const sample = currentPlaying[sampleNumber];
+        const currentTime = audioContext.currentTime;
+        const effectiveTempo = tempo + highTempo;
+        const effectiveBeatDuration = 60 / effectiveTempo;
+        const effectiveBarDuration = effectiveBeatDuration * 4;
+        const desiredLoopDuration = effectiveBarDuration * loopLength;
+        if (!isFinite(desiredLoopDuration) || desiredLoopDuration <= 0 || !isFinite(currentPlaying[sampleNumber].loopDuration) || currentPlaying[sampleNumber].loopDuration <= 0) {
+            console.error("Invalid values for drum sample:", {
+                desiredLoopDuration: desiredLoopDuration,
+                loopDuration: currentPlaying[sampleNumber].loopDuration
+            });
+            return;
+        }
+        const basePlaybackRate = sample.loopDuration / desiredLoopDuration;
+        const effects = sample.effects || {};
+        const speed = effects.speed || 1;
+        const newPlaybackRate = basePlaybackRate * speed;
+        const currentPlaybackRate = sample.source.playbackRate.value;
+        const elapsedTime = currentTime - sample.loopStartTime;
+        const currentPosition = elapsedTime * currentPlaybackRate % sample.loopDuration;
+        sample.source.playbackRate.value = newPlaybackRate;
+        sample.loopStartTime = currentTime - currentPosition / newPlaybackRate;
+        
+        // Update LFO base rate if pitch modulation is active
+        if (sample.lfoTarget === "pitch") {
+            sample.lfoBaseRate = newPlaybackRate;
+        }
+        
+        console.log(`Sample ${sampleNumber} tempo updated: new rate ${newPlaybackRate}, position ${currentPosition}`);
+    }
+
+    function updateLongSampleTempo(sampleNumber) {
+        if (!currentPlaying[sampleNumber].source || !currentPlaying[sampleNumber].isLongSample) return;
+        const sample = currentPlaying[sampleNumber];
+        const currentTime = audioContext.currentTime;
+        const longLoopBeatDuration = 60 / longLoopTempo;
+        const longLoopBarDuration = longLoopBeatDuration * 4;
+        const desiredLoopDuration = longLoopBarDuration * longLoopLength;
+        if (!isFinite(desiredLoopDuration) || desiredLoopDuration <= 0 || !isFinite(currentPlaying[sampleNumber].loopDuration) || currentPlaying[sampleNumber].loopDuration <= 0) {
+            console.error("Invalid values for long sample:", {
+                desiredLoopDuration: desiredLoopDuration,
+                loopDuration: currentPlaying[sampleNumber].loopDuration
+            });
+            return;
+        }
+        const basePlaybackRate = sample.loopDuration / desiredLoopDuration;
+        const effects = sample.effects || {};
+        const individualTempo = effects.individualTempo || 1;
+        const speed = effects.speed || 1;
+        const newPlaybackRate = basePlaybackRate * individualTempo * speed;
+        const currentPlaybackRate = sample.source.playbackRate.value;
+        const elapsedTime = currentTime - sample.loopStartTime;
+        const currentPosition = elapsedTime * currentPlaybackRate % sample.loopDuration;
+        sample.source.playbackRate.value = newPlaybackRate;
+        sample.loopStartTime = currentTime - currentPosition / newPlaybackRate;
+        
+        // Update LFO base rate if pitch modulation is active
+        if (sample.lfoTarget === "pitch") {
+            sample.lfoBaseRate = newPlaybackRate;
+        }
+        
+        console.log(`Sample ${sampleNumber} long tempo updated: new rate ${newPlaybackRate}, position ${currentPosition}`);
+    }
+
+    function scheduleSampleForNextBar(sampleNumber) {
+        if (!currentPlaying[sampleNumber].buffer || !currentPlaying[sampleNumber].scheduledForNextBar) return;
+        const nextBarTime = masterBarGrid.nextStartTime;
+        const currentTime = audioContext.currentTime;
+        const timeUntilNextBar = (nextBarTime - currentTime) * 1e3;
+        if (currentPlaying[sampleNumber].scheduledTimeout) {
+            clearTimeout(currentPlaying[sampleNumber].scheduledTimeout);
+        }
+        currentPlaying[sampleNumber].scheduledTimeout = setTimeout(() => {
+            if (currentPlaying[sampleNumber].scheduledForNextBar && currentPlaying[sampleNumber].isActive) {
+                playSampleAtTime(sampleNumber, audioContext.currentTime);
+                currentPlaying[sampleNumber].barGridAligned = true;
+            }
+            currentPlaying[sampleNumber].scheduledTimeout = null;
+        }, Math.max(0, timeUntilNextBar));
+    }
+
+    function playSampleAtTime(sampleNumber, startTime) {
+        if (!currentPlaying[sampleNumber].buffer || !currentPlaying[sampleNumber].scheduledForNextBar) return;
+        if (currentPlaying[sampleNumber].source) {
+            try {
+                if (currentPlaying[sampleNumber].isScheduled) {
+                    currentPlaying[sampleNumber].source.stop();
+                }
+                currentPlaying[sampleNumber].source.disconnect();
+                currentPlaying[sampleNumber].source = null;
+                currentPlaying[sampleNumber].gainNode = null;
+                if (currentPlaying[sampleNumber].delayNode) {
+                    currentPlaying[sampleNumber].delayNode.disconnect();
+                    currentPlaying[sampleNumber].delayNode = null;
+                }
+                if (currentPlaying[sampleNumber].delayFeedbackNode) {
+                    currentPlaying[sampleNumber].delayFeedbackNode.disconnect();
+                    currentPlaying[sampleNumber].delayFeedbackNode = null;
+                }
+                if (currentPlaying[sampleNumber].reverbNode) {
+                    currentPlaying[sampleNumber].reverbNode.disconnect();
+                    currentPlaying[sampleNumber].reverbNode = null;
+                }
+                if (currentPlaying[sampleNumber].reverbMixNode) {
+                    currentPlaying[sampleNumber].reverbMixNode.disconnect();
+                    currentPlaying[sampleNumber].reverbMixNode = null;
+                }
+                if (currentPlaying[sampleNumber].wetPathNode) {
+                    currentPlaying[sampleNumber].wetPathNode.disconnect();
+                    currentPlaying[sampleNumber].wetPathNode = null;
+                }
+                if (currentPlaying[sampleNumber].dryPathNode) {
+                    currentPlaying[sampleNumber].dryPathNode.disconnect();
+                    currentPlaying[sampleNumber].dryPathNode = null;
+                }
+                if (currentPlaying[sampleNumber].outputNode) {
+                    currentPlaying[sampleNumber].outputNode.disconnect();
+                    currentPlaying[sampleNumber].outputNode = null;
+                }
+                if (currentPlaying[sampleNumber].eqLowNode) {
+                    currentPlaying[sampleNumber].eqLowNode.disconnect();
+                    currentPlaying[sampleNumber].eqLowNode = null;
+                }
+                if (currentPlaying[sampleNumber].eqLowMidNode) {
+                    currentPlaying[sampleNumber].eqLowMidNode.disconnect();
+                    currentPlaying[sampleNumber].eqLowMidNode = null;
+                }
+                if (currentPlaying[sampleNumber].eqMidNode) {
+                    currentPlaying[sampleNumber].eqMidNode.disconnect();
+                    currentPlaying[sampleNumber].eqMidNode = null;
+                }
+                if (currentPlaying[sampleNumber].eqHighMidNode) {
+                    currentPlaying[sampleNumber].eqHighMidNode.disconnect();
+                    currentPlaying[sampleNumber].eqHighMidNode = null;
+                }
+                if (currentPlaying[sampleNumber].eqHighMid2Node) {
+                    currentPlaying[sampleNumber].eqHighMid2Node.disconnect();
+                    currentPlaying[sampleNumber].eqHighMid2Node = null;
+                }
+                if (currentPlaying[sampleNumber].eqHighNode) {
+                    currentPlaying[sampleNumber].eqHighNode.disconnect();
+                    currentPlaying[sampleNumber].eqHighNode = null;
+                }
+                if (currentPlaying[sampleNumber].eqVeryHighNode) {
+                    currentPlaying[sampleNumber].eqVeryHighNode.disconnect();
+                    currentPlaying[sampleNumber].eqVeryHighNode = null;
+                }
+                // Disconnect LFO
+                if (currentPlaying[sampleNumber].lfoNode) {
+                    currentPlaying[sampleNumber].lfoNode.disconnect();
+                    currentPlaying[sampleNumber].lfoNode = null;
+                }
+                if (currentPlaying[sampleNumber].lfoGainNode) {
+                    currentPlaying[sampleNumber].lfoGainNode.disconnect();
+                    currentPlaying[sampleNumber].lfoGainNode = null;
+                }
+                // Clear LFO update timeout
+                if (currentPlaying[sampleNumber].lfoUpdateTimeout) {
+                    clearTimeout(currentPlaying[sampleNumber].lfoUpdateTimeout);
+                    currentPlaying[sampleNumber].lfoUpdateTimeout = null;
+                }
+                // Disconnect filter offset node if it exists
+                if (currentPlaying[sampleNumber].lfoFilterOffsetNode) {
+                    try {
+                        currentPlaying[sampleNumber].lfoFilterOffsetNode.disconnect();
+                        currentPlaying[sampleNumber].lfoFilterOffsetNode.stop();
+                        currentPlaying[sampleNumber].lfoFilterOffsetNode = null;
+                    } catch (e) {}
+                }
+                // Disconnect individual volume gain
+                if (currentPlaying[sampleNumber].individualVolumeGain) {
+                    currentPlaying[sampleNumber].individualVolumeGain.disconnect();
+                    currentPlaying[sampleNumber].individualVolumeGain = null;
+                }
+                // Disconnect LFO filter
+                if (currentPlaying[sampleNumber].lfoFilter) {
+                    currentPlaying[sampleNumber].lfoFilter.disconnect();
+                    currentPlaying[sampleNumber].lfoFilter = null;
+                }
+                // Disconnect LFO filter bypass
+                if (currentPlaying[sampleNumber].lfoFilterBypass) {
+                    currentPlaying[sampleNumber].lfoFilterBypass.disconnect();
+                    currentPlaying[sampleNumber].lfoFilterBypass = null;
+                }
+            } catch (e) {
+                console.warn("Error stopping audio source:", e);
+                currentPlaying[sampleNumber].source = null;
+                currentPlaying[sampleNumber].gainNode = null;
+            }
+        }
+        const source = audioContext.createBufferSource();
+        source.buffer = currentPlaying[sampleNumber].buffer;
+        const gainNode = audioContext.createGain();
+        const effects = currentPlaying[sampleNumber].effects || {};
+        const volumePercent = effects.volume || 100;
+        
+        // Set the individual volume from effects
+        const individualVolume = volumePercent / 100;
+        currentPlaying[sampleNumber].individualVolume = individualVolume;
+        
+        // Get the current group volume for this sample
+        const groupVolume = getGroupVolumeForSample(sampleNumber);
+        currentPlaying[sampleNumber].groupVolume = groupVolume;
+        
+        // Create a separate gain node for individual volume modulation
+        const individualVolumeGain = audioContext.createGain();
+        individualVolumeGain.gain.value = individualVolume;
+        currentPlaying[sampleNumber].individualVolumeGain = individualVolumeGain;
+        
+        // Apply the combined gain (group volume * individual volume)
+        const combinedGain = groupVolume * individualVolume;
+        gainNode.gain.value = combinedGain;
+        currentPlaying[sampleNumber].volume = combinedGain;
+        
+        source.connect(gainNode);
+        gainNode.connect(individualVolumeGain);
+        currentPlaying[sampleNumber].source = source;
+        currentPlaying[sampleNumber].gainNode = gainNode;
+        currentPlaying[sampleNumber].startTime = startTime;
+        currentPlaying[sampleNumber].isScheduled = true;
+        currentPlaying[sampleNumber].loopStartTime = startTime;
+        currentPlaying[sampleNumber].tempoChangeTime = startTime;
+        if (effects.pianoRoll && effects.pianoRoll.notes.length > 0) {
+            const pianoRoll = effects.pianoRoll;
+            const isLongSample = currentPlaying[sampleNumber].isLongSample;
+            let beatDuration, barDuration;
+            if (isLongSample) {
+                beatDuration = 60 / longLoopTempo;
+                barDuration = beatDuration * 4;
+            } else {
+                const effectiveTempo = tempo + highTempo;
+                beatDuration = 60 / effectiveTempo;
+                barDuration = beatDuration * 4;
+            }
+            const sixteenthDuration = barDuration / 16;
+            const sortedNotes = [...pianoRoll.notes].sort((a, b) => a.col - b.col);
+            sortedNotes.forEach(note => {
+                const noteTime = startTime + note.col * sixteenthDuration;
+                const noteDuration = (note.length || 1) * sixteenthDuration;
+                if (pianoRoll.soundSource === "piano") {
+                    playPianoNoteForSample(note.row, noteTime, noteDuration, individualVolumeGain, sampleNumber);
+                } else if (pianoRoll.soundSource === "synth") {
+                    playSynthNoteForSample(note.row, noteTime, noteDuration, individualVolumeGain, sampleNumber);
+                } else if (pianoRoll.soundSource === "strings") {
+                    playStringsNoteForSample(note.row, noteTime, noteDuration, individualVolumeGain, sampleNumber);
+                } else if (pianoRoll.soundSource === "bass") {
+                    playBassNoteForSample(note.row, noteTime, noteDuration, individualVolumeGain, sampleNumber);
+                } else if (pianoRoll.soundSource === "lead") {
+                    playLeadNoteForSample(note.row, noteTime, noteDuration, individualVolumeGain, sampleNumber);
+                } else if (pianoRoll.soundSource === "pad") {
+                    playPadNoteForSample(note.row, noteTime, noteDuration, individualVolumeGain, sampleNumber);
+                } else if (pianoRoll.soundSource === "pluck") {
+                    playPluckNoteForSample(note.row, noteTime, noteDuration, individualVolumeGain, sampleNumber);
+                } else {
+                    playSampleNoteForSample(note.row, noteTime, noteDuration, individualVolumeGain, sampleNumber, pianoRoll.sampleRange);
+                }
+            });
+        } else {
+            if (currentPlaying[sampleNumber].isLongSample) {
+                const longLoopBeatDuration = 60 / longLoopTempo;
+                const longLoopBarDuration = longLoopBeatDuration * 4;
+                const desiredLoopDuration = longLoopBarDuration * longLoopLength;
+                if (!isFinite(desiredLoopDuration) || desiredLoopDuration <= 0 || !isFinite(currentPlaying[sampleNumber].loopDuration) || currentPlaying[sampleNumber].loopDuration <= 0) {
+                    console.error("Invalid values for long sample:", {
+                        desiredLoopDuration: desiredLoopDuration,
+                        loopDuration: currentPlaying[sampleNumber].loopDuration
+                    });
+                    return;
+                }
+                const basePlaybackRate = currentPlaying[sampleNumber].loopDuration / desiredLoopDuration;
+                let individualTempo = 1;
+                if (effects.individualTempo) {
+                    individualTempo = effects.individualTempo;
+                }
+                const speed = effects.speed || 1;
+                const playbackRate = basePlaybackRate * individualTempo * speed;
+                if (!isFinite(playbackRate) || playbackRate <= 0) {
+                    console.error("Invalid playback rate for long sample:", playbackRate);
+                    return;
+                }
+                source.loop = true;
+                source.loopStart = 0;
+                source.loopEnd = currentPlaying[sampleNumber].loopDuration;
+                source.playbackRate.value = playbackRate;
+                
+                // Store the base rate for LFO
+                currentPlaying[sampleNumber].lfoBaseRate = playbackRate;
+                
+                source.start(startTime);
+            } else {
+                const effectiveTempo = tempo + highTempo;
+                const effectiveBeatDuration = 60 / effectiveTempo;
+                const effectiveBarDuration = effectiveBeatDuration * 4;
+                const desiredLoopDuration = effectiveBarDuration * loopLength;
+                if (!isFinite(desiredLoopDuration) || desiredLoopDuration <= 0 || !isFinite(currentPlaying[sampleNumber].loopDuration) || currentPlaying[sampleNumber].loopDuration <= 0) {
+                    console.error("Invalid values for drum sample:", {
+                        desiredLoopDuration: desiredLoopDuration,
+                        loopDuration: currentPlaying[sampleNumber].loopDuration,
+                        effectiveBarDuration: effectiveBarDuration,
+                        loopLength: loopLength
+                    });
+                    return;
+                }
+                const basePlaybackRate = currentPlaying[sampleNumber].loopDuration / desiredLoopDuration;
+                const speed = effects.speed || 1;
+                const playbackRate = basePlaybackRate * speed;
+                if (!isFinite(playbackRate) || playbackRate <= 0) {
+                    console.error("Invalid playback rate for drum sample:", playbackRate);
+                    return;
+                }
+                source.loop = true;
+                source.loopStart = 0;
+                source.loopEnd = currentPlaying[sampleNumber].loopDuration;
+                source.playbackRate.value = playbackRate;
+                
+                // Store the base rate for LFO
+                currentPlaying[sampleNumber].lfoBaseRate = playbackRate;
+                
+                source.start(startTime);
+            }
+        }
+        initializeEffectsForSample(sampleNumber);
+        
+        // Setup LFO if enabled - ensure it only affects this sample
+        if (effects.lfo && effects.lfo.depth > 0) {
+            // LFO is already initialized in initializeEffectsForSample
+            // Just need to update the target connection
+            const target = effects.lfo.target;
+            
+            // Disconnect all previous connections
+            if (currentPlaying[sampleNumber].lfoGainNode) {
+                try {
+                    currentPlaying[sampleNumber].lfoGainNode.disconnect();
+                } catch (e) {}
+            }
+            
+            // Disconnect filter offset node if it exists
+            if (currentPlaying[sampleNumber].lfoFilterOffsetNode) {
+                try {
+                    currentPlaying[sampleNumber].lfoFilterOffsetNode.disconnect();
+                    currentPlaying[sampleNumber].lfoFilterOffsetNode.stop();
+                    currentPlaying[sampleNumber].lfoFilterOffsetNode = null;
+                } catch (e) {}
+            }
+            
+            // FIX: Handle LFO filter bypass based on target
+            if (currentPlaying[sampleNumber].lfoFilterBypass && currentPlaying[sampleNumber].lfoFilter) {
+                if (target === "filter") {
+                    // Use the LFO filter path
+                    currentPlaying[sampleNumber].lfoFilterBypass.gain.value = 0.0;
+                    currentPlaying[sampleNumber].lfoFilter.connect(currentPlaying[sampleNumber].eqVeryHighNode);
+                } else {
+                    // Use the bypass path
+                    currentPlaying[sampleNumber].lfoFilterBypass.gain.value = 1.0;
+                    try {
+                        currentPlaying[sampleNumber].lfoFilter.disconnect();
+                    } catch (e) {}
+                }
+            }
+            
+            // Connect to the appropriate target
+            if (target === "pitch") {
+                // Check if detune is supported
+                const supportsDetune = typeof source.detune !== 'undefined';
+                
+                if (supportsDetune) {
+                    // For pitch modulation, we'll use the detune property
+                    // which changes pitch without affecting playback rate
+                    currentPlaying[sampleNumber].lfoTarget = "pitch";
+                    
+                    // Create a loop to continuously update the detune
+                    const updateDetune = () => {
+                        if (!currentPlaying[sampleNumber].source || currentPlaying[sampleNumber].lfoTarget !== "pitch") return;
+                        
+                        const time = audioContext.currentTime;
+                        const lfoRate = effects.lfo.rate;
+                        const lfoDepth = effects.lfo.depth / 100;
+                        const waveform = effects.lfo.waveform;
+                        
+                        const lfoDuration = 1 / lfoRate;
+                        const phase = (time % lfoDuration) / lfoDuration * Math.PI * 2;
+                        
+                        let modulationValue = 0;
+                        switch (waveform) {
+                            case "sine":
+                                modulationValue = Math.sin(phase);
+                                break;
+                            case "square":
+                                modulationValue = Math.sin(phase) > 0 ? 1 : -1;
+                                break;
+                            case "triangle":
+                                const t = (phase / Math.PI) % 2;
+                                modulationValue = t < 1 ? 2 * t - 1 : 3 - 2 * t;
+                                break;
+                            case "sawtooth":
+                                modulationValue = 2 * ((phase / Math.PI) % 1) - 1;
+                                break;
+                        }
+                        
+                        // Calculate the detune value in cents
+                        // Maximum detune is 1200 cents (one octave) in either direction
+                        const maxDetune = 1200;
+                        const detuneValue = maxDetune * lfoDepth * modulationValue;
+                        
+                        // Apply the detune to the source
+                        currentPlaying[sampleNumber].source.detune.setValueAtTime(detuneValue, time);
+                        
+                        // Schedule the next update
+                        currentPlaying[sampleNumber].lfoUpdateTimeout = setTimeout(updateDetune, 50); // Update every 50ms for smooth modulation
+                    };
+                    
+                    // Start the update loop
+                    updateDetune();
+                } else {
+                    // Fall back to the current implementation using playbackRate
+                    // For pitch modulation, we'll use a more direct approach
+                    // by updating the playback rate in a scheduled manner
+                    currentPlaying[sampleNumber].lfoTarget = "pitch";
+                    
+                    // Store the current base playback rate
+                    if (source) {
+                        currentPlaying[sampleNumber].lfoBaseRate = source.playbackRate.value;
+                    }
+                    
+                    // Create a loop to continuously update the playback rate
+                    const updatePlaybackRate = () => {
+                        if (!currentPlaying[sampleNumber].source || currentPlaying[sampleNumber].lfoTarget !== "pitch") return;
+                        
+                        const time = audioContext.currentTime;
+                        const lfoRate = effects.lfo.rate;
+                        const lfoDepth = effects.lfo.depth / 100;
+                        const waveform = effects.lfo.waveform;
+                        
+                        const lfoDuration = 1 / lfoRate;
+                        const phase = (time % lfoDuration) / lfoDuration * Math.PI * 2;
+                        
+                        let modulationValue = 0;
+                        switch (waveform) {
+                            case "sine":
+                                modulationValue = Math.sin(phase);
+                                break;
+                            case "square":
+                                modulationValue = Math.sin(phase) > 0 ? 1 : -1;
+                                break;
+                            case "triangle":
+                                const t = (phase / Math.PI) % 2;
+                                modulationValue = t < 1 ? 2 * t - 1 : 3 - 2 * t;
+                                break;
+                            case "sawtooth":
+                                modulationValue = 2 * ((phase / Math.PI) % 1) - 1;
+                                break;
+                        }
+                        
+                        // Use the stored base rate which should be updated when tempo changes
+                        const baseRate = currentPlaying[sampleNumber].lfoBaseRate || 1.0;
+                        
+                        // Limit the modulation depth to prevent extreme values
+                        // Maximum modulation is 50% of the base rate in either direction
+                        const maxModulation = baseRate * 0.5;
+                        const modulationAmount = maxModulation * lfoDepth * modulationValue;
+                        
+                        // Ensure the playback rate never goes below 0.1 to prevent audio stopping
+                        const newPlaybackRate = Math.max(0.1, baseRate + modulationAmount);
+                        
+                        currentPlaying[sampleNumber].source.playbackRate.setValueAtTime(newPlaybackRate, time);
+                        
+                        // Schedule the next update
+                        currentPlaying[sampleNumber].lfoUpdateTimeout = setTimeout(updatePlaybackRate, 50); // Update every 50ms for smooth modulation
+                    };
+                    
+                    // Start the update loop
+                    updatePlaybackRate();
+                }
+            } else if (target === "filter") {
+                // Connect to the dedicated LFO filter cutoff frequency
+                const baseFrequency = currentPlaying[sampleNumber].lfoFilter ? currentPlaying[sampleNumber].lfoFilter.frequency.value : 2000;
+                const lfoDepth = effects.lfo.depth / 100;
+                
+                // Calculate the modulation range in octaves
+                // Maximum modulation is 2 octaves in either direction
+                const maxOctaves = 2;
+                const modulationOctaves = maxOctaves * lfoDepth;
+                
+                // Calculate the frequency range
+                const minFrequency = baseFrequency / Math.pow(2, modulationOctaves);
+                const maxFrequency = baseFrequency * Math.pow(2, modulationOctaves);
+                
+                // Create a scale factor to map the LFO output to the frequency range
+                const scaleFactor = (maxFrequency - minFrequency) / 2;
+                const offset = (maxFrequency + minFrequency) / 2;
+                
+                // Connect the LFO to the filter frequency
+                currentPlaying[sampleNumber].lfoGainNode.gain.value = scaleFactor;
+                currentPlaying[sampleNumber].lfoGainNode.connect(currentPlaying[sampleNumber].lfoFilter.frequency);
+                
+                // Set the base frequency
+                currentPlaying[sampleNumber].lfoFilter.frequency.value = baseFrequency;
+                
+                // Create a constant source node to add the offset
+                const offsetNode = audioContext.createConstantSource();
+                offsetNode.offset.value = offset;
+                offsetNode.connect(currentPlaying[sampleNumber].lfoFilter.frequency);
+                offsetNode.start();
+                
+                // Store the offset node for cleanup
+                currentPlaying[sampleNumber].lfoFilterOffsetNode = offsetNode;
+                
+                currentPlaying[sampleNumber].lfoTarget = "filter";
+            } else if (target === "volume") {
+                // Connect to the individual volume gain node
+                if (currentPlaying[sampleNumber].individualVolumeGain) {
+                    const baseGain = currentPlaying[sampleNumber].individualVolumeGain.gain.value;
+                    const lfoDepth = effects.lfo.depth / 100;
+                    
+                    // Calculate the modulation range
+                    // Maximum modulation is 50% of the base gain in either direction
+                    const maxModulation = baseGain * 0.5;
+                    const modulationAmount = maxModulation * lfoDepth;
+                    
+                    // Connect the LFO to the individual volume gain
+                    currentPlaying[sampleNumber].lfoGainNode.gain.value = modulationAmount;
+                    currentPlaying[sampleNumber].lfoGainNode.connect(currentPlaying[sampleNumber].individualVolumeGain.gain);
+                    currentPlaying[sampleNumber].lfoTarget = "volume";
+                }
+            }
+        }
+        
+        setTimeout(() => {
+            if (currentPlaying[sampleNumber].isScheduled) {
+                updateSampleEffects(sampleNumber);
+            }
+        }, 50);
+        console.log(`Sample ${sampleNumber} (${currentPlaying[sampleNumber].isLongSample?"long":"drum"}) started at ${startTime} with volume ${volumePercent}%, speed ${effects.speed||1} and individual tempo ${effects.individualTempo||1}`);
+    }
+
+    function updateDrumSampleLoop(sampleNumber) {
+        if (!currentPlaying[sampleNumber].source || currentPlaying[sampleNumber].isLongSample) return;
+        const effectiveTempo = tempo + highTempo;
+        const effectiveBeatDuration = 60 / effectiveTempo;
+        const effectiveBarDuration = effectiveBeatDuration * 4;
+        const desiredLoopDuration = effectiveBarDuration * loopLength;
+        if (!isFinite(desiredLoopDuration) || desiredLoopDuration <= 0 || !isFinite(currentPlaying[sampleNumber].loopDuration) || currentPlaying[sampleNumber].loopDuration <= 0) {
+            console.error("Invalid values for updating drum sample:", {
+                desiredLoopDuration: desiredLoopDuration,
+                loopDuration: currentPlaying[sampleNumber].loopDuration,
+                effectiveBarDuration: effectiveBarDuration,
+                loopLength: loopLength
+            });
+            return;
+        }
+        const basePlaybackRate = currentPlaying[sampleNumber].loopDuration / desiredLoopDuration;
+        const effects = currentPlaying[sampleNumber].effects || {};
+        const speed = effects.speed || 1;
+        const playbackRate = basePlaybackRate * speed;
+        if (!isFinite(playbackRate) || playbackRate <= 0) {
+            console.error("Invalid playback rate for updating drum sample:", playbackRate);
+            return;
+        }
+        const currentTime = audioContext.currentTime;
+        const elapsedTime = currentTime - currentPlaying[sampleNumber].loopStartTime;
+        const loopProgress = elapsedTime * currentPlaying[sampleNumber].source.playbackRate.value % currentPlaying[sampleNumber].loopDuration;
+        currentPlaying[sampleNumber].source.playbackRate.value = playbackRate;
+        currentPlaying[sampleNumber].loopStartTime = currentTime - loopProgress / playbackRate;
+        
+        // Update LFO base rate if pitch modulation is active
+        if (currentPlaying[sampleNumber].lfoTarget === "pitch") {
+            currentPlaying[sampleNumber].lfoBaseRate = playbackRate;
+        }
+        
+        console.log(`Sample ${sampleNumber} tempo updated: loop progress ${loopProgress/currentPlaying[sampleNumber].loopDuration} with speed ${speed}`);
+    }
+
+    function updateLongSampleLoop(sampleNumber) {
+        if (!currentPlaying[sampleNumber].source || !currentPlaying[sampleNumber].isLongSample) return;
+        const longLoopBeatDuration = 60 / longLoopTempo;
+        const longLoopBarDuration = longLoopBeatDuration * 4;
+        const desiredLoopDuration = longLoopBarDuration * longLoopLength;
+        if (!isFinite(desiredLoopDuration) || desiredLoopDuration <= 0 || !isFinite(currentPlaying[sampleNumber].loopDuration) || currentPlaying[sampleNumber].loopDuration <= 0) {
+            console.error("Invalid values for updating long sample:", {
+                desiredLoopDuration: desiredLoopDuration,
+                loopDuration: currentPlaying[sampleNumber].loopDuration,
+                longLoopBarDuration: longLoopBarDuration,
+                longLoopLength: longLoopLength
+            });
+            return;
+        }
+        const basePlaybackRate = currentPlaying[sampleNumber].loopDuration / desiredLoopDuration;
+        const effects = currentPlaying[sampleNumber].effects || {};
+        const individualTempo = effects.individualTempo || 1;
+        const speed = effects.speed || 1;
+        const playbackRate = basePlaybackRate * individualTempo * speed;
+        if (!isFinite(playbackRate) || playbackRate <= 0) {
+            console.error("Invalid playback rate for updating long sample:", playbackRate);
+            return;
+        }
+        const currentTime = audioContext.currentTime;
+        const elapsedTime = currentTime - currentPlaying[sampleNumber].loopStartTime;
+        const loopProgress = elapsedTime * currentPlaying[sampleNumber].source.playbackRate.value % currentPlaying[sampleNumber].loopDuration;
+        currentPlaying[sampleNumber].source.playbackRate.value = playbackRate;
+        currentPlaying[sampleNumber].loopStartTime = currentTime - loopProgress / playbackRate;
+        
+        // Update LFO base rate if pitch modulation is active
+        if (currentPlaying[sampleNumber].lfoTarget === "pitch") {
+            currentPlaying[sampleNumber].lfoBaseRate = playbackRate;
+        }
+        
+        console.log(`Sample ${sampleNumber} long tempo updated: loop progress ${loopProgress/currentPlaying[sampleNumber].loopDuration} with individual tempo ${individualTempo} and speed ${speed}`);
+    }
+
+    function stopSample(sampleNumber) {
+        if (currentPlaying[sampleNumber].scheduledTimeout) {
+            clearTimeout(currentPlaying[sampleNumber].scheduledTimeout);
+            currentPlaying[sampleNumber].scheduledTimeout = null;
+        }
+        if (currentPlaying[sampleNumber].source) {
+            try {
+                if (currentPlaying[sampleNumber].isScheduled) {
+                    currentPlaying[sampleNumber].source.stop();
+                }
+                currentPlaying[sampleNumber].source.disconnect();
+                currentPlaying[sampleNumber].source = null;
+                currentPlaying[sampleNumber].gainNode = null;
+                if (currentPlaying[sampleNumber].delayNode) {
+                    currentPlaying[sampleNumber].delayNode.disconnect();
+                    currentPlaying[sampleNumber].delayNode = null;
+                }
+                if (currentPlaying[sampleNumber].delayFeedbackNode) {
+                    currentPlaying[sampleNumber].delayFeedbackNode.disconnect();
+                    currentPlaying[sampleNumber].delayFeedbackNode = null;
+                }
+                if (currentPlaying[sampleNumber].reverbNode) {
+                    currentPlaying[sampleNumber].reverbNode.disconnect();
+                    currentPlaying[sampleNumber].reverbNode = null;
+                }
+                if (currentPlaying[sampleNumber].reverbMixNode) {
+                    currentPlaying[sampleNumber].reverbMixNode.disconnect();
+                    currentPlaying[sampleNumber].reverbMixNode = null;
+                }
+                if (currentPlaying[sampleNumber].wetPathNode) {
+                    currentPlaying[sampleNumber].wetPathNode.disconnect();
+                    currentPlaying[sampleNumber].wetPathNode = null;
+                }
+                if (currentPlaying[sampleNumber].dryPathNode) {
+                    currentPlaying[sampleNumber].dryPathNode.disconnect();
+                    currentPlaying[sampleNumber].dryPathNode = null;
+                }
+                if (currentPlaying[sampleNumber].outputNode) {
+                    currentPlaying[sampleNumber].outputNode.disconnect();
+                    currentPlaying[sampleNumber].outputNode = null;
+                }
+                if (currentPlaying[sampleNumber].eqLowNode) {
+                    currentPlaying[sampleNumber].eqLowNode.disconnect();
+                    currentPlaying[sampleNumber].eqLowNode = null;
+                }
+                if (currentPlaying[sampleNumber].eqLowMidNode) {
+                    currentPlaying[sampleNumber].eqLowMidNode.disconnect();
+                    currentPlaying[sampleNumber].eqLowMidNode = null;
+                }
+                if (currentPlaying[sampleNumber].eqMidNode) {
+                    currentPlaying[sampleNumber].eqMidNode.disconnect();
+                    currentPlaying[sampleNumber].eqMidNode = null;
+                }
+                if (currentPlaying[sampleNumber].eqHighMidNode) {
+                    currentPlaying[sampleNumber].eqHighMidNode.disconnect();
+                    currentPlaying[sampleNumber].eqHighMidNode = null;
+                }
+                if (currentPlaying[sampleNumber].eqHighMid2Node) {
+                    currentPlaying[sampleNumber].eqHighMid2Node.disconnect();
+                    currentPlaying[sampleNumber].eqHighMid2Node = null;
+                }
+                if (currentPlaying[sampleNumber].eqHighNode) {
+                    currentPlaying[sampleNumber].eqHighNode.disconnect();
+                    currentPlaying[sampleNumber].eqHighNode = null;
+                }
+                if (currentPlaying[sampleNumber].eqVeryHighNode) {
+                    currentPlaying[sampleNumber].eqVeryHighNode.disconnect();
+                    currentPlaying[sampleNumber].eqVeryHighNode = null;
+                }
+                // Disconnect LFO
+                if (currentPlaying[sampleNumber].lfoNode) {
+                    currentPlaying[sampleNumber].lfoNode.disconnect();
+                    currentPlaying[sampleNumber].lfoNode = null;
+                }
+                if (currentPlaying[sampleNumber].lfoGainNode) {
+                    currentPlaying[sampleNumber].lfoGainNode.disconnect();
+                    currentPlaying[sampleNumber].lfoGainNode = null;
+                }
+                // Clear LFO update timeout
+                if (currentPlaying[sampleNumber].lfoUpdateTimeout) {
+                    clearTimeout(currentPlaying[sampleNumber].lfoUpdateTimeout);
+                    currentPlaying[sampleNumber].lfoUpdateTimeout = null;
+                }
+                // Disconnect filter offset node if it exists
+                if (currentPlaying[sampleNumber].lfoFilterOffsetNode) {
+                    try {
+                        currentPlaying[sampleNumber].lfoFilterOffsetNode.disconnect();
+                        currentPlaying[sampleNumber].lfoFilterOffsetNode.stop();
+                        currentPlaying[sampleNumber].lfoFilterOffsetNode = null;
+                    } catch (e) {}
+                }
+                // Disconnect individual volume gain
+                if (currentPlaying[sampleNumber].individualVolumeGain) {
+                    currentPlaying[sampleNumber].individualVolumeGain.disconnect();
+                    currentPlaying[sampleNumber].individualVolumeGain = null;
+                }
+                // Disconnect LFO filter
+                if (currentPlaying[sampleNumber].lfoFilter) {
+                    currentPlaying[sampleNumber].lfoFilter.disconnect();
+                    currentPlaying[sampleNumber].lfoFilter = null;
+                }
+                // Disconnect LFO filter bypass
+                if (currentPlaying[sampleNumber].lfoFilterBypass) {
+                    currentPlaying[sampleNumber].lfoFilterBypass.disconnect();
+                    currentPlaying[sampleNumber].lfoFilterBypass = null;
+                }
+            } catch (e) {
+                console.warn("Error stopping audio source:", e);
+                currentPlaying[sampleNumber].source = null;
+                currentPlaying[sampleNumber].gainNode = null;
+            }
+        }
+        currentPlaying[sampleNumber].isScheduled = false;
+        currentPlaying[sampleNumber].barGridAligned = false;
+    }
+
+    function updateTiming() {
+        if (!isFinite(tempo) || tempo <= 0) {
+            console.error("Invalid tempo value:", tempo);
+            return;
+        }
+        const effectiveTempo = tempo + highTempo;
+        beatDuration = 60 / effectiveTempo;
+        barDuration = beatDuration * 4;
+    }
+
+    function scheduler() {
+        const currentTime = audioContext.currentTime;
+        if (currentTime >= masterBarGrid.nextStartTime) {
+            masterBarGrid.startTime = masterBarGrid.nextStartTime;
+            masterBarGrid.nextStartTime = masterBarGrid.startTime + masterBarGrid.duration;
+        }
+        if (isPlaying) {
+            timerId = setTimeout(scheduler, lookahead);
+        }
+    }
+
+    function startRecording() {
+        if (isRecording) return;
+        recordingDestination = audioContext.createMediaStreamDestination();
+        masterOutputNode.connect(recordingDestination);
+        mediaRecorder = new MediaRecorder(recordingDestination.stream);
+        recordedChunks = [];
+        mediaRecorder.ondataavailable = function (event) {
+            if (event.data.size > 0) {
+                recordedChunks.push(event.data);
+            }
+        };
+        mediaRecorder.onstop = function () {
+            recordedBlob = new Blob(recordedChunks, {
+                type: "audio/wav"
+            });
+            saveButton.style.display = "block";
+        };
+        mediaRecorder.start();
+        isRecording = true;
+        recordingStartTime = Date.now();
+        recordButton.textContent = "Stop Recording";
+        recordButton.classList.add("recording");
+        saveButton.style.display = "block";
+    }
+
+    function stopRecording() {
+        if (!isRecording) return;
+        mediaRecorder.stop();
+        isRecording = false;
+        recordingDuration = (Date.now() - recordingStartTime) / 1e3;
+        recordButton.textContent = "Record";
+        recordButton.classList.remove("recording");
+        if (recordingDestination) {
+            masterOutputNode.disconnect(recordingDestination);
+            recordingDestination = null;
+        }
+    }
+    tempoSlider.addEventListener("input", function () {
+        tempo = parseInt(this.value);
+        if (!isFinite(tempo) || tempo <= 0) {
+            console.error("Invalid tempo value from slider:", tempo);
+            return;
+        }
+        tempoDisplay.textContent = `${tempo} BPM`;
+        if (tempo >= 240) {
+            highTempoSlider.disabled = false;
+            highTempoSlider.style.opacity = "1";
+        } else {
+            highTempoSlider.disabled = true;
+            highTempoSlider.style.opacity = "0.5";
+            highTempo = 0;
+            highTempoSlider.value = "240";
+            highTempoDisplay.textContent = "240 BPM";
+        }
+        updateTiming();
+        updateMasterBarGrid();
+        for (let i = 1; i <= 100; i++) {
+            if (currentPlaying[i].button && currentPlaying[i].buffer && currentPlaying[i].scheduledForNextBar && currentPlaying[i].isActive && currentPlaying[i].isScheduled && !currentPlaying[i].isLongSample) {
+                updateDrumSampleTempo(i);
+            }
+        }
+    });
+    highTempoSlider.addEventListener("input", function () {
+        highTempo = parseInt(this.value) - 240;
+        if (!isFinite(highTempo) || highTempo < 0) {
+            console.error("Invalid high tempo value from slider:", highTempo);
+            return;
+        }
+        highTempoDisplay.textContent = `${parseInt(this.value)} BPM`;
+        updateTiming();
+        updateMasterBarGrid();
+        for (let i = 1; i <= 100; i++) {
+            if (currentPlaying[i].button && currentPlaying[i].buffer && currentPlaying[i].scheduledForNextBar && currentPlaying[i].isActive && currentPlaying[i].isScheduled && !currentPlaying[i].isLongSample) {
+                updateDrumSampleTempo(i);
+            }
+        }
+    });
+    longLoopTempoSlider.addEventListener("input", function () {
+        longLoopTempo = parseInt(this.value);
+        if (!isFinite(longLoopTempo) || longLoopTempo <= 0) {
+            console.error("Invalid long loop tempo value from slider:", longLoopTempo);
+            return;
+        }
+        longLoopTempoDisplay.textContent = `${longLoopTempo} BPM`;
+        for (let i = 1; i <= 100; i++) {
+            if (currentPlaying[i].button && currentPlaying[i].buffer && currentPlaying[i].scheduledForNextBar && currentPlaying[i].isActive && currentPlaying[i].isScheduled && currentPlaying[i].isLongSample) {
+                updateLongSampleTempo(i);
+            }
+        }
+    });
+    playButton.addEventListener("click", function () {
+        resumeAudioContext();
+        if (!isPlaying) {
+            isPlaying = true;
+            playButton.textContent = "Stop";
+            playButton.classList.add("playing");
+            if (audioContext.state === "suspended") {
+                audioContext.resume()["catch"](e => console.error("Error resuming audio context:", e));
+            }
+            const currentTime = audioContext.currentTime;
+            masterBarGrid.startTime = currentTime;
+            masterBarGrid.duration = barDuration;
+            masterBarGrid.nextStartTime = masterBarGrid.startTime + masterBarGrid.duration;
+            for (let i = 1; i <= 100; i++) {
+                if (currentPlaying[i].button && currentPlaying[i].buffer && currentPlaying[i].scheduledForNextBar && currentPlaying[i].isActive) {
+                    if (currentPlaying[i].scheduledTimeout) {
+                        clearTimeout(currentPlaying[i].scheduledTimeout);
+                        currentPlaying[i].scheduledTimeout = null;
+                    }
+                    scheduleSampleForNextBar(i);
+                }
+            }
+            scheduler();
+        } else {
+            isPlaying = false;
+            playButton.textContent = "Play";
+            playButton.classList.remove("playing");
+            clearTimeout(timerId);
+            for (let i = 1; i <= 100; i++) {
+                stopSample(i);
+            }
+        }
+    });
+    recordButton.addEventListener("click", function () {
+        if (isRecording) {
+            stopRecording();
+        } else {
+            startRecording();
+        }
+    });
+    saveButton.addEventListener("click", function () {
+        if (recordedBlob) {
+            // Enhanced save with offline storage
+            const timestamp = new Date().toISOString().slice(0,19).replace(/:/g,"-");
+            const fileName = `psychological-studio-recording-${timestamp}.wav`;
+            
+            // Save to offline storage
+            offlineStorage.saveAudioData(fileName, recordedBlob).then(() => {
+                console.log('Recording saved offline');
+            }).catch(error => {
+                console.error('Failed to save recording offline:', error);
+            });
+            
+            // Also provide download option
+            const url = URL.createObjectURL(recordedBlob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = fileName;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    });
+
+
+    // Offline/Online Status Management
+    function initializeOfflineStatus() {
+        const offlineIndicator = document.getElementById('offlineIndicator');
+        
+        function updateOnlineStatus() {
+            if (navigator.onLine) {
+                offlineIndicator.style.display = 'none';
+            } else {
+                offlineIndicator.style.display = 'flex';
+            }
+        }
+
+        // Listen for online/offline events
+        window.addEventListener('online', updateOnlineStatus);
+        window.addEventListener('offline', updateOnlineStatus);
+        
+        // Initial status check
+        updateOnlineStatus();
+        
+        // Periodic status check (in case events don't fire)
+        setInterval(updateOnlineStatus, 5000);
+    }
+
+    // Initialize offline status monitoring
+    initializeOfflineStatus();
+
+    // Sample folder management
+    let currentSampleFolder = 'mykicks'; // Default folder
+    
+    // Initialize folder selection
+    function initializeFolderSelection() {
+        const selectFolderBtn = document.getElementById('selectFolderBtn');
+        const currentFolderDisplay = document.getElementById('currentFolderDisplay');
+        
+        if (!selectFolderBtn || !currentFolderDisplay) {
+            console.error('Folder selection elements not found');
+            return;
+        }
+        
+        // Update display
+        function updateFolderDisplay() {
+            currentFolderDisplay.textContent = `Current: ${currentSampleFolder}`;
+        }
+        
+        // Load folder from localStorage if available
+        const savedFolder = localStorage.getItem('psychologicalStudioSampleFolder');
+        if (savedFolder) {
+            currentSampleFolder = savedFolder;
+            updateFolderDisplay();
+        }
+        
+        // Folder selection handler
+        selectFolderBtn.addEventListener('click', function() {
+            const folderName = prompt('Enter sample folder name (e.g., mykicks, drums, bass, etc.):', currentSampleFolder);
+            if (folderName && folderName.trim()) {
+                const newFolder = folderName.trim();
+                
+                // Validate folder exists by trying to load a sample
+                const testAudio = new Audio();
+                testAudio.oncanplaythrough = function() {
+                    // Folder exists, update current folder
+                    currentSampleFolder = newFolder;
+                    localStorage.setItem('psychologicalStudioSampleFolder', newFolder);
+                    updateFolderDisplay();
+                    showNotification(`Sample folder changed to: ${newFolder}`);
+                    
+                    // Cache new folder samples for offline use
+                    cacheFolderSamples(newFolder);
+                    
+                    // Reload all current samples with new folder
+                    reloadAllSamples();
+                };
+                testAudio.onerror = function() {
+                    showNotification(`Folder "${newFolder}" not found. Please check the folder name.`);
+                };
+                testAudio.src = `./${newFolder}/1.wav`;
+            }
+        });
+        
+        updateFolderDisplay();
+    }
+    
+    // Reload all currently loaded samples with new folder
+    function reloadAllSamples() {
+        for (let i = 1; i <= 100; i++) {
+            if (currentPlaying[i] && currentPlaying[i].button) {
+                // Reload the sample with new folder
+                loadSample(i);
+            }
+        }
+    }
+    
+    // Cache all samples from a folder for offline use
+    function cacheFolderSamples(folderName) {
+        if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+            // Generate list of all sample files in the folder
+            const sampleFiles = [];
+            for (let i = 1; i <= 100; i++) {
+                sampleFiles.push(`./${folderName}/${i}.wav`);
+            }
+            
+            // Send message to service worker to cache the files
+            navigator.serviceWorker.controller.postMessage({
+                type: 'CACHE_AUDIO',
+                files: sampleFiles
+            });
+            
+            showNotification(`Caching ${folderName} samples for offline use...`);
+        }
+    }
+    
+    // Initialize folder selection
+    initializeFolderSelection();
+
+
+    // Disable Developer Tools and Right-Click
+    function disableDevTools() {
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+        document.addEventListener('keydown', function(e) {
+            // F12
+            if (e.keyCode === 123) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+I (DevTools)
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+J (Console)
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+U (View Source)
+            if (e.ctrlKey && e.keyCode === 85) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+C (Element Inspector)
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 67) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Disable text selection
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Disable drag and drop
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Console warning
+        console.clear();
+        console.log('%c⚠️ Developer Tools Disabled', 'color: red; font-size: 20px; font-weight: bold;');
+        console.log('%cThis is a professional application. Please do not attempt to access developer tools.', 'color: red; font-size: 14px;');
+
+        // Disable console methods
+        const noop = function() {};
+        console.log = noop;
+        console.warn = noop;
+        console.error = noop;
+        console.info = noop;
+        console.debug = noop;
+        console.trace = noop;
+        console.table = noop;
+        console.group = noop;
+        console.groupEnd = noop;
+        console.time = noop;
+        console.timeEnd = noop;
+        console.count = noop;
+        console.assert = noop;
+        console.clear = noop;
+    }
+
+    // Initialize dev tools disabling
+    disableDevTools();
+
+    // Piano roll zoom and scroll functionality
+    let pianoRollZoomLevel = 1.0;
+    let pianoRollScrollX = 0;
+    
+    function updatePianoRollZoomDisplay() {
+        document.getElementById("zoom-level-display").textContent = `${Math.round(pianoRollZoomLevel * 100)}%`;
+    }
+    
+    function updatePianoRollCellWidth() {
+        const grid = document.querySelector(".piano-roll-grid");
+        if (!grid) return;
+        
+        const baseCellWidth = 20; // Base width in pixels
+        const cellWidth = baseCellWidth * pianoRollZoomLevel;
+        
+        // Update grid template columns with the new cell width
+        const gridWidth = document.getElementById("grid-size-display").textContent;
+        grid.style.gridTemplateColumns = `repeat(${gridWidth}, ${cellWidth}px)`;
+        
+        // Update the grid container width to accommodate all cells
+        const gridContainer = document.querySelector(".piano-roll-grid-container");
+        if (gridContainer) {
+            gridContainer.style.width = `${gridWidth * cellWidth}px`;
+        }
+        
+        // Update the bar numbers container width to match
+        const barNumbers = document.querySelector(".piano-roll-bar-numbers");
+        if (barNumbers) {
+            barNumbers.style.width = `${gridWidth * cellWidth}px`;
+        }
+    }
+    
+    function setupPianoRollZoomControls() {
+        const zoomDecreaseBtn = document.getElementById("zoom-decrease");
+        const zoomIncreaseBtn = document.getElementById("zoom-increase");
+        const zoomResetBtn = document.getElementById("zoom-reset");
+        
+        if (zoomDecreaseBtn) {
+            zoomDecreaseBtn.addEventListener("click", function() {
+                if (pianoRollZoomLevel > 0.5) {
+                    pianoRollZoomLevel -= 0.25;
+                    updatePianoRollZoomDisplay();
+                    updatePianoRollCellWidth();
+                }
+            });
+        }
+        
+        if (zoomIncreaseBtn) {
+            zoomIncreaseBtn.addEventListener("click", function() {
+                if (pianoRollZoomLevel < 4.0) {
+                    pianoRollZoomLevel += 0.25;
+                    updatePianoRollZoomDisplay();
+                    updatePianoRollCellWidth();
+                }
+            });
+        }
+        
+        if (zoomResetBtn) {
+            zoomResetBtn.addEventListener("click", function() {
+                pianoRollZoomLevel = 1.0;
+                updatePianoRollZoomDisplay();
+                updatePianoRollCellWidth();
+                
+                // Reset scroll position
+                const scrollable = document.querySelector(".piano-roll-scrollable");
+                if (scrollable) {
+                    scrollable.scrollLeft = 0;
+                }
+            });
+        }
+    }
+
+    function initPianoRoll() {
+        if (!currentSampleForPopup) return;
+        const isLongSample = currentSampleForPopup > 60;
+        if (!pianoRollData[currentSampleForPopup]) {
+            pianoRollData[currentSampleForPopup] = {
+                notes: [],
+                soundSource: "piano",
+                gridWidth: isLongSample ? 32 : 16,
+                gridHeight: 84,
+                scrollX: 0,
+                scrollY: 0,
+                sampleRange: {
+                    start: 0,
+                    end: 100
+                },
+                filters: {
+                    lowShelf: 0,
+                    highShelf: 0,
+                    lowMid: 0,
+                    mid: 0,
+                    highMid: 0,
+                    delay: {
+                        time: 0,
+                        feedback: 0
+                    }
+                },
+                isEnabled: false
+            };
+        }
+        
+        // Initialize zoom controls
+        setupPianoRollZoomControls();
+        
+        // Set initial zoom level
+        pianoRollZoomLevel = 1.0;
+        updatePianoRollZoomDisplay();
+        
+        const pianoKeys = document.querySelector(".piano-keys");
+        const pianoRollGrid = document.querySelector(".piano-roll-grid");
+        const pianoRollBarNumbers = document.querySelector(".piano-roll-bar-numbers");
+        const soundSourceSelect = document.getElementById("piano-roll-sound-source");
+        const noteLengthSelect = document.getElementById("note-length-select");
+        const gridSizeDecreaseBtn = document.getElementById("grid-size-decrease");
+        const gridSizeIncreaseBtn = document.getElementById("grid-size-increase");
+        const gridSizeDisplay = document.getElementById("grid-size-display");
+        
+        // Clear existing content
+        pianoKeys.innerHTML = "";
+        pianoRollGrid.innerHTML = "";
+        pianoRollBarNumbers.innerHTML = "";
+        
+        const data = pianoRollData[currentSampleForPopup];
+        
+        // Set the grid width and update cell width
+        gridSizeDisplay.textContent = data.gridWidth;
+        updatePianoRollCellWidth();
+        
+        // Create bar numbers
+        const cellsPerBar = 4; // 4 cells per bar (16th notes)
+        const totalBars = Math.ceil(data.gridWidth / cellsPerBar);
+        
+        for (let bar = 0; bar < totalBars; bar++) {
+            const barNumber = document.createElement("div");
+            barNumber.className = "piano-roll-bar-number";
+            
+            // Add bar-start class to the first cell of each bar
+            if (bar * cellsPerBar % data.gridWidth === 0) {
+                barNumber.classList.add("bar-start");
+            }
+            
+            // Set the width to span 4 cells (one bar)
+            barNumber.style.width = `${80 * pianoRollZoomLevel}px`; // 4 cells * 20px * zoom level
+            
+            // Set the text to the bar number
+            barNumber.textContent = `Bar ${bar + 1}`;
+            
+            pianoRollBarNumbers.appendChild(barNumber);
+        }
+        
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const octaves = 7;
+        for (let octave = octaves - 1; octave >= 0; octave--) {
+            for (let i = 0; i < 12; i++) {
+                const key = document.createElement("div");
+                key.className = `piano-key ${noteNames[i].includes("#")?"black":"white"}`;
+                key.textContent = noteNames[i] + octave;
+                key.dataset.note = noteNames[i];
+                key.dataset.octave = octave;
+                
+                // Fix: Make sure the event listener is properly attached
+                key.addEventListener("click", function () {
+                    // Resume audio context if suspended
+                    if (audioContext.state === "suspended") {
+                        audioContext.resume().then(() => {
+                            playPianoKey(noteNames[i], octave);
+                        }).catch(e => console.error("Error resuming audio context:", e));
+                    } else {
+                        playPianoKey(noteNames[i], octave);
+                    }
+                });
+                
+                pianoKeys.appendChild(key);
+            }
+        }
+        for (let row = data.gridHeight - 1; row >= 0; row--) {
+            for (let col = 0; col < data.gridWidth; col++) {
+                const cell = document.createElement("div");
+                cell.className = "piano-roll-cell";
+                if (col % 4 === 0) {
+                    cell.classList.add("bar-start");
+                }
+                if ((col + 1) % 4 === 0) {
+                    cell.classList.add("bar-end");
+                }
+                cell.dataset.row = row;
+                cell.dataset.col = col;
+                const isPartOfNote = data.notes.some(note => note.row === row && note.col <= col && col < note.col + (note.length || 1));
+                const isNoteStart = data.notes.some(note => note.row === row && note.col === col);
+                if (isPartOfNote) {
+                    cell.classList.add("active");
+                    if (!isNoteStart) {
+                        cell.classList.add("note-long");
+                    }
+                }
+                cell.addEventListener("click", function () {
+                    togglePianoRollCell(row, col);
+                });
+                pianoRollGrid.appendChild(cell);
+            }
+        }
+        soundSourceSelect.value = data.soundSource;
+        noteLengthSelect.value = pianoRollNoteLength;
+        soundSourceSelect.addEventListener("change", function () {
+            data.soundSource = this.value;
+            if (this.value === "sample") {
+                openSampleSelectionPopup();
+            }
+        });
+        noteLengthSelect.addEventListener("change", function () {
+            pianoRollNoteLength = parseFloat(this.value);
+        });
+        gridSizeDecreaseBtn.addEventListener("click", function () {
+            if (data.gridWidth > 4) {
+                data.gridWidth /= 2;
+                gridSizeDisplay.textContent = data.gridWidth;
+                updatePianoRollCellWidth();
+                
+                // Recreate bar numbers
+                pianoRollBarNumbers.innerHTML = "";
+                const cellsPerBar = 4;
+                const totalBars = Math.ceil(data.gridWidth / cellsPerBar);
+                
+                for (let bar = 0; bar < totalBars; bar++) {
+                    const barNumber = document.createElement("div");
+                    barNumber.className = "piano-roll-bar-number";
+                    
+                    if (bar * cellsPerBar % data.gridWidth === 0) {
+                        barNumber.classList.add("bar-start");
+                    }
+                    
+                    barNumber.style.width = `${80 * pianoRollZoomLevel}px`;
+                    barNumber.textContent = `Bar ${bar + 1}`;
+                    
+                    pianoRollBarNumbers.appendChild(barNumber);
+                }
+                
+                // Recreate grid
+                pianoRollGrid.innerHTML = "";
+                for (let row = data.gridHeight - 1; row >= 0; row--) {
+                    for (let col = 0; col < data.gridWidth; col++) {
+                        const cell = document.createElement("div");
+                        cell.className = "piano-roll-cell";
+                        if (col % 4 === 0) {
+                            cell.classList.add("bar-start");
+                        }
+                        if ((col + 1) % 4 === 0) {
+                            cell.classList.add("bar-end");
+                        }
+                        cell.dataset.row = row;
+                        cell.dataset.col = col;
+                        const isPartOfNote = data.notes.some(note => note.row === row && note.col <= col && col < note.col + (note.length || 1));
+                        const isNoteStart = data.notes.some(note => note.row === row && note.col === col);
+                        if (isPartOfNote) {
+                            cell.classList.add("active");
+                            if (!isNoteStart) {
+                                cell.classList.add("note-long");
+                            }
+                        }
+                        cell.addEventListener("click", function () {
+                            togglePianoRollCell(row, col);
+                        });
+                        pianoRollGrid.appendChild(cell);
+                    }
+                }
+            }
+        });
+        gridSizeIncreaseBtn.addEventListener("click", function () {
+            // Changed maximum grid size from 256 to 128
+            if (data.gridWidth < 128) {
+                data.gridWidth *= 2;
+                gridSizeDisplay.textContent = data.gridWidth;
+                updatePianoRollCellWidth();
+                
+                // Recreate bar numbers
+                pianoRollBarNumbers.innerHTML = "";
+                const cellsPerBar = 4;
+                const totalBars = Math.ceil(data.gridWidth / cellsPerBar);
+                
+                for (let bar = 0; bar < totalBars; bar++) {
+                    const barNumber = document.createElement("div");
+                    barNumber.className = "piano-roll-bar-number";
+                    
+                    if (bar * cellsPerBar % data.gridWidth === 0) {
+                        barNumber.classList.add("bar-start");
+                    }
+                    
+                    barNumber.style.width = `${80 * pianoRollZoomLevel}px`;
+                    barNumber.textContent = `Bar ${bar + 1}`;
+                    
+                    pianoRollBarNumbers.appendChild(barNumber);
+                }
+                
+                // Recreate grid
+                pianoRollGrid.innerHTML = "";
+                for (let row = data.gridHeight - 1; row >= 0; row--) {
+                    for (let col = 0; col < data.gridWidth; col++) {
+                        const cell = document.createElement("div");
+                        cell.className = "piano-roll-cell";
+                        if (col % 4 === 0) {
+                            cell.classList.add("bar-start");
+                        }
+                        if ((col + 1) % 4 === 0) {
+                            cell.classList.add("bar-end");
+                        }
+                        cell.dataset.row = row;
+                        cell.dataset.col = col;
+                        const isPartOfNote = data.notes.some(note => note.row === row && note.col <= col && col < note.col + (note.length || 1));
+                        const isNoteStart = data.notes.some(note => note.row === row && note.col === col);
+                        if (isPartOfNote) {
+                            cell.classList.add("active");
+                            if (!isNoteStart) {
+                                cell.classList.add("note-long");
+                            }
+                        }
+                        cell.addEventListener("click", function () {
+                            togglePianoRollCell(row, col);
+                        });
+                        pianoRollGrid.appendChild(cell);
+                    }
+                }
+            }
+        });
+        const previewBtn = document.getElementById("piano-roll-preview-btn");
+        const stopBtn = document.getElementById("piano-roll-stop-btn");
+        const clearBtn = document.getElementById("piano-roll-clear-btn");
+        previewBtn.replaceWith(previewBtn.cloneNode(true));
+        stopBtn.replaceWith(stopBtn.cloneNode(true));
+        clearBtn.replaceWith(clearBtn.cloneNode(true));
+        const newPreviewBtn = document.getElementById("piano-roll-preview-btn");
+        const newStopBtn = document.getElementById("piano-roll-stop-btn");
+        const newClearBtn = document.getElementById("piano-roll-clear-btn");
+        newPreviewBtn.addEventListener("click", previewPianoRoll);
+        newStopBtn.addEventListener("click", stopPianoRollPreview);
+        newClearBtn.addEventListener("click", function () {
+            clearPianoRoll();
+            stopPianoRollPreview();
+        });
+        initPianoRollVisualizer();
+    }
+
+    function initPianoRollVisualizer() {
+        if (!currentSampleForPopup) return;
+        pianoRollVisualizer = document.getElementById("piano-roll-visualizer");
+        pianoRollVisualizerCtx = pianoRollVisualizer.getContext("2d");
+        const container = pianoRollVisualizer.parentElement;
+        pianoRollVisualizer.width = container.clientWidth;
+        pianoRollVisualizer.height = container.clientHeight;
+        if (pianoRollVisualizerAnimationId) {
+            cancelAnimationFrame(pianoRollVisualizerAnimationId);
+            pianoRollVisualizerAnimationId = null;
+        }
+        pianoRollVisualizerHistory = [];
+        drawPianoRollVisualizer();
+    }
+
+    function drawPianoRollVisualizer() {
+        if (!pianoRollVisualizer || !pianoRollVisualizerCtx) return;
+        const width = pianoRollVisualizer.width;
+        const height = pianoRollVisualizer.height;
+        pianoRollVisualizerCtx.fillStyle = "#111";
+        pianoRollVisualizerCtx.fillRect(0, 0, width, height);
+        if (pianoRollVisualizerHistory.length > 0) {
+            const gradient = pianoRollVisualizerCtx.createLinearGradient(0, height, 0, 0);
+            gradient.addColorStop(0, "rgba(28, 0, 212, 0.9)");
+            gradient.addColorStop(.1, "rgba(0, 191, 255, 0.95)");
+            gradient.addColorStop(.3, "rgba(0, 210, 154, 0.9)");
+            gradient.addColorStop(.5, "rgba(255, 196, 0, 0.85)");
+            gradient.addColorStop(.7, "rgba(255, 0, 132, 0.85)");
+            gradient.addColorStop(.9, "rgba(255, 0, 255, 0.85)");
+            gradient.addColorStop(1, "rgba(170, 0, 255, 0.85)");
+            const sliceWidth = width / pianoRollVisualizerHistorySize;
+            for (let h = 0; h < pianoRollVisualizerHistory.length; h++) {
+                const dataArray = pianoRollVisualizerHistory[h];
+                const x = h * sliceWidth;
+                const alpha = .4 + h / pianoRollVisualizerHistory.length * .6;
+                pianoRollVisualizerCtx.beginPath();
+                pianoRollVisualizerCtx.moveTo(x, height);
+                const maxFreq = audioContext.sampleRate / 2;
+                const minLogFreq = Math.log10(20);
+                const maxLogFreq = Math.log10(maxFreq);
+                for (let i = 0; i < dataArray.length; i++) {
+                    const freq = i * maxFreq / dataArray.length;
+                    const logFreq = Math.log10(Math.max(20, freq));
+                    const normalizedLogFreq = (logFreq - minLogFreq) / (maxLogFreq - minLogFreq);
+                    const y = height - normalizedLogFreq * height;
+                    const amplitude = dataArray[i] / 255;
+                    const enhancedAmplitude = Math.pow(amplitude, .4);
+                    const ampHeight = enhancedAmplitude * height * .8;
+                    pianoRollVisualizerCtx.lineTo(x, y - ampHeight);
+                }
+                pianoRollVisualizerCtx.lineTo(x + sliceWidth, height);
+                pianoRollVisualizerCtx.closePath();
+                pianoRollVisualizerCtx.globalAlpha = alpha;
+                pianoRollVisualizerCtx.fillStyle = gradient;
+                pianoRollVisualizerCtx.fill();
+            }
+            pianoRollVisualizerCtx.globalAlpha = 1;
+            if (pianoRollVisualizerHistory.length > 0) {
+                const latestData = pianoRollVisualizerHistory[pianoRollVisualizerHistory.length - 1];
+                pianoRollVisualizerCtx.strokeStyle = "rgba(96, 96, 96, 1)";
+                pianoRollVisualizerCtx.lineWidth = 2;
+                pianoRollVisualizerCtx.beginPath();
+                const maxFreq = audioContext.sampleRate / 2;
+                const minLogFreq = Math.log10(20);
+                const maxLogFreq = Math.log10(maxFreq);
+                for (let i = 0; i < latestData.length; i++) {
+                    const freq = i * maxFreq / latestData.length;
+                    const logFreq = Math.log10(Math.max(20, freq));
+                    const normalizedLogFreq = (logFreq - minLogFreq) / (maxLogFreq - minLogFreq);
+                    const x = normalizedLogFreq * width;
+                    const amplitude = latestData[i] / 255;
+                    const enhancedAmplitude = Math.pow(amplitude, .4);
+                    const y = height - enhancedAmplitude * height * .8;
+                    if (i === 0) {
+                        pianoRollVisualizerCtx.moveTo(x, y);
+                    } else {
+                        pianoRollVisualizerCtx.lineTo(x, y);
+                    }
+                }
+                pianoRollVisualizerCtx.stroke();
+            }
+        }
+    }
+
+    function startPianoRollVisualizerAnimation() {
+        if (!pianoRollVisualizerAnalyzer) return;
+        const bufferLength = pianoRollVisualizerAnalyzer.frequencyBinCount;
+        const dataArray = new Uint8Array(bufferLength);
+
+        function animate() {
+            pianoRollVisualizerAnimationId = requestAnimationFrame(animate);
+            pianoRollVisualizerAnalyzer.getByteFrequencyData(dataArray);
+            pianoRollVisualizerHistory.push([...dataArray]);
+            if (pianoRollVisualizerHistory.length > pianoRollVisualizerHistorySize) {
+                pianoRollVisualizerHistory.shift();
+            }
+            drawPianoRollVisualizer();
+        }
+        animate();
+    }
+
+    function stopPianoRollVisualizerAnimation() {
+        if (pianoRollVisualizerAnimationId) {
+            cancelAnimationFrame(pianoRollVisualizerAnimationId);
+            pianoRollVisualizerAnimationId = null;
+        }
+        pianoRollVisualizerHistory = [];
+        drawPianoRollVisualizer();
+    }
+
+    function playPianoKey(noteName, octave) {
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = "sine";
+        const gainNode = audioContext.createGain();
+        oscillator.connect(gainNode);
+        gainNode.connect(masterOutputNode);
+        oscillator.frequency.value = frequency;
+        const now = audioContext.currentTime;
+        const attackTime = .01;
+        const decayTime = .1;
+        const sustainLevel = .7;
+        gainNode.gain.setValueAtTime(0, now);
+        gainNode.gain.linearRampToValueAtTime(1, now + attackTime);
+        gainNode.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        gainNode.gain.linearRampToValueAtTime(0, now + attackTime + decayTime + 0.3); // Added release time
+        oscillator.start(now);
+        oscillator.stop(now + attackTime + decayTime + 0.3); // Added release time
+    }
+
+    function togglePianoRollCell(row, col) {
+        if (!currentSampleForPopup) return;
+        const data = pianoRollData[currentSampleForPopup];
+        const existingNoteIndex = data.notes.findIndex(note => note.row === row && note.col === col);
+        if (existingNoteIndex !== -1) {
+            const note = data.notes[existingNoteIndex];
+            for (let c = col; c < col + (note.length || 1); c++) {
+                const cell = document.querySelector(`.piano-roll-cell[data-row="${row}"][data-col="${c}"]`);
+                if (cell) {
+                    cell.classList.remove("active", "note-long");
+                }
+            }
+            data.notes.splice(existingNoteIndex, 1);
+        } else {
+            const noteLength = pianoRollNoteLength;
+            const note = {
+                row: row,
+                col: col,
+                length: noteLength
+            };
+            data.notes.push(note);
+            for (let c = col; c < col + noteLength; c++) {
+                const cell = document.querySelector(`.piano-roll-cell[data-row="${row}"][data-col="${c}"]`);
+                if (cell) {
+                    cell.classList.add("active");
+                    if (c > col) {
+                        cell.classList.add("note-long");
+                    }
+                }
+            }
+        }
+    }
+
+    function clearPianoRoll() {
+        if (!currentSampleForPopup) return;
+        const data = pianoRollData[currentSampleForPopup];
+        data.notes = [];
+        const cells = document.querySelectorAll(".piano-roll-cell.active");
+        cells.forEach(cell => {
+            cell.classList.remove("active", "note-long");
+        });
+    }
+
+    function previewPianoRoll() {
+        if (!currentSampleForPopup || isPreviewingPianoRoll) return;
+        isPreviewingPianoRoll = true;
+        currentPianoRollSample = currentSampleForPopup;
+        const data = pianoRollData[currentSampleForPopup];
+        const sortedNotes = [...data.notes].sort((a, b) => a.col - b.col);
+        if (sortedNotes.length === 0) return;
+        if (audioContext.state === "suspended") {
+            audioContext.resume()["catch"](e => console.error("Error resuming audio context:", e));
+        }
+        const soundSource = data.soundSource;
+        const isLongSample = currentSampleForPopup > 60;
+        let beatDuration, barDuration;
+        if (isLongSample) {
+            beatDuration = 60 / longLoopTempo;
+            barDuration = beatDuration * 4;
+        } else {
+            const effectiveTempo = tempo + highTempo;
+            beatDuration = 60 / effectiveTempo;
+            barDuration = beatDuration * 4;
+        }
+        const sixteenthDuration = barDuration / 16;
+        const previewGain = audioContext.createGain();
+        const lowShelfFilter = audioContext.createBiquadFilter();
+        lowShelfFilter.type = "lowshelf";
+        lowShelfFilter.frequency.value = 200;
+        lowShelfFilter.gain.value = data.filters.lowShelf || 0;
+        const lowMidFilter = audioContext.createBiquadFilter();
+        lowMidFilter.type = "peaking";
+        lowMidFilter.frequency.value = 500;
+        lowMidFilter.Q.value = 1;
+        lowMidFilter.gain.value = data.filters.lowMid || 0;
+        const midFilter = audioContext.createBiquadFilter();
+        midFilter.type = "peaking";
+        midFilter.frequency.value = 1500;
+        midFilter.Q.value = 1;
+        midFilter.gain.value = data.filters.mid || 0;
+        const highMidFilter = audioContext.createBiquadFilter();
+        highMidFilter.type = "peaking";
+        highMidFilter.frequency.value = 4e3;
+        highMidFilter.Q.value = 1;
+        highMidFilter.gain.value = data.filters.highMid || 0;
+        const highShelfFilter = audioContext.createBiquadFilter();
+        highShelfFilter.type = "highshelf";
+        highShelfFilter.frequency.value = 8e3;
+        highShelfFilter.gain.value = data.filters.highShelf || 0;
+        const delayNode = audioContext.createDelay(1);
+        delayNode.delayTime.value = (data.filters.delay.time || 0) / 1e3;
+        const delayFeedbackNode = audioContext.createGain();
+        delayFeedbackNode.gain.value = (data.filters.delay.feedback || 0) / 100;
+        previewGain.connect(lowShelfFilter);
+        lowShelfFilter.connect(lowMidFilter);
+        lowMidFilter.connect(midFilter);
+        midFilter.connect(highMidFilter);
+        highMidFilter.connect(highShelfFilter);
+        highShelfFilter.connect(delayNode);
+        delayNode.connect(delayFeedbackNode);
+        delayFeedbackNode.connect(delayNode);
+        delayNode.connect(audioContext.destination);
+        pianoRollVisualizerAnalyzer = audioContext.createAnalyser();
+        pianoRollVisualizerAnalyzer.fftSize = 4096;
+        pianoRollVisualizerAnalyzer.smoothingTimeConstant = .7;
+        delayNode.connect(pianoRollVisualizerAnalyzer);
+        pianoRollFilterNodes = {
+            lowShelf: lowShelfFilter,
+            lowMid: lowMidFilter,
+            mid: midFilter,
+            highMid: highMidFilter,
+            highShelf: highShelfFilter,
+            delay: delayNode,
+            delayFeedback: delayFeedbackNode
+        };
+        
+        const loopDuration = data.gridWidth * sixteenthDuration;
+        pianoRollPreviewNodes[currentSampleForPopup] = {
+            gain: previewGain,
+            loopDuration: loopDuration,
+            sixteenthDuration: sixteenthDuration,
+            soundSource: soundSource,
+            sampleRange: data.sampleRange,
+            filters: data.filters
+        };
+        startPianoRollVisualizerAnimation();
+        startPianoRollLoop();
+    }
+
+    function startPianoRollLoop() {
+        if (!isPreviewingPianoRoll || !currentPianoRollSample || !pianoRollPreviewNodes[currentPianoRollSample]) return;
+        const nodes = pianoRollPreviewNodes[currentPianoRollSample];
+        const currentTime = audioContext.currentTime;
+        const currentNotes = pianoRollData[currentPianoRollSample].notes;
+        const sortedNotes = [...currentNotes].sort((a, b) => a.col - b.col);
+        sortedNotes.forEach(note => {
+            const noteTime = currentTime + note.col * nodes.sixteenthDuration;
+            const noteDuration = (note.length || 1) * nodes.sixteenthDuration;
+            if (nodes.soundSource === "piano") {
+                playPianoNoteForPreview(note.row, noteTime, noteDuration, nodes.gain);
+            } else if (nodes.soundSource === "synth") {
+                playSynthNoteForPreview(note.row, noteTime, noteDuration, nodes.gain);
+            } else if (nodes.soundSource === "strings") {
+                playStringsNoteForPreview(note.row, noteTime, noteDuration, nodes.gain);
+            } else if (nodes.soundSource === "bass") {
+                playBassNoteForPreview(note.row, noteTime, noteDuration, nodes.gain);
+            } else if (nodes.soundSource === "lead") {
+                playLeadNoteForPreview(note.row, noteTime, noteDuration, nodes.gain);
+            } else if (nodes.soundSource === "pad") {
+                playPadNoteForPreview(note.row, noteTime, noteDuration, nodes.gain);
+            } else if (nodes.soundSource === "pluck") {
+                playPluckNoteForPreview(note.row, noteTime, noteDuration, nodes.gain);
+            } else {
+                playSampleNoteForPreview(note.row, noteTime, noteDuration, nodes.gain, currentPianoRollSample, nodes.sampleRange);
+            }
+        });
+        pianoRollLoopInterval = setTimeout(() => {
+            if (isPreviewingPianoRoll && currentPianoRollSample) {
+                startPianoRollLoop();
+            }
+        }, nodes.loopDuration * 1e3);
+    }
+
+    function playPianoNoteForPreview(row, time, duration, gainNode) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = "sine";
+        const noteGain = audioContext.createGain();
+        oscillator.connect(noteGain);
+        noteGain.connect(gainNode);
+        oscillator.frequency.value = frequency;
+        const now = time;
+        const attackTime = .01;
+        const decayTime = .1;
+        const sustainLevel = .7;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        oscillator.start(now);
+        oscillator.stop(now + duration);
+    }
+
+    function playSynthNoteForPreview(row, time, duration, gainNode) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator1 = audioContext.createOscillator();
+        oscillator1.type = "sawtooth";
+        const oscillator2 = audioContext.createOscillator();
+        oscillator2.type = "square";
+        const noteGain = audioContext.createGain();
+        const filter = audioContext.createBiquadFilter();
+        filter.type = "lowpass";
+        filter.frequency.value = frequency * 4;
+        filter.Q.value = 10;
+        oscillator1.connect(filter);
+        oscillator2.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(gainNode);
+        oscillator1.frequency.value = frequency;
+        oscillator2.frequency.value = frequency * .5;
+        const now = time;
+        const attackTime = .05;
+        const decayTime = .2;
+        const sustainLevel = .6;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        oscillator1.start(now);
+        oscillator2.start(now);
+        oscillator1.stop(now + duration);
+        oscillator2.stop(now + duration);
+    }
+
+    function playStringsNoteForPreview(row, time, duration, gainNode) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = "triangle";
+        const noteGain = audioContext.createGain();
+        const filter = audioContext.createBiquadFilter();
+        filter.type = "lowpass";
+        filter.frequency.value = frequency * 2;
+        filter.Q.value = 5;
+        oscillator.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(gainNode);
+        oscillator.frequency.value = frequency;
+        const now = time;
+        const attackTime = .1;
+        const decayTime = .3;
+        const sustainLevel = .7;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        oscillator.start(now);
+        oscillator.stop(now + duration);
+    }
+
+    function playBassNoteForPreview(row, time, duration, gainNode) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = "sawtooth";
+        const noteGain = audioContext.createGain();
+        const filter = audioContext.createBiquadFilter();
+        filter.type = "lowpass";
+        filter.frequency.value = frequency * 1.5;
+        filter.Q.value = 5;
+        oscillator.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(gainNode);
+        oscillator.frequency.value = frequency * .5;
+        const now = time;
+        const attackTime = .05;
+        const decayTime = .2;
+        const sustainLevel = .8;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        oscillator.start(now);
+        oscillator.stop(now + duration);
+    }
+
+    function playLeadNoteForPreview(row, time, duration, gainNode) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = "sawtooth";
+        const noteGain = audioContext.createGain();
+        const filter = audioContext.createBiquadFilter();
+        filter.type = "lowpass";
+        filter.frequency.value = frequency * 3;
+        filter.Q.value = 2;
+        oscillator.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(gainNode);
+        oscillator.frequency.value = frequency;
+        const now = time;
+        const attackTime = .02;
+        const decayTime = .1;
+        const sustainLevel = .7;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        oscillator.start(now);
+        oscillator.stop(now + duration);
+    }
+
+    function playPadNoteForPreview(row, time, duration, gainNode) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = "sine";
+        const noteGain = audioContext.createGain();
+        const filter = audioContext.createBiquadFilter();
+        filter.type = "lowpass";
+        filter.frequency.value = frequency * 1.2;
+        filter.Q.value = 3;
+        oscillator.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(gainNode);
+        oscillator.frequency.value = frequency;
+        const now = time;
+        const attackTime = .3;
+        const decayTime = .5;
+        const sustainLevel = .8;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        oscillator.start(now);
+        oscillator.stop(now + duration);
+    }
+
+    function playPluckNoteForPreview(row, time, duration, gainNode) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = "square";
+        const noteGain = audioContext.createGain();
+        const filter = audioContext.createBiquadFilter();
+        filter.type = "highpass";
+        filter.frequency.value = frequency * .8;
+        filter.Q = 5;
+        oscillator.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(gainNode);
+        oscillator.frequency.value = frequency;
+        const now = time;
+        const attackTime = .01;
+        const decayTime = .1;
+        const sustainLevel = .5;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        oscillator.start(now);
+        oscillator.stop(now + duration);
+    }
+
+    function playSampleNoteForPreview(row, time, duration, gainNode, sampleNumber, sampleRange) {
+        if (!currentPlaying[sampleNumber] || !currentPlaying[sampleNumber].buffer) return;
+        const source = audioContext.createBufferSource();
+        source.buffer = currentPlaying[sampleNumber].buffer;
+        const noteGain = audioContext.createGain();
+        source.connect(noteGain);
+        noteGain.connect(gainNode);
+        const semitoneRatio = Math.pow(2, 1 / 12);
+        const middleRow = 42;
+        const pitchMultiplier = Math.pow(semitoneRatio, row - middleRow);
+        source.playbackRate.value = pitchMultiplier;
+        const now = time;
+        const attackTime = .01;
+        const decayTime = .1;
+        const sustainLevel = .7;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        const bufferDuration = currentPlaying[sampleNumber].buffer.duration;
+        const startTime = bufferDuration * (sampleRange.start / 100);
+        const endTime = bufferDuration * (sampleRange.end / 100);
+        source.start(now, startTime);
+        source.stop(now + duration, endTime);
+    }
+
+    function stopPianoRollPreview() {
+        if (!isPreviewingPianoRoll || !currentPianoRollSample) return;
+        isPreviewingPianoRoll = false;
+        if (pianoRollLoopInterval) {
+            clearTimeout(pianoRollLoopInterval);
+            pianoRollLoopInterval = null;
+        }
+        if (pianoRollPreviewNodes[currentPianoRollSample]) {
+            const {
+                gain
+            } = pianoRollPreviewNodes[currentPianoRollSample];
+            gain.gain.cancelScheduledValues(audioContext.currentTime);
+            gain.gain.setValueAtTime(gain.gain.value, audioContext.currentTime);
+            gain.gain.linearRampToValueAtTime(0, audioContext.currentTime + .1);
+            setTimeout(() => {
+                gain.disconnect();
+            }, 200);
+            delete pianoRollPreviewNodes[currentPianoRollSample];
+        }
+        if (pianoRollFilterNodes.lowShelf) {
+            pianoRollFilterNodes.lowShelf.disconnect();
+            pianoRollFilterNodes.lowShelf = null;
+        }
+        if (pianoRollFilterNodes.lowMid) {
+            pianoRollFilterNodes.lowMid.disconnect();
+            pianoRollFilterNodes.lowMid = null;
+        }
+        if (pianoRollFilterNodes.mid) {
+            pianoRollFilterNodes.mid.disconnect();
+            pianoRollFilterNodes.mid = null;
+        }
+        if (pianoRollFilterNodes.highMid) {
+            pianoRollFilterNodes.highMid.disconnect();
+            pianoRollFilterNodes.highMid = null;
+        }
+        if (pianoRollFilterNodes.highShelf) {
+            pianoRollFilterNodes.highShelf.disconnect();
+            pianoRollFilterNodes.highShelf = null;
+        }
+        if (pianoRollFilterNodes.delay) {
+            pianoRollFilterNodes.delay.disconnect();
+            pianoRollFilterNodes.delay = null;
+        }
+        if (pianoRollFilterNodes.delayFeedback) {
+            pianoRollFilterNodes.delayFeedback.disconnect();
+            pianoRollFilterNodes.delayFeedback = null;
+        }
+        if (pianoRollVisualizerAnalyzer) {
+            pianoRollVisualizerAnalyzer.disconnect();
+            pianoRollVisualizerAnalyzer = null;
+        }
+        stopPianoRollVisualizerAnimation();
+        currentPianoRollSample = null;
+    }
+    async function savePianoRollAsSampleForCurrentButton() {
+        if (!currentSampleForPopup) return;
+        const data = pianoRollData[currentSampleForPopup];
+        if (data.notes.length === 0) {
+            console.log("No notes to save");
+            return;
+        }
+        const sortedNotes = [...data.notes].sort((a, b) => a.col - b.col);
+        const soundSource = data.soundSource;
+        const isLongSample = currentSampleForPopup > 60;
+        let beatDuration, barDuration;
+        if (isLongSample) {
+            beatDuration = 60 / longLoopTempo;
+            barDuration = beatDuration * 4;
+        } else {
+            const effectiveTempo = tempo + highTempo;
+            beatDuration = 60 / effectiveTempo;
+            barDuration = beatDuration * 4;
+        }
+        const sixteenthDuration = barDuration / 16;
+        
+        // Calculate the base buffer length
+        const baseBufferLength = data.gridWidth * sixteenthDuration;
+        
+        // Calculate the delay tail length
+        const delayTime = (data.filters.delay.time || 0) / 1000;
+        const delayFeedback = (data.filters.delay.feedback || 0) / 100;
+        
+        // Calculate the number of repetitions needed for the delay to decay to near silence
+        // We'll consider it decayed when it's below -60dB (about 0.001 of the original amplitude)
+        const decayThreshold = 0.001;
+        let delayTailLength = 0;
+        
+        if (delayTime > 0 && delayFeedback > 0) {
+            // Calculate how many repetitions are needed for the delay to decay
+            const repetitionsNeeded = Math.ceil(Math.log(decayThreshold) / Math.log(delayFeedback));
+            delayTailLength = delayTime * repetitionsNeeded;
+            
+            // Add a small buffer to ensure complete decay
+            delayTailLength += 0.1; // 100ms additional buffer
+        }
+        
+        // Calculate the total buffer length including the delay tail
+        const bufferLength = baseBufferLength + delayTailLength;
+        
+        const offlineContext = new OfflineAudioContext(2, audioContext.sampleRate * bufferLength, audioContext.sampleRate);
+        const masterGain = offlineContext.createGain();
+        const lowShelfFilter = offlineContext.createBiquadFilter();
+        lowShelfFilter.type = "lowshelf";
+        lowShelfFilter.frequency.value = 200;
+        lowShelfFilter.gain.value = data.filters.lowShelf || 0;
+        const lowMidFilter = offlineContext.createBiquadFilter();
+        lowMidFilter.type = "peaking";
+        lowMidFilter.frequency.value = 500;
+        lowMidFilter.Q.value = 1;
+        lowMidFilter.gain.value = data.filters.lowMid || 0;
+        const midFilter = offlineContext.createBiquadFilter();
+        midFilter.type = "peaking";
+        midFilter.frequency.value = 1500;
+        midFilter.Q.value = 1;
+        midFilter.gain.value = data.filters.mid || 0;
+        const highMidFilter = offlineContext.createBiquadFilter();
+        highMidFilter.type = "peaking";
+        highMidFilter.frequency.value = 4000;
+        highMidFilter.Q.value = 1;
+        highMidFilter.gain.value = data.filters.highMid || 0;
+        const highShelfFilter = offlineContext.createBiquadFilter();
+        highShelfFilter.type = "highshelf";
+        highShelfFilter.frequency.value = 8000;
+        highShelfFilter.gain.value = data.filters.highShelf || 0;
+        const delayNode = offlineContext.createDelay(1);
+        delayNode.delayTime.value = delayTime;
+        const delayFeedbackNode = offlineContext.createGain();
+        delayFeedbackNode.gain.value = delayFeedback;
+        masterGain.connect(lowShelfFilter);
+        lowShelfFilter.connect(lowMidFilter);
+        lowMidFilter.connect(midFilter);
+        midFilter.connect(highMidFilter);
+        highMidFilter.connect(highShelfFilter);
+        highShelfFilter.connect(delayNode);
+        delayNode.connect(delayFeedbackNode);
+        delayFeedbackNode.connect(delayNode);
+        delayNode.connect(offlineContext.destination);
+        
+        sortedNotes.forEach(note => {
+            const noteTime = note.col * sixteenthDuration;
+            const noteDuration = (note.length || 1) * sixteenthDuration;
+            if (soundSource === "piano") {
+                renderPianoNote(offlineContext, note.row, noteTime, noteDuration, masterGain);
+            } else if (soundSource === "synth") {
+                renderSynthNote(offlineContext, note.row, noteTime, noteDuration, masterGain);
+            } else if (soundSource === "strings") {
+                renderStringsNote(offlineContext, note.row, noteTime, noteDuration, masterGain);
+            } else if (soundSource === "bass") {
+                renderBassNote(offlineContext, note.row, noteTime, noteDuration, masterGain);
+            } else if (soundSource === "lead") {
+                renderLeadNote(offlineContext, note.row, noteTime, noteDuration, masterGain);
+            } else if (soundSource === "pad") {
+                renderPadNote(offlineContext, note.row, noteTime, noteDuration, masterGain);
+            } else if (soundSource === "pluck") {
+                renderPluckNote(offlineContext, note.row, noteTime, noteDuration, masterGain);
+            } else {
+                renderSampleNote(offlineContext, note.row, noteTime, noteDuration, masterGain, currentSampleForPopup, data.sampleRange);
+            }
+        });
+        try {
+            const renderedBuffer = await offlineContext.startRendering();
+            if (!renderedBuffer || renderedBuffer.length === 0) {
+                console.error("Error: Rendered buffer is empty or invalid");
+                return;
+            }
+            
+            // If we have a delay tail, we need to create a loopable version of the buffer
+            if (delayTailLength > 0) {
+                // Create a new buffer that's just the original loop length
+                const loopableBuffer = audioContext.createBuffer(
+                    renderedBuffer.numberOfChannels,
+                    Math.floor(audioContext.sampleRate * baseBufferLength),
+                    audioContext.sampleRate
+                );
+                
+                // Copy the original loop portion
+                for (let channel = 0; channel < renderedBuffer.numberOfChannels; channel++) {
+                    const sourceData = renderedBuffer.getChannelData(channel);
+                    const targetData = loopableBuffer.getChannelData(channel);
+                    
+                    // Copy the original loop portion
+                    for (let i = 0; i < targetData.length; i++) {
+                        targetData[i] = sourceData[i];
+                    }
+                    
+                    // Add the delay tail that would overlap with the next loop
+                    const delayTailSamples = Math.floor(audioContext.sampleRate * delayTailLength);
+                    for (let i = 0; i < Math.min(delayTailSamples, targetData.length); i++) {
+                        targetData[i] += sourceData[targetData.length + i];
+                    }
+                }
+                
+                currentPlaying[currentSampleForPopup].buffer = loopableBuffer;
+                currentPlaying[currentSampleForPopup].loopDuration = baseBufferLength;
+            } else {
+                currentPlaying[currentSampleForPopup].buffer = renderedBuffer;
+                currentPlaying[currentSampleForPopup].loopDuration = renderedBuffer.duration;
+            }
+            
+            currentPlaying[currentSampleForPopup].bufferSampleNumber = currentSampleForPopup;
+            currentPlaying[currentSampleForPopup].isCustomSample = true;
+            const button = currentPlaying[currentSampleForPopup].button;
+            if (button) {
+                addCustomIndicator(button);
+                button.classList.remove("no-sample");
+            }
+            if (currentPlaying[currentSampleForPopup].isScheduled && currentPlaying[currentSampleForPopup].isActive) {
+                stopSample(currentSampleForPopup);
+                currentPlaying[currentSampleForPopup].scheduledForNextBar = true;
+                scheduleSampleForNextBar(currentSampleForPopup);
+            }
+            console.log(`Piano roll saved as sample for ${currentSampleForPopup}`);
+        } catch (error) {
+            console.error("Error rendering piano roll:", error);
+            throw error;
+        }
+    }
+
+    function renderPianoNote(offlineContext, row, time, duration, outputNode) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = offlineContext.createOscillator();
+        oscillator.type = "sine";
+        const noteGain = offlineContext.createGain();
+        oscillator.connect(noteGain);
+        noteGain.connect(outputNode);
+        oscillator.frequency.value = frequency;
+        const attackTime = .01;
+        const decayTime = .1;
+        const sustainLevel = .7;
+        noteGain.gain.setValueAtTime(0, time);
+        noteGain.gain.linearRampToValueAtTime(1, time + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, time + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, time + duration);
+        oscillator.start(time);
+        oscillator.stop(time + duration);
+    }
+
+    function renderSynthNote(offlineContext, row, time, duration, outputNode) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator1 = offlineContext.createOscillator();
+        oscillator1.type = "sawtooth";
+        const oscillator2 = offlineContext.createOscillator();
+        oscillator2.type = "square";
+        const noteGain = offlineContext.createGain();
+        const filter = offlineContext.createBiquadFilter();
+        filter.type = "lowpass";
+        filter.frequency.value = frequency * 4;
+        filter.Q.value = 10;
+        oscillator1.connect(filter);
+        oscillator2.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(outputNode);
+        oscillator1.frequency.value = frequency;
+        oscillator2.frequency.value = frequency * .5;
+        const attackTime = .05;
+        const decayTime = .2;
+        const sustainLevel = .6;
+        noteGain.gain.setValueAtTime(0, time);
+        noteGain.gain.linearRampToValueAtTime(1, time + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, time + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, time + duration);
+        oscillator1.start(time);
+        oscillator2.start(time);
+        oscillator1.stop(time + duration);
+        oscillator2.stop(time + duration);
+    }
+
+    function renderStringsNote(offlineContext, row, time, duration, outputNode) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = offlineContext.createOscillator();
+        oscillator.type = "triangle";
+        const noteGain = offlineContext.createGain();
+        const filter = offlineContext.createBiquadFilter();
+        filter.type = "lowpass";
+        filter.frequency.value = frequency * 2;
+        filter.Q.value = 5;
+        oscillator.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(outputNode);
+        oscillator.frequency.value = frequency;
+        const attackTime = .1;
+        const decayTime = .3;
+        const sustainLevel = .7;
+        noteGain.gain.setValueAtTime(0, time);
+        noteGain.gain.linearRampToValueAtTime(1, time + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, time + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, time + duration);
+        oscillator.start(time);
+        oscillator.stop(time + duration);
+    }
+
+    function renderBassNote(offlineContext, row, time, duration, outputNode) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = offlineContext.createOscillator();
+        oscillator.type = "sawtooth";
+        const noteGain = offlineContext.createGain();
+        const filter = offlineContext.createBiquadFilter();
+        filter.type = "lowpass";
+        filter.frequency.value = frequency * 1.5;
+        filter.Q.value = 5;
+        oscillator.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(outputNode);
+        oscillator.frequency.value = frequency * .5;
+        const attackTime = .05;
+        const decayTime = .2;
+        const sustainLevel = .8;
+        noteGain.gain.setValueAtTime(0, time);
+        noteGain.gain.linearRampToValueAtTime(1, time + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, time + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, time + duration);
+        oscillator.start(time);
+        oscillator.stop(time + duration);
+    }
+
+    function renderLeadNote(offlineContext, row, time, duration, outputNode) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = offlineContext.createOscillator();
+        oscillator.type = "sawtooth";
+        const noteGain = offlineContext.createGain();
+        const filter = offlineContext.createBiquadFilter();
+        filter.type = "lowpass";
+        filter.frequency.value = frequency * 3;
+        filter.Q.value = 2;
+        oscillator.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(outputNode);
+        oscillator.frequency.value = frequency;
+        const attackTime = .02;
+        const decayTime = .1;
+        const sustainLevel = .7;
+        noteGain.gain.setValueAtTime(0, time);
+        noteGain.gain.linearRampToValueAtTime(1, time + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, time + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, time + duration);
+        oscillator.start(time);
+        oscillator.stop(time + duration);
+    }
+
+    function renderPadNote(offlineContext, row, time, duration, outputNode) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = offlineContext.createOscillator();
+        oscillator.type = "sine";
+        const noteGain = offlineContext.createGain();
+        const filter = offlineContext.createBiquadFilter();
+        filter.type = "lowpass";
+        filter.frequency.value = frequency * 1.2;
+        filter.Q.value = 3;
+        oscillator.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(outputNode);
+        oscillator.frequency.value = frequency;
+        const attackTime = .3;
+        const decayTime = .5;
+        const sustainLevel = .8;
+        noteGain.gain.setValueAtTime(0, time);
+        noteGain.gain.linearRampToValueAtTime(1, time + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, time + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, time + duration);
+        oscillator.start(time);
+        oscillator.stop(time + duration);
+    }
+
+    function renderPluckNote(offlineContext, row, time, duration, outputNode) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = offlineContext.createOscillator();
+        oscillator.type = "square";
+        const noteGain = offlineContext.createGain();
+        const filter = offlineContext.createBiquadFilter();
+        filter.type = "highpass";
+        filter.frequency.value = frequency * .8;
+        filter.Q = 5;
+        oscillator.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(outputNode);
+        oscillator.frequency.value = frequency;
+        const attackTime = .01;
+        const decayTime = .1;
+        const sustainLevel = .5;
+        noteGain.gain.setValueAtTime(0, time);
+        noteGain.gain.linearRampToValueAtTime(1, time + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, time + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, time + duration);
+        oscillator.start(time);
+        oscillator.stop(time + duration);
+    }
+
+    function renderSampleNote(offlineContext, row, time, duration, outputNode, sampleNumber, sampleRange) {
+        if (!currentPlaying[sampleNumber] || !currentPlaying[sampleNumber].buffer) return;
+        const source = offlineContext.createBufferSource();
+        source.buffer = currentPlaying[sampleNumber].buffer;
+        const noteGain = offlineContext.createGain();
+        source.connect(noteGain);
+        noteGain.connect(outputNode);
+        const semitoneRatio = Math.pow(2, 1 / 12);
+        const middleRow = 42;
+        const pitchMultiplier = Math.pow(semitoneRatio, row - middleRow);
+        source.playbackRate.value = pitchMultiplier;
+        const now = time;
+        const attackTime = .01;
+        const decayTime = .1;
+        const sustainLevel = .7;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        const bufferDuration = currentPlaying[sampleNumber].buffer.duration;
+        const startTime = bufferDuration * (sampleRange.start / 100);
+        const endTime = bufferDuration * (sampleRange.end / 100);
+        source.start(now, startTime);
+        source.stop(now + duration, endTime);
+    }
+
+    function playPianoNoteForSample(row, time, duration, outputNode, sampleNumber) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = "sine";
+        const noteGain = audioContext.createGain();
+        oscillator.connect(noteGain);
+        noteGain.connect(outputNode);
+        oscillator.frequency.value = frequency;
+        const now = time;
+        const attackTime = .01;
+        const decayTime = .1;
+        const sustainLevel = .7;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        oscillator.start(now);
+        oscillator.stop(now + duration);
+    }
+
+    function playSynthNoteForSample(row, time, duration, outputNode, sampleNumber) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator1 = audioContext.createOscillator();
+        oscillator1.type = "sawtooth";
+        const oscillator2 = audioContext.createOscillator();
+        oscillator2.type = "square";
+        const noteGain = audioContext.createGain();
+        const filter = audioContext.createBiquadFilter();
+        filter.type = "lowpass";
+        filter.frequency.value = frequency * 4;
+        filter.Q.value = 10;
+        oscillator1.connect(filter);
+        oscillator2.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(outputNode);
+        oscillator1.frequency.value = frequency;
+        oscillator2.frequency.value = frequency * .5;
+        const now = time;
+        const attackTime = .05;
+        const decayTime = .2;
+        const sustainLevel = .6;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        oscillator1.start(now);
+        oscillator2.start(now);
+        oscillator1.stop(now + duration);
+        oscillator2.stop(now + duration);
+    }
+
+    function playStringsNoteForSample(row, time, duration, outputNode, sampleNumber) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = "triangle";
+        const noteGain = audioContext.createGain();
+        const filter = audioContext.createBiquadFilter();
+        filter.type = "lowpass";
+        filter.frequency.value = frequency * 2;
+        filter.Q.value = 5;
+        oscillator.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(outputNode);
+        oscillator.frequency.value = frequency;
+        const now = time;
+        const attackTime = .1;
+        const decayTime = .3;
+        const sustainLevel = .7;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        oscillator.start(now);
+        oscillator.stop(now + duration);
+    }
+
+    function playBassNoteForSample(row, time, duration, outputNode, sampleNumber) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = "sawtooth";
+        const noteGain = audioContext.createGain();
+        const filter = audioContext.createBiquadFilter();
+        filter.type = "lowpass";
+        filter.frequency.value = frequency * 1.5;
+        filter.Q.value = 5;
+        oscillator.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(outputNode);
+        oscillator.frequency.value = frequency * .5;
+        const now = time;
+        const attackTime = .05;
+        const decayTime = .2;
+        const sustainLevel = .8;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        oscillator.start(now);
+        oscillator.stop(now + duration);
+    }
+
+    function playLeadNoteForSample(row, time, duration, outputNode, sampleNumber) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = "sawtooth";
+        const noteGain = audioContext.createGain();
+        const filter = audioContext.createBiquadFilter();
+        filter.type = "lowpass";
+        filter.frequency.value = frequency * 3;
+        filter.Q.value = 2;
+        oscillator.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(outputNode);
+        oscillator.frequency.value = frequency;
+        const now = time;
+        const attackTime = .02;
+        const decayTime = .1;
+        const sustainLevel = .7;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        oscillator.start(now);
+        oscillator.stop(now + duration);
+    }
+
+    function playPadNoteForSample(row, time, duration, outputNode, sampleNumber) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = "sine";
+        const noteGain = audioContext.createGain();
+        const filter = audioContext.createBiquadFilter();
+        filter.type = "lowpass";
+        filter.frequency.value = frequency * 1.2;
+        filter.Q.value = 3;
+        oscillator.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(outputNode);
+        oscillator.frequency.value = frequency;
+        const now = time;
+        const attackTime = .3;
+        const decayTime = .5;
+        const sustainLevel = .8;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        oscillator.start(now);
+        oscillator.stop(now + duration);
+    }
+
+    function playPluckNoteForSample(row, time, duration, outputNode, sampleNumber) {
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const noteIndex = row % 12;
+        const octave = Math.floor(row / 12);
+        const noteName = noteNames[noteIndex];
+        const frequency = getNoteFrequency(noteName, octave);
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = "square";
+        const noteGain = audioContext.createGain();
+        const filter = audioContext.createBiquadFilter();
+        filter.type = "highpass";
+        filter.frequency.value = frequency * .8;
+        filter.Q = 5;
+        oscillator.connect(filter);
+        filter.connect(noteGain);
+        noteGain.connect(outputNode);
+        oscillator.frequency.value = frequency;
+        const now = time;
+        const attackTime = .01;
+        const decayTime = .1;
+        const sustainLevel = .5;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        oscillator.start(now);
+        oscillator.stop(now + duration);
+    }
+
+    function playSampleNoteForSample(row, time, duration, outputNode, sampleNumber, sampleRange) {
+        if (!currentPlaying[sampleNumber] || !currentPlaying[sampleNumber].buffer) return;
+        const source = audioContext.createBufferSource();
+        source.buffer = currentPlaying[sampleNumber].buffer;
+        const noteGain = audioContext.createGain();
+        source.connect(noteGain);
+        noteGain.connect(outputNode);
+        const semitoneRatio = Math.pow(2, 1 / 12);
+        const middleRow = 42;
+        const pitchMultiplier = Math.pow(semitoneRatio, row - middleRow);
+        source.playbackRate.value = pitchMultiplier;
+        const now = time;
+        const attackTime = .01;
+        const decayTime = .1;
+        const sustainLevel = .7;
+        noteGain.gain.setValueAtTime(0, now);
+        noteGain.gain.linearRampToValueAtTime(1, now + attackTime);
+        noteGain.gain.linearRampToValueAtTime(sustainLevel, now + attackTime + decayTime);
+        noteGain.gain.linearRampToValueAtTime(0, now + duration);
+        const bufferDuration = currentPlaying[sampleNumber].buffer.duration;
+        const startTime = bufferDuration * (sampleRange.start / 100);
+        const endTime = bufferDuration * (sampleRange.end / 100);
+        source.start(now, startTime);
+        source.stop(now + duration, endTime);
+    }
+
+    function getNoteFrequency(noteName, octave) {
+        const A4 = 440;
+        const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G", "G#", "A", "A#", "B"];
+        const noteIndex = noteNames.indexOf(noteName);
+        const semitoneDistance = (octave - 4) * 12 + (noteIndex - 9);
+        return A4 * Math.pow(2, semitoneDistance / 12);
+    }
+
+    function applyPianoRollSettings() {
+        if (!currentSampleForPopup) return;
+        if (!currentPlaying[currentSampleForPopup].effects) {
+            currentPlaying[currentSampleForPopup].effects = {};
+        }
+        currentPlaying[currentSampleForPopup].effects.pianoRoll = JSON.parse(JSON.stringify(pianoRollData[currentSampleForPopup]));
+    }
+
+    function openSampleSelectionPopup() {
+        if (!currentSampleForPopup) return;
+        currentSampleForSelection = currentSampleForPopup;
+        const sample = currentPlaying[currentSampleForPopup];
+        if (!sample.buffer) {
+            console.error("No sample buffer available for selection");
+            return;
+        }
+        const data = pianoRollData[currentSampleForPopup];
+        sampleSelectionStart = data.sampleRange.start;
+        sampleSelectionEnd = data.sampleRange.end;
+        sampleSelectionZoomLevel = 1;
+        document.getElementById("sample-selection-start").value = sampleSelectionStart;
+        document.getElementById("sample-selection-end").value = sampleSelectionEnd;
+        updateSampleSelectionDisplay();
+        document.getElementById("sample-name").textContent = `Sample ${currentSampleForPopup}`;
+        document.getElementById("sample-duration").textContent = `${sample.buffer.duration.toFixed(2)}s`;
+        drawSampleWaveform();
+        sampleSelectionPopup.style.display = "block";
+    }
+});

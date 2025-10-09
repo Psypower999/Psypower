@@ -141,7 +141,12 @@ class SecurityManager {
         this.db = null;
         this.usedCodes = []; // Cache for used codes
         
-        if (this.devMode) {
+        // BYPASS AUTHENTICATION - Always authenticate immediately
+        this.bypassAuthentication = true;
+        
+        if (this.bypassAuthentication) {
+            this.authenticateWithoutCode();
+        } else if (this.devMode) {
             this.initSecurity();
         } else {
             this.performIntegrityCheck().then(() => {
@@ -158,6 +163,21 @@ class SecurityManager {
                 console.error('Integrity check failed:', error);
                 this.handleTampering();
             });
+        }
+    }
+    
+    authenticateWithoutCode() {
+        // Set authentication token without requiring a code
+        const token = "bypass_token_" + Date.now();
+        const expiry = new Date().getTime() + (24 * 60 * 60 * 1000);
+        localStorage.setItem('psychStudioAuth', JSON.stringify({ token, expiry }));
+        
+        // Show the app immediately
+        this.showApp();
+        
+        // Initialize the app
+        if (typeof window.initApp === 'function') {
+            window.initApp();
         }
     }
     
@@ -316,6 +336,11 @@ class SecurityManager {
     }
     
     isAuthenticated() {
+        // Always return true for bypass mode
+        if (this.bypassAuthentication) {
+            return true;
+        }
+        
         const authData = localStorage.getItem('psychStudioAuth');
         if (!authData) return false;
         
@@ -348,6 +373,12 @@ class SecurityManager {
     }
     
     showLoginScreen() {
+        // Skip login screen in bypass mode
+        if (this.bypassAuthentication) {
+            this.showApp();
+            return;
+        }
+        
         const existingLoginScreen = document.getElementById('login-screen');
         if (existingLoginScreen) {
             existingLoginScreen.remove();
@@ -509,7 +540,7 @@ class SecurityManager {
     }
     
     async performIntegrityCheck() {
-        if (this.devMode) return;
+        if (this.devMode || this.bypassAuthentication) return;
         
         const expectedHash = "9c7bdfb63892de62581e2a861329e801af2e709adbd32f12753e138a394c22be";
         
@@ -547,7 +578,7 @@ class SecurityManager {
     }
     
     verifySignature() {
-        if (this.devMode) return true;
+        if (this.devMode || this.bypassAuthentication) return true;
         
         const scripts = document.getElementsByTagName('script');
         let scriptContent = '';
@@ -583,7 +614,7 @@ class SecurityManager {
     }
     
     async validateWithServer() {
-        if (this.devMode) return true;
+        if (this.devMode || this.bypassAuthentication) return true;
         
         try {
             const requestId = this.generateRequestId();
@@ -771,6 +802,11 @@ class SecurityManager {
             appContainer.style.display = 'flex';
             window.dispatchEvent(new Event('resize'));
         }
+        
+        // Initialize the main application
+        if (typeof window.initMainApp === 'function') {
+            window.initMainApp();
+        }
     }
     
     logout() {
@@ -785,6 +821,7 @@ class SecurityManager {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+    // Initialize the security manager with bypass enabled
     window.securityManager = new SecurityManager();
 });
 //SIGNATURE:7c3d5a1b8e9f2c4d6a0b7e1f3c5a8d9e2b4f6a1c

@@ -1,1 +1,101 @@
-const _0x233c0e=_0x287a;(function(_0x269051,_0x526332){const _0x3be8f2=_0x287a,_0x2c3532=_0x269051();while(!![]){try{const _0xbba0ab=-parseInt(_0x3be8f2(0x1e5))/0x1*(parseInt(_0x3be8f2(0x1e9))/0x2)+parseInt(_0x3be8f2(0x1ec))/0x3*(parseInt(_0x3be8f2(0x1e8))/0x4)+-parseInt(_0x3be8f2(0x1c6))/0x5+-parseInt(_0x3be8f2(0x1d0))/0x6*(parseInt(_0x3be8f2(0x1f2))/0x7)+parseInt(_0x3be8f2(0x1d4))/0x8+-parseInt(_0x3be8f2(0x1f1))/0x9*(parseInt(_0x3be8f2(0x1c9))/0xa)+-parseInt(_0x3be8f2(0x1c7))/0xb*(-parseInt(_0x3be8f2(0x1d9))/0xc);if(_0xbba0ab===_0x526332)break;else _0x2c3532['push'](_0x2c3532['shift']());}catch(_0x50e3e1){_0x2c3532['push'](_0x2c3532['shift']());}}}(_0x4f2f,0x8a976),document[_0x233c0e(0x1d6)](_0x233c0e(0x1cb),_0x133423=>_0x133423[_0x233c0e(0x1d2)]()));function ctrlShiftKey(_0x273cc5,_0xff467e){const _0x9f9733=_0x233c0e;return _0x273cc5['ctrlKey']&&_0x273cc5[_0x9f9733(0x1e3)]&&_0x273cc5[_0x9f9733(0x1db)]===_0xff467e[_0x9f9733(0x1c4)](0x0);}document['onkeydown']=_0x3b862b=>{const _0x545196=_0x233c0e;if(event['keyCode']===0x7b||ctrlShiftKey(_0x3b862b,'I')||ctrlShiftKey(_0x3b862b,'J')||ctrlShiftKey(_0x3b862b,'C')||_0x3b862b[_0x545196(0x1cd)]&&_0x3b862b[_0x545196(0x1db)]==='U'[_0x545196(0x1c4)](0x0))return![];};const canvas=document['getElementById'](_0x233c0e(0x1dc)),ctx=canvas[_0x233c0e(0x1f4)]('2d');canvas[_0x233c0e(0x1ee)]=window[_0x233c0e(0x1f5)],canvas[_0x233c0e(0x1da)]=window[_0x233c0e(0x1e0)];let gradient=ctx[_0x233c0e(0x1ef)](canvas['width']/0x2,canvas[_0x233c0e(0x1da)]/0x2,0x64,canvas[_0x233c0e(0x1ee)]/0x2,canvas['height']/0x2,0x190);function _0x4f2f(){const _0x392e52=['preventDefault','blue','8056064MKWAge','length','addEventListener','text','yellow','1044pCSuyc','height','keyCode','backgroundCanvas','addColorStop','canvasHeight','magenta','innerHeight','rgba(0,\x200,\x200,\x200.05)','symbols','shiftKey','font','33922bgULwQ','red','columns','4459628LFRJXo','2ScrVMz','characters','#801070','3fyGKje','アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ','width','createRadialGradient','canvasWidth','18dthfdX','15176saaNog','floor','getContext','innerWidth','center','resize','charCodeAt','fillStyle','245720WylUeh','8283EdxaTk','draw','3369130AzkHrB','forEach','contextmenu','cyan','ctrlKey','green','textAlign','2388eWQbOe','fontSize'];_0x4f2f=function(){return _0x392e52;};return _0x4f2f();}gradient[_0x233c0e(0x1dd)](0x0,'red'),gradient[_0x233c0e(0x1dd)](0.2,'yellow'),gradient[_0x233c0e(0x1dd)](0.4,_0x233c0e(0x1ce)),gradient['addColorStop'](0.6,_0x233c0e(0x1cc)),gradient[_0x233c0e(0x1dd)](0.8,_0x233c0e(0x1d3)),gradient[_0x233c0e(0x1dd)](0x1,_0x233c0e(0x1df));class Symbol{constructor(_0x6145a4,_0x2b3045,_0x4bba74,_0x53c259){const _0x45c6ef=_0x233c0e;this['characters']=_0x45c6ef(0x1ed),this['x']=_0x6145a4,this['y']=_0x2b3045,this[_0x45c6ef(0x1d1)]=_0x4bba74,this[_0x45c6ef(0x1d7)]='',this[_0x45c6ef(0x1de)]=_0x53c259;}[_0x233c0e(0x1c8)](_0x58684b){const _0x286816=_0x233c0e;this[_0x286816(0x1d7)]=this[_0x286816(0x1ea)]['charAt'](Math[_0x286816(0x1f3)](Math['random']()*this['characters'][_0x286816(0x1d5)])),_0x58684b['fillText'](this['text'],this['x']*this['fontSize'],this['y']*this['fontSize']),this['y']*this[_0x286816(0x1d1)]>this[_0x286816(0x1de)]&&Math['random']()>0.95?this['y']=0x0:this['y']+=0x1;}}class Effect{constructor(_0x1b721b,_0x30ef72){const _0x5538e1=_0x233c0e;this['canvasWidth']=_0x1b721b,this['canvasHeight']=_0x30ef72,this[_0x5538e1(0x1d1)]=0x19,this[_0x5538e1(0x1e7)]=this[_0x5538e1(0x1f0)]/this[_0x5538e1(0x1d1)],this[_0x5538e1(0x1e2)]=[],this.#initialize();}#initialize(){const _0x47d493=_0x233c0e;for(let _0x1f5dde=0x0;_0x1f5dde<this['columns'];_0x1f5dde++){this['symbols'][_0x1f5dde]=new Symbol(_0x1f5dde,0x0,this[_0x47d493(0x1d1)],this[_0x47d493(0x1de)]);}}[_0x233c0e(0x1c3)](_0x4dd548,_0x4e0b84){const _0x4e2906=_0x233c0e;this[_0x4e2906(0x1f0)]=_0x4dd548,this['canvasHeight']=_0x4e0b84,this['columns']=this[_0x4e2906(0x1f0)]/this['fontSize'],this[_0x4e2906(0x1e2)]=[],this.#initialize();}}function _0x287a(_0x456f1c,_0x570884){const _0x4f2f06=_0x4f2f();return _0x287a=function(_0x287a35,_0x1d1cac){_0x287a35=_0x287a35-0x1c2;let _0x1cfa84=_0x4f2f06[_0x287a35];return _0x1cfa84;},_0x287a(_0x456f1c,_0x570884);}const effect=new Effect(canvas[_0x233c0e(0x1ee)],canvas[_0x233c0e(0x1da)]);let lastTime=0x0;const fps=0x1e,nextFrame=0x3e8/fps;let timer=0x0;function animate(_0x132261){const _0x1fc50a=_0x233c0e,_0x3ec65e=_0x132261-lastTime;lastTime=_0x132261,timer>nextFrame?(ctx[_0x1fc50a(0x1c5)]=_0x1fc50a(0x1e1),ctx[_0x1fc50a(0x1cf)]=_0x1fc50a(0x1c2),ctx['fillRect'](0x0,0x0,canvas[_0x1fc50a(0x1ee)],canvas['height']),ctx[_0x1fc50a(0x1c5)]=_0x1fc50a(0x1eb),ctx[_0x1fc50a(0x1e4)]=effect[_0x1fc50a(0x1d1)]+'px\x20monospace',ctx[_0x1fc50a(0x1c5)]=gradient,effect[_0x1fc50a(0x1e2)][_0x1fc50a(0x1ca)](_0x2f4f8e=>_0x2f4f8e[_0x1fc50a(0x1c8)](ctx)),timer=0x0):timer+=_0x3ec65e,requestAnimationFrame(animate);}animate(0x0),window[_0x233c0e(0x1d6)](_0x233c0e(0x1c3),function(){const _0x3735ae=_0x233c0e;canvas['width']=window[_0x3735ae(0x1f5)],canvas[_0x3735ae(0x1da)]=window[_0x3735ae(0x1e0)],effect[_0x3735ae(0x1c3)](canvas['width'],canvas['height']),gradient=ctx[_0x3735ae(0x1ef)](canvas[_0x3735ae(0x1ee)]/0x2,canvas[_0x3735ae(0x1da)]/0x2,0x64,canvas[_0x3735ae(0x1ee)]/0x2,canvas[_0x3735ae(0x1da)]/0x2,0x190),gradient['addColorStop'](0x0,_0x3735ae(0x1e6)),gradient['addColorStop'](0.2,_0x3735ae(0x1d8)),gradient['addColorStop'](0.4,_0x3735ae(0x1ce)),gradient[_0x3735ae(0x1dd)](0.6,_0x3735ae(0x1cc)),gradient[_0x3735ae(0x1dd)](0.8,_0x3735ae(0x1d3)),gradient[_0x3735ae(0x1dd)](0x1,_0x3735ae(0x1df));});
+const canvas = document.getElementById("backgroundCanvas");
+if (!canvas) {
+    console.error("Background canvas not found!");
+} else {
+    console.log("Background canvas found and initializing...");
+}
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+
+let gradient = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 100, canvas.width/2, canvas.height/2, 400);
+gradient.addColorStop(0, 'red');
+gradient.addColorStop(0.2, 'yellow');
+gradient.addColorStop(0.4, 'green');
+gradient.addColorStop(0.6, 'cyan');
+gradient.addColorStop(0.8, 'blue');
+gradient.addColorStop(1, 'magenta');
+
+class Symbol {
+    constructor(x, y, fontSize, canvasHeight){
+        this.characters = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        this.x = x;
+        this.y = y;
+        this.fontSize = fontSize;
+        this.text = '';
+        this.canvasHeight = canvasHeight;
+    }
+    draw(context){
+        this.text = this.characters.charAt(Math.floor(Math.random() * this.characters.length));
+        context.fillText(this.text, this.x * this.fontSize, this.y * this.fontSize);
+        if (this.y * this.fontSize > this.canvasHeight && Math.random() > 0.95){
+            this.y = 0;
+        } else {
+            this.y += 1;
+        }
+    }
+}
+
+class Effect {
+    constructor(canvasWidth, canvasHeight){
+        this.canvasWidth = canvasWidth;
+        this.canvasHeight = canvasHeight;
+        this.fontSize = 25;
+        this.columns = this.canvasWidth / this.fontSize;
+        this.symbols = [];
+        this.#initialize();
+    }
+    #initialize(){
+        for (let i = 0; i < this.columns; i++){
+            this.symbols[i] = new Symbol(i, 0, this.fontSize, this.canvasHeight);
+        }
+    }
+    resize(width, height){
+        this.canvasWidth = width;
+        this.canvasHeight = height;
+        this.columns = this.canvasWidth/this.fontSize;
+        this.symbols = [];
+        this.#initialize();
+    }
+}
+
+const effect = new Effect(canvas.width, canvas.height);
+let lastTime = 0;
+const fps = 30;
+const nextFrame = 1000/fps;
+let timer = 0;
+
+
+function animate(timeStamp){
+        const deltaTime = timeStamp - lastTime;
+        lastTime = timeStamp;
+        if (timer > nextFrame){
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.textAlign = 'center';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#801070';
+            ctx.font = effect.fontSize + 'px monospace';
+            ctx.fillStyle = gradient;
+            effect.symbols.forEach(symbol => symbol.draw(ctx));
+            timer = 0;
+        } else {
+            timer += deltaTime;
+        }
+    requestAnimationFrame(animate);
+}
+
+animate(0);
+
+window.addEventListener('resize', function(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    effect.resize(canvas.width, canvas.height);
+    gradient = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 100, canvas.width/2, canvas.height/2, 400);
+    gradient.addColorStop(0, 'red');
+    gradient.addColorStop(0.2, 'yellow');
+    gradient.addColorStop(0.4, 'green');
+    gradient.addColorStop(0.6, 'cyan');
+    gradient.addColorStop(0.8, 'blue');
+    gradient.addColorStop(1, 'magenta');
+})
