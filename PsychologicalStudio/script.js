@@ -381,6 +381,7 @@ document.addEventListener("DOMContentLoaded", function () {
             flex-shrink: 0;
             position: sticky;
             left: 0;
+            top: 0;
             z-index: 10;
             box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
         }
@@ -462,11 +463,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         .piano-roll-cell.bar-start {
-              border-left: 3px solid #111;
+            border-left: 3px solid #FF8C00;
         }
         
         .piano-roll-cell.bar-end {
-              border-right: 3px solid #111;
+            border-right: 3px solid #FF8C00;
         }
         
         .piano-roll-cell.active {
