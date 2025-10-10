@@ -376,17 +376,18 @@ document.addEventListener("DOMContentLoaded", function () {
         
         .piano-keys {
             width: 40px;
-            background-color: #222;
-            border-right: 1px solid #444;
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            border-right: 2px solid #FF8C00;
             flex-shrink: 0;
             position: sticky;
             left: 0;
             z-index: 10;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
         }
         
         .piano-key {
             height: 20px;
-            border-bottom: 1px solid #444;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -394,27 +395,31 @@ document.addEventListener("DOMContentLoaded", function () {
             color: #aaa;
             position: relative;
             cursor: pointer;
+            transition: all 0.2s ease;
         }
         
         .piano-key.white {
-            background-color: #444;
+            background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
             color: #ddd;
         }
         
         .piano-key.black {
-            background-color: #222;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
             color: #fff;
             height: 12px;
             margin: 4px 0;
             z-index: 2;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
         }
         
         .piano-key:hover {
-            background-color: #555;
+            background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
+            box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.1);
         }
         
         .piano-key.active {
-            background-color: #4CAF50;
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.2);
         }
         
         .piano-roll-grid-container {
@@ -422,50 +427,74 @@ document.addEventListener("DOMContentLoaded", function () {
             position: relative;
             overflow: visible;
             min-height: 100%;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            border-radius: 8px;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
         }
         
         .piano-roll-grid {
             position: relative;
             top: auto;
             left: auto;
-            background-color: #333;
+            background: linear-gradient(135deg, #2c2c2c 0%, #1e1e1e 100%);
             display: grid;
             grid-auto-rows: 20px;
             width: 100%;
             height: auto;
             min-height: 1680px;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
         
         .piano-roll-cell {
-            border-right: 1px solid crimson;
-            border-bottom: 1px solid crimson;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             cursor: pointer;
             position: relative;
             min-width: 20px;
+            background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
+            transition: all 0.2s ease;
+        }
+        
+        .piano-roll-cell:hover {
+            background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
+            box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.1);
         }
         
         .piano-roll-cell.bar-start {
-            border-left: 2px solid black;
+              border-left: 3px solid #111;
         }
         
         .piano-roll-cell.bar-end {
-            border-right: 2px solid black;
+              border-right: 3px solid #111;
         }
         
         .piano-roll-cell.active {
-            background-color: #111;
+            background: linear-gradient(135deg, #DC143C 0%, #B22222 100%);
             height: 20px;
             margin-top: auto;
             margin-bottom: auto;
+            box-shadow: 0 0 12px rgba(220, 20, 60, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(220, 20, 60, 0.8);
+            animation: pulse 2s infinite;
         }
         
         .piano-roll-cell.note-long {
-            background-color: #111;
+            background: linear-gradient(135deg, #DC143C 0%, #B22222 100%);
+            box-shadow: 0 0 8px rgba(220, 20, 60, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(220, 20, 60, 0.6);
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 12px rgba(220, 20, 60, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.2); }
+            50% { box-shadow: 0 0 16px rgba(220, 20, 60, 0.8), inset 0 2px 4px rgba(255, 255, 255, 0.3); }
+            100% { box-shadow: 0 0 12px rgba(220, 20, 60, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.2); }
         }
         
         .piano-roll-controls {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
             margin-top: 10px;
             color: white;
         }
@@ -519,11 +548,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         /* Piano roll note length selector */
+        .piano-roll-controls-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        
         .piano-roll-note-length {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-top: 10px;
+            gap: 5px;
+            flex: 1;
+            min-width: 0;
         }
         
         .piano-roll-note-length label {
@@ -535,14 +574,17 @@ document.addEventListener("DOMContentLoaded", function () {
             background-color: #333;
             border: 1px solid #555;
             padding: 5px;
+            flex: 1;
+            min-width: 0;
         }
         
         /* Piano roll grid size selector */
         .piano-roll-grid-size {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-top: 10px;
+            gap: 5px;
+            flex: 1;
+            min-width: 0;
         }
         
         .piano-roll-grid-size label {
@@ -621,13 +663,17 @@ document.addEventListener("DOMContentLoaded", function () {
         
         /* Piano roll visualizer styling */
         .piano-roll-visualizer-container {
-            height: 100px;
-            background-color: #111;
-            border: 1px solid #333;
-            border-radius: 4px;
-            margin: 10px 0;
+            height: 120px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            border: 2px solid #333;
+            border-radius: 8px;
+            margin: 15px 0;
             position: relative;
             overflow: hidden;
+            box-shadow: 
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 4px 12px rgba(0, 0, 0, 0.3),
+                0 1px 3px rgba(0, 0, 0, 0.2);
         }
         
         .piano-roll-visualizer {
@@ -641,8 +687,10 @@ document.addEventListener("DOMContentLoaded", function () {
             height: 20px;
             background-color: #2a2a2a;
             border-bottom: 1px solid #444;
-            position: sticky;
-            top: 0;
+            position: relative;
+            margin-left: 40px; /* Offset by piano keys width to align with grid */
+            overflow-x: auto;
+            overflow-y: hidden;
             z-index: 1000; /* keep visible above grid when scrolling vertically */
         }
         
@@ -1360,7 +1408,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         .piano-roll-toggle-container h4 {
-            color: #FFC107;
+            color: #FF8C00;
         }
         
         .piano-roll-note-length label {
@@ -1374,7 +1422,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         .piano-roll-grid-size label {
-            color: #FFD54F;
+            color: #00FFFF;
         }
         
         .piano-roll-sound-source label {
@@ -2085,24 +2133,26 @@ document.addEventListener("DOMContentLoaded", function () {
                     </label>
                 </div>
                 <div class="piano-roll-content">
-                    <div class="piano-roll-note-length">
-                        <label for="note-length-select">Note Length:</label>
-                        <select id="note-length-select">
-                            <option value="1" selected>1/16</option>
-                            <option value="2">1/8</option>
-                            <option value="4">1/4</option>
-                            <option value="8">1/2</option>
-                            <option value="16">1/1</option>
-                            <option value="32">2 bars</option>
-                            <option value="64">4 bars</option>
-                        </select>
-                    </div>
-                    <div class="piano-roll-grid-size">
-                        <label>Grid Size:</label>
-                        <div class="grid-size-controls">
-                            <button id="grid-size-decrease">-</button>
-                            <span id="grid-size-display">16</span>
-                            <button id="grid-size-increase">+</button>
+                    <div class="piano-roll-controls-row">
+                        <div class="piano-roll-note-length">
+                            <label for="note-length-select">Note Length:</label>
+                            <select id="note-length-select">
+                                <option value="1" selected>1/16</option>
+                                <option value="2">1/8</option>
+                                <option value="4">1/4</option>
+                                <option value="8">1/2</option>
+                                <option value="16">1/1</option>
+                                <option value="32">2 bars</option>
+                                <option value="64">4 bars</option>
+                            </select>
+                        </div>
+                        <div class="piano-roll-grid-size">
+                            <label>Grid Size:</label>
+                            <div class="grid-size-controls">
+                                <button id="grid-size-decrease">-</button>
+                                <span id="grid-size-display">16</span>
+                                <button id="grid-size-increase">+</button>
+                            </div>
                         </div>
                     </div>
                     <div class="piano-roll-zoom-controls">
@@ -2115,11 +2165,11 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>
                     <div class="piano-roll-container">
+                        <div class="piano-roll-bar-numbers"></div>
                         <div class="piano-roll-scrollable">
                             <div class="piano-keys">
                             </div>
                             <div class="piano-roll-grid-container">
-                                <div class="piano-roll-bar-numbers"></div>
                                 <div class="piano-roll-grid">
                                 </div>
                             </div>
@@ -7091,6 +7141,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const grid = document.querySelector(".piano-roll-grid");
         if (!grid) return;
         
+        // Preserve current scroll position
+        const scrollable = document.querySelector(".piano-roll-scrollable");
+        const barNumbers = document.querySelector(".piano-roll-bar-numbers");
+        const currentScrollLeft = scrollable ? scrollable.scrollLeft : 0;
+        
         const baseCellWidth = 20; // Base width in pixels
         const cellWidth = baseCellWidth * pianoRollZoomLevel;
         
@@ -7105,12 +7160,47 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         // Update the bar numbers container width to match
-        const barNumbers = document.querySelector(".piano-roll-bar-numbers");
         if (barNumbers) {
             barNumbers.style.width = `${gridWidth * cellWidth}px`;
+            
+            // Update individual bar number widths to match zoom level
+            const barNumberElements = barNumbers.querySelectorAll(".piano-roll-bar-number");
+            barNumberElements.forEach(barElement => {
+                // Calculate the number of cells this bar represents based on grid size
+                const cellsPerBar = Math.max(1, Math.floor(gridWidth / Math.ceil(gridWidth / 4)));
+                barElement.style.width = `${cellsPerBar * cellWidth}px`;
+            });
+        }
+        
+        // Restore scroll position after layout update
+        if (scrollable) {
+            // Use requestAnimationFrame to ensure layout is complete
+            requestAnimationFrame(() => {
+                scrollable.scrollLeft = currentScrollLeft;
+                if (barNumbers) {
+                    barNumbers.scrollLeft = currentScrollLeft;
+                }
+            });
         }
     }
-    
+
+    function setupPianoRollScrollSync() {
+        const scrollable = document.querySelector(".piano-roll-scrollable");
+        const barNumbers = document.querySelector(".piano-roll-bar-numbers");
+        
+        if (scrollable && barNumbers) {
+            // Sync horizontal scroll from scrollable to bar numbers
+            scrollable.addEventListener("scroll", function() {
+                barNumbers.scrollLeft = scrollable.scrollLeft;
+            });
+            
+            // Sync horizontal scroll from bar numbers to scrollable
+            barNumbers.addEventListener("scroll", function() {
+                scrollable.scrollLeft = barNumbers.scrollLeft;
+            });
+        }
+    }
+
     function setupPianoRollZoomControls() {
         const zoomDecreaseBtn = document.getElementById("zoom-decrease");
         const zoomIncreaseBtn = document.getElementById("zoom-increase");
@@ -7184,6 +7274,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Initialize zoom controls
         setupPianoRollZoomControls();
         
+        // Initialize scroll synchronization
+        setupPianoRollScrollSync();
+        
         // Set initial zoom level
         pianoRollZoomLevel = 1.0;
         updatePianoRollZoomDisplay();
@@ -7208,27 +7301,27 @@ document.addEventListener("DOMContentLoaded", function () {
         gridSizeDisplay.textContent = data.gridWidth;
         updatePianoRollCellWidth();
         
-        // Create bar/beat labels: (1.1, 1.2, 1.3, 1.4), (2.1 ...), etc.
-        const cellsPerBar = 4; // 4 cells per bar (16th notes)
-        const totalBars = Math.ceil(data.gridWidth / cellsPerBar);
-        for (let bar = 0; bar < totalBars; bar++) {
-            const barWrapper = document.createElement("div");
-            barWrapper.className = "piano-roll-bar-number";
-            barWrapper.style.display = "flex";
-            barWrapper.style.width = `${80 * pianoRollZoomLevel}px`; // 4 cells * 20px * zoom
-            barWrapper.style.justifyContent = "space-between";
-            // First beat mark
-            if (bar * cellsPerBar % data.gridWidth === 0) {
-                barWrapper.classList.add("bar-start");
-            }
-            for (let beat = 1; beat <= 4; beat++) {
-                const beatSpan = document.createElement("span");
-                beatSpan.textContent = `${bar + 1}.${beat}`;
-                beatSpan.style.flex = "1 1 25%";
-                beatSpan.style.textAlign = beat === 1 ? "left" : (beat === 4 ? "right" : "center");
-                barWrapper.appendChild(beatSpan);
-            }
-            pianoRollBarNumbers.appendChild(barWrapper);
+        // Create bar/beat labels based on actual grid size
+        const stepsPerBeat = 4; // 4 steps per beat (16th notes)
+        const totalBeats = Math.ceil(data.gridWidth / stepsPerBeat);
+        for (let beatIdx = 0; beatIdx < totalBeats; beatIdx++) {
+            const barNumber = Math.floor(beatIdx / 4) + 1;
+            const beatNumber = (beatIdx % 4) + 1;
+            const beatDiv = document.createElement("div");
+            beatDiv.className = "piano-roll-bar-number";
+            if (beatNumber === 1) beatDiv.classList.add("bar-start");
+            
+            // Calculate width based on actual cell width and zoom
+            const baseCellWidth = 20;
+            const cellWidth = baseCellWidth * pianoRollZoomLevel;
+            beatDiv.style.width = `${stepsPerBeat * cellWidth}px`;
+            beatDiv.style.display = "flex";
+            beatDiv.style.justifyContent = "center";
+            
+            const span = document.createElement("span");
+            span.textContent = `${barNumber}.${beatNumber}`;
+            beatDiv.appendChild(span);
+            pianoRollBarNumbers.appendChild(beatDiv);
         }
         
         const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
@@ -7353,7 +7446,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     const beatDiv = document.createElement("div");
                     beatDiv.className = "piano-roll-bar-number";
                     if (beatNumber === 1) beatDiv.classList.add("bar-start");
-                    beatDiv.style.width = `${80 * pianoRollZoomLevel}px`;
+                    // Calculate width based on actual cell width and zoom
+                    const baseCellWidth = 20;
+                    const cellWidth = baseCellWidth * pianoRollZoomLevel;
+                    beatDiv.style.width = `${stepsPerBeat * cellWidth}px`;
                     beatDiv.style.display = "flex";
                     beatDiv.style.justifyContent = "center";
                     const span = document.createElement("span");
@@ -7409,7 +7505,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     const beatDiv = document.createElement("div");
                     beatDiv.className = "piano-roll-bar-number";
                     if (beatNumber === 1) beatDiv.classList.add("bar-start");
-                    beatDiv.style.width = `${80 * pianoRollZoomLevel}px`;
+                    // Calculate width based on actual cell width and zoom
+                    const baseCellWidth = 20;
+                    const cellWidth = baseCellWidth * pianoRollZoomLevel;
+                    beatDiv.style.width = `${stepsPerBeatInc * cellWidth}px`;
                     beatDiv.style.display = "flex";
                     beatDiv.style.justifyContent = "center";
                     const span = document.createElement("span");
@@ -7485,74 +7584,89 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!pianoRollVisualizer || !pianoRollVisualizerCtx) return;
         const width = pianoRollVisualizer.width;
         const height = pianoRollVisualizer.height;
-        // Smoother background gradient
-        const bgGradient = pianoRollVisualizerCtx.createLinearGradient(0, 0, width, height);
-        bgGradient.addColorStop(0, "#181a2e");
-        bgGradient.addColorStop(1, "#232a4d");
-        pianoRollVisualizerCtx.fillStyle = bgGradient;
+        
+        // Clear canvas with professional dark background
+        pianoRollVisualizerCtx.fillStyle = "#0a0a0a";
         pianoRollVisualizerCtx.fillRect(0, 0, width, height);
-
-        // Draw history with glow effect
+        
+        // Add subtle grid lines for professional look
+        pianoRollVisualizerCtx.strokeStyle = "rgba(255, 255, 255, 0.05)";
+        pianoRollVisualizerCtx.lineWidth = 1;
+        for (let i = 0; i <= 4; i++) {
+            const y = (height / 4) * i;
+            pianoRollVisualizerCtx.beginPath();
+            pianoRollVisualizerCtx.moveTo(0, y);
+            pianoRollVisualizerCtx.lineTo(width, y);
+            pianoRollVisualizerCtx.stroke();
+        }
+        
         if (pianoRollVisualizerHistory.length > 0) {
+            // Professional frequency spectrum gradient
             const gradient = pianoRollVisualizerCtx.createLinearGradient(0, height, 0, 0);
-            gradient.addColorStop(0, "rgba(28, 0, 212, 0.9)");
-            gradient.addColorStop(.1, "rgba(0, 191, 255, 0.95)");
-            gradient.addColorStop(.3, "rgba(0, 210, 154, 0.9)");
-            gradient.addColorStop(.5, "rgba(255, 196, 0, 0.85)");
-            gradient.addColorStop(.7, "rgba(255, 0, 132, 0.85)");
-            gradient.addColorStop(.9, "rgba(255, 0, 255, 0.85)");
-            gradient.addColorStop(1, "rgba(170, 0, 255, 0.85)");
+            gradient.addColorStop(0, "rgba(0, 150, 255, 0.8)");    // Deep blue for bass
+            gradient.addColorStop(0.2, "rgba(0, 200, 100, 0.7)");  // Green for low-mid
+            gradient.addColorStop(0.4, "rgba(255, 200, 0, 0.6)");  // Yellow for mid
+            gradient.addColorStop(0.6, "rgba(255, 100, 0, 0.7)");  // Orange for high-mid
+            gradient.addColorStop(0.8, "rgba(255, 0, 150, 0.8)");  // Pink for high
+            gradient.addColorStop(1, "rgba(200, 0, 255, 0.9)");    // Purple for very high
+            
             const sliceWidth = width / pianoRollVisualizerHistorySize;
             for (let h = 0; h < pianoRollVisualizerHistory.length; h++) {
                 const dataArray = pianoRollVisualizerHistory[h];
                 const x = h * sliceWidth;
-                const alpha = .3 + h / pianoRollVisualizerHistory.length * .7;
-                pianoRollVisualizerCtx.save();
-                pianoRollVisualizerCtx.shadowColor = "#fff";
-                pianoRollVisualizerCtx.shadowBlur = 8;
+                const alpha = 0.3 + h / pianoRollVisualizerHistory.length * 0.4;
+                
                 pianoRollVisualizerCtx.beginPath();
                 pianoRollVisualizerCtx.moveTo(x, height);
+                
                 const maxFreq = audioContext.sampleRate / 2;
                 const minLogFreq = Math.log10(20);
                 const maxLogFreq = Math.log10(maxFreq);
+                
                 for (let i = 0; i < dataArray.length; i++) {
                     const freq = i * maxFreq / dataArray.length;
                     const logFreq = Math.log10(Math.max(20, freq));
                     const normalizedLogFreq = (logFreq - minLogFreq) / (maxLogFreq - minLogFreq);
                     const y = height - normalizedLogFreq * height;
                     const amplitude = dataArray[i] / 255;
-                    const enhancedAmplitude = Math.pow(amplitude, .4);
-                    const ampHeight = enhancedAmplitude * height * .8;
+                    const enhancedAmplitude = Math.pow(amplitude, 0.3); // Smoother curve
+                    const ampHeight = enhancedAmplitude * height * 0.85;
                     pianoRollVisualizerCtx.lineTo(x, y - ampHeight);
                 }
+                
                 pianoRollVisualizerCtx.lineTo(x + sliceWidth, height);
                 pianoRollVisualizerCtx.closePath();
                 pianoRollVisualizerCtx.globalAlpha = alpha;
                 pianoRollVisualizerCtx.fillStyle = gradient;
                 pianoRollVisualizerCtx.fill();
-                pianoRollVisualizerCtx.restore();
             }
+            
             pianoRollVisualizerCtx.globalAlpha = 1;
-            // Draw latest spectrum with highlight
+            
+            // Professional frequency response line
             if (pianoRollVisualizerHistory.length > 0) {
                 const latestData = pianoRollVisualizerHistory[pianoRollVisualizerHistory.length - 1];
-                pianoRollVisualizerCtx.save();
-                pianoRollVisualizerCtx.shadowColor = "#00fff7";
-                pianoRollVisualizerCtx.shadowBlur = 12;
-                pianoRollVisualizerCtx.strokeStyle = "rgba(96, 255, 255, 1)";
-                pianoRollVisualizerCtx.lineWidth = 2.5;
+                
+                // Main frequency line with glow effect
+                pianoRollVisualizerCtx.shadowColor = "rgba(0, 200, 255, 0.8)";
+                pianoRollVisualizerCtx.shadowBlur = 8;
+                pianoRollVisualizerCtx.strokeStyle = "rgba(0, 200, 255, 1)";
+                pianoRollVisualizerCtx.lineWidth = 2;
                 pianoRollVisualizerCtx.beginPath();
+                
                 const maxFreq = audioContext.sampleRate / 2;
                 const minLogFreq = Math.log10(20);
                 const maxLogFreq = Math.log10(maxFreq);
+                
                 for (let i = 0; i < latestData.length; i++) {
                     const freq = i * maxFreq / latestData.length;
                     const logFreq = Math.log10(Math.max(20, freq));
                     const normalizedLogFreq = (logFreq - minLogFreq) / (maxLogFreq - minLogFreq);
                     const x = normalizedLogFreq * width;
                     const amplitude = latestData[i] / 255;
-                    const enhancedAmplitude = Math.pow(amplitude, .4);
-                    const y = height - enhancedAmplitude * height * .8;
+                    const enhancedAmplitude = Math.pow(amplitude, 0.3);
+                    const y = height - enhancedAmplitude * height * 0.85;
+                    
                     if (i === 0) {
                         pianoRollVisualizerCtx.moveTo(x, y);
                     } else {
@@ -7560,27 +7674,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 }
                 pianoRollVisualizerCtx.stroke();
-                pianoRollVisualizerCtx.restore();
-            }
-        }
-
-        // Draw note activity indicators (if previewing)
-        if (isPreviewingPianoRoll && currentPianoRollSample && pianoRollData[currentPianoRollSample]) {
-            const notes = pianoRollData[currentPianoRollSample].notes;
-            for (const note of notes) {
-                // Map note row to vertical position
-                const y = height - (note.row / 88) * height;
-                // Map note col to horizontal position
-                const x = (note.col / (pianoRollData[currentPianoRollSample].gridWidth || 16)) * width;
-                pianoRollVisualizerCtx.save();
-                pianoRollVisualizerCtx.globalAlpha = 0.8;
-                pianoRollVisualizerCtx.shadowColor = "#ff0";
-                pianoRollVisualizerCtx.shadowBlur = 16;
-                pianoRollVisualizerCtx.beginPath();
-                pianoRollVisualizerCtx.arc(x, y, 8, 0, Math.PI * 2);
-                pianoRollVisualizerCtx.fillStyle = "#fff200";
-                pianoRollVisualizerCtx.fill();
-                pianoRollVisualizerCtx.restore();
+                
+                // Reset shadow
+                pianoRollVisualizerCtx.shadowBlur = 0;
             }
         }
     }
