@@ -259,6 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let pianoRollVisualizerAnimationId = null;
     let pianoRollVisualizerHistory = [];
     const pianoRollVisualizerHistorySize = 100;
+    let pianoRollPreviewActiveVoices = {};
     let sampleSelectionPopup = null;
     let currentSampleForSelection = null;
     let sampleSelectionStart = 0;
@@ -642,7 +643,7 @@ document.addEventListener("DOMContentLoaded", function () {
             border-bottom: 1px solid #444;
             position: sticky;
             top: 0;
-            z-index: 5;
+            z-index: 1000; /* keep visible above grid when scrolling vertically */
         }
         
         .piano-roll-bar-number {
@@ -1929,10 +1930,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="speed-selector">
                     <label for="speed-select">Speed:</label>
                     <select id="speed-select">
-                        <option value="0.1">0.1x</option>
+                        <option value="0.03125">0.03125x</option>
+                        <option value="0.0625">0.0625x</option>
+                        <option value="0.125">0.125x</option>
                         <option value="0.25">0.25x</option>
                         <option value="0.5">0.5x</option>
-                        <option value="0.75">0.75x</option>
                         <option value="1" selected>1x</option>
                         <option value="1.5">1.5x</option>
                         <option value="2">2x</option>
@@ -2137,6 +2139,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <option value="lead">Lead</option>
                                 <option value="pad">Pad</option>
                                 <option value="pluck">Pluck</option>
+                    <option value="sounddesign">Sound Design (Dual Osc)</option>
                                 <option value="sample">Use Sample</option>
                             </select>
                         </div>
@@ -2144,6 +2147,106 @@ document.addEventListener("DOMContentLoaded", function () {
                             <button id="piano-roll-preview-btn">Preview</button>
                             <button id="piano-roll-stop-btn">Stop</button>
                             <button id="piano-roll-clear-btn" class="piano-roll-clear-btn">Clear</button>
+                        </div>
+                    </div>
+                    
+                    <div class="sound-design-controls" style="display:none">
+                        <h4>Sound Design</h4>
+                        <div class="sd-row">
+							<div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px">
+                                <label style="color:crimson;">Osc 1 Wave</label>
+								<select id="sd-osc1-wave" style="background-color:#333;color:#fff;border:1px solid #555;border-radius:4px;">
+                                    <option value="sine">Sine</option>
+                                    <option value="square">Square</option>
+                                    <option value="triangle">Triangle</option>
+                                    <option value="sawtooth">Sawtooth</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+                                <label>Level</label>
+                                <input type="range" id="sd-osc1-level" min="0" max="100" step="1">
+                                <span id="sd-osc1-level-val"></span>
+                            </div>
+                            <br>
+                            <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+                                <label>Detune</label>
+                                <input type="range" id="sd-osc1-detune" min="-1200" max="1200" step="1">
+                                <span id="sd-osc1-detune-val"></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="sd-row">
+							<div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px">
+                                <label style="color:crimson">Osc 2 Wave</label>
+								<select id="sd-osc2-wave" style="background-color:#333;color:#fff;border:1px solid #555;border-radius:4px;">
+                                    <option value="sine">Sine</option>
+                                    <option value="square">Square</option>
+                                    <option value="triangle">Triangle</option>
+                                    <option value="sawtooth">Sawtooth</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+                                <label>Level</label>
+                                <input type="range" id="sd-osc2-level" min="0" max="100" step="1">
+                                <span id="sd-osc2-level-val"></span>
+                            </div>
+                            <br>
+                            <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+                                <label>Detune</label>
+                                <input type="range" id="sd-osc2-detune" min="-1200" max="1200" step="1">
+                                <span id="sd-osc2-detune-val"></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="sd-row">
+							<div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px">
+                                <label style="color:crimson">Filter Type</label>
+								<select id="sd-filter-type" style="background-color:#333;color:#fff;border:1px solid #555;border-radius:4px;">
+                                    <option value="lowpass">Low Pass</option>
+                                    <option value="highpass">High Pass</option>
+                                    <option value="bandpass">Band Pass</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+                                <label>Cutoff</label>
+                                <input type="range" id="sd-filter-cutoff" min="20" max="20000" step="1">
+                                <span id="sd-filter-cutoff-val"></span>
+                            </div>
+                            <br>
+                            <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+                                <label>Resonance</label>
+                                <input type="range" id="sd-filter-res" min="0" max="100" step="1">
+                                <span id="sd-filter-res-val"></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="sd-row">
+                            <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+                                <label>Attack</label>
+                                <input type="range" id="sd-env-attack" min="0" max="2000" step="1">
+                                <span id="sd-env-attack-val"></span>
+                            </div>
+                            <br>
+                            <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+                                <label>Decay</label>
+                                <input type="range" id="sd-env-decay" min="0" max="4000" step="1">
+                                <span id="sd-env-decay-val"></span>
+                            </div>
+                            <br>
+                            <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+                                <label>Sustain</label>
+                                <input type="range" id="sd-env-sustain" min="0" max="100" step="1">
+                                <span id="sd-env-sustain-val"></span>
+                            </div>
+                            <br>
+                            <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+                                <label>Release</label>
+                                <input type="range" id="sd-env-release" min="0" max="4000" step="1">
+                                <span id="sd-env-release-val"></span>
+                            </div>
                         </div>
                     </div>
                     
@@ -2209,6 +2312,114 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
     `;
     document.body.appendChild(effectsPopup);
+
+    // Ensure Sound Design sliders use green accent to match theme
+    (function ensureSDSliderStyle(){
+        const styleId = 'sd-slider-green-style';
+        if (!document.getElementById(styleId)) {
+            const style = document.createElement('style');
+            style.id = styleId;
+            style.textContent = `
+                /* Match Reverb slider style but green */
+                .sound-design-controls .slider-container label { color: #66BB6A; }
+                .sound-design-controls span { color: #A5D6A7; }
+                .sound-design-controls input[type="range"] {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 100%;
+                    height: 8px;
+                    background: linear-gradient(90deg, #1B5E20 0%, #00C853 100%);
+                    border-radius: 4px;
+                    outline: none;
+                }
+                /* WebKit */
+                .sound-design-controls input[type="range"]::-webkit-slider-runnable-track {
+                    height: 8px;
+                    background: linear-gradient(90deg, #1B5E20 0%, #00C853 100%);
+                    border-radius: 4px;
+                }
+                .sound-design-controls input[type="range"]::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    margin-top: -5px;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    background: #00C853;
+                    border: 2px solid #1B5E20;
+                    cursor: pointer;
+                }
+                /* Firefox */
+                .sound-design-controls input[type="range"]::-moz-range-track {
+                    height: 8px;
+                    background: linear-gradient(90deg, #1B5E20 0%, #00C853 100%);
+                    border-radius: 4px;
+                }
+                .sound-design-controls input[type="range"]::-moz-range-thumb {
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    background: #00C853;
+                    border: 2px solid #1B5E20;
+                    cursor: pointer;
+                }
+                /* MS Edge Legacy */
+                .sound-design-controls input[type="range"]::-ms-fill-lower,
+                .sound-design-controls input[type="range"]::-ms-fill-upper {
+                    background: linear-gradient(90deg, #1B5E20 0%, #00C853 100%);
+                    border-radius: 4px;
+                }
+                .sound-design-controls input[type="range"]::-ms-thumb {
+                    width: 16px; height: 16px; border-radius: 50%; background: #00C853; border: 2px solid #1B5E20; cursor: pointer;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+    })();
+
+    // Style Volume (red) and Delay (yellow) sliders and section backgrounds
+    (function ensureFXSliderStyle(){
+        const styleId = 'fx-slider-green-style';
+        if (!document.getElementById(styleId)) {
+            const style = document.createElement('style');
+            style.id = styleId;
+            style.textContent = `
+                /* Volume (red theme) */
+                #sample-volume { -webkit-appearance: none; appearance: none; width: 100%; height: 8px; background: linear-gradient(90deg, #7F1D1D 0%, #E53935 100%); border-radius: 4px; outline: none; }
+                #sample-volume::-webkit-slider-runnable-track { height: 8px; background: linear-gradient(90deg, #7F1D1D 0%, #E53935 100%); border-radius: 4px; }
+                #sample-volume::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; margin-top: -5px; width: 16px; height: 16px; border-radius: 50%; background: #E53935; border: 2px solid #7F1D1D; cursor: pointer; }
+                #sample-volume::-moz-range-track { height: 8px; background: linear-gradient(90deg, #7F1D1D 0%, #E53935 100%); border-radius: 4px; }
+                #sample-volume::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: #E53935; border: 2px solid #7F1D1D; cursor: pointer; }
+                
+                /* Delay (yellow/amber theme, not too bright) */
+                #delay-time, #delay-feedback { -webkit-appearance: none; appearance: none; width: 100%; height: 8px; background: linear-gradient(90deg, #795548 0%, #FBC02D 100%); border-radius: 4px; outline: none; }
+                #delay-time::-webkit-slider-runnable-track, #delay-feedback::-webkit-slider-runnable-track { height: 8px; background: linear-gradient(90deg, #795548 0%, #FBC02D 100%); border-radius: 4px; }
+                #delay-time::-webkit-slider-thumb, #delay-feedback::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; margin-top: -5px; width: 16px; height: 16px; border-radius: 50%; background: #FBC02D; border: 2px solid #795548; cursor: pointer; }
+                #delay-time::-moz-range-track, #delay-feedback::-moz-range-track { height: 8px; background: linear-gradient(90deg, #795548 0%, #FBC02D 100%); border-radius: 4px; }
+                #delay-time::-moz-range-thumb, #delay-feedback::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: #FBC02D; border: 2px solid #795548; cursor: pointer; }
+            `;
+            document.head.appendChild(style);
+        }
+        // Soft background colors for sections (apply via DOM so we don't rely on :has)
+        try {
+            const volEl = document.getElementById('sample-volume');
+            if (volEl) {
+                const volSection = volEl.closest('.effect-section');
+                if (volSection) {
+                    volSection.style.backgroundColor = 'rgba(229, 57, 53, 0.10)';
+                    volSection.style.borderColor = 'rgba(229, 57, 53, 0.30)';
+                }
+            }
+            const dTime = document.getElementById('delay-time');
+            if (dTime) {
+                const delaySection = dTime.closest('.effect-section');
+                if (delaySection) {
+                    delaySection.style.backgroundColor = 'rgba(251, 192, 45, 0.10)';
+                    delaySection.style.borderColor = 'rgba(251, 192, 45, 0.30)';
+                }
+            }
+        } catch (e) {}
+    })();
 
     function interpolateGainSpline(frequency, sortedPoints) {
         if (sortedPoints.length === 0) return 0;
@@ -2818,6 +3029,16 @@ document.addEventListener("DOMContentLoaded", function () {
         return groupSlider ? parseFloat(groupSlider.value) / 100 : 0.8;
     }
 
+    // Perceptual volume curve: map 0-200% to an audio gain with fine control at low end
+    function mapVolumePercentToGain(percent) {
+        const clamped = Math.max(0, Math.min(200, Number(percent) || 0));
+        const normalized = clamped / 100; // 0..2
+        // Use a power curve for better low-end resolution and sensible high-end
+        // 1% -> ~-36 dB, 50% -> ~-9 dB, 100% -> 0 dB, 200% -> +6 dB-ish
+        const gain = Math.pow(normalized, 2.5);
+        return gain;
+    }
+
     function updateSampleVolumeInRealTime() {
         if (!currentSampleForPopup) return;
         const sample = currentPlaying[currentSampleForPopup];
@@ -2825,7 +3046,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("sample-volume-value").textContent = `${volume}%`;
         
         // Store the individual volume as a decimal (0-2)
-        const individualVolume = volume / 100;
+        const individualVolume = mapVolumePercentToGain(volume * 1.0);
         sample.individualVolume = individualVolume;
         
         // Update the actual gain by combining with group volume
@@ -3038,6 +3259,12 @@ document.addEventListener("DOMContentLoaded", function () {
             pianoRoll: {
                 notes: [],
                 soundSource: "piano",
+                soundDesign: {
+                    osc1: { wave: "sine", detune: 0, level: 50 },
+                    osc2: { wave: "sawtooth", detune: 0, level: 50 },
+                    filter: { type: "lowpass", cutoff: 2000, resonance: 0 },
+                    envelope: { attack: 10, decay: 100, sustain: 70, release: 200 }
+                },
                 gridWidth: sample.isLongSample ? 32 : 16,
                 gridHeight: 84,
                 scrollX: 0,
@@ -3192,6 +3419,12 @@ document.addEventListener("DOMContentLoaded", function () {
             pianoRoll: {
                 notes: [],
                 soundSource: "piano",
+                soundDesign: {
+                    osc1: { wave: "sine", detune: 0, level: 50 },
+                    osc2: { wave: "sawtooth", detune: 0, level: 50 },
+                    filter: { type: "lowpass", cutoff: 2000, resonance: 0 },
+                    envelope: { attack: 10, decay: 100, sustain: 70, release: 200 }
+                },
                 gridWidth: sampleNumber > 60 ? 32 : 16,
                 gridHeight: 84,
                 scrollX: 0,
@@ -3356,6 +3589,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     pianoRollData[sampleNumber].isEnabled = true;
                     initPianoRoll();
                     initPianoRollFilters();
+                    const sd = document.querySelector('.sound-design-controls');
+                    if (sd) sd.style.display = (document.getElementById('piano-roll-sound-source').value === 'sounddesign') ? '' : 'none';
                 } else {
                     pianoRollContent.classList.remove("visible");
                     pianoRollData[sampleNumber].isEnabled = false;
@@ -4214,6 +4449,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (pianoRollContent) {
             pianoRollContent.classList.remove("visible");
         }
+        // Ensure SD controls hidden initially
+        const sdControls = document.querySelector('.sound-design-controls');
+        if (sdControls) sdControls.style.display = 'none';
         document.getElementById("piano-roll-lowshelf").value = temporaryEffects.pianoRoll.filters.lowShelf;
         document.getElementById("piano-roll-lowshelf-value").textContent = `${temporaryEffects.pianoRoll.filters.lowShelf}dB`;
         document.getElementById("piano-roll-lowmid").value = temporaryEffects.pianoRoll.filters.lowMid;
@@ -5771,24 +6009,65 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function scheduleSampleForNextBar(sampleNumber) {
-        if (!currentPlaying[sampleNumber].buffer || !currentPlaying[sampleNumber].scheduledForNextBar) return;
-        const nextBarTime = masterBarGrid.nextStartTime;
-        const currentTime = audioContext.currentTime;
-        const timeUntilNextBar = (nextBarTime - currentTime) * 1e3;
+        if (!currentPlaying[sampleNumber].scheduledForNextBar) return;
+        const effects = currentPlaying[sampleNumber].effects || {};
+        const pianoRoll = effects.pianoRoll;
+        const hasPianoRoll = pianoRoll && pianoRoll.notes && pianoRoll.notes.length > 0;
+
+        // If we have a rendered buffer, align to bar grid as before
+        if (currentPlaying[sampleNumber].buffer) {
+            const nextBarTime = masterBarGrid.nextStartTime;
+            const currentTime = audioContext.currentTime;
+            const timeUntilNextBar = (nextBarTime - currentTime) * 1e3;
+            if (currentPlaying[sampleNumber].scheduledTimeout) {
+                clearTimeout(currentPlaying[sampleNumber].scheduledTimeout);
+            }
+            currentPlaying[sampleNumber].scheduledTimeout = setTimeout(() => {
+                if (currentPlaying[sampleNumber].scheduledForNextBar && currentPlaying[sampleNumber].isActive) {
+                    playSampleAtTime(sampleNumber, audioContext.currentTime);
+                    currentPlaying[sampleNumber].barGridAligned = true;
+                }
+                currentPlaying[sampleNumber].scheduledTimeout = null;
+            }, Math.max(0, timeUntilNextBar));
+            return;
+        }
+
+        // Piano-roll-only looping by grid length
+        if (!hasPianoRoll) return;
+        // Compute loop duration from grid width and tempo
+        const isLongSample = currentPlaying[sampleNumber].isLongSample;
+        let beatDuration, barDuration;
+        if (isLongSample) {
+            beatDuration = 60 / longLoopTempo;
+            barDuration = beatDuration * 4;
+        } else {
+            const effectiveTempo = tempo + highTempo;
+            beatDuration = 60 / effectiveTempo;
+            barDuration = beatDuration * 4;
+        }
+        const sixteenthDuration = barDuration / 16;
+        const loopDuration = (pianoRoll.gridWidth || 16) * sixteenthDuration; // seconds
+        if (!isFinite(loopDuration) || loopDuration <= 0) return;
+        const now = audioContext.currentTime;
+        const loopStart = currentPlaying[sampleNumber].loopStartTime || now;
+        const elapsed = Math.max(0, now - loopStart);
+        const timeUntilNextLoop = (loopDuration - (elapsed % loopDuration)) * 1e3;
         if (currentPlaying[sampleNumber].scheduledTimeout) {
             clearTimeout(currentPlaying[sampleNumber].scheduledTimeout);
         }
         currentPlaying[sampleNumber].scheduledTimeout = setTimeout(() => {
             if (currentPlaying[sampleNumber].scheduledForNextBar && currentPlaying[sampleNumber].isActive) {
-                playSampleAtTime(sampleNumber, audioContext.currentTime);
-                currentPlaying[sampleNumber].barGridAligned = true;
+                const startAt = audioContext.currentTime;
+                playSampleAtTime(sampleNumber, startAt);
+                currentPlaying[sampleNumber].loopStartTime = startAt;
+                scheduleSampleForNextBar(sampleNumber);
             }
             currentPlaying[sampleNumber].scheduledTimeout = null;
-        }, Math.max(0, timeUntilNextBar));
+        }, Math.max(0, timeUntilNextLoop));
     }
 
     function playSampleAtTime(sampleNumber, startTime) {
-        if (!currentPlaying[sampleNumber].buffer || !currentPlaying[sampleNumber].scheduledForNextBar) return;
+        if (!currentPlaying[sampleNumber].scheduledForNextBar) return;
         if (currentPlaying[sampleNumber].source) {
             try {
                 if (currentPlaying[sampleNumber].isScheduled) {
@@ -5897,13 +6176,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
         const source = audioContext.createBufferSource();
-        source.buffer = currentPlaying[sampleNumber].buffer;
+        source.buffer = currentPlaying[sampleNumber].buffer || null;
         const gainNode = audioContext.createGain();
         const effects = currentPlaying[sampleNumber].effects || {};
         const volumePercent = effects.volume || 100;
         
         // Set the individual volume from effects
-        const individualVolume = volumePercent / 100;
+        const individualVolume = mapVolumePercentToGain(volumePercent);
         currentPlaying[sampleNumber].individualVolume = individualVolume;
         
         // Get the current group volume for this sample
@@ -5945,7 +6224,7 @@ document.addEventListener("DOMContentLoaded", function () {
             sortedNotes.forEach(note => {
                 const noteTime = startTime + note.col * sixteenthDuration;
                 const noteDuration = (note.length || 1) * sixteenthDuration;
-                if (pianoRoll.soundSource === "piano") {
+            if (pianoRoll.soundSource === "piano") {
                     playPianoNoteForSample(note.row, noteTime, noteDuration, individualVolumeGain, sampleNumber);
                 } else if (pianoRoll.soundSource === "synth") {
                     playSynthNoteForSample(note.row, noteTime, noteDuration, individualVolumeGain, sampleNumber);
@@ -5959,6 +6238,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     playPadNoteForSample(note.row, noteTime, noteDuration, individualVolumeGain, sampleNumber);
                 } else if (pianoRoll.soundSource === "pluck") {
                     playPluckNoteForSample(note.row, noteTime, noteDuration, individualVolumeGain, sampleNumber);
+            } else if (pianoRoll.soundSource === "sounddesign") {
+                playSoundDesignNoteForSample(note.row, noteTime, noteDuration, individualVolumeGain, sampleNumber);
                 } else {
                     playSampleNoteForSample(note.row, noteTime, noteDuration, individualVolumeGain, sampleNumber, pianoRoll.sampleRange);
                 }
@@ -6011,7 +6292,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
                 const basePlaybackRate = currentPlaying[sampleNumber].loopDuration / desiredLoopDuration;
                 const speed = effects.speed || 1;
-                const playbackRate = basePlaybackRate * speed;
+                const individualTempo = effects.individualTempo || 1;
+                const playbackRate = basePlaybackRate * individualTempo * speed;
                 if (!isFinite(playbackRate) || playbackRate <= 0) {
                     console.error("Invalid playback rate for drum sample:", playbackRate);
                     return;
@@ -6259,7 +6541,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const basePlaybackRate = currentPlaying[sampleNumber].loopDuration / desiredLoopDuration;
         const effects = currentPlaying[sampleNumber].effects || {};
         const speed = effects.speed || 1;
-        const playbackRate = basePlaybackRate * speed;
+        const individualTempo = effects.individualTempo || 1;
+        const playbackRate = basePlaybackRate * individualTempo * speed;
         if (!isFinite(playbackRate) || playbackRate <= 0) {
             console.error("Invalid playback rate for updating drum sample:", playbackRate);
             return;
@@ -6925,26 +7208,27 @@ document.addEventListener("DOMContentLoaded", function () {
         gridSizeDisplay.textContent = data.gridWidth;
         updatePianoRollCellWidth();
         
-        // Create bar numbers
+        // Create bar/beat labels: (1.1, 1.2, 1.3, 1.4), (2.1 ...), etc.
         const cellsPerBar = 4; // 4 cells per bar (16th notes)
         const totalBars = Math.ceil(data.gridWidth / cellsPerBar);
-        
         for (let bar = 0; bar < totalBars; bar++) {
-            const barNumber = document.createElement("div");
-            barNumber.className = "piano-roll-bar-number";
-            
-            // Add bar-start class to the first cell of each bar
+            const barWrapper = document.createElement("div");
+            barWrapper.className = "piano-roll-bar-number";
+            barWrapper.style.display = "flex";
+            barWrapper.style.width = `${80 * pianoRollZoomLevel}px`; // 4 cells * 20px * zoom
+            barWrapper.style.justifyContent = "space-between";
+            // First beat mark
             if (bar * cellsPerBar % data.gridWidth === 0) {
-                barNumber.classList.add("bar-start");
+                barWrapper.classList.add("bar-start");
             }
-            
-            // Set the width to span 4 cells (one bar)
-            barNumber.style.width = `${80 * pianoRollZoomLevel}px`; // 4 cells * 20px * zoom level
-            
-            // Set the text to the bar number
-            barNumber.textContent = `Bar ${bar + 1}`;
-            
-            pianoRollBarNumbers.appendChild(barNumber);
+            for (let beat = 1; beat <= 4; beat++) {
+                const beatSpan = document.createElement("span");
+                beatSpan.textContent = `${bar + 1}.${beat}`;
+                beatSpan.style.flex = "1 1 25%";
+                beatSpan.style.textAlign = beat === 1 ? "left" : (beat === 4 ? "right" : "center");
+                barWrapper.appendChild(beatSpan);
+            }
+            pianoRollBarNumbers.appendChild(barWrapper);
         }
         
         const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
@@ -7000,15 +7284,58 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         soundSourceSelect.value = data.soundSource;
         noteLengthSelect.value = pianoRollNoteLength;
+        // Initialize Sound Design controls with saved values
+        const sd = document.querySelector('.sound-design-controls');
+        const ensureSD = () => {
+            if (!pianoRollData[currentSampleForPopup].soundDesign) {
+                pianoRollData[currentSampleForPopup].soundDesign = { osc1:{wave:'sine',detune:0,level:50}, osc2:{wave:'sawtooth',detune:0,level:50}, filter:{type:'lowpass',cutoff:2000,resonance:0}, envelope:{attack:10,decay:100,sustain:70,release:200} };
+            }
+        };
+        ensureSD();
+        if (sd) {
+            const s = pianoRollData[currentSampleForPopup].soundDesign;
+            sd.querySelector('#sd-osc1-wave').value = s.osc1.wave;
+            sd.querySelector('#sd-osc1-level').value = s.osc1.level; sd.querySelector('#sd-osc1-level-val').textContent = s.osc1.level + '%';
+            sd.querySelector('#sd-osc1-detune').value = s.osc1.detune; sd.querySelector('#sd-osc1-detune-val').textContent = s.osc1.detune + 'c';
+            sd.querySelector('#sd-osc2-wave').value = s.osc2.wave;
+            sd.querySelector('#sd-osc2-level').value = s.osc2.level; sd.querySelector('#sd-osc2-level-val').textContent = s.osc2.level + '%';
+            sd.querySelector('#sd-osc2-detune').value = s.osc2.detune; sd.querySelector('#sd-osc2-detune-val').textContent = s.osc2.detune + 'c';
+            sd.querySelector('#sd-filter-type').value = s.filter.type;
+            sd.querySelector('#sd-filter-cutoff').value = s.filter.cutoff; sd.querySelector('#sd-filter-cutoff-val').textContent = s.filter.cutoff + 'Hz';
+            sd.querySelector('#sd-filter-res').value = s.filter.resonance; sd.querySelector('#sd-filter-res-val').textContent = s.filter.resonance;
+            sd.querySelector('#sd-env-attack').value = s.envelope.attack; sd.querySelector('#sd-env-attack-val').textContent = s.envelope.attack + 'ms';
+            sd.querySelector('#sd-env-decay').value = s.envelope.decay; sd.querySelector('#sd-env-decay-val').textContent = s.envelope.decay + 'ms';
+            sd.querySelector('#sd-env-sustain').value = s.envelope.sustain; sd.querySelector('#sd-env-sustain-val').textContent = s.envelope.sustain + '%';
+            sd.querySelector('#sd-env-release').value = s.envelope.release; sd.querySelector('#sd-env-release-val').textContent = s.envelope.release + 'ms';
+            sd.style.display = (data.soundSource === 'sounddesign' && pianoRollData[currentSampleForPopup].isEnabled) ? '' : 'none';
+        }
         soundSourceSelect.addEventListener("change", function () {
             data.soundSource = this.value;
             if (this.value === "sample") {
                 openSampleSelectionPopup();
             }
+            const sd = document.querySelector('.sound-design-controls');
+            if (sd) sd.style.display = (this.value === 'sounddesign' && pianoRollData[currentSampleForPopup].isEnabled) ? '' : 'none';
         });
         noteLengthSelect.addEventListener("change", function () {
             pianoRollNoteLength = parseFloat(this.value);
         });
+        // SD listeners
+        const bind = (sel, ev, fn) => { const el = document.querySelector(sel); if (el) { el.replaceWith(el.cloneNode(true)); const ne = document.querySelector(sel); ne.addEventListener(ev, fn); } };
+        bind('#sd-osc1-wave','change', e=>{ ensureSD(); pianoRollData[currentSampleForPopup].soundDesign.osc1.wave = e.target.value; });
+        bind('#sd-osc1-level','input', e=>{ ensureSD(); const v=+e.target.value; const s=pianoRollData[currentSampleForPopup].soundDesign; s.osc1.level=v; document.getElementById('sd-osc1-level-val').textContent=v+'%'; if(isPreviewingPianoRoll){const n=pianoRollPreviewNodes[currentSampleForPopup]; n.soundDesign=s; // live update active voices
+            Object.values(pianoRollPreviewActiveVoices).forEach(vv=>{ if(vv && vv.g1) vv.g1.gain.value = (s.osc1.level||0)/100; }); }});
+        bind('#sd-osc1-detune','input', e=>{ ensureSD(); const v=+e.target.value; const s=pianoRollData[currentSampleForPopup].soundDesign; s.osc1.detune=v; document.getElementById('sd-osc1-detune-val').textContent=v+'c'; if(isPreviewingPianoRoll){const n=pianoRollPreviewNodes[currentSampleForPopup]; n.soundDesign=s; Object.values(pianoRollPreviewActiveVoices).forEach(vv=>{ if(vv && vv.osc1) vv.osc1.detune.setValueAtTime(s.osc1.detune, audioContext.currentTime); }); }});
+        bind('#sd-osc2-wave','change', e=>{ ensureSD(); pianoRollData[currentSampleForPopup].soundDesign.osc2.wave = e.target.value; });
+        bind('#sd-osc2-level','input', e=>{ ensureSD(); const v=+e.target.value; const s=pianoRollData[currentSampleForPopup].soundDesign; s.osc2.level=v; document.getElementById('sd-osc2-level-val').textContent=v+'%'; if(isPreviewingPianoRoll){const n=pianoRollPreviewNodes[currentSampleForPopup]; n.soundDesign=s; Object.values(pianoRollPreviewActiveVoices).forEach(vv=>{ if(vv && vv.g2) vv.g2.gain.value = (s.osc2.level||0)/100; }); }});
+        bind('#sd-osc2-detune','input', e=>{ ensureSD(); const v=+e.target.value; const s=pianoRollData[currentSampleForPopup].soundDesign; s.osc2.detune=v; document.getElementById('sd-osc2-detune-val').textContent=v+'c'; if(isPreviewingPianoRoll){const n=pianoRollPreviewNodes[currentSampleForPopup]; n.soundDesign=s; Object.values(pianoRollPreviewActiveVoices).forEach(vv=>{ if(vv && vv.osc2) vv.osc2.detune.setValueAtTime(s.osc2.detune, audioContext.currentTime); }); }});
+        bind('#sd-filter-type','change', e=>{ ensureSD(); const s=pianoRollData[currentSampleForPopup].soundDesign; s.filter.type=e.target.value; if(isPreviewingPianoRoll){const n=pianoRollPreviewNodes[currentSampleForPopup]; n.soundDesign=s; Object.values(pianoRollPreviewActiveVoices).forEach(vv=>{ if(vv && vv.filter) vv.filter.type = s.filter.type; }); }});
+        bind('#sd-filter-cutoff','input', e=>{ ensureSD(); const v=+e.target.value; const s=pianoRollData[currentSampleForPopup].soundDesign; s.filter.cutoff=v; document.getElementById('sd-filter-cutoff-val').textContent=v+'Hz'; if(isPreviewingPianoRoll){const n=pianoRollPreviewNodes[currentSampleForPopup]; n.soundDesign=s; Object.values(pianoRollPreviewActiveVoices).forEach(vv=>{ if(vv && vv.filter) vv.filter.frequency.setValueAtTime(Math.max(20, s.filter.cutoff||2000), audioContext.currentTime); }); }});
+        bind('#sd-filter-res','input', e=>{ ensureSD(); const v=+e.target.value; const s=pianoRollData[currentSampleForPopup].soundDesign; s.filter.resonance=v; document.getElementById('sd-filter-res-val').textContent=v; if(isPreviewingPianoRoll){const n=pianoRollPreviewNodes[currentSampleForPopup]; n.soundDesign=s; Object.values(pianoRollPreviewActiveVoices).forEach(vv=>{ if(vv && vv.filter) vv.filter.Q.setValueAtTime((s.filter.resonance||0)/10, audioContext.currentTime); }); }});
+        bind('#sd-env-attack','input', e=>{ ensureSD(); const v=+e.target.value; const s=pianoRollData[currentSampleForPopup].soundDesign; s.envelope.attack=v; document.getElementById('sd-env-attack-val').textContent=v+'ms'; if(isPreviewingPianoRoll){const n=pianoRollPreviewNodes[currentSampleForPopup]; n.soundDesign=s; const now=audioContext.currentTime; Object.values(pianoRollPreviewActiveVoices).forEach(vv=>{ if(vv && vv.env){ vv.env.gain.cancelScheduledValues(now); vv.env.gain.setValueAtTime(0, now); vv.env.gain.linearRampToValueAtTime(1, now + (s.envelope.attack||0)/1000); } }); }});
+        bind('#sd-env-decay','input', e=>{ ensureSD(); const v=+e.target.value; const s=pianoRollData[currentSampleForPopup].soundDesign; s.envelope.decay=v; document.getElementById('sd-env-decay-val').textContent=v+'ms'; if(isPreviewingPianoRoll){const n=pianoRollPreviewNodes[currentSampleForPopup]; n.soundDesign=s; const now=audioContext.currentTime; const sustain=(s.envelope.sustain||0)/100; Object.values(pianoRollPreviewActiveVoices).forEach(vv=>{ if(vv && vv.env){ vv.env.gain.cancelScheduledValues(now); vv.env.gain.setValueAtTime(vv.env.gain.value, now); vv.env.gain.linearRampToValueAtTime(sustain, now + (s.envelope.decay||0)/1000); } }); }});
+        bind('#sd-env-sustain','input', e=>{ ensureSD(); const v=+e.target.value; const s=pianoRollData[currentSampleForPopup].soundDesign; s.envelope.sustain=v; document.getElementById('sd-env-sustain-val').textContent=v+'%'; if(isPreviewingPianoRoll){const n=pianoRollPreviewNodes[currentSampleForPopup]; n.soundDesign=s; Object.values(pianoRollPreviewActiveVoices).forEach(vv=>{ if(vv && vv.env){ const now=audioContext.currentTime; vv.env.gain.cancelScheduledValues(now); vv.env.gain.setValueAtTime(vv.env.gain.value, now); vv.env.gain.linearRampToValueAtTime((s.envelope.sustain||0)/100, now+0.02); }}); }});
+        bind('#sd-env-release','input', e=>{ ensureSD(); const v=+e.target.value; const s=pianoRollData[currentSampleForPopup].soundDesign; s.envelope.release=v; document.getElementById('sd-env-release-val').textContent=v+'ms'; if(isPreviewingPianoRoll){const n=pianoRollPreviewNodes[currentSampleForPopup]; n.soundDesign=s; const now=audioContext.currentTime; Object.values(pianoRollPreviewActiveVoices).forEach(vv=>{ if(vv && vv.env){ vv.env.gain.cancelScheduledValues(now); vv.env.gain.setValueAtTime(vv.env.gain.value, now); vv.env.gain.linearRampToValueAtTime(0, now + Math.max(0,(s.envelope.release||0)/1000)); } }); }});
         gridSizeDecreaseBtn.addEventListener("click", function () {
             if (data.gridWidth > 4) {
                 data.gridWidth /= 2;
@@ -7017,21 +7344,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 // Recreate bar numbers
                 pianoRollBarNumbers.innerHTML = "";
-                const cellsPerBar = 4;
-                const totalBars = Math.ceil(data.gridWidth / cellsPerBar);
-                
-                for (let bar = 0; bar < totalBars; bar++) {
-                    const barNumber = document.createElement("div");
-                    barNumber.className = "piano-roll-bar-number";
-                    
-                    if (bar * cellsPerBar % data.gridWidth === 0) {
-                        barNumber.classList.add("bar-start");
-                    }
-                    
-                    barNumber.style.width = `${80 * pianoRollZoomLevel}px`;
-                    barNumber.textContent = `Bar ${bar + 1}`;
-                    
-                    pianoRollBarNumbers.appendChild(barNumber);
+                // Rebuild as beat labels: 16 steps per bar, 4 steps per beat
+                const stepsPerBeat = 4;
+                const totalBeats = Math.ceil(data.gridWidth / stepsPerBeat);
+                for (let beatIdx = 0; beatIdx < totalBeats; beatIdx++) {
+                    const barNumber = Math.floor(beatIdx / 4) + 1;
+                    const beatNumber = (beatIdx % 4) + 1;
+                    const beatDiv = document.createElement("div");
+                    beatDiv.className = "piano-roll-bar-number";
+                    if (beatNumber === 1) beatDiv.classList.add("bar-start");
+                    beatDiv.style.width = `${80 * pianoRollZoomLevel}px`;
+                    beatDiv.style.display = "flex";
+                    beatDiv.style.justifyContent = "center";
+                    const span = document.createElement("span");
+                    span.textContent = `${barNumber}.${beatNumber}`;
+                    beatDiv.appendChild(span);
+                    pianoRollBarNumbers.appendChild(beatDiv);
                 }
                 
                 // Recreate grid
@@ -7071,23 +7399,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 gridSizeDisplay.textContent = data.gridWidth;
                 updatePianoRollCellWidth();
                 
-                // Recreate bar numbers
+                // Recreate beat labels
                 pianoRollBarNumbers.innerHTML = "";
-                const cellsPerBar = 4;
-                const totalBars = Math.ceil(data.gridWidth / cellsPerBar);
-                
-                for (let bar = 0; bar < totalBars; bar++) {
-                    const barNumber = document.createElement("div");
-                    barNumber.className = "piano-roll-bar-number";
-                    
-                    if (bar * cellsPerBar % data.gridWidth === 0) {
-                        barNumber.classList.add("bar-start");
-                    }
-                    
-                    barNumber.style.width = `${80 * pianoRollZoomLevel}px`;
-                    barNumber.textContent = `Bar ${bar + 1}`;
-                    
-                    pianoRollBarNumbers.appendChild(barNumber);
+                const stepsPerBeatInc = 4;
+                const totalBeatsInc = Math.ceil(data.gridWidth / stepsPerBeatInc);
+                for (let beatIdx = 0; beatIdx < totalBeatsInc; beatIdx++) {
+                    const barNumber = Math.floor(beatIdx / 4) + 1;
+                    const beatNumber = (beatIdx % 4) + 1;
+                    const beatDiv = document.createElement("div");
+                    beatDiv.className = "piano-roll-bar-number";
+                    if (beatNumber === 1) beatDiv.classList.add("bar-start");
+                    beatDiv.style.width = `${80 * pianoRollZoomLevel}px`;
+                    beatDiv.style.display = "flex";
+                    beatDiv.style.justifyContent = "center";
+                    const span = document.createElement("span");
+                    span.textContent = `${barNumber}.${beatNumber}`;
+                    beatDiv.appendChild(span);
+                    pianoRollBarNumbers.appendChild(beatDiv);
                 }
                 
                 // Recreate grid
@@ -7157,8 +7485,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!pianoRollVisualizer || !pianoRollVisualizerCtx) return;
         const width = pianoRollVisualizer.width;
         const height = pianoRollVisualizer.height;
-        pianoRollVisualizerCtx.fillStyle = "#111";
+        // Smoother background gradient
+        const bgGradient = pianoRollVisualizerCtx.createLinearGradient(0, 0, width, height);
+        bgGradient.addColorStop(0, "#181a2e");
+        bgGradient.addColorStop(1, "#232a4d");
+        pianoRollVisualizerCtx.fillStyle = bgGradient;
         pianoRollVisualizerCtx.fillRect(0, 0, width, height);
+
+        // Draw history with glow effect
         if (pianoRollVisualizerHistory.length > 0) {
             const gradient = pianoRollVisualizerCtx.createLinearGradient(0, height, 0, 0);
             gradient.addColorStop(0, "rgba(28, 0, 212, 0.9)");
@@ -7172,7 +7506,10 @@ document.addEventListener("DOMContentLoaded", function () {
             for (let h = 0; h < pianoRollVisualizerHistory.length; h++) {
                 const dataArray = pianoRollVisualizerHistory[h];
                 const x = h * sliceWidth;
-                const alpha = .4 + h / pianoRollVisualizerHistory.length * .6;
+                const alpha = .3 + h / pianoRollVisualizerHistory.length * .7;
+                pianoRollVisualizerCtx.save();
+                pianoRollVisualizerCtx.shadowColor = "#fff";
+                pianoRollVisualizerCtx.shadowBlur = 8;
                 pianoRollVisualizerCtx.beginPath();
                 pianoRollVisualizerCtx.moveTo(x, height);
                 const maxFreq = audioContext.sampleRate / 2;
@@ -7193,12 +7530,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 pianoRollVisualizerCtx.globalAlpha = alpha;
                 pianoRollVisualizerCtx.fillStyle = gradient;
                 pianoRollVisualizerCtx.fill();
+                pianoRollVisualizerCtx.restore();
             }
             pianoRollVisualizerCtx.globalAlpha = 1;
+            // Draw latest spectrum with highlight
             if (pianoRollVisualizerHistory.length > 0) {
                 const latestData = pianoRollVisualizerHistory[pianoRollVisualizerHistory.length - 1];
-                pianoRollVisualizerCtx.strokeStyle = "rgba(96, 96, 96, 1)";
-                pianoRollVisualizerCtx.lineWidth = 2;
+                pianoRollVisualizerCtx.save();
+                pianoRollVisualizerCtx.shadowColor = "#00fff7";
+                pianoRollVisualizerCtx.shadowBlur = 12;
+                pianoRollVisualizerCtx.strokeStyle = "rgba(96, 255, 255, 1)";
+                pianoRollVisualizerCtx.lineWidth = 2.5;
                 pianoRollVisualizerCtx.beginPath();
                 const maxFreq = audioContext.sampleRate / 2;
                 const minLogFreq = Math.log10(20);
@@ -7218,6 +7560,27 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 }
                 pianoRollVisualizerCtx.stroke();
+                pianoRollVisualizerCtx.restore();
+            }
+        }
+
+        // Draw note activity indicators (if previewing)
+        if (isPreviewingPianoRoll && currentPianoRollSample && pianoRollData[currentPianoRollSample]) {
+            const notes = pianoRollData[currentPianoRollSample].notes;
+            for (const note of notes) {
+                // Map note row to vertical position
+                const y = height - (note.row / 88) * height;
+                // Map note col to horizontal position
+                const x = (note.col / (pianoRollData[currentPianoRollSample].gridWidth || 16)) * width;
+                pianoRollVisualizerCtx.save();
+                pianoRollVisualizerCtx.globalAlpha = 0.8;
+                pianoRollVisualizerCtx.shadowColor = "#ff0";
+                pianoRollVisualizerCtx.shadowBlur = 16;
+                pianoRollVisualizerCtx.beginPath();
+                pianoRollVisualizerCtx.arc(x, y, 8, 0, Math.PI * 2);
+                pianoRollVisualizerCtx.fillStyle = "#fff200";
+                pianoRollVisualizerCtx.fill();
+                pianoRollVisualizerCtx.restore();
             }
         }
     }
@@ -7391,7 +7754,8 @@ document.addEventListener("DOMContentLoaded", function () {
             sixteenthDuration: sixteenthDuration,
             soundSource: soundSource,
             sampleRange: data.sampleRange,
-            filters: data.filters
+            filters: data.filters,
+            soundDesign: data.soundDesign
         };
         startPianoRollVisualizerAnimation();
         startPianoRollLoop();
@@ -7420,6 +7784,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 playPadNoteForPreview(note.row, noteTime, noteDuration, nodes.gain);
             } else if (nodes.soundSource === "pluck") {
                 playPluckNoteForPreview(note.row, noteTime, noteDuration, nodes.gain);
+            } else if (nodes.soundSource === "sounddesign") {
+                const latestDesign = (pianoRollData[currentPianoRollSample] && pianoRollData[currentPianoRollSample].soundDesign) || nodes.soundDesign;
+                const voiceId = `${note.row}-${noteTime.toFixed(3)}`;
+                const voice = playSoundDesignNoteForPreview(note.row, noteTime, noteDuration, nodes.gain, latestDesign);
+                pianoRollPreviewActiveVoices[voiceId] = voice;
+                // Cleanup this voice after it finishes
+                const cleanupMs = Math.max(0, (voice.stopAt - audioContext.currentTime) * 1e3) + 20;
+                setTimeout(() => { delete pianoRollPreviewActiveVoices[voiceId]; }, cleanupMs);
             } else {
                 playSampleNoteForPreview(note.row, noteTime, noteDuration, nodes.gain, currentPianoRollSample, nodes.sampleRange);
             }
@@ -7816,6 +8188,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 renderPadNote(offlineContext, note.row, noteTime, noteDuration, masterGain);
             } else if (soundSource === "pluck") {
                 renderPluckNote(offlineContext, note.row, noteTime, noteDuration, masterGain);
+            } else if (soundSource === "sounddesign") {
+                renderSoundDesignNote(offlineContext, note.row, noteTime, noteDuration, masterGain, data.soundDesign);
             } else {
                 renderSampleNote(offlineContext, note.row, noteTime, noteDuration, masterGain, currentSampleForPopup, data.sampleRange);
             }
@@ -8305,6 +8679,122 @@ document.addEventListener("DOMContentLoaded", function () {
         oscillator.start(now);
         oscillator.stop(now + duration);
     }
+
+function playSoundDesignNoteForSample(row, time, duration, outputNode, sampleNumber) {
+    const data = (currentPlaying[sampleNumber] && currentPlaying[sampleNumber].effects && currentPlaying[sampleNumber].effects.pianoRoll && currentPlaying[sampleNumber].effects.pianoRoll.soundDesign)
+        || (pianoRollData[sampleNumber] && pianoRollData[sampleNumber].soundDesign);
+    if (!data) return playPianoNoteForSample(row, time, duration, outputNode, sampleNumber);
+
+    const noteNames = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
+    const noteIndex = row % 12;
+    const octave = Math.floor(row / 12);
+    const frequency = getNoteFrequency(noteNames[noteIndex], octave);
+
+    const osc1 = audioContext.createOscillator();
+    const osc2 = audioContext.createOscillator();
+    const osc1Gain = audioContext.createGain();
+    const osc2Gain = audioContext.createGain();
+    const filter = audioContext.createBiquadFilter();
+    const env = audioContext.createGain();
+
+    osc1.type = data.osc1.wave;
+    osc2.type = data.osc2.wave;
+    osc1.detune.value = data.osc1.detune;
+    osc2.detune.value = data.osc2.detune;
+    osc1Gain.gain.value = (data.osc1.level || 0) / 100;
+    osc2Gain.gain.value = (data.osc2.level || 0) / 100;
+
+    filter.type = data.filter.type;
+    filter.frequency.value = Math.max(20, (data.filter.cutoff || 2000));
+    filter.Q.value = (data.filter.resonance || 0) / 10;
+
+    osc1.connect(osc1Gain);
+    osc2.connect(osc2Gain);
+    osc1Gain.connect(filter);
+    osc2Gain.connect(filter);
+    filter.connect(env);
+    env.connect(outputNode);
+
+    const now = Math.max(time, audioContext.currentTime);
+    const attack = (data.envelope.attack || 0) / 1000;
+    const decay = (data.envelope.decay || 0) / 1000;
+    const sustain = (data.envelope.sustain || 0) / 100;
+    const release = (data.envelope.release || 0) / 1000;
+
+    env.gain.setValueAtTime(0, now);
+    env.gain.linearRampToValueAtTime(1, now + attack);
+    env.gain.linearRampToValueAtTime(sustain, now + attack + decay);
+    // Hold sustain until note-off, then release
+    env.gain.setValueAtTime(sustain, now + duration);
+    env.gain.linearRampToValueAtTime(0, now + duration + release);
+
+    osc1.frequency.setValueAtTime(frequency, now);
+    osc2.frequency.setValueAtTime(frequency, now);
+
+    osc1.start(now);
+    osc2.start(now);
+    const stopAt = now + duration + Math.max(0, release);
+    osc1.stop(stopAt);
+    osc2.stop(stopAt);
+}
+
+function renderSoundDesignNote(offlineContext, row, time, duration, outputNode, design) {
+    const data = design || { osc1:{wave:"sine",detune:0,level:50}, osc2:{wave:"sawtooth",detune:0,level:50}, filter:{type:"lowpass",cutoff:2000,resonance:0}, envelope:{attack:10,decay:100,sustain:70,release:200} };
+    const noteNames = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
+    const noteIndex = row % 12; const octave = Math.floor(row / 12);
+    const frequency = getNoteFrequency(noteNames[noteIndex], octave);
+    const osc1 = offlineContext.createOscillator(); osc1.type = data.osc1.wave; osc1.detune.value = data.osc1.detune;
+    const osc2 = offlineContext.createOscillator(); osc2.type = data.osc2.wave; osc2.detune.value = data.osc2.detune;
+    const g1 = offlineContext.createGain(); g1.gain.value = (data.osc1.level||0)/100;
+    const g2 = offlineContext.createGain(); g2.gain.value = (data.osc2.level||0)/100;
+    const filter = offlineContext.createBiquadFilter(); filter.type = data.filter.type; filter.frequency.value = Math.max(20, data.filter.cutoff||2000); filter.Q.value = (data.filter.resonance||0)/10;
+    const env = offlineContext.createGain();
+    osc1.connect(g1); osc2.connect(g2); g1.connect(filter); g2.connect(filter); filter.connect(env); env.connect(outputNode);
+    const attack=(data.envelope.attack||0)/1000, decay=(data.envelope.decay||0)/1000, sustain=(data.envelope.sustain||0)/100, release=(data.envelope.release||0)/1000;
+    env.gain.setValueAtTime(0, time);
+    env.gain.linearRampToValueAtTime(1, time+attack);
+    env.gain.linearRampToValueAtTime(sustain, time+attack+decay);
+    // Hold sustain until note-off, then release
+    env.gain.setValueAtTime(sustain, time+duration);
+    env.gain.linearRampToValueAtTime(0, time+duration+release);
+    osc1.frequency.setValueAtTime(frequency, time); osc2.frequency.setValueAtTime(frequency, time);
+    osc1.start(time); osc2.start(time);
+    const stopAt = time + duration + Math.max(0, release);
+    osc1.stop(stopAt); osc2.stop(stopAt);
+}
+
+function playSoundDesignNoteForPreview(row, time, duration, gainNode, design) {
+    const data = design || { osc1:{wave:"sine",detune:0,level:50}, osc2:{wave:"sawtooth",detune:0,level:50}, filter:{type:"lowpass",cutoff:2000,resonance:0}, envelope:{attack:10,decay:100,sustain:70,release:200} };
+    const noteNames = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
+    const noteIndex = row % 12;
+    const octave = Math.floor(row / 12);
+    const frequency = getNoteFrequency(noteNames[noteIndex], octave);
+    const osc1 = audioContext.createOscillator();
+    const osc2 = audioContext.createOscillator();
+    const g1 = audioContext.createGain();
+    const g2 = audioContext.createGain();
+    const filter = audioContext.createBiquadFilter();
+    const env = audioContext.createGain();
+    osc1.type = data.osc1.wave; osc2.type = data.osc2.wave;
+    osc1.detune.value = data.osc1.detune; osc2.detune.value = data.osc2.detune;
+    g1.gain.value = (data.osc1.level||0)/100; g2.gain.value = (data.osc2.level||0)/100;
+    filter.type = data.filter.type; filter.frequency.value = Math.max(20, data.filter.cutoff||2000); filter.Q.value = (data.filter.resonance||0)/10;
+    osc1.connect(g1); osc2.connect(g2); g1.connect(filter); g2.connect(filter); filter.connect(env); env.connect(gainNode);
+    const now = Math.max(time, audioContext.currentTime);
+    const attack=(data.envelope.attack||0)/1000, decay=(data.envelope.decay||0)/1000, sustain=(data.envelope.sustain||0)/100, release=(data.envelope.release||0)/1000;
+    env.gain.setValueAtTime(0, now);
+    env.gain.linearRampToValueAtTime(1, now+attack);
+    env.gain.linearRampToValueAtTime(sustain, now+attack+decay);
+    // Hold sustain until note-off, then release
+    env.gain.setValueAtTime(sustain, now+duration);
+    env.gain.linearRampToValueAtTime(0, now+duration+release);
+    osc1.frequency.setValueAtTime(frequency, now); osc2.frequency.setValueAtTime(frequency, now);
+    osc1.start(now); osc2.start(now);
+    const stopAt = now + duration + Math.max(0, release);
+    osc1.stop(stopAt); osc2.stop(stopAt);
+    // Return live nodes so we can modulate mid-note during preview
+    return { osc1, osc2, g1, g2, filter, env, stopAt };
+}
 
     function playSampleNoteForSample(row, time, duration, outputNode, sampleNumber, sampleRange) {
         if (!currentPlaying[sampleNumber] || !currentPlaying[sampleNumber].buffer) return;
