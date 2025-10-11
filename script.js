@@ -21,13 +21,92 @@ let currentSongIndex = 0; // Track current song index
 let albumToSongs = {}; // { [albumName: string]: string[] }
 let albumLoadInFlight = {}; // { [albumName: string]: Promise<string[]> }
 
-// Add event listeners to the audio element for debugging
-currentSong.addEventListener('loadstart', () => console.log('Audio: loadstart'));
-currentSong.addEventListener('loadeddata', () => console.log('Audio: loadeddata'));
-currentSong.addEventListener('canplay', () => console.log('Audio: canplay'));
-currentSong.addEventListener('play', () => console.log('Audio: play event'));
-currentSong.addEventListener('pause', () => console.log('Audio: pause event'));
-currentSong.addEventListener('error', (e) => console.error('Audio error:', e));
+// Performance optimizations
+let isMobile = window.innerWidth <= 768;
+let searchTimeout = null;
+let resizeTimeout = null;
+
+// Debounce function for performance
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Throttle function for performance
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    }
+}
+
+// Loading indicator functions
+function showLoading() {
+    const loadingIndicator = document.querySelector('.loading-indicator');
+    const songInfo = document.querySelector('.songinfo');
+    if (loadingIndicator && songInfo) {
+        loadingIndicator.style.display = 'flex';
+        songInfo.style.display = 'none';
+    }
+}
+
+function hideLoading() {
+    const loadingIndicator = document.querySelector('.loading-indicator');
+    const songInfo = document.querySelector('.songinfo');
+    if (loadingIndicator && songInfo) {
+        loadingIndicator.style.display = 'none';
+        songInfo.style.display = 'block';
+    }
+}
+
+// Add event listeners to the audio element for debugging and user feedback
+currentSong.addEventListener('loadstart', () => {
+    console.log('Audio: loadstart');
+    showLoading();
+});
+
+currentSong.addEventListener('loadeddata', () => {
+    console.log('Audio: loadeddata');
+    hideLoading();
+});
+
+currentSong.addEventListener('canplay', () => {
+    console.log('Audio: canplay');
+    hideLoading();
+});
+
+currentSong.addEventListener('play', () => {
+    console.log('Audio: play event');
+    hideLoading();
+});
+
+currentSong.addEventListener('pause', () => {
+    console.log('Audio: pause event');
+});
+
+currentSong.addEventListener('error', (e) => {
+    console.error('Audio error:', e);
+    hideLoading();
+    // Show user-friendly error message
+    const songInfoEl = document.querySelector(".songinfo");
+    if (songInfoEl) {
+        songInfoEl.innerHTML = "Error loading track";
+        songInfoEl.style.color = "#ff6b6b";
+    }
+});
 
 // Function to clean song names by removing track numbers and file extensions
 function cleanSongName(filename) {
@@ -269,6 +348,9 @@ async function getSongs(albumName) {
 }
 
 const playMusic = (track, pause = false) => {
+    // Show loading indicator
+    showLoading();
+    
     // Find the original filename from the songs array
     const originalFilename = songs.find(song => cleanSongName(song) === cleanSongName(track));
     const filenameToPlay = originalFilename || track;
@@ -291,19 +373,27 @@ const playMusic = (track, pause = false) => {
         currentSong.play()
             .then(() => {
                 console.log('Audio started playing successfully');
-                play.src = `${baseUrl}Website/img/pause.svg`
+                play.src = `${baseUrl}Website/img/pause.svg`;
+                hideLoading();
             })
             .catch(error => {
                 console.error('Error playing audio:', error);
                 console.log('Audio source:', currentSong.src);
+                hideLoading();
             });
     }
     
     // Update song info
-    document.querySelector(".songinfo").innerHTML = cleanDisplayName
+    const songInfoEl = document.querySelector(".songinfo");
+    if (songInfoEl) {
+        songInfoEl.innerHTML = cleanDisplayName;
+    }
     
     // Reset current time to 00:00
-    document.querySelector(".current-time").innerHTML = "00:00"
+    const currentTimeEl = document.querySelector(".current-time");
+    if (currentTimeEl) {
+        currentTimeEl.innerHTML = "00:00";
+    }
     
     // The total time will be updated by the loadedmetadata event
 }
@@ -407,8 +497,9 @@ async function main() {
         }
     });
 
-    // Handle window resize
-    window.addEventListener('resize', () => {
+    // Handle window resize with throttling for better performance
+    const throttledResize = throttle(() => {
+        isMobile = window.innerWidth <= 768;
         if (window.innerWidth > 1200) {
             // Reset to default display on larger screens
             leftContainer.style.display = '';
@@ -417,7 +508,9 @@ async function main() {
             // Hide sidebar on small screens if not active
             leftContainer.style.display = 'none';
         }
-    });
+    }, 100);
+
+    window.addEventListener('resize', throttledResize);
     // Helper: auto-hide sidebar on small screens
     function adjustSidebarForViewport() {
         const leftEl = document.querySelector('.left');
@@ -482,10 +575,12 @@ async function main() {
     if (homeBtn) {
         homeBtn.style.cursor = 'pointer';
         homeBtn.addEventListener('click', async () => {
-            const input = document.querySelector('.searchbar input');
-            if (input) {
-                input.value = '';
-            }
+            // Clear both search inputs
+            const mainInput = document.querySelector('.searchbar input');
+            const sidebarInput = document.querySelector('.sidebar-search-input');
+            if (mainInput) mainInput.value = '';
+            if (sidebarInput) sidebarInput.value = '';
+            
             // Show all albums
             filterAlbums('');
             // Restore current album songs if we have context
@@ -501,31 +596,66 @@ async function main() {
     if (searchBtn) {
         searchBtn.style.cursor = 'pointer';
         searchBtn.addEventListener('click', () => {
-            const input = document.querySelector('.searchbar input');
-            if (input) {
-                input.focus();
-                input.select();
+            // Focus on sidebar search if it exists, otherwise main search
+            const sidebarInput = document.querySelector('.sidebar-search-input');
+            const mainInput = document.querySelector('.searchbar input');
+            
+            if (sidebarInput) {
+                sidebarInput.focus();
+                sidebarInput.select();
+            } else if (mainInput) {
+                mainInput.focus();
+                mainInput.select();
             }
         });
     }
 
-    // Live search input listener
-    const searchInput = document.querySelector('.searchbar input');
-    if (searchInput) {
-        searchInput.addEventListener('input', async (e) => {
-            const q = e.target.value || '';
-            filterAlbums(q);
-            if (q.trim() === '') {
-                // If cleared, restore current album song list filter (hide none)
-                filterSongs('');
-                // Also restore current album songs if available
-                if (currentAlbum) {
-                    await getSongs(currentAlbum);
-                }
-            } else {
-                // Render global song results across albums
-                await renderSongSearchResults(q);
+    // Shared search function for both main and sidebar search bars
+    const performSearch = debounce(async (query) => {
+        filterAlbums(query);
+        if (query.trim() === '') {
+            // If cleared, restore current album song list filter (hide none)
+            filterSongs('');
+            // Also restore current album songs if available
+            if (currentAlbum) {
+                await getSongs(currentAlbum);
             }
+        } else {
+            // Render global song results across albums
+            await renderSongSearchResults(query);
+        }
+    }, isMobile ? 300 : 150); // Longer delay on mobile for better performance
+
+    // Sync search inputs function
+    const syncSearchInputs = (sourceInput, targetInput) => {
+        if (targetInput && targetInput.value !== sourceInput.value) {
+            targetInput.value = sourceInput.value;
+        }
+    };
+
+    // Main search bar listener
+    const mainSearchInput = document.querySelector('.searchbar input');
+    if (mainSearchInput) {
+        mainSearchInput.addEventListener('input', (e) => {
+            const q = e.target.value || '';
+            performSearch(q);
+            
+            // Sync with sidebar search
+            const sidebarSearchInput = document.querySelector('.sidebar-search-input');
+            syncSearchInputs(e.target, sidebarSearchInput);
+        });
+    }
+
+    // Sidebar search bar listener
+    const sidebarSearchInput = document.querySelector('.sidebar-search-input');
+    if (sidebarSearchInput) {
+        sidebarSearchInput.addEventListener('input', (e) => {
+            const q = e.target.value || '';
+            performSearch(q);
+            
+            // Sync with main search
+            const mainSearchInput = document.querySelector('.searchbar input');
+            syncSearchInputs(e.target, mainSearchInput);
         });
     }
 
@@ -548,24 +678,33 @@ async function main() {
     // Auto-play next song when current song ends
     currentSong.addEventListener('ended', playNextSong);
 
-    // Listen for timeupdate event
-    currentSong.addEventListener("timeupdate", () => {
+    // Listen for timeupdate event with throttling for better performance
+    const throttledTimeUpdate = throttle(() => {
         // Update current time (left side of seekbar)
-        document.querySelector(".current-time").innerHTML = secondsToMinutesSeconds(currentSong.currentTime);
-        // Update total time (right side of seekbar)
-        document.querySelector(".total-time").innerHTML = secondsToMinutesSeconds(currentSong.duration);
+        const currentTimeEl = document.querySelector(".current-time");
+        const totalTimeEl = document.querySelector(".total-time");
+        const circleEl = document.querySelector(".circle");
         
-        if (!window.__isSeeking) {
-            document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%";
+        if (currentTimeEl) {
+            currentTimeEl.innerHTML = secondsToMinutesSeconds(currentSong.currentTime);
         }
-    })
+        if (totalTimeEl) {
+            totalTimeEl.innerHTML = secondsToMinutesSeconds(currentSong.duration);
+        }
+        
+        if (!window.__isSeeking && circleEl && currentSong.duration) {
+            circleEl.style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%";
+        }
+    }, isMobile ? 100 : 50); // Less frequent updates on mobile
+
+    currentSong.addEventListener("timeupdate", throttledTimeUpdate);
 
     // Add loadedmetadata event listener to update duration when a new song loads
     currentSong.addEventListener("loadedmetadata", () => {
         document.querySelector(".total-time").innerHTML = secondsToMinutesSeconds(currentSong.duration);
     });
 
-    // Precise draggable seekbar with live scrubbing
+    // Precise draggable seekbar with live scrubbing and mobile touch support
     const seekbar = document.querySelector(".seekbar");
     const circle = document.querySelector(".circle");
 
@@ -580,6 +719,28 @@ async function main() {
         }
     }
 
+    // Touch events for mobile
+    seekbar.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        window.__isSeeking = true;
+        const touch = e.touches[0];
+        setTimeFromClientX(touch.clientX);
+    });
+
+    seekbar.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        if (window.__isSeeking) {
+            const touch = e.touches[0];
+            setTimeFromClientX(touch.clientX);
+        }
+    });
+
+    seekbar.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        window.__isSeeking = false;
+    });
+
+    // Mouse/pointer events for desktop
     seekbar.addEventListener('pointerdown', (e) => {
         window.__isSeeking = true;
         seekbar.setPointerCapture(e.pointerId);
@@ -650,6 +811,51 @@ async function main() {
             if (volumeInput) volumeInput.value = 10;
         }
     })
+
+    // Add keyboard accessibility
+    document.addEventListener('keydown', (e) => {
+        // Prevent default behavior for space bar to avoid page scrolling
+        if (e.code === 'Space' && (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA')) {
+            e.preventDefault();
+            // Toggle play/pause
+            if (currentSong.paused) {
+                currentSong.play();
+                play.src = `${baseUrl}Website/img/pause.svg`;
+            } else {
+                currentSong.pause();
+                play.src = `${baseUrl}Website/img/play.svg`;
+            }
+        }
+        
+        // Arrow keys for seeking
+        if (e.code === 'ArrowLeft') {
+            e.preventDefault();
+            currentSong.currentTime = Math.max(0, currentSong.currentTime - 10);
+        }
+        if (e.code === 'ArrowRight') {
+            e.preventDefault();
+            currentSong.currentTime = Math.min(currentSong.duration, currentSong.currentTime + 10);
+        }
+        
+        // N and P for next/previous
+        if (e.code === 'KeyN') {
+            e.preventDefault();
+            playNextSong();
+        }
+        if (e.code === 'KeyP') {
+            e.preventDefault();
+            playPreviousSong();
+        }
+        
+        // M for mute
+        if (e.code === 'KeyM') {
+            e.preventDefault();
+            const volImg = document.querySelector(".volume>img");
+            if (volImg) {
+                volImg.click();
+            }
+        }
+    });
 }
 
 main()

@@ -23,6 +23,12 @@
                     <li><img class="invert" src="./Website/img/home.svg" alt="home"><a href="./PsypowerRecords.html">Home</a></li>
                     <li><img class="invert" src="./Website/img/search.svg" alt="home"><a href="">Search</a></li>
                 </ul>
+                
+                <!-- Sidebar Search Bar -->
+                <div class="sidebar-searchbar">
+                    <input type="text" placeholder="Search songs and albums..." class="sidebar-search-input">
+                    <img width="16" src="./Website/img/search.svg" alt="">
+                </div>
             </div>
 
             <div class="library bg-grey rounded m-1 p-1">
@@ -96,7 +102,12 @@
                 <div class="songtime total-time">0:00</div>
             </div>
             <div class="abovebar">
-                <div class="songinfo"></div>
+                <div class="songinfo">
+                    <div class="loading-indicator" style="display: none;">
+                        <div class="spinner"></div>
+                        <span>Loading...</span>
+                    </div>
+                </div>
                 <div class="songbuttons">
                     <img width="35" id="previous" src="./Website/img/prevsong.svg" alt="">
                     <img width="35" id="play" src="./Website/img/play.svg" alt="">
