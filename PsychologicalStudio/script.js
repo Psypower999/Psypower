@@ -381,7 +381,6 @@ document.addEventListener("DOMContentLoaded", function () {
             flex-shrink: 0;
             position: sticky;
             left: 0;
-            top: 0;
             z-index: 10;
             box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
         }
@@ -463,11 +462,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         .piano-roll-cell.bar-start {
-            border-left: 3px solid #FF8C00;
+              border-left: 3px solid #111;
         }
         
         .piano-roll-cell.bar-end {
-            border-right: 3px solid #FF8C00;
+              border-right: 3px solid #111;
         }
         
         .piano-roll-cell.active {
@@ -621,6 +620,35 @@ document.addEventListener("DOMContentLoaded", function () {
             text-align: center;
         }
         
+        .note-length-controls {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .note-length-controls button {
+            background-color: #444;
+            color: white;
+            border: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .note-length-controls button:hover {
+            background-color: #555;
+        }
+        
+        #note-length-display {
+            color: white;
+            min-width: 40px;
+            text-align: center;
+        }
+        
         /* Piano roll zoom controls */
         .piano-roll-zoom-controls {
             display: flex;
@@ -689,7 +717,6 @@ document.addEventListener("DOMContentLoaded", function () {
             background-color: #2a2a2a;
             border-bottom: 1px solid #444;
             position: relative;
-            margin-left: 40px; /* Offset by piano keys width to align with grid */
             overflow-x: auto;
             overflow-y: hidden;
             z-index: 1000; /* keep visible above grid when scrolling vertically */
@@ -2136,16 +2163,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="piano-roll-content">
                     <div class="piano-roll-controls-row">
                         <div class="piano-roll-note-length">
-                            <label for="note-length-select">Note Length:</label>
-                            <select id="note-length-select">
-                                <option value="1" selected>1/16</option>
-                                <option value="2">1/8</option>
-                                <option value="4">1/4</option>
-                                <option value="8">1/2</option>
-                                <option value="16">1/1</option>
-                                <option value="32">2 bars</option>
-                                <option value="64">4 bars</option>
-                            </select>
+                            <label>Note Length:</label>
+                            <div class="note-length-controls">
+                                <button id="note-length-decrease">-</button>
+                                <span id="note-length-display">1/16</span>
+                                <button id="note-length-increase">+</button>
+                            </div>
                         </div>
                         <div class="piano-roll-grid-size">
                             <label>Grid Size:</label>
@@ -2166,11 +2189,11 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>
                     <div class="piano-roll-container">
-                        <div class="piano-roll-bar-numbers"></div>
                         <div class="piano-roll-scrollable">
                             <div class="piano-keys">
                             </div>
                             <div class="piano-roll-grid-container">
+                                <div class="piano-roll-bar-numbers"></div>
                                 <div class="piano-roll-grid">
                                 </div>
                             </div>
@@ -7185,23 +7208,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function setupPianoRollScrollSync() {
-        const scrollable = document.querySelector(".piano-roll-scrollable");
-        const barNumbers = document.querySelector(".piano-roll-bar-numbers");
-        
-        if (scrollable && barNumbers) {
-            // Sync horizontal scroll from scrollable to bar numbers
-            scrollable.addEventListener("scroll", function() {
-                barNumbers.scrollLeft = scrollable.scrollLeft;
-            });
-            
-            // Sync horizontal scroll from bar numbers to scrollable
-            barNumbers.addEventListener("scroll", function() {
-                scrollable.scrollLeft = barNumbers.scrollLeft;
-            });
-        }
-    }
-
     function setupPianoRollZoomControls() {
         const zoomDecreaseBtn = document.getElementById("zoom-decrease");
         const zoomIncreaseBtn = document.getElementById("zoom-increase");
@@ -7276,17 +7282,29 @@ document.addEventListener("DOMContentLoaded", function () {
         setupPianoRollZoomControls();
         
         // Initialize scroll synchronization
-        setupPianoRollScrollSync();
+        // setupPianoRollScrollSync(); // Removed since bar numbers are now inside scrollable
         
         // Set initial zoom level
         pianoRollZoomLevel = 1.0;
         updatePianoRollZoomDisplay();
         
+        const noteLengths = [
+            { value: 1, display: "1/16" },
+            { value: 2, display: "1/8" },
+            { value: 4, display: "1/4" },
+            { value: 8, display: "1/2" },
+            { value: 16, display: "1/1" },
+            { value: 32, display: "2 bars" },
+            { value: 64, display: "4 bars" }
+        ];
+
         const pianoKeys = document.querySelector(".piano-keys");
         const pianoRollGrid = document.querySelector(".piano-roll-grid");
         const pianoRollBarNumbers = document.querySelector(".piano-roll-bar-numbers");
         const soundSourceSelect = document.getElementById("piano-roll-sound-source");
-        const noteLengthSelect = document.getElementById("note-length-select");
+        const noteLengthDecreaseBtn = document.getElementById("note-length-decrease");
+        const noteLengthIncreaseBtn = document.getElementById("note-length-increase");
+        const noteLengthDisplay = document.getElementById("note-length-display");
         const gridSizeDecreaseBtn = document.getElementById("grid-size-decrease");
         const gridSizeIncreaseBtn = document.getElementById("grid-size-increase");
         const gridSizeDisplay = document.getElementById("grid-size-display");
@@ -7377,7 +7395,30 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
         soundSourceSelect.value = data.soundSource;
-        noteLengthSelect.value = pianoRollNoteLength;
+        // Set note length display
+        const currentNoteLength = noteLengths.find(nl => nl.value === pianoRollNoteLength);
+        if (currentNoteLength) {
+            noteLengthDisplay.textContent = currentNoteLength.display;
+        }
+        // Note length controls
+        if (noteLengthDecreaseBtn) {
+            noteLengthDecreaseBtn.onclick = function() {
+                const currentIndex = noteLengths.findIndex(nl => nl.value === pianoRollNoteLength);
+                if (currentIndex > 0) {
+                    pianoRollNoteLength = noteLengths[currentIndex - 1].value;
+                    noteLengthDisplay.textContent = noteLengths[currentIndex - 1].display;
+                }
+            };
+        }
+        if (noteLengthIncreaseBtn) {
+            noteLengthIncreaseBtn.onclick = function() {
+                const currentIndex = noteLengths.findIndex(nl => nl.value === pianoRollNoteLength);
+                if (currentIndex < noteLengths.length - 1) {
+                    pianoRollNoteLength = noteLengths[currentIndex + 1].value;
+                    noteLengthDisplay.textContent = noteLengths[currentIndex + 1].display;
+                }
+            };
+        }
         // Initialize Sound Design controls with saved values
         const sd = document.querySelector('.sound-design-controls');
         const ensureSD = () => {
@@ -7410,9 +7451,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             const sd = document.querySelector('.sound-design-controls');
             if (sd) sd.style.display = (this.value === 'sounddesign' && pianoRollData[currentSampleForPopup].isEnabled) ? '' : 'none';
-        });
-        noteLengthSelect.addEventListener("change", function () {
-            pianoRollNoteLength = parseFloat(this.value);
         });
         // SD listeners
         const bind = (sel, ev, fn) => { const el = document.querySelector(sel); if (el) { el.replaceWith(el.cloneNode(true)); const ne = document.querySelector(sel); ne.addEventListener(ev, fn); } };
