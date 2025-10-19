@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: psychological-studio-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node backend-server-updated.js
+    envVars:
+      - key: JWT_SECRET
+        value: psypower-secret-2024
+      - key: NODE_ENV
+        value: production

@@ -152,6 +152,35 @@ html, body {
     background-color: #2e7d32;
 }
 
+.arrangement-button {
+    padding: 12px 20px;
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s;
+    min-height: 44px;
+    margin-top: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+.arrangement-button:hover {
+    background-color: #3a3a3a;
+    border-color: #666;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.arrangement-button:active {
+    background-color: #1a1a1a;
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
 .tempo-control {
     display: flex;
     flex-direction: column;
@@ -249,18 +278,18 @@ html, body {
 }
 
 .loop-button.active {
-    background-color: #00ad57;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    box-shadow: 0 0 10px rgba(0, 173, 87, 0.8);
+    background-color: #00FF7F;
+    color: #000000;
+    border: 2px solid #00FF7F;
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.9), 0 0 8px rgba(0, 255, 127, 0.6) inset;
     font-weight: bold;
 }
 
 .long-loop-button.active {
-    background-color: #00ad57;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    box-shadow: 0 0 10px rgba(0, 173, 87, 0.8);
+    background-color: #00FF7F;
+    color: #000000;
+    border: 2px solid #00FF7F;
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.9), 0 0 8px rgba(0, 255, 127, 0.6) inset;
     font-weight: bold;
 }
 
@@ -688,6 +717,48 @@ html, body {
     }
 }
 
+/* Bar Counter Styles */
+.bar-counter {
+    position: fixed;
+    background: linear-gradient(135deg, #1d1d1d 0%, #2a2a2a 100%);
+    border-radius: 6px;
+    padding: 8px 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    z-index: 100;
+    border: 1px solid #9C27B0;
+}
+
+.bar-counter-label {
+    font-size: 8px;
+    font-weight: 600;
+    color: #9C27B0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.bar-counter-display {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 8px rgba(156, 39, 176, 0.5);
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Desktop - right side next to controls */
+@media (min-width: 769px) {
+    .bar-counter {
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
 /* For mobile screens */
 @media (max-width: 768px) {
     html, body {
@@ -697,6 +768,19 @@ html, body {
         overflow: hidden;
         -webkit-user-select: none;
         user-select: none;
+    }
+    
+    /* Bar counter - bottom center on mobile */
+    .bar-counter {
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 6px 10px;
+    }
+    
+    .bar-counter-display {
+        font-size: 16px;
+        min-width: 50px;
     }
     
     .app-container {
@@ -1865,4 +1949,132 @@ input#file-upload-button {
     background-color: #007bff;
     border-color: #0056b3;
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Piano Roll Mobile Performance Optimizations */
+.mobile-optimized .piano-roll-cell {
+    /* Reduce border complexity on mobile */
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    /* Enable hardware acceleration */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+}
+
+.mobile-optimized .piano-roll-cell.active {
+    /* Simplified active state for mobile */
+    background: #DC143C;
+    border: 1px solid #B22222;
+    /* No animations or shadows on mobile */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.mobile-optimized .piano-roll-cell.note-long {
+    background: #DC143C;
+    border: 1px solid #B22222;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/* Optimize piano roll container for mobile */
+.mobile-optimized .piano-roll-container {
+    /* Reduce shadow complexity */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    /* Enable hardware acceleration */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Optimize piano keys for mobile */
+.mobile-optimized .piano-key {
+    /* Reduce transition complexity */
+    transition: background-color 0.1s ease;
+    /* Enable hardware acceleration */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Virtualized grid optimizations */
+.mobile-optimized .piano-roll-grid {
+    /* Enable hardware acceleration for smooth scrolling */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    /* Optimize for touch scrolling */
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+
+/* Optimize scrollable containers for mobile */
+.mobile-optimized .piano-roll-scrollable {
+    /* Enable hardware acceleration */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* Optimize touch scrolling */
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    /* Reduce scroll momentum for better control */
+    scroll-behavior: auto;
+}
+
+/* Optimize bar numbers wrapper for mobile */
+.mobile-optimized .piano-roll-bar-numbers-wrapper {
+    /* Enable hardware acceleration */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* Optimize touch scrolling */
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+
+/* Reduce paint complexity on mobile */
+.mobile-optimized .piano-roll-cell.bar-start,
+.mobile-optimized .piano-roll-cell.bar-end {
+    /* Simplify borders for better performance */
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Optimize piano roll visualizer for mobile */
+.mobile-optimized .piano-roll-visualizer-container {
+    /* Reduce shadow complexity */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    /* Enable hardware acceleration */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/* Disable expensive CSS features on mobile */
+.mobile-optimized * {
+    /* Disable text selection for better performance */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* Disable tap highlights */
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+}
+
+/* Optimize touch interactions */
+.mobile-optimized .piano-roll-cell {
+    /* Improve touch target size */
+    min-height: 20px;
+    min-width: 20px;
+    /* Optimize touch response */
+    touch-action: manipulation;
 }

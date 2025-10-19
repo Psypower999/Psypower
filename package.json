@@ -1,20 +1,61 @@
 {
     "name": "psychological-studio",
-    "version": "1.0.0",
-    "description": "Professional audio production studio",
+    "version": "3.0.0",
+    "description": "Professional audio production studio - Optimized for mobile and desktop",
     "main": "main.js",
     "scripts": {
-        "start": "electron .",
+        "start": "node backend-server-updated.js",
+        "dev": "node backend-server-updated.js",
+        "electron": "electron .",
         "build": "electron-builder",
         "build-win": "electron-builder --win",
         "build-mac": "electron-builder --mac",
-        "build-linux": "electron-builder --linux"
+        "build-linux": "electron-builder --linux",
+        "serve": "npx http-server -p 8080 -c-1",
+        "cap:init": "npx cap init \"Psychological Studio\" \"com.psychological.studio\" --web-dir=.",
+        "cap:add:ios": "npm install @capacitor/ios && npx cap add ios",
+        "cap:add:android": "npm install @capacitor/android && npx cap add android",
+        "cap:sync": "npx cap sync",
+        "cap:open:ios": "npx cap open ios",
+        "cap:open:android": "npx cap open android",
+        "cap:build:ios": "npx cap sync ios && npx cap open ios",
+        "cap:build:android": "npx cap sync android && npx cap open android",
+        "cap:run:ios": "npx cap run ios",
+        "cap:run:android": "npx cap run android",
+        "lighthouse": "npx lighthouse http://localhost:8080 --view",
+        "test:performance": "node performance-test.js"
     },
-    "author": "Your Name",
+    "author": "Psypower",
     "license": "MIT",
+    "dependencies": {
+        "@capacitor-community/keep-awake": "^5.0.0",
+        "@capacitor/android": "^5.5.0",
+        "@capacitor/app": "^5.0.6",
+        "@capacitor/core": "^5.5.0",
+        "@capacitor/filesystem": "^5.1.4",
+        "@capacitor/haptics": "^5.0.6",
+        "@capacitor/ios": "^5.5.0",
+        "@capacitor/keyboard": "^5.0.6",
+        "@capacitor/local-notifications": "^5.0.6",
+        "@capacitor/share": "^5.0.6",
+        "@capacitor/splash-screen": "^5.0.6",
+        "@capacitor/status-bar": "^5.0.6",
+        "bcryptjs": "^3.0.2",
+        "body-parser": "^2.2.0",
+        "cors": "^2.8.5",
+        "express": "^5.1.0",
+        "jsonwebtoken": "^9.0.2",
+        "sqlite3": "^5.1.7"
+    },
+    "engines": {
+        "node": "18.x"
+    },
     "devDependencies": {
+        "@capacitor/cli": "^5.5.0",
         "electron": "^25.0.0",
-        "electron-builder": "^24.0.0"
+        "electron-builder": "^24.0.0",
+        "http-server": "^14.1.1",
+        "lighthouse": "^11.0.0"
     },
     "build": {
         "appId": "com.psychological.studio",
