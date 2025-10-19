@@ -1,0 +1,68 @@
+/* PsyStudio Security Popup Styles */
+#upgrade-popup {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+#upgrade-popup * {
+    box-sizing: border-box;
+}
+
+#upgrade-popup .popup-content {
+    animation: popupSlideIn 0.3s ease-out;
+}
+
+@keyframes popupSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+#upgrade-popup ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#upgrade-popup ul li {
+    padding: 8px 0;
+    border-left: 3px solid #717d9f;
+    padding-left: 15px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+#upgrade-popup ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-left-color: #930018;
+}
+
+/* Disabled element styles for restricted features */
+.psystudio-restricted {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+}
+
+.psystudio-restricted::after {
+    content: "🔒";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #930018;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    z-index: 1000;
+}
