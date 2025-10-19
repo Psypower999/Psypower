@@ -1,93 +1,23 @@
 {
-    "name": "psychological-studio",
-    "version": "3.0.0",
-    "description": "Professional audio production studio - Optimized for mobile and desktop",
-    "main": "main.js",
+    "name": "psychological-studio-backend",
+    "version": "1.0.0",
+    "description": "Psychological Studio Backend Server",
+    "main": "backend-server-updated.js",
     "scripts": {
         "start": "node backend-server-updated.js",
-        "dev": "node backend-server-updated.js",
-        "electron": "electron .",
-        "build": "electron-builder",
-        "build-win": "electron-builder --win",
-        "build-mac": "electron-builder --mac",
-        "build-linux": "electron-builder --linux",
-        "serve": "npx http-server -p 8080 -c-1",
-        "cap:init": "npx cap init \"Psychological Studio\" \"com.psychological.studio\" --web-dir=.",
-        "cap:add:ios": "npm install @capacitor/ios && npx cap add ios",
-        "cap:add:android": "npm install @capacitor/android && npx cap add android",
-        "cap:sync": "npx cap sync",
-        "cap:open:ios": "npx cap open ios",
-        "cap:open:android": "npx cap open android",
-        "cap:build:ios": "npx cap sync ios && npx cap open ios",
-        "cap:build:android": "npx cap sync android && npx cap open android",
-        "cap:run:ios": "npx cap run ios",
-        "cap:run:android": "npx cap run android",
-        "lighthouse": "npx lighthouse http://localhost:8080 --view",
-        "test:performance": "node performance-test.js"
-    },
-    "author": "Psypower",
-    "license": "MIT",
-    "dependencies": {
-        "@capacitor-community/keep-awake": "^5.0.0",
-        "@capacitor/android": "^5.5.0",
-        "@capacitor/app": "^5.0.6",
-        "@capacitor/core": "^5.5.0",
-        "@capacitor/filesystem": "^5.1.4",
-        "@capacitor/haptics": "^5.0.6",
-        "@capacitor/ios": "^5.5.0",
-        "@capacitor/keyboard": "^5.0.6",
-        "@capacitor/local-notifications": "^5.0.6",
-        "@capacitor/share": "^5.0.6",
-        "@capacitor/splash-screen": "^5.0.6",
-        "@capacitor/status-bar": "^5.0.6",
-        "bcryptjs": "^3.0.2",
-        "body-parser": "^2.2.0",
-        "cors": "^2.8.5",
-        "express": "^5.1.0",
-        "jsonwebtoken": "^9.0.2",
-        "sqlite3": "^5.1.7"
+        "dev": "node backend-server-updated.js"
     },
     "engines": {
         "node": "18.x"
     },
-    "devDependencies": {
-        "@capacitor/cli": "^5.5.0",
-        "electron": "^25.0.0",
-        "electron-builder": "^24.0.0",
-        "http-server": "^14.1.1",
-        "lighthouse": "^11.0.0"
+    "dependencies": {
+        "express": "^5.1.0",
+        "cors": "^2.8.5",
+        "body-parser": "^2.2.0",
+        "sqlite3": "^5.1.7",
+        "bcryptjs": "^3.0.2",
+        "jsonwebtoken": "^9.0.2"
     },
-    "build": {
-        "appId": "com.psychological.studio",
-        "productName": "Psychological Studio",
-        "directories": {
-            "output": "dist"
-        },
-        "files": [
-            "**/*",
-            "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
-            "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
-            "!**/node_modules/*.d.ts",
-            "!**/node_modules/.bin",
-            "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
-            "!.editorconfig",
-            "!**/._*",
-            "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}",
-            "!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
-            "!**/{appveyor.yml,.travis.yml,circle.yml}",
-            "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}"
-        ],
-        "win": {
-            "target": "nsis",
-            "icon": "icon.ico"
-        },
-        "mac": {
-            "target": "dmg",
-            "icon": "icon.icns"
-        },
-        "linux": {
-            "target": "AppImage",
-            "icon": "icon.png"
-        }
-    }
+    "author": "Psypower",
+    "license": "MIT"
 }

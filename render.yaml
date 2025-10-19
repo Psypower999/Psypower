@@ -3,7 +3,7 @@ services:
     name: psychological-studio-backend
     env: node
     plan: free
-    buildCommand: npm install
+    buildCommand: npm install --legacy-peer-deps
     startCommand: node backend-server-updated.js
     envVars:
       - key: JWT_SECRET
