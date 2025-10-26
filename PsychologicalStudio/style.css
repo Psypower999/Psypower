@@ -1951,6 +1951,31 @@ input#file-upload-button {
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
 }
 
+/* Piano Roll Base Styles */
+.piano-roll-container {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+.piano-roll-scrollable {
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: auto;
+    min-height: 300px;
+    position: relative;
+}
+
+.piano-roll-grid-container {
+    flex-grow: 1;
+    position: relative;
+    overflow: visible;
+    min-height: 100%;
+}
+
 /* Piano Roll Mobile Performance Optimizations */
 .mobile-optimized .piano-roll-cell {
     /* Reduce border complexity on mobile */
