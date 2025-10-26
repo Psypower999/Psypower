@@ -376,6 +376,20 @@ class SecurityManager {
                 })
             });
             
+            // Check if response is JSON
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                // Server returned HTML (likely 404 or error page)
+                const text = await response.text();
+                if (text.includes('Not found') || text.includes('Cannot POST')) {
+                    this.showError('❌ Backend server is not running. Please start the backend server with: npm start');
+                } else {
+                    this.showError('❌ Backend error: Invalid response format');
+                }
+                console.error('Backend response:', text.substring(0, 200));
+                return;
+            }
+            
             const data = await response.json();
             
             if (response.ok) {
@@ -400,13 +414,13 @@ class SecurityManager {
                 this.showWelcomePopup();
                 this.showApp();
             } else {
-                this.showError('❌ ' + data.message);
+                this.showError('❌ ' + (data.message || 'Registration failed'));
                 
                 const codeInput = document.getElementById('unlock-code');
                 if (codeInput) codeInput.value = '';
             }
         } catch (error) {
-            this.showError('Error: ' + error.message);
+            this.showError('Error: ' + error.message + ' (Is the backend server running?)');
             console.error('Register error:', error);
         }
     }

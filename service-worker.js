@@ -62,25 +62,38 @@ const AUDIO_FILES = [
 // Install event - cache core files immediately
 self.addEventListener('install', event => {
     console.log('Service Worker: Installing...');
+    
+    // Check if running in Electron (file:// protocol)
+    const isElectron = typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.includes('Electron');
+    
     event.waitUntil(
         Promise.all([
-            // Cache core files
-            caches.open(STATIC_CACHE).then(cache => {
-                console.log('Service Worker: Caching core files');
-                return cache.addAll(CORE_FILES);
-            }),
-            // Cache audio files in background
-            caches.open(AUDIO_CACHE).then(cache => {
-                console.log('Service Worker: Caching audio files');
-                return Promise.allSettled(
-                    AUDIO_FILES.map(audioFile => 
-                        cache.add(audioFile).catch(error => {
-                            console.log(`Failed to cache ${audioFile}:`, error);
-                            return null;
-                        })
-                    )
-                );
-            }),
+            // Only cache if NOT in Electron packaged app (file:// protocol)
+            ...(isElectron ? [] : [
+                // Cache core files
+                caches.open(STATIC_CACHE).then(cache => {
+                    console.log('Service Worker: Caching core files');
+                    return cache.addAll(CORE_FILES);
+                }).catch(error => {
+                    console.log('Service Worker: Could not cache core files:', error);
+                    return Promise.resolve();
+                }),
+                // Cache audio files in background
+                caches.open(AUDIO_CACHE).then(cache => {
+                    console.log('Service Worker: Caching audio files');
+                    return Promise.allSettled(
+                        AUDIO_FILES.map(audioFile => 
+                            cache.add(audioFile).catch(error => {
+                                console.log(`Failed to cache ${audioFile}:`, error);
+                                return null;
+                            })
+                        )
+                    );
+                }).catch(error => {
+                    console.log('Service Worker: Could not cache audio files:', error);
+                    return Promise.resolve();
+                })
+            ]),
             // Skip waiting to activate immediately
             self.skipWaiting()
         ])

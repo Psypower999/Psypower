@@ -3,8 +3,12 @@ services:
     name: psychological-studio-backend
     env: node
     plan: free
-    buildCommand: npm install --legacy-peer-deps
-    startCommand: node backend-server-updated.js
+    buildCommand: cd PSBEFOLDER && npm install
+    startCommand: cd PSBEFOLDER && node server.js
+    disk:
+      name: psystudio-db
+      mountPath: /app/data
+      sizeGB: 1
     envVars:
       - key: JWT_SECRET
         value: psypower-secret-2024
