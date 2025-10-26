@@ -1,1 +1,1473 @@
-const _0x1e121f=_0x5961;function _0x2378(){const _0x322a81=['filter','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(0,\x200,\x200,\x200.9);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x202px\x20solid\x20#930018;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2050px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20max-width:\x20600px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x2020px\x2060px\x20rgba(0,\x200,\x200,\x200.8);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20','setItem','hashPassword','warn','catch','Attempts\x20remaining:\x20','email','#aaa','click','file:','animate','color','flex','0a2b0c9x6z9z62696392010','Server\x20validation\x20error:','Security\x20script\x20tampered\x20with','initSecurity','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20fixed;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-direction:\x20column;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x2010000;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Arial,\x20sans-serif;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden;\x0a\x20\x20\x20\x20\x20\x20\x20\x20','6808932XgmnZH','activate-license-btn','validateWithServer','xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx','addEventListener','API_URL','login-username','✓\x20License\x20activated\x20successfully!','getAllUsedCodesFromIndexedDB','remove','loadUsedCodes','POST','readonly','opacity','value','psychStudioRegisteredUsers','getDeviceFingerprint','values','Please\x20enter\x20a\x20username.','some','license-username','687960uNPlJm','/api/login','location','rgba(255,255,255,0.3)','licenseCode','lockoutTime','removeItem','password','getRegisteredUsers','transaction','splice','Activation\x20error\x20details:','showLoginScreen','generateRequestId','addColorStop','error','attempts-left','Application\x20locked.\x20Try\x20again\x20in\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2\x20style=\x22color:\x20#717d9f;\x20margin-bottom:\x2020px;\x20font-size:\x2028px;\x22>Welcome\x20','objectStore','downloadUpdatedLicense','Error\x20loading\x20registered\x20users:','markCodeAsUsed','100%','application/json','#1a1a2e','signal','onerror','getElementsByTagName','login-credentials-form','getContext','white','Incorrect\x20code.\x20','getAllRegisteredUsersFromIndexedDB','width','!</h2>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20style=\x22color:\x20#aaa;\x20margin-bottom:\x2010px;\x20font-size:\x2018px;\x22>You\x20now\x20have\x20access\x20to\x20<span\x20style=\x22color:\x20#930018;\x20font-weight:\x20bold;\x22>Pro</span>!</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3\x20style=\x22color:\x20#717d9f;\x20margin-top:\x2030px;\x20margin-bottom:\x2020px;\x20font-size:\x2020px;\x22>You\x20can\x20now\x20access:</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<ul\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20list-style:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20left;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(255,\x20255,\x20255,\x200.05);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200\x20auto;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20fit-content;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20style=\x22margin:\x2012px\x200;\x20color:\x20#aaa;\x20font-size:\x2016px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:\x20#930018;\x20margin-right:\x2010px;\x22>●</span>Record\x20Session\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20style=\x22margin:\x2012px\x200;\x20color:\x20#aaa;\x20font-size:\x2016px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:\x20#930018;\x20margin-right:\x2010px;\x22>●</span>Record\x20directly\x20into\x20Button\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20style=\x22margin:\x2012px\x200;\x20color:\x20#aaa;\x20font-size:\x2016px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:\x20#930018;\x20margin-right:\x2010px;\x22>●</span>Unlimited\x20Sample\x20Upload\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20style=\x22margin:\x2012px\x200;\x20color:\x20#aaa;\x20font-size:\x2016px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:\x20#930018;\x20margin-right:\x2010px;\x22>●</span>LFO\x27s\x20&\x20Automations\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20style=\x22margin:\x2012px\x200;\x20color:\x20#aaa;\x20font-size:\x2016px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:\x20#930018;\x20margin-right:\x2010px;\x22>●</span>Synth\x20with\x20Piano\x20Roll\x20&\x20Sound\x20design\x20controls\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20style=\x22margin:\x2012px\x200;\x20color:\x20#aaa;\x20font-size:\x2016px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:\x20#930018;\x20margin-right:\x2010px;\x22>●</span>App\x20Themes\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20style=\x22margin:\x2012px\x200;\x20color:\x20#aaa;\x20font-size:\x2016px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:\x20#930018;\x20margin-right:\x2010px;\x22>●</span>Arrangement\x20Mode/Track\x20View\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20style=\x22margin:\x2012px\x200;\x20color:\x20#aaa;\x20font-size:\x2016px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:\x20#930018;\x20margin-right:\x2010px;\x22>●</span>Future\x20updates\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</ul>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22close-welcome-btn\x22\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2015px\x2040px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#930018;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20background\x200.3s;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22>Get\x20Started</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','Error\x20getting\x20users\x20from\x20IndexedDB:','removeChild','byteLength','substring','protocol','8270312liDMUZ','map','getItem','Failed\x20to\x20fetch','toString','Database\x20not\x20initialized,\x20returning\x20empty\x20array','resetSecurityState','0a2x0c9xwy9z6262y392010','isLocked','isAuthenticated','src','div','040PSY969666POWER700','):\x20','authenticate','container','.\x20Check\x20if\x20the\x20backend\x20is\x20deployed\x20and\x20your\x20internet\x20connection\x20is\x20working.','clear','Server\x20timeout.\x20The\x20backend\x20may\x20be\x20cold-starting\x20(takes\x20~60s).\x20Please\x20wait\x20a\x20moment\x20and\x20try\x20again.','calculateScriptHash','drop-zone','Password\x20must\x20be\x20at\x20least\x206\x20characters','particleCount','verifyPassword','textContent','status','background','devMode','animationId','init','textBaseline','loadProtectedFiles','message','charCodeAt','license-tab','showWelcomePopup','destroy','parse','querySelector','appendChild','lockoutEndTime','replace','Activate\x20License','DOMContentLoaded','resize','showApp','hardwareID','performIntegrityCheck','saveSecurityState','psychStudioSecurity','preventDefault','session_token','position','none','script','result','attemptCount','070PSY969666POWER400','now','NetworkError','contains','login-password','Sign\x20In','onsuccess','200PSY969666POWER002','license-form','216809IyBrbj','#069','loadRegisteredUsers','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x2010;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20max-width:\x20400px;\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2040px;\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(0,0,0,0.3);\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2010px;\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x2010px\x2030px\x20rgba(0,0,0,0.5);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20backdrop-filter:\x20blur(5px);\x0a\x20\x20\x20\x20\x20\x20\x20\x20','Enter','Too\x20many\x20attempts.\x20Try\x20again\x20in\x20','0a2b0c9x6y9z61626392010','reload','json','removeEventListener','userPassword','welcome-popup-overlay','maxAttempts','login-btn','2311130Qizijn','psychStudioAuth','getAll','parentNode','innerHTML','files','_xorEncrypt','1161720zGJuJv','#930018','login-tab','⹿⺀⺁⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔⺕⺖⺗⺘⺙⺚⺛⭖⭗⭘⭙⭚⭛⭜⭝⭞⭟⭠⭡⭢⭣⭤⭥⭦⭧⭨⭩⭪⭫⭬⭭⭮⭯⭰⭱⭲⭳⭴⭵⭶⭷⭸⭹⭺⭻⭼⭽⭾⭿⮀⮁⮂⮃⮄⮅⮆⮇⮈⮉⮊⮋⮌⮍⮎⮏⮐⮑⮒⮓⮔⮕⮖⮗⮘⮙⮚⮛⮜⮝⮞⮟⮠⮡⮢⮣⮤⮥⮦⮧⮨⮩⮪⮫⮬⮭⮮⮯⮰⮱⮲⮳⮴⮵⮶⮷⮸⮹⮺⮻⮼⮽⮾⮿⯀⯁⯂⯃⯄⯅⯆⯇⯈⯉⯊⯋⯌⯍⯎⯏⯐⯑⯒⯓⯔⯕⯖⯗⯘⯙⯚⯛⯜⯝⯞⯟⯠⯡⯢⯣⯤⯥⯦⯧⯨⯩⯪⯫⯬⭭⭮⭯⭰⭱⭲⭳⭴⭵⭶⭷⭸⭹⭺⭻⭼⭽⭾⭿⮀⮁⮂⮃⮄⮅⮆⮇⮈⮉⮊⮋⮌⮍⮎⮏⮐⮑⮒⮓⮔⮕⮖⮗⮘⮙⮚⮛⮜⮝⮞⮟⮠⮡⮢⮣⮤⮥⮦⮧⮨⮩⮪⮫⮬⮭⮮⮯⮰⮱⮲⮳⮴⮵⮶⭷⭸⭹⭺⭻⭼⭽⭾⭿⮀⮁⮂⮃⮄⮅⮆⮇⮈⮉⮊⮋⮌⮍⮎⮏⮐⮑⮒⮓⮔⮕⮖⮗⮘⮙⮚⮛⮜⮝⮞⮟⮠⮡⮢⮣⮤⮥⮦⮧⮨⮩⮪⮫⮬⮭⮮⮯⮰⮱⮲⮳⮴⮵⮶⮷⮸⮹⮺⮻⮼⮽⮾⮿ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮⰰⰱⰲⰳⰴⰵⰶⰷⰸⰹⰺⰻⰼⰽⰾⰿⱀⱁⱂⱃⱄⱅⱆⱇⱈⱉⱊⱋⱌⱍⱎⱏⱐⱑⱒⱓⱔⱕⱖⱗⱘⱙⱚⱛⱜⱝⱞⱟⱠⱡⱢⱣⱤⱥⱦⱧⱨⱩⱪⱫⱬⱭⱮⱯⱰⱱⱲⱳⱴⱵⱶⱷⱸⱹⱺⱻⱼⱽⱾⱿⲀⲁⲂⲃⲄⲅⲆⲇⲈⲉⲊⲋⲌⲍⲎⲏⲐⲑⲒⲓⲔⲕ','psychStudioUsedCodes','onupgradeneeded','registeredUsers','80072uXIRZA','#16213e','loadSecurityState','target','valid','\x20seconds.','createObjectURL','AbortError','Server\x20validation\x20failed','rgba(113,\x20125,\x20159,\x20','dispatchEvent','class\x20SecurityManager','readwrite','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1\x20style=\x22margin-bottom:\x2030px;\x20color:\x20#717d9f;\x22>Psychological\x20Studio</h1>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:\x20flex;\x20gap:\x2010px;\x20margin-bottom:\x2020px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22license-tab\x22\x20class=\x22auth-tab\x20active-tab\x22\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex:\x201;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#930018;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20background\x200.3s;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22>Activate\x20License</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22login-tab\x22\x20class=\x22auth-tab\x22\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex:\x201;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(255,255,255,0.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#aaa;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20background\x200.3s;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22>Login</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22license-form\x22\x20class=\x22login-form\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20style=\x22margin-bottom:\x2020px;\x20color:\x20#aaa;\x22>Upload\x20License\x20File\x20&\x20Create\x20Account</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22drop-zone\x22\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2040px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x202px\x20dashed\x20rgba(255,255,255,0.3);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(255,255,255,0.05);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20all\x200.3s;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-sizing:\x20border-box;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22font-size:\x2040px;\x20margin-bottom:\x2010px;\x22>📄</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22color:\x20#aaa;\x22>Drop\x20.psylic\x20file\x20here\x20or\x20click\x20to\x20browse</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22file-name\x22\x20style=\x22color:\x20#4CAF50;\x20margin-top:\x2010px;\x20font-size:\x2014px;\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22file\x22\x20id=\x22license-file-input\x22\x20accept=\x22.psylic,.txt,.json\x22\x20style=\x22display:\x20none;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22license-username\x22\x20placeholder=\x22Choose\x20Username\x22\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(255,255,255,0.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-sizing:\x20border-box;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22password\x22\x20id=\x22license-password\x22\x20placeholder=\x22Create\x20Password\x20(6+\x20characters)\x22\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(255,255,255,0.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-sizing:\x20border-box;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22activate-license-btn\x22\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#930018;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20background\x200.3s;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22\x20disabled>Activate\x20License</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin-top:\x2015px;\x20padding:\x2010px;\x20background:\x20rgba(147,\x200,\x2024,\x200.2);\x20border-radius:\x205px;\x20font-size:\x2012px;\x20color:\x20#aaa;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<strong>Note:</strong>\x20Your\x20username\x20and\x20password\x20will\x20be\x20bound\x20to\x20this\x20license.\x20You\x20can\x20use\x20it\x20on\x20up\x20to\x203\x20devices.\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22login-credentials-form\x22\x20class=\x22login-form\x22\x20style=\x22display:\x20none;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20style=\x22margin-bottom:\x2020px;\x20color:\x20#aaa;\x22>Sign\x20in\x20with\x20your\x20credentials</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22login-username\x22\x20placeholder=\x22Username\x22\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(255,255,255,0.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-sizing:\x20border-box;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22password\x22\x20id=\x22login-password\x22\x20placeholder=\x22Password\x22\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(255,255,255,0.1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-sizing:\x20border-box;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22login-btn\x22\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#930018;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20background\x200.3s;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22>Sign\x20In</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22error-message\x22\x20style=\x22color:\x20#ff4444;\x20margin-top:\x2015px;\x20min-height:\x2020px;\x22></div>\x0a','Psychological\x20Studio','canvas','getUint8','name','clientHeight','Please\x20enter\x20a\x20registration\x20code.','clientWidth','Waking\x20up\x20server...','drop','unlock-code','rgba(255,255,255,0.1)','put','ceil','startLockoutCountdown','token','code','push','display','fillStyle','080PSY969666POWER300','3TeKDWR','activated','particles','setUint8','activateLicense','Please\x20enter\x20username\x20and\x20password','updateAttemptsDisplay','getUsedCodes','createObjectStore','#4CAF50','download','verifySignature','/api/activate-license','logout','File\x20read\x20error:','createParticles','Activation\x20timeout\x20-\x20backend\x20server\x20may\x20be\x20starting\x20up.\x20Please\x20wait\x2060\x20seconds\x20and\x20try\x20again.','objectStoreNames','stringify','indexOf','authenticateReturningUser','onload','getElementById','default','error-message','createElement','cssText','style','toISOString','⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔⺕⺖⺗⺘⺙⺚⺛⭖⭗⭘⭙⭚⭛⭜⭝⭞⭟⭠⭡⭢⭣⭤⭥⭦⭧⭨⭩⭪⭫⭬⭭⭮⭯⭰⭱⭲⭳⭴⭵⭶⭷⭸⭹⭺⭻⭼⭽⭾⭿⮀⮁⮂⮃⮄⮅⮆⮇⮈⮉⮊⮋⮌⮍⮎⮏⮐⮑⮒⮓⮔⮕⮖⮗⮘⮙⮚⮛⮜⮝⮞⮟⮠⮡⮢⮣⮤⮥⮦⮧⮨⮩⮪⮫⮬⮭⮮⮯⮰⮱⮲⮳⮴⮵⮶⭷⭸⭹⭺⭻⭼⭽⭾⭿⮀⮁⮂⮃⮄⮅⮆⮇⮈⮉⮊⮋⮌⮍⮎⮏⮐⮑⮒⮓⮔⮕⮖⮗⮘⮙⮚⮛⮜⮝⮞⮟⮠⮡⮢⮣⮤⮥⮦⮧⮨⮩⮪⮫⮬⮭⮮⮯⮰⮱⮲⮳⮴⮵⮶⮷⮸⮹⮺⮻⮼⮽⮾⮿ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮⰰⰱⰲⰳⰴⰵⰶⰷⰸⰹⰺⰻⰼⰽⰾⰿⱀⱁⱂⱃⱄⱅⱆⱇⱈⱉⱊⱋⱌⱍⱎⱏⱐⱑⱒⱓⱔⱕⱖⱗⱘⱙⱚⱛⱜⱝⱞⱟⱠⱡⱢⱣⱤⱥⱦⱧⱨⱩⱪⱫⱬⱭⱮⱯⱰⱱⱲⱳⱴⱵⱶⱷⱸⱹⱺⱻⱼⱽⱾⱿⲀⲁⲂⲃⲄⲅⲆⲇⲈⲉⲊⲋⲌⲍⲎⲏⲐⲑⲒⲓⲔⲕ','usedCodes','Server\x20validation\x20failed:','key','top','⯿ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌ⭖⭗⭘⭙⭚⭛⭜⭝⭞⭟⭠⭡⭢⭣⭤⭥⭦⭧⭨⭩⭪⭫⭬⭭⭮⭯⭰⭱⭲⭳⭴⭵⭶⭷⭸⭹⭺⭻⭼⭽⭾⭿⮀⮁⮂⮃⮄⮅⮆⮇⮈⮉⮊⮋⮌⮍⮎⮏⮐⮑⮒⮓⮔⮕⮖⮗⮘⮙⮚⮛⮜⮝⮞⮟⮠⮡⮢⮣⮤⮥⮦⮧⮨⮩⮪⮫⮬⮭⮮⮯⮰⮱⮲⮳⮴⮵⮶⮷⮸⮹⮺⮻⮼⮽⮾⮿⯀⯁⯂⯃⯄⯅⯆⯇⯈⯉⯊⯋⯌⯍⯎⯏⯐⯑⯒⯓⯔⯕⯖⯗⯘⯙⯚⯛⯜⯝⯞⯟⯠⯡⯢⯣⯤⯥⯦⯧⯨⯩⯪⯫⯬⯭⯮⯯⯰⯱⯲⯳⯴⯵⯶⯷⯸⯹⯺⯻⯼⯽⯾⯿ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮⰰⰱⰲⰳⰴⰵⰶⰷⰸⰹⰺⰻⰼⰽⰾⰿⱀⱁⱂⱃⱄⱅⱆⱇⱈⱉⱊⱋⱌⱍⱎⱏⱐⱑⱒⱓⱔⱕⱖⱗⱘⱙⱚⱛⱜⱝⱞⱟⱠⱡⱢⱣⱤⱥⱦⱧⱨⱩⱪⱫⱬⱭⱮⱯⱰⱱⱲⱳⱴⱵⱶⱷⱸⱹⱺⱻⱼⱽⱾⱿⲀⲁⲂⲃⲄⲅⲆⲇⲈⲉⲊⲋⲌⲍⲎⲏⲐⲑⲒⲓⲔⲕ','href','find','absolute','correctCode','4MxpHhP','020PSY969666POWER900','rgba(102,\x20204,\x200,\x200.7)','Cannot\x20reach\x20server\x20at\x20','height','abs','registerUser','initIndexedDB','loginWithCredentials','.app-container','file-name','login-screen','090PSY969666POWER200','keypress','saveUserToIndexedDB','generateToken','Integrity\x20check\x20failed:','030PSY969666POWER800','text','security.js','fileEncryption','simpleHash','username','ctx','body','length','0a2f0c9x6y9z62626390010','handleTampering','Error\x20accessing\x20IndexedDB:','dataTransfer','encode','getTime','✓\x20Login\x20successful!','includes','activatedAt','Database\x20not\x20initialized','random','fillText','Activating...','backgroundCanvas','lockout','block','fillRect','userEmail','Please\x20select\x20a\x20license\x20file','Failed\x20to\x20load\x20protected\x20files:','Invalid\x20license\x20file\x20format','Too\x20many\x20failed\x20attempts.\x20Application\x20locked\x20for\x20300\x20seconds.','Activation\x20failed','dragover','trim','license-password','close-welcome-btn','showError','getScriptFingerprint','saveUsedCodeToIndexedDB','match','disabled','open','findUserByEmail','borderColor','username-input','zIndex','userName','Login\x20failed','18GJFVNe','Database\x20error:','user'];_0x2378=function(){return _0x322a81;};return _0x2378();}function _0x5961(_0x2cccdc,_0x460e34){const _0x237824=_0x2378();return _0x5961=function(_0x596149,_0x3c2cb8){_0x596149=_0x596149-0xc5;let _0x20a3b6=_0x237824[_0x596149];return _0x20a3b6;},_0x5961(_0x2cccdc,_0x460e34);}(function(_0x124926,_0x5541e4){const _0x4284e5=_0x5961,_0x416fcb=_0x124926();while(!![]){try{const _0x48c9d8=parseInt(_0x4284e5(0x1e3))/0x1+parseInt(_0x4284e5(0x1ff))/0x2*(parseInt(_0x4284e5(0xe5))/0x3)+parseInt(_0x4284e5(0x10c))/0x4*(parseInt(_0x4284e5(0x1f1))/0x5)+parseInt(_0x4284e5(0x163))/0x6+parseInt(_0x4284e5(0x178))/0x7+-parseInt(_0x4284e5(0x1a1))/0x8+parseInt(_0x4284e5(0x14d))/0x9*(-parseInt(_0x4284e5(0x1f8))/0xa);if(_0x48c9d8===_0x5541e4)break;else _0x416fcb['push'](_0x416fcb['shift']());}catch(_0xeedac1){_0x416fcb['push'](_0x416fcb['shift']());}}}(_0x2378,0xa77d8));class BackgroundCanvas{constructor(_0x5dfd3){const _0x4b5db2=_0x5961;this['container']=_0x5dfd3,this[_0x4b5db2(0xd2)]=document[_0x4b5db2(0xfe)](_0x4b5db2(0xd2)),this[_0x4b5db2(0x123)]=this['canvas']['getContext']('2d'),this[_0x4b5db2(0xe7)]=[],this[_0x4b5db2(0x1b7)]=0x32,this[_0x4b5db2(0x1bd)]=null,this[_0x4b5db2(0x1be)]();}['init'](){const _0x25f663=_0x5961;this['resize'](),window[_0x25f663(0x167)](_0x25f663(0x1cd),()=>this[_0x25f663(0x1cd)]()),this['canvas'][_0x25f663(0x100)][_0x25f663(0x1d5)]=_0x25f663(0x10a),this[_0x25f663(0xd2)][_0x25f663(0x100)][_0x25f663(0x106)]='0',this['canvas'][_0x25f663(0x100)]['left']='0',this['canvas'][_0x25f663(0x100)][_0x25f663(0x19a)]=_0x25f663(0x18f),this[_0x25f663(0xd2)][_0x25f663(0x100)][_0x25f663(0x110)]=_0x25f663(0x18f),this[_0x25f663(0xd2)]['style'][_0x25f663(0x14a)]='0',this[_0x25f663(0x1b0)][_0x25f663(0x1c8)](this[_0x25f663(0xd2)]),this['createParticles'](),this[_0x25f663(0x15b)]();}[_0x1e121f(0x1cd)](){const _0x26d41a=_0x1e121f;this['canvas']['width']=this[_0x26d41a(0x1b0)][_0x26d41a(0xd7)],this[_0x26d41a(0xd2)][_0x26d41a(0x110)]=this[_0x26d41a(0x1b0)][_0x26d41a(0xd5)];}[_0x1e121f(0xf4)](){const _0x419d11=_0x1e121f;this[_0x419d11(0xe7)]=[];for(let _0x322b3f=0x0;_0x322b3f<this['particleCount'];_0x322b3f++){this['particles'][_0x419d11(0xe1)]({'x':Math['random']()*this[_0x419d11(0xd2)][_0x419d11(0x19a)],'y':Math[_0x419d11(0x130)]()*this[_0x419d11(0xd2)]['height'],'radius':Math['random']()*0x3+0x1,'color':_0x419d11(0xcc)+(Math[_0x419d11(0x130)]()*0.5+0.2)+')','speedX':(Math[_0x419d11(0x130)]()-0.5)*0.5,'speedY':(Math[_0x419d11(0x130)]()-0.5)*0.5});}}[_0x1e121f(0x15b)](){const _0x59179e=_0x1e121f,_0x191ae3=this['ctx']['createLinearGradient'](0x0,0x0,this[_0x59179e(0xd2)][_0x59179e(0x19a)],this[_0x59179e(0xd2)]['height']);_0x191ae3[_0x59179e(0x186)](0x0,_0x59179e(0x191)),_0x191ae3[_0x59179e(0x186)](0x1,_0x59179e(0x200)),this[_0x59179e(0x123)][_0x59179e(0xe3)]=_0x191ae3,this[_0x59179e(0x123)][_0x59179e(0x136)](0x0,0x0,this[_0x59179e(0xd2)][_0x59179e(0x19a)],this['canvas'][_0x59179e(0x110)]);return;}['destroy'](){const _0x43daab=_0x1e121f;this[_0x43daab(0x1bd)]&&cancelAnimationFrame(this[_0x43daab(0x1bd)]),this[_0x43daab(0xd2)]&&this[_0x43daab(0xd2)][_0x43daab(0x1f4)]&&this[_0x43daab(0xd2)][_0x43daab(0x1f4)][_0x43daab(0x19d)](this['canvas']),window[_0x43daab(0x1ec)](_0x43daab(0x1cd),this[_0x43daab(0x1cd)]);}}class FileEncryption{constructor(_0x156f1a){const _0x506edb=_0x1e121f;this[_0x506edb(0x17f)]=_0x156f1a;}['encryptFile'](_0x4862aa){return new Promise(_0x25dcfb=>{const _0x4377b4=_0x5961,_0xb732b3=new FileReader();_0xb732b3[_0x4377b4(0xfa)]=_0x2c803f=>{const _0x2b7bbf=_0x4377b4,_0x1f0260=_0x2c803f[_0x2b7bbf(0xc6)][_0x2b7bbf(0x1d8)],_0x20ff57=this['_xorEncrypt'](_0x1f0260,this[_0x2b7bbf(0x17f)]);_0x25dcfb(_0x20ff57);},_0xb732b3['readAsArrayBuffer'](_0x4862aa);});}['decryptFile'](_0x1e6408){const _0x22bb90=_0x1e121f;return this[_0x22bb90(0x1f7)](_0x1e6408,this[_0x22bb90(0x17f)]);}[_0x1e121f(0x1f7)](_0x49643f,_0x25b173){const _0x218991=_0x1e121f,_0x235805=new TextEncoder(),_0x423089=_0x235805[_0x218991(0x12a)](_0x25b173),_0x25c7f3=new DataView(_0x49643f),_0x316aa1=new ArrayBuffer(_0x49643f['byteLength']),_0x5b615d=new DataView(_0x316aa1);for(let _0x1dfe9e=0x0;_0x1dfe9e<_0x49643f[_0x218991(0x19e)];_0x1dfe9e++){const _0x13cb0c=_0x423089[_0x1dfe9e%_0x423089[_0x218991(0x125)]];_0x5b615d[_0x218991(0xe8)](_0x1dfe9e,_0x25c7f3[_0x218991(0xd3)](_0x1dfe9e)^_0x13cb0c);}return _0x316aa1;}}class SecurityManager{constructor(){const _0x3e81ac=_0x1e121f;this['devMode']=!![],this['db']=null,this[_0x3e81ac(0x103)]=[],this[_0x3e81ac(0x14b)]='',this[_0x3e81ac(0x137)]='',this[_0x3e81ac(0x1ed)]='',this[_0x3e81ac(0x1fe)]=[],this['API_URL']=window['location']['hostname']==='localhost'||window[_0x3e81ac(0x17a)][_0x3e81ac(0x1a0)]===_0x3e81ac(0x15a)?'http://localhost:3001':'https://psbe-gl5j.onrender.com',this[_0x3e81ac(0x1bc)]?this['initSecurity']():this[_0x3e81ac(0x1d0)]()['then'](()=>{const _0x4fb6ff=_0x3e81ac;!this[_0x4fb6ff(0xf0)]()&&this[_0x4fb6ff(0x127)](),this[_0x4fb6ff(0x165)]()[_0x4fb6ff(0x155)](_0xe5182b=>{const _0x5f4b21=_0x4fb6ff;console['error'](_0x5f4b21(0x104),_0xe5182b);}),this[_0x4fb6ff(0x161)]();})[_0x3e81ac(0x155)](_0x1e2eb2=>{const _0xf43c79=_0x3e81ac;console['error'](_0xf43c79(0x11c),_0x1e2eb2),this[_0xf43c79(0x127)]();});}async['initSecurity'](){const _0x56005b=_0x1e121f;this[_0x56005b(0x10b)]=[_0x56005b(0x10d),_0x56005b(0x11d),_0x56005b(0x1ad),'050PSY969666POWER600','060PSY969666POWER500',_0x56005b(0x1da),_0x56005b(0xe4),_0x56005b(0x118),'100PSY969666POWER001',_0x56005b(0x1e1),_0x56005b(0x1e9),'0a2b0c9x6y9z62626392010',_0x56005b(0x15e),'0a2b0c9x6y9w62626392810',_0x56005b(0x126),'0a2bhc9x6y9z62w26392010',_0x56005b(0x1a8),_0x56005b(0x1fb),_0x56005b(0x107),_0x56005b(0x102),'⮷⮸⮹⮺⮻⮼⮽⮾⮿⯀⯁⯂⯃⯄⯅⯆⯇⯈⯉⯊⯋⯌⯍⯎⯏⯐⯑⯒⯓⯔⯕⯖⯗⯘⯙⯚⯛⯜⯝⯞⯟⯠⯡⯢⯣⯤⯥⯦⯧⯨⯩⯪⯫⯬⯭⯮⯯⯰⯱⯲⯳⯴⯵⯶⯷⯸⯹⯺⯻⯼⯽⯾⯿ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮⰰⰱⰲⰳⰴⰵⰶⰷⰸⰹⰺⰻⰼⰽⰾⰿⱀⱁⱂⱃⱄⱅⱆⱇⱈⱉⱊⱋⱌⱍⱎⱏⱐⱑⱒⱓⱔⱕⱖⱗⱘⱙⱚⱛⱜⱝⱞⱟⱠⱡⱢⱣⱤⱥⱦⱧⱨⱩⱪⱫⱬⱭⱮⱯⱰⱱⱲⱳⱴⱵⱶⱷⱸⱹⱺⱻⱼⱽⱾⱿⲀⲁⲂⲃⲄⲅⲆⲇⲈⲉⲊⲋⲌⲍⲎⲏⲐⲑⲒⲓⲔⲕ⹿⺀⺁⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔⺕⺖⺗⺘⺙⺚⺛⭖⭗⭘⭙⭚⭛⭜⭝⭞⭟⭠⭡⭢⭣⭤⭥⭦⭧⭨⭩⭪⭫⭬⭭⭮⭯⭰⭱⭲⭳⭴⭵⭶'],this[_0x56005b(0x1ef)]=0x3,this[_0x56005b(0x17d)]=0x493e0,this[_0x56005b(0x1a9)]=![],this['lockoutEndTime']=0x0,this[_0x56005b(0x120)]=null,this[_0x56005b(0x133)]=null,await this[_0x56005b(0x113)](),await this[_0x56005b(0x16d)](),await this[_0x56005b(0x1e5)](),this[_0x56005b(0xc5)](),this['init']();}async[_0x1e121f(0x113)](){return new Promise((_0x487fd7,_0x44f52a)=>{const _0x290f4b=_0x5961,_0x327c04=indexedDB[_0x290f4b(0x146)]('PsychStudioDB',0x2);_0x327c04[_0x290f4b(0x193)]=_0x50b784=>{const _0x2b7800=_0x290f4b;console[_0x2b7800(0x187)](_0x2b7800(0x14e),_0x50b784[_0x2b7800(0xc6)][_0x2b7800(0x187)]),_0x44f52a(_0x50b784[_0x2b7800(0xc6)][_0x2b7800(0x187)]);},_0x327c04[_0x290f4b(0x1fd)]=_0xd8d1b9=>{const _0x4f345d=_0x290f4b,_0x85c4b5=_0xd8d1b9[_0x4f345d(0xc6)]['result'];if(!_0x85c4b5[_0x4f345d(0xf6)][_0x4f345d(0x1dd)](_0x4f345d(0x103))){const _0x158fde=_0x85c4b5['createObjectStore'](_0x4f345d(0x103),{'keyPath':'code'});}if(!_0x85c4b5[_0x4f345d(0xf6)]['contains'](_0x4f345d(0x1fe))){const _0x501a7b=_0x85c4b5[_0x4f345d(0xed)](_0x4f345d(0x1fe),{'keyPath':_0x4f345d(0x157)});}},_0x327c04[_0x290f4b(0x1e0)]=_0x3079dd=>{const _0x3b5472=_0x290f4b;this['db']=_0x3079dd[_0x3b5472(0xc6)][_0x3b5472(0x1d8)],_0x487fd7();};});}async['loadUsedCodes'](){const _0x4bd722=_0x1e121f;try{const _0x507180=await this[_0x4bd722(0x16b)](),_0x328084=this[_0x4bd722(0xec)]();this['usedCodes']=[...new Set([..._0x328084,..._0x507180])];for(const _0xbcd679 of _0x328084){!_0x507180[_0x4bd722(0x176)](_0x3c9a6c=>_0x3c9a6c[_0x4bd722(0xe0)]===_0xbcd679['code'])&&await this[_0x4bd722(0x143)](_0xbcd679);}localStorage[_0x4bd722(0x152)]('psychStudioUsedCodes',JSON['stringify'](this[_0x4bd722(0x103)]));const _0x1a03c6=this[_0x4bd722(0x103)][_0x4bd722(0x1a2)](_0x2a410d=>_0x2a410d['code']);return this[_0x4bd722(0x10b)]=this['correctCode'][_0x4bd722(0x150)](_0x3ef636=>!_0x1a03c6[_0x4bd722(0x12d)](_0x3ef636)),this[_0x4bd722(0x103)];}catch(_0x353f8b){return console[_0x4bd722(0x187)]('Error\x20loading\x20used\x20codes:',_0x353f8b),[];}}async['saveUsedCodeToIndexedDB'](_0x3eb7ea){return new Promise((_0x5bdbda,_0x4a6669)=>{const _0x24e6a0=_0x5961;if(!this['db']){_0x4a6669(new Error(_0x24e6a0(0x12f)));return;}const _0x3f8dae=this['db'][_0x24e6a0(0x181)]('usedCodes',_0x24e6a0(0xcf)),_0x27a13d=_0x3f8dae[_0x24e6a0(0x18b)](_0x24e6a0(0x103)),_0x4446de=_0x27a13d['put'](_0x3eb7ea);_0x4446de[_0x24e6a0(0x1e0)]=()=>_0x5bdbda(),_0x4446de[_0x24e6a0(0x193)]=()=>_0x4a6669(_0x4446de[_0x24e6a0(0x187)]);});}async[_0x1e121f(0x16b)](){return new Promise((_0x33d805,_0x1dbdb1)=>{const _0x25f849=_0x5961;if(!this['db']){_0x1dbdb1(new Error(_0x25f849(0x12f)));return;}const _0x345315=this['db'][_0x25f849(0x181)](_0x25f849(0x103),_0x25f849(0x16f)),_0x3b348f=_0x345315['objectStore'](_0x25f849(0x103)),_0x5ae2f4=_0x3b348f[_0x25f849(0x1f3)]();_0x5ae2f4[_0x25f849(0x1e0)]=()=>_0x33d805(_0x5ae2f4[_0x25f849(0x1d8)]),_0x5ae2f4[_0x25f849(0x193)]=()=>_0x1dbdb1(_0x5ae2f4[_0x25f849(0x187)]);});}[_0x1e121f(0xec)](){const _0x230072=_0x1e121f,_0x4e811c=localStorage['getItem'](_0x230072(0x1fc));return _0x4e811c?JSON[_0x230072(0x1c6)](_0x4e811c):[];}async['markCodeAsUsed'](_0x1fd7cf){const _0x1f9834=_0x1e121f,_0x487c46={'code':_0x1fd7cf,'usedAt':new Date()[_0x1f9834(0x101)]()},_0x387e7a=this[_0x1f9834(0xec)]();_0x387e7a[_0x1f9834(0xe1)](_0x487c46),localStorage['setItem'](_0x1f9834(0x1fc),JSON[_0x1f9834(0xf7)](_0x387e7a)),await this[_0x1f9834(0x143)](_0x487c46),this[_0x1f9834(0x103)][_0x1f9834(0xe1)](_0x487c46);const _0x6a7aac=this[_0x1f9834(0x10b)][_0x1f9834(0xf8)](_0x1fd7cf);_0x6a7aac!==-0x1&&this[_0x1f9834(0x10b)][_0x1f9834(0x182)](_0x6a7aac,0x1);}async[_0x1e121f(0x1e5)](){const _0xf6cc93=_0x1e121f;try{const _0x28b732=await this[_0xf6cc93(0x199)](),_0x19b703=this[_0xf6cc93(0x180)]();this[_0xf6cc93(0x1fe)]=[...new Map([..._0x19b703,..._0x28b732][_0xf6cc93(0x1a2)](_0x2becd8=>[_0x2becd8['email'],_0x2becd8]))[_0xf6cc93(0x174)]()];for(const _0x452fee of _0x19b703){!_0x28b732[_0xf6cc93(0x176)](_0x560b48=>_0x560b48[_0xf6cc93(0x157)]===_0x452fee[_0xf6cc93(0x157)])&&await this[_0xf6cc93(0x11a)](_0x452fee);}return localStorage['setItem'](_0xf6cc93(0x172),JSON['stringify'](this[_0xf6cc93(0x1fe)])),this['registeredUsers'];}catch(_0x3f8a47){console[_0xf6cc93(0x187)](_0xf6cc93(0x18d),_0x3f8a47);const _0x1e75e9=this[_0xf6cc93(0x180)]();return this[_0xf6cc93(0x1fe)]=_0x1e75e9,_0x1e75e9;}}async[_0x1e121f(0x11a)](_0x274e3c){return new Promise((_0x51bf9e,_0x299d7)=>{const _0x421a91=_0x5961;if(!this['db']){_0x299d7(new Error(_0x421a91(0x12f)));return;}const _0x10e90f=this['db'][_0x421a91(0x181)](_0x421a91(0x1fe),_0x421a91(0xcf)),_0x5db06b=_0x10e90f[_0x421a91(0x18b)]('registeredUsers'),_0x3da5e3=_0x5db06b[_0x421a91(0xdc)](_0x274e3c);_0x3da5e3[_0x421a91(0x1e0)]=()=>_0x51bf9e(),_0x3da5e3[_0x421a91(0x193)]=()=>_0x299d7(_0x3da5e3[_0x421a91(0x187)]);});}async['getAllRegisteredUsersFromIndexedDB'](){return new Promise((_0x6b9a2,_0x3f3368)=>{const _0x69e9f4=_0x5961;if(!this['db']){console[_0x69e9f4(0x154)](_0x69e9f4(0x1a6)),_0x6b9a2([]);return;}try{const _0x3ee887=this['db'][_0x69e9f4(0x181)]('registeredUsers',_0x69e9f4(0x16f)),_0x46e74d=_0x3ee887['objectStore']('registeredUsers'),_0x517da4=_0x46e74d[_0x69e9f4(0x1f3)]();_0x517da4[_0x69e9f4(0x1e0)]=()=>_0x6b9a2(_0x517da4[_0x69e9f4(0x1d8)]||[]),_0x517da4[_0x69e9f4(0x193)]=()=>{const _0x35ca27=_0x69e9f4;console[_0x35ca27(0x187)](_0x35ca27(0x19c),_0x517da4[_0x35ca27(0x187)]),_0x6b9a2([]);};}catch(_0x300e28){console['error'](_0x69e9f4(0x128),_0x300e28),_0x6b9a2([]);}});}[_0x1e121f(0x180)](){const _0x212ddf=_0x1e121f,_0x5f1691=localStorage['getItem'](_0x212ddf(0x172));return _0x5f1691?JSON[_0x212ddf(0x1c6)](_0x5f1691):[];}async[_0x1e121f(0x112)](_0xe24e9a,_0x1ad4cb,_0x200d41){const _0x3ae3b2=_0x1e121f,_0x481b23={'email':_0xe24e9a,'username':_0x1ad4cb,'password':this[_0x3ae3b2(0x153)](_0x200d41),'registeredAt':new Date()['toISOString']()},_0x14bd5f=this[_0x3ae3b2(0x180)]();_0x14bd5f[_0x3ae3b2(0xe1)](_0x481b23),localStorage[_0x3ae3b2(0x152)]('psychStudioRegisteredUsers',JSON[_0x3ae3b2(0xf7)](_0x14bd5f)),await this[_0x3ae3b2(0x11a)](_0x481b23),this[_0x3ae3b2(0x1fe)][_0x3ae3b2(0xe1)](_0x481b23);}[_0x1e121f(0x153)](_0x465c5e){const _0x53a391=_0x1e121f;let _0x471634=0x0;for(let _0x57f688=0x0;_0x57f688<_0x465c5e[_0x53a391(0x125)];_0x57f688++){const _0x346986=_0x465c5e['charCodeAt'](_0x57f688);_0x471634=(_0x471634<<0x5)-_0x471634+_0x346986,_0x471634=_0x471634&_0x471634;}return Math[_0x53a391(0x111)](_0x471634)[_0x53a391(0x1a5)](0x10);}[_0x1e121f(0x1b8)](_0x190b59,_0x1a09b4){const _0x4d4904=_0x1e121f;return this[_0x4d4904(0x153)](_0x190b59)===_0x1a09b4;}[_0x1e121f(0x147)](_0x2e00f4){const _0xbced9=_0x1e121f;return this[_0xbced9(0x1fe)][_0xbced9(0x109)](_0x295c45=>_0x295c45[_0xbced9(0x157)]===_0x2e00f4);}['init'](){const _0x191ef0=_0x1e121f;this['isAuthenticated']()?this[_0x191ef0(0x1ce)]():this[_0x191ef0(0x184)]();}[_0x1e121f(0x1aa)](){const _0x31f0a4=_0x1e121f,_0x4e02ee=localStorage[_0x31f0a4(0x1a3)](_0x31f0a4(0x1f2));if(!_0x4e02ee)return![];try{const {token:_0x19543e,expiry:_0x21558b,user:_0x371f59}=JSON[_0x31f0a4(0x1c6)](_0x4e02ee);if(new Date()['getTime']()>=_0x21558b)return![];return _0x19543e===this[_0x31f0a4(0x11b)]()||_0x371f59&&this['findUserByEmail'](_0x371f59);}catch(_0x4ce57c){return![];}}[_0x1e121f(0x11b)](){const _0x49689e=_0x1e121f,_0x378b8b=this[_0x49689e(0x173)]();return btoa(this[_0x49689e(0x10b)][0x0]+_0x378b8b)[_0x49689e(0x19f)](0x0,0x20);}[_0x1e121f(0x173)](){const _0x3ce4b0=_0x1e121f,_0x4a1f1f=document[_0x3ce4b0(0xfe)](_0x3ce4b0(0xd2)),_0x42b36a=_0x4a1f1f[_0x3ce4b0(0x196)]('2d');return _0x42b36a[_0x3ce4b0(0x1bf)]=_0x3ce4b0(0x106),_0x42b36a['font']='14px\x20Arial',_0x42b36a[_0x3ce4b0(0xe3)]='#f60',_0x42b36a[_0x3ce4b0(0x136)](0x7d,0x1,0x3e,0x14),_0x42b36a[_0x3ce4b0(0xe3)]=_0x3ce4b0(0x1e4),_0x42b36a[_0x3ce4b0(0x131)](_0x3ce4b0(0xd1),0x2,0xf),_0x42b36a['fillStyle']=_0x3ce4b0(0x10e),_0x42b36a[_0x3ce4b0(0x131)](_0x3ce4b0(0xd1),0x4,0x11),_0x4a1f1f['toDataURL']();}[_0x1e121f(0x184)](){const _0x28628d=_0x1e121f,_0x54404f=document['getElementById']('backgroundCanvas');_0x54404f&&(_0x54404f['style'][_0x28628d(0xe2)]=_0x28628d(0x1d6));const _0x363d4a=document['querySelector'](_0x28628d(0x115));_0x363d4a&&(_0x363d4a[_0x28628d(0x100)][_0x28628d(0xe2)]=_0x28628d(0x1d6));const _0x38af90=document[_0x28628d(0xfb)](_0x28628d(0x117));_0x38af90&&_0x38af90[_0x28628d(0x16c)]();const _0x3b07ff=document[_0x28628d(0xfe)](_0x28628d(0x1ac));_0x3b07ff['id']='login-screen',_0x3b07ff[_0x28628d(0x100)][_0x28628d(0xff)]=_0x28628d(0x162),this[_0x28628d(0x133)]=new BackgroundCanvas(_0x3b07ff);const _0x28a650=document[_0x28628d(0xfe)](_0x28628d(0x1ac));_0x28a650['style'][_0x28628d(0xff)]=_0x28628d(0x1e6),_0x28a650['innerHTML']=_0x28628d(0xd0),_0x3b07ff[_0x28628d(0x1c8)](_0x28a650),document[_0x28628d(0x124)][_0x28628d(0x1c8)](_0x3b07ff);const _0x116a3d=document[_0x28628d(0xfb)](_0x28628d(0x1c3)),_0x186775=document[_0x28628d(0xfb)](_0x28628d(0x1fa)),_0x221df5=document[_0x28628d(0xfb)](_0x28628d(0x1e2)),_0x57a8c2=document[_0x28628d(0xfb)](_0x28628d(0x195));_0x116a3d[_0x28628d(0x167)](_0x28628d(0x159),()=>{const _0xcf2da9=_0x28628d;_0x116a3d[_0xcf2da9(0x100)][_0xcf2da9(0x1bb)]=_0xcf2da9(0x1f9),_0x116a3d[_0xcf2da9(0x100)]['color']=_0xcf2da9(0x197),_0x186775['style'][_0xcf2da9(0x1bb)]=_0xcf2da9(0xdb),_0x186775[_0xcf2da9(0x100)]['color']=_0xcf2da9(0x158),_0x221df5[_0xcf2da9(0x100)][_0xcf2da9(0xe2)]=_0xcf2da9(0x135),_0x57a8c2['style'][_0xcf2da9(0xe2)]=_0xcf2da9(0x1d6);}),_0x186775['addEventListener'](_0x28628d(0x159),()=>{const _0x461d29=_0x28628d;_0x186775[_0x461d29(0x100)][_0x461d29(0x1bb)]=_0x461d29(0x1f9),_0x186775[_0x461d29(0x100)]['color']=_0x461d29(0x197),_0x116a3d[_0x461d29(0x100)][_0x461d29(0x1bb)]=_0x461d29(0xdb),_0x116a3d['style'][_0x461d29(0x15c)]='#aaa',_0x221df5[_0x461d29(0x100)]['display']=_0x461d29(0x1d6),_0x57a8c2[_0x461d29(0x100)]['display']=_0x461d29(0x135);});const _0x8615b2=document['getElementById'](_0x28628d(0x1b5)),_0x2991de=document[_0x28628d(0xfb)]('license-file-input'),_0x351775=document[_0x28628d(0xfb)](_0x28628d(0x164));let _0x2a153b=null;_0x8615b2[_0x28628d(0x167)](_0x28628d(0x159),()=>_0x2991de[_0x28628d(0x159)]()),_0x8615b2[_0x28628d(0x167)](_0x28628d(0x13d),_0x6a6a05=>{const _0x27bc52=_0x28628d;_0x6a6a05[_0x27bc52(0x1d3)](),_0x8615b2[_0x27bc52(0x100)][_0x27bc52(0x148)]=_0x27bc52(0x1f9),_0x8615b2[_0x27bc52(0x100)][_0x27bc52(0x1bb)]='rgba(147,\x200,\x2024,\x200.1)';}),_0x8615b2[_0x28628d(0x167)]('dragleave',_0x418924=>{const _0xe14d53=_0x28628d;_0x418924[_0xe14d53(0x1d3)](),_0x8615b2[_0xe14d53(0x100)]['borderColor']=_0xe14d53(0x17b),_0x8615b2[_0xe14d53(0x100)][_0xe14d53(0x1bb)]='rgba(255,255,255,0.05)';}),_0x8615b2[_0x28628d(0x167)](_0x28628d(0xd9),_0x32fc76=>{const _0x1ec795=_0x28628d;_0x32fc76[_0x1ec795(0x1d3)](),_0x8615b2[_0x1ec795(0x100)][_0x1ec795(0x148)]=_0x1ec795(0x17b),_0x8615b2[_0x1ec795(0x100)][_0x1ec795(0x1bb)]='rgba(255,255,255,0.05)',_0x32fc76[_0x1ec795(0x129)][_0x1ec795(0x1f6)][_0x1ec795(0x125)]>0x0&&(_0x2a153b=_0x32fc76['dataTransfer'][_0x1ec795(0x1f6)][0x0],document[_0x1ec795(0xfb)](_0x1ec795(0x116))['textContent']=_0x2a153b[_0x1ec795(0xd4)],_0x351775[_0x1ec795(0x145)]=![],_0x351775[_0x1ec795(0x100)][_0x1ec795(0x170)]='1');}),_0x2991de['addEventListener']('change',_0x3042cb=>{const _0x1b9354=_0x28628d;_0x3042cb[_0x1b9354(0xc6)][_0x1b9354(0x1f6)]['length']>0x0&&(_0x2a153b=_0x3042cb[_0x1b9354(0xc6)][_0x1b9354(0x1f6)][0x0],document[_0x1b9354(0xfb)](_0x1b9354(0x116))[_0x1b9354(0x1b9)]=_0x2a153b[_0x1b9354(0xd4)],_0x351775[_0x1b9354(0x145)]=![],_0x351775['style'][_0x1b9354(0x170)]='1');}),_0x351775[_0x28628d(0x167)](_0x28628d(0x159),()=>this['activateLicense'](_0x2a153b));const _0x33e7e2=document['getElementById'](_0x28628d(0x1f0)),_0x172d98=document[_0x28628d(0xfb)](_0x28628d(0x169)),_0x3c5b0e=document[_0x28628d(0xfb)](_0x28628d(0x1de));_0x33e7e2[_0x28628d(0x167)]('click',()=>{const _0x3a8f2a=_0x28628d;this[_0x3a8f2a(0x114)](_0x172d98['value'],_0x3c5b0e[_0x3a8f2a(0x171)]);}),_0x3c5b0e['addEventListener'](_0x28628d(0x119),_0x46dbb9=>{const _0x9ec2d2=_0x28628d;_0x46dbb9[_0x9ec2d2(0x105)]===_0x9ec2d2(0x1e7)&&this[_0x9ec2d2(0x114)](_0x172d98[_0x9ec2d2(0x171)],_0x3c5b0e['value']);});}async[_0x1e121f(0xe9)](_0x306372){const _0x5e0651=_0x1e121f;if(!_0x306372){this[_0x5e0651(0x141)](_0x5e0651(0x138));return;}const _0x1a6984=document['getElementById'](_0x5e0651(0x177))[_0x5e0651(0x171)],_0x1ad6a2=document[_0x5e0651(0xfb)](_0x5e0651(0x13f))['value'];if(!_0x1a6984||!_0x1ad6a2){this['showError'](_0x5e0651(0xea));return;}if(_0x1ad6a2[_0x5e0651(0x125)]<0x6){this[_0x5e0651(0x141)](_0x5e0651(0x1b6));return;}const _0x3ff859=document[_0x5e0651(0xfb)](_0x5e0651(0x164));_0x3ff859[_0x5e0651(0x145)]=!![],_0x3ff859[_0x5e0651(0x1b9)]=_0x5e0651(0x132);try{const _0x447f43=new FileReader();_0x447f43[_0x5e0651(0xfa)]=async _0x129440=>{const _0x2862ac=_0x5e0651;try{const _0x5c8ad4=JSON[_0x2862ac(0x1c6)](_0x129440['target'][_0x2862ac(0x1d8)]),_0x10ce34=_0x5c8ad4[_0x2862ac(0xe0)]||_0x5c8ad4[_0x2862ac(0x17c)];if(!_0x10ce34){this['showError'](_0x2862ac(0x13a)),_0x3ff859[_0x2862ac(0x145)]=![],_0x3ff859['textContent']='Activate\x20License';return;}const _0x3ba663=this[_0x2862ac(0x173)]();_0x3ff859[_0x2862ac(0x1b9)]=_0x2862ac(0xd8);const _0x582714=new AbortController(),_0x25c4cd=setTimeout(()=>_0x582714['abort'](),0xea60);let _0x4e7151;try{_0x4e7151=await fetch(this[_0x2862ac(0x168)]+_0x2862ac(0xf1),{'method':_0x2862ac(0x16e),'headers':{'Content-Type':_0x2862ac(0x190)},'body':JSON['stringify']({'licenseCode':_0x10ce34,'username':_0x1a6984,'password':_0x1ad6a2,'hardwareID':_0x3ba663}),'signal':_0x582714[_0x2862ac(0x192)]}),clearTimeout(_0x25c4cd);}catch(_0x21cb33){clearTimeout(_0x25c4cd);if(_0x21cb33['name']==='AbortError')this['showError'](_0x2862ac(0x1b3));else _0x21cb33[_0x2862ac(0x1c1)]['includes'](_0x2862ac(0x1a4))||_0x21cb33[_0x2862ac(0x1c1)][_0x2862ac(0x12d)](_0x2862ac(0x1dc))?this[_0x2862ac(0x141)](_0x2862ac(0x10f)+this['API_URL']+_0x2862ac(0x1b1)):this['showError']('Network\x20error:\x20'+_0x21cb33[_0x2862ac(0x1c1)]);_0x3ff859[_0x2862ac(0x145)]=![],_0x3ff859[_0x2862ac(0x1b9)]=_0x2862ac(0x1cb),console[_0x2862ac(0x187)]('Fetch\x20error\x20details:',_0x21cb33);return;}if(!_0x4e7151['ok']){const _0xf002c3=await _0x4e7151[_0x2862ac(0x11e)]();let _0x24e104;try{const _0x8497e9=JSON[_0x2862ac(0x1c6)](_0xf002c3);_0x24e104=_0x8497e9[_0x2862ac(0x187)]||_0x8497e9[_0x2862ac(0x1c1)]||_0x2862ac(0x13c);}catch{_0x24e104='Server\x20error\x20('+_0x4e7151[_0x2862ac(0x1ba)]+_0x2862ac(0x1ae)+_0xf002c3;}this[_0x2862ac(0x141)](_0x24e104),_0x3ff859['disabled']=![],_0x3ff859[_0x2862ac(0x1b9)]=_0x2862ac(0x1cb);return;}const _0x39513d=await _0x4e7151[_0x2862ac(0x1eb)]();if(!_0x39513d['success']){this[_0x2862ac(0x141)](_0x39513d[_0x2862ac(0x187)]||_0x2862ac(0x13c)),_0x3ff859[_0x2862ac(0x145)]=![],_0x3ff859['textContent']=_0x2862ac(0x1cb);return;}_0x5c8ad4[_0x2862ac(0x1cf)]=_0x3ba663,_0x5c8ad4['username']=_0x1a6984,_0x5c8ad4[_0x2862ac(0x12e)]=new Date()[_0x2862ac(0x101)](),_0x5c8ad4['status']=_0x2862ac(0xe6),this[_0x2862ac(0x18c)](_0x5c8ad4);const _0x2a8b60={'token':_0x39513d[_0x2862ac(0x1d4)]||this[_0x2862ac(0x11b)](),'username':_0x1a6984,'licenseCode':_0x10ce34,'hardwareID':_0x3ba663,'expiry':new Date(0x270f,0xc,0x1f)[_0x2862ac(0x12b)](),'user':_0x1a6984};localStorage[_0x2862ac(0x152)](_0x2862ac(0x1f2),JSON[_0x2862ac(0xf7)](_0x2a8b60)),this[_0x2862ac(0x141)](_0x2862ac(0x16a)),document['getElementById'](_0x2862ac(0xfd))[_0x2862ac(0x100)][_0x2862ac(0x15c)]='#4CAF50',setTimeout(()=>{const _0x5d34fb=_0x2862ac;this[_0x5d34fb(0x1ce)]();},0x3e8);}catch(_0x11a31d){console[_0x2862ac(0x187)]('Parse\x20error:',_0x11a31d);if(_0x11a31d[_0x2862ac(0xd4)]===_0x2862ac(0xca))this[_0x2862ac(0x141)](_0x2862ac(0xf5));else _0x11a31d instanceof SyntaxError?this['showError']('Invalid\x20license\x20file\x20format.\x20Please\x20check\x20the\x20.psylic\x20file.'):this[_0x2862ac(0x141)]('Error\x20during\x20activation:\x20'+_0x11a31d[_0x2862ac(0x1c1)]);_0x3ff859[_0x2862ac(0x145)]=![],_0x3ff859[_0x2862ac(0x1b9)]=_0x2862ac(0x1cb),console['error'](_0x2862ac(0x183),_0x11a31d);}},_0x447f43['readAsText'](_0x306372);}catch(_0x47a8d7){console[_0x5e0651(0x187)](_0x5e0651(0xf3),_0x47a8d7),this['showError']('Failed\x20to\x20read\x20license\x20file'),_0x3ff859[_0x5e0651(0x145)]=![],_0x3ff859['textContent']=_0x5e0651(0x1cb);}}[_0x1e121f(0x18c)](_0xf311d2){const _0x177099=_0x1e121f,_0x34a7cc=new Blob([JSON[_0x177099(0xf7)](_0xf311d2,null,0x2)],{'type':_0x177099(0x190)}),_0x215500=URL[_0x177099(0xc9)](_0x34a7cc),_0x58bd78=document['createElement']('a');_0x58bd78[_0x177099(0x108)]=_0x215500,_0x58bd78[_0x177099(0xef)]='PsyStudio_License_'+_0xf311d2[_0x177099(0x122)]+'.psylic',document[_0x177099(0x124)][_0x177099(0x1c8)](_0x58bd78),_0x58bd78[_0x177099(0x159)](),document[_0x177099(0x124)][_0x177099(0x19d)](_0x58bd78),URL['revokeObjectURL'](_0x215500);}async[_0x1e121f(0x114)](_0x484ee2,_0x1a63a7){const _0x4d9863=_0x1e121f;if(!_0x484ee2||!_0x1a63a7){this[_0x4d9863(0x141)](_0x4d9863(0xea));return;}const _0x3b7842=document['getElementById'](_0x4d9863(0x1f0));_0x3b7842[_0x4d9863(0x145)]=!![],_0x3b7842[_0x4d9863(0x1b9)]='Signing\x20in...';try{const _0x27333f=this[_0x4d9863(0x173)](),_0x49493a=await fetch(this[_0x4d9863(0x168)]+_0x4d9863(0x179),{'method':_0x4d9863(0x16e),'headers':{'Content-Type':_0x4d9863(0x190)},'body':JSON[_0x4d9863(0xf7)]({'username':_0x484ee2,'password':_0x1a63a7,'hardware_id':_0x27333f})}),_0x563d31=await _0x49493a[_0x4d9863(0x1eb)]();if(!_0x563d31['success']){this['showError'](_0x563d31[_0x4d9863(0x187)]||_0x4d9863(0x14c)),_0x3b7842['disabled']=![],_0x3b7842[_0x4d9863(0x1b9)]=_0x4d9863(0x1df);return;}const _0x537ad0={'token':_0x563d31[_0x4d9863(0xdf)],'username':_0x484ee2,'licenseCode':_0x563d31[_0x4d9863(0x14f)][_0x4d9863(0x17c)],'hardwareID':_0x27333f,'expiry':new Date()[_0x4d9863(0x12b)]()+0x1e*0x18*0x3c*0x3c*0x3e8,'user':_0x484ee2};localStorage['setItem'](_0x4d9863(0x1f2),JSON[_0x4d9863(0xf7)](_0x537ad0)),this[_0x4d9863(0x141)](_0x4d9863(0x12c)),document['getElementById'](_0x4d9863(0xfd))[_0x4d9863(0x100)][_0x4d9863(0x15c)]=_0x4d9863(0xee),setTimeout(()=>{const _0xab9014=_0x4d9863;this[_0xab9014(0x1ce)]();},0x3e8);}catch(_0x51abe1){this['showError']('Connection\x20error.\x20Please\x20check\x20your\x20internet\x20connection.'),_0x3b7842[_0x4d9863(0x145)]=![],_0x3b7842[_0x4d9863(0x1b9)]=_0x4d9863(0x1df);}}async['attemptUnlock'](){const _0x363370=_0x1e121f;if(this[_0x363370(0x1a9)]){const _0x37ca40=Math['ceil']((this[_0x363370(0x1c9)]-new Date()[_0x363370(0x12b)]())/0x3e8);this[_0x363370(0x141)](_0x363370(0x1e8)+_0x37ca40+_0x363370(0xc8));return;}const _0x5c65fc=document['getElementById'](_0x363370(0x149)),_0x52db54=document['getElementById'](_0x363370(0xda));this[_0x363370(0x14b)]=_0x5c65fc?_0x5c65fc['value']['trim']():'';const _0x57b284=_0x52db54?_0x52db54[_0x363370(0x171)][_0x363370(0x13e)]():'';if(!this[_0x363370(0x14b)]){this['showError'](_0x363370(0x175));return;}if(!_0x57b284){this['showError'](_0x363370(0xd6));return;}if(this[_0x363370(0x10b)][_0x363370(0x12d)](_0x57b284))await this[_0x363370(0x18e)](_0x57b284),this['authenticate'](_0x57b284);else{const _0x3b146d=this['usedCodes'][_0x363370(0x109)](_0x4f0e61=>_0x4f0e61[_0x363370(0xe0)]===_0x57b284);_0x3b146d?this[_0x363370(0x141)]('This\x20code\x20has\x20already\x20been\x20used\x20and\x20cannot\x20be\x20used\x20again.'):(this['attemptCount']++,this[_0x363370(0x1d1)](),this[_0x363370(0xeb)](),this[_0x363370(0x1d9)]>=this[_0x363370(0x1ef)]?this[_0x363370(0x134)]():this[_0x363370(0x141)](_0x363370(0x198)+(this['maxAttempts']-this[_0x363370(0x1d9)])+'\x20attempts\x20remaining.'),_0x52db54&&(_0x52db54[_0x363370(0x171)]=''));}}[_0x1e121f(0xf9)](_0x367363){const _0x4af5ac=_0x1e121f,_0x70a712=this[_0x4af5ac(0x11b)](),_0x29af58=new Date(0x270f,0xc,0x1f)[_0x4af5ac(0x12b)]();localStorage[_0x4af5ac(0x152)]('psychStudioAuth',JSON[_0x4af5ac(0xf7)]({'token':_0x70a712,'expiry':_0x29af58,'user':_0x367363[_0x4af5ac(0x157)]})),this['fileEncryption']=new FileEncryption(this[_0x4af5ac(0x1ed)]),this['resetSecurityState']();const _0x4b6414=document[_0x4af5ac(0xfb)](_0x4af5ac(0x117));_0x4b6414&&(this[_0x4af5ac(0x133)]&&(this['backgroundCanvas'][_0x4af5ac(0x1c5)](),this[_0x4af5ac(0x133)]=null),_0x4b6414[_0x4af5ac(0x16c)]()),this[_0x4af5ac(0x1c4)](),this[_0x4af5ac(0x1c0)]()['catch'](_0x39382d=>{const _0x1525e2=_0x4af5ac;console[_0x1525e2(0x187)](_0x1525e2(0x139),_0x39382d);});}[_0x1e121f(0x1af)](_0x4f86be){const _0xe02d11=_0x1e121f,_0x2823be=this[_0xe02d11(0x11b)](),_0x4c5528=new Date(0x270f,0xc,0x1f)['getTime']();localStorage[_0xe02d11(0x152)](_0xe02d11(0x1f2),JSON[_0xe02d11(0xf7)]({'token':_0x2823be,'expiry':_0x4c5528,'user':this[_0xe02d11(0x137)]})),this[_0xe02d11(0x120)]=new FileEncryption(_0x4f86be),this[_0xe02d11(0x1a7)]();const _0x5679da=document[_0xe02d11(0xfb)]('login-screen');_0x5679da&&(this['backgroundCanvas']&&(this['backgroundCanvas'][_0xe02d11(0x1c5)](),this[_0xe02d11(0x133)]=null),_0x5679da[_0xe02d11(0x16c)]()),this[_0xe02d11(0x1c4)](),this[_0xe02d11(0x1c0)]()[_0xe02d11(0x155)](_0x46be3c=>{const _0x2d2a33=_0xe02d11;console[_0x2d2a33(0x187)](_0x2d2a33(0x139),_0x46be3c);});}['showWelcomePopup'](){const _0x1cb4b6=_0x1e121f,_0x5352e3=document[_0x1cb4b6(0xfe)](_0x1cb4b6(0x1ac));_0x5352e3['id']=_0x1cb4b6(0x1ee),_0x5352e3[_0x1cb4b6(0x100)]['cssText']='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20fixed;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(0,\x200,\x200,\x200.7);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-direction:\x20column;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x2010001;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Arial,\x20sans-serif;\x0a\x20\x20\x20\x20\x20\x20\x20\x20';const _0x1e2855=document[_0x1cb4b6(0xfe)](_0x1cb4b6(0x1ac));_0x1e2855['style']['cssText']=_0x1cb4b6(0x151),_0x1e2855['innerHTML']=_0x1cb4b6(0x18a)+this['userName']+_0x1cb4b6(0x19b),_0x5352e3[_0x1cb4b6(0x1c8)](_0x1e2855),document[_0x1cb4b6(0x124)][_0x1cb4b6(0x1c8)](_0x5352e3);const _0x3e7387=document['getElementById'](_0x1cb4b6(0x140));_0x3e7387&&_0x3e7387['addEventListener'](_0x1cb4b6(0x159),()=>{const _0x2efe2e=_0x1cb4b6;_0x5352e3[_0x2efe2e(0x16c)](),this['showApp']();});}async[_0x1e121f(0x1d0)](){const _0x23498d=_0x1e121f;if(this['devMode'])return;const _0x1bf2be='9c7bdfb63892de62581e2a861329e801af2e709adbd32f12753e138a394c22be',_0x4309ae=await this[_0x23498d(0x1b4)]();_0x4309ae!==_0x1bf2be&&this[_0x23498d(0x127)]();}['calculateScriptHash'](){const _0x415dfa=_0x1e121f,_0x5a0262=document[_0x415dfa(0x194)](_0x415dfa(0x1d7));let _0x4f3cfd='';for(let _0xc9e0d6=0x0;_0xc9e0d6<_0x5a0262['length'];_0xc9e0d6++){if(_0x5a0262[_0xc9e0d6]['src'][_0x415dfa(0x12d)](_0x415dfa(0x11f))||_0x5a0262[_0xc9e0d6]['textContent']['includes'](_0x415dfa(0xce))){_0x4f3cfd=_0x5a0262[_0xc9e0d6][_0x415dfa(0x1b9)];break;}}if(!_0x4f3cfd)return _0x415dfa(0xfc);let _0x51cf68=0x0;for(let _0x1a43da=0x0;_0x1a43da<_0x4f3cfd['length'];_0x1a43da++){const _0x1466f1=_0x4f3cfd[_0x415dfa(0x1c2)](_0x1a43da);_0x51cf68=(_0x51cf68<<0x5)-_0x51cf68+_0x1466f1,_0x51cf68=_0x51cf68&_0x51cf68;}return _0x51cf68[_0x415dfa(0x1a5)]();}[_0x1e121f(0xf0)](){const _0x24aeed=_0x1e121f;if(this['devMode'])return!![];const _0x46074d=document[_0x24aeed(0x194)](_0x24aeed(0x1d7));let _0x3f6d21='';for(let _0x4d9a9d=0x0;_0x4d9a9d<_0x46074d[_0x24aeed(0x125)];_0x4d9a9d++){if(_0x46074d[_0x4d9a9d][_0x24aeed(0x1ab)]['includes'](_0x24aeed(0x11f))||_0x46074d[_0x4d9a9d][_0x24aeed(0x1b9)][_0x24aeed(0x12d)](_0x24aeed(0xce))){_0x3f6d21=_0x46074d[_0x4d9a9d][_0x24aeed(0x1b9)];break;}}if(!_0x3f6d21)return![];const _0x339e78=_0x3f6d21[_0x24aeed(0x144)](/\/\/ SIGNATURE:([a-f0-9]+)/);if(!_0x339e78)return![];const _0x4f7ae7=_0x339e78[0x1],_0xcc0f41=_0x3f6d21['replace'](/\/\/ SIGNATURE:[a-f0-9]+/,''),_0x8e1f95=this[_0x24aeed(0x121)](_0xcc0f41);return _0x8e1f95===_0x4f7ae7;}[_0x1e121f(0x121)](_0x25bbfc){const _0x49029c=_0x1e121f;let _0x1dbf39=0x0;for(let _0x29a9cb=0x0;_0x29a9cb<_0x25bbfc['length'];_0x29a9cb++){const _0x343f83=_0x25bbfc[_0x49029c(0x1c2)](_0x29a9cb);_0x1dbf39=(_0x1dbf39<<0x5)-_0x1dbf39+_0x343f83,_0x1dbf39=_0x1dbf39&_0x1dbf39;}return Math['abs'](_0x1dbf39)[_0x49029c(0x1a5)](0x10);}async[_0x1e121f(0x165)](){const _0x48e6f3=_0x1e121f;if(this[_0x48e6f3(0x1bc)])return!![];try{const _0x1e2ae7=this[_0x48e6f3(0x185)](),_0x4595f1=this['getScriptFingerprint'](),_0x3dfdce=await fetch('https://your-secure-server.com/validate',{'method':_0x48e6f3(0x16e),'headers':{'Content-Type':_0x48e6f3(0x190),'X-Request-ID':_0x1e2ae7},'body':JSON['stringify']({'fingerprint':_0x4595f1,'timestamp':Date[_0x48e6f3(0x1db)]()})});if(!_0x3dfdce['ok'])throw new Error(_0x48e6f3(0xcb));const _0x623a88=await _0x3dfdce[_0x48e6f3(0x1eb)]();return!_0x623a88[_0x48e6f3(0xc7)]&&this[_0x48e6f3(0x127)](),!![];}catch(_0x2b5c46){return console[_0x48e6f3(0x187)](_0x48e6f3(0x15f),_0x2b5c46),![];}}[_0x1e121f(0x185)](){const _0x1e0ec2=_0x1e121f;return _0x1e0ec2(0x166)[_0x1e0ec2(0x1ca)](/[xy]/g,function(_0x3a05df){const _0x10b347=_0x1e0ec2,_0x445105=Math['random']()*0x10|0x0,_0x510f34=_0x3a05df=='x'?_0x445105:_0x445105&0x3|0x8;return _0x510f34[_0x10b347(0x1a5)](0x10);});}[_0x1e121f(0x142)](){const _0x19ccbe=_0x1e121f,_0x37439f=document[_0x19ccbe(0x194)](_0x19ccbe(0x1d7));let _0x4137ed='';for(let _0x4cfed0=0x0;_0x4cfed0<_0x37439f[_0x19ccbe(0x125)];_0x4cfed0++){if(_0x37439f[_0x4cfed0]['src']['includes']('security.js')||_0x37439f[_0x4cfed0][_0x19ccbe(0x1b9)][_0x19ccbe(0x12d)](_0x19ccbe(0xce))){_0x4137ed=_0x37439f[_0x4cfed0][_0x19ccbe(0x1b9)];break;}}return btoa(_0x4137ed)[_0x19ccbe(0x1ca)](/[^a-zA-Z0-9]/g,'')[_0x19ccbe(0x19f)](0x0,0x20);}['handleTampering'](){const _0x4d4f85=_0x1e121f;localStorage[_0x4d4f85(0x1b2)](),sessionStorage['clear'](),document['body'][_0x4d4f85(0x1f5)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20fixed;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#000;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#f00;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-direction:\x20column;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20monospace;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x20999999;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1>SECURITY\x20BREACH\x20DETECTED</h1>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>The\x20application\x20has\x20been\x20tampered\x20with.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>All\x20data\x20has\x20been\x20erased.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20';throw new Error(_0x4d4f85(0x160));}['loadSecurityState'](){const _0x3965ce=_0x1e121f,_0x37a45c=localStorage['getItem']('psychStudioSecurity');if(_0x37a45c)try{const _0x2337ca=JSON[_0x3965ce(0x1c6)](_0x37a45c);this['attemptCount']=_0x2337ca['attemptCount']||0x0,this[_0x3965ce(0x1c9)]=_0x2337ca[_0x3965ce(0x1c9)]||0x0,this[_0x3965ce(0x1c9)]>0x0&&new Date()[_0x3965ce(0x12b)]()>this[_0x3965ce(0x1c9)]?this[_0x3965ce(0x1a7)]():this[_0x3965ce(0x1a9)]=this[_0x3965ce(0x1c9)]>0x0;}catch(_0x9d77c6){this[_0x3965ce(0x1a7)]();}else this[_0x3965ce(0x1a7)]();}['saveSecurityState'](){const _0x1f0913=_0x1e121f,_0x3ad1c9={'attemptCount':this['attemptCount'],'lockoutEndTime':this[_0x1f0913(0x1c9)]};localStorage[_0x1f0913(0x152)](_0x1f0913(0x1d2),JSON[_0x1f0913(0xf7)](_0x3ad1c9));}[_0x1e121f(0x1a7)](){const _0x5911bf=_0x1e121f;this[_0x5911bf(0x1d9)]=0x0,this[_0x5911bf(0x1a9)]=![],this['lockoutEndTime']=0x0,this[_0x5911bf(0x1d1)]();}[_0x1e121f(0x134)](){const _0x379bf6=_0x1e121f;this['isLocked']=!![],this[_0x379bf6(0x1c9)]=new Date()['getTime']()+this[_0x379bf6(0x17d)],this[_0x379bf6(0x1d1)](),this[_0x379bf6(0x141)](_0x379bf6(0x13b));const _0x23b368=document[_0x379bf6(0xfb)](_0x379bf6(0x188));_0x23b368&&(_0x23b368[_0x379bf6(0x1b9)]='Application\x20locked.\x20Please\x20wait...'),this[_0x379bf6(0xde)]();}[_0x1e121f(0xde)](){const _0x330438=setInterval(()=>{const _0x37e798=_0x5961,_0x12c1c2=Math['ceil']((this['lockoutEndTime']-new Date()[_0x37e798(0x12b)]())/0x3e8);if(_0x12c1c2<=0x0)clearInterval(_0x330438),this[_0x37e798(0x1a9)]=![],this[_0x37e798(0x1d9)]=0x0,this[_0x37e798(0x1d1)](),this[_0x37e798(0xeb)]();else{const _0x7eb669=document[_0x37e798(0xfb)](_0x37e798(0x188));_0x7eb669&&(_0x7eb669[_0x37e798(0x1b9)]=_0x37e798(0x189)+_0x12c1c2+_0x37e798(0xc8));}},0x3e8);}[_0x1e121f(0xeb)](){const _0x4fc95e=_0x1e121f,_0x34beb1=document[_0x4fc95e(0xfb)]('attempts-left');if(_0x34beb1){if(this['isLocked']){const _0x5c6f51=Math[_0x4fc95e(0xdd)]((this['lockoutEndTime']-new Date()['getTime']())/0x3e8);_0x34beb1[_0x4fc95e(0x1b9)]='Application\x20locked.\x20Try\x20again\x20in\x20'+_0x5c6f51+'\x20seconds.';}else _0x34beb1[_0x4fc95e(0x1b9)]=_0x4fc95e(0x156)+(this[_0x4fc95e(0x1ef)]-this[_0x4fc95e(0x1d9)]);}}[_0x1e121f(0x141)](_0x3d9a32){const _0x5dba97=_0x1e121f,_0x3c4829=document[_0x5dba97(0xfb)](_0x5dba97(0xfd));_0x3c4829&&(_0x3c4829[_0x5dba97(0x1b9)]=_0x3d9a32,setTimeout(()=>{const _0x3f757c=_0x5dba97;_0x3c4829[_0x3f757c(0x1b9)]='';},0x1388));}[_0x1e121f(0x1ce)](){const _0x3593a6=_0x1e121f,_0x5f3f7e=document['getElementById'](_0x3593a6(0x117));_0x5f3f7e&&(this['backgroundCanvas']&&(this[_0x3593a6(0x133)][_0x3593a6(0x1c5)](),this[_0x3593a6(0x133)]=null),_0x5f3f7e[_0x3593a6(0x16c)]());const _0x5585a9=document[_0x3593a6(0xfb)]('backgroundCanvas');_0x5585a9&&(_0x5585a9[_0x3593a6(0x100)][_0x3593a6(0xe2)]=_0x3593a6(0x135));const _0x23e91f=document[_0x3593a6(0x1c7)](_0x3593a6(0x115));_0x23e91f&&(_0x23e91f[_0x3593a6(0x100)][_0x3593a6(0xe2)]=_0x3593a6(0x15d),window[_0x3593a6(0xcd)](new Event(_0x3593a6(0x1cd))));}[_0x1e121f(0xf2)](){const _0x4c7a30=_0x1e121f;localStorage[_0x4c7a30(0x17e)]('psychStudioAuth'),this['resetSecurityState'](),location[_0x4c7a30(0x1ea)]();}async['loadProtectedFiles'](){}}document[_0x1e121f(0x167)](_0x1e121f(0x1cc),async()=>{window['securityManager']=new SecurityManager();});
+// Background Canvas Class (unchanged)
+class BackgroundCanvas {
+    constructor(container) {
+        this.container = container;
+        this.canvas = document.createElement('canvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.particles = [];
+        this.particleCount = 50;
+        this.animationId = null;
+        
+        this.init();
+    }
+    
+    init() {
+        this.resize();
+        window.addEventListener('resize', () => this.resize());
+        
+        this.canvas.style.position = 'absolute';
+        this.canvas.style.top = '0';
+        this.canvas.style.left = '0';
+        this.canvas.style.width = '100%';
+        this.canvas.style.height = '100%';
+        this.canvas.style.zIndex = '0';
+        this.container.appendChild(this.canvas);
+        
+        this.createParticles();
+        this.animate();
+    }
+    
+    resize() {
+        this.canvas.width = this.container.clientWidth;
+        this.canvas.height = this.container.clientHeight;
+    }
+    
+    createParticles() {
+        this.particles = [];
+        for (let i = 0; i < this.particleCount; i++) {
+            this.particles.push({
+                x: Math.random() * this.canvas.width,
+                y: Math.random() * this.canvas.height,
+                radius: Math.random() * 3 + 1,
+                color: `rgba(113, 125, 159, ${Math.random() * 0.5 + 0.2})`,
+                speedX: (Math.random() - 0.5) * 0.5,
+                speedY: (Math.random() - 0.5) * 0.5
+            });
+        }
+    }
+    
+    animate() {
+        // PERFORMANCE OPTIMIZATION: Disabled animated particles for smooth performance
+        // Just draw a static gradient background once
+        const gradient = this.ctx.createLinearGradient(0, 0, this.canvas.width, this.canvas.height);
+        gradient.addColorStop(0, '#1a1a2e');
+        gradient.addColorStop(1, '#16213e');
+        this.ctx.fillStyle = gradient;
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        // No animation loop - single static frame
+        return;
+    }
+    
+    destroy() {
+        if (this.animationId) {
+            cancelAnimationFrame(this.animationId);
+        }
+        if (this.canvas && this.canvas.parentNode) {
+            this.canvas.parentNode.removeChild(this.canvas);
+        }
+        window.removeEventListener('resize', this.resize);
+    }
+}
+
+class FileEncryption {
+    constructor(password) {
+        this.password = password;
+    }
+
+    encryptFile(file) {
+        return new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const content = e.target.result;
+                const encrypted = this._xorEncrypt(content, this.password);
+                resolve(encrypted);
+            };
+            reader.readAsArrayBuffer(file);
+        });
+    }
+
+    decryptFile(encryptedData) {
+        return this._xorEncrypt(encryptedData, this.password);
+    }
+
+    _xorEncrypt(data, password) {
+        const encoder = new TextEncoder();
+        const passwordBytes = encoder.encode(password);
+        const dataView = new DataView(data);
+        const result = new ArrayBuffer(data.byteLength);
+        const resultView = new DataView(result);
+
+        for (let i = 0; i < data.byteLength; i++) {
+            const passwordByte = passwordBytes[i % passwordBytes.length];
+            resultView.setUint8(i, dataView.getUint8(i) ^ passwordByte);
+        }
+
+        return result;
+    }
+}
+
+class SecurityManager {
+    constructor() {
+        this.devMode = true;
+        this.db = null;
+        this.usedCodes = []; // Cache for used codes
+        this.userName = '';
+        this.userEmail = '';
+        this.userPassword = '';
+        this.registeredUsers = []; // Cache for registered users
+        
+        // API URL - Connected to Render backend
+        this.API_URL = window.location.hostname === 'localhost' || window.location.protocol === 'file:'
+            ? 'http://localhost:3001'
+            : 'https://psbe-gl5j.onrender.com';
+        
+        if (this.devMode) {
+            this.initSecurity();
+        } else {
+            this.performIntegrityCheck().then(() => {
+                if (!this.verifySignature()) {
+                    this.handleTampering();
+                }
+                
+                this.validateWithServer().catch(error => {
+                    console.error('Server validation failed:', error);
+                });
+                
+                this.initSecurity();
+            }).catch(error => {
+                console.error('Integrity check failed:', error);
+                this.handleTampering();
+            });
+        }
+    }
+    
+    async initSecurity() {
+        // Initialize available codes
+        // Accept only codes from the provided lists
+        this.correctCode = [
+            // String codes
+            "020PSY969666POWER900", "030PSY969666POWER800", "040PSY969666POWER700", "050PSY969666POWER600", "060PSY969666POWER500", "070PSY969666POWER400", "080PSY969666POWER300", "090PSY969666POWER200", "100PSY969666POWER001", "200PSY969666POWER002", "0a2b0c9x6y9z61626392010", "0a2b0c9x6y9z62626392010", "0a2b0c9x6z9z62696392010", "0a2b0c9x6y9w62626392810", "0a2f0c9x6y9z62626390010", "0a2bhc9x6y9z62w26392010", "0a2x0c9xwy9z6262y392010",
+            // Unicode codes (all provided blocks)
+            "⹿⺀⺁⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔⺕⺖⺗⺘⺙⺚⺛⭖⭗⭘⭙⭚⭛⭜⭝⭞⭟⭠⭡⭢⭣⭤⭥⭦⭧⭨⭩⭪⭫⭬⭭⭮⭯⭰⭱⭲⭳⭴⭵⭶⭷⭸⭹⭺⭻⭼⭽⭾⭿⮀⮁⮂⮃⮄⮅⮆⮇⮈⮉⮊⮋⮌⮍⮎⮏⮐⮑⮒⮓⮔⮕⮖⮗⮘⮙⮚⮛⮜⮝⮞⮟⮠⮡⮢⮣⮤⮥⮦⮧⮨⮩⮪⮫⮬⮭⮮⮯⮰⮱⮲⮳⮴⮵⮶⮷⮸⮹⮺⮻⮼⮽⮾⮿⯀⯁⯂⯃⯄⯅⯆⯇⯈⯉⯊⯋⯌⯍⯎⯏⯐⯑⯒⯓⯔⯕⯖⯗⯘⯙⯚⯛⯜⯝⯞⯟⯠⯡⯢⯣⯤⯥⯦⯧⯨⯩⯪⯫⯬⭭⭮⭯⭰⭱⭲⭳⭴⭵⭶⭷⭸⭹⭺⭻⭼⭽⭾⭿⮀⮁⮂⮃⮄⮅⮆⮇⮈⮉⮊⮋⮌⮍⮎⮏⮐⮑⮒⮓⮔⮕⮖⮗⮘⮙⮚⮛⮜⮝⮞⮟⮠⮡⮢⮣⮤⮥⮦⮧⮨⮩⮪⮫⮬⮭⮮⮯⮰⮱⮲⮳⮴⮵⮶⭷⭸⭹⭺⭻⭼⭽⭾⭿⮀⮁⮂⮃⮄⮅⮆⮇⮈⮉⮊⮋⮌⮍⮎⮏⮐⮑⮒⮓⮔⮕⮖⮗⮘⮙⮚⮛⮜⮝⮞⮟⮠⮡⮢⮣⮤⮥⮦⮧⮨⮩⮪⮫⮬⮭⮮⮯⮰⮱⮲⮳⮴⮵⮶⮷⮸⮹⮺⮻⮼⮽⮾⮿ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮⰰⰱⰲⰳⰴⰵⰶⰷⰸⰹⰺⰻⰼⰽⰾⰿⱀⱁⱂⱃⱄⱅⱆⱇⱈⱉⱊⱋⱌⱍⱎⱏⱐⱑⱒⱓⱔⱕⱖⱗⱘⱙⱚⱛⱜⱝⱞⱟⱠⱡⱢⱣⱤⱥⱦⱧⱨⱩⱪⱫⱬⱭⱮⱯⱰⱱⱲⱳⱴⱵⱶⱷⱸⱹⱺⱻⱼⱽⱾⱿⲀⲁⲂⲃⲄⲅⲆⲇⲈⲉⲊⲋⲌⲍⲎⲏⲐⲑⲒⲓⲔⲕ",
+            "⯿ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌ⭖⭗⭘⭙⭚⭛⭜⭝⭞⭟⭠⭡⭢⭣⭤⭥⭦⭧⭨⭩⭪⭫⭬⭭⭮⭯⭰⭱⭲⭳⭴⭵⭶⭷⭸⭹⭺⭻⭼⭽⭾⭿⮀⮁⮂⮃⮄⮅⮆⮇⮈⮉⮊⮋⮌⮍⮎⮏⮐⮑⮒⮓⮔⮕⮖⮗⮘⮙⮚⮛⮜⮝⮞⮟⮠⮡⮢⮣⮤⮥⮦⮧⮨⮩⮪⮫⮬⮭⮮⮯⮰⮱⮲⮳⮴⮵⮶⮷⮸⮹⮺⮻⮼⮽⮾⮿⯀⯁⯂⯃⯄⯅⯆⯇⯈⯉⯊⯋⯌⯍⯎⯏⯐⯑⯒⯓⯔⯕⯖⯗⯘⯙⯚⯛⯜⯝⯞⯟⯠⯡⯢⯣⯤⯥⯦⯧⯨⯩⯪⯫⯬⯭⯮⯯⯰⯱⯲⯳⯴⯵⯶⯷⯸⯹⯺⯻⯼⯽⯾⯿ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮⰰⰱⰲⰳⰴⰵⰶⰷⰸⰹⰺⰻⰼⰽⰾⰿⱀⱁⱂⱃⱄⱅⱆⱇⱈⱉⱊⱋⱌⱍⱎⱏⱐⱑⱒⱓⱔⱕⱖⱗⱘⱙⱚⱛⱜⱝⱞⱟⱠⱡⱢⱣⱤⱥⱦⱧⱨⱩⱪⱫⱬⱭⱮⱯⱰⱱⱲⱳⱴⱵⱶⱷⱸⱹⱺⱻⱼⱽⱾⱿⲀⲁⲂⲃⲄⲅⲆⲇⲈⲉⲊⲋⲌⲍⲎⲏⲐⲑⲒⲓⲔⲕ",
+            "⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔⺕⺖⺗⺘⺙⺚⺛⭖⭗⭘⭙⭚⭛⭜⭝⭞⭟⭠⭡⭢⭣⭤⭥⭦⭧⭨⭩⭪⭫⭬⭭⭮⭯⭰⭱⭲⭳⭴⭵⭶⭷⭸⭹⭺⭻⭼⭽⭾⭿⮀⮁⮂⮃⮄⮅⮆⮇⮈⮉⮊⮋⮌⮍⮎⮏⮐⮑⮒⮓⮔⮕⮖⮗⮘⮙⮚⮛⮜⮝⮞⮟⮠⮡⮢⮣⮤⮥⮦⮧⮨⮩⮪⮫⮬⮭⮮⮯⮰⮱⮲⮳⮴⮵⮶⭷⭸⭹⭺⭻⭼⭽⭾⭿⮀⮁⮂⮃⮄⮅⮆⮇⮈⮉⮊⮋⮌⮍⮎⮏⮐⮑⮒⮓⮔⮕⮖⮗⮘⮙⮚⮛⮜⮝⮞⮟⮠⮡⮢⮣⮤⮥⮦⮧⮨⮩⮪⮫⮬⮭⮮⮯⮰⮱⮲⮳⮴⮵⮶⮷⮸⮹⮺⮻⮼⮽⮾⮿ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮⰰⰱⰲⰳⰴⰵⰶⰷⰸⰹⰺⰻⰼⰽⰾⰿⱀⱁⱂⱃⱄⱅⱆⱇⱈⱉⱊⱋⱌⱍⱎⱏⱐⱑⱒⱓⱔⱕⱖⱗⱘⱙⱚⱛⱜⱝⱞⱟⱠⱡⱢⱣⱤⱥⱦⱧⱨⱩⱪⱫⱬⱭⱮⱯⱰⱱⱲⱳⱴⱵⱶⱷⱸⱹⱺⱻⱼⱽⱾⱿⲀⲁⲂⲃⲄⲅⲆⲇⲈⲉⲊⲋⲌⲍⲎⲏⲐⲑⲒⲓⲔⲕ",
+            "⮷⮸⮹⮺⮻⮼⮽⮾⮿⯀⯁⯂⯃⯄⯅⯆⯇⯈⯉⯊⯋⯌⯍⯎⯏⯐⯑⯒⯓⯔⯕⯖⯗⯘⯙⯚⯛⯜⯝⯞⯟⯠⯡⯢⯣⯤⯥⯦⯧⯨⯩⯪⯫⯬⯭⯮⯯⯰⯱⯲⯳⯴⯵⯶⯷⯸⯹⯺⯻⯼⯽⯾⯿ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮⰰⰱⰲⰳⰴⰵⰶⰷⰸⰹⰺⰻⰼⰽⰾⰿⱀⱁⱂⱃⱄⱅⱆⱇⱈⱉⱊⱋⱌⱍⱎⱏⱐⱑⱒⱓⱔⱕⱖⱗⱘⱙⱚⱛⱜⱝⱞⱟⱠⱡⱢⱣⱤⱥⱦⱧⱨⱩⱪⱫⱬⱭⱮⱯⱰⱱⱲⱳⱴⱵⱶⱷⱸⱹⱺⱻⱼⱽⱾⱿⲀⲁⲂⲃⲄⲅⲆⲇⲈⲉⲊⲋⲌⲍⲎⲏⲐⲑⲒⲓⲔⲕ⹿⺀⺁⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔⺕⺖⺗⺘⺙⺚⺛⭖⭗⭘⭙⭚⭛⭜⭝⭞⭟⭠⭡⭢⭣⭤⭥⭦⭧⭨⭩⭪⭫⭬⭭⭮⭯⭰⭱⭲⭳⭴⭵⭶"
+        ];
+        
+        this.maxAttempts = 3;
+        this.lockoutTime = 300000;
+        this.isLocked = false;
+        this.lockoutEndTime = 0;
+        this.fileEncryption = null;
+        this.backgroundCanvas = null;
+        
+        // Initialize IndexedDB for persistent storage
+        await this.initIndexedDB();
+        
+        // Load used codes from both storage systems
+        await this.loadUsedCodes();
+        
+        // Load registered users
+        await this.loadRegisteredUsers();
+        
+        this.loadSecurityState();
+        this.init();
+    }
+    
+    async initIndexedDB() {
+        return new Promise((resolve, reject) => {
+            const request = indexedDB.open('PsychStudioDB', 2);
+            
+            request.onerror = (event) => {
+                console.error('Database error:', event.target.error);
+                reject(event.target.error);
+            };
+            
+            request.onupgradeneeded = (event) => {
+                const db = event.target.result;
+                
+                // Create usedCodes object store if it doesn't exist
+                if (!db.objectStoreNames.contains('usedCodes')) {
+                    const codeStore = db.createObjectStore('usedCodes', { keyPath: 'code' });
+                }
+                
+                // Create registeredUsers object store if it doesn't exist
+                if (!db.objectStoreNames.contains('registeredUsers')) {
+                    const userStore = db.createObjectStore('registeredUsers', { keyPath: 'email' });
+                }
+            };
+            
+            request.onsuccess = (event) => {
+                this.db = event.target.result;
+                resolve();
+            };
+        });
+    }
+    
+    async loadUsedCodes() {
+        try {
+            // Get used codes from IndexedDB
+            const indexedDBUsedCodes = await this.getAllUsedCodesFromIndexedDB();
+            
+            // Get used codes from localStorage
+            const localUsedCodes = this.getUsedCodes();
+            
+            // Merge both sources, with IndexedDB taking precedence
+            this.usedCodes = [...new Set([...localUsedCodes, ...indexedDBUsedCodes])];
+            
+            // Sync any used codes that are only in localStorage to IndexedDB
+            for (const codeData of localUsedCodes) {
+                if (!indexedDBUsedCodes.some(c => c.code === codeData.code)) {
+                    await this.saveUsedCodeToIndexedDB(codeData);
+                }
+            }
+            
+            // Update localStorage with any data only in IndexedDB
+            localStorage.setItem('psychStudioUsedCodes', JSON.stringify(this.usedCodes));
+            
+            // Filter out used codes from available codes
+            const usedCodeStrings = this.usedCodes.map(c => c.code);
+            this.correctCode = this.correctCode.filter(code => !usedCodeStrings.includes(code));
+            
+            return this.usedCodes;
+        } catch (error) {
+            console.error('Error loading used codes:', error);
+            return [];
+        }
+    }
+    
+    async saveUsedCodeToIndexedDB(codeData) {
+        return new Promise((resolve, reject) => {
+            if (!this.db) {
+                reject(new Error('Database not initialized'));
+                return;
+            }
+            
+            const transaction = this.db.transaction('usedCodes', 'readwrite');
+            const objectStore = transaction.objectStore('usedCodes');
+            const request = objectStore.put(codeData);
+            
+            request.onsuccess = () => resolve();
+            request.onerror = () => reject(request.error);
+        });
+    }
+    
+    async getAllUsedCodesFromIndexedDB() {
+        return new Promise((resolve, reject) => {
+            if (!this.db) {
+                reject(new Error('Database not initialized'));
+                return;
+            }
+            
+            const transaction = this.db.transaction('usedCodes', 'readonly');
+            const objectStore = transaction.objectStore('usedCodes');
+            const request = objectStore.getAll();
+            
+            request.onsuccess = () => resolve(request.result);
+            request.onerror = () => reject(request.error);
+        });
+    }
+    
+    getUsedCodes() {
+        const usedCodesJson = localStorage.getItem('psychStudioUsedCodes');
+        return usedCodesJson ? JSON.parse(usedCodesJson) : [];
+    }
+    
+    async markCodeAsUsed(code) {
+        const codeUsageData = {
+            code: code,
+            usedAt: new Date().toISOString()
+        };
+        
+        // Store in localStorage
+        const localUsedCodes = this.getUsedCodes();
+        localUsedCodes.push(codeUsageData);
+        localStorage.setItem('psychStudioUsedCodes', JSON.stringify(localUsedCodes));
+        
+        // Store in IndexedDB
+        await this.saveUsedCodeToIndexedDB(codeUsageData);
+        
+        // Update cache
+        this.usedCodes.push(codeUsageData);
+        
+        // Remove code from available codes
+        const codeIndex = this.correctCode.indexOf(code);
+        if (codeIndex !== -1) {
+            this.correctCode.splice(codeIndex, 1);
+        }
+    }
+    
+    async loadRegisteredUsers() {
+        try {
+            // Get registered users from IndexedDB
+            const indexedDBUsers = await this.getAllRegisteredUsersFromIndexedDB();
+            
+            // Get registered users from localStorage
+            const localUsers = this.getRegisteredUsers();
+            
+            // Merge both sources, with IndexedDB taking precedence
+            this.registeredUsers = [...new Map([...localUsers, ...indexedDBUsers].map(u => [u.email, u])).values()];
+
+            // Sync any users that are only in localStorage to IndexedDB
+            for (const userData of localUsers) {
+                if (!indexedDBUsers.some(u => u.email === userData.email)) {
+                    await this.saveUserToIndexedDB(userData);
+                }
+            }
+            
+            // Update localStorage with all users
+            localStorage.setItem('psychStudioRegisteredUsers', JSON.stringify(this.registeredUsers));
+            
+            return this.registeredUsers;
+        } catch (error) {
+            console.error('Error loading registered users:', error);
+            // Fallback to localStorage only
+            const localUsers = this.getRegisteredUsers();
+            this.registeredUsers = localUsers;
+            return localUsers;
+        }
+    }
+    
+    async saveUserToIndexedDB(userData) {
+        return new Promise((resolve, reject) => {
+            if (!this.db) {
+                reject(new Error('Database not initialized'));
+                return;
+            }
+            
+            const transaction = this.db.transaction('registeredUsers', 'readwrite');
+            const objectStore = transaction.objectStore('registeredUsers');
+            const request = objectStore.put(userData);
+            
+            request.onsuccess = () => resolve();
+            request.onerror = () => reject(request.error);
+        });
+    }
+    
+    async getAllRegisteredUsersFromIndexedDB() {
+        return new Promise((resolve, reject) => {
+            if (!this.db) {
+                console.warn('Database not initialized, returning empty array');
+                resolve([]);
+                return;
+            }
+            
+            try {
+                const transaction = this.db.transaction('registeredUsers', 'readonly');
+                const objectStore = transaction.objectStore('registeredUsers');
+                const request = objectStore.getAll();
+                
+                request.onsuccess = () => resolve(request.result || []);
+                request.onerror = () => {
+                    console.error('Error getting users from IndexedDB:', request.error);
+                    resolve([]);
+                };
+            } catch (error) {
+                console.error('Error accessing IndexedDB:', error);
+                resolve([]);
+            }
+        });
+    }
+    
+    getRegisteredUsers() {
+        const usersJson = localStorage.getItem('psychStudioRegisteredUsers');
+        return usersJson ? JSON.parse(usersJson) : [];
+    }
+    
+    async registerUser(email, username, password) {
+        const userData = {
+            email: email,
+            username: username,
+            password: this.hashPassword(password), // Hash password before storing
+            registeredAt: new Date().toISOString()
+        };
+        
+        // Store in localStorage
+        const localUsers = this.getRegisteredUsers();
+        localUsers.push(userData);
+        localStorage.setItem('psychStudioRegisteredUsers', JSON.stringify(localUsers));
+        
+        // Store in IndexedDB
+        await this.saveUserToIndexedDB(userData);
+        
+        // Update cache
+        this.registeredUsers.push(userData);
+    }
+    
+    hashPassword(password) {
+        // Simple hash function - in production use bcrypt or similar
+        let hash = 0;
+        for (let i = 0; i < password.length; i++) {
+            const char = password.charCodeAt(i);
+            hash = ((hash << 5) - hash) + char;
+            hash = hash & hash;
+        }
+        return Math.abs(hash).toString(16);
+    }
+    
+    verifyPassword(password, storedHash) {
+        return this.hashPassword(password) === storedHash;
+    }
+    
+    findUserByEmail(email) {
+        return this.registeredUsers.find(u => u.email === email);
+    }
+    
+    init() {
+        if (this.isAuthenticated()) {
+            this.showApp();
+        } else {
+            this.showLoginScreen();
+        }
+    }
+    
+    isAuthenticated() {
+        const authData = localStorage.getItem('psychStudioAuth');
+        if (!authData) return false;
+        
+        try {
+            const { token, expiry, user } = JSON.parse(authData);
+            
+            // Check if token is still valid
+            if (new Date().getTime() >= expiry) {
+                localStorage.removeItem('psychStudioAuth');
+                return false;
+            }
+            
+            // If we have a valid token and it hasn't expired, user is authenticated
+            // Token is either from backend (username/password login) or locally generated (license activation)
+            return token && token.length > 0;
+        } catch (e) {
+            console.error('Auth check error:', e);
+            return false;
+        }
+    }
+    
+    generateToken() {
+        const fingerprint = this.getDeviceFingerprint();
+        return btoa(this.correctCode[0] + fingerprint).substring(0, 32);
+    }
+    
+    getDeviceFingerprint() {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        ctx.textBaseline = 'top';
+        ctx.font = '14px Arial';
+        ctx.fillStyle = '#f60';
+        ctx.fillRect(125, 1, 62, 20);
+        ctx.fillStyle = '#069';
+        ctx.fillText('Psychological Studio', 2, 15);
+        ctx.fillStyle = 'rgba(102, 204, 0, 0.7)';
+        ctx.fillText('Psychological Studio', 4, 17);
+        
+        return canvas.toDataURL();
+    }
+    
+    showLoginScreen() {
+        // Hide the existing background canvas from HTML
+        const existingCanvas = document.getElementById('backgroundCanvas');
+        if (existingCanvas) {
+            existingCanvas.style.display = 'none';
+        }
+        
+        // Ensure app container is hidden
+        const appContainer = document.querySelector('.app-container');
+        if (appContainer) {
+            appContainer.style.display = 'none';
+        }
+        
+        const existingLoginScreen = document.getElementById('login-screen');
+        if (existingLoginScreen) {
+            existingLoginScreen.remove();
+        }
+        
+        const loginScreen = document.createElement('div');
+        loginScreen.id = 'login-screen';
+        loginScreen.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        `;
+        
+        this.backgroundCanvas = new BackgroundCanvas(loginScreen);
+        
+        const loginForm = document.createElement('div');
+        loginForm.style.cssText = `
+            position: relative;
+            z-index: 10;
+            text-align: center; 
+            max-width: 400px; 
+            padding: 40px; 
+            background: rgba(0,0,0,0.3); 
+            border-radius: 10px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        `;
+        
+        loginForm.innerHTML = `
+            <h1 style="margin-bottom: 30px; color: #717d9f;">Psychological Studio</h1>
+            
+            <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                <button id="license-tab" class="auth-tab active-tab" style="
+                    flex: 1;
+                    padding: 10px;
+                    background: #930018;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background 0.3s;
+                ">Activate License</button>
+                <button id="login-tab" class="auth-tab" style="
+                    flex: 1;
+                    padding: 10px;
+                    background: rgba(255,255,255,0.1);
+                    color: #aaa;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background 0.3s;
+                ">Login</button>
+            </div>
+            
+            <div id="license-form" class="login-form">
+                <p style="margin-bottom: 20px; color: #aaa;">Upload License File & Create Account</p>
+                
+                <div id="drop-zone" style="
+                    width: 100%;
+                    padding: 40px;
+                    margin-bottom: 15px;
+                    border: 2px dashed rgba(255,255,255,0.3);
+                    border-radius: 5px;
+                    background: rgba(255,255,255,0.05);
+                    text-align: center;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    box-sizing: border-box;
+                ">
+                    <div style="font-size: 40px; margin-bottom: 10px;">📄</div>
+                    <div style="color: #aaa;">Drop .psylic file here or click to browse</div>
+                    <div id="file-name" style="color: #4CAF50; margin-top: 10px; font-size: 14px;"></div>
+                </div>
+                
+                <input type="file" id="license-file-input" accept=".psylic,.txt,.json" style="display: none;">
+                
+                <input type="text" id="license-username" placeholder="Choose Username" style="
+                    width: 100%;
+                    padding: 15px;
+                    margin-bottom: 15px;
+                    border: none;
+                    border-radius: 5px;
+                    background: rgba(255,255,255,0.1);
+                    color: white;
+                    font-size: 16px;
+                    box-sizing: border-box;
+                ">
+                <input type="password" id="license-password" placeholder="Create Password (6+ characters)" style="
+                    width: 100%;
+                    padding: 15px;
+                    margin-bottom: 20px;
+                    border: none;
+                    border-radius: 5px;
+                    background: rgba(255,255,255,0.1);
+                    color: white;
+                    font-size: 16px;
+                    box-sizing: border-box;
+                ">
+                <button id="activate-license-btn" style="
+                    width: 100%;
+                    padding: 15px;
+                    background: #930018;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: background 0.3s;
+                " disabled>Activate License</button>
+                <div style="margin-top: 15px; padding: 10px; background: rgba(147, 0, 24, 0.2); border-radius: 5px; font-size: 12px; color: #aaa;">
+                    <strong>Note:</strong> Your username and password will be bound to this license. You can use it on up to 3 devices.
+                </div>
+            </div>
+            
+            <div id="login-credentials-form" class="login-form" style="display: none;">
+                <p style="margin-bottom: 20px; color: #aaa;">Sign in with your credentials</p>
+                <input type="text" id="login-username" placeholder="Username" style="
+                    width: 100%;
+                    padding: 15px;
+                    margin-bottom: 15px;
+                    border: none;
+                    border-radius: 5px;
+                    background: rgba(255,255,255,0.1);
+                    color: white;
+                    font-size: 16px;
+                    box-sizing: border-box;
+                ">
+                <input type="password" id="login-password" placeholder="Password" style="
+                    width: 100%;
+                    padding: 15px;
+                    margin-bottom: 20px;
+                    border: none;
+                    border-radius: 5px;
+                    background: rgba(255,255,255,0.1);
+                    color: white;
+                    font-size: 16px;
+                    box-sizing: border-box;
+                ">
+                <button id="login-btn" style="
+                    width: 100%;
+                    padding: 15px;
+                    background: #930018;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: background 0.3s;
+                ">Sign In</button>
+            </div>
+            
+            <div id="error-message" style="color: #ff4444; margin-top: 15px; min-height: 20px;"></div>
+`;        loginScreen.appendChild(loginForm);
+        document.body.appendChild(loginScreen);
+        
+        // Tab switching
+        const licenseTab = document.getElementById('license-tab');
+        const loginTab = document.getElementById('login-tab');
+        const licenseForm = document.getElementById('license-form');
+        const loginCredentialsForm = document.getElementById('login-credentials-form');
+        
+        licenseTab.addEventListener('click', () => {
+            licenseTab.style.background = '#930018';
+            licenseTab.style.color = 'white';
+            loginTab.style.background = 'rgba(255,255,255,0.1)';
+            loginTab.style.color = '#aaa';
+            licenseForm.style.display = 'block';
+            loginCredentialsForm.style.display = 'none';
+        });
+        
+        loginTab.addEventListener('click', () => {
+            loginTab.style.background = '#930018';
+            loginTab.style.color = 'white';
+            licenseTab.style.background = 'rgba(255,255,255,0.1)';
+            licenseTab.style.color = '#aaa';
+            licenseForm.style.display = 'none';
+            loginCredentialsForm.style.display = 'block';
+        });
+        
+        // License file upload
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('license-file-input');
+        const activateBtn = document.getElementById('activate-license-btn');
+        let selectedLicenseFile = null;
+        
+        dropZone.addEventListener('click', () => fileInput.click());
+        
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.style.borderColor = '#930018';
+            dropZone.style.background = 'rgba(147, 0, 24, 0.1)';
+        });
+        
+        dropZone.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            dropZone.style.borderColor = 'rgba(255,255,255,0.3)';
+            dropZone.style.background = 'rgba(255,255,255,0.05)';
+        });
+        
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.style.borderColor = 'rgba(255,255,255,0.3)';
+            dropZone.style.background = 'rgba(255,255,255,0.05)';
+            
+            if (e.dataTransfer.files.length > 0) {
+                selectedLicenseFile = e.dataTransfer.files[0];
+                document.getElementById('file-name').textContent = selectedLicenseFile.name;
+                activateBtn.disabled = false;
+                activateBtn.style.opacity = '1';
+            }
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                selectedLicenseFile = e.target.files[0];
+                document.getElementById('file-name').textContent = selectedLicenseFile.name;
+                activateBtn.disabled = false;
+                activateBtn.style.opacity = '1';
+            }
+        });
+        
+        activateBtn.addEventListener('click', () => this.activateLicense(selectedLicenseFile));
+        
+        // Login with credentials
+        const loginBtn = document.getElementById('login-btn');
+        const loginUsername = document.getElementById('login-username');
+        const loginPassword = document.getElementById('login-password');
+        
+        loginBtn.addEventListener('click', () => {
+            this.loginWithCredentials(loginUsername.value, loginPassword.value);
+        });
+        
+        loginPassword.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                this.loginWithCredentials(loginUsername.value, loginPassword.value);
+            }
+        });
+    }
+    
+    async activateLicense(file) {
+        if (!file) {
+            this.showError('Please select a license file');
+            return;
+        }
+        
+        const username = document.getElementById('license-username').value;
+        const password = document.getElementById('license-password').value;
+        
+        if (!username || !password) {
+            this.showError('Please enter username and password');
+            return;
+        }
+        
+        if (password.length < 6) {
+            this.showError('Password must be at least 6 characters');
+            return;
+        }
+        
+        const activateBtn = document.getElementById('activate-license-btn');
+        activateBtn.disabled = true;
+        activateBtn.textContent = 'Activating...';
+        
+        try {
+            const reader = new FileReader();
+            reader.onload = async (e) => {
+                try {
+                    const licenseData = JSON.parse(e.target.result);
+                    
+                    // Validate license structure - check for either 'code' or 'licenseCode'
+                    const code = licenseData.code || licenseData.licenseCode;
+                    if (!code) {
+                        this.showError('Invalid license file format');
+                        activateBtn.disabled = false;
+                        activateBtn.textContent = 'Activate License';
+                        return;
+                    }
+                    
+                    // Get hardware ID
+                    const hardwareID = this.getDeviceFingerprint();
+                    
+                    // Show server wake-up message for Render free tier
+                    activateBtn.textContent = 'Waking up server...';
+                    
+                    // Call backend API to activate license with longer timeout
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 60000); // 60 second timeout for cold start
+                    
+                    let response;
+                    try {
+                        response = await fetch(`${this.API_URL}/api/activate-license`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                licenseCode: code,
+                                username: username,
+                                password: password,
+                                hardwareID: hardwareID
+                            }),
+                            signal: controller.signal
+                        });
+                        
+                        clearTimeout(timeoutId);
+                    } catch (fetchError) {
+                        clearTimeout(timeoutId);
+                        
+                        if (fetchError.name === 'AbortError') {
+                            this.showError('Server timeout. The backend may be cold-starting (takes ~60s). Please wait a moment and try again.');
+                        } else if (fetchError.message.includes('Failed to fetch') || fetchError.message.includes('NetworkError')) {
+                            this.showError('Cannot reach server at ' + this.API_URL + '. Check if the backend is deployed and your internet connection is working.');
+                        } else {
+                            this.showError('Network error: ' + fetchError.message);
+                        }
+                        
+                        activateBtn.disabled = false;
+                        activateBtn.textContent = 'Activate License';
+                        console.error('Fetch error details:', fetchError);
+                        return;
+                    }
+                    
+                    // Check HTTP status
+                    if (!response.ok) {
+                        const errorText = await response.text();
+                        let errorMessage;
+                        
+                        try {
+                            const errorData = JSON.parse(errorText);
+                            errorMessage = errorData.error || errorData.message || 'Activation failed';
+                        } catch {
+                            errorMessage = `Server error (${response.status}): ${errorText}`;
+                        }
+                        
+                        this.showError(errorMessage);
+                        activateBtn.disabled = false;
+                        activateBtn.textContent = 'Activate License';
+                        return;
+                    }
+                    
+                    const result = await response.json();
+                    
+                    if (!result.success) {
+                        this.showError(result.error || 'Activation failed');
+                        activateBtn.disabled = false;
+                        activateBtn.textContent = 'Activate License';
+                        return;
+                    }
+                    
+                    // Update license file with hardware binding
+                    licenseData.hardwareID = hardwareID;
+                    licenseData.username = username;
+                    licenseData.activatedAt = new Date().toISOString();
+                    licenseData.status = 'activated';
+                    
+                    // Download updated license file
+                    this.downloadUpdatedLicense(licenseData);
+                    
+                    // Create auth token with session data from backend
+                    const authData = {
+                        token: result.session_token || this.generateToken(),
+                        username: username,
+                        licenseCode: code,
+                        hardwareID: hardwareID,
+                        expiry: new Date(9999, 12, 31).getTime(), // Never expire - persist until browser data cleared
+                        user: username
+                    };
+                    
+                    // Store authentication
+                    localStorage.setItem('psychStudioAuth', JSON.stringify(authData));
+                    
+                    // Show success message
+                    this.showError('✓ License activated successfully!');
+                    document.getElementById('error-message').style.color = '#4CAF50';
+                    
+                    // Launch app after 1 second
+                    setTimeout(() => {
+                        this.showApp();
+                    }, 1000);
+                    
+                } catch (parseError) {
+                    console.error('Parse error:', parseError);
+                    
+                    if (parseError.name === 'AbortError') {
+                        this.showError('Activation timeout - backend server may be starting up. Please wait 60 seconds and try again.');
+                    } else if (parseError instanceof SyntaxError) {
+                        this.showError('Invalid license file format. Please check the .psylic file.');
+                    } else {
+                        this.showError('Error during activation: ' + parseError.message);
+                    }
+                    
+                    activateBtn.disabled = false;
+                    activateBtn.textContent = 'Activate License';
+                    console.error('Activation error details:', parseError);
+                }
+            };
+            
+            reader.readAsText(file);
+            
+        } catch (error) {
+            console.error('File read error:', error);
+            this.showError('Failed to read license file');
+            activateBtn.disabled = false;
+            activateBtn.textContent = 'Activate License';
+        }
+    }
+    
+    downloadUpdatedLicense(licenseData) {
+        const blob = new Blob([JSON.stringify(licenseData, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `PsyStudio_License_${licenseData.username}.psylic`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+    
+    async loginWithCredentials(username, password) {
+        if (!username || !password) {
+            this.showError('Please enter username and password');
+            return;
+        }
+        
+        const loginBtn = document.getElementById('login-btn');
+        loginBtn.disabled = true;
+        loginBtn.textContent = 'Signing in...';
+        
+        try {
+            // Get hardware ID
+            const hardwareID = this.getDeviceFingerprint();
+            
+            // Call backend API to login
+            const response = await fetch(`${this.API_URL}/api/login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username: username,
+                    password: password,
+                    hardware_id: hardwareID  // Backend expects snake_case
+                })
+            });
+            
+            const result = await response.json();
+            
+            if (!result.success) {
+                this.showError(result.error || 'Login failed');
+                loginBtn.disabled = false;
+                loginBtn.textContent = 'Sign In';
+                return;
+            }
+            
+            // Create auth token
+            const authData = {
+                token: result.session_token || result.token,
+                username: username,
+                hardwareID: hardwareID,
+                expiry: new Date(9999, 12, 31).getTime(), // Never expire - persist until browser data cleared
+                user: username
+            };
+            
+            // Store authentication
+            localStorage.setItem('psychStudioAuth', JSON.stringify(authData));
+            
+            // Show success message
+            this.showError('✓ Login successful!');
+            document.getElementById('error-message').style.color = '#4CAF50';
+            
+            // Launch app after 1 second
+            setTimeout(() => {
+                this.showApp();
+            }, 1000);
+            
+        } catch (error) {
+            this.showError('Connection error. Please check your internet connection.');
+            loginBtn.disabled = false;
+            loginBtn.textContent = 'Sign In';
+        }
+    }
+    
+    async attemptUnlock() {
+        if (this.isLocked) {
+            const remainingTime = Math.ceil((this.lockoutEndTime - new Date().getTime()) / 1000);
+            this.showError(`Too many attempts. Try again in ${remainingTime} seconds.`);
+            return;
+        }
+        
+        // Get user input - ONLY USERNAME AND CODE
+        const usernameInput = document.getElementById('username-input');
+        const codeInput = document.getElementById('unlock-code');
+        
+        this.userName = usernameInput ? usernameInput.value.trim() : '';
+        const enteredCode = codeInput ? codeInput.value.trim() : '';
+        
+        // Validate username
+        if (!this.userName) {
+            this.showError('Please enter a username.');
+            return;
+        }
+        
+        // Validate code
+        if (!enteredCode) {
+            this.showError('Please enter a registration code.');
+            return;
+        }
+        
+        // Check if it's a valid code
+        if (this.correctCode.includes(enteredCode)) {
+            // Mark code as used immediately
+            await this.markCodeAsUsed(enteredCode);
+            
+            // Authenticate with the code
+            this.authenticate(enteredCode);
+        } else {
+            // Check if it's a used code
+            const codeData = this.usedCodes.find(c => c.code === enteredCode);
+            if (codeData) {
+                this.showError('This code has already been used and cannot be used again.');
+            } else {
+                this.attemptCount++;
+                this.saveSecurityState();
+                
+                this.updateAttemptsDisplay();
+                
+                if (this.attemptCount >= this.maxAttempts) {
+                    this.lockout();
+                } else {
+                    this.showError(`Incorrect code. ${this.maxAttempts - this.attemptCount} attempts remaining.`);
+                }
+                
+                if (codeInput) {
+                    codeInput.value = '';
+                }
+            }
+        }
+    }
+    
+    authenticateReturningUser(user) {
+        const token = this.generateToken();
+        // PERMANENT authorization - no expiry date
+        const expiry = new Date(9999, 12, 31).getTime(); // Year 9999
+        localStorage.setItem('psychStudioAuth', JSON.stringify({ token, expiry, user: user.email }));
+        
+        this.fileEncryption = new FileEncryption(this.userPassword);
+        this.resetSecurityState();
+        
+        const loginScreen = document.getElementById('login-screen');
+        if (loginScreen) {
+            if (this.backgroundCanvas) {
+                this.backgroundCanvas.destroy();
+                this.backgroundCanvas = null;
+            }
+            loginScreen.remove();
+        }
+        
+        // Show welcome popup
+        this.showWelcomePopup();
+        
+        this.loadProtectedFiles().catch(error => {
+            console.error('Failed to load protected files:', error);
+        });
+    }
+    
+    authenticate(code) {
+        const token = this.generateToken();
+        // PERMANENT authorization - no expiry date
+        const expiry = new Date(9999, 12, 31).getTime(); // Year 9999
+        localStorage.setItem('psychStudioAuth', JSON.stringify({ token, expiry, user: this.userEmail }));
+        
+        this.fileEncryption = new FileEncryption(code);
+        this.resetSecurityState();
+        
+        const loginScreen = document.getElementById('login-screen');
+        if (loginScreen) {
+            if (this.backgroundCanvas) {
+                this.backgroundCanvas.destroy();
+                this.backgroundCanvas = null;
+            }
+            loginScreen.remove();
+        }
+        
+        // Show welcome popup
+        this.showWelcomePopup();
+        
+        this.loadProtectedFiles().catch(error => {
+            console.error('Failed to load protected files:', error);
+        });
+    }
+    
+    showWelcomePopup() {
+        const popupOverlay = document.createElement('div');
+        popupOverlay.id = 'welcome-popup-overlay';
+        popupOverlay.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10001;
+            font-family: Arial, sans-serif;
+        `;
+        
+        const popupContent = document.createElement('div');
+        popupContent.style.cssText = `
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid #930018;
+            border-radius: 10px;
+            padding: 50px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            color: white;
+        `;
+        
+        popupContent.innerHTML = `
+            <h2 style="color: #717d9f; margin-bottom: 20px; font-size: 28px;">Welcome ${this.userName}!</h2>
+            <p style="color: #aaa; margin-bottom: 10px; font-size: 18px;">You now have access to <span style="color: #930018; font-weight: bold;">Pro</span>!</p>
+            
+            <h3 style="color: #717d9f; margin-top: 30px; margin-bottom: 20px; font-size: 20px;">You can now access:</h3>
+            
+            <ul style="
+                list-style: none;
+                text-align: left;
+                padding: 20px;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 5px;
+                margin: 0 auto;
+                width: fit-content;
+            ">
+                <li style="margin: 12px 0; color: #aaa; font-size: 16px;">
+                    <span style="color: #930018; margin-right: 10px;">●</span>Record Session
+                </li>
+                <li style="margin: 12px 0; color: #aaa; font-size: 16px;">
+                    <span style="color: #930018; margin-right: 10px;">●</span>Record directly into Button
+                </li>
+                <li style="margin: 12px 0; color: #aaa; font-size: 16px;">
+                    <span style="color: #930018; margin-right: 10px;">●</span>Unlimited Sample Upload
+                </li>
+                <li style="margin: 12px 0; color: #aaa; font-size: 16px;">
+                    <span style="color: #930018; margin-right: 10px;">●</span>LFO's & Automations
+                </li>
+                <li style="margin: 12px 0; color: #aaa; font-size: 16px;">
+                    <span style="color: #930018; margin-right: 10px;">●</span>Synth with Piano Roll & Sound design controls
+                </li>
+                <li style="margin: 12px 0; color: #aaa; font-size: 16px;">
+                    <span style="color: #930018; margin-right: 10px;">●</span>App Themes
+                </li>
+                <li style="margin: 12px 0; color: #aaa; font-size: 16px;">
+                    <span style="color: #930018; margin-right: 10px;">●</span>Arrangement Mode/Track View
+                </li>
+                <li style="margin: 12px 0; color: #aaa; font-size: 16px;">
+                    <span style="color: #930018; margin-right: 10px;">●</span>Future updates
+                </li>
+            </ul>
+            
+            <button id="close-welcome-btn" style="
+                margin-top: 30px;
+                padding: 15px 40px;
+                background: #930018;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background 0.3s;
+            ">Get Started</button>
+        `;
+        
+        popupOverlay.appendChild(popupContent);
+        document.body.appendChild(popupOverlay);
+        
+        const closeBtn = document.getElementById('close-welcome-btn');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                popupOverlay.remove();
+                this.showApp();
+            });
+        }
+    }
+    
+    async performIntegrityCheck() {
+        if (this.devMode) return;
+        
+        const expectedHash = "9c7bdfb63892de62581e2a861329e801af2e709adbd32f12753e138a394c22be";
+        
+        const currentHash = await this.calculateScriptHash();
+        
+        if (currentHash !== expectedHash) {
+            this.handleTampering();
+        }
+    }
+    
+    calculateScriptHash() {
+        const scripts = document.getElementsByTagName('script');
+        let currentScript = '';
+        
+        for (let i = 0; i < scripts.length; i++) {
+            if (scripts[i].src.includes('security.js') || 
+                scripts[i].textContent.includes('class SecurityManager')) {
+                currentScript = scripts[i].textContent;
+                break;
+            }
+        }
+        
+        if (!currentScript) {
+            return "default";
+        }
+        
+        let hash = 0;
+        for (let i = 0; i < currentScript.length; i++) {
+            const char = currentScript.charCodeAt(i);
+            hash = ((hash << 5) - hash) + char;
+            hash = hash & hash;
+        }
+        
+        return hash.toString();
+    }
+    
+    verifySignature() {
+        if (this.devMode) return true;
+        
+        const scripts = document.getElementsByTagName('script');
+        let scriptContent = '';
+        
+        for (let i = 0; i < scripts.length; i++) {
+            if (scripts[i].src.includes('security.js') || 
+                scripts[i].textContent.includes('class SecurityManager')) {
+                scriptContent = scripts[i].textContent;
+                break;
+            }
+        }
+        
+        if (!scriptContent) return false;
+        
+        const signatureMatch = scriptContent.match(/\/\/ SIGNATURE:([a-f0-9]+)/);
+        if (!signatureMatch) return false;
+        
+        const signature = signatureMatch[1];
+        const content = scriptContent.replace(/\/\/ SIGNATURE:[a-f0-9]+/, '');
+        
+        const calculatedSignature = this.simpleHash(content);
+        return calculatedSignature === signature;
+    }
+    
+    simpleHash(str) {
+        let hash = 0;
+        for (let i = 0; i < str.length; i++) {
+            const char = str.charCodeAt(i);
+            hash = ((hash << 5) - hash) + char;
+            hash = hash & hash;
+        }
+        return Math.abs(hash).toString(16);
+    }
+    
+    async validateWithServer() {
+        if (this.devMode) return true;
+        
+        try {
+            const requestId = this.generateRequestId();
+            const fingerprint = this.getScriptFingerprint();
+            
+            const response = await fetch('https://your-secure-server.com/validate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Request-ID': requestId
+                },
+                body: JSON.stringify({
+                    fingerprint: fingerprint,
+                    timestamp: Date.now()
+                })
+            });
+            
+            if (!response.ok) {
+                throw new Error('Server validation failed');
+            }
+            
+            const data = await response.json();
+            
+            if (!data.valid) {
+                this.handleTampering();
+            }
+            
+            return true;
+        } catch (error) {
+            console.error('Server validation error:', error);
+            return false;
+        }
+    }
+    
+    generateRequestId() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+            const r = Math.random() * 16 | 0;
+            const v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
+    }
+    
+    getScriptFingerprint() {
+        const scripts = document.getElementsByTagName('script');
+        let scriptContent = '';
+        
+        for (let i = 0; i < scripts.length; i++) {
+            if (scripts[i].src.includes('security.js') || 
+                scripts[i].textContent.includes('class SecurityManager')) {
+                scriptContent = scripts[i].textContent;
+                break;
+            }
+        }
+        
+        return btoa(scriptContent)
+            .replace(/[^a-zA-Z0-9]/g, '')
+            .substring(0, 32);
+    }
+    
+    handleTampering() {
+        localStorage.clear();
+        sessionStorage.clear();
+        
+        document.body.innerHTML = `
+            <div style="
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                color: #f00;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-family: monospace;
+                z-index: 999999;
+            ">
+                <h1>SECURITY BREACH DETECTED</h1>
+                <p>The application has been tampered with.</p>
+                <p>All data has been erased.</p>
+            </div>
+        `;
+        
+        throw new Error("Security script tampered with");
+    }
+    
+    loadSecurityState() {
+        const securityState = localStorage.getItem('psychStudioSecurity');
+        
+        if (securityState) {
+            try {
+                const state = JSON.parse(securityState);
+                this.attemptCount = state.attemptCount || 0;
+                this.lockoutEndTime = state.lockoutEndTime || 0;
+                
+                if (this.lockoutEndTime > 0 && new Date().getTime() > this.lockoutEndTime) {
+                    this.resetSecurityState();
+                } else {
+                    this.isLocked = this.lockoutEndTime > 0;
+                }
+            } catch (e) {
+                this.resetSecurityState();
+            }
+        } else {
+            this.resetSecurityState();
+        }
+    }
+    
+    saveSecurityState() {
+        const state = {
+            attemptCount: this.attemptCount,
+            lockoutEndTime: this.lockoutEndTime
+        };
+        localStorage.setItem('psychStudioSecurity', JSON.stringify(state));
+    }
+    
+    resetSecurityState() {
+        this.attemptCount = 0;
+        this.isLocked = false;
+        this.lockoutEndTime = 0;
+        this.saveSecurityState();
+    }
+    
+    lockout() {
+        this.isLocked = true;
+        this.lockoutEndTime = new Date().getTime() + this.lockoutTime;
+        this.saveSecurityState();
+        
+        this.showError('Too many failed attempts. Application locked for 300 seconds.');
+        
+        const attemptsLeft = document.getElementById('attempts-left');
+        if (attemptsLeft) {
+            attemptsLeft.textContent = 'Application locked. Please wait...';
+        }
+        
+        this.startLockoutCountdown();
+    }
+    
+    startLockoutCountdown() {
+        const countdown = setInterval(() => {
+            const remainingTime = Math.ceil((this.lockoutEndTime - new Date().getTime()) / 1000);
+            
+            if (remainingTime <= 0) {
+                clearInterval(countdown);
+                this.isLocked = false;
+                this.attemptCount = 0;
+                this.saveSecurityState();
+                this.updateAttemptsDisplay();
+            } else {
+                const attemptsLeft = document.getElementById('attempts-left');
+                if (attemptsLeft) {
+                    attemptsLeft.textContent = `Application locked. Try again in ${remainingTime} seconds.`;
+                }
+            }
+        }, 1000);
+    }
+    
+    updateAttemptsDisplay() {
+        const attemptsLeft = document.getElementById('attempts-left');
+        if (attemptsLeft) {
+            if (this.isLocked) {
+                const remainingTime = Math.ceil((this.lockoutEndTime - new Date().getTime()) / 1000);
+                attemptsLeft.textContent = `Application locked. Try again in ${remainingTime} seconds.`;
+            } else {
+                attemptsLeft.textContent = `Attempts remaining: ${this.maxAttempts - this.attemptCount}`;
+            }
+        }
+    }
+    
+    showError(message) {
+        const errorElement = document.getElementById('error-message');
+        if (errorElement) {
+            errorElement.textContent = message;
+            setTimeout(() => {
+                errorElement.textContent = '';
+            }, 5000);
+        }
+    }
+    
+    showApp() {
+        // Remove login screen
+        const loginScreen = document.getElementById('login-screen');
+        if (loginScreen) {
+            if (this.backgroundCanvas) {
+                this.backgroundCanvas.destroy();
+                this.backgroundCanvas = null;
+            }
+            loginScreen.remove();
+        }
+        
+        // Show the original background canvas
+        const existingCanvas = document.getElementById('backgroundCanvas');
+        if (existingCanvas) {
+            existingCanvas.style.display = 'block';
+        }
+        
+        // Show the app container
+        const appContainer = document.querySelector('.app-container');
+        if (appContainer) {
+            appContainer.style.display = 'flex';
+            window.dispatchEvent(new Event('resize'));
+        }
+    }
+    
+    logout() {
+        localStorage.removeItem('psychStudioAuth');
+        this.resetSecurityState();
+        location.reload();
+    }
+    
+    async loadProtectedFiles() {
+
+    }
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    window.securityManager = new SecurityManager();
+});
+//SIGNATURE:7c3d5a1b8e9f2c4d6a0b7e1f3c5a8d9e2b4f6a1c
