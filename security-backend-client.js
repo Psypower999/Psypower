@@ -1,24 +1,24 @@
-// Security Manager with Backend Integration
-// Uses Express backend server for persistent storage instead of IndexedDB
+// Security Manager - OFFLINE VERSION
+// No backend server needed - all validation is client-side
 
 class SecurityManager {
-    constructor(backendUrl = 'http://localhost:3000') {
-        this.backendUrl = backendUrl;
+    constructor() {
         this.token = localStorage.getItem('authToken');
         this.user = JSON.parse(localStorage.getItem('user') || 'null');
         this.fileEncryption = null;
         this.backgroundCanvas = null;
         
-        // Code-based backup (in case backend unavailable)
-        this.correctCode = [
-            "PSYPOWER2024",
-            "STUDIO123",
-            "UNLOCKED",
-            "WELCOME"
+        // Valid security codes - ONLY these work
+        this.validCodes = [
+            "020PSY969666POWER900", "030PSY969666POWER800", "040PSY969666POWER700", "050PSY969666POWER600", 
+            "060PSY969666POWER500", "070PSY969666POWER400", "080PSY969666POWER300", "090PSY969666POWER200", 
+            "100PSY969666POWER001", "200PSY969666POWER002", "0a2b0c9x6y9z61626392010", "0a2b0c9x6y9z62626392010", 
+            "0a2b0c9x6z9z62696392010", "0a2b0c9x6y9w62626392810", "0a2f0c9x6y9z62626390010", 
+            "0a2bhc9x6y9z62w26392010", "0a2x0c9xwy9z6262y392010"
         ];
         
         this.devMode = false;
-        this.maxAttempts = 5;
+        this.maxAttempts = 3;
         this.attemptCount = 0;
         this.lockoutTime = 300000; // 5 minutes
         this.isLocked = false;
@@ -32,150 +32,72 @@ class SecurityManager {
         try {
             // Check if we have a valid token
             if (this.token) {
-                const response = await fetch(`${this.backendUrl}/api/auth/verify`, {
-                    method: 'POST',
-                    headers: {
-                        'Authorization': `Bearer ${this.token}`,
-                        'Content-Type': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    const data = await response.json();
-                    this.user = data.user;
-                    console.log('✅ Token verified, user authenticated');
-                    return true;
-                } else {
-                    // Token expired or invalid
-                    this.clearAuth();
-                    this.showLoginScreen();
-                    return false;
-                }
+                console.log('✅ User already authenticated (offline mode)');
+                return true;
             } else {
                 this.showLoginScreen();
                 return false;
             }
         } catch (error) {
-            console.error('Error verifying token:', error);
+            console.error('Error initializing security:', error);
             this.showLoginScreen();
             return false;
         }
     }
 
     /**
-     * Register new user
+     * Authenticate with security code (offline mode)
      */
-    async registerUser(email, username, password, code) {
+    async authenticateWithCode(code) {
         try {
-            const response = await fetch(`${this.backendUrl}/api/auth/register`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    email: email.toLowerCase(),
-                    username: username,
-                    password: password,
-                    code: code
-                })
-            });
-
-            const data = await response.json();
-
-            if (!response.ok) {
-                throw new Error(data.message || 'Registration failed');
+            // Check if code is valid
+            if (!this.validCodes.includes(code)) {
+                this.attemptCount++;
+                
+                if (this.attemptCount >= this.maxAttempts) {
+                    this.isLocked = true;
+                    this.lockoutEndTime = Date.now() + this.lockoutTime;
+                    localStorage.setItem('lockoutEndTime', this.lockoutEndTime);
+                    throw new Error(`Too many attempts. Locked for ${this.lockoutTime / 1000 / 60} minutes.`);
+                }
+                
+                throw new Error(`Invalid code. ${this.maxAttempts - this.attemptCount} attempts remaining.`);
             }
 
-            // Store token and user info
-            this.token = data.token;
-            this.user = data.user;
+            // Code is valid - authenticate user
+            this.token = 'offline_token_' + Date.now();
+            this.user = { authenticated: true, code: code, timestamp: new Date().toISOString() };
+            
             localStorage.setItem('authToken', this.token);
             localStorage.setItem('user', JSON.stringify(this.user));
+            localStorage.setItem('usedCode', code);
+            this.attemptCount = 0;
 
-            console.log('✅ Registration successful');
-            return data;
+            console.log('✅ Authentication successful (offline mode)');
+            return { authenticated: true, user: this.user };
         } catch (error) {
-            console.error('Registration error:', error);
+            console.error('Authentication error:', error);
             throw error;
         }
     }
 
     /**
-     * Login user with email and password
+     * Check if code is valid (offline mode)
      */
-    async loginUser(email, password) {
-        try {
-            const response = await fetch(`${this.backendUrl}/api/auth/login`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    email: email.toLowerCase(),
-                    password: password
-                })
-            });
-
-            const data = await response.json();
-
-            if (!response.ok) {
-                throw new Error(data.message || 'Login failed');
-            }
-
-            // Store token and user info
-            this.token = data.token;
-            this.user = data.user;
-            localStorage.setItem('authToken', this.token);
-            localStorage.setItem('user', JSON.stringify(this.user));
-
-            console.log('✅ Login successful');
-            return data;
-        } catch (error) {
-            console.error('Login error:', error);
-            throw error;
-        }
+    isCodeValid(code) {
+        return this.validCodes.includes(code);
     }
 
     /**
-     * Check if email already registered
+     * Check if user is currently locked out
      */
-    async checkEmailExists(email) {
-        try {
-            const response = await fetch(`${this.backendUrl}/api/auth/check-email`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ email: email.toLowerCase() })
-            });
-
-            const data = await response.json();
-            return data.exists;
-        } catch (error) {
-            console.error('Error checking email:', error);
-            return false;
+    isLockedOut() {
+        const lockoutEnd = localStorage.getItem('lockoutEndTime');
+        if (lockoutEnd && Date.now() < parseInt(lockoutEnd)) {
+            return true;
         }
-    }
-
-    /**
-     * Check if code has been used
-     */
-    async checkCodeUsed(code) {
-        try {
-            const response = await fetch(`${this.backendUrl}/api/auth/check-code`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ code: code })
-            });
-
-            const data = await response.json();
-            return data.used;
-        } catch (error) {
-            console.error('Error checking code:', error);
-            return false;
-        }
+        localStorage.removeItem('lockoutEndTime');
+        return false;
     }
 
     /**
@@ -243,45 +165,9 @@ class SecurityManager {
             <h1 style="margin-bottom: 30px; color: #717d9f;">Psychological Studio</h1>
             
             <div id="auth-form" class="login-form">
-                <p style="margin-bottom: 20px; color: #aaa;">Secure Login</p>
+                <p style="margin-bottom: 20px; color: #aaa;">Enter Security Code</p>
                 
-                <input type="text" id="username-input" placeholder="Username (new users only)" style="
-                    width: 100%;
-                    padding: 15px;
-                    margin-bottom: 15px;
-                    border: none;
-                    border-radius: 5px;
-                    background: rgba(255,255,255,0.1);
-                    color: white;
-                    font-size: 16px;
-                    box-sizing: border-box;
-                ">
-                
-                <input type="email" id="email-input" placeholder="Email" style="
-                    width: 100%;
-                    padding: 15px;
-                    margin-bottom: 15px;
-                    border: none;
-                    border-radius: 5px;
-                    background: rgba(255,255,255,0.1);
-                    color: white;
-                    font-size: 16px;
-                    box-sizing: border-box;
-                ">
-                
-                <input type="password" id="password-input" placeholder="Password" style="
-                    width: 100%;
-                    padding: 15px;
-                    margin-bottom: 15px;
-                    border: none;
-                    border-radius: 5px;
-                    background: rgba(255,255,255,0.1);
-                    color: white;
-                    font-size: 16px;
-                    box-sizing: border-box;
-                ">
-                
-                <input type="password" id="code-input" placeholder="Registration Code (new users)" style="
+                <input type="password" id="code-input" placeholder="Security Code" style="
                     width: 100%;
                     padding: 15px;
                     margin-bottom: 20px;
@@ -304,7 +190,7 @@ class SecurityManager {
                     cursor: pointer;
                     transition: background 0.3s;
                     margin-bottom: 15px;
-                ">Login / Register</button>
+                ">Unlock</button>
                 
                 <p id="login-status" style="margin-top: 15px; color: #aaa; font-size: 12px;"></p>
             </div>
@@ -329,89 +215,42 @@ class SecurityManager {
     }
 
     /**
-     * Attempt login or registration
+     * Attempt authentication with code
      */
     async attemptLogin(statusMsg) {
-        const usernameInput = document.getElementById('username-input');
-        const emailInput = document.getElementById('email-input');
-        const passwordInput = document.getElementById('password-input');
-        const codeInput = document.getElementById('code-input');
-
-        const username = usernameInput.value.trim();
-        const email = emailInput.value.trim();
-        const password = passwordInput.value.trim();
-        const code = codeInput.value.trim();
-
-        // Validate email and password (required for both)
-        if (!email) {
-            this.showAuthError('Please enter an email.', statusMsg);
+        // Check if user is locked out
+        if (this.isLockedOut()) {
+            const lockoutEnd = localStorage.getItem('lockoutEndTime');
+            const remainingTime = Math.ceil((parseInt(lockoutEnd) - Date.now()) / 1000 / 60);
+            this.showAuthError(`Too many attempts. Try again in ${remainingTime} minute(s).`, statusMsg);
             return;
         }
 
-        if (!password) {
-            this.showAuthError('Please enter a password.', statusMsg);
+        const codeInput = document.getElementById('code-input');
+        const code = codeInput.value.trim();
+
+        if (!code) {
+            this.showAuthError('Please enter a security code.', statusMsg);
             return;
         }
 
         try {
-            statusMsg.textContent = 'Checking credentials...';
+            statusMsg.textContent = 'Verifying code...';
             statusMsg.style.color = '#717d9f';
 
-            // Check if email exists
-            const emailExists = await this.checkEmailExists(email);
-
-            if (emailExists) {
-                // Existing user - login with email + password
-                statusMsg.textContent = 'Logging in...';
-                try {
-                    await this.loginUser(email, password);
-                    this.showWelcomePopup();
-                    this.removeLoginScreen();
-                } catch (error) {
-                    this.showAuthError(error.message, statusMsg);
-                    passwordInput.value = '';
-                }
-            } else {
-                // New user - require code and username
-                if (!username) {
-                    this.showAuthError('New users must enter a username.', statusMsg);
-                    return;
-                }
-
-                if (!code) {
-                    this.showAuthError('New users must enter a registration code.', statusMsg);
-                    return;
-                }
-
-                // Check if code was already used
-                const codeUsed = await this.checkCodeUsed(code);
-                if (codeUsed) {
-                    this.showAuthError('This code has already been used.', statusMsg);
-                    codeInput.value = '';
-                    return;
-                }
-
-                // Check if code is valid (backup check if backend unavailable)
-                if (!this.correctCode.includes(code)) {
-                    this.showAuthError('Invalid registration code.', statusMsg);
-                    codeInput.value = '';
-                    return;
-                }
-
-                // Register new user
-                statusMsg.textContent = 'Registering...';
-                try {
-                    await this.registerUser(email, username, password, code);
-                    this.showWelcomePopup();
-                    this.removeLoginScreen();
-                } catch (error) {
-                    this.showAuthError(error.message, statusMsg);
-                    codeInput.value = '';
-                }
-            }
+            // Authenticate with code (offline validation)
+            await this.authenticateWithCode(code);
+            
+            statusMsg.textContent = 'Access granted!';
+            statusMsg.style.color = '#66cc00';
+            
+            setTimeout(() => {
+                this.removeLoginScreen();
+            }, 500);
         } catch (error) {
             console.error('Auth error:', error);
-            this.showAuthError('Connection error. Please try again.', statusMsg);
+            this.showAuthError(error.message, statusMsg);
+            codeInput.value = '';
         }
     }
 
